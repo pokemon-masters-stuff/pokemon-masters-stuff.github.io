@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Grids from './components/Grids';
-import Input from './components/Input';
+import SyncGrids from './components/SyncGrids';
+import GridData from './components/GridData';
 import ResetButton from './components/ResetButton';
+import ActiveGridList from './components/ActiveGridList';
 
 function App() {
   return (
@@ -13,10 +13,13 @@ function App() {
           <ResetButton />
         </div>
         <div>
-          <Grids />
+          <SyncGrids />
         </div>
         <div>
-          <Input />
+          <GridData />
+        </div>
+        <div>
+          <ActiveGridList />
         </div>
       </header>
     </div>
