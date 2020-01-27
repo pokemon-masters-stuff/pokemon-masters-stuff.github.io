@@ -3,10 +3,7 @@ import { connect } from 'react-redux';
 import PikachuGrids from './PikachuGrids';
 
 class SyncGrids extends Component {
-  //   state = {};
-
   renderContent() {
-    console.log('this.props.pokemon', this.props.pokemon);
     switch (this.props.pokemon) {
       case 'Pikachu':
         return <PikachuGrids />;
@@ -15,7 +12,6 @@ class SyncGrids extends Component {
     }
   }
   render() {
-    console.log('this.props in SynGrids', this.props);
     return <div className="grids-wrapper">{this.renderContent()}</div>;
   }
 }

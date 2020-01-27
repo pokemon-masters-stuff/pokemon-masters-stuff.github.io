@@ -1,50 +1,76 @@
+import { connect } from 'react-redux';
 import { HexGrid, HexUtils, Layout, Hexagon, Hex, Text } from './Hexagon';
+
+import {
+  addToGridList,
+  removeFromGridList,
+  displayGridData
+} from '../actions/actionCreators';
 
 import React, { Component } from 'react';
 import '../assets/Grids.css';
+
+let pikachuGridRawData = [
+  { q: 0, r: 0, s: 0, data: {}, fill: 'pat-1' },
+  { q: 0, r: -1, s: 1, data: { description: 'Speed + 5', energy: 0 } },
+  { q: 0, r: 1, s: -1, data: { description: 'Defense + 5', energy: 0 } },
+  { q: 1, r: -1, s: 0, data: { description: 'HP + 10', energy: 0 } },
+  { q: 1, r: 0, s: -1, data: { description: 'Sp.Atk + 5', energy: 0 } },
+  { q: -1, r: 1, s: 0, data: { description: 'Sp.Atk + 5', energy: 0 } },
+  { q: -1, r: 0, s: 1, data: { description: 'Sp.Def + 5', energy: 0 } }
+];
 
 class PikachuGrids extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      highlightedGridEnergy: '',
-      highlightedGridDesc: '',
-      gridToggleOn: false,
-      toggledGridEnergy: '',
-      toggledGridDesc: ''
+      isSelected: pikachuGridRawData.map(element => false)
     };
-
-    // this.handleClick = this.handleClick.bind(this);
-    // this.mouseEnter = this.mouseEnter.bind(this);
-    // this.mouseLeave = this.mouseLeave.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    console.log('isSelected array', this.state.isSelected);
   }
 
-  // handleClick(e) {
-  //   e.preventDefault();
-  //   // this.setState(state => ({
-  //   //   isToggleOn: !state.isToggleOn
-  //   // }));
-  //   console.log('clicked');
-  //   // console.log('desc', this.refs.desc.props.children);
-  //   // console.log('energy', this.refs.desc.props.energy);
-  // }
+  handleClick(e, index) {
+    console.log('this.props', this.props.grid.gridData);
+    if (this.state.isSelected[index] === false) {
+      // if not selected before, add energy cost and add description to display, vice versa
+      console.log('will add to active grid list');
+      this.props.addToGridList(this.props.grid.gridData);
+    } else {
+      console.log('will remove from active grid list');
+      this.props.removeFromGridList(this.props.grid.gridData);
+    }
 
-  // mouseEnter(e) {
-  //   console.log('this', this.props);
-  //   // this.setState({ highlightedGridEnergy: this.gridInput.props.energy });
-  //   // this.setState({ highlightedGridDesc: this.gridInput.props.children });
-  // }
-
-  // mouseLeave(e) {
-  //   console.log('e', e);
-  //   // this.setState({ highlightedGridEnergy: '' });
-  //   // this.setState({ highlightedGridDesc: '' });
-  // }
-
-  //  from react-hexagrid: const fillId = (fill) ? `url(#${fill})` : null;
+    // then update the isSelect attribute
+    const newIsSelected = [...this.state.isSelected];
+    newIsSelected[index] = !this.state.isSelected[index];
+    this.setState(
+      { isSelected: newIsSelected },
+      console.log('isSelected arr', this.state.isSelected)
+    );
+  }
 
   render() {
+    const allGrids = pikachuGridRawData.map((cell, index) => {
+      return (
+        <Hexagon
+          key={index}
+          q={cell.q}
+          r={cell.r}
+          s={cell.s}
+          data={cell.data}
+          isSelected={this.state.isSelected[index]}
+          fill={this.state.isSelected[index] ? 'pat-1' : cell.fill}
+          onClick={e => this.handleClick(e, index)}
+          onMouseEnter={this.mouseEnter}
+          onMouseLeave={this.mouseLeave}
+        >
+          <Text>{cell.data.description}</Text>
+        </Hexagon>
+      );
+    });
+
     return (
       <div className="hex-grids">
         <HexGrid width={1200} height={800} viewBox="-50 -50 100 100">
@@ -55,79 +81,7 @@ class PikachuGrids extends Component {
             spacing={1.1}
             origin={{ x: 0, y: 0 }}
           >
-            {/* Middle Grids */}
-            <Hexagon q={0} r={0} s={0} data={{}} fill="pat-1">
-              <Text>Pikachu</Text>
-            </Hexagon>
-            <Hexagon
-              q={0}
-              r={-1}
-              s={1}
-              onClick={this.handleClick}
-              onMouseEnter={this.mouseEnter}
-              onMouseLeave={this.mouseLeave}
-              data={{ description: 'Speed + 5', energy: 0 }}
-            >
-              <Text>Speed + 5</Text>
-            </Hexagon>
-            <Hexagon
-              q={0}
-              r={1}
-              s={-1}
-              onClick={this.handleClick}
-              onMouseEnter={this.mouseEnter}
-              onMouseLeave={this.mouseLeave}
-              data={{ description: 'Defense + 5', energy: 0 }}
-            >
-              <Text>Defense + 5</Text>
-            </Hexagon>
-            <Hexagon
-              q={1}
-              r={-1}
-              s={0}
-              onClick={this.handleClick}
-              onMouseEnter={this.mouseEnter}
-              onMouseLeave={this.mouseLeave}
-              data={{ description: 'HP + 10', energy: 0 }}
-            >
-              <Text>HP + 10</Text>
-            </Hexagon>
-            <Hexagon
-              q={1}
-              r={0}
-              s={-1}
-              onClick={this.handleClick}
-              onMouseEnter={this.mouseEnter}
-              onMouseLeave={this.mouseLeave}
-              data={{ description: 'Sp.Atk + 5', energy: 0 }}
-            >
-              <Text>Sp.Atk + 5</Text>
-            </Hexagon>
-            <Hexagon
-              q={-1}
-              r={1}
-              s={0}
-              onClick={this.handleClick}
-              onMouseEnter={this.mouseEnter}
-              onMouseLeave={this.mouseLeave}
-              data={{ description: 'Sp.Atk + 5', energy: 0 }}
-            >
-              <Text>Sp.Atk + 5</Text>
-            </Hexagon>
-            <Hexagon
-              q={-1}
-              r={0}
-              s={1}
-              onClick={this.handleClick}
-              onMouseEnter={this.mouseEnter}
-              onMouseLeave={this.mouseLeave}
-              data={{ description: 'Sp.Def + 5', energy: 0 }}
-            >
-              <Text>Sp.Def + 5</Text>
-            </Hexagon>
-
-            {/* Upper Right Grids */}
-            {/* <Hexagon q={-2} r={0} s={1} /> */}
+            {allGrids}
           </Layout>
         </HexGrid>
       </div>
@@ -135,4 +89,15 @@ class PikachuGrids extends Component {
   }
 }
 
-export default PikachuGrids;
+// export default PikachuGrids;
+
+const mapStateToProps = state => ({
+  pokemon: state.pokemon,
+  grid: state.grid
+});
+
+export default connect(mapStateToProps, {
+  addToGridList,
+  removeFromGridList
+  // displayGridData
+})(PikachuGrids);

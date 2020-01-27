@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import Hex from './Hex';
 import HexUtils from './HexUtils';
 import { connect } from 'react-redux';
-import { updateGridList, displayGridData } from '../../actions/actionCreators';
+import { displayGridData } from '../../actions/actionCreators';
 
 class Hexagon extends Component {
   static propTypes = {
@@ -25,7 +25,7 @@ class Hexagon extends Component {
   };
 
   static contextTypes = {
-    layout: PropTypes.object, // TODO Shape
+    layout: PropTypes.object,
     points: PropTypes.string
   };
 
@@ -47,15 +47,14 @@ class Hexagon extends Component {
     this.setState({ hex, pixel });
   }
   onMouseEnter(e) {
-    console.log('e on mouse enter', e);
-    console.log('this.props.data', this.props.data);
-    e.preventDefault();
+    // console.log('e on mouse enter', e);
+    // console.log('this.props.data', this.props.data);
+    // e.preventDefault();
 
+    if (this.props.onMouseEnter) {
+      this.props.onMouseEnter(e, this);
+    }
     this.props.displayGridData(this.props.data);
-
-    // if (this.props.onMouseEnter) {
-    //   this.props.onMouseEnter(e, this);
-    // }
   }
   onMouseOver(e) {
     if (this.props.onMouseOver) {
@@ -68,9 +67,18 @@ class Hexagon extends Component {
     }
   }
   onClick(e) {
+    // console.log('e', e);
+
     if (this.props.onClick) {
       this.props.onClick(e, this);
     }
+    // // if (!this.stat) {
+    // if (!this.prop) {
+    //   console.log('select');
+    // } else {
+    //   console.log('unselect');
+    // }
+    // this.setState(: !this.stat });
   }
 
   render() {
@@ -104,6 +112,6 @@ const mapStateToProps = state => ({
   grid: state.grid
 });
 
-export default connect(mapStateToProps, { updateGridList, displayGridData })(
-  Hexagon
-);
+export default connect(mapStateToProps, {
+  displayGridData
+})(Hexagon);
