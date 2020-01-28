@@ -86,7 +86,7 @@ class PikachuGrids extends Component {
           >
             Reset
           </button>
-          <HexGrid width={1200} height={900} viewBox="-20 -50 100 100">
+          <HexGrid width={1200} height={800} viewBox="-5 -50 100 100">
             <Layout
               size={{ x: 4.5, y: 4.5 }}
               flat={true}

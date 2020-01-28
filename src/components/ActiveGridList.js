@@ -18,7 +18,7 @@ class ActiveGridList extends Component {
         <div className="card mt-5">
           <div className="card-body">
             <h5 className="card-title">
-              Remaining Energy:{this.props.grid.remainingEnergy}{' '}
+              Remaining Energy: {this.props.grid.remainingEnergy}
             </h5>
             <ul className="list-group list-group-flush">
               {' '}

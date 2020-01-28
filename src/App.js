@@ -7,23 +7,27 @@ import ActiveGridList from './components/ActiveGridList';
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <nav className="navbar navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <div className="container container-s">
           <span className="navbar-brand mb-0 h1">
             Pokemon Masters - Sync Grid Helper
           </span>
-        </nav>
-        <div className="row">
-          <div className="col-sm-8">
-            <div>
-              <SyncGrids />
+        </div>
+      </nav>
+      <div className="content">
+        <div className="container container-s">
+          <div className="row">
+            <div className="col-sm-8">
+              <div>
+                <SyncGrids />
+              </div>
+              <div>
+                <GridData />
+              </div>
             </div>
-            <div>
-              <GridData />
+            <div className="col-sm-4">
+              <ActiveGridList />
             </div>
-          </div>
-          <div className="col-sm-4">
-            <ActiveGridList />
           </div>
         </div>
       </div>
