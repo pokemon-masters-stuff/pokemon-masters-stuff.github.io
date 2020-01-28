@@ -2,23 +2,34 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class ActiveGridList extends Component {
-  renderContent() {
-    return (
-      <div className="grid-data">
-        <ul>
-          <li>Description: {this.props.grid.description}</li>
-          <li>Energy Cost: {this.props.grid.energy}</li>
-        </ul>
-      </div>
-    );
+  renderList() {
+    return this.props.grid.activeGridList.map((item, index) => {
+      return (
+        <li className="list-group-item" key={index}>
+          {item}
+        </li>
+      );
+    });
   }
 
   render() {
-    return <div>{this.renderContent()}</div>;
+    return (
+      <div>
+        <div className="card mt-5">
+          <div className="card-body">
+            <h5 className="card-title">
+              Remaining Energy:{this.props.grid.remainingEnergy}{' '}
+            </h5>
+            <ul className="list-group list-group-flush">
+              {' '}
+              {this.renderList()}
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
-
-// export default ActiveGridList;
 
 const mapStateToProps = state => ({
   grid: state.grid

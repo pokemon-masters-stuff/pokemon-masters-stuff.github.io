@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -13,7 +14,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -35,6 +36,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.grid-data {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hex-grids {
+  margin-top: 5rem;
+  min-height: 10rem;
+}
+
+.btn-warning {
+  margin-bottom: 5rem;
 }
 
 /* from react hexgrid */

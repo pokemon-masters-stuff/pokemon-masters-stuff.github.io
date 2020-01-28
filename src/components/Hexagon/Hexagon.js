@@ -47,10 +47,6 @@ class Hexagon extends Component {
     this.setState({ hex, pixel });
   }
   onMouseEnter(e) {
-    // console.log('e on mouse enter', e);
-    // console.log('this.props.data', this.props.data);
-    // e.preventDefault();
-
     if (this.props.onMouseEnter) {
       this.props.onMouseEnter(e, this);
     }
@@ -67,18 +63,9 @@ class Hexagon extends Component {
     }
   }
   onClick(e) {
-    // console.log('e', e);
-
     if (this.props.onClick) {
       this.props.onClick(e, this);
     }
-    // // if (!this.stat) {
-    // if (!this.prop) {
-    //   console.log('select');
-    // } else {
-    //   console.log('unselect');
-    // }
-    // this.setState(: !this.stat });
   }
 
   render() {
@@ -105,8 +92,6 @@ class Hexagon extends Component {
     );
   }
 }
-
-// export default Hexagon;
 
 const mapStateToProps = state => ({
   grid: state.grid

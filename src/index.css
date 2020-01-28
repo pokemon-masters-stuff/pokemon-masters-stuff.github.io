@@ -6,24 +6,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
-/* from react hexagrid */
+/* refactored from react hexagrid */
 body {
   margin: 0;
   padding: 1em;
   font-family: sans-serif;
-  background: #f0f0f0;
+  background: rgba(0, 0, 0, 0.877);
+  background-image: url('./images/tiles.png');
+  background-repeat: repeat;
+}
+
+.form-group {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 /* svg {
 } */
 svg g {
-  fill: #3f51b5;
+  fill: #9ea7e7;
   fill-opacity: 0.6;
 }
 svg g:hover {
@@ -34,13 +45,14 @@ svg g:hover text {
 }
 
 svg g polygon {
-  stroke: #3f51b5;
+  stroke: #6e81ec;
   stroke-width: 0.2;
   transition: fill-opacity 0.2s;
 }
 svg g text {
-  font-size: 0.07em;
-  fill: #ffffff;
-  fill-opacity: 0.4;
+  font-size: 0.1rem;
+  fill: #000000;
+  fill-opacity: 0.7;
   transition: fill-opacity 0.2s;
+  font-weight: bold;
 }

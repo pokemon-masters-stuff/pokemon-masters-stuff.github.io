@@ -5,10 +5,15 @@ class GridData extends Component {
   renderContent() {
     return (
       <div className="grid-data">
-        <ul>
-          <li>Description: {this.props.grid.gridData.description}</li>
-          <li>Energy Cost: {this.props.grid.gridData.energy}</li>
-        </ul>
+        <p className="text-center">
+          <strong>{this.props.grid.gridData.description}</strong>
+        </p>
+        <p className="text-center">
+          <strong>
+            {this.props.grid.gridData.description ? 'Energy:' : ''}{' '}
+            {this.props.grid.gridData.energy}
+          </strong>
+        </p>
       </div>
     );
   }
@@ -17,8 +22,6 @@ class GridData extends Component {
     return <div>{this.renderContent()}</div>;
   }
 }
-
-// export default GridData;
 
 const mapStateToProps = state => ({
   grid: state.grid
