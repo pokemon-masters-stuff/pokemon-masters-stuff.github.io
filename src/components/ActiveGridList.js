@@ -5,7 +5,7 @@ class ActiveGridList extends Component {
   renderList() {
     return this.props.grid.activeGridList.map((item, index) => {
       return (
-        <li className="list-group-item" key={index}>
+        <li className="active-grid list-group-item" key={index}>
           {item}
         </li>
       );
@@ -14,7 +14,7 @@ class ActiveGridList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="active-grid-list">
         <div className="card mt-5">
           <div className="card-body">
             <h5 className="card-title">

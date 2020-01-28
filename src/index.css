@@ -9,7 +9,7 @@ body {
 
 /* refactored from react hexagrid */
 body {
-  margin: 0;
+  /* margin: 0; */
   padding: 1em;
   font-family: sans-serif;
   background: rgba(0, 0, 0, 0.877);
@@ -30,8 +30,21 @@ body {
   padding-top: 10px;
 }
 
-.gridData {
-  padding-top: 10px;
+.grid-data-display {
+  margin-left: 5rem;
+  width: 23rem;
+  font-size: 0.8rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.active-grid-list {
+  margin-left: 5rem;
+  width: 23rem;
+  font-size: 0.8rem;
 }
 
 /* svg {

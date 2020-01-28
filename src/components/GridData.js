@@ -3,19 +3,22 @@ import { connect } from 'react-redux';
 
 class GridData extends Component {
   renderContent() {
-    return (
-      <div className="grid-data">
-        <p className="text-center">
-          <strong>{this.props.grid.gridData.description}</strong>
-        </p>
-        <p className="text-center">
-          <strong>
-            {this.props.grid.gridData.description ? 'Energy:' : ''}{' '}
-            {this.props.grid.gridData.energy}
-          </strong>
-        </p>
-      </div>
-    );
+    if (this.props.grid.gridData.description) {
+      return (
+        <div className="card">
+          <div className="card-body">
+            <ul>
+              <li className="text-center mb-2">
+                <strong>{this.props.grid.gridData.description}</strong>
+              </li>
+              <li className="text-center mb-0">
+                <strong>Energy: {this.props.grid.gridData.energy}</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      );
+    }
   }
 
   render() {

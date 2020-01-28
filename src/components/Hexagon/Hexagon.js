@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import Hex from './Hex';
 import HexUtils from './HexUtils';
 import { connect } from 'react-redux';
-import { displayGridData } from '../../actions/actionCreators';
+import { displayGridData, hideGridData } from '../../actions/actionCreators';
 
 class Hexagon extends Component {
   static propTypes = {
@@ -61,6 +61,7 @@ class Hexagon extends Component {
     if (this.props.onMouseLeave) {
       this.props.onMouseLeave(e, this);
     }
+    this.props.hideGridData();
   }
   onClick(e) {
     if (this.props.onClick) {
@@ -98,5 +99,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-  displayGridData
+  displayGridData,
+  hideGridData
 })(Hexagon);

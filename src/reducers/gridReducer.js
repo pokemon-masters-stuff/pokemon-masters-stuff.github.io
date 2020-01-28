@@ -1,5 +1,6 @@
 import {
   DISPLAY_GRID_DATA,
+  HIDE_GRID_DATA,
   ADD_TO_GRID_LIST,
   REMOVE_FROM_GRID_LIST,
   SUBTRACT_FROM_REMAINING_ENERGY,
@@ -17,6 +18,8 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case DISPLAY_GRID_DATA:
       return { ...state, gridData: action.gridData };
+    case HIDE_GRID_DATA:
+      return { ...state, gridData: {} };
     case ADD_TO_GRID_LIST:
       return {
         ...state,
