@@ -39,12 +39,13 @@ body {
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0.4rem;
 }
 
 .active-grid-list {
   margin-left: 5rem;
   width: 23rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 /* svg {
@@ -66,7 +67,7 @@ svg g polygon {
   transition: fill-opacity 0.2s;
 }
 svg g text {
-  font-size: 0.085rem;
+  font-size: 0.075rem;
   fill: #000000;
   fill-opacity: 0.7;
   transition: fill-opacity 0.2s;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HexGrid, Layout, Hexagon, Text } from '../Hexagon';
-import { torkoalGridData } from './PokemonData/SyncGridData';
+import { vileplumeGridData } from './PokemonData/SyncGridData';
 import {
   addToGridList,
   removeFromGridList,
@@ -10,12 +10,12 @@ import {
   resetGrids
 } from '../../actions/actionCreators';
 
-class TorkoalGrids extends Component {
+class VileplumeGrids extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isSelected: torkoalGridData.map(element => false)
+      isSelected: vileplumeGridData.map(element => false)
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -37,12 +37,12 @@ class TorkoalGrids extends Component {
   }
 
   handleClickReset() {
-    this.setState({ isSelected: torkoalGridData.map(element => false) });
+    this.setState({ isSelected: vileplumeGridData.map(element => false) });
     this.props.resetGrids();
   }
 
   render() {
-    const allGrids = torkoalGridData.map((cell, index) => {
+    const allGrids = vileplumeGridData.map((cell, index) => {
       if (index == 0) {
         return (
           <Hexagon
@@ -112,4 +112,4 @@ export default connect(mapStateToProps, {
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
   resetGrids
-})(TorkoalGrids);
+})(VileplumeGrids);

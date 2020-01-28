@@ -52,6 +52,8 @@ class PikachuGrids extends Component {
             s={0}
             data={cell.data}
             fill={this.state.isSelected[index] ? 'pat-1' : cell.fill}
+            onMouseEnter={this.mouseEnter}
+            onMouseLeave={this.mouseLeave}
           >
             <Text>{cell.data.name}</Text>
           </Hexagon>
@@ -95,7 +97,6 @@ class PikachuGrids extends Component {
             >
               {allGrids}
             </Layout>
-            <Pattern id="pat-1" link="" />
           </HexGrid>
         </div>
       </div>

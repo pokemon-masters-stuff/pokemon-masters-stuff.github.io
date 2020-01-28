@@ -5,6 +5,10 @@ import PikachuGrids from './GridMaps/PikachuGrids';
 import TorkoalGrids from './GridMaps/TorkoalGrids';
 import InfernapeGrids from './GridMaps/InfernapeGrids';
 import DewgongGrids from './GridMaps/DewgongGrids';
+import HaxorusGrids from './GridMaps/HaxorusGrids';
+import KingdraGrids from './GridMaps/KingdraGrids';
+import SerperiorGrids from './GridMaps/SerperiorGrids';
+import VileplumeGrids from './GridMaps/VileplumeGrids';
 import { selectPokemon, resetGrids } from '../actions/actionCreators';
 
 class SyncGrids extends Component {
@@ -25,6 +29,14 @@ class SyncGrids extends Component {
         return <InfernapeGrids />;
       case 'Dewgong':
         return <DewgongGrids />;
+      case 'Haxorus':
+        return <HaxorusGrids />;
+      case 'Kingdra':
+        return <KingdraGrids />;
+      case 'Serperior':
+        return <SerperiorGrids />;
+      case 'Vileplume':
+        return <VileplumeGrids />;
       default:
         return <PikachuGrids />;
     }

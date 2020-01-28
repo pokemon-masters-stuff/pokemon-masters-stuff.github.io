@@ -1,5 +1,4 @@
 import React from 'react';
-// import './App.css';
 import SyncGrids from './components/SyncGrids';
 import GridData from './components/GridData';
 import ActiveGridList from './components/ActiveGridList';

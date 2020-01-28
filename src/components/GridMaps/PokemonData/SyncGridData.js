@@ -355,7 +355,18 @@ let testData = [
 
 let pikachuGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Pikachu' }, fill: 'pat-1' },
+  {
+    q: 0,
+    r: 0,
+    data: {
+      name: 'Pikachu',
+      description:
+        'Hidden Ability: MC Plot Armor - Thunderbolt Power + 999 when the user is in a pinch',
+      energy: 0
+    },
+
+    fill: 'pat-1'
+  },
   {
     q: 0,
     r: -1,
@@ -696,7 +707,7 @@ let torkoalGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Fiery Passion Overheat + 25',
+      description: 'Fiery Passion Overheat Power + 25',
       energy: 5
     }
   },
@@ -705,7 +716,7 @@ let torkoalGridData = [
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Fiery Passion Overheat + 25',
+      description: 'Fiery Passion Overheat Power + 25',
       energy: 5
     }
   },
@@ -1501,4 +1512,1722 @@ let dewgongGridData = [
   }
 ];
 
-export { pikachuGridData, torkoalGridData, infernapeGridData, dewgongGridData };
+let haxorusGridData = [
+  // Center Grids
+  { q: 0, r: 0, data: { name: 'Haxorus' }, fill: 'pat-1' },
+  {
+    q: 0,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cell: 6 }
+  },
+  {
+    q: 0,
+    r: 1,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 0,
+      cell: 3
+    }
+  },
+  {
+    q: 1,
+    r: -1,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cell: 1 }
+  },
+  {
+    q: 1,
+    r: 0,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 0, cell: 2 }
+  },
+  {
+    q: -1,
+    r: 1,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 0, cell: 4 }
+  },
+  {
+    q: -1,
+    r: 0,
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0, cell: 5 }
+  },
+  {
+    q: -2,
+    r: 1,
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 6, cell: 38 }
+  },
+  ,
+  {
+    q: 2,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 29 }
+  },
+  {
+    q: 0,
+    r: 3,
+    data: {
+      name: 'Sync + 25',
+      description: 'Dragon Sage Outrage Power + 25',
+      energy: 5,
+      cell: 48
+    }
+  },
+  {
+    q: 0,
+    r: -3,
+    data: {
+      name: 'Sync + 25',
+      description: 'Dragon Sage Outrage Power + 25',
+      energy: 5,
+      cell: 47
+    }
+  },
+
+  // Upper Right Grids
+  {
+    q: 1,
+    r: -2,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 2, cell: 7 }
+  },
+  {
+    q: 1,
+    r: -3,
+    data: {
+      name: 'D.C. + 3',
+      description: 'Dragon Claw Power + 3',
+      energy: 3,
+      cell: 10
+    }
+  },
+  {
+    q: 1,
+    r: -4,
+    data: {
+      name: 'D.C. + 3',
+      description: 'Dragon Claw Power + 3',
+      energy: 3,
+      cell: 13
+    }
+  },
+  {
+    q: 1,
+    r: -5,
+    data: {
+      name: 'D.C. + 4',
+      description: 'Dragon Claw Power + 4',
+      energy: 4,
+      cell: 16
+    }
+  },
+  {
+    q: 2,
+    r: -3,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 2, cell: 8 }
+  },
+  {
+    q: 2,
+    r: -4,
+    data: {
+      name: 'D.C. MGR 2',
+      description: 'Dragon Claw Move Gauge Refresh 2',
+      energy: 5,
+      cell: 11
+    }
+  },
+  {
+    q: 2,
+    r: -5,
+    data: {
+      name: 'D.C. MGR 2',
+      description: 'Dragon Claw Move Gauge Refresh 2',
+      energy: 5,
+      cell: 14
+    }
+  },
+  {
+    q: 2,
+    r: -6,
+    data: {
+      name: 'D.C. Z 1',
+      description:
+        'Dragon Claw Zero in 1 - Cricial hits land more easily when an attack move is used',
+      energy: 10,
+      cell: 17
+    }
+  },
+  {
+    q: 3,
+    r: -4,
+    data: {
+      name: 'D.C. + 3',
+      description: 'Dragon Claw Power + 3',
+      energy: 3,
+      cell: 9
+    }
+  },
+  {
+    q: 3,
+    r: -5,
+    data: {
+      name: 'D.C. + 3',
+      description: 'Dragon Claw Power + 3',
+      energy: 3,
+      cell: 12
+    }
+  },
+  {
+    q: 3,
+    r: -6,
+    data: {
+      name: 'D.C. + 4',
+      description: 'Dragon Claw Power + 4',
+      energy: 4,
+      cell: 15
+    }
+  },
+
+  // Upper Left
+  {
+    q: -1,
+    r: -1,
+    data: {
+      name: 'X Atk MPR 3',
+      description: 'X Attack MP Refresh 3',
+      energy: 7,
+      cell: 41
+    }
+  },
+  {
+    q: -1,
+    r: -2,
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 5 }
+  },
+  {
+    q: -2,
+    r: 0,
+    data: {
+      name: 'Carry On 1',
+      description:
+        "Carry On 1 - Raises the use's Attack each time another Pokemon on the field of play faints",
+      energy: 10,
+      cell: 40
+    }
+  },
+  {
+    q: -2,
+    r: -1,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 43 }
+  },
+  {
+    q: -2,
+    r: -2,
+    data: {
+      name: 'Unhindered',
+      description:
+        "Unhindered - When the Pokemon attacks, ignores damage-reducing effects on the opponent's field of play",
+      energy: 10,
+      cell: 46
+    }
+  },
+  {
+    q: -3,
+    r: 1,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 3, cell: 39 }
+  },
+  {
+    q: -3,
+    r: 0,
+    data: {
+      name: 'Y.G.D MPR 3',
+      description: "You're Going Down MP Refresh 3",
+      energy: 7,
+      cell: 42
+    }
+  },
+  {
+    q: -3,
+    r: -1,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 5,
+      cell: 45
+    }
+  },
+
+  // Lower Left
+  {
+    q: -3,
+    r: 4,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 3, cell: 20 }
+  },
+  {
+    q: -3,
+    r: 5,
+    data: {
+      name: 'Y.G.D. D 4',
+      description:
+        "You're Going Down Durable 4 - Has a good chance of making the user endure the next hit it take when a move is successful",
+      energy: 8,
+      cell: 23
+    }
+  },
+  {
+    q: -3,
+    r: 6,
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 4,
+      cell: 26
+    }
+  },
+  {
+    q: -2,
+    r: 3,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 3, cell: 19 }
+  },
+  {
+    q: -2,
+    r: 4,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 22 }
+  },
+  {
+    q: -2,
+    r: 5,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 25 }
+  },
+  {
+    q: -2,
+    r: 6,
+    data: {
+      name: 'S.E. 2',
+      description:
+        "Speed Entry 2 - Shaprly raises the user's speed when the Pokemon enters a battle",
+      energy: 5,
+      cell: 28
+    }
+  },
+  {
+    q: -1,
+    r: 2,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cell: 18 }
+  },
+  {
+    q: -1,
+    r: 3,
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 3, cell: 21 }
+  },
+  {
+    q: -1,
+    r: 4,
+    data: {
+      name: 'Quick Cure',
+      description:
+        'Quick Cure - Removes confused, flincing, and trapped conditions from the user once during battle',
+      energy: 7,
+      cell: 24
+    }
+  },
+  {
+    q: -1,
+    r: 5,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 27
+    }
+  },
+
+  // Lower Right
+  {
+    q: 3,
+    r: -1,
+    data: {
+      name: 'Outrage + 4',
+      description: 'Outrage Power + 4',
+      energy: 4,
+      cell: 30
+    }
+  },
+  {
+    q: 3,
+    r: 0,
+    data: {
+      name: 'Outrage + 4',
+      description: 'Outrage Power + 4',
+      energy: 5,
+      cell: 33
+    }
+  },
+  {
+    q: 3,
+    r: 1,
+    data: {
+      name: 'O.C.B 5',
+      description:
+        'Outrage Confusion Boon 5 - Powers up moves when the user is confused',
+      energy: 8,
+      cell: 36
+    }
+  },
+  {
+    q: 2,
+    r: 0,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 31 }
+  },
+  {
+    q: 2,
+    r: 1,
+    data: {
+      name: 'Outrage MGR 3',
+      description: 'Outrage Move Gauge Refresh 3',
+      energy: 7,
+      cell: 34
+    }
+  },
+  {
+    q: 2,
+    r: 2,
+    data: {
+      name: 'Outrage MGR 3',
+      description: 'Outrage Move Gauge Refresh 3',
+      energy: 7,
+      cell: 37
+    }
+  },
+  {
+    q: 1,
+    r: 1,
+    data: {
+      name: 'Outrage + 4',
+      description: 'Outrage Power + 4',
+      energy: 4,
+      cell: 32
+    }
+  },
+  {
+    q: 1,
+    r: 2,
+    data: {
+      name: 'Outrage + 4',
+      description: 'Outrage Power + 4',
+      energy: 5,
+      cell: 35
+    }
+  }
+];
+
+let kingdraGridData = [
+  // Center Grids
+  { q: 0, r: 0, data: { name: 'Kingdra' }, fill: 'pat-1' },
+  {
+    q: 0,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cell: 6 }
+  },
+  {
+    q: 0,
+    r: 1,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 0,
+      cell: 3
+    }
+  },
+  {
+    q: 1,
+    r: -1,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cell: 1 }
+  },
+  {
+    q: 1,
+    r: 0,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 2 }
+  },
+  {
+    q: -1,
+    r: 1,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 4 }
+  },
+  {
+    q: -1,
+    r: 0,
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0, cell: 5 }
+  },
+  {
+    q: -2,
+    r: 1,
+    data: {
+      name: 'Dragon Guard',
+      description:
+        'Dragon Guard - Reduces damage when the Pokemon is attacked by Dragon-type moves',
+      energy: 5,
+      cell: 38
+    }
+  },
+  ,
+  {
+    q: 2,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 29 }
+  },
+  {
+    q: 0,
+    r: 3,
+    data: {
+      name: 'Sync + 25',
+      description: 'No Mercy Dragon Pulse Power + 25',
+      energy: 5,
+      cell: 48
+    }
+  },
+  {
+    q: 0,
+    r: -3,
+    data: {
+      name: 'Sync + 25',
+      description: 'No Mercy Dragon Pulse Power + 25',
+      energy: 5,
+      cell: 47
+    }
+  },
+
+  // Upper Right Grids
+  {
+    q: 1,
+    r: -2,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 7 }
+  },
+  {
+    q: 1,
+    r: -3,
+    data: {
+      name: 'D.B. + 4',
+      description: 'Dragon Breath Power + 4',
+      energy: 2,
+      cell: 10
+    }
+  },
+  {
+    q: 1,
+    r: -4,
+    data: {
+      name: 'D.B. + 4',
+      description: 'Dragon Breath Power + 4',
+      energy: 3,
+      cell: 13
+    }
+  },
+  {
+    q: 1,
+    r: -5,
+    data: {
+      name: 'D.B. + 5',
+      description: 'Dragon Breath Power + 5',
+      energy: 5,
+      cell: 16
+    }
+  },
+  {
+    q: 2,
+    r: -3,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 8 }
+  },
+  {
+    q: 2,
+    r: -4,
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 2,
+      cell: 11
+    }
+  },
+  {
+    q: 2,
+    r: -5,
+    data: {
+      name: 'D.B. MGR 3',
+      description: 'Dragon Breath Move Gauge Refresh 3',
+      energy: 6,
+      cell: 14
+    }
+  },
+  {
+    q: 2,
+    r: -6,
+    data: {
+      name: 'D.B. H.E. 1',
+      description: 'Dragon Breath Hostile Environment 1',
+      energy: 10,
+      cell: 17
+    }
+  },
+  {
+    q: 3,
+    r: -4,
+    data: {
+      name: 'D.B. + 4',
+      description: 'Dragon Breath Power + 4',
+      energy: 2,
+      cell: 9
+    }
+  },
+  {
+    q: 3,
+    r: -5,
+    data: {
+      name: 'D.B. + 4',
+      description: 'Dragon Breath Power + 4',
+      energy: 3,
+      cell: 12
+    }
+  },
+  {
+    q: 3,
+    r: -6,
+    data: {
+      name: 'D.B. + 5',
+      description: 'Dragon Breath Power + 5',
+      energy: 5,
+      cell: 15
+    }
+  },
+
+  // Upper Left
+  {
+    q: -1,
+    r: -1,
+    data: {
+      name: 'X Sp.Atk MPR 3',
+      description: 'X Sp.Atk MP Refresh 3',
+      energy: 7,
+      cell: 41
+    }
+  },
+  {
+    q: -1,
+    r: -2,
+    data: {
+      name: 'S.R. 6',
+      description:
+        "Special Reserves 6 - Once per battle, radically raises the user's Sp.Atk when in a pinch",
+      energy: 7,
+      cell: 44
+    }
+  },
+  {
+    q: -2,
+    r: 0,
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 2,
+      cell: 40
+    }
+  },
+  {
+    q: -2,
+    r: -1,
+    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cell: 43 }
+  },
+  {
+    q: -2,
+    r: -2,
+    data: {
+      name: 'D.M. P.S. 5',
+      description: 'Draco Meteor Paralysis Synergy 5',
+      energy: 10,
+      cell: 46
+    }
+  },
+  {
+    q: -3,
+    r: 1,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 39
+    }
+  },
+  {
+    q: -3,
+    r: 0,
+    data: {
+      name: 'Y.I.M MPR 3',
+      description: 'Victory Is Mine MP Refresh 3',
+      energy: 7,
+      cell: 42
+    }
+  },
+  {
+    q: -3,
+    r: -1,
+    data: {
+      name: 'S.R. 6',
+      description:
+        "Stamina Reserves 6 - Once per battle, increases the user's move gauge by six when the user is in a pinch",
+      energy: 5,
+      cell: 45
+    }
+  },
+
+  // Lower Left
+  {
+    q: -3,
+    r: 4,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 20 }
+  },
+  {
+    q: -3,
+    r: 5,
+    data: {
+      name: 'Rain Gear 3',
+      description:
+        'Rain Gear 3 - Reduces damage when the Pokemon is hit by an attack move when the weather is rainy',
+      energy: 7,
+      cell: 23
+    }
+  },
+  {
+    q: -3,
+    r: 6,
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 4,
+      cell: 26
+    }
+  },
+  {
+    q: -2,
+    r: 3,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 2,
+      cell: 19
+    }
+  },
+  {
+    q: -2,
+    r: 4,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 22 }
+  },
+  {
+    q: -2,
+    r: 5,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 25 }
+  },
+  {
+    q: -2,
+    r: 6,
+    data: {
+      name: 'Dire Rain 1',
+      description:
+        'Dire Rain 1 - Critical hits land more easily when an attack move is used while the weather is rainy',
+      energy: 10,
+      cell: 28
+    }
+  },
+  {
+    q: -1,
+    r: 2,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cell: 18 }
+  },
+  {
+    q: -1,
+    r: 3,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 3, cell: 21 }
+  },
+  {
+    q: -1,
+    r: 4,
+    data: {
+      name: 'Raging Rain 5',
+      description: 'Raging Rain 5 - Power up moves when the weather is rainy',
+      energy: 9,
+      cell: 24
+    }
+  },
+  {
+    q: -1,
+    r: 5,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 27
+    }
+  },
+
+  // Lower Right
+  {
+    q: 3,
+    r: -1,
+    data: {
+      name: 'D.M. + 4',
+      description: 'Draco Meteor Power + 4',
+      energy: 5,
+      cell: 30
+    }
+  },
+  {
+    q: 3,
+    r: 0,
+    data: {
+      name: 'D.M. + 4',
+      description: 'Draco Meteor Power + 4',
+      energy: 5,
+      cell: 33
+    }
+  },
+  {
+    q: 3,
+    r: 1,
+    data: {
+      name: 'D.M. S.Q. 4',
+      description:
+        "Draco Meteor Status Quo 4 - Has a good chance of returning the user's lowered stats to normal when a move is successful",
+      energy: 10,
+      cell: 36
+    }
+  },
+  {
+    q: 2,
+    r: 0,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 5,
+      cell: 31
+    }
+  },
+  {
+    q: 2,
+    r: 1,
+    data: {
+      name: 'D.M. Acc + 10',
+      description: 'Draco Meteor Accuracy + 10',
+      energy: 8,
+      cell: 34
+    }
+  },
+  {
+    q: 2,
+    r: 2,
+    data: {
+      name: 'D.M. MGR 4',
+      description: 'Draco Meteor Move Gauge Refresh 4',
+      energy: 6,
+      cell: 37
+    }
+  },
+  {
+    q: 1,
+    r: 1,
+    data: {
+      name: 'D.M. + 4',
+      description: 'Draco Meteor Power + 4',
+      energy: 5,
+      cell: 32
+    }
+  },
+  {
+    q: 1,
+    r: 2,
+    data: {
+      name: 'D.M. + 4',
+      description: 'Draco Meteor Power + 4',
+      energy: 5,
+      cell: 35
+    }
+  }
+];
+let serperiorGridData = [
+  // Center Grids
+  { q: 0, r: 0, data: { name: 'Serperior' }, fill: 'pat-1' },
+  {
+    q: 0,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cell: 6 }
+  },
+  {
+    q: 0,
+    r: 1,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 0,
+      cell: 3
+    }
+  },
+  {
+    q: 1,
+    r: -1,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cell: 1 }
+  },
+  {
+    q: 1,
+    r: 0,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 2 }
+  },
+  {
+    q: -1,
+    r: 1,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 4 }
+  },
+  {
+    q: -1,
+    r: 0,
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0, cell: 5 }
+  },
+  {
+    q: 0,
+    r: 3,
+    data: {
+      name: 'Sync + 25',
+      description: 'Shoot for the Stars Leaf Storm Power + 25',
+      energy: 5,
+      cell: 48
+    }
+  },
+  {
+    q: 0,
+    r: -3,
+    data: {
+      name: 'Sync + 25',
+      description: 'Shoot for the Stars Leaf Storm Power + 25',
+      energy: 5,
+      cell: 47
+    }
+  },
+
+  // Upper Right Grids
+  {
+    q: 1,
+    r: -2,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 7 }
+  },
+  {
+    q: 1,
+    r: -3,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 2,
+      cell: 9
+    }
+  },
+  {
+    q: 1,
+    r: -4,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 12
+    }
+  },
+  {
+    q: 1,
+    r: -5,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 15
+    }
+  },
+  {
+    q: 2,
+    r: -3,
+    data: {
+      name: 'G.D. + 3',
+      description: 'Giga Drain Power + 3',
+      energy: 2,
+      cell: 8
+    }
+  },
+  {
+    q: 2,
+    r: -4,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 4,
+      cell: 11
+    }
+  },
+  {
+    q: 2,
+    r: -5,
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 6,
+      cell: 14
+    }
+  },
+  {
+    q: 2,
+    r: -6,
+    data: {
+      name: 'E.B. MGR 3',
+      description: 'Energy Ball Move Gauge Refresh 3',
+      energy: 6,
+      cell: 17
+    }
+  },
+  {
+    q: 3,
+    r: -4,
+    data: {
+      name: 'G.D. + 3',
+      description: 'Giga Drain Power + 3',
+      energy: 3,
+      cell: 10
+    }
+  },
+  {
+    q: 3,
+    r: -5,
+    data: {
+      name: 'G.D. + 3',
+      description: 'Giga Drain Power + 3',
+      energy: 3,
+      cell: 13
+    }
+  },
+  {
+    q: 3,
+    r: -6,
+    data: {
+      name: 'G.D. MGR 3',
+      description: 'Giga Drain Move Gauge Refresh 3',
+      energy: 6,
+      cell: 16
+    }
+  },
+
+  // Upper Left
+  {
+    q: -1,
+    r: -1,
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 2, cell: 39 }
+  },
+  {
+    q: -1,
+    r: -2,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 42
+    }
+  },
+  {
+    q: -1,
+    r: -3,
+    data: {
+      name: 'Speeding Sun 2',
+      description: 'Speeding Sun 2',
+      energy: 10,
+      cell: 45
+    }
+  },
+  {
+    q: -2,
+    r: 0,
+    data: {
+      name: 'E.B.O.A.R 1',
+      description:
+        'Energy Ball On a Roll 1 - Raises the chance of lowering stat values with the additional effects',
+      energy: 7,
+      cell: 38
+    }
+  },
+  {
+    q: -2,
+    r: -1,
+    data: {
+      name: 'Solar Flare 5',
+      description:
+        'Solar Flare 5 - Powers up sync moves when the weather is sunny',
+      energy: 5,
+      cell: 41
+    }
+  },
+  {
+    q: -2,
+    r: -2,
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 6, cell: 44 }
+  },
+  {
+    q: -3,
+    r: 0,
+    data: {
+      name: 'G.D. + 3',
+      description: 'Giga Drain Power + 3',
+      energy: 2,
+      cell: 40
+    }
+  },
+  {
+    q: -3,
+    r: -1,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 43
+    }
+  },
+  {
+    q: -3,
+    r: -2,
+    data: {
+      name: 'Solar Shield',
+      description: 'Solar Shield',
+      energy: 7,
+      cell: 46
+    }
+  },
+
+  // Lower Left
+  {
+    q: -3,
+    r: 3,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 2,
+      cell: 19
+    }
+  },
+  {
+    q: -3,
+    r: 4,
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 4,
+      cell: 22
+    }
+  },
+  {
+    q: -3,
+    r: 5,
+    data: {
+      name: 'G.D. M.H. 2',
+      description:
+        "Giga Drain Master Healer 2 - increases the amount of HP restored by the user's healing moves",
+      energy: 10,
+      cell: 25
+    }
+  },
+  {
+    q: -2,
+    r: 2,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 2,
+      cell: 18
+    }
+  },
+  {
+    q: -2,
+    r: 3,
+    data: {
+      name: 'Power Flux 5',
+      description:
+        'Power Flux 5 - The fuller the move gauge, the more this powers up moves',
+      energy: 10,
+      cell: 21
+    }
+  },
+  {
+    q: -2,
+    r: 4,
+    data: {
+      name: 'Sp.Atk + 20',
+      description: 'Sp.Atk + 20',
+      energy: 10,
+      cell: 24
+    }
+  },
+  {
+    q: -1,
+    r: 2,
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 2, cell: 20 }
+  },
+  {
+    q: -1,
+    r: 3,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 23 }
+  },
+  {
+    q: -1,
+    r: 4,
+    data: {
+      name: 'Solar Flare 5',
+      description:
+        'Solar Flare 5 - Powers up sync moves when the weather is sunny',
+      energy: 5,
+      cell: 26
+    }
+  },
+
+  // Lower Right
+  {
+    q: 3,
+    r: 1,
+    data: {
+      name: 'T.T.E. MPR 2',
+      description: 'Time to Energize MP Refresh 2',
+      energy: 7,
+      cell: 30
+    }
+  },
+  {
+    q: 3,
+    r: 2,
+    data: {
+      name: 'T.T.E. MPR 2',
+      description: 'Time to Energize MP Refresh 2',
+      energy: 7,
+      cell: 33
+    }
+  },
+  {
+    q: 3,
+    r: 3,
+    data: {
+      name: 'T.T.E. S',
+      description:
+        'Time to Energize Selfless - Makes opponents target the user for a short time when a move is successful in a pinch',
+      energy: 5,
+      cell: 36
+    }
+  },
+  {
+    q: 2,
+    r: 1,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 28
+    }
+  },
+  {
+    q: 2,
+    r: 2,
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 3, cell: 31 }
+  },
+  {
+    q: 2,
+    r: 3,
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 5, cell: 34 }
+  },
+  {
+    q: 2,
+    r: 4,
+    data: {
+      name: 'On the Ropes 3',
+      description:
+        'On the Ropes 3 - Reduces damage when the Pokemon is in a pinch and is hit by a physical attack move',
+      energy: 10,
+      cell: 37
+    }
+  },
+  {
+    q: 1,
+    r: 1,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 2,
+      cell: 27
+    }
+  },
+  {
+    q: 1,
+    r: 2,
+    data: {
+      name: 'G.D. + 3',
+      description: 'Giga Drain Power + 3',
+      energy: 3,
+      cell: 29
+    }
+  },
+  {
+    q: 1,
+    r: 3,
+    data: {
+      name: 'X Sp.Atk MPR 2',
+      description: 'X Sp.Atk All MP Refresh 2',
+      energy: 7,
+      cell: 32
+    }
+  },
+  {
+    q: 1,
+    r: 4,
+    data: {
+      name: 'X Sp.Atk MPR 2',
+      description: 'X Sp.Atk All MP Refresh 2',
+      energy: 7,
+      cell: 35
+    }
+  }
+];
+
+let vileplumeGridData = [
+  // Center Grids
+  { q: 0, r: 0, data: { name: 'Vileplume' }, fill: 'pat-1' },
+  {
+    q: 0,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cell: 6 }
+  },
+  {
+    q: 0,
+    r: 1,
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 0,
+      cell: 3
+    }
+  },
+  {
+    q: 1,
+    r: -1,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cell: 1 }
+  },
+  {
+    q: 1,
+    r: 0,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 2 }
+  },
+  {
+    q: -1,
+    r: 1,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 4 }
+  },
+  {
+    q: -1,
+    r: 0,
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0, cell: 5 }
+  },
+  {
+    q: -2,
+    r: 1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 18 }
+  },
+  ,
+  {
+    q: 2,
+    r: -1,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 27 }
+  },
+  {
+    q: 0,
+    r: 3,
+    data: {
+      name: 'Sync + 25',
+      description: 'Nature Loving Petal Dance Power + 25',
+      energy: 5,
+      cell: 48
+    }
+  },
+  {
+    q: 0,
+    r: -3,
+    data: {
+      name: 'Sync + 25',
+      description: 'Nature Loving Petal Dance Power + 25',
+      energy: 5,
+      cell: 47
+    }
+  },
+
+  // Upper Right Grids
+  {
+    q: 1,
+    r: -2,
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 7 }
+  },
+  {
+    q: 1,
+    r: -3,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 2,
+      cell: 9
+    }
+  },
+  {
+    q: 1,
+    r: -4,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 12
+    }
+  },
+  {
+    q: 1,
+    r: -5,
+    data: {
+      name: 'E.B. MGR 2',
+      description: 'Energy Ball Move Gauge Refresh 2',
+      energy: 4,
+      cell: 15
+    }
+  },
+  {
+    q: 2,
+    r: -3,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 2,
+      cell: 8
+    }
+  },
+  {
+    q: 2,
+    r: -4,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 4,
+      cell: 11
+    }
+  },
+  {
+    q: 2,
+    r: -5,
+    data: {
+      name: 'E.B.O.A.R 2',
+      description:
+        'Energy Ball On a Roll 2 - Raises the chance of lowering stat values with the additional effects',
+      energy: 8,
+      cell: 14
+    }
+  },
+  {
+    q: 2,
+    r: -6,
+    data: {
+      name: 'E.B. MGR 2',
+      description: 'Energy Ball Move Gauge Refresh 2',
+      energy: 5,
+      cell: 17
+    }
+  },
+  {
+    q: 3,
+    r: -4,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 2,
+      cell: 10
+    }
+  },
+  {
+    q: 3,
+    r: -5,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 13
+    }
+  },
+  {
+    q: 3,
+    r: -6,
+    data: {
+      name: 'E.B. MGR 2',
+      description: 'Energy Ball Move Gauge Refresh 2',
+      energy: 5,
+      cell: 16
+    }
+  },
+
+  // Upper Left
+  {
+    q: -1,
+    r: -1,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cell: 36 }
+  },
+  {
+    q: -1,
+    r: -2,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 38
+    }
+  },
+  {
+    q: -1,
+    r: -3,
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 3, cell: 42 }
+  },
+  {
+    q: -1,
+    r: -4,
+    data: {
+      name: 'Solar Flare 5',
+      description:
+        'Solar Flare 5 - Powers up sync moves when the weather is sunny',
+      energy: 9,
+      cell: 45
+    }
+  },
+  {
+    q: -2,
+    r: -1,
+    data: {
+      name: 'S.S. MGR 3',
+      description: 'Stun Spore Move Gauge Refresh 3',
+      energy: 4,
+      cell: 37
+    }
+  },
+  {
+    q: -2,
+    r: -2,
+    data: {
+      name: 'Healing Sun 2',
+      description: 'Healing Sun 2',
+      energy: 7,
+      cell: 40
+    }
+  },
+  {
+    q: -2,
+    r: -3,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 5,
+      cell: 43
+    }
+  },
+  {
+    q: -2,
+    r: -4,
+    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cell: 46 }
+  },
+  {
+    q: -3,
+    r: -1,
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 39 }
+  },
+  {
+    q: -3,
+    r: -2,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 41
+    }
+  },
+  {
+    q: -3,
+    r: -3,
+    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cell: 44 }
+  },
+
+  // Lower Left
+  {
+    q: -3,
+    r: 2,
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 4,
+      cell: 19
+    }
+  },
+  {
+    q: -3,
+    r: 3,
+    data: {
+      name: 'S.S. MGR 3',
+      description: 'Stun Spore Move Gauge Refresh 3',
+      energy: 4,
+      cell: 21
+    }
+  },
+  {
+    q: -3,
+    r: 4,
+    data: {
+      name: 'S.S. S.S. 9',
+      description:
+        "Stun Spore Satisfied Snarl 9 - Lowers the target's Sp.Atk when a move targeting that opponent is successful",
+      energy: 9,
+      cell: 24
+    }
+  },
+  {
+    q: -2,
+    r: 2,
+    data: {
+      name: 'P.S. 5',
+      description: 'Paralysis Synergy 5',
+      energy: 10,
+      cell: 20
+    }
+  },
+  {
+    q: -2,
+    r: 3,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 4,
+      cell: 23
+    }
+  },
+  {
+    q: -2,
+    r: 4,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 5,
+      cell: 26
+    }
+  },
+  {
+    q: -1,
+    r: 2,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 22
+    }
+  },
+  {
+    q: -1,
+    r: 3,
+    data: {
+      name: 'E.B.O.A.R 2',
+      description:
+        'Energy Ball On a Roll 2 - Raises the chance of lowering stat values with the additional effects',
+      energy: 8,
+      cell: 25
+    }
+  },
+
+  // Lower Right
+  {
+    q: 3,
+    r: -1,
+    data: {
+      name: 'X Sp.Def MPR 3',
+      description: 'X Sp.Def MP Refresh 3',
+      energy: 7,
+      cell: 28
+    }
+  },
+  {
+    q: 3,
+    r: 0,
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4,
+      cell: 31
+    }
+  },
+  {
+    q: 3,
+    r: 1,
+    data: {
+      name: 'C.S. 5',
+      description: 'Confusion Synergy 5',
+      energy: 10,
+      cell: 34
+    }
+  },
+  {
+    q: 2,
+    r: 0,
+    data: {
+      name: 'S.S. F 2',
+      description:
+        'Stun Spore Flabbergast 2 - occasionally leaves the target confused if a move is successful',
+      energy: 9,
+      cell: 29
+    }
+  },
+  {
+    q: 2,
+    r: 1,
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 4,
+      cell: 32
+    }
+  },
+  {
+    q: 2,
+    r: 2,
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 4,
+      cell: 35
+    }
+  },
+  {
+    q: 1,
+    r: 1,
+    data: {
+      name: 'E.B. + 4',
+      description: 'Energy Ball Power + 4',
+      energy: 3,
+      cell: 30
+    }
+  },
+  {
+    q: 1,
+    r: 2,
+    data: {
+      name: 'P.I.O MPR 3',
+      description: 'Pour It On MP Refresh 3',
+      energy: 7,
+      cell: 33
+    }
+  }
+];
+
+export {
+  pikachuGridData,
+  torkoalGridData,
+  infernapeGridData,
+  dewgongGridData,
+  haxorusGridData,
+  kingdraGridData,
+  serperiorGridData,
+  vileplumeGridData
+};

@@ -70,7 +70,7 @@ class DewgongGrids extends Component {
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
           >
-            <Text>{cell.data.name + '\n' + cell.q + ',' + cell.r}</Text>
+            <Text>{cell.data.name}</Text>
           </Hexagon>
         );
       }
@@ -86,7 +86,7 @@ class DewgongGrids extends Component {
           >
             Reset
           </button>
-          <HexGrid width={1200} height={900} viewBox="-50 -50 100 100">
+          <HexGrid width={1200} height={760} viewBox="-15 -50 120 100">
             <Layout
               size={{ x: 4.5, y: 4.5 }}
               flat={true}
