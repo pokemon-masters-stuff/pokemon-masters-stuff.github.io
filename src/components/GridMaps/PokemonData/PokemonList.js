@@ -13,6 +13,4 @@ let PokemonList = list.map((obj, index) => {
   };
 });
 
-console.log('PokemonList', PokemonList);
-
 export default PokemonList;
