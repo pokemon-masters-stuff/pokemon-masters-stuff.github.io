@@ -2170,7 +2170,7 @@ let kingdraGridData = [
       name: 'S.R. 6',
       description:
         "Stamina Reserves 6 - Once per battle, increases the user's move gauge by six when the user is in a pinch",
-      energy: 5,
+      energy: 7,
       cell: 45
     }
   },

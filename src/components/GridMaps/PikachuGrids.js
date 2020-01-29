@@ -97,6 +97,10 @@ class PikachuGrids extends Component {
             >
               {allGrids}
             </Layout>
+            <Pattern
+              id="pat-2"
+              link="https://img.icons8.com/material-outlined/48/000000/lock-2.png"
+            />
           </HexGrid>
         </div>
       </div>

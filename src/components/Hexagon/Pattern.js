@@ -32,8 +32,8 @@ class Pattern extends Component {
             xlinkHref={link}
             x={0}
             y={0}
-            width={size.x * 2}
-            height={size.y * 2}
+            width={size.x * 0.9}
+            height={size.y * 0.9}
           />
         </pattern>
       </defs>
