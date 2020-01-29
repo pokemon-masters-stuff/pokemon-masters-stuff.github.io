@@ -1272,14 +1272,14 @@ let dewgongGridData = [
   {
     q: 2,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 3 }
   },
   {
     q: 0,
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Fiery Passion Overheat + 25',
+      description: "Winter's Lesson Aurora Beam Power + 25",
       energy: 5
     }
   },
@@ -1288,7 +1288,7 @@ let dewgongGridData = [
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Fiery Passion Overheat + 25',
+      description: "Winter's Lesson Aurora Beam Power + 25",
       energy: 5
     }
   },
