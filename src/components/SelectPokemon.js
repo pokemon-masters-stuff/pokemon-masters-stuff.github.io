@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class SelectPokemon extends Component {
-  state = {};
   renderDropDown() {
     <div className="form">
       <div className="form-group">

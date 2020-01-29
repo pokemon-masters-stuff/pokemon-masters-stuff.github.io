@@ -51,7 +51,7 @@ class PikachuGrids extends Component {
             r={cell.r}
             s={0}
             data={cell.data}
-            fill={this.state.isSelected[index] ? 'pat-1' : cell.fill}
+            fill={'white'}
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
           >
@@ -67,7 +67,7 @@ class PikachuGrids extends Component {
             s={0}
             data={cell.data}
             isSelected={this.state.isSelected[index]}
-            fill={this.state.isSelected[index] ? 'pat-1' : cell.fill}
+            fill={this.state.isSelected[index] ? 'white' : cell.fill}
             onClick={e => this.handleClick(e, index)}
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
@@ -98,8 +98,8 @@ class PikachuGrids extends Component {
               {allGrids}
             </Layout>
             <Pattern
-              id="pat-2"
-              link="https://img.icons8.com/material-outlined/48/000000/lock-2.png"
+              id="pat-3"
+              link="https://img.icons8.com/material-sharp/24/000000/lock.png"
             />
           </HexGrid>
         </div>

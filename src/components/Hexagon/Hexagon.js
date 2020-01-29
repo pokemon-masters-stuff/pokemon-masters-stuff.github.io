@@ -73,7 +73,8 @@ class Hexagon extends Component {
     const { fill, cellStyle, className } = this.props;
     const { points } = this.context;
     const { hex, pixel } = this.state;
-    const fillId = fill ? `url(#${fill})` : null;
+    // const fillId = fill ? `url(#${fill})` : null;
+    const fillId = fill ? fill : null;
     return (
       <g
         className={classNames('hexagon-group', className)}

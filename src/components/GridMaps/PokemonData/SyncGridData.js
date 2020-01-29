@@ -1,6 +1,6 @@
 let testData = [
   // Center Grids
-  { q: 0, r: 0, data: {}, fill: 'pat-1' },
+  { q: 0, r: 0, data: {}, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -365,7 +365,7 @@ let pikachuGridData = [
       energy: 0
     },
 
-    fill: 'pat-1'
+    fill: 'white'
   },
   {
     q: 0,
@@ -660,7 +660,7 @@ let pikachuGridData = [
 
 let torkoalGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Torkoal' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Torkoal' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -707,18 +707,20 @@ let torkoalGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Fiery Passion Overheat Power + 25',
+      description: 'Fiery Passion Overheat Power + 25 [Req. Lv3 Sync]',
       energy: 5
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Fiery Passion Overheat Power + 25',
+      description: 'Fiery Passion Overheat Power + 25 [Req. Lv3 Sync]',
       energy: 5
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -740,7 +742,12 @@ let torkoalGridData = [
   {
     q: 1,
     r: -5,
-    data: { name: 'P.C. 1', description: 'Power Chain 1', energy: 5 }
+    data: {
+      name: 'P.C. 1',
+      description: 'Power Chain 1 [Req. Lv3 Sync]',
+      energy: 5
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -768,7 +775,12 @@ let torkoalGridData = [
   {
     q: 2,
     r: -6,
-    data: { name: 'P.C. 1', description: 'Power Chain 1', energy: 5 }
+    data: {
+      name: 'P.C. 1',
+      description: 'Power Chain 1 [Req. Lv3 Sync]',
+      energy: 5
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -805,7 +817,12 @@ let torkoalGridData = [
   {
     q: -1,
     r: -4,
-    data: { name: 'S.S. 7', description: 'Solar Shield 7', energy: 7 }
+    data: {
+      name: 'S.S. 7',
+      description: 'Solar Shield 7 [Req. Lv3 Sync]',
+      energy: 7
+    },
+    fill: '#dedbd3'
   },
   {
     q: -2,
@@ -829,7 +846,12 @@ let torkoalGridData = [
   {
     q: -2,
     r: -4,
-    data: { name: 'Fortuitous 4', description: 'Fortuitous 4', energy: 10 }
+    data: {
+      name: 'Fortuitous 4',
+      description: 'Fortuitous 4 [Req. Lv3 Sync]',
+      energy: 10
+    },
+    fill: '#dedbd3'
   },
   {
     q: -3,
@@ -880,7 +902,12 @@ let torkoalGridData = [
   {
     q: -2,
     r: 4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
+      energy: 5
+    },
+    fill: '#dedbd3'
   },
   {
     q: -1,
@@ -892,9 +919,10 @@ let torkoalGridData = [
     r: 3,
     data: {
       name: 'WoW Acc + 10',
-      description: 'Will-O-Wisp Accuracy + 10',
+      description: 'Will-O-Wisp Accuracy + 10 [Req. Lv3 Sync]',
       energy: 7
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -930,7 +958,12 @@ let torkoalGridData = [
   {
     q: 2,
     r: 2,
-    data: { name: 'Sp.Atk + 20', description: 'Sp.Atk + 20', energy: 10 }
+    data: {
+      name: 'Sp.Atk + 20',
+      description: 'Sp.Atk + 20 [Req. Lv3 Sync]',
+      energy: 10
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -940,13 +973,18 @@ let torkoalGridData = [
   {
     q: 1,
     r: 2,
-    data: { name: 'H.S. 1', description: 'Healing Sun 1', energy: 6 }
+    data: {
+      name: 'H.S. 1',
+      description: 'Healing Sun 1 [Req. Lv3 Sync]',
+      energy: 6
+    },
+    fill: '#dedbd3'
   }
 ];
 
 let infernapeGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Infernape' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Infernape' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -997,18 +1035,20 @@ let infernapeGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Burn-It-All Overheat Power + 25',
+      description: 'Burn-It-All Overheat Power + 25 [Req. Lv3 Sync]',
       energy: 5
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Burn-It-All Overheat Power + 25',
+      description: 'Burn-It-All Overheat Power + 25 [Req. Lv3 Sync]',
       energy: 5
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -1030,7 +1070,12 @@ let infernapeGridData = [
   {
     q: 1,
     r: -5,
-    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 4 }
+    data: {
+      name: 'F.P. + 4',
+      description: 'Fire Punch Power + 4 [Req. Lv3 Sync]',
+      energy: 4
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -1054,7 +1099,12 @@ let infernapeGridData = [
   {
     q: 2,
     r: -6,
-    data: { name: 'Attack + 20', description: 'Attack + 20', energy: 5 }
+    data: {
+      name: 'Attack + 20',
+      description: 'Attack + 20 [Req. Lv3 Sync]',
+      energy: 5
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -1096,7 +1146,12 @@ let infernapeGridData = [
   {
     q: -2,
     r: -2,
-    data: { name: 'C.S. 1', description: 'Critical Strike 1', energy: 12 }
+    data: {
+      name: 'C.S. 1',
+      description: 'Critical Strike 1 [Req. Lv3 Sync]',
+      energy: 12
+    },
+    fill: '#dedbd3'
   },
   {
     q: -3,
@@ -1111,7 +1166,12 @@ let infernapeGridData = [
   {
     q: -3,
     r: -1,
-    data: { name: 'S.E. 1', description: 'Sharp Entry 1', energy: 15 }
+    data: {
+      name: 'S.E. 1',
+      description: 'Sharp Entry 1 [Req. Lv3 Sync]',
+      energy: 15
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Left
@@ -1152,7 +1212,12 @@ let infernapeGridData = [
   {
     q: -2,
     r: 6,
-    data: { name: 'P.R. 2', description: 'Power Reserves 2', energy: 7 }
+    data: {
+      name: 'P.R. 2',
+      description: 'Power Reserves 2 [Req. Lv3 Sync]',
+      energy: 7
+    },
+    fill: '#dedbd3'
   },
   {
     q: -1,
@@ -1172,7 +1237,12 @@ let infernapeGridData = [
   {
     q: -1,
     r: 5,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 }
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
+      energy: 4
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -1193,7 +1263,12 @@ let infernapeGridData = [
   {
     q: 3,
     r: 1,
-    data: { name: 'F.B. + 5', description: 'Fire Blast Power + 5', energy: 7 }
+    data: {
+      name: 'F.B. + 5',
+      description: 'Fire Blast Power + 5 [Req. Lv3 Sync]',
+      energy: 7
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -1212,7 +1287,12 @@ let infernapeGridData = [
   {
     q: 2,
     r: 2,
-    data: { name: 'F.B. + 5', description: 'Fire Blast Power + 5', energy: 7 }
+    data: {
+      name: 'F.B. + 5',
+      description: 'Fire Blast Power + 5 [Req. Lv3 Sync]',
+      energy: 7
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -1232,7 +1312,7 @@ let infernapeGridData = [
 
 let dewgongGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Dewgong' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Dewgong' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -1279,18 +1359,20 @@ let dewgongGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: "Winter's Lesson Aurora Beam Power + 25",
+      description: "Winter's Lesson Aurora Beam Power + 2 [Req. Lv3 Sync]",
       energy: 5
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: "Winter's Lesson Aurora Beam Power + 25",
+      description: "Winter's Lesson Aurora Beam Power + 25 [Req. Lv3 Sync]",
       energy: 5
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -1312,7 +1394,12 @@ let dewgongGridData = [
   {
     q: 1,
     r: -5,
-    data: { name: 'Ice Beam + 4', description: 'Ice Beam Power + 4', energy: 4 }
+    data: {
+      name: 'Ice Beam + 4',
+      description: 'Ice Beam Power + 4 [Req. Lv3 Sync]',
+      energy: 4
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -1336,7 +1423,12 @@ let dewgongGridData = [
   {
     q: 2,
     r: -6,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
+      energy: 5
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -1382,7 +1474,12 @@ let dewgongGridData = [
   {
     q: -2,
     r: -2,
-    data: { name: 'F.S. 8', description: 'Freeze Synergy 8', energy: 10 }
+    data: {
+      name: 'F.S. 8',
+      description: 'Freeze Synergy 8 [Req. Lv3 Sync]',
+      energy: 10
+    },
+    fill: '#dedbd3'
   },
   {
     q: -3,
@@ -1397,7 +1494,12 @@ let dewgongGridData = [
   {
     q: -3,
     r: -1,
-    data: { name: 'F.S. 8', description: 'Freeze Synergy 8', energy: 10 }
+    data: {
+      name: 'F.S. 8',
+      description: 'Freeze Synergy 8 [Req. Lv3 Sync]',
+      energy: 10
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Left
@@ -1438,7 +1540,12 @@ let dewgongGridData = [
   {
     q: -2,
     r: 6,
-    data: { name: 'I.H. 3', description: 'Invigorating Hail 3', energy: 8 }
+    data: {
+      name: 'I.H. 3',
+      description: 'Invigorating Hail 3 [Req. Lv3 Sync]',
+      energy: 8
+    },
+    fill: '#dedbd3'
   },
   {
     q: -1,
@@ -1458,7 +1565,12 @@ let dewgongGridData = [
   {
     q: -1,
     r: 5,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 5 }
+    data: {
+      name: 'HP + 20',
+      description: 'HP + 20 [Req. Lv3 Sync]',
+      energy: 5
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -1477,9 +1589,10 @@ let dewgongGridData = [
     r: 1,
     data: {
       name: 'I.W. Acc + 5',
-      description: 'Icy Wind Accuracy + 5',
+      description: 'Icy Wind Accuracy + 5 [Req. Lv3 Sync]',
       energy: 10
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -1496,9 +1609,10 @@ let dewgongGridData = [
     r: 2,
     data: {
       name: 'I.W. MGR 4',
-      description: 'Icy Wind Move Gauge Refresh 4',
+      description: 'Icy Wind Move Gauge Refresh 4 [Req. Lv3 Sync]',
       energy: 8
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -1514,7 +1628,7 @@ let dewgongGridData = [
 
 let haxorusGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Haxorus' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Haxorus' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -1566,20 +1680,22 @@ let haxorusGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Dragon Sage Outrage Power + 25',
+      description: 'Dragon Sage Outrage Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 48
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Dragon Sage Outrage Power + 25',
+      description: 'Dragon Sage Outrage Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 47
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -1613,10 +1729,11 @@ let haxorusGridData = [
     r: -5,
     data: {
       name: 'D.C. + 4',
-      description: 'Dragon Claw Power + 4',
+      description: 'Dragon Claw Power + 4 [Req. Lv3 Sync]',
       energy: 4,
       cell: 16
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -1649,10 +1766,11 @@ let haxorusGridData = [
     data: {
       name: 'D.C. Z 1',
       description:
-        'Dragon Claw Zero in 1 - Cricial hits land more easily when an attack move is used',
+        'Dragon Claw Zero in 1 - Cricial hits land more easily when an attack move is used [Req. Lv3 Sync]',
       energy: 10,
       cell: 17
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -1723,10 +1841,11 @@ let haxorusGridData = [
     data: {
       name: 'Unhindered',
       description:
-        "Unhindered - When the Pokemon attacks, ignores damage-reducing effects on the opponent's field of play",
+        "Unhindered - When the Pokemon attacks, ignores damage-reducing effects on the opponent's field of play [Req. Lv3 Sync]",
       energy: 10,
       cell: 46
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -3,
@@ -1748,10 +1867,11 @@ let haxorusGridData = [
     r: -1,
     data: {
       name: 'Defense + 10',
-      description: 'Defense + 10',
+      description: 'Defense + 10 [Req. Lv3 Sync]',
       energy: 5,
       cell: 45
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Left
@@ -1802,10 +1922,11 @@ let haxorusGridData = [
     data: {
       name: 'S.E. 2',
       description:
-        "Speed Entry 2 - Shaprly raises the user's speed when the Pokemon enters a battle",
+        "Speed Entry 2 - Shaprly raises the user's speed when the Pokemon enters a battle [Req. Lv3 Sync]",
       energy: 5,
       cell: 28
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -1,
@@ -1833,10 +1954,11 @@ let haxorusGridData = [
     r: 5,
     data: {
       name: 'Defense + 10',
-      description: 'Defense + 10',
+      description: 'Defense + 10 [Req. Lv3 Sync]',
       energy: 4,
       cell: 27
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -1866,10 +1988,11 @@ let haxorusGridData = [
     data: {
       name: 'O.C.B 5',
       description:
-        'Outrage Confusion Boon 5 - Powers up moves when the user is confused',
+        'Outrage Confusion Boon 5 - Powers up moves when the user is confused [Req. Lv3 Sync]',
       energy: 8,
       cell: 36
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -1891,10 +2014,11 @@ let haxorusGridData = [
     r: 2,
     data: {
       name: 'Outrage MGR 3',
-      description: 'Outrage Move Gauge Refresh 3',
+      description: 'Outrage Move Gauge Refresh 3 [Req. Lv3 Sync]',
       energy: 7,
       cell: 37
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -1920,7 +2044,7 @@ let haxorusGridData = [
 
 let kingdraGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Kingdra' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Kingdra' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -1978,20 +2102,22 @@ let kingdraGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'No Mercy Dragon Pulse Power + 25',
+      description: 'No Mercy Dragon Pulse Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 48
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'No Mercy Dragon Pulse Power + 25',
+      description: 'No Mercy Dragon Pulse Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 47
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -2025,10 +2151,11 @@ let kingdraGridData = [
     r: -5,
     data: {
       name: 'D.B. + 5',
-      description: 'Dragon Breath Power + 5',
+      description: 'Dragon Breath Power + 5 [Req. Lv3 Sync]',
       energy: 5,
       cell: 16
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -2060,10 +2187,11 @@ let kingdraGridData = [
     r: -6,
     data: {
       name: 'D.B. H.E. 1',
-      description: 'Dragon Breath Hostile Environment 1',
+      description: 'Dragon Breath Hostile Environment 1 [Req. Lv3 Sync]',
       energy: 10,
       cell: 17
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -2138,10 +2266,11 @@ let kingdraGridData = [
     r: -2,
     data: {
       name: 'D.M. P.S. 5',
-      description: 'Draco Meteor Paralysis Synergy 5',
+      description: 'Draco Meteor Paralysis Synergy 5 [Req. Lv3 Sync]',
       energy: 10,
       cell: 46
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -3,
@@ -2169,10 +2298,11 @@ let kingdraGridData = [
     data: {
       name: 'S.R. 6',
       description:
-        "Stamina Reserves 6 - Once per battle, increases the user's move gauge by six when the user is in a pinch",
+        "Stamina Reserves 6 - Once per battle, increases the user's move gauge by six when the user is in a pinch [Req. Lv3 Sync]",
       energy: 7,
       cell: 45
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Left
@@ -2228,10 +2358,11 @@ let kingdraGridData = [
     data: {
       name: 'Dire Rain 1',
       description:
-        'Dire Rain 1 - Critical hits land more easily when an attack move is used while the weather is rainy',
+        'Dire Rain 1 - Critical hits land more easily when an attack move is used while the weather is rainy [Req. Lv3 Sync]',
       energy: 10,
       cell: 28
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -1,
@@ -2258,10 +2389,11 @@ let kingdraGridData = [
     r: 5,
     data: {
       name: 'Defense + 10',
-      description: 'Defense + 10',
+      description: 'Defense + 10 [Req. Lv3 Sync]',
       energy: 4,
       cell: 27
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -2291,10 +2423,11 @@ let kingdraGridData = [
     data: {
       name: 'D.M. S.Q. 4',
       description:
-        "Draco Meteor Status Quo 4 - Has a good chance of returning the user's lowered stats to normal when a move is successful",
+        "Draco Meteor Status Quo 4 - Has a good chance of returning the user's lowered stats to normal when a move is successful [Req. Lv3 Sync]",
       energy: 10,
       cell: 36
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -2321,10 +2454,11 @@ let kingdraGridData = [
     r: 2,
     data: {
       name: 'D.M. MGR 4',
-      description: 'Draco Meteor Move Gauge Refresh 4',
+      description: 'Draco Meteor Move Gauge Refresh 4 [Req. Lv3 Sync]',
       energy: 6,
       cell: 37
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -2347,9 +2481,10 @@ let kingdraGridData = [
     }
   }
 ];
+
 let serperiorGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Serperior' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Serperior' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -2390,20 +2525,22 @@ let serperiorGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Shoot for the Stars Leaf Storm Power + 25',
+      description: 'Shoot for the Stars Leaf Storm Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 48
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Shoot for the Stars Leaf Storm Power + 25',
+      description: 'Shoot for the Stars Leaf Storm Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 47
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -2437,10 +2574,11 @@ let serperiorGridData = [
     r: -5,
     data: {
       name: 'E.B. + 4',
-      description: 'Energy Ball Power + 4',
+      description: 'Energy Ball Power + 4 [Req. Lv3 Sync]',
       energy: 3,
       cell: 15
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -2477,10 +2615,11 @@ let serperiorGridData = [
     r: -6,
     data: {
       name: 'E.B. MGR 3',
-      description: 'Energy Ball Move Gauge Refresh 3',
+      description: 'Energy Ball Move Gauge Refresh 3 [Req. Lv3 Sync]',
       energy: 6,
       cell: 17
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -2534,10 +2673,11 @@ let serperiorGridData = [
     r: -3,
     data: {
       name: 'Speeding Sun 2',
-      description: 'Speeding Sun 2',
+      description: 'Speeding Sun 2 [Req. Lv3 Sync]',
       energy: 10,
       cell: 45
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -2,
@@ -2591,10 +2731,11 @@ let serperiorGridData = [
     r: -2,
     data: {
       name: 'Solar Shield',
-      description: 'Solar Shield',
+      description: 'Solar Shield [Req. Lv3 Sync]',
       energy: 7,
       cell: 46
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Left
@@ -2624,10 +2765,11 @@ let serperiorGridData = [
     data: {
       name: 'G.D. M.H. 2',
       description:
-        "Giga Drain Master Healer 2 - increases the amount of HP restored by the user's healing moves",
+        "Giga Drain Master Healer 2 - increases the amount of HP restored by the user's healing moves [Req. Lv3 Sync]",
       energy: 10,
       cell: 25
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -2,
@@ -2676,10 +2818,11 @@ let serperiorGridData = [
     data: {
       name: 'Solar Flare 5',
       description:
-        'Solar Flare 5 - Powers up sync moves when the weather is sunny',
+        'Solar Flare 5 - Powers up sync moves when the weather is sunny [Req. Lv3 Sync]',
       energy: 5,
       cell: 26
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -2740,10 +2883,11 @@ let serperiorGridData = [
     data: {
       name: 'On the Ropes 3',
       description:
-        'On the Ropes 3 - Reduces damage when the Pokemon is in a pinch and is hit by a physical attack move',
+        'On the Ropes 3 - Reduces damage when the Pokemon is in a pinch and is hit by a physical attack move [Req. Lv3 Sync]',
       energy: 10,
       cell: 37
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -2780,16 +2924,17 @@ let serperiorGridData = [
     r: 4,
     data: {
       name: 'X Sp.Atk MPR 2',
-      description: 'X Sp.Atk All MP Refresh 2',
+      description: 'X Sp.Atk All MP Refresh 2 [Req. Lv3 Sync]',
       energy: 7,
       cell: 35
-    }
+    },
+    fill: '#dedbd3'
   }
 ];
 
 let vileplumeGridData = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Vileplume' }, fill: 'pat-1' },
+  { q: 0, r: 0, data: { name: 'Vileplume' }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -2841,20 +2986,22 @@ let vileplumeGridData = [
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'Nature Loving Petal Dance Power + 25',
+      description: 'Nature Loving Petal Dance Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 48
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'Nature Loving Petal Dance Power + 25',
+      description: 'Nature Loving Petal Dance Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cell: 47
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Upper Right Grids
@@ -2888,10 +3035,11 @@ let vileplumeGridData = [
     r: -5,
     data: {
       name: 'E.B. MGR 2',
-      description: 'Energy Ball Move Gauge Refresh 2',
+      description: 'Energy Ball Move Gauge Refresh 2 [Req. Lv3 Sync]',
       energy: 4,
       cell: 15
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 2,
@@ -2929,10 +3077,11 @@ let vileplumeGridData = [
     r: -6,
     data: {
       name: 'E.B. MGR 2',
-      description: 'Energy Ball Move Gauge Refresh 2',
+      description: 'Energy Ball Move Gauge Refresh 2 [Req. Lv3 Sync]',
       energy: 5,
       cell: 17
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 3,
@@ -2992,10 +3141,11 @@ let vileplumeGridData = [
     data: {
       name: 'Solar Flare 5',
       description:
-        'Solar Flare 5 - Powers up sync moves when the weather is sunny',
+        'Solar Flare 5 - Powers up sync moves when the weather is sunny [Req. Lv3 Sync]',
       energy: 9,
       cell: 45
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -2,
@@ -3030,7 +3180,13 @@ let vileplumeGridData = [
   {
     q: -2,
     r: -4,
-    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cell: 46 }
+    data: {
+      name: 'HP + 30',
+      description: 'HP + 30 [Req. Lv3 Sync]',
+      energy: 10,
+      cell: 46
+    },
+    fill: '#dedbd3'
   },
   {
     q: -3,
@@ -3110,10 +3266,11 @@ let vileplumeGridData = [
     r: 4,
     data: {
       name: 'Sp.Atk + 10',
-      description: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
       energy: 5,
       cell: 26
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: -1,
@@ -3131,10 +3288,11 @@ let vileplumeGridData = [
     data: {
       name: 'E.B.O.A.R 2',
       description:
-        'Energy Ball On a Roll 2 - Raises the chance of lowering stat values with the additional effects',
+        'Energy Ball On a Roll 2 - Raises the chance of lowering stat values with the additional effects [Req. Lv3 Sync]',
       energy: 8,
       cell: 25
-    }
+    },
+    fill: '#dedbd3'
   },
 
   // Lower Right
@@ -3194,10 +3352,11 @@ let vileplumeGridData = [
     r: 2,
     data: {
       name: 'Sp.Atk + 10',
-      description: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
       energy: 4,
       cell: 35
-    }
+    },
+    fill: '#dedbd3'
   },
   {
     q: 1,
@@ -3214,10 +3373,11 @@ let vileplumeGridData = [
     r: 2,
     data: {
       name: 'P.I.O MPR 3',
-      description: 'Pour It On MP Refresh 3',
+      description: 'Pour It On MP Refresh 3 [Req. Lv3 Sync]',
       energy: 7,
       cell: 33
-    }
+    },
+    fill: '#dedbd3'
   }
 ];
 

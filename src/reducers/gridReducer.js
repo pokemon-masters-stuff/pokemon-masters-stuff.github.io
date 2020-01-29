@@ -11,6 +11,7 @@ import {
 const initialState = {
   gridData: {},
   remainingEnergy: 60,
+  orbSpent: 0,
   activeGridList: []
 };
 
@@ -44,12 +45,18 @@ export default function(state = initialState, action) {
     case SUBTRACT_FROM_REMAINING_ENERGY:
       return {
         ...state,
-        remainingEnergy: state.remainingEnergy - action.gridData.energy
+        remainingEnergy: state.remainingEnergy - action.gridData.energy,
+        orbSpent:
+          state.orbSpent +
+          (action.gridData.energy == 0 ? 5 : action.gridData.energy * 12)
       };
     case ADD_BACK_TO_REMAINING_ENERGY:
       return {
         ...state,
-        remainingEnergy: state.remainingEnergy + action.gridData.energy
+        remainingEnergy: state.remainingEnergy + action.gridData.energy,
+        orbSpent:
+          state.orbSpent -
+          (action.gridData.energy == 0 ? 5 : action.gridData.energy * 12)
       };
     case RESET_GRIDS:
       return initialState;

@@ -17,7 +17,6 @@ class Pattern extends Component {
 
   render() {
     const { id, link, size } = this.props;
-
     return (
       <defs>
         <pattern

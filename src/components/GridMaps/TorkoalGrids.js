@@ -51,7 +51,9 @@ class TorkoalGrids extends Component {
             r={cell.r}
             s={0}
             data={cell.data}
-            fill={this.state.isSelected[index] ? 'pat-1' : cell.fill}
+            fill={'white'}
+            onMouseEnter={this.mouseEnter}
+            onMouseLeave={this.mouseLeave}
           >
             <Text>{cell.data.name}</Text>
           </Hexagon>
@@ -65,7 +67,7 @@ class TorkoalGrids extends Component {
             s={0}
             data={cell.data}
             isSelected={this.state.isSelected[index]}
-            fill={this.state.isSelected[index] ? 'pat-1' : cell.fill}
+            fill={this.state.isSelected[index] ? 'white' : cell.fill}
             onClick={e => this.handleClick(e, index)}
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
