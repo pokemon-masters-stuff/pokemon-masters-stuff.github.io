@@ -3050,7 +3050,8 @@ let serperiorGridData = serperiorGridDataNoColor.map((obj, index) => {
     let redGrids = [16, 17, 25, 30, 32, 33, 35, 36, 38];
     let purpleGrids = [47, 48];
     if (blueGrids.indexOf(obj.data.cell) > -1) {
-      obj['fill'] = 'blue';
+      // 66B6EC - blue
+      obj['fill'] = '#66B6EC';
       return obj;
     }
     if (greenGrids.indexOf(obj.data.cell) > -1) {
