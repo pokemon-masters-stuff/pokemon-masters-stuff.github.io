@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 class ActiveGridList extends Component {
   renderList() {
@@ -14,18 +14,16 @@ class ActiveGridList extends Component {
 
   render() {
     return (
-      <div className="active-grid-list">
-        <div className="card mt-5">
-          <div className="card-body">
-            <h5 className="card-title">
-              Remaining Energy: {this.props.grid.remainingEnergy}
-              <p>Orbs spent: {this.props.grid.orbSpent}</p>
-            </h5>
-            <ul className="list-group list-group-flush">
-              {' '}
-              {this.renderList()}
-            </ul>
-          </div>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">
+            Remaining Energy: {this.props.grid.remainingEnergy}
+            <p>Orbs spent: {this.props.grid.orbSpent}</p>
+          </h5>
+          <ul className="list-group list-group-flush">
+            {' '}
+            {this.renderList()}
+          </ul>
         </div>
       </div>
     );
@@ -33,7 +31,7 @@ class ActiveGridList extends Component {
 }
 
 const mapStateToProps = state => ({
-  grid: state.grid
+  grid: state.grid,
 });
 
 export default connect(mapStateToProps)(ActiveGridList);

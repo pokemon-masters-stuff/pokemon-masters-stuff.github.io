@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import { HexGrid, Layout, Hexagon, Text } from '../Hexagon';
+import ResetGridButton from '../ResetGridButton';
 import { haxorusGridData } from './PokemonData/SyncGridData';
 import {
   addToGridList,
@@ -43,7 +45,7 @@ class HaxorusGrids extends Component {
 
   render() {
     const allGrids = haxorusGridData.map((cell, index) => {
-      if (index == 0) {
+      if (index === 0) {
         return (
           <Hexagon
             key={index}
@@ -81,13 +83,7 @@ class HaxorusGrids extends Component {
     return (
       <div>
         <div className="hex-grids">
-          <button
-            type="button"
-            className="btn btn-warning"
-            onClick={this.handleClickReset}
-          >
-            Reset
-          </button>
+          <ResetGridButton onClickHandler={this.handleClickReset} />
           <HexGrid width={1200} height={760} viewBox="-15 -50 120 100">
             <Layout
               size={{ x: 4.5, y: 4.5 }}

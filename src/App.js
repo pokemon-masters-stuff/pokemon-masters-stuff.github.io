@@ -14,7 +14,7 @@ function App() {
       <div className="content">
         <div className="container container-s">
           <div className="row">
-            <div className="col-sm-7">
+            <div className="col-sm-8">
               <div>
                 <SyncGrids />
               </div>

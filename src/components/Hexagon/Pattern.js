@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import HexUtils from './HexUtils';
 import Point from './Point';
 
 class Pattern extends Component {
