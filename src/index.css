@@ -45,7 +45,8 @@ body {
   padding-top: 10px;
 }
 
-.grid-data-display {
+.grid-data-display,
+.active-grid-list {
   margin-left: 5rem;
   width: 23rem;
   font-size: 0.8rem;

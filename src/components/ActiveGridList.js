@@ -14,16 +14,18 @@ class ActiveGridList extends Component {
 
   render() {
     return (
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">
-            Remaining Energy: {this.props.grid.remainingEnergy}
-            <p>Orbs spent: {this.props.grid.orbSpent}</p>
-          </h5>
-          <ul className="list-group list-group-flush">
-            {' '}
-            {this.renderList()}
-          </ul>
+      <div className="active-grid-list">
+        <div className="card mt-5">
+          <div className="card-body">
+            <h5 className="card-title">
+              Remaining Energy: {this.props.grid.remainingEnergy}
+              <p>Orbs spent: {this.props.grid.orbSpent}</p>
+            </h5>
+            <ul className="list-group list-group-flush">
+              {' '}
+              {this.renderList()}
+            </ul>
+          </div>
         </div>
       </div>
     );
