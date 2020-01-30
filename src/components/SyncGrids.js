@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PokemonList from './GridMaps/PokemonData/PokemonList';
+
+import SelectPokemonDropdown from "./SelectPokemonDropdown";
 import PikachuGrids from './GridMaps/PikachuGrids';
 import TorkoalGrids from './GridMaps/TorkoalGrids';
 import InfernapeGrids from './GridMaps/InfernapeGrids';
@@ -42,34 +43,15 @@ class SyncGrids extends Component {
     }
   }
 
-  selectPokemon(e) {
-    this.props.selectPokemon(e.target.value);
+  selectPokemon(value) {
+    this.props.selectPokemon(value);
     this.props.resetGrids();
-  }
-
-  renderDropDown() {
-    return (
-      <div className="form-inline">
-        <div className="form-group mt-3 mb-2">
-          <select
-            required
-            className="form-control"
-            id="Pokemon"
-            onChange={this.selectPokemon}
-          >
-            {PokemonList.map((pokemon, index) => (
-              <option key={index}>{pokemon.name}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-    );
   }
 
   render() {
     return (
       <div>
-        {this.renderDropDown()}
+        <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
         {this.renderContent()}
       </div>
     );

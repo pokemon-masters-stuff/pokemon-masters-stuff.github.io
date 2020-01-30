@@ -1,358 +1,3 @@
-let testData = [
-  // Center Grids
-  { q: 0, r: 0, data: {}, fill: 'white' },
-  {
-    q: 0,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 0,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: 0,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: 0,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  ,
-  {
-    q: 2,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 0,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 0,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 0,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 0,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-
-  // Upper Right Grids
-  {
-    q: 1,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: -4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: -5,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: -4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: -5,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: -6,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: -4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: -5,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: -6,
-    data: { name: '', description: '', energy: 0 }
-  },
-
-  // Upper Left
-  {
-    q: -1,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: -4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 0,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: -4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: 0,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: -2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: -3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-
-  // Lower Left
-  {
-    q: -3,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: 4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: 5,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -3,
-    r: 6,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 5,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -2,
-    r: 6,
-    data: { name: '', description: '', energy: 0 }
-  },
-
-  {
-    q: -1,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: 4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: -1,
-    r: 5,
-    data: { name: '', description: '', energy: 0 }
-  },
-
-  // Lower Right
-  {
-    q: 3,
-    r: -1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: 0,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 3,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: 0,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 2,
-    r: 4,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: 1,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: 2,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: 3,
-    data: { name: '', description: '', energy: 0 }
-  },
-  {
-    q: 1,
-    r: 4,
-    data: { name: '', description: '', energy: 0 }
-  }
-];
-
 let pikachuGridData = [
   // Center Grids
   {
@@ -402,7 +47,6 @@ let pikachuGridData = [
     r: 1,
     data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 3 }
   },
-  ,
   {
     q: 2,
     r: -1,
@@ -696,7 +340,6 @@ let torkoalGridData = [
     r: 1,
     data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 }
   },
-  ,
   {
     q: 2,
     r: -1,
@@ -1024,7 +667,6 @@ let infernapeGridData = [
       energy: 7
     }
   },
-  ,
   {
     q: 2,
     r: -1,
@@ -1348,7 +990,6 @@ let dewgongGridData = [
     r: 1,
     data: { name: 'H.E. 1', description: 'Hostile Enviornment 1', energy: 7 }
   },
-  ,
   {
     q: 2,
     r: -1,
@@ -1669,7 +1310,6 @@ let haxorusGridData = [
     r: 1,
     data: { name: 'HP + 20', description: 'HP + 20', energy: 6, cell: 38 }
   },
-  ,
   {
     q: 2,
     r: -1,
@@ -2091,7 +1731,7 @@ let kingdraGridData = [
       cell: 38
     }
   },
-  ,
+
   {
     q: 2,
     r: -1,
@@ -2975,7 +2615,6 @@ let vileplumeGridData = [
     r: 1,
     data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 18 }
   },
-  ,
   {
     q: 2,
     r: -1,
@@ -3411,7 +3050,8 @@ let serperiorGridData = serperiorGridDataNoColor.map((obj, index) => {
     let redGrids = [16, 17, 25, 30, 32, 33, 35, 36, 38];
     let purpleGrids = [47, 48];
     if (blueGrids.indexOf(obj.data.cell) > -1) {
-      obj['fill'] = 'blue';
+      // 66B6EC - blue
+      obj['fill'] = '#66B6EC';
       return obj;
     }
     if (greenGrids.indexOf(obj.data.cell) > -1) {

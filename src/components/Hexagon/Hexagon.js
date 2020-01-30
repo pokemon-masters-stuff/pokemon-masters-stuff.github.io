@@ -31,7 +31,7 @@ class Hexagon extends Component {
 
   constructor(props, context) {
     super(props, context);
-    const { q, r, s, data } = props;
+    const { q, r, s } = props;
     const { layout } = context;
     const hex = new Hex(q, r, s);
     const pixel = HexUtils.hexToPixel(hex, layout);
@@ -40,7 +40,7 @@ class Hexagon extends Component {
 
   // TODO Refactor to reduce duplicate
   componentWillReceiveProps(nextProps) {
-    const { q, r, s, data } = nextProps;
+    const { q, r, s } = nextProps;
     const { layout } = this.context;
     const hex = new Hex(q, r, s);
     const pixel = HexUtils.hexToPixel(hex, layout);
@@ -72,7 +72,7 @@ class Hexagon extends Component {
   render() {
     const { fill, cellStyle, className } = this.props;
     const { points } = this.context;
-    const { hex, pixel } = this.state;
+    const { pixel } = this.state;
     // const fillId = fill ? `url(#${fill})` : null;
     const fillId = fill ? fill : null;
     return (

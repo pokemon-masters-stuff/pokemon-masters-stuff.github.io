@@ -48,7 +48,7 @@ export default function(state = initialState, action) {
         remainingEnergy: state.remainingEnergy - action.gridData.energy,
         orbSpent:
           state.orbSpent +
-          (action.gridData.energy == 0 ? 5 : action.gridData.energy * 12)
+          (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12)
       };
     case ADD_BACK_TO_REMAINING_ENERGY:
       return {
@@ -56,7 +56,7 @@ export default function(state = initialState, action) {
         remainingEnergy: state.remainingEnergy + action.gridData.energy,
         orbSpent:
           state.orbSpent -
-          (action.gridData.energy == 0 ? 5 : action.gridData.energy * 12)
+          (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12)
       };
     case RESET_GRIDS:
       return initialState;

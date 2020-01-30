@@ -41,5 +41,8 @@
       "last 1 safari version",
       "ie 11"
     ]
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.8"
   }
 }

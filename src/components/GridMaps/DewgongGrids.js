@@ -9,6 +9,7 @@ import {
   addBackToRemainingEnergy,
   resetGrids
 } from '../../actions/actionCreators';
+import ResetGridButton from '../ResetGridButton';
 
 class DewgongGrids extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class DewgongGrids extends Component {
 
   render() {
     const allGrids = dewgongGridData.map((cell, index) => {
-      if (index == 0) {
+      if (index === 0) {
         return (
           <Hexagon
             key={index}
@@ -81,13 +82,7 @@ class DewgongGrids extends Component {
     return (
       <div>
         <div className="hex-grids">
-          <button
-            type="button"
-            className="btn btn-warning"
-            onClick={this.handleClickReset}
-          >
-            Reset
-          </button>
+          <ResetGridButton onClickHandler={this.handleClickReset} />
           <HexGrid width={1200} height={760} viewBox="-15 -50 120 100">
             <Layout
               size={{ x: 4.5, y: 4.5 }}
