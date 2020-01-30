@@ -2482,9 +2482,9 @@ let kingdraGridData = [
   }
 ];
 
-let serperiorGridData = [
+let serperiorGridDataNoColor = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Serperior' }, fill: 'white' },
+  { q: 0, r: 0, data: { name: 'Serperior', cell: 0 }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -3380,6 +3380,60 @@ let vileplumeGridData = [
     fill: '#dedbd3'
   }
 ];
+
+let serperiorGridData = serperiorGridDataNoColor.map((obj, index) => {
+  if (!('fill' in obj)) {
+    let blueGrids = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      11,
+      14,
+      18,
+      20,
+      22,
+      23,
+      24,
+      27,
+      31,
+      34,
+      39,
+      42,
+      43,
+      44
+    ];
+    let greenGrids = [8, 9, 10, 12, 13, 15, 19, 28, 29, 40];
+    let yellowGrids = [21, 26, 37, 41, 45, 46];
+    let redGrids = [16, 17, 25, 30, 32, 33, 35, 36, 38];
+    let purpleGrids = [47, 48];
+    if (blueGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'blue';
+      return obj;
+    }
+    if (greenGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'green';
+      return obj;
+    }
+    if (yellowGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'yellow';
+      return obj;
+    }
+    if (redGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'red';
+      return obj;
+    }
+    if (purpleGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'purple';
+      return obj;
+    }
+  } else {
+    return obj;
+  }
+});
 
 export {
   pikachuGridData,
