@@ -1267,9 +1267,9 @@ let dewgongGridData = [
   }
 ];
 
-let haxorusGridData = [
+let haxorusGridDataNoColor = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Haxorus' }, fill: 'white' },
+  { q: 0, r: 0, data: { name: 'Haxorus', cell: 0 }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -1457,7 +1457,12 @@ let haxorusGridData = [
   {
     q: -1,
     r: -2,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 5 }
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 5,
+      cell: 44
+    }
   },
   {
     q: -2,
@@ -1682,7 +1687,7 @@ let haxorusGridData = [
   }
 ];
 
-let kingdraGridData = [
+let kingdraGridDataNoColor = [
   // Center Grids
   { q: 0, r: 0, data: { name: 'Kingdra' }, fill: 'white' },
   {
@@ -2572,9 +2577,9 @@ let serperiorGridDataNoColor = [
   }
 ];
 
-let vileplumeGridData = [
+let vileplumeGridDataNoColor = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Vileplume' }, fill: 'white' },
+  { q: 0, r: 0, data: { name: 'Vileplume', cell: 0 }, fill: 'white' },
   {
     q: 0,
     r: -1,
@@ -3048,6 +3053,176 @@ let serperiorGridData = serperiorGridDataNoColor.map((obj, index) => {
     let greenGrids = [8, 9, 10, 12, 13, 15, 19, 28, 29, 40];
     let yellowGrids = [21, 26, 37, 41, 45, 46];
     let redGrids = [16, 17, 25, 30, 32, 33, 35, 36, 38];
+    let purpleGrids = [47, 48];
+    if (blueGrids.indexOf(obj.data.cell) > -1) {
+      // 66B6EC - blue
+      obj['fill'] = '#66B6EC';
+      return obj;
+    }
+    if (greenGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'green';
+      return obj;
+    }
+    if (yellowGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'yellow';
+      return obj;
+    }
+    if (redGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'red';
+      return obj;
+    }
+    if (purpleGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'purple';
+      return obj;
+    }
+  } else {
+    return obj;
+  }
+});
+
+let haxorusGridData = haxorusGridDataNoColor.map((obj, index) => {
+  if (!('fill' in obj)) {
+    let blueGrids = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      29,
+      31,
+      38,
+      39,
+      43,
+      44,
+      45
+    ];
+    let greenGrids = [9, 10, 12, 13, 15, 16, 30, 32, 33, 35];
+    let yellowGrids = [24, 28, 40, 46];
+    let redGrids = [11, 14, 17, 23, 34, 36, 37, 41, 42];
+    let purpleGrids = [47, 48];
+    if (blueGrids.indexOf(obj.data.cell) > -1) {
+      // 66B6EC - blue
+      obj['fill'] = '#66B6EC';
+      return obj;
+    }
+    if (greenGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'green';
+      return obj;
+    }
+    if (yellowGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'yellow';
+      return obj;
+    }
+    if (redGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'red';
+      return obj;
+    }
+    if (purpleGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'purple';
+      return obj;
+    }
+  } else {
+    return obj;
+  }
+});
+
+let kingdraGridData = kingdraGridDataNoColor.map((obj, index) => {
+  if (!('fill' in obj)) {
+    let blueGrids = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      29,
+      31,
+      39,
+      40,
+      43
+    ];
+    let greenGrids = [9, 10, 12, 13, 15, 16, 30, 32, 33, 34, 35];
+    let yellowGrids = [23, 24, 28, 38, 44, 45];
+    let redGrids = [14, 17, 36, 37, 41, 42, 46];
+    let purpleGrids = [47, 48];
+    if (blueGrids.indexOf(obj.data.cell) > -1) {
+      // 66B6EC - blue
+      obj['fill'] = '#66B6EC';
+      return obj;
+    }
+    if (greenGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'green';
+      return obj;
+    }
+    if (yellowGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'yellow';
+      return obj;
+    }
+    if (redGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'red';
+      return obj;
+    }
+    if (purpleGrids.indexOf(obj.data.cell) > -1) {
+      obj['fill'] = 'purple';
+      return obj;
+    }
+  } else {
+    return obj;
+  }
+});
+
+let vileplumeGridData = vileplumeGridDataNoColor.map((obj, index) => {
+  if (!('fill' in obj)) {
+    let blueGrids = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      11,
+      18,
+      19,
+      23,
+      26,
+      27,
+      31,
+      32,
+      35,
+      36,
+      39,
+      41,
+      42,
+      43,
+      44,
+      46
+    ];
+    let greenGrids = [8, 9, 10, 12, 13, 22, 30, 38];
+    let yellowGrids = [20, 34, 40, 45];
+    let redGrids = [14, 15, 16, 17, 21, 24, 25, 28, 29, 33, 37];
     let purpleGrids = [47, 48];
     if (blueGrids.indexOf(obj.data.cell) > -1) {
       // 66B6EC - blue
