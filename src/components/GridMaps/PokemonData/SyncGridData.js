@@ -9,48 +9,59 @@ let pikachuGridData = [
         'Hidden Ability: MC Plot Armor - Thunderbolt Power + 999 when the user is in a pinch',
       energy: 0
     },
-
     fill: 'white'
   },
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
     r: 1,
-    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 }
+    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 0,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 }
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 1,
-    data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 3 }
+    data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 3 },
+    fill: 'green'
   },
   {
     q: 2,
     r: -1,
-    data: { name: 'T.S.+ 4', description: 'Thunder Shock Power + 4', energy: 2 }
+    data: {
+      name: 'T.S.+ 4',
+      description: 'Thunder Shock Power + 4',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: 0,
@@ -59,7 +70,8 @@ let pikachuGridData = [
       name: 'Sync + 25',
       description: 'Thunder of Newfound Passion Power + 25',
       energy: 5
-    }
+    },
+    fill: 'purple'
   },
   {
     q: 0,
@@ -68,39 +80,58 @@ let pikachuGridData = [
       name: 'Sync + 25',
       description: 'Thunder of Newfound Passion Power + 25',
       energy: 5
-    }
+    },
+    fill: 'purple'
   },
 
   // Upper Right Grids
   {
     q: 1,
     r: -2,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -3,
-    data: { name: 'T.S.+ 3', description: 'Thunder Shock Power + 3', energy: 2 }
+    data: {
+      name: 'T.S.+ 3',
+      description: 'Thunder Shock Power + 3',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: 1,
     r: -4,
-    data: { name: 'T.S.+ 3', description: 'Thunder Shock Power + 3', energy: 2 }
+    data: {
+      name: 'T.S.+ 3',
+      description: 'Thunder Shock Power + 3',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: 1,
     r: -5,
-    data: { name: 'T.S.+ 5', description: 'Thunder Shock Power + 5', energy: 2 }
+    data: {
+      name: 'T.S.+ 5',
+      description: 'Thunder Shock Power + 5',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: 2,
     r: -3,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 }
+    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 },
+    fill: 'green'
   },
   {
     q: 2,
     r: -4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 5', energy: 5 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 5', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
@@ -109,7 +140,8 @@ let pikachuGridData = [
       name: 'J.S. MPR 3',
       description: 'Jump Start Move Gauge Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
@@ -118,17 +150,20 @@ let pikachuGridData = [
       name: 'T.S. MPR 4',
       description: 'Thunder Shock Move Gauge Refresh 4',
       energy: 6
-    }
+    },
+    fill: 'red'
   },
   {
     q: 3,
     r: -4,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 }
+    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 },
+    fill: 'green'
   },
   {
     q: 3,
     r: -5,
-    data: { name: 'T.B. + 6', description: 'Thunderbolt Power + 6', energy: 3 }
+    data: { name: 'T.B. + 6', description: 'Thunderbolt Power + 6', energy: 3 },
+    fill: 'green'
   },
   {
     q: 3,
@@ -137,19 +172,26 @@ let pikachuGridData = [
       name: 'T.B. MGR 3',
       description: 'Thunderbolt Move Gauge Refresh 3',
       energy: 6
-    }
+    },
+    fill: 'red'
   },
 
   // Upper Left
   {
     q: -1,
     r: -1,
-    data: { name: 'T.S.+ 4', description: 'Thunder Shock Power + 4', energy: 2 }
+    data: {
+      name: 'T.S.+ 4',
+      description: 'Thunder Shock Power + 4',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: -1,
     r: -2,
-    data: { name: 'Unyielding 1', description: 'Unyielding 1', energy: 11 }
+    data: { name: 'Unyielding 1', description: 'Unyielding 1', energy: 11 },
+    fill: 'yellow'
   },
   {
     q: -2,
@@ -158,39 +200,58 @@ let pikachuGridData = [
       name: 'P. MPR 3',
       description: 'Potion MP Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
     r: -1,
-    data: { name: 'Unyielding 1', description: 'Unyielding 1', energy: 11 }
+    data: { name: 'Unyielding 1', description: 'Unyielding 1', energy: 11 },
+    fill: 'yellow'
   },
   {
     q: -2,
     r: -2,
-    data: { name: 'P. MH 1', description: 'Potion Master Healer 1', energy: 10 }
+    data: {
+      name: 'P. MH 1',
+      description: 'Potion Master Healer 1',
+      energy: 10
+    },
+    fill: 'red'
   },
   {
     q: -3,
     r: 0,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 4 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 1,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: -1,
-    data: { name: 'P. MH 1', description: 'Potion Master Healer 1', energy: 10 }
+    data: {
+      name: 'P. MH 1',
+      description: 'Potion Master Healer 1',
+      energy: 10
+    },
+    fill: 'red'
   },
 
   // Lower Left
   {
     q: -3,
     r: 4,
-    data: { name: 'T.S.+ 5', description: 'Thunder Shock Power + 5', energy: 2 }
+    data: {
+      name: 'T.S.+ 5',
+      description: 'Thunder Shock Power + 5',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: -3,
@@ -199,7 +260,8 @@ let pikachuGridData = [
       name: 'T.S. HE 1',
       description: 'Thunder Shock Hostile Enviornment 1',
       energy: 5
-    }
+    },
+    fill: 'red'
   },
   {
     q: -3,
@@ -208,22 +270,30 @@ let pikachuGridData = [
       name: 'T.S. HE 1',
       description: 'Thunder Shock Hostile Enviornment 1',
       energy: 5
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
     r: 3,
-    data: { name: 'T.S.+ 4', description: 'Thunder Shock Power + 4', energy: 2 }
+    data: {
+      name: 'T.S.+ 4',
+      description: 'Thunder Shock Power + 4',
+      energy: 2
+    },
+    fill: 'green'
   },
   {
     q: -2,
     r: 4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 5,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -232,22 +302,26 @@ let pikachuGridData = [
       name: 'T.S. HE 1',
       description: 'Thunder Shock Hostile Enviornment 1',
       energy: 5
-    }
+    },
+    fill: 'red'
   },
   {
     q: -1,
     r: 2,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 3,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 }
+    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: -1,
     r: 4,
-    data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 4 }
+    data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 4 },
+    fill: 'green'
   },
   {
     q: -1,
@@ -256,49 +330,58 @@ let pikachuGridData = [
       name: 'T.B. HE 1',
       description: 'Thunderbolt Hostile Enviornment 1',
       energy: 5
-    }
+    },
+    fill: 'red'
   },
 
   // Lower Right
   {
     q: 3,
     r: -1,
-    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4 }
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 3,
     r: 0,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 3,
     r: 1,
-    data: { name: 'P.R 9', description: 'Power Reserves 9', energy: 12 }
+    data: { name: 'P.R 9', description: 'Power Reserves 9', energy: 12 },
+    fill: 'yellow'
   },
   {
     q: 2,
     r: 0,
-    data: { name: 'P.R 5', description: 'Power Reserves 5', energy: 10 }
+    data: { name: 'P.R 5', description: 'Power Reserves 5', energy: 10 },
+    fill: 'yellow'
   },
   {
     q: 2,
     r: 1,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
     r: 2,
-    data: { name: 'HP + 30', description: 'HP + 30', energy: 6 }
+    data: { name: 'HP + 30', description: 'HP + 30', energy: 6 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 1,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 }
+    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: 1,
     r: 2,
-    data: { name: 'P.S. 5', description: 'Paralysis Synergy 5', energy: 10 }
+    data: { name: 'P.S. 5', description: 'Paralysis Synergy 5', energy: 10 },
+    fill: 'yellow'
   }
 ];
 
@@ -308,42 +391,50 @@ let torkoalGridData = [
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
     r: 1,
-    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 }
+    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 0,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 }
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
@@ -370,17 +461,20 @@ let torkoalGridData = [
   {
     q: 1,
     r: -2,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -3,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 2 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 2 },
+    fill: 'green'
   },
   {
     q: 1,
     r: -4,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: 1,
@@ -395,7 +489,8 @@ let torkoalGridData = [
   {
     q: 2,
     r: -3,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 2 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 2 },
+    fill: 'green'
   },
   {
     q: 2,
@@ -404,7 +499,8 @@ let torkoalGridData = [
       name: 'X Sp.Atk MPR 3',
       description: 'X Sp.Atk MP Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
@@ -413,7 +509,8 @@ let torkoalGridData = [
       name: 'Ember MGR 4',
       description: 'Ember Move Gauge Refresh 4',
       energy: 6
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
@@ -428,34 +525,40 @@ let torkoalGridData = [
   {
     q: 3,
     r: -4,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: 3,
     r: -5,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: 3,
     r: -6,
-    data: { name: 'P.C. 1', description: 'Power Chain 1', energy: 5 }
+    data: { name: 'P.C. 1', description: 'Power Chain 1', energy: 5 },
+    fill: 'yellow'
   },
 
   // Upper Left
   {
     q: -1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 3 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: -2,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: -1,
     r: -3,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
@@ -474,17 +577,20 @@ let torkoalGridData = [
       name: 'WoW MGR 3',
       description: 'Will-O-Wisp Move Gauge Refresh 3',
       energy: 5
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
     r: -2,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 4 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: -3,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 5 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -499,34 +605,40 @@ let torkoalGridData = [
   {
     q: -3,
     r: -1,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: -3,
     r: -2,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 5 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: -3,
-    data: { name: 'C.S. 5', description: 'Critical Strike 5', energy: 10 }
+    data: { name: 'C.S. 5', description: 'Critical Strike 5', energy: 10 },
+    fill: 'yellow'
   },
 
   // Lower Left
   {
     q: -3,
     r: 2,
-    data: { name: 'B.S. 5', description: 'Burn Synergy 5', energy: 8 }
+    data: { name: 'B.S. 5', description: 'Burn Synergy 5', energy: 8 },
+    fill: 'yellow'
   },
   {
     q: -3,
     r: 3,
-    data: { name: 'Speed + 20', description: 'Speed + 20', energy: 5 }
+    data: { name: 'Speed + 20', description: 'Speed + 20', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 4,
-    data: { name: 'B.S. 5', description: 'Burn Synergy 5', energy: 10 }
+    data: { name: 'B.S. 5', description: 'Burn Synergy 5', energy: 10 },
+    fill: 'yellow'
   },
   {
     q: -2,
@@ -535,12 +647,14 @@ let torkoalGridData = [
       name: 'WoW MGR 3',
       description: 'Will-O-Wisp Move Gauge Refresh 3',
       energy: 5
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
     r: 3,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 4 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -555,7 +669,8 @@ let torkoalGridData = [
   {
     q: -1,
     r: 2,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: -1,
@@ -572,17 +687,20 @@ let torkoalGridData = [
   {
     q: 3,
     r: -1,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 3,
     r: 0,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: 3,
     r: 1,
-    data: { name: 'Pass It On', description: 'Pass It On', energy: 10 }
+    data: { name: 'Pass It On', description: 'Pass It On', energy: 10 },
+    fill: 'yellow'
   },
   {
     q: 2,
@@ -591,12 +709,14 @@ let torkoalGridData = [
       name: 'THTH MPR 3',
       description: 'Too Hot To Handle Move Gauge Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
     r: 1,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 6 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 6 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
@@ -611,7 +731,8 @@ let torkoalGridData = [
   {
     q: 1,
     r: 1,
-    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 }
+    data: { name: 'Ember + 4', description: 'Ember Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: 1,
@@ -631,32 +752,38 @@ let infernapeGridData = [
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
     r: 1,
-    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 }
+    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 0,
-    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 0 }
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 }
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -665,12 +792,14 @@ let infernapeGridData = [
       name: 'D.H. MPR 3',
       description: 'Dire Hit Move Gauge Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 4 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
@@ -697,17 +826,20 @@ let infernapeGridData = [
   {
     q: 1,
     r: -2,
-    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 2 }
+    data: { name: 'Attack + 5', description: 'Attack + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -3,
-    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 2 }
+    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 2 },
+    fill: 'green'
   },
   {
     q: 1,
     r: -4,
-    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 3 }
+    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 3 },
+    fill: 'green'
   },
   {
     q: 1,
@@ -722,12 +854,14 @@ let infernapeGridData = [
   {
     q: 2,
     r: -3,
-    data: { name: 'Attack + 10', description: 'Attack + 10', energy: 3 }
+    data: { name: 'Attack + 10', description: 'Attack + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
     r: -4,
-    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 3 }
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
@@ -736,7 +870,8 @@ let infernapeGridData = [
       name: 'F.P. MPR 3',
       description: 'Fire Punch Move Gauge Refresh 3',
       energy: 6
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
@@ -751,39 +886,46 @@ let infernapeGridData = [
   {
     q: 3,
     r: -4,
-    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 2 }
+    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 2 },
+    fill: 'green'
   },
   {
     q: 3,
     r: -5,
-    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 4 }
+    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 4 },
+    fill: 'green'
   },
   {
     q: 3,
     r: -6,
-    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 5 }
+    data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 5 },
+    fill: 'green'
   },
 
   // Upper Left
   {
     q: -1,
     r: -1,
-    data: { name: 'Spd.Entry 2', description: 'Speedy Entry 2', energy: 5 }
+    data: { name: 'Spd.Entry 2', description: 'Speedy Entry 2', energy: 5 },
+    fill: 'yellow'
   },
   {
     q: -1,
     r: -2,
-    data: { name: 'Attack + 10', description: 'Attack + 10', energy: 5 }
+    data: { name: 'Attack + 10', description: 'Attack + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 0,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: -1,
-    data: { name: 'Speed + 20', description: 'Speed + 20', energy: 8 }
+    data: { name: 'Speed + 20', description: 'Speed + 20', energy: 8 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -798,12 +940,14 @@ let infernapeGridData = [
   {
     q: -3,
     r: 0,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 1,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 3 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
@@ -820,17 +964,20 @@ let infernapeGridData = [
   {
     q: -3,
     r: 4,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 3 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 5,
-    data: { name: 'Endurance', description: 'Endurance', energy: 7 }
+    data: { name: 'Endurance', description: 'Endurance', energy: 7 },
+    fill: 'yellow'
   },
   {
     q: -3,
     r: 6,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -839,17 +986,20 @@ let infernapeGridData = [
       name: 'W.O.F MPR 3',
       description: "We're On Fire MP Refresh 3",
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
     r: 4,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 3 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 5,
-    data: { name: 'Hp + 20', description: 'Hp + 20', energy: 5 }
+    data: { name: 'Hp + 20', description: 'Hp + 20', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -864,17 +1014,20 @@ let infernapeGridData = [
   {
     q: -1,
     r: 2,
-    data: { name: 'Hp + 10', description: 'Hp + 10', energy: 2 }
+    data: { name: 'Hp + 10', description: 'Hp + 10', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 3,
-    data: { name: 'Hp + 20', description: 'Hp + 20', energy: 3 }
+    data: { name: 'Hp + 20', description: 'Hp + 20', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 4,
-    data: { name: 'A.E. 2', description: 'Agile Entry 2', energy: 7 }
+    data: { name: 'A.E. 2', description: 'Agile Entry 2', energy: 7 },
+    fill: 'yellow'
   },
   {
     q: -1,
@@ -895,12 +1048,14 @@ let infernapeGridData = [
       name: 'F.B. Acc + 5',
       description: 'Fire Blast Accuracy + 5',
       energy: 5
-    }
+    },
+    fill: 'green'
   },
   {
     q: 3,
     r: 0,
-    data: { name: 'F.B. + 5', description: 'Fire Blast Power + 5', energy: 7 }
+    data: { name: 'F.B. + 5', description: 'Fire Blast Power + 5', energy: 7 },
+    fill: 'green'
   },
   {
     q: 3,
@@ -915,7 +1070,8 @@ let infernapeGridData = [
   {
     q: 2,
     r: 0,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 5 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
@@ -924,7 +1080,8 @@ let infernapeGridData = [
       name: 'F.B. MGR 3',
       description: 'Fire Blast Move Gauge Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
@@ -939,7 +1096,8 @@ let infernapeGridData = [
   {
     q: 1,
     r: 1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 4 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
@@ -948,7 +1106,8 @@ let infernapeGridData = [
       name: 'F.B. Acc + 5',
       description: 'Fire Blast Accuracy + 5',
       energy: 5
-    }
+    },
+    fill: 'green'
   }
 ];
 
@@ -958,42 +1117,50 @@ let dewgongGridData = [
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
     r: 1,
-    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 }
+    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 0,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 }
+    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 1,
-    data: { name: 'H.E. 1', description: 'Hostile Enviornment 1', energy: 7 }
+    data: { name: 'H.E. 1', description: 'Hostile Enviornment 1', energy: 7 },
+    fill: 'yellow'
   },
   {
     q: 2,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 3 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: 0,
@@ -1020,17 +1187,28 @@ let dewgongGridData = [
   {
     q: 1,
     r: -2,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -3,
-    data: { name: 'Ice Beam + 4', description: 'Ice Beam Power + 4', energy: 3 }
+    data: {
+      name: 'Ice Beam + 4',
+      description: 'Ice Beam Power + 4',
+      energy: 3
+    },
+    fill: 'green'
   },
   {
     q: 1,
     r: -4,
-    data: { name: 'Ice Beam + 4', description: 'Ice Beam Power + 4', energy: 3 }
+    data: {
+      name: 'Ice Beam + 4',
+      description: 'Ice Beam Power + 4',
+      energy: 3
+    },
+    fill: 'green'
   },
   {
     q: 1,
@@ -1045,12 +1223,14 @@ let dewgongGridData = [
   {
     q: 2,
     r: -3,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
     r: -4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 }
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
@@ -1059,7 +1239,8 @@ let dewgongGridData = [
       name: 'I.B. MGR 3',
       description: 'Ice Beam Move Gauge Refresh 3',
       energy: 6
-    }
+    },
+    fill: 'red'
   },
   {
     q: 2,
@@ -1074,29 +1255,46 @@ let dewgongGridData = [
   {
     q: 3,
     r: -4,
-    data: { name: 'Ice Beam + 4', description: 'Ice Beam Power + 4', energy: 3 }
+    data: {
+      name: 'Ice Beam + 4',
+      description: 'Ice Beam Power + 4',
+      energy: 3
+    },
+    fill: 'green'
   },
   {
     q: 3,
     r: -5,
-    data: { name: 'Ice Beam + 4', description: 'Ice Beam Power + 4', energy: 3 }
+    data: {
+      name: 'Ice Beam + 4',
+      description: 'Ice Beam Power + 4',
+      energy: 3
+    },
+    fill: 'green'
   },
   {
     q: 3,
     r: -6,
-    data: { name: 'Ice Beam + 4', description: 'Ice Beam Power + 4', energy: 4 }
+    data: {
+      name: 'Ice Beam + 4',
+      description: 'Ice Beam Power + 4',
+      energy: 4
+    },
+    fill: 'green'
   },
 
   // Upper Left
   {
     q: -1,
     r: -1,
-    data: { name: 'H.E. 1', description: 'Hostile Enviornment 1', energy: 7 }
+    data: { name: 'H.E. 1', description: 'Hostile Enviornment 1', energy: 7 },
+    fill: 'yellow'
   },
   {
     q: -1,
     r: -2,
-    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4 }
+    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -1105,12 +1303,14 @@ let dewgongGridData = [
       name: 'D.H. MPR 3',
       description: 'Dire Hit MP Refresh 3',
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
     r: -1,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 5 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -1125,12 +1325,14 @@ let dewgongGridData = [
   {
     q: -3,
     r: 0,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 5 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 3 }
+    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
@@ -1147,27 +1349,32 @@ let dewgongGridData = [
   {
     q: -3,
     r: 4,
-    data: { name: 'H.H 1', description: 'Healing Hail 1', energy: 7 }
+    data: { name: 'H.H 1', description: 'Healing Hail 1', energy: 7 },
+    fill: 'yellow'
   },
   {
     q: -3,
     r: 5,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 5 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 6,
-    data: { name: 'I.H. 3', description: 'Invigorating Hail 3', energy: 8 }
+    data: { name: 'I.H. 3', description: 'Invigorating Hail 3', energy: 8 },
+    fill: 'yellow'
   },
   {
     q: -2,
     r: 3,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 }
+    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 4,
-    data: { name: 'Speed + 20', description: 'Speed + 20', energy: 5 }
+    data: { name: 'Speed + 20', description: 'Speed + 20', energy: 5 },
+    fill: '#66B6EC'
   },
   {
     q: -2,
@@ -1176,7 +1383,8 @@ let dewgongGridData = [
       name: 'ITYAL MPR 3',
       description: "I'll Teach You A Lesson MP Refresh 3",
       energy: 7
-    }
+    },
+    fill: 'red'
   },
   {
     q: -2,
@@ -1191,17 +1399,20 @@ let dewgongGridData = [
   {
     q: -1,
     r: 2,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 2 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 2 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 3,
-    data: { name: 'Snow Shelter', description: 'Snow Shelter', energy: 7 }
+    data: { name: 'Snow Shelter', description: 'Snow Shelter', energy: 7 },
+    fill: 'yellow'
   },
   {
     q: -1,
     r: 4,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 }
+    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
@@ -1218,12 +1429,14 @@ let dewgongGridData = [
   {
     q: 3,
     r: -1,
-    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 }
+    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
+    fill: 'green'
   },
   {
     q: 3,
     r: 0,
-    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 }
+    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
+    fill: 'green'
   },
   {
     q: 3,
@@ -1238,12 +1451,14 @@ let dewgongGridData = [
   {
     q: 2,
     r: 0,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 3 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: 2,
     r: 1,
-    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 }
+    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
+    fill: 'green'
   },
   {
     q: 2,
@@ -1258,12 +1473,14 @@ let dewgongGridData = [
   {
     q: 1,
     r: 1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 3 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 3 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 2,
-    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 }
+    data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
+    fill: 'green'
   }
 ];
 
