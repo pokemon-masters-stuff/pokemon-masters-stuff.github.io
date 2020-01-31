@@ -3,6 +3,7 @@ import ReactGA from 'react-ga';
 import SyncGrids from './components/SyncGrids';
 import GridData from './components/GridData';
 import ActiveGridList from './components/ActiveGridList';
+import MyForm from './components/FeedbackForm';
 
 ReactGA.initialize('UA-157426792-1');
 
@@ -17,6 +18,23 @@ class App extends Component {
           <div className="container container-s">
             <span className="navbar-brand mb-0 h1">Sync Grid Helper</span>
           </div>
+
+          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              <button
+                type="button"
+                className="btn btn-dark"
+                id="feedback-button"
+                data-toggle="modal"
+                data-target="#feedbackModal"
+              >
+                Submit Feedback
+              </button>
+              <MyForm />
+            </li>
+          </ul>
+          {/* </div> */}
         </nav>
         <div className="content">
           <div className="container container-s">
