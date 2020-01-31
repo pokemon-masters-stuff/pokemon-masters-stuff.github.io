@@ -24,10 +24,7 @@ export default class MyForm extends React.Component {
         aria-labelledby="feedbackModalCenterTitle"
         aria-hidden="true"
       >
-        <div
-          className="modal-dialog modal-dialog-centered mw-50 w-50"
-          role="document"
-        >
+        <div className="modal-dialog mt-5 w-50" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="feedBackModalLongTitle">
