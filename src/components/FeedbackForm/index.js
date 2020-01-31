@@ -38,22 +38,15 @@ export default class MyForm extends React.Component {
                 method="POST"
               >
                 <textarea
-                  id="form_message"
-                  name="message"
+                  type="text"
                   className="form-control"
-                  rows="4"
-                  required="required"
-                  data-error="You haven't written anything."
-                ></textarea>
-
+                  id="textboxid"
+                  name="message"
+                />
                 {status === 'SUCCESS' ? (
-                  <p>Thank you for your feedback!</p>
+                  <p className="mt-2">Thank you for the feedback!</p>
                 ) : (
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-primary">
-                      Submit
-                    </button>
-                  </div>
+                  <button className="mt-2 btn btn-primary">Submit</button>
                 )}
                 {status === 'ERROR' && <p>Ooops! There was an error.</p>}
               </form>
