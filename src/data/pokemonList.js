@@ -9,7 +9,7 @@ let list = [
   { name: 'Vileplume' }
 ];
 
-let PokemonList = list.map((obj, index) => {
+let pokemonList = list.map((obj, index) => {
   return {
     ...obj,
     key: index,
@@ -17,4 +17,4 @@ let PokemonList = list.map((obj, index) => {
   };
 });
 
-export default PokemonList;
+export default pokemonList;
