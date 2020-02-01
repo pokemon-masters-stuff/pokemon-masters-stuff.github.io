@@ -130,7 +130,7 @@ export default [
   {
     q: 2,
     r: -4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 5', energy: 5 },
+    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
     fill: '#66B6EC'
   },
   {
