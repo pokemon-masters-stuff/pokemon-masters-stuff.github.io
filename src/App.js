@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import SyncGrids from './components/SyncGrids';
-import GridData from './components/GridData';
+import CurrentGrid from './components/CurrentGrid';
 import ActiveGridList from './components/ActiveGridList';
 import MyForm from './components/FeedbackForm';
 
@@ -44,7 +44,7 @@ class App extends Component {
                   <SyncGrids />
                 </div>
                 <div className="grid-data-display position-fixed">
-                  <GridData />
+                  <CurrentGrid />
                 </div>
               </div>
               <div className="col-sm-4 position-static mt-5">

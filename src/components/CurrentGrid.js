@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class GridData extends Component {
+class CurrentGrid extends Component {
   renderContent() {
     if (this.props.grid.gridData.description) {
       return (
@@ -30,4 +30,4 @@ const mapStateToProps = state => ({
   grid: state.grid
 });
 
-export default connect(mapStateToProps)(GridData);
+export default connect(mapStateToProps)(CurrentGrid);
