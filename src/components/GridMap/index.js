@@ -33,15 +33,17 @@ const allSyncGrids = {
 };
 
 class GridMap extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false),
+  };
 
-    this.state = {
-      isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false),
-    };
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    if (nextProps.pokemon !== this.props.pokemon) {
+      this.setState({isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false)});
+      this.props.resetGrids();
+    }
 
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClickReset = this.handleClickReset.bind(this);
+    return true;
   }
 
   handleClick(e, index) {
@@ -58,10 +60,10 @@ class GridMap extends Component {
     this.setState({isSelected: newIsSelected});
   }
 
-  handleClickReset() {
+  handleClickReset = () => {
     this.setState({isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false)});
     this.props.resetGrids();
-  }
+  };
 
   render() {
     const allGrids = allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
