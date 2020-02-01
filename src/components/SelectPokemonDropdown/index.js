@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PokemonList from '../GridMaps/PokemonData/PokemonList';
+import {pokemonList} from '../../data';
 
 const SelectPokemonDropDown = (props) => {
   const {onChangeHandler} = props;
@@ -17,7 +17,7 @@ const SelectPokemonDropDown = (props) => {
           id="Pokemon"
           onChange={handleOnChange}
         >
-          {PokemonList.map((pokemon, index) => (
+          {pokemonList.map((pokemon, index) => (
             <option key={index}>{pokemon.name}</option>
           ))}
         </select>
