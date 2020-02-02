@@ -54,6 +54,10 @@ body {
   font-size: 0.8rem;
 }
 
+.active-grid {
+  font-size: 0.9rem;
+}
+
 #textboxid {
   height: 200px;
   font-size: 14pt;
@@ -69,7 +73,10 @@ ul {
 } */
 svg g {
   fill: #9ea7e7;
-  fill-opacity: 0.6;
+  fill-opacity: 0.15;
+}
+svg g .selected {
+  fill-opacity: 1;
 }
 svg g:hover {
   fill-opacity: 1;
@@ -86,7 +93,7 @@ svg g polygon {
 svg g text {
   font-size: 0.075rem;
   fill: #000000;
-  fill-opacity: 0.7;
+  fill-opacity: 0.8;
   transition: fill-opacity 0.2s;
   font-weight: bold;
 

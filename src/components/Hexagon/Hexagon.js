@@ -77,7 +77,7 @@ class Hexagon extends Component {
     const fillId = fill ? fill : null;
     return (
       <g
-        className={classNames('hexagon-group', className)}
+        className="hexagon-group"
         transform={`translate(${pixel.x}, ${pixel.y})`}
         draggable="true"
         data={''}
@@ -86,7 +86,7 @@ class Hexagon extends Component {
         onMouseLeave={e => this.onMouseLeave(e)}
         onClick={e => this.onClick(e)}
       >
-        <g className="hexagon">
+        <g className={classNames('hexagon', className)}>
           <polygon points={points} fill={fillId} style={cellStyle} />
           {this.props.children}
         </g>

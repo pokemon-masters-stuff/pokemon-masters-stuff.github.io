@@ -1,3 +1,9 @@
+// green = #73d958
+// red = #f24646
+// blue = #66B6EC
+// purple = #d12deb
+// grey = #dedbd3
+
 export default [
   // Center Grids
   {
@@ -51,7 +57,7 @@ export default [
     q: -2,
     r: 1,
     data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 3 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 2,
@@ -61,7 +67,7 @@ export default [
       description: 'Thunder Shock Power + 4',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 0,
@@ -71,7 +77,7 @@ export default [
       description: 'Thunder of Newfound Passion Power + 25',
       energy: 5
     },
-    fill: 'purple'
+    fill: '#d12deb'
   },
   {
     q: 0,
@@ -81,7 +87,7 @@ export default [
       description: 'Thunder of Newfound Passion Power + 25',
       energy: 5
     },
-    fill: 'purple'
+    fill: '#d12deb'
   },
 
   // Upper Right Grids
@@ -99,7 +105,7 @@ export default [
       description: 'Thunder Shock Power + 3',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,
@@ -109,7 +115,7 @@ export default [
       description: 'Thunder Shock Power + 3',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,
@@ -119,13 +125,13 @@ export default [
       description: 'Thunder Shock Power + 5',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 2,
     r: -3,
     data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 2,
@@ -141,7 +147,7 @@ export default [
       description: 'Jump Start Move Gauge Refresh 3',
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: 2,
@@ -151,19 +157,19 @@ export default [
       description: 'Thunder Shock Move Gauge Refresh 4',
       energy: 6
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: 3,
     r: -4,
     data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
     r: -5,
     data: { name: 'T.B. + 6', description: 'Thunderbolt Power + 6', energy: 3 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
@@ -173,7 +179,7 @@ export default [
       description: 'Thunderbolt Move Gauge Refresh 3',
       energy: 6
     },
-    fill: 'red'
+    fill: '#f24646'
   },
 
   // Upper Left
@@ -185,7 +191,7 @@ export default [
       description: 'Thunder Shock Power + 4',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: -1,
@@ -201,7 +207,7 @@ export default [
       description: 'Potion MP Refresh 3',
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -2,
@@ -217,7 +223,7 @@ export default [
       description: 'Potion Master Healer 1',
       energy: 10
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -3,
@@ -239,7 +245,7 @@ export default [
       description: 'Potion Master Healer 1',
       energy: 10
     },
-    fill: 'red'
+    fill: '#f24646'
   },
 
   // Lower Left
@@ -251,7 +257,7 @@ export default [
       description: 'Thunder Shock Power + 5',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: -3,
@@ -261,7 +267,7 @@ export default [
       description: 'Thunder Shock Hostile Enviornment 1',
       energy: 5
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -3,
@@ -271,7 +277,7 @@ export default [
       description: 'Thunder Shock Hostile Enviornment 1',
       energy: 5
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -2,
@@ -281,7 +287,7 @@ export default [
       description: 'Thunder Shock Power + 4',
       energy: 2
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: -2,
@@ -303,7 +309,7 @@ export default [
       description: 'Thunder Shock Hostile Enviornment 1',
       energy: 5
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -1,
@@ -315,13 +321,13 @@ export default [
     q: -1,
     r: 3,
     data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: -1,
     r: 4,
     data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 4 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: -1,
@@ -331,7 +337,7 @@ export default [
       description: 'Thunderbolt Hostile Enviornment 1',
       energy: 5
     },
-    fill: 'red'
+    fill: '#f24646'
   },
 
   // Lower Right
@@ -375,7 +381,7 @@ export default [
     q: 1,
     r: 1,
     data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,

@@ -1,3 +1,9 @@
+// green = #73d958
+// red = #f24646
+// blue = #66B6EC
+// purple = #d12deb
+// grey = #dedbd3
+
 export default [
   // Center Grids
   { q: 0, r: 0, data: { name: 'Dewgong' }, fill: 'white' },
@@ -85,7 +91,7 @@ export default [
       description: 'Ice Beam Power + 4',
       energy: 3
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,
@@ -95,7 +101,7 @@ export default [
       description: 'Ice Beam Power + 4',
       energy: 3
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,
@@ -127,7 +133,7 @@ export default [
       description: 'Ice Beam Move Gauge Refresh 3',
       energy: 6
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: 2,
@@ -147,7 +153,7 @@ export default [
       description: 'Ice Beam Power + 4',
       energy: 3
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
@@ -157,7 +163,7 @@ export default [
       description: 'Ice Beam Power + 4',
       energy: 3
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
@@ -167,7 +173,7 @@ export default [
       description: 'Ice Beam Power + 4',
       energy: 4
     },
-    fill: 'green'
+    fill: '#73d958'
   },
 
   // Upper Left
@@ -191,7 +197,7 @@ export default [
       description: 'Dire Hit MP Refresh 3',
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -2,
@@ -271,7 +277,7 @@ export default [
       description: "I'll Teach You A Lesson MP Refresh 3",
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -2,
@@ -317,13 +323,13 @@ export default [
     q: 3,
     r: -1,
     data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
     r: 0,
     data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
@@ -345,7 +351,7 @@ export default [
     q: 2,
     r: 1,
     data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 2,
@@ -367,6 +373,6 @@ export default [
     q: 1,
     r: 2,
     data: { name: 'I.W. + 5', description: 'Icy Wind Power + 5', energy: 5 },
-    fill: 'green'
+    fill: '#73d958'
   }
 ];

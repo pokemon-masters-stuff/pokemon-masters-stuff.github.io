@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import {HexGrid, Layout, Hexagon, Text, Pattern} from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import ResetGridButton from '../ResetGridButton';
 import {
   pikachuGridData,
@@ -11,14 +11,14 @@ import {
   haxorusGridData,
   kingdraGridData,
   serperiorGridData,
-  vileplumeGridData,
+  vileplumeGridData
 } from '../../data';
 import {
   addToGridList,
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids,
+  resetGrids
 } from '../../actions/actionCreators';
 
 const allSyncGrids = {
@@ -29,17 +29,23 @@ const allSyncGrids = {
   haxorusGridData,
   kingdraGridData,
   serperiorGridData,
-  vileplumeGridData,
+  vileplumeGridData
 };
 
 class GridMap extends Component {
   state = {
-    isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false),
+    isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(
+      element => false
+    )
   };
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     if (nextProps.pokemon !== this.props.pokemon) {
-      this.setState({isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false)});
+      this.setState({
+        isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(
+          element => false
+        )
+      });
       this.props.resetGrids();
     }
 
@@ -57,53 +63,61 @@ class GridMap extends Component {
 
     const newIsSelected = [...this.state.isSelected];
     newIsSelected[index] = !this.state.isSelected[index];
-    this.setState({isSelected: newIsSelected});
+    this.setState({ isSelected: newIsSelected });
   }
 
   handleClickReset = () => {
-    this.setState({isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(element => false)});
+    this.setState({
+      isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(
+        element => false
+      )
+    });
     this.props.resetGrids();
   };
 
   render() {
-    const allGrids = allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
-      let hexagonProps = {
-        key: index,
-        q: cell.q,
-        r: cell.r,
-        s: 0,
-        data: cell.data,
-        fill: 'white',
-        onMouseEnter: this.mouseEnter,
-        onMouseLeave: this.mouseLeave,
-      };
-
-      if (index !== 0) {
-        hexagonProps = {
-          ...hexagonProps,
-          fill: this.state.isSelected[index] ? 'white' : cell.fill,
-          onClick: e => this.handleClick(e, index),
-          isSelected: this.state.isSelected[index],
+    const allGrids = allSyncGrids[`${this.props.pokemon}GridData`].map(
+      (cell, index) => {
+        let hexagonProps = {
+          key: index,
+          q: cell.q,
+          r: cell.r,
+          s: 0,
+          data: cell.data,
+          fill: 'white',
+          onMouseEnter: this.mouseEnter,
+          onMouseLeave: this.mouseLeave
         };
-      }
 
-      return (
-        <Hexagon {...hexagonProps}>
-          <Text>{cell.data.name}</Text>
-        </Hexagon>
-      );
-    });
+        if (index !== 0) {
+          hexagonProps = {
+            ...hexagonProps,
+            // fill: this.state.isSelected[index] ? 'white' : cell.fill,
+            fill: cell.fill,
+            onClick: e => this.handleClick(e, index),
+            isSelected: this.state.isSelected[index],
+            className: this.state.isSelected[index] ? 'selected' : null
+          };
+        }
+
+        return (
+          <Hexagon {...hexagonProps}>
+            <Text>{cell.data.name}</Text>
+          </Hexagon>
+        );
+      }
+    );
 
     return (
       <div>
         <div className="hex-grids">
-          <ResetGridButton onClickHandler={this.handleClickReset}/>
+          <ResetGridButton onClickHandler={this.handleClickReset} />
           <HexGrid width={1200} height={760} viewBox="-15 -50 120 100">
             <Layout
-              size={{x: 4.5, y: 4.5}}
+              size={{ x: 4.5, y: 4.5 }}
               flat={true}
               spacing={1.1}
-              origin={{x: 0, y: 0}}
+              origin={{ x: 0, y: 0 }}
             >
               {allGrids}
             </Layout>
@@ -120,7 +134,7 @@ class GridMap extends Component {
 
 const mapStateToProps = state => ({
   pokemon: state.pokemon.selectedPokemon.toLowerCase(),
-  grid: state.grid,
+  grid: state.grid
 });
 
 export default connect(mapStateToProps, {
@@ -128,5 +142,5 @@ export default connect(mapStateToProps, {
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids,
+  resetGrids
 })(GridMap);

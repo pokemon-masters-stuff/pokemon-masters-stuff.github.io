@@ -1,3 +1,9 @@
+// green = #73d958
+// red = #f24646
+// blue = #66B6EC
+// purple = #d12deb
+// grey = #dedbd3
+
 export default [
   // Center Grids
   { q: 0, r: 0, data: { name: 'Infernape' }, fill: 'white' },
@@ -45,7 +51,7 @@ export default [
       description: 'Dire Hit Move Gauge Refresh 3',
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: 2,
@@ -85,13 +91,13 @@ export default [
     q: 1,
     r: -3,
     data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 2 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,
     r: -4,
     data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 3 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 1,
@@ -123,7 +129,7 @@ export default [
       description: 'Fire Punch Move Gauge Refresh 3',
       energy: 6
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: 2,
@@ -139,19 +145,19 @@ export default [
     q: 3,
     r: -4,
     data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 2 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
     r: -5,
     data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 4 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
     r: -6,
     data: { name: 'F.P. + 4', description: 'Fire Punch Power + 4', energy: 5 },
-    fill: 'green'
+    fill: '#73d958'
   },
 
   // Upper Left
@@ -239,7 +245,7 @@ export default [
       description: "We're On Fire MP Refresh 3",
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: -2,
@@ -301,13 +307,13 @@ export default [
       description: 'Fire Blast Accuracy + 5',
       energy: 5
     },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
     r: 0,
     data: { name: 'F.B. + 5', description: 'Fire Blast Power + 5', energy: 7 },
-    fill: 'green'
+    fill: '#73d958'
   },
   {
     q: 3,
@@ -333,7 +339,7 @@ export default [
       description: 'Fire Blast Move Gauge Refresh 3',
       energy: 7
     },
-    fill: 'red'
+    fill: '#f24646'
   },
   {
     q: 2,
@@ -359,6 +365,6 @@ export default [
       description: 'Fire Blast Accuracy + 5',
       energy: 5
     },
-    fill: 'green'
+    fill: '#73d958'
   }
 ];

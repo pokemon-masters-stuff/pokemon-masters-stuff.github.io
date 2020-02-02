@@ -1,3 +1,9 @@
+// green = #73d958
+// red = #f24646
+// blue = #66B6EC
+// purple = #d12deb
+// grey = #dedbd3
+
 let serperiorGridDataNoColor = [
   // Center Grids
   { q: 0, r: 0, data: { name: 'Serperior', cell: 0 }, fill: 'white' },
@@ -482,16 +488,18 @@ export default serperiorGridDataNoColor.map((obj, index) => {
       obj['fill'] = '#66B6EC';
       return obj;
     }
+    // green = #73d958
     if (greenGrids.indexOf(obj.data.cell) > -1) {
-      obj['fill'] = 'green';
+      obj['fill'] = '#73d958';
       return obj;
     }
     if (yellowGrids.indexOf(obj.data.cell) > -1) {
       obj['fill'] = 'yellow';
       return obj;
     }
+    // red = #f24646
     if (redGrids.indexOf(obj.data.cell) > -1) {
-      obj['fill'] = 'red';
+      obj['fill'] = '#f24646';
       return obj;
     }
     if (purpleGrids.indexOf(obj.data.cell) > -1) {
