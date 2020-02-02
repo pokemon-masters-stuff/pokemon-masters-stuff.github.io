@@ -75,10 +75,11 @@ svg g {
   fill: #9ea7e7;
   fill-opacity: 0.15;
 }
-svg g .selected {
-  fill-opacity: 1;
-}
+
 svg g:hover {
+  fill-opacity: 0.5;
+}
+svg g .selected {
   fill-opacity: 1;
 }
 svg g:hover text {
