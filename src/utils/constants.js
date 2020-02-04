@@ -1,0 +1,1 @@
+export const UA_ID = "UA-157426792-1";

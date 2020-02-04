@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
-import ResetGridButton from '../ResetGridButton';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -65,15 +64,6 @@ class GridMap extends Component {
     newIsSelected[index] = !this.state.isSelected[index];
     this.setState({ isSelected: newIsSelected });
   }
-
-  handleClickReset = () => {
-    this.setState({
-      isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(
-        element => false
-      )
-    });
-    this.props.resetGrids();
-  };
 
   render() {
     const allGrids = allSyncGrids[`${this.props.pokemon}GridData`].map(

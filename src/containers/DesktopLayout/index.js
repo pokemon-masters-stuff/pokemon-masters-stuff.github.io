@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import SyncGrids from './components/SyncGrids';
-import CurrentGrid from './components/CurrentGrid';
-import ActiveGridList from './components/ActiveGridList';
-import MyForm from './components/FeedbackForm';
 
-ReactGA.initialize('UA-157426792-1');
+import SyncGrids from '../../components/SyncGrids';
+import CurrentGrid from '../../components/CurrentGrid';
+import ActiveGridList from '../../components/ActiveGridList';
+import MyForm from '../../components/FeedbackForm';
 
-class App extends Component {
+class DesktopLayout extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
+
   render() {
     return (
       <div className="App">
@@ -58,4 +58,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default DesktopLayout;
