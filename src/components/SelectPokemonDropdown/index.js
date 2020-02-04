@@ -1,33 +1,45 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 import {pokemonList} from '../../data';
+import styles from "./styles";
 
-const SelectPokemonDropDown = (props) => {
-  const {onChangeHandler} = props;
+function SimpleSelect(props) {
+  const {classes} = props;
+  const [pokemon, setPokemon] = React.useState('');
 
-  const handleOnChange = (e) => onChangeHandler ? onChangeHandler(e.target.value) : false;
+  const inputLabel = React.useRef(null);
+  const [labelWidth, setLabelWidth] = React.useState(0);
+  React.useEffect(() => {
+    setLabelWidth(inputLabel.current.offsetWidth);
+  }, []);
+
+  const handleChange = event => {
+    setPokemon(event.target.value);
+  };
+
 
   return (
-    <div className="form-inline">
-      <div className="form-group mt-3 mb-2">
-        <select
-          required
-          className="form-control"
-          id="Pokemon"
-          onChange={handleOnChange}
-        >
-          {pokemonList.map((pokemon, index) => (
-            <option key={index}>{pokemon.name}</option>
-          ))}
-        </select>
-      </div>
-    </div>
+    <FormControl variant="outlined" size="small" className={classes.formControl}>
+      <InputLabel ref={inputLabel} id="select-pokemon">
+        Pokemon
+      </InputLabel>
+      <Select
+        labelId="select-pokemon"
+        value={pokemon}
+        onChange={handleChange}
+        labelWidth={labelWidth}
+      >
+        {pokemonList.map((pokemon, index) => (
+          <MenuItem key={index} value={pokemon.name}>{pokemon.name}</MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 };
 
-SelectPokemonDropDown.propTypes = {
-  onChangeHandler: PropTypes.func.isRequired
-};
-
-export default SelectPokemonDropDown;
+export default withStyles(styles)(SimpleSelect);

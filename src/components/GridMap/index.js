@@ -109,25 +109,20 @@ class GridMap extends Component {
     );
 
     return (
-      <div>
-        <div className="hex-grids">
-          <ResetGridButton onClickHandler={this.handleClickReset} />
-          <HexGrid width={1200} height={760} viewBox="-15 -50 120 100">
-            <Layout
-              size={{ x: 4.5, y: 4.5 }}
-              flat={true}
-              spacing={1.1}
-              origin={{ x: 0, y: 0 }}
-            >
-              {allGrids}
-            </Layout>
-            <Pattern
-              id="pat-3"
-              link="https://img.icons8.com/material-sharp/24/000000/lock.png"
-            />
-          </HexGrid>
-        </div>
-      </div>
+      <HexGrid width={1200} height={760} viewBox="-15 -50 120 100">
+        <Layout
+          size={{ x: 4.5, y: 4.5 }}
+          flat={true}
+          spacing={1.1}
+          origin={{ x: 0, y: 0 }}
+        >
+          {allGrids}
+        </Layout>
+        <Pattern
+          id="pat-3"
+          link="https://img.icons8.com/material-sharp/24/000000/lock.png"
+        />
+      </HexGrid>
     );
   }
 }
