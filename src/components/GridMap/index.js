@@ -51,14 +51,15 @@ class GridMap extends Component {
     return true;
   }
 
-  handleClick(e, index) {
-    console.log('this.props in GridMap', this.props);
+  handleClick(e, index, data) {
+    e.stopPropagation();
+
     if (this.state.isSelected[index] === false) {
-      this.props.addToGridList(this.props.grid.gridData);
-      this.props.subtractFromRemainingEnergy(this.props.grid.gridData);
+      this.props.addToGridList(data);
+      this.props.subtractFromRemainingEnergy(data);
     } else {
-      this.props.removeFromGridList(this.props.grid.gridData);
-      this.props.addBackToRemainingEnergy(this.props.grid.gridData);
+      this.props.removeFromGridList(data);
+      this.props.addBackToRemainingEnergy(data);
     }
 
     const newIsSelected = [...this.state.isSelected];
@@ -84,7 +85,7 @@ class GridMap extends Component {
           hexagonProps = {
             ...hexagonProps,
             fill: cell.fill,
-            onClick: e => this.handleClick(e, index),
+            onClickHandler: (e, data) => this.handleClick(e, index, data),
             isSelected: this.state.isSelected[index],
             className: this.state.isSelected[index] ? 'selected' : null
           };

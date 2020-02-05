@@ -15,19 +15,10 @@ import styles from './styles';
 import { selectPokemon, resetGrids } from '../../actions/actionCreators';
 
 class MobileApp extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isNavOpened: false,
-      isSkillListOpened: false
-    };
-    this.handleOnChangePokemon = this.handleOnChangePokemon.bind(this);
-    this.handleOnOpenSkillList = this.handleOnOpenSkillList.bind(this);
-    this.handleOnCloseSkillList = this.handleOnCloseSkillList.bind(this);
-    this.handleOnOpenNav = this.handleOnOpenNav.bind(this);
-    this.handleOnCloseNav = this.handleOnCloseNav.bind(this);
-  }
+  state = {
+    isNavOpened: false,
+    isSkillListOpened: false
+  };
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -41,15 +32,14 @@ class MobileApp extends Component {
 
   handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
 
-  handleOnChangePokemon(value) {
+  handleOnChangePokemon = (value) => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
-  }
+  };
 
   render() {
     const { isNavOpened, isSkillListOpened } = this.state;
-    const { classes } = this.props;
-    console.log('this', this);
+    const { classes, grid } = this.props;
 
     return (
       <>
@@ -61,14 +51,14 @@ class MobileApp extends Component {
         <SelectedSkillList
           isOpened={isSkillListOpened}
           onCloseHandler={this.handleOnCloseSkillList}
-          skillList={this.props.grid.activeGridList}
+          skillList={grid.activeGridList}
         />
 
         <MainAppbar
           onOpenNavHandler={this.handleOnOpenNav}
           data={{
-            energy: this.props.grid.remainingEnergy,
-            orbs: this.props.grid.orbSpent
+            energy: grid.remainingEnergy,
+            orbs: grid.orbSpent
           }}
         />
 
@@ -87,8 +77,8 @@ class MobileApp extends Component {
           </Grid>
 
           <SkillOverview
-            skill={this.props.grid.gridData.description}
-            energy={this.props.grid.gridData.energy}
+            skill={grid.gridData.description}
+            energy={grid.gridData.energy}
           />
         </div>
       </>
