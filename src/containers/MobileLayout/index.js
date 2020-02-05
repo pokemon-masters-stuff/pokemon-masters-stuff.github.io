@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ReactGA from 'react-ga';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import SyncGridControls from '../../components/SyncGridControls';
@@ -11,47 +12,65 @@ import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
 
+import { selectPokemon, resetGrids } from '../../actions/actionCreators';
+
 class MobileApp extends Component {
-  state = {
-    isNavOpened: false,
-    isSkillListOpened: false,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isNavOpened: false,
+      isSkillListOpened: false
+    };
+    this.handleOnChangePokemon = this.handleOnChangePokemon.bind(this);
+    this.handleOnOpenSkillList = this.handleOnOpenSkillList.bind(this);
+    this.handleOnCloseSkillList = this.handleOnCloseSkillList.bind(this);
+    this.handleOnOpenNav = this.handleOnOpenNav.bind(this);
+    this.handleOnCloseNav = this.handleOnCloseNav.bind(this);
+  }
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
-  handleOnCloseNav = () => this.setState({isNavOpened: false});
+  handleOnCloseNav = () => this.setState({ isNavOpened: false });
 
-  handleOnOpenNav = () => this.setState({isNavOpened: true});
+  handleOnOpenNav = () => this.setState({ isNavOpened: true });
 
-  handleOnCloseSkillList = () => this.setState({isSkillListOpened: false});
+  handleOnCloseSkillList = () => this.setState({ isSkillListOpened: false });
 
-  handleOnOpenSkillList = () => this.setState({isSkillListOpened: true});
+  handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
 
   handleOnChangePokemon(value) {
-    console.log(value);
+    this.props.selectPokemon(value);
+    this.props.resetGrids();
   }
 
   render() {
-    const {isNavOpened, isSkillListOpened} = this.state;
-    const {classes} = this.props;
+    const { isNavOpened, isSkillListOpened } = this.state;
+    const { classes } = this.props;
+    console.log('this', this);
 
     return (
       <>
-        <Navigation isOpened={isNavOpened} onCloseHandler={this.handleOnCloseNav} />
+        <Navigation
+          isOpened={isNavOpened}
+          onCloseHandler={this.handleOnCloseNav}
+        />
 
         <SelectedSkillList
           isOpened={isSkillListOpened}
           onCloseHandler={this.handleOnCloseSkillList}
-          skillList={[
-            "Thunder of Newfound Passion Power",
-            "Sp.Atk + 10",
-            "Potion Master Healer 1"
-          ]}
+          skillList={this.props.grid.activeGridList}
         />
 
-        <MainAppbar onOpenNavHandler={this.handleOnOpenNav} data={{energy: 55, orbs: 60}} />
+        <MainAppbar
+          onOpenNavHandler={this.handleOnOpenNav}
+          data={{
+            energy: this.props.grid.remainingEnergy,
+            orbs: this.props.grid.orbSpent
+          }}
+        />
 
         <div className={classes.mainContainer}>
           <SyncGridControls
@@ -67,11 +86,22 @@ class MobileApp extends Component {
             </Grid>
           </Grid>
 
-          <SkillOverview skill={"Thunder of Newfound Passion Power"} />
+          <SkillOverview
+            skill={this.props.grid.gridData.description}
+            energy={this.props.grid.gridData.energy}
+          />
         </div>
       </>
     );
   }
 }
 
-export default withStyles(styles)(MobileApp);
+const mapStateToProps = state => ({
+  pokemon: state.pokemon,
+  grid: state.grid
+});
+
+export default connect(mapStateToProps, {
+  selectPokemon,
+  resetGrids
+})(withStyles(styles)(MobileApp));

@@ -52,6 +52,7 @@ class GridMap extends Component {
   }
 
   handleClick(e, index) {
+    console.log('this.props in GridMap', this.props);
     if (this.state.isSelected[index] === false) {
       this.props.addToGridList(this.props.grid.gridData);
       this.props.subtractFromRemainingEnergy(this.props.grid.gridData);
@@ -82,7 +83,6 @@ class GridMap extends Component {
         if (index !== 0) {
           hexagonProps = {
             ...hexagonProps,
-            // fill: this.state.isSelected[index] ? 'white' : cell.fill,
             fill: cell.fill,
             onClick: e => this.handleClick(e, index),
             isSelected: this.state.isSelected[index],
