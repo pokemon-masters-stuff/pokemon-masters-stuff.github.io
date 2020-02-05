@@ -32,7 +32,7 @@ class MobileApp extends Component {
 
   handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
 
-  handleOnChangePokemon = (value) => {
+  handleOnChangePokemon = value => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
   };
@@ -50,6 +50,7 @@ class MobileApp extends Component {
 
         <SelectedSkillList
           isOpened={isSkillListOpened}
+          onOpenHandler={this.handleOnOpenSkillList}
           onCloseHandler={this.handleOnCloseSkillList}
           skillList={grid.activeGridList}
         />

@@ -11,10 +11,10 @@ import styles from './styles';
 function SkillOverview(props) {
   const { classes, skill, energy, onSkillSelectHandler } = props;
 
-  const handleOnSkillSelect = () =>
-    typeof onSkillSelectHandler === 'function'
-      ? onSkillSelectHandler(skill)
-      : null;
+  // const handleOnSkillSelect = () =>
+  //   typeof onSkillSelectHandler === 'function'
+  //     ? onSkillSelectHandler(skill)
+  //     : null;
 
   return (
     Boolean(skill) && (
@@ -26,7 +26,7 @@ function SkillOverview(props) {
               <br /> Energy Cost: {energy}
             </Typography>
           </CardContent>
-          <CardActions className={classes.skillOverviewCardFooter}>
+          {/* <CardActions className={classes.skillOverviewCardFooter}>
             <Button
               size="small"
               variant="contained"
@@ -35,7 +35,7 @@ function SkillOverview(props) {
             >
               Select
             </Button>
-          </CardActions>
+          </CardActions> */}
         </Card>
       </div>
     )
