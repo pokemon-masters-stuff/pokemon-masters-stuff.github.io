@@ -12,7 +12,11 @@ import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
 
-import { selectPokemon, resetGrids } from '../../actions/actionCreators';
+import {
+  selectPokemon,
+  selectGrid,
+  resetGrids
+} from '../../actions/actionCreators';
 
 class MobileApp extends Component {
   state = {
@@ -94,5 +98,6 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, {
   selectPokemon,
+  selectGrid,
   resetGrids
 })(withStyles(styles)(MobileApp));

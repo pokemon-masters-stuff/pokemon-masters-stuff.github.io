@@ -6,11 +6,11 @@
 
 let vileplumeGridDataNoColor = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Vileplume', cell: 0 }, fill: 'white' },
+  { q: 0, r: 0, data: { name: 'Vileplume', cellNum: 0 }, fill: 'white' },
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cell: 6 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cellNum: 6 }
   },
   {
     q: 0,
@@ -19,38 +19,63 @@ let vileplumeGridDataNoColor = [
       name: 'Defense + 5',
       description: 'Defense + 5',
       energy: 0,
-      cell: 3
+      cellNum: 3
     }
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cell: 1 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cellNum: 1 }
   },
   {
     q: 1,
     r: 0,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 2 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 0,
+      cellNum: 2
+    }
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 4 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 0,
+      cellNum: 4
+    }
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0, cell: 5 }
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 0,
+      cellNum: 5
+    }
   },
   {
     q: -2,
     r: 1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 18 }
+    data: {
+      name: 'Speed + 5',
+      description: 'Speed + 5',
+      energy: 2,
+      cellNum: 18
+    }
   },
   {
     q: 2,
     r: -1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 27 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 2,
+      cellNum: 27
+    }
   },
   {
     q: 0,
@@ -59,7 +84,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sync + 25',
       description: 'Nature Loving Petal Dance Power + 25 [Req. Lv3 Sync]',
       energy: 5,
-      cell: 48
+      cellNum: 48
     },
     fill: '#dedbd3'
   },
@@ -70,7 +95,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sync + 25',
       description: 'Nature Loving Petal Dance Power + 25 [Req. Lv3 Sync]',
       energy: 5,
-      cell: 47
+      cellNum: 47
     },
     fill: '#dedbd3'
   },
@@ -79,7 +104,12 @@ let vileplumeGridDataNoColor = [
   {
     q: 1,
     r: -2,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 7 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 2,
+      cellNum: 7
+    }
   },
   {
     q: 1,
@@ -88,7 +118,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 2,
-      cell: 9
+      cellNum: 9
     }
   },
   {
@@ -98,7 +128,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 12
+      cellNum: 12
     }
   },
   {
@@ -108,7 +138,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. MGR 2',
       description: 'Energy Ball Move Gauge Refresh 2 [Req. Lv3 Sync]',
       energy: 4,
-      cell: 15
+      cellNum: 15
     },
     fill: '#dedbd3'
   },
@@ -119,7 +149,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 2,
-      cell: 8
+      cellNum: 8
     }
   },
   {
@@ -129,7 +159,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Atk + 10',
       description: 'Sp.Atk + 10',
       energy: 4,
-      cell: 11
+      cellNum: 11
     }
   },
   {
@@ -140,7 +170,7 @@ let vileplumeGridDataNoColor = [
       description:
         'Energy Ball On a Roll 2 - Raises the chance of lowering stat values with the additional effects',
       energy: 8,
-      cell: 14
+      cellNum: 14
     }
   },
   {
@@ -150,7 +180,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. MGR 2',
       description: 'Energy Ball Move Gauge Refresh 2 [Req. Lv3 Sync]',
       energy: 5,
-      cell: 17
+      cellNum: 17
     },
     fill: '#dedbd3'
   },
@@ -161,7 +191,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 2,
-      cell: 10
+      cellNum: 10
     }
   },
   {
@@ -171,7 +201,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 13
+      cellNum: 13
     }
   },
   {
@@ -181,7 +211,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. MGR 2',
       description: 'Energy Ball Move Gauge Refresh 2',
       energy: 5,
-      cell: 16
+      cellNum: 16
     }
   },
 
@@ -189,7 +219,7 @@ let vileplumeGridDataNoColor = [
   {
     q: -1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cell: 36 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cellNum: 36 }
   },
   {
     q: -1,
@@ -198,13 +228,13 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 38
+      cellNum: 38
     }
   },
   {
     q: -1,
     r: -3,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 3, cell: 42 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 3, cellNum: 42 }
   },
   {
     q: -1,
@@ -214,7 +244,7 @@ let vileplumeGridDataNoColor = [
       description:
         'Solar Flare 5 - Powers up sync moves when the weather is sunny [Req. Lv3 Sync]',
       energy: 9,
-      cell: 45
+      cellNum: 45
     },
     fill: '#dedbd3'
   },
@@ -225,7 +255,7 @@ let vileplumeGridDataNoColor = [
       name: 'S.S. MGR 3',
       description: 'Stun Spore Move Gauge Refresh 3',
       energy: 4,
-      cell: 37
+      cellNum: 37
     }
   },
   {
@@ -235,7 +265,7 @@ let vileplumeGridDataNoColor = [
       name: 'Healing Sun 2',
       description: 'Healing Sun 2',
       energy: 7,
-      cell: 40
+      cellNum: 40
     }
   },
   {
@@ -245,7 +275,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Atk + 10',
       description: 'Sp.Atk + 10',
       energy: 5,
-      cell: 43
+      cellNum: 43
     }
   },
   {
@@ -255,14 +285,19 @@ let vileplumeGridDataNoColor = [
       name: 'HP + 30',
       description: 'HP + 30 [Req. Lv3 Sync]',
       energy: 10,
-      cell: 46
+      cellNum: 46
     },
     fill: '#dedbd3'
   },
   {
     q: -3,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2, cell: 39 }
+    data: {
+      name: 'Speed + 5',
+      description: 'Speed + 5',
+      energy: 2,
+      cellNum: 39
+    }
   },
   {
     q: -3,
@@ -271,13 +306,13 @@ let vileplumeGridDataNoColor = [
       name: 'Defense + 10',
       description: 'Defense + 10',
       energy: 4,
-      cell: 41
+      cellNum: 41
     }
   },
   {
     q: -3,
     r: -3,
-    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cell: 44 }
+    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cellNum: 44 }
   },
 
   // Lower Left
@@ -288,7 +323,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Def + 10',
       description: 'Sp.Def + 10',
       energy: 4,
-      cell: 19
+      cellNum: 19
     }
   },
   {
@@ -298,7 +333,7 @@ let vileplumeGridDataNoColor = [
       name: 'S.S. MGR 3',
       description: 'Stun Spore Move Gauge Refresh 3',
       energy: 4,
-      cell: 21
+      cellNum: 21
     }
   },
   {
@@ -309,7 +344,7 @@ let vileplumeGridDataNoColor = [
       description:
         "Stun Spore Satisfied Snarl 9 - Lowers the target's Sp.Atk when a move targeting that opponent is successful",
       energy: 9,
-      cell: 24
+      cellNum: 24
     }
   },
   {
@@ -319,7 +354,7 @@ let vileplumeGridDataNoColor = [
       name: 'P.S. 5',
       description: 'Paralysis Synergy 5',
       energy: 10,
-      cell: 20
+      cellNum: 20
     }
   },
   {
@@ -329,7 +364,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Atk + 10',
       description: 'Sp.Atk + 10',
       energy: 4,
-      cell: 23
+      cellNum: 23
     }
   },
   {
@@ -339,7 +374,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Atk + 10',
       description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
       energy: 5,
-      cell: 26
+      cellNum: 26
     },
     fill: '#dedbd3'
   },
@@ -350,7 +385,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 22
+      cellNum: 22
     }
   },
   {
@@ -361,7 +396,7 @@ let vileplumeGridDataNoColor = [
       description:
         'Energy Ball On a Roll 2 - Raises the chance of lowering stat values with the additional effects [Req. Lv3 Sync]',
       energy: 8,
-      cell: 25
+      cellNum: 25
     },
     fill: '#dedbd3'
   },
@@ -374,7 +409,7 @@ let vileplumeGridDataNoColor = [
       name: 'X Sp.Def MPR 3',
       description: 'X Sp.Def MP Refresh 3',
       energy: 7,
-      cell: 28
+      cellNum: 28
     }
   },
   {
@@ -384,7 +419,7 @@ let vileplumeGridDataNoColor = [
       name: 'Defense + 10',
       description: 'Defense + 10',
       energy: 4,
-      cell: 31
+      cellNum: 31
     }
   },
   {
@@ -394,7 +429,7 @@ let vileplumeGridDataNoColor = [
       name: 'C.S. 5',
       description: 'Confusion Synergy 5',
       energy: 10,
-      cell: 34
+      cellNum: 34
     }
   },
   {
@@ -405,7 +440,7 @@ let vileplumeGridDataNoColor = [
       description:
         'Stun Spore Flabbergast 2 - occasionally leaves the target confused if a move is successful',
       energy: 9,
-      cell: 29
+      cellNum: 29
     }
   },
   {
@@ -415,7 +450,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Def + 10',
       description: 'Sp.Def + 10',
       energy: 4,
-      cell: 32
+      cellNum: 32
     }
   },
   {
@@ -425,7 +460,7 @@ let vileplumeGridDataNoColor = [
       name: 'Sp.Atk + 10',
       description: 'Sp.Atk + 10 [Req. Lv3 Sync]',
       energy: 4,
-      cell: 35
+      cellNum: 35
     },
     fill: '#dedbd3'
   },
@@ -436,7 +471,7 @@ let vileplumeGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 30
+      cellNum: 30
     }
   },
   {
@@ -446,7 +481,7 @@ let vileplumeGridDataNoColor = [
       name: 'P.I.O MPR 3',
       description: 'Pour It On MP Refresh 3 [Req. Lv3 Sync]',
       energy: 7,
-      cell: 33
+      cellNum: 33
     },
     fill: '#dedbd3'
   }
@@ -483,26 +518,26 @@ export default vileplumeGridDataNoColor.map((obj, index) => {
     let yellowGrids = [20, 34, 40, 45];
     let redGrids = [14, 15, 16, 17, 21, 24, 25, 28, 29, 33, 37];
     let purpleGrids = [47, 48];
-    if (blueGrids.indexOf(obj.data.cell) > -1) {
+    if (blueGrids.indexOf(obj.data.cellNum) > -1) {
       // 66B6EC - blue
       obj['fill'] = '#66B6EC';
       return obj;
     }
     // green = #73d958
-    if (greenGrids.indexOf(obj.data.cell) > -1) {
+    if (greenGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = '#73d958';
       return obj;
     }
-    if (yellowGrids.indexOf(obj.data.cell) > -1) {
+    if (yellowGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = 'yellow';
       return obj;
     }
     // red = #f24646
-    if (redGrids.indexOf(obj.data.cell) > -1) {
+    if (redGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = '#f24646';
       return obj;
     }
-    if (purpleGrids.indexOf(obj.data.cell) > -1) {
+    if (purpleGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = 'purple';
       return obj;
     }

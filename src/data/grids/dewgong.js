@@ -1,10 +1,11 @@
+import kingdraGrids from './kingdra';
 // green = #73d958
 // red = #f24646
 // blue = #66B6EC
 // purple = #d12deb
 // grey = #dedbd3
 
-export default [
+let dewgongGrids = [
   // Center Grids
   { q: 0, r: 0, data: { name: 'Dewgong' }, fill: 'white' },
   {
@@ -376,3 +377,12 @@ export default [
     fill: '#73d958'
   }
 ];
+
+// add cell numbers based on Kingdra's map
+export default dewgongGrids.map(obj => {
+  let correspondingKingdraGrid = kingdraGrids.find(
+    kingdraCell => kingdraCell.q === obj.q && kingdraCell.r === obj.r
+  );
+  obj.data['cellNum'] = correspondingKingdraGrid.data.cellNum || 0;
+  return { ...obj };
+});

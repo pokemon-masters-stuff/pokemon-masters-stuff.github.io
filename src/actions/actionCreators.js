@@ -1,5 +1,7 @@
 import {
   SELECT_POKEMON,
+  SELECT_GRID,
+  DESELECT_GRID,
   ADD_TO_GRID_LIST,
   REMOVE_FROM_GRID_LIST,
   DISPLAY_GRID_DATA,
@@ -12,6 +14,16 @@ import {
 export const selectPokemon = selectedPokemon => ({
   type: SELECT_POKEMON,
   selectedPokemon
+});
+
+export const selectGrid = cellNum => ({
+  type: SELECT_GRID,
+  cellNum
+});
+
+export const deselectGrid = cellNum => ({
+  type: DESELECT_GRID,
+  cellNum
 });
 
 export const addToGridList = gridData => ({

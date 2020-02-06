@@ -1,10 +1,11 @@
+import vileplumeGrids from './vileplume';
 // green = #73d958
 // red = #f24646
 // blue = #66B6EC
 // purple = #d12deb
 // grey = #dedbd3
 
-export default [
+let torkoalGrids = [
   // Center Grids
   { q: 0, r: 0, data: { name: 'Torkoal' }, fill: 'white' },
   {
@@ -364,3 +365,12 @@ export default [
     fill: '#dedbd3'
   }
 ];
+
+// add cell numbers based on Vileplume's map
+export default torkoalGrids.map(obj => {
+  let correspondingVileplumeGrid = vileplumeGrids.find(
+    vileplumeCell => vileplumeCell.q === obj.q && vileplumeCell.r === obj.r
+  );
+  obj.data['cellNum'] = correspondingVileplumeGrid.data.cellNum || 0;
+  return { ...obj };
+});
