@@ -6,11 +6,11 @@
 
 let serperiorGridDataNoColor = [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Serperior', cell: 0 }, fill: 'white' },
+  { q: 0, r: 0, data: { name: 'Serperior', cellNum: 0 }, fill: 'white' },
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cell: 6 }
+    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cellNum: 6 }
   },
   {
     q: 0,
@@ -19,28 +19,43 @@ let serperiorGridDataNoColor = [
       name: 'Defense + 5',
       description: 'Defense + 5',
       energy: 0,
-      cell: 3
+      cellNum: 3
     }
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cell: 1 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cellNum: 1 }
   },
   {
     q: 1,
     r: 0,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 2 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 0,
+      cellNum: 2
+    }
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0, cell: 4 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 0,
+      cellNum: 4
+    }
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0, cell: 5 }
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 0,
+      cellNum: 5
+    }
   },
   {
     q: 0,
@@ -49,7 +64,7 @@ let serperiorGridDataNoColor = [
       name: 'Sync + 25',
       description: 'Shoot for the Stars Leaf Storm Power + 25 [Req. Lv3 Sync]',
       energy: 5,
-      cell: 48
+      cellNum: 48
     },
     fill: '#dedbd3'
   },
@@ -60,7 +75,7 @@ let serperiorGridDataNoColor = [
       name: 'Sync + 25',
       description: 'Shoot for the Stars Leaf Storm Power + 25 [Req. Lv3 Sync]',
       energy: 5,
-      cell: 47
+      cellNum: 47
     },
     fill: '#dedbd3'
   },
@@ -69,7 +84,12 @@ let serperiorGridDataNoColor = [
   {
     q: 1,
     r: -2,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2, cell: 7 }
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 2,
+      cellNum: 7
+    }
   },
   {
     q: 1,
@@ -78,7 +98,7 @@ let serperiorGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 2,
-      cell: 9
+      cellNum: 9
     }
   },
   {
@@ -88,7 +108,7 @@ let serperiorGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 12
+      cellNum: 12
     }
   },
   {
@@ -98,7 +118,7 @@ let serperiorGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4 [Req. Lv3 Sync]',
       energy: 3,
-      cell: 15
+      cellNum: 15
     },
     fill: '#dedbd3'
   },
@@ -109,7 +129,7 @@ let serperiorGridDataNoColor = [
       name: 'G.D. + 3',
       description: 'Giga Drain Power + 3',
       energy: 2,
-      cell: 8
+      cellNum: 8
     }
   },
   {
@@ -119,7 +139,7 @@ let serperiorGridDataNoColor = [
       name: 'Sp.Atk + 10',
       description: 'Sp.Atk + 10',
       energy: 4,
-      cell: 11
+      cellNum: 11
     }
   },
   {
@@ -129,7 +149,7 @@ let serperiorGridDataNoColor = [
       name: 'Sp.Def + 10',
       description: 'Sp.Def + 10',
       energy: 6,
-      cell: 14
+      cellNum: 14
     }
   },
   {
@@ -139,7 +159,7 @@ let serperiorGridDataNoColor = [
       name: 'E.B. MGR 3',
       description: 'Energy Ball Move Gauge Refresh 3 [Req. Lv3 Sync]',
       energy: 6,
-      cell: 17
+      cellNum: 17
     },
     fill: '#dedbd3'
   },
@@ -150,7 +170,7 @@ let serperiorGridDataNoColor = [
       name: 'G.D. + 3',
       description: 'Giga Drain Power + 3',
       energy: 3,
-      cell: 10
+      cellNum: 10
     }
   },
   {
@@ -160,7 +180,7 @@ let serperiorGridDataNoColor = [
       name: 'G.D. + 3',
       description: 'Giga Drain Power + 3',
       energy: 3,
-      cell: 13
+      cellNum: 13
     }
   },
   {
@@ -170,7 +190,7 @@ let serperiorGridDataNoColor = [
       name: 'G.D. MGR 3',
       description: 'Giga Drain Move Gauge Refresh 3',
       energy: 6,
-      cell: 16
+      cellNum: 16
     }
   },
 
@@ -178,7 +198,12 @@ let serperiorGridDataNoColor = [
   {
     q: -1,
     r: -1,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 2, cell: 39 }
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 2,
+      cellNum: 39
+    }
   },
   {
     q: -1,
@@ -187,7 +212,7 @@ let serperiorGridDataNoColor = [
       name: 'Defense + 10',
       description: 'Defense + 10',
       energy: 4,
-      cell: 42
+      cellNum: 42
     }
   },
   {
@@ -197,7 +222,7 @@ let serperiorGridDataNoColor = [
       name: 'Speeding Sun 2',
       description: 'Speeding Sun 2 [Req. Lv3 Sync]',
       energy: 10,
-      cell: 45
+      cellNum: 45
     },
     fill: '#dedbd3'
   },
@@ -209,7 +234,7 @@ let serperiorGridDataNoColor = [
       description:
         'Energy Ball On a Roll 1 - Raises the chance of lowering stat values with the additional effects',
       energy: 7,
-      cell: 38
+      cellNum: 38
     }
   },
   {
@@ -220,13 +245,13 @@ let serperiorGridDataNoColor = [
       description:
         'Solar Flare 5 - Powers up sync moves when the weather is sunny',
       energy: 5,
-      cell: 41
+      cellNum: 41
     }
   },
   {
     q: -2,
     r: -2,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 6, cell: 44 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 6, cellNum: 44 }
   },
   {
     q: -3,
@@ -235,7 +260,7 @@ let serperiorGridDataNoColor = [
       name: 'G.D. + 3',
       description: 'Giga Drain Power + 3',
       energy: 2,
-      cell: 40
+      cellNum: 40
     }
   },
   {
@@ -245,7 +270,7 @@ let serperiorGridDataNoColor = [
       name: 'Defense + 10',
       description: 'Defense + 10',
       energy: 4,
-      cell: 43
+      cellNum: 43
     }
   },
   {
@@ -255,7 +280,7 @@ let serperiorGridDataNoColor = [
       name: 'Solar Shield',
       description: 'Solar Shield [Req. Lv3 Sync]',
       energy: 7,
-      cell: 46
+      cellNum: 46
     },
     fill: '#dedbd3'
   },
@@ -268,7 +293,7 @@ let serperiorGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 2,
-      cell: 19
+      cellNum: 19
     }
   },
   {
@@ -278,7 +303,7 @@ let serperiorGridDataNoColor = [
       name: 'Sp.Def + 10',
       description: 'Sp.Def + 10',
       energy: 4,
-      cell: 22
+      cellNum: 22
     }
   },
   {
@@ -289,7 +314,7 @@ let serperiorGridDataNoColor = [
       description:
         "Giga Drain Master Healer 2 - increases the amount of HP restored by the user's healing moves [Req. Lv3 Sync]",
       energy: 10,
-      cell: 25
+      cellNum: 25
     },
     fill: '#dedbd3'
   },
@@ -300,7 +325,7 @@ let serperiorGridDataNoColor = [
       name: 'Defense + 5',
       description: 'Defense + 5',
       energy: 2,
-      cell: 18
+      cellNum: 18
     }
   },
   {
@@ -311,7 +336,7 @@ let serperiorGridDataNoColor = [
       description:
         'Power Flux 5 - The fuller the move gauge, the more this powers up moves',
       energy: 10,
-      cell: 21
+      cellNum: 21
     }
   },
   {
@@ -321,18 +346,28 @@ let serperiorGridDataNoColor = [
       name: 'Sp.Atk + 20',
       description: 'Sp.Atk + 20',
       energy: 10,
-      cell: 24
+      cellNum: 24
     }
   },
   {
     q: -1,
     r: 2,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 2, cell: 20 }
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 2,
+      cellNum: 20
+    }
   },
   {
     q: -1,
     r: 3,
-    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4, cell: 23 }
+    data: {
+      name: 'Speed + 10',
+      description: 'Speed + 10',
+      energy: 4,
+      cellNum: 23
+    }
   },
   {
     q: -1,
@@ -342,7 +377,7 @@ let serperiorGridDataNoColor = [
       description:
         'Solar Flare 5 - Powers up sync moves when the weather is sunny [Req. Lv3 Sync]',
       energy: 5,
-      cell: 26
+      cellNum: 26
     },
     fill: '#dedbd3'
   },
@@ -355,7 +390,7 @@ let serperiorGridDataNoColor = [
       name: 'T.T.E. MPR 2',
       description: 'Time to Energize MP Refresh 2',
       energy: 7,
-      cell: 30
+      cellNum: 30
     }
   },
   {
@@ -365,7 +400,7 @@ let serperiorGridDataNoColor = [
       name: 'T.T.E. MPR 2',
       description: 'Time to Energize MP Refresh 2',
       energy: 7,
-      cell: 33
+      cellNum: 33
     }
   },
   {
@@ -376,7 +411,7 @@ let serperiorGridDataNoColor = [
       description:
         'Time to Energize Selfless - Makes opponents target the user for a short time when a move is successful in a pinch',
       energy: 5,
-      cell: 36
+      cellNum: 36
     }
   },
   {
@@ -386,18 +421,23 @@ let serperiorGridDataNoColor = [
       name: 'E.B. + 4',
       description: 'Energy Ball Power + 4',
       energy: 3,
-      cell: 28
+      cellNum: 28
     }
   },
   {
     q: 2,
     r: 2,
-    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 3, cell: 31 }
+    data: {
+      name: 'Speed + 10',
+      description: 'Speed + 10',
+      energy: 3,
+      cellNum: 31
+    }
   },
   {
     q: 2,
     r: 3,
-    data: { name: 'HP + 20', description: 'HP + 20', energy: 5, cell: 34 }
+    data: { name: 'HP + 20', description: 'HP + 20', energy: 5, cellNum: 34 }
   },
   {
     q: 2,
@@ -407,7 +447,7 @@ let serperiorGridDataNoColor = [
       description:
         'On the Ropes 3 - Reduces damage when the Pokemon is in a pinch and is hit by a physical attack move [Req. Lv3 Sync]',
       energy: 10,
-      cell: 37
+      cellNum: 37
     },
     fill: '#dedbd3'
   },
@@ -418,7 +458,7 @@ let serperiorGridDataNoColor = [
       name: 'Defense + 5',
       description: 'Defense + 5',
       energy: 2,
-      cell: 27
+      cellNum: 27
     }
   },
   {
@@ -428,7 +468,7 @@ let serperiorGridDataNoColor = [
       name: 'G.D. + 3',
       description: 'Giga Drain Power + 3',
       energy: 3,
-      cell: 29
+      cellNum: 29
     }
   },
   {
@@ -438,7 +478,7 @@ let serperiorGridDataNoColor = [
       name: 'X Sp.Atk MPR 2',
       description: 'X Sp.Atk All MP Refresh 2',
       energy: 7,
-      cell: 32
+      cellNum: 32
     }
   },
   {
@@ -448,7 +488,7 @@ let serperiorGridDataNoColor = [
       name: 'X Sp.Atk MPR 2',
       description: 'X Sp.Atk All MP Refresh 2 [Req. Lv3 Sync]',
       energy: 7,
-      cell: 35
+      cellNum: 35
     },
     fill: '#dedbd3'
   }
@@ -483,26 +523,26 @@ export default serperiorGridDataNoColor.map((obj, index) => {
     let yellowGrids = [21, 26, 37, 41, 45, 46];
     let redGrids = [16, 17, 25, 30, 32, 33, 35, 36, 38];
     let purpleGrids = [47, 48];
-    if (blueGrids.indexOf(obj.data.cell) > -1) {
+    if (blueGrids.indexOf(obj.data.cellNum) > -1) {
       // 66B6EC - blue
       obj['fill'] = '#66B6EC';
       return obj;
     }
     // green = #73d958
-    if (greenGrids.indexOf(obj.data.cell) > -1) {
+    if (greenGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = '#73d958';
       return obj;
     }
-    if (yellowGrids.indexOf(obj.data.cell) > -1) {
+    if (yellowGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = 'yellow';
       return obj;
     }
     // red = #f24646
-    if (redGrids.indexOf(obj.data.cell) > -1) {
+    if (redGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = '#f24646';
       return obj;
     }
-    if (purpleGrids.indexOf(obj.data.cell) > -1) {
+    if (purpleGrids.indexOf(obj.data.cellNum) > -1) {
       obj['fill'] = 'purple';
       return obj;
     }
