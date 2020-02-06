@@ -8,7 +8,7 @@ export default createStyles(theme => ({
     marginBottom: theme.spacing(2)
   },
   listRoot: {
-    width: "100%",
+    width: "70vw",
     minWidth: 220,
     maxWidth: 360,
   },
