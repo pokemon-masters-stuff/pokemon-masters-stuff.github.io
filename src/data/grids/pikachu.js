@@ -1,10 +1,11 @@
+import kingdraGrids from './kingdra';
 // green = #73d958
 // red = #f24646
 // blue = #66B6EC
 // purple = #d12deb
 // grey = #dedbd3
 
-export default [
+let pikachuGrids = [
   // Center Grids
   {
     q: 0,
@@ -20,13 +21,21 @@ export default [
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0 },
+    data: {
+      name: 'Speed + 5',
+      description: 'Speed + 5',
+      energy: 0
+    },
     fill: '#66B6EC'
   },
   {
     q: 0,
     r: 1,
-    data: { name: 'Defense + 5', description: 'Defense + 5', energy: 0 },
+    data: {
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 0
+    },
     fill: '#66B6EC'
   },
   {
@@ -38,25 +47,41 @@ export default [
   {
     q: 1,
     r: 0,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 0
+    },
     fill: '#66B6EC'
   },
   {
     q: -1,
     r: 1,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 0 },
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 0
+    },
     fill: '#66B6EC'
   },
   {
     q: -1,
     r: 0,
-    data: { name: 'Sp.Def + 5', description: 'Sp.Def + 5', energy: 0 },
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 0
+    },
     fill: '#66B6EC'
   },
   {
     q: -2,
     r: 1,
-    data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 3 },
+    data: {
+      name: 'T.B. + 5',
+      description: 'Thunderbolt Power + 5',
+      energy: 3
+    },
     fill: '#73d958'
   },
   {
@@ -94,7 +119,11 @@ export default [
   {
     q: 1,
     r: -2,
-    data: { name: 'Sp.Atk + 5', description: 'Sp.Atk + 5', energy: 2 },
+    data: {
+      name: 'Sp.Atk + 5',
+      description: 'Sp.Atk + 5',
+      energy: 2
+    },
     fill: '#66B6EC'
   },
   {
@@ -130,13 +159,21 @@ export default [
   {
     q: 2,
     r: -3,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 },
+    data: {
+      name: 'T.B. + 4',
+      description: 'Thunderbolt Power + 4',
+      energy: 2
+    },
     fill: '#73d958'
   },
   {
     q: 2,
     r: -4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 5
+    },
     fill: '#66B6EC'
   },
   {
@@ -162,13 +199,21 @@ export default [
   {
     q: 3,
     r: -4,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 2 },
+    data: {
+      name: 'T.B. + 4',
+      description: 'Thunderbolt Power + 4',
+      energy: 2
+    },
     fill: '#73d958'
   },
   {
     q: 3,
     r: -5,
-    data: { name: 'T.B. + 6', description: 'Thunderbolt Power + 6', energy: 3 },
+    data: {
+      name: 'T.B. + 6',
+      description: 'Thunderbolt Power + 6',
+      energy: 3
+    },
     fill: '#73d958'
   },
   {
@@ -196,7 +241,11 @@ export default [
   {
     q: -1,
     r: -2,
-    data: { name: 'Unyielding 1', description: 'Unyielding 1', energy: 11 },
+    data: {
+      name: 'Unyielding 1',
+      description: 'Unyielding 1',
+      energy: 11
+    },
     fill: 'yellow'
   },
   {
@@ -212,7 +261,11 @@ export default [
   {
     q: -2,
     r: -1,
-    data: { name: 'Unyielding 1', description: 'Unyielding 1', energy: 11 },
+    data: {
+      name: 'Unyielding 1',
+      description: 'Unyielding 1',
+      energy: 11
+    },
     fill: 'yellow'
   },
   {
@@ -234,7 +287,11 @@ export default [
   {
     q: -3,
     r: 1,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 },
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4
+    },
     fill: '#66B6EC'
   },
   {
@@ -292,13 +349,21 @@ export default [
   {
     q: -2,
     r: 4,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 5
+    },
     fill: '#66B6EC'
   },
   {
     q: -2,
     r: 5,
-    data: { name: 'Sp.Atk + 10', description: 'Sp.Atk + 10', energy: 5 },
+    data: {
+      name: 'Sp.Atk + 10',
+      description: 'Sp.Atk + 10',
+      energy: 5
+    },
     fill: '#66B6EC'
   },
   {
@@ -314,19 +379,31 @@ export default [
   {
     q: -1,
     r: 2,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 2 },
+    data: {
+      name: 'Speed + 5',
+      description: 'Speed + 5',
+      energy: 2
+    },
     fill: '#66B6EC'
   },
   {
     q: -1,
     r: 3,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 },
+    data: {
+      name: 'T.B. + 4',
+      description: 'Thunderbolt Power + 4',
+      energy: 3
+    },
     fill: '#73d958'
   },
   {
     q: -1,
     r: 4,
-    data: { name: 'T.B. + 5', description: 'Thunderbolt Power + 5', energy: 4 },
+    data: {
+      name: 'T.B. + 5',
+      description: 'Thunderbolt Power + 5',
+      energy: 4
+    },
     fill: '#73d958'
   },
   {
@@ -344,31 +421,51 @@ export default [
   {
     q: 3,
     r: -1,
-    data: { name: 'Speed + 10', description: 'Speed + 10', energy: 4 },
+    data: {
+      name: 'Speed + 10',
+      description: 'Speed + 10',
+      energy: 4
+    },
     fill: '#66B6EC'
   },
   {
     q: 3,
     r: 0,
-    data: { name: 'Defense + 10', description: 'Defense + 10', energy: 4 },
+    data: {
+      name: 'Defense + 10',
+      description: 'Defense + 10',
+      energy: 4
+    },
     fill: '#66B6EC'
   },
   {
     q: 3,
     r: 1,
-    data: { name: 'P.R 9', description: 'Power Reserves 9', energy: 12 },
+    data: {
+      name: 'P.R 9',
+      description: 'Power Reserves 9',
+      energy: 12
+    },
     fill: 'yellow'
   },
   {
     q: 2,
     r: 0,
-    data: { name: 'P.R 5', description: 'Power Reserves 5', energy: 10 },
+    data: {
+      name: 'P.R 5',
+      description: 'Power Reserves 5',
+      energy: 10
+    },
     fill: 'yellow'
   },
   {
     q: 2,
     r: 1,
-    data: { name: 'Sp.Def + 10', description: 'Sp.Def + 10', energy: 4 },
+    data: {
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10',
+      energy: 4
+    },
     fill: '#66B6EC'
   },
   {
@@ -380,13 +477,30 @@ export default [
   {
     q: 1,
     r: 1,
-    data: { name: 'T.B. + 4', description: 'Thunderbolt Power + 4', energy: 3 },
+    data: {
+      name: 'T.B. + 4',
+      description: 'Thunderbolt Power + 4',
+      energy: 3
+    },
     fill: '#73d958'
   },
   {
     q: 1,
     r: 2,
-    data: { name: 'P.S. 5', description: 'Paralysis Synergy 5', energy: 10 },
+    data: {
+      name: 'P.S. 5',
+      description: 'Paralysis Synergy 5',
+      energy: 10
+    },
     fill: 'yellow'
   }
 ];
+
+// add cell numbers based on Kingdra's map
+export default pikachuGrids.map(obj => {
+  let correspondingKingdraGrid = kingdraGrids.find(
+    kingdraCell => kingdraCell.q === obj.q && kingdraCell.r === obj.r
+  );
+  obj.data['cellNum'] = correspondingKingdraGrid.data.cellNum || 0;
+  return { ...obj };
+});

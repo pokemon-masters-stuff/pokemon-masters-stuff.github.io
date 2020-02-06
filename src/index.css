@@ -11,15 +11,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  text-decoration: none;
-}
-
-#root {
-  height: 100%;
-}
-
-/* refactored from react hexagrid */
 body {
   height: 100%;
   margin: 0;
@@ -34,39 +25,13 @@ body {
   background-repeat: repeat;
 }
 
-.form-group {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.075),
-    0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.075),
-    0 0 8px rgba(102, 175, 233, 0.6);
-}
-
-.content {
-  padding-top: 10px;
-}
-
-.grid-data-display,
-.active-grid-list {
-  margin-left: 5rem;
-  width: 23rem;
-  font-size: 0.8rem;
-}
-
-.active-grid {
-  font-size: 0.9rem;
+a {
+  text-decoration: none;
 }
 
 #textboxid {
   height: 200px;
   font-size: 14pt;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 0.4rem;
 }
 
 /* svg {
@@ -79,9 +44,11 @@ svg g {
 svg g:hover {
   fill-opacity: 0.5;
 }
+
 svg g .selected {
   fill-opacity: 1;
 }
+
 svg g:hover text {
   fill-opacity: 1;
 }
@@ -91,6 +58,7 @@ svg g polygon {
   stroke-width: 0.2;
   transition: fill-opacity 0.2s;
 }
+
 svg g text {
   font-size: 0.075rem;
   fill: #000000;

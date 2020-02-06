@@ -46,34 +46,37 @@ class Hexagon extends Component {
     const pixel = HexUtils.hexToPixel(hex, layout);
     this.setState({ hex, pixel });
   }
+
   onMouseEnter(e) {
     if (this.props.onMouseEnter) {
       this.props.onMouseEnter(e, this);
     }
     this.props.displayGridData(this.props.data);
   }
+
   onMouseOver(e) {
     if (this.props.onMouseOver) {
       this.props.onMouseOver(e, this);
     }
   }
+
   onMouseLeave(e) {
     if (this.props.onMouseLeave) {
       this.props.onMouseLeave(e, this);
     }
     this.props.hideGridData();
   }
-  onClick(e) {
-    if (this.props.onClick) {
-      this.props.onClick(e, this);
+
+  onClick = (e) => {
+    if (e) {
+      this.props.onClickHandler(e, this.props.data);
     }
-  }
+  };
 
   render() {
     const { fill, cellStyle, className } = this.props;
     const { points } = this.context;
     const { pixel } = this.state;
-    // const fillId = fill ? `url(#${fill})` : null;
     const fillId = fill ? fill : null;
     return (
       <g
