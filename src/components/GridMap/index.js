@@ -34,25 +34,6 @@ const allSyncGrids = {
 };
 
 class GridMap extends Component {
-  // state = {
-  //   isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(
-  //     element => false
-  //   )
-  // };
-
-  // shouldComponentUpdate(nextProps, nextState, nextContext) {
-  //   if (nextProps.pokemon !== this.props.pokemon) {
-  //     this.setState({
-  //       isSelected: allSyncGrids[`${this.props.pokemon}GridData`].map(
-  //         element => false
-  //       )
-  //     });
-  //     this.props.resetGrids();
-  //   }
-
-  //   return true;
-  // }
-
   handleClick(e, index, data) {
     e.stopPropagation();
 
