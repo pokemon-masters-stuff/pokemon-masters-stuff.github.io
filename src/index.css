@@ -36,6 +36,17 @@ a {
   font-size: 0.8rem;
 }
 
+.energy-inside-grid {
+  margin-top: 10rem;
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;

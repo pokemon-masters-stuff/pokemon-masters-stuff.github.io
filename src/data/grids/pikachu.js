@@ -10,12 +10,7 @@ let pikachuGrids = [
   {
     q: 0,
     r: 0,
-    data: {
-      name: 'Pikachu',
-      description:
-        'Hidden Ability: MC Plot Armor - Thunderbolt Power + 999 when the user is in a pinch',
-      energy: 0
-    },
+    data: { name: 'Pikachu' },
     fill: 'white'
   },
   {

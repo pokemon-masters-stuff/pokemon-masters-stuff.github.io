@@ -43,7 +43,8 @@ class GridMap extends Component {
       width: '100vw',
       height: 440,
       viewbox: '-35 -35 70 70'
-    }
+    },
+    screenWidth: document.body.clientWidth
   };
 
   componentDidMount() {
@@ -72,7 +73,10 @@ class GridMap extends Component {
       };
     }
 
-    if (clientWrappingBoundaries.width > 960 && clientWrappingBoundaries.width < 1200) {
+    if (
+      clientWrappingBoundaries.width > 960 &&
+      clientWrappingBoundaries.width < 1200
+    ) {
       updatedMapSizeBoundaries = {
         width: '100vw',
         height: 768,
@@ -150,6 +154,16 @@ class GridMap extends Component {
       return (
         <Hexagon {...hexagonProps}>
           <Text>{cell.data.name}</Text>
+          {this.state.screenWidth < 960 && cell.data.energy !== undefined ? (
+            <text
+              className="energy-inside-grid"
+              textAnchor="middle"
+              x="0"
+              y="1.6em"
+            >
+              ({cell.data.energy})
+            </text>
+          ) : null}
         </Hexagon>
       );
     });
