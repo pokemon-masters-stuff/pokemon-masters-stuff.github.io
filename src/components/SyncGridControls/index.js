@@ -15,6 +15,7 @@ function SyncGridControls(props) {
     typeof onOpenSkillListHandler === 'function'
       ? onOpenSkillListHandler()
       : null;
+
   const handleOnChangePokemonHandler = pokemon =>
     typeof onChangePokemonHandler === 'function'
       ? onChangePokemonHandler(pokemon)

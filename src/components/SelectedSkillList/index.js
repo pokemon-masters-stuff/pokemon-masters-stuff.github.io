@@ -5,12 +5,9 @@ import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-// import IconButton from '@material-ui/core/IconButton';
-// import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
 
 function SelectedSkillList(props) {
   const { classes, isOpened, onOpenHandler, onCloseHandler, skillList } = props;
@@ -20,9 +17,6 @@ function SelectedSkillList(props) {
 
   const handleOnClose = () =>
     typeof onCloseHandler === 'function' ? onCloseHandler() : null;
-  // const handleOnItemClick = (skill, index) => {
-  //   console.log(skill, index);
-  // };
 
   return (
     <SwipeableDrawer
@@ -42,13 +36,6 @@ function SelectedSkillList(props) {
           skillList.map((skill, index) => (
             <ListItem key={`${index}-${skill}`}>
               <ListItemText primary={skill} />
-              {/* <ListItemSecondaryAction
-                onClick={() => handleOnItemClick({ skill, index })}
-              >
-                <IconButton edge="end" aria-label="delete">
-                <CloseIcon />
-              </IconButton>
-              </ListItemSecondaryAction> */}
             </ListItem>
           ))}
       </List>

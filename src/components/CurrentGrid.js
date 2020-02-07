@@ -6,7 +6,6 @@ class CurrentGrid extends Component {
     if (this.props.grid.gridData.description) {
       return (
         <div className="card">
-          {/* <div className="card-body"> */}
           <ul>
             <li className="text-center m-2">
               <strong>{this.props.grid.gridData.description}</strong>
@@ -15,7 +14,6 @@ class CurrentGrid extends Component {
               <strong>Energy: {this.props.grid.gridData.energy}</strong>
             </li>
           </ul>
-          {/* </div> */}
         </div>
       );
     }

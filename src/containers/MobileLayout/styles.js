@@ -3,7 +3,7 @@ import { createStyles } from '@material-ui/core/styles';
 export default createStyles(theme => ({
   mainContainer: {
     width: '100%',
-    paddingTop: 112,
+    paddingTop: 136,
     paddingBottom: 85
   },
   syncGridWrapper: {

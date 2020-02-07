@@ -7,7 +7,7 @@ import Point from './Point';
 class Pattern extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    // link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     size: PropTypes.object
   };
   static defaultProps = {
