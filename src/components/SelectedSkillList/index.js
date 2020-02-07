@@ -27,7 +27,7 @@ function SelectedSkillList(props) {
     >
       <List dense className={classes.listRoot}>
         <Typography variant="h6" className={classes.listTitle}>
-          Active Skills
+          Selected Grids
         </Typography>
 
         <Divider className={classes.listDivider} />
