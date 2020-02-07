@@ -35,7 +35,7 @@ function MainAppbar(props) {
           Remaining Energy: {Boolean(data && data.energy > -1) && data.energy}
         </Typography>
         <Typography variant="body1" className={classes.title}>
-          Orbs spent: {Boolean(data && data.orbs > -1) && data.orbs}
+          Orbs Spent: {Boolean(data && data.orbs > -1) && data.orbs}
         </Typography>
       </Toolbar>
     </AppBar>
