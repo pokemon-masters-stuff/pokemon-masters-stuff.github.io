@@ -23,7 +23,7 @@ class SyncGrids extends Component {
     return (
       <div>
         <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
-        <ResetGridButtonDesktop />
+        <br /> <ResetGridButtonDesktop />
         <GridMap />
       </div>
     );

@@ -8,7 +8,11 @@ const ResetGridButtonDesktop = () => {
   const handleOnClick = () => dispatch(resetGrids());
 
   return (
-    <button type="button" className="btn btn-warning" onClick={handleOnClick}>
+    <button
+      type="button"
+      className="btn btn-warning ml-2"
+      onClick={handleOnClick}
+    >
       Reset
     </button>
   );
