@@ -42,7 +42,7 @@ function SyncGridControls(props) {
           onClick={handleOnOpenSkillList}
           startIcon={<ListIcon />}
         >
-          Active List
+          Active Skills
         </Button>
       </Grid>
     </Grid>
