@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import SelectPokemonDropdown from './SelectPokemonDropdown';
 import { ResetGridButtonDesktop } from './ResetGridButton';
 import GridMap from './GridMap';
+import CurrentGrid from './CurrentGrid';
 import { selectPokemon, resetGrids } from '../actions/actionCreators';
 
 class SyncGrids extends Component {
@@ -24,6 +25,9 @@ class SyncGrids extends Component {
       <>
         <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
         <br /> <ResetGridButtonDesktop />
+        <div className="grid-data-display position-fixed">
+          <CurrentGrid />
+        </div>
         <GridMap />
       </>
     );

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
 import SyncGrids from '../../components/SyncGrids';
-import CurrentGrid from '../../components/CurrentGrid';
 import ActiveGridList from '../../components/ActiveGridList';
 import { FeedbackFormDesktop } from '../../components/FeedbackForm';
 
@@ -34,11 +33,8 @@ class DesktopLayout extends Component {
           <div className="container container-s">
             <div className="row">
               <div className="col-sm-8">
-                <div style={{marginTop: 24}}>
+                <div style={{ marginTop: 24 }}>
                   <SyncGrids />
-                </div>
-                <div className="grid-data-display position-fixed">
-                  <CurrentGrid />
                 </div>
               </div>
               <div className="col-sm-4 position-static mt-5">

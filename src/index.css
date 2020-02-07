@@ -30,7 +30,8 @@ a {
 }
 
 .grid-data-display {
-  margin-left: 5rem;
+  margin-left: 12rem;
+  margin-top: -5.5rem;
   width: 23rem;
   font-size: 0.8rem;
 }
