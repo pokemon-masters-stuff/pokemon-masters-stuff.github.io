@@ -21,11 +21,11 @@ class SyncGrids extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
         <br /> <ResetGridButtonDesktop />
         <GridMap />
-      </div>
+      </>
     );
   }
 }

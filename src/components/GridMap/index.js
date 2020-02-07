@@ -64,7 +64,16 @@ class GridMap extends Component {
       ...this.state.mapSizeBoundaries
     };
 
-    if (clientWrappingBoundaries.width > 960) {
+    if (clientWrappingBoundaries.width > 1200) {
+      updatedMapSizeBoundaries = {
+        ...updatedMapSizeBoundaries,
+        width: 800,
+        height: 768,
+        viewbox: '-50 -50 100 100'
+      };
+    }
+
+    if (clientWrappingBoundaries.width > 960 && clientWrappingBoundaries.width < 1200) {
       updatedMapSizeBoundaries = {
         ...updatedMapSizeBoundaries,
         height: 768,
