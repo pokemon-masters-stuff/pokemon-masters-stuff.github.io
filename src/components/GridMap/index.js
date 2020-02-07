@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text } from '../Hexagon';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -23,7 +23,7 @@ import {
   addBackToRemainingEnergy,
   resetGrids
 } from '../../actions/actionCreators';
-import styles from "./styles";
+import styles from './styles';
 
 const allSyncGrids = {
   pikachuGridData,
@@ -42,8 +42,8 @@ class GridMap extends Component {
     mapSizeBoundaries: {
       width: '100vw',
       height: 440,
-      viewbox: '-35 -35 70 70',
-    },
+      viewbox: '-35 -35 70 70'
+    }
   };
 
   componentDidMount() {
@@ -58,17 +58,17 @@ class GridMap extends Component {
   fitMapToScreen = () => {
     const clientWrappingBoundaries = {
       width: document.body.clientWidth,
-      height: document.body.clientHeight,
+      height: document.body.clientHeight
     };
     let updatedMapSizeBoundaries = {
-      ...this.state.mapSizeBoundaries,
+      ...this.state.mapSizeBoundaries
     };
 
     if (clientWrappingBoundaries.width > 960) {
       updatedMapSizeBoundaries = {
         ...updatedMapSizeBoundaries,
         height: 768,
-        viewbox: '-15 -50 100 100',
+        viewbox: '-15 -50 100 100'
       };
     }
 
@@ -76,16 +76,18 @@ class GridMap extends Component {
       updatedMapSizeBoundaries = {
         ...updatedMapSizeBoundaries,
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: '-50 -50 100 100'
       };
     }
 
     if (clientWrappingBoundaries.width < 768) {
       updatedMapSizeBoundaries = {
         ...updatedMapSizeBoundaries,
-        height: ((clientWrappingBoundaries.width / 100 * 73.28) / 2 +
-          clientWrappingBoundaries.width).toFixed(),
-        viewbox: '-35 -35 70 70',
+        height: (
+          ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
+          clientWrappingBoundaries.width
+        ).toFixed(),
+        viewbox: '-35 -35 70 70'
       };
     }
 
@@ -94,8 +96,8 @@ class GridMap extends Component {
       initialRender: false,
       mapSizeBoundaries: {
         ...prevState.mapSizeBoundaries,
-        ...updatedMapSizeBoundaries,
-      },
+        ...updatedMapSizeBoundaries
+      }
     }));
   };
 
@@ -113,8 +115,8 @@ class GridMap extends Component {
     }
   }
 
-  renderHexagonCells = () => allSyncGrids[`${this.props.pokemon}GridData`].map(
-    (cell, index) => {
+  renderHexagonCells = () =>
+    allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
       let hexagonProps = {
         key: index,
         q: cell.q,
@@ -123,7 +125,7 @@ class GridMap extends Component {
         data: cell.data,
         fill: 'white',
         onMouseEnter: this.mouseEnter,
-        onMouseLeave: this.mouseLeave,
+        onMouseLeave: this.mouseLeave
       };
 
       if (index !== 0) {
@@ -133,7 +135,7 @@ class GridMap extends Component {
           onClickHandler: (e, data) => this.handleClick(e, index, data),
           className: this.props.grid.isSelectedArray[cell.data.cellNum].selected
             ? 'selected'
-            : null,
+            : null
         };
       }
 
@@ -142,41 +144,38 @@ class GridMap extends Component {
           <Text>{cell.data.name}</Text>
         </Hexagon>
       );
-    },
-  );
+    });
 
   render() {
-    const {mapSizeBoundaries, initialRender} = this.state;
-    const {classes} = this.props;
+    const { mapSizeBoundaries, initialRender } = this.state;
+    const { classes } = this.props;
 
-    return initialRender
-      ? <div className={classes.progressWrapper}><CircularProgress color="secondary" /></div>
-      : (
-        <HexGrid
-          width={mapSizeBoundaries.width}
-          height={mapSizeBoundaries.height}
-          viewBox={mapSizeBoundaries.viewbox}
+    return initialRender ? (
+      <div className={classes.progressWrapper}>
+        <CircularProgress color="secondary" />
+      </div>
+    ) : (
+      <HexGrid
+        width={mapSizeBoundaries.width}
+        height={mapSizeBoundaries.height}
+        viewBox={mapSizeBoundaries.viewbox}
+      >
+        <Layout
+          size={{ x: 4.5, y: 4.5 }}
+          flat={true}
+          spacing={1.1}
+          origin={{ x: 0, y: 0 }}
         >
-          <Layout
-            size={{x: 4.5, y: 4.5}}
-            flat={true}
-            spacing={1.1}
-            origin={{x: 0, y: 0}}
-          >
-            {this.renderHexagonCells()}
-          </Layout>
-          <Pattern
-            id="pat-3"
-            link="https://img.icons8.com/material-sharp/24/000000/lock.png"
-          />
-        </HexGrid>
-      );
+          {this.renderHexagonCells()}
+        </Layout>
+      </HexGrid>
+    );
   }
 }
 
 const mapStateToProps = state => ({
   pokemon: state.pokemon.selectedPokemon.toLowerCase(),
-  grid: state.grid,
+  grid: state.grid
 });
 
 export default connect(mapStateToProps, {
@@ -186,5 +185,5 @@ export default connect(mapStateToProps, {
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids,
+  resetGrids
 })(withStyles(styles)(GridMap));

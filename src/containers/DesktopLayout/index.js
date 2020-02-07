@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 import SyncGrids from '../../components/SyncGrids';
 import CurrentGrid from '../../components/CurrentGrid';
 import ActiveGridList from '../../components/ActiveGridList';
-import MyForm from '../../components/FeedbackForm';
+import { FeedbackFormDesktop } from '../../components/FeedbackForm';
 
 class DesktopLayout extends Component {
   componentDidMount() {
@@ -31,7 +31,7 @@ class DesktopLayout extends Component {
               >
                 Submit Feedback
               </button>
-              <MyForm />
+              <FeedbackFormDesktop />
             </li>
           </ul>
           {/* </div> */}

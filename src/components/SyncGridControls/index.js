@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import ListIcon from '@material-ui/icons/List';
 
 import SelectPokemonDropdown from '../SelectPokemonDropdown';
+import { ResetGridButtonMobile } from '../ResetGridButton';
 import styles from './styles';
 
 function SyncGridControls(props) {
@@ -28,6 +29,10 @@ function SyncGridControls(props) {
     >
       <Grid item>
         <SelectPokemonDropdown onChangeHandler={handleOnChangePokemonHandler} />
+      </Grid>
+
+      <Grid item>
+        <ResetGridButtonMobile />
       </Grid>
 
       <Grid item>

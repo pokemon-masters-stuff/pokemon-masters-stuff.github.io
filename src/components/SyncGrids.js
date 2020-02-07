@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import SelectPokemonDropdown from "./SelectPokemonDropdown";
-import GridMap from "./GridMap";
+import SelectPokemonDropdown from './SelectPokemonDropdown';
+import { ResetGridButtonDesktop } from './ResetGridButton';
+import GridMap from './GridMap';
 import { selectPokemon, resetGrids } from '../actions/actionCreators';
 
 class SyncGrids extends Component {
@@ -22,6 +23,7 @@ class SyncGrids extends Component {
     return (
       <div>
         <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
+        <ResetGridButtonDesktop />
         <GridMap />
       </div>
     );
