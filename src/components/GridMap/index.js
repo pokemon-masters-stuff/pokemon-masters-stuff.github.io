@@ -66,7 +66,6 @@ class GridMap extends Component {
 
     if (clientWrappingBoundaries.width > 1200) {
       updatedMapSizeBoundaries = {
-        ...updatedMapSizeBoundaries,
         width: 800,
         height: 768,
         viewbox: '-50 -50 100 100'
@@ -75,7 +74,7 @@ class GridMap extends Component {
 
     if (clientWrappingBoundaries.width > 960 && clientWrappingBoundaries.width < 1200) {
       updatedMapSizeBoundaries = {
-        ...updatedMapSizeBoundaries,
+        width: '100vw',
         height: 768,
         viewbox: '-15 -50 100 100'
       };
@@ -83,7 +82,7 @@ class GridMap extends Component {
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
-        ...updatedMapSizeBoundaries,
+        width: '100vw',
         height: 768,
         viewbox: '-50 -50 100 100'
       };
@@ -91,7 +90,7 @@ class GridMap extends Component {
 
     if (clientWrappingBoundaries.width < 768) {
       updatedMapSizeBoundaries = {
-        ...updatedMapSizeBoundaries,
+        width: '100vw',
         height: (
           ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
           clientWrappingBoundaries.width
