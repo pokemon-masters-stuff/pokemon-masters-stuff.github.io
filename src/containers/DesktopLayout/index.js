@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ReactGA from 'react-ga';
 
-import SyncGrids from '../../components/SyncGrids';
-import ActiveGridList from '../../components/ActiveGridList';
+import { SelectedSkillListDesktop } from '../../components/SelectedSkillList';
 import { FeedbackFormDesktop } from '../../components/FeedbackForm';
+import SelectPokemonDropdown from '../../components/SelectPokemonDropdown';
+import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
+import GridMap from '../../components/GridMap';
+import { SkillOverviewDesktop } from '../../components/SkillOverview';
+import { selectPokemon, resetGrids } from '../../actions/actionCreators';
 
 class DesktopLayout extends Component {
+  constructor(props) {
+    super(props);
+
+    this.selectPokemon = this.selectPokemon.bind(this);
+  }
+
+  selectPokemon(value) {
+    this.props.selectPokemon(value);
+    this.props.resetGrids();
+  }
+
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
@@ -34,11 +50,16 @@ class DesktopLayout extends Component {
             <div className="row">
               <div className="col-sm-8">
                 <div style={{ marginTop: 24 }}>
-                  <SyncGrids />
+                  <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
+                  <br /> <ResetGridButtonDesktop />
+                  <div className="grid-data-display position-fixed">
+                    <SkillOverviewDesktop />
+                  </div>
+                  <GridMap />
                 </div>
               </div>
               <div className="col-sm-4 position-static mt-5">
-                <ActiveGridList />
+                <SelectedSkillListDesktop />
               </div>
             </div>
           </div>
@@ -48,4 +69,12 @@ class DesktopLayout extends Component {
   }
 }
 
-export default DesktopLayout;
+const mapStateToProps = state => ({
+  pokemon: state.pokemon,
+  grid: state.grid
+});
+
+export default connect(mapStateToProps, {
+  selectPokemon,
+  resetGrids
+})(DesktopLayout);

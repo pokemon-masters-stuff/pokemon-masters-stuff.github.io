@@ -544,4 +544,5 @@ export default vileplumeGridDataNoColor.map((obj, index) => {
   } else {
     return obj;
   }
+  return { ...obj };
 });

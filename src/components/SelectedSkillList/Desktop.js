@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class ActiveGridList extends Component {
+class SelectedSkillList extends Component {
   renderList() {
     return this.props.grid.activeGridList.map((item, index) => {
       return (
@@ -33,7 +33,7 @@ class ActiveGridList extends Component {
 }
 
 const mapStateToProps = state => ({
-  grid: state.grid,
+  grid: state.grid
 });
 
-export default connect(mapStateToProps)(ActiveGridList);
+export default connect(mapStateToProps)(SelectedSkillList);

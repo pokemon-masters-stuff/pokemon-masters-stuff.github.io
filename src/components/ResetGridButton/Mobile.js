@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import { useDispatch } from 'react-redux';
 import { resetGrids } from '../../actions/actionCreators';
 
-const ResetGridButtonMobile = () => {
+const ResetGridButton = () => {
   const dispatch = useDispatch();
 
   const handleOnClick = () => dispatch(resetGrids());
@@ -15,4 +15,4 @@ const ResetGridButtonMobile = () => {
   );
 };
 
-export default ResetGridButtonMobile;
+export default ResetGridButton;

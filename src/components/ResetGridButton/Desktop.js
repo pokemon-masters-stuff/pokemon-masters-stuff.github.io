@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { resetGrids } from '../../actions/actionCreators';
 
-const ResetGridButtonDesktop = () => {
+const ResetGridButton = () => {
   const dispatch = useDispatch();
 
   const handleOnClick = () => dispatch(resetGrids());
@@ -18,4 +18,4 @@ const ResetGridButtonDesktop = () => {
   );
 };
 
-export default ResetGridButtonDesktop;
+export default ResetGridButton;

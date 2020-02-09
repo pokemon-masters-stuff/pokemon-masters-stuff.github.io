@@ -6,17 +6,13 @@ import Grid from '@material-ui/core/Grid';
 
 import SyncGridControls from '../../components/SyncGridControls';
 import Navigation from '../../components/Navigation';
-import SelectedSkillList from '../../components/SelectedSkillList';
-import SkillOverview from '../../components/SkillOverview';
+import { SelectedSkillListMobile } from '../../components/SelectedSkillList';
+import { SkillOverviewMobile } from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
 
-import {
-  selectPokemon,
-  selectGrid,
-  resetGrids
-} from '../../actions/actionCreators';
+import { selectPokemon, resetGrids } from '../../actions/actionCreators';
 
 class MobileApp extends Component {
   state = {
@@ -52,7 +48,7 @@ class MobileApp extends Component {
           onCloseHandler={this.handleOnCloseNav}
         />
 
-        <SelectedSkillList
+        <SelectedSkillListMobile
           isOpened={isSkillListOpened}
           onOpenHandler={this.handleOnOpenSkillList}
           onCloseHandler={this.handleOnCloseSkillList}
@@ -81,7 +77,7 @@ class MobileApp extends Component {
             </Grid>
           </Grid>
 
-          <SkillOverview
+          <SkillOverviewMobile
             skill={grid.gridData.description}
             energy={grid.gridData.energy}
           />
@@ -98,6 +94,5 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, {
   selectPokemon,
-  selectGrid,
   resetGrids
 })(withStyles(styles)(MobileApp));

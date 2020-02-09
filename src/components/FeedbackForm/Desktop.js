@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-export default class FeedbackFormDesktop extends React.Component {
+export default class FeedbackForm extends React.Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
