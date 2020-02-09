@@ -19,7 +19,7 @@ class SelectedSkillList extends Component {
           <div className="card-body">
             <h5 className="card-title">
               Remaining Energy: {this.props.grid.remainingEnergy}
-              <p>Orbs spent: {this.props.grid.orbSpent}</p>
+              <p>Orbs Spent: {this.props.grid.orbSpent}</p>
             </h5>
             <ul className="list-group list-group-flush">
               {' '}
