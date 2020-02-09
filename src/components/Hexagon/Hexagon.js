@@ -67,8 +67,8 @@ class Hexagon extends Component {
     this.props.hideGridData();
   }
 
-  onClick = (e) => {
-    if (e) {
+  onClick = e => {
+    if (e && this.props.onClickHandler) {
       this.props.onClickHandler(e, this.props.data);
     }
   };
