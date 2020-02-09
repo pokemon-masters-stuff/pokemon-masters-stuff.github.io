@@ -550,4 +550,5 @@ export default kingdraGridDataNoColor.map((obj, index) => {
   } else {
     return obj;
   }
+  return { ...obj };
 });

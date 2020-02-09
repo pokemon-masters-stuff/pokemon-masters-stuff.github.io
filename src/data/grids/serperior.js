@@ -549,4 +549,5 @@ export default serperiorGridDataNoColor.map((obj, index) => {
   } else {
     return obj;
   }
+  return { ...obj };
 });

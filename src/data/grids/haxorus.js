@@ -551,4 +551,5 @@ export default haxorusGridDataNoColor.map((obj, index) => {
   } else {
     return obj;
   }
+  return { ...obj };
 });
