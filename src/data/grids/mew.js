@@ -111,7 +111,7 @@ export default [
     r: -3,
     data: {
       name: 'Blizzard + 5',
-      description: 'Blizzard + 5',
+      description: 'Blizzard Power + 5',
       energy: 3,
       cellNum: 13
     },
