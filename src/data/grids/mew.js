@@ -78,7 +78,7 @@ export default [
     r: 3,
     data: {
       name: 'Psychic + 4',
-      description: 'Psychic + 4',
+      description: 'Psychic Power + 4',
       energy: 4,
       cellNum: 34
     },
@@ -89,7 +89,7 @@ export default [
     r: 4,
     data: {
       name: 'Psychic + 4',
-      description: 'Psychic + 4 [Req. Lv3 Sync]',
+      description: 'Psychic Power + 4 [Req. Lv3 Sync]',
       energy: 5,
       cellNum: 31
     },
