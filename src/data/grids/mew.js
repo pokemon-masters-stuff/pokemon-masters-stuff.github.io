@@ -89,11 +89,11 @@ export default [
     r: 4,
     data: {
       name: 'Psychic + 4',
-      description: 'Psychic Power + 4 [Req. Lv3 Sync]',
+      description: 'Psychic Power + 4',
       energy: 5,
       cellNum: 31
     },
-    fill: '#dedbd3'
+    fill: '#73d958'
   },
   {
     q: 0,
@@ -197,11 +197,11 @@ export default [
     data: {
       name: 'Inertia',
       description:
-        'Inertia - The higher the user’s Speed, the more it powers up sync moves. [Req. Lv3 Sync]',
+        'Inertia - The higher the user’s Speed, the more it powers up sync moves.',
       energy: 8,
       cellNum: 16
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
   {
     q: 4,
@@ -209,22 +209,22 @@ export default [
     data: {
       name: 'Blind Spot',
       description:
-        'Blind Spot - The more the user’s evasiveness has been raised, the more it powers up sync moves.[Req. Lv3 Sync]',
+        'Blind Spot - The more the user’s evasiveness has been raised, the more it powers up sync moves.',
       energy: 8,
       cellNum: 18
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
   {
     q: 4,
     r: -4,
     data: {
       name: 'Swift + 5',
-      description: 'Swift Power + 5 [Req. Lv3 Sync]',
+      description: 'Swift Power + 5',
       energy: 2,
       cellNum: 17
     },
-    fill: '#dedbd3'
+    fill: '#73d958'
   },
 
   // Upper Left
@@ -300,33 +300,33 @@ export default [
     data: {
       name: 'S.R. 2',
       description:
-        'Special Reserves 2 - Once per battle, sharply raises the user’s Sp. Atk when in a pinch.[Req. Lv3 Sync]',
+        'Special Reserves 2 - Once per battle, sharply raises the user’s Sp. Atk when in a pinch.',
       energy: 6,
       cellNum: 46
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
   {
     q: -4,
     r: 1,
     data: {
       name: 'H.E. 1',
-      description: 'Hostile Environment 1 [Req. Lv3 Sync]',
+      description: 'Hostile Environment 1',
       energy: 8,
       cellNum: 44
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
   {
     q: -4,
     r: 0,
     data: {
       name: 'Thunder Acc. 20',
-      description: 'Thunder Accuracy + 20 [Req. Lv3 Sync]',
+      description: 'Thunder Accuracy + 20',
       energy: 7,
       cellNum: 45
     },
-    fill: '#dedbd3'
+    fill: '#73d958'
   },
   // Lower Left
   {
@@ -419,11 +419,11 @@ export default [
     data: {
       name: 'S.S. 2',
       description:
-        'Shifty Striker 2 - Occasionally raises the user’s evasiveness when the user’s Pokémon uses a move.[Req. Lv3 Sync]',
+        'Shifty Striker 2 - Occasionally raises the user’s evasiveness when the user’s Pokémon uses a move.',
       energy: 10,
       cellNum: 32
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
 
   // Lower Right
@@ -522,10 +522,10 @@ export default [
     r: 3,
     data: {
       name: 'Agile Entry 2',
-      description: 'Agile Entry 2 [Req. Lv3 Sync]',
+      description: 'Agile Entry 2',
       energy: 10,
       cellNum: 30
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   }
 ];
