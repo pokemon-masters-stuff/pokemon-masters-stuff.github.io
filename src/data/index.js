@@ -8,3 +8,4 @@ export { default as kingdraGridData } from './grids/kingdra';
 export { default as serperiorGridData } from './grids/serperior';
 export { default as vileplumeGridData } from './grids/vileplume';
 export { default as mewGridData } from './grids/mew';
+export { default as metagrossGridData } from './grids/metagross';

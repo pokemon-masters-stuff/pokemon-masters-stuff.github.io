@@ -2,15 +2,20 @@
 // red = #f24646
 // blue = #66B6EC
 // purple = #d12deb
-// grey = #dedbd3
 
-let kingdraGridDataNoColor = [
+export default [
   // Center Grids
-  { q: 0, r: 0, data: { name: 'Kingdra' }, fill: 'white' },
+  { q: 0, r: 0, data: { name: 'Metagross' }, fill: 'white' },
   {
     q: 0,
     r: -1,
-    data: { name: 'Speed + 5', description: 'Speed + 5', energy: 0, cellNum: 6 }
+    data: {
+      name: 'Speed + 5',
+      description: 'Speed + 5',
+      energy: 0,
+      cellNum: 6
+    },
+    fill: '#66B6EC'
   },
   {
     q: 0,
@@ -20,32 +25,36 @@ let kingdraGridDataNoColor = [
       description: 'Defense + 5',
       energy: 0,
       cellNum: 3
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -1,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cellNum: 1 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 0, cellNum: 1 },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 0,
     data: {
-      name: 'Sp.Atk + 5',
-      description: 'Sp.Atk + 5',
+      name: 'Attack + 5',
+      description: 'Attack + 5',
       energy: 0,
       cellNum: 2
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 1,
     data: {
-      name: 'Sp.Atk + 5',
-      description: 'Sp.Atk + 5',
+      name: 'Attack + 5',
+      description: 'Attack + 5',
       energy: 0,
       cellNum: 4
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -1,
@@ -55,18 +64,19 @@ let kingdraGridDataNoColor = [
       description: 'Sp.Def + 5',
       energy: 0,
       cellNum: 5
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 1,
     data: {
-      name: 'Dragon Guard',
-      description:
-        'Dragon Guard - Reduces damage when the Pokemon is attacked by Dragon-type moves',
-      energy: 5,
+      name: 'Attack + 5',
+      description: 'Attack + 5',
+      energy: 3,
       cellNum: 38
-    }
+    },
+    fill: '#66B6EC'
   },
 
   {
@@ -77,29 +87,30 @@ let kingdraGridDataNoColor = [
       description: 'Speed + 5',
       energy: 2,
       cellNum: 29
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: 0,
     r: 3,
     data: {
       name: 'Sync + 25',
-      description: 'No Mercy Dragon Pulse Power + 25 [Req. Lv3 Sync]',
+      description: 'Solid Steel Meteor Mash Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cellNum: 48
     },
-    fill: '#dedbd3'
+    fill: '#d12deb'
   },
   {
     q: 0,
     r: -3,
     data: {
       name: 'Sync + 25',
-      description: 'No Mercy Dragon Pulse Power + 25 [Req. Lv3 Sync]',
+      description: 'Solid Steel Meteor Mash Power + 25 [Req. Lv3 Sync]',
       energy: 5,
       cellNum: 47
     },
-    fill: '#dedbd3'
+    fill: '#d12deb'
   },
 
   // Upper Right Grids
@@ -107,113 +118,123 @@ let kingdraGridDataNoColor = [
     q: 1,
     r: -2,
     data: {
-      name: 'Sp.Atk + 5',
-      description: 'Sp.Atk + 5',
+      name: 'Attack + 5',
+      description: 'Attack + 5',
       energy: 2,
       cellNum: 7
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: -3,
     data: {
-      name: 'D.B. + 4',
-      description: 'Dragon Breath Power + 4',
+      name: 'M.M. + 4',
+      description: 'Meteor Mash Power + 4',
       energy: 2,
       cellNum: 10
-    }
+    },
+    fill: '#73d958'
   },
   {
     q: 1,
     r: -4,
     data: {
-      name: 'D.B. + 4',
-      description: 'Dragon Breath Power + 4',
-      energy: 3,
+      name: 'M.M. + 4',
+      description: 'Meteor Mash Power + 4 [Req. Lv2 Sync]',
+      energy: 2,
       cellNum: 13
-    }
+    },
+    fill: '#73d958'
   },
   {
     q: 1,
     r: -5,
     data: {
-      name: 'D.B. + 5',
-      description: 'Dragon Breath Power + 5 [Req. Lv3 Sync]',
-      energy: 5,
+      name: 'M.M. + 4',
+      description: 'Meteor Mash Power + 4 [Req. Lv3 Sync]',
+      energy: 3,
       cellNum: 16
     },
-    fill: '#dedbd3'
+    fill: '#73d958'
   },
   {
     q: 2,
     r: -3,
     data: {
-      name: 'Sp.Atk + 5',
-      description: 'Sp.Atk + 5',
+      name: 'Attack + 5',
+      description: 'Attack + 5',
       energy: 2,
       cellNum: 8
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: 2,
     r: -4,
     data: {
-      name: 'Sp.Def + 5',
-      description: 'Sp.Def + 5',
-      energy: 2,
+      name: 'M.M. MGR 2',
+      description: 'Meteor Mash: Move Gauge Refresh 2',
+      energy: 6,
       cellNum: 11
-    }
+    },
+    fill: '#f24646'
   },
   {
     q: 2,
     r: -5,
     data: {
-      name: 'D.B. MGR 3',
-      description: 'Dragon Breath Move Gauge Refresh 3',
+      name: 'M.M. MGR 2',
+      description: 'Meteor Mash: Move Gauge Refresh 2 [Req. Lv2 Sync]',
       energy: 6,
       cellNum: 14
-    }
+    },
+    fill: '#f24646'
   },
   {
     q: 2,
     r: -6,
     data: {
-      name: 'D.B. H.E. 1',
-      description: 'Dragon Breath Hostile Environment 1 [Req. Lv3 Sync]',
+      name: 'M.M. S.B.1',
+      description:
+        'Meteor Mash: Swag Bag 1 - Meteor Mash Raises the chance of raising stat values with the additional effects of moves.[Req. Lv3 Sync]',
       energy: 10,
       cellNum: 17
     },
-    fill: '#dedbd3'
+    fill: '#f24646'
   },
   {
     q: 3,
     r: -4,
     data: {
-      name: 'D.B. + 4',
-      description: 'Dragon Breath Power + 4',
+      name: 'M.M. + 4',
+      description: 'Meteor Mash Power + 4',
       energy: 2,
       cellNum: 9
-    }
+    },
+    fill: '#73d958'
   },
   {
     q: 3,
     r: -5,
     data: {
-      name: 'D.B. + 4',
-      description: 'Dragon Breath Power + 4',
-      energy: 3,
+      name: 'M.M. + 4',
+      description: 'Meteor Mash Power + 4',
+      energy: 2,
       cellNum: 12
-    }
+    },
+    fill: '#73d958'
   },
   {
     q: 3,
     r: -6,
     data: {
-      name: 'D.B. + 5',
-      description: 'Dragon Breath Power + 5',
-      energy: 5,
+      name: 'M.M. + 4',
+      description: 'Meteor Mash Power + 4 [Req. Lv2 Sync]',
+      energy: 3,
       cellNum: 15
-    }
+    },
+    fill: '#73d958'
   },
 
   // Upper Left
@@ -221,80 +242,92 @@ let kingdraGridDataNoColor = [
     q: -1,
     r: -1,
     data: {
-      name: 'X Sp.Atk MPR 3',
-      description: 'X Sp.Atk MP Refresh 3',
-      energy: 7,
-      cellNum: 41
-    }
+      name: 'Defense + 5',
+      description: 'Defense + 5',
+      energy: 2,
+      cellNum: 42
+    },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: -2,
     data: {
-      name: 'S.R. 6',
-      description:
-        "Special Reserves 6 - Once per battle, radically raises the user's Sp.Atk when in a pinch",
-      energy: 7,
-      cellNum: 44
-    }
+      name: 'HP + 20',
+      description: 'HP + 20 [Req. Lv2 Sync]',
+      energy: 4,
+      cellNum: 45
+    },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 0,
     data: {
-      name: 'Sp.Def + 5',
-      description: 'Sp.Def + 5',
-      energy: 2,
+      name: 'Haymaker',
+      description:
+        'Haymaker - The more the user’s Attack has been raised, the more it powers up sync moves.',
+      energy: 10,
       cellNum: 40
-    }
+    },
+    fill: 'yellow'
   },
   {
     q: -2,
     r: -1,
-    data: { name: 'HP + 30', description: 'HP + 30', energy: 10, cellNum: 43 }
+    data: {
+      name: 'Recuperation 2',
+      description:
+        'Recuperation 2 - Restores the user’s HP after using a sync move.[Req. Lv2 Sync]',
+      energy: 8,
+      cellNum: 43
+    },
+    fill: 'yellow'
   },
   {
     q: -2,
     r: -2,
     data: {
-      name: 'D.M. P.S. 5',
-      description: 'Draco Meteor Paralysis Synergy 5 [Req. Lv3 Sync]',
+      name: 'B.P. E.E. 9',
+      description:
+        'Bullet Punch: Eagle Eye 9 - Bullet Punch Raises the user’s critical-hit rate when the user’s Pokémon uses a move.[Req. Lv3 Sync]',
       energy: 10,
       cellNum: 46
     },
-    fill: '#dedbd3'
+    fill: '#f24646'
   },
   {
     q: -3,
     r: 1,
     data: {
-      name: 'Defense + 10',
-      description: 'Defense + 10',
-      energy: 4,
+      name: 'Attack + 10',
+      description: 'Attack + 10',
+      energy: 5,
       cellNum: 39
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 0,
     data: {
-      name: 'Y.I.M MPR 3',
-      description: 'Victory Is Mine MP Refresh 3',
-      energy: 7,
-      cellNum: 42
-    }
+      name: 'HP + 20',
+      description: 'HP + 20 [Req. Lv2 Sync]',
+      energy: 4,
+      cellNum: 41
+    },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: -1,
     data: {
-      name: 'S.R. 6',
-      description:
-        "Stamina Reserves 6 - Once per battle, increases the user's move gauge by six when the user is in a pinch [Req. Lv3 Sync]",
-      energy: 7,
-      cellNum: 45
+      name: 'Unyielding 2',
+      description: 'Unyielding 2 [Req. Lv3 Sync]',
+      energy: 10,
+      cellNum: 44
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
 
   // Lower Left
@@ -302,110 +335,120 @@ let kingdraGridDataNoColor = [
     q: -3,
     r: 4,
     data: {
-      name: 'Sp.Atk + 5',
-      description: 'Sp.Atk + 5',
-      energy: 2,
+      name: 'X Att MPR 3',
+      description: 'X Attack: MP Refresh 3',
+      energy: 7,
       cellNum: 20
-    }
+    },
+    fill: '#f24646'
   },
   {
     q: -3,
     r: 5,
     data: {
-      name: 'Rain Gear 3',
-      description:
-        'Rain Gear 3 - Reduces damage when the Pokemon is hit by an attack move when the weather is rainy',
-      energy: 7,
+      name: 'Attack + 10',
+      description: 'Attack + 10',
+      energy: 5,
       cellNum: 23
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -3,
     r: 6,
     data: {
-      name: 'Sp.Def + 10',
-      description: 'Sp.Def + 10',
-      energy: 4,
+      name: 'Force Field 1',
+      description:
+        'Force Field 1 - Has a small chance of raising the Sp. Def of all allied sync pairs when the user’s Pokémon uses a move.[Req. Lv2 Sync]',
+      energy: 8,
       cellNum: 26
-    }
+    },
+    fill: 'yellow'
   },
   {
     q: -2,
     r: 3,
     data: {
-      name: 'Defense + 5',
-      description: 'Defense + 5',
+      name: 'Speed + 5',
+      description: 'Speed + 5',
       energy: 2,
       cellNum: 19
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 4,
     data: {
-      name: 'Speed + 10',
-      description: 'Speed + 10',
+      name: 'Defense + 10',
+      description: 'Defense + 10',
       energy: 4,
       cellNum: 22
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 5,
     data: {
-      name: 'Speed + 10',
-      description: 'Speed + 10',
+      name: 'Sp.Def + 10',
+      description: 'Sp.Def + 10 [Req. Lv2 Sync]',
       energy: 4,
       cellNum: 25
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -2,
     r: 6,
     data: {
-      name: 'Dire Rain 1',
+      name: 'Stoic 2',
       description:
-        'Dire Rain 1 - Critical hits land more easily when an attack move is used while the weather is rainy [Req. Lv3 Sync]',
-      energy: 10,
+        'Stoic 2 - Occasionally raises the Pokémon’s Defense after it uses a move.[Req. Lv3 Sync]',
+      energy: 8,
       cellNum: 28
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
   {
     q: -1,
     r: 2,
-    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cellNum: 18 }
+    data: { name: 'HP + 10', description: 'HP + 10', energy: 2, cellNum: 18 },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 3,
     data: {
-      name: 'Sp.Atk + 5',
-      description: 'Sp.Atk + 5',
-      energy: 3,
+      name: 'Speed + 5',
+      description: 'Speed + 5',
+      energy: 2,
       cellNum: 21
-    }
+    },
+    fill: '#66B6EC'
   },
   {
     q: -1,
     r: 4,
     data: {
-      name: 'Raging Rain 5',
-      description: 'Raging Rain 5 - Power up moves when the weather is rainy',
-      energy: 9,
+      name: 'B.T.I. MPR 3',
+      description: 'Best There Is!: MP Refresh 3 [Req. Lv2 Sync]',
+      energy: 7,
       cellNum: 24
-    }
+    },
+    fill: '#f24646'
   },
   {
     q: -1,
     r: 5,
     data: {
-      name: 'Defense + 10',
-      description: 'Defense + 10 [Req. Lv3 Sync]',
+      name: 'N.R.',
+      description:
+        'Natural Remedy - Once per battle, removes all status conditions from the user when the user is inflicted by any status condition.[Req. Lv3 Sync]',
       energy: 4,
       cellNum: 27
     },
-    fill: '#dedbd3'
+    fill: 'yellow'
   },
 
   // Lower Right
@@ -413,142 +456,89 @@ let kingdraGridDataNoColor = [
     q: 3,
     r: -1,
     data: {
-      name: 'D.M. + 4',
-      description: 'Draco Meteor Power + 4',
+      name: 'I.H. + 5',
+      description: 'Iron Head Power + 5',
       energy: 5,
       cellNum: 30
-    }
+    },
+    fill: '#73d958'
   },
   {
     q: 3,
     r: 0,
     data: {
-      name: 'D.M. + 4',
-      description: 'Draco Meteor Power + 4',
-      energy: 5,
-      cellNum: 33
-    }
-  },
-  {
-    q: 3,
-    r: 1,
-    data: {
-      name: 'D.M. S.Q. 4',
-      description:
-        "Draco Meteor Status Quo 4 - Has a good chance of returning the user's lowered stats to normal when a move is successful [Req. Lv3 Sync]",
-      energy: 10,
-      cellNum: 36
-    },
-    fill: '#dedbd3'
-  },
-  {
-    q: 2,
-    r: 0,
-    data: {
-      name: 'Sp.Atk + 10',
-      description: 'Sp.Atk + 10',
-      energy: 5,
-      cellNum: 31
-    }
-  },
-  {
-    q: 2,
-    r: 1,
-    data: {
-      name: 'D.M. Acc + 10',
-      description: 'Draco Meteor Accuracy + 10',
-      energy: 8,
-      cellNum: 34
-    }
-  },
-  {
-    q: 2,
-    r: 2,
-    data: {
-      name: 'D.M. MGR 4',
-      description: 'Draco Meteor Move Gauge Refresh 4 [Req. Lv3 Sync]',
-      energy: 6,
-      cellNum: 37
-    },
-    fill: '#dedbd3'
-  },
-  {
-    q: 1,
-    r: 1,
-    data: {
-      name: 'D.M. + 4',
-      description: 'Draco Meteor Power + 4',
+      name: 'I.H. + 5',
+      description: 'Iron Head Power + 5 [Req. Lv2 Sync]',
       energy: 5,
       cellNum: 32
-    }
+    },
+    fill: '#73d958'
+  },
+  {
+    q: 3,
+    r: 1,
+    data: {
+      name: 'I.H. A. 1',
+      description:
+        'Iron Head: Aggravation 1 - Iron Head Raises the chance of inflicting the flinching, confused, or trapped condition with the additional effects of moves.[Req. Lv3 Sync]',
+      energy: 10,
+      cellNum: 35
+    },
+    fill: '#f24646'
+  },
+  {
+    q: 2,
+    r: 0,
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 3,
+      cellNum: 31
+    },
+    fill: '#66B6EC'
+  },
+  {
+    q: 2,
+    r: 1,
+    data: {
+      name: 'I.H. MGR 3',
+      description: 'Iron Head: Move Gauge Refresh 3 [Req. Lv2 Sync]',
+      energy: 6,
+      cellNum: 34
+    },
+    fill: '#f24646'
+  },
+  {
+    q: 2,
+    r: 2,
+    data: {
+      name: 'I.H. + 5',
+      description: 'Iron Head Power + 5 [Req. Lv3 Sync]',
+      energy: 5,
+      cellNum: 37
+    },
+    fill: '#73d958'
+  },
+  {
+    q: 1,
+    r: 1,
+    data: {
+      name: 'Sp.Def + 5',
+      description: 'Sp.Def + 5',
+      energy: 3,
+      cellNum: 33
+    },
+    fill: '#66B6EC'
   },
   {
     q: 1,
     r: 2,
     data: {
-      name: 'D.M. + 4',
-      description: 'Draco Meteor Power + 4',
+      name: 'I.H. + 5',
+      description: 'Iron Head Power + 5 [Req. Lv2 Sync]',
       energy: 5,
-      cellNum: 35
-    }
+      cellNum: 36
+    },
+    fill: '#73d958'
   }
 ];
-
-export default kingdraGridDataNoColor.map((obj, index) => {
-  if (!('fill' in obj)) {
-    let blueGrids = [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      11,
-      18,
-      19,
-      20,
-      21,
-      22,
-      25,
-      26,
-      27,
-      29,
-      31,
-      39,
-      40,
-      43
-    ];
-    let greenGrids = [9, 10, 12, 13, 15, 16, 30, 32, 33, 34, 35];
-    let yellowGrids = [23, 24, 28, 38, 44, 45];
-    let redGrids = [14, 17, 36, 37, 41, 42, 46];
-    let purpleGrids = [47, 48];
-    if (blueGrids.indexOf(obj.data.cellNum) > -1) {
-      // 66B6EC - blue
-      obj['fill'] = '#66B6EC';
-      return obj;
-    }
-    // green = #73d958
-    if (greenGrids.indexOf(obj.data.cellNum) > -1) {
-      obj['fill'] = '#73d958';
-      return obj;
-    }
-    if (yellowGrids.indexOf(obj.data.cellNum) > -1) {
-      obj['fill'] = 'yellow';
-      return obj;
-    }
-    // red = #f24646
-    if (redGrids.indexOf(obj.data.cellNum) > -1) {
-      obj['fill'] = '#f24646';
-      return obj;
-    }
-    if (purpleGrids.indexOf(obj.data.cellNum) > -1) {
-      obj['fill'] = 'purple';
-      return obj;
-    }
-  } else {
-    return obj;
-  }
-  return { ...obj };
-});

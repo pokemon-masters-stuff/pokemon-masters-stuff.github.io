@@ -13,7 +13,8 @@ import {
   kingdraGridData,
   serperiorGridData,
   vileplumeGridData,
-  mewGridData
+  mewGridData,
+  metagrossGridData
 } from '../../data';
 import {
   selectGrid,
@@ -35,7 +36,8 @@ const allSyncGrids = {
   kingdraGridData,
   serperiorGridData,
   vileplumeGridData,
-  mewGridData
+  mewGridData,
+  metagrossGridData
 };
 
 class GridMap extends Component {
