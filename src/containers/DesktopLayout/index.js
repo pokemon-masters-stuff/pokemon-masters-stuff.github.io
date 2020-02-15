@@ -27,6 +27,8 @@ class DesktopLayout extends Component {
   }
 
   render() {
+    const { pokemon } = this.props;
+
     return (
       <div className="App">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
@@ -50,7 +52,10 @@ class DesktopLayout extends Component {
             <div className="row">
               <div className="col-sm-8">
                 <div style={{ marginTop: 24 }}>
-                  <SelectPokemonDropdown onChangeHandler={this.selectPokemon} />
+                  <SelectPokemonDropdown
+                    selectedPokemon={pokemon.selectedPokemon}
+                    onChangeHandler={this.selectPokemon}
+                  />
                   <br /> <ResetGridButtonDesktop />
                   <div className="grid-data-display position-fixed">
                     <SkillOverviewDesktop />
@@ -70,8 +75,7 @@ class DesktopLayout extends Component {
 }
 
 const mapStateToProps = state => ({
-  pokemon: state.pokemon,
-  grid: state.grid
+  pokemon: state.pokemon
 });
 
 export default connect(mapStateToProps, {

@@ -3,32 +3,52 @@ import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+
 import { ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
-import { composeWithDevTools } from "redux-devtools-extension";
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import './index.css';
 import MobileLayout from './containers/MobileLayout';
 import DesktopLayout from './containers/DesktopLayout';
-import reducers from './reducers';
+import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
-import theme from "./theme";
-import {UA_ID} from "./utils/constants";
+import theme from './theme';
+import { UA_ID } from './utils/constants';
 
-const store = createStore(reducers, {}, composeWithDevTools(applyMiddleware()));
+const persistConfig = {
+  key: 'root',
+  storage
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+const store = createStore(
+  persistedReducer,
+  {},
+  composeWithDevTools(applyMiddleware())
+);
+
+const persistor = persistStore(store);
 
 ReactGA.initialize(UA_ID);
 
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <Hidden smDown>
-        <DesktopLayout />
-      </Hidden>
-      <Hidden mdUp>
-        <MobileLayout />
-      </Hidden>
-    </ThemeProvider>
+    <PersistGate loading={null} persistor={persistor}>
+      <ThemeProvider theme={theme}>
+        <Hidden smDown>
+          <DesktopLayout />
+        </Hidden>
+        <Hidden mdUp>
+          <MobileLayout />
+        </Hidden>
+      </ThemeProvider>
+    </PersistGate>
   </Provider>,
   document.getElementById('root')
 );

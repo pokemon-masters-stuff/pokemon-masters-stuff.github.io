@@ -39,7 +39,7 @@ class MobileApp extends Component {
 
   render() {
     const { isNavOpened, isSkillListOpened } = this.state;
-    const { classes, grid } = this.props;
+    const { classes, pokemon, grid } = this.props;
 
     return (
       <>
@@ -65,6 +65,7 @@ class MobileApp extends Component {
 
         <div className={classes.mainContainer}>
           <SyncGridControls
+            selectedPokemon={pokemon.selectedPokemon}
             onChangePokemonHandler={this.handleOnChangePokemon}
             onOpenSkillListHandler={this.handleOnOpenSkillList}
           />

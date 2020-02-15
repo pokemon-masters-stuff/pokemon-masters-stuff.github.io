@@ -9,8 +9,8 @@ import { pokemonList } from '../../data';
 import styles from './styles';
 
 function SimpleSelect(props) {
-  const { classes, onChangeHandler } = props;
-  const [pokemon, setPokemon] = React.useState('Pikachu');
+  const { classes, selectedPokemon, onChangeHandler } = props;
+  const [pokemon, setPokemon] = React.useState(selectedPokemon);
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);

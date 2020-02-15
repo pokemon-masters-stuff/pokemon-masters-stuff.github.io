@@ -9,7 +9,12 @@ import { ResetGridButtonMobile } from '../ResetGridButton';
 import styles from './styles';
 
 function SyncGridControls(props) {
-  const { classes, onChangePokemonHandler, onOpenSkillListHandler } = props;
+  const {
+    classes,
+    selectedPokemon,
+    onChangePokemonHandler,
+    onOpenSkillListHandler
+  } = props;
 
   const handleOnOpenSkillList = () =>
     typeof onOpenSkillListHandler === 'function'
@@ -30,7 +35,10 @@ function SyncGridControls(props) {
       style={{ marginTop: 0 }}
     >
       <Grid item>
-        <SelectPokemonDropdown onChangeHandler={handleOnChangePokemonHandler} />
+        <SelectPokemonDropdown
+          selectedPokemon={selectedPokemon}
+          onChangeHandler={handleOnChangePokemonHandler}
+        />
       </Grid>
 
       <Grid item>
