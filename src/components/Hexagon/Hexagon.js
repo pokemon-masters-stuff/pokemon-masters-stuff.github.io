@@ -88,6 +88,9 @@ class Hexagon extends Component {
         onMouseOver={e => this.onMouseOver(e)}
         onMouseLeave={e => this.onMouseLeave(e)}
         onClick={e => this.onClick(e)}
+        data-coords={`q: ${this.props.q}, r: ${this.props.r}`}
+        data-q={this.props.q}
+        data-r={this.props.r}
       >
         <g className={classNames('hexagon', className)}>
           <polygon points={points} fill={fillId} style={cellStyle} />
