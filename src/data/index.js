@@ -1,6 +1,6 @@
 export { default as pokemonList } from './pokemonList';
 export { default as pikachuGridData } from './grids/pikachu';
-export { default as torkoalGridData } from './grids/torkoal';
+export { default as torkoalGridData } from './grids/torkoal.json';
 export { default as infernapeGridData } from './grids/infernape.json';
 export { default as dewgongGridData } from './grids/dewgong.json';
 export { default as haxorusGridData } from './grids/haxorus';
