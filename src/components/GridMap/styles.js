@@ -7,4 +7,7 @@ export default createStyles(theme => ({
     left: " 50%",
     transform: " translate(-50%, -50%)",
   },
+  selectedPokemonCell: {
+    textTransform: "capitalize"
+  }
 }));

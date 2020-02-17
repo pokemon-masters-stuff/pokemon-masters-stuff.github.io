@@ -3,9 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Text = ({ anchor, children, classes, x, y }) => (
+const Text = ({ anchor, children, className, x, y }) => (
   <text
-    className={classes.text}
+    className={className}
     textAnchor={anchor}
     x={x || 0}
     y={y ? y : '0.3em'}

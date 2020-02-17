@@ -177,35 +177,25 @@ class GridMap extends Component {
 
   renderHexagonCells = () =>
     allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
-      let hexagonProps = {
-        key: this.props.pokemon,
+      const hexagonProps = {
         data: {
           cellId: cell.cellId,
           name: cell.move.name,
           description: cell.move.description,
           energy: cell.move.energyCost
         },
-        q: 0,
-        r: 0,
-        s: 0,
-        fill: "#fff",
         onMouseEnter: this.mouseEnter,
-        onMouseLeave: this.mouseLeave
+        onMouseLeave: this.mouseLeave,
+        key: cell.cellId,
+        q: cell.coords.q,
+        r: cell.coords.r,
+        s: 0,
+        fill: this.getFillColorByMoveType({type: cell.ability.type, group: cell.move.group}),
+        onClickHandler: (e, data) => this.handleClick(e, index, data),
+        className: this.props.grid.selectedCellsById[cell.cellId]
+          ? "selected"
+          : null
       };
-
-      if (index !== 0) {
-        hexagonProps = {
-          ...hexagonProps,
-          key: cell.cellId,
-          q: cell.coords.q,
-          r: cell.coords.r,
-          fill: this.getFillColorByMoveType({type: cell.ability.type, group: cell.move.group}),
-          onClickHandler: (e, data) => this.handleClick(e, index, data),
-          className: this.props.grid.selectedCellsById[cell.cellId]
-            ? "selected"
-            : null
-        };
-      }
 
       return (
         <Hexagon {...hexagonProps}>
@@ -244,6 +234,9 @@ class GridMap extends Component {
           spacing={1.1}
           origin={{ x: 0, y: 0 }}
         >
+          <Hexagon q={0} r={0} s={0} fill="#fff" data={{cellId: 0}}>
+            <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
+          </Hexagon>
           {this.renderHexagonCells()}
         </Layout>
       </HexGrid>
