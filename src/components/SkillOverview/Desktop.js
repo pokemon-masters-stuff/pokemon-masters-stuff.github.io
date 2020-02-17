@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 class SkillOverview extends Component {
   renderContent() {
-    if (this.props.grid.gridData.description) {
+    if (this.props.grid.gridData.name) {
       return (
         <div className="card">
           <ul>
             <li className="text-center m-2">
-              <strong>{this.props.grid.gridData.description}</strong>
+              <strong>{this.props.grid.gridData.name}</strong>
             </li>
             <li className="text-center mb-0">
               <strong>Energy: {this.props.grid.gridData.energy}</strong>

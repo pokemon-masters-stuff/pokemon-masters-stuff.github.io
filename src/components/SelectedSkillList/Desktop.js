@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 class SelectedSkillList extends Component {
   renderList() {
-    return this.props.grid.activeGridList.map((item, index) => {
+    const {selectedCellsById} = this.props.grid;
+
+    return Object.keys(selectedCellsById).map((cellId) => {
       return (
-        <li className="active-grid list-group-item" key={index}>
-          {item}
+        <li className="active-grid list-group-item" key={cellId}>
+          {selectedCellsById[cellId].name}
         </li>
       );
     });

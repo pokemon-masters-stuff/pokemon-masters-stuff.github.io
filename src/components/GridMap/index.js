@@ -120,26 +120,71 @@ class GridMap extends Component {
   handleClick(e, index, data) {
     e.stopPropagation();
 
-    if (this.props.grid.isSelectedArray[data.cellNum].selected === false) {
-      this.props.selectGrid(data.cellNum);
+    if (!this.props.grid.selectedCellsById[data.cellId]) {
+      this.props.selectGrid(data.cellId);
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
     } else {
-      this.props.deselectGrid(data.cellNum);
+      this.props.deselectGrid(data.cellId);
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
     }
   }
 
+  getFillColorByMoveType = ({type, group}) => {
+    let colorsByTypeDef = {
+      statsBoost: "#66b6ec", // blue
+      passive: "#ffff00", // yellow
+      moveEffect: "#f24646", // red
+      movePowerBoost: "#73d958", // green
+      moveAccuracyBoost: "#73d958", // green
+      syncBoost: "#d12deb" // purple
+    };
+    let colorsByTypeId = {
+      1: colorsByTypeDef.statsBoost,
+      2: colorsByTypeDef.statsBoost,
+      3: colorsByTypeDef.statsBoost,
+      4: colorsByTypeDef.statsBoost,
+      5: colorsByTypeDef.statsBoost,
+      6: colorsByTypeDef.statsBoost,
+      7: colorsByTypeDef.passive,
+      8: colorsByTypeDef.moveEffect,
+      9: colorsByTypeDef.movePowerBoost,
+      10: colorsByTypeDef.moveAccuracyBoost,
+    };
+    let cellColor = colorsByTypeDef.syncBoost;
+
+    if (group !== 3) {
+      cellColor = colorsByTypeId[type];
+    }
+
+    return cellColor;
+  };
+
+  renderMoveName = (moveName) => {
+    const renderedMoveName = moveName;
+
+    if (moveName.length > 11) {
+      // TODO: Maybe add logic to render the shortened `moveName` here
+    }
+
+    return renderedMoveName;
+  };
+
   renderHexagonCells = () =>
     allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
       let hexagonProps = {
-        key: index,
-        q: cell.q,
-        r: cell.r,
+        key: this.props.pokemon,
+        data: {
+          cellId: cell.cellId,
+          name: cell.move.name,
+          description: cell.move.description,
+          energy: cell.move.energyCost
+        },
+        q: 0,
+        r: 0,
         s: 0,
-        data: cell.data,
-        fill: 'white',
+        fill: "#fff",
         onMouseEnter: this.mouseEnter,
         onMouseLeave: this.mouseLeave
       };
@@ -147,25 +192,28 @@ class GridMap extends Component {
       if (index !== 0) {
         hexagonProps = {
           ...hexagonProps,
-          fill: cell.fill,
+          key: cell.cellId,
+          q: cell.coords.q,
+          r: cell.coords.r,
+          fill: this.getFillColorByMoveType({type: cell.ability.type, group: cell.move.group}),
           onClickHandler: (e, data) => this.handleClick(e, index, data),
-          className: this.props.grid.isSelectedArray[cell.data.cellNum].selected
-            ? 'selected'
+          className: this.props.grid.selectedCellsById[cell.cellId]
+            ? "selected"
             : null
         };
       }
 
       return (
         <Hexagon {...hexagonProps}>
-          <Text>{cell.data.name}</Text>
-          {this.state.screenWidth < 960 && cell.data.energy !== undefined ? (
+          <Text>{this.renderMoveName(cell.move.name)}</Text>
+          {this.state.screenWidth < 960 && cell.move.energyCost !== undefined ? (
             <text
               className="energy-inside-grid"
               textAnchor="middle"
               x="0"
               y="1.6em"
             >
-              ({cell.data.energy})
+              ({cell.move.energyCost})
             </text>
           ) : null}
         </Hexagon>

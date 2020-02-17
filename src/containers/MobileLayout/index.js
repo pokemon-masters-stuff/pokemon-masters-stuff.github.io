@@ -52,7 +52,7 @@ class MobileApp extends Component {
           isOpened={isSkillListOpened}
           onOpenHandler={this.handleOnOpenSkillList}
           onCloseHandler={this.handleOnCloseSkillList}
-          skillList={grid.activeGridList}
+          skillList={Object.keys(grid.selectedCellsById).map(cell => grid.selectedCellsById[cell])}
         />
 
         <MainAppbar
@@ -79,7 +79,7 @@ class MobileApp extends Component {
           </Grid>
 
           <SkillOverviewMobile
-            skill={grid.gridData.description}
+            skill={grid.gridData.name}
             energy={grid.gridData.energy}
           />
         </div>

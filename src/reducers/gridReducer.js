@@ -22,7 +22,8 @@ const initialState = {
   gridData: {},
   remainingEnergy: 60,
   orbSpent: 0,
-  activeGridList: []
+  activeGridList: [],
+  selectedCellsById: {}
 };
 
 export default function(state = initialState, action) {
@@ -51,9 +52,16 @@ export default function(state = initialState, action) {
         activeGridList: [
           ...state.activeGridList,
           action.gridData.description
-        ].sort()
+        ].sort(),
+        selectedCellsById: {
+          ...state.selectedCellsById,
+          [action.gridData.cellId]: action.gridData
+        }
       };
     case REMOVE_FROM_GRID_LIST:
+      const updateSelectedCellsById = {...state.selectedCellsById};
+      delete updateSelectedCellsById[action.gridData.cellId];
+
       return {
         ...state,
         activeGridList: [
@@ -64,7 +72,8 @@ export default function(state = initialState, action) {
           ...state.activeGridList.slice(
             state.activeGridList.indexOf(action.gridData.description) + 1
           )
-        ]
+        ],
+        selectedCellsById: updateSelectedCellsById
       };
     case SUBTRACT_FROM_REMAINING_ENERGY:
       return {

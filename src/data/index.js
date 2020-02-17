@@ -2,7 +2,7 @@ export { default as pokemonList } from './pokemonList';
 export { default as pikachuGridData } from './grids/pikachu';
 export { default as torkoalGridData } from './grids/torkoal';
 export { default as infernapeGridData } from './grids/infernape';
-export { default as dewgongGridData } from './grids/dewgong';
+export { default as dewgongGridData } from './grids/dewgong.json';
 export { default as haxorusGridData } from './grids/haxorus';
 export { default as kingdraGridData } from './grids/kingdra';
 export { default as serperiorGridData } from './grids/serperior';
