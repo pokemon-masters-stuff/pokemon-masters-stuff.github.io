@@ -14,7 +14,8 @@ import {
   serperiorGridData,
   vileplumeGridData,
   mewGridData,
-  metagrossGridData
+  metagrossGridData,
+  shortenedMoveNameByCellId
 } from '../../data';
 import {
   selectGrid,
@@ -161,11 +162,14 @@ class GridMap extends Component {
     return cellColor;
   };
 
-  renderMoveName = (moveName) => {
-    const renderedMoveName = moveName;
+  renderMoveName = (moveName, abilityId) => {
+    let renderedMoveName = moveName;
 
     if (moveName.length > 11) {
       // TODO: Maybe add logic to render the shortened `moveName` here
+      if (shortenedMoveNameByCellId[abilityId]) {
+        renderedMoveName = shortenedMoveNameByCellId[abilityId];
+      }
     }
 
     return renderedMoveName;
@@ -205,7 +209,7 @@ class GridMap extends Component {
 
       return (
         <Hexagon {...hexagonProps}>
-          <Text>{this.renderMoveName(cell.move.name)}</Text>
+          <Text>{this.renderMoveName(cell.move.name, cell.ability.abilityId)}</Text>
           {this.state.screenWidth < 960 && cell.move.energyCost !== undefined ? (
             <text
               className="energy-inside-grid"
