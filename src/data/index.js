@@ -5,7 +5,7 @@ export { default as infernapeGridData } from './grids/infernape.json';
 export { default as dewgongGridData } from './grids/dewgong.json';
 export { default as haxorusGridData } from './grids/haxorus.json';
 export { default as kingdraGridData } from './grids/kingdra.json';
-export { default as serperiorGridData } from './grids/serperior';
+export { default as serperiorGridData } from './grids/serperior.json';
 export { default as vileplumeGridData } from './grids/vileplume.json';
 export { default as mewGridData } from './grids/mew';
 export { default as metagrossGridData } from './grids/metagross.json';
