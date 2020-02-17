@@ -132,14 +132,15 @@ class GridMap extends Component {
     }
   }
 
-  getFillColorByMoveType = ({type, group}) => {
+  getFillColorByMoveType = ({type, group, isLocked}) => {
     let colorsByTypeDef = {
       statsBoost: "#66b6ec", // blue
       passive: "#ffff00", // yellow
       moveEffect: "#f24646", // red
       movePowerBoost: "#73d958", // green
       moveAccuracyBoost: "#73d958", // green
-      syncBoost: "#d12deb" // purple
+      syncBoost: "#d12deb", // purple
+      locked: "#dedbd3", // gray
     };
     let colorsByTypeId = {
       1: colorsByTypeDef.statsBoost,
@@ -159,6 +160,10 @@ class GridMap extends Component {
       cellColor = colorsByTypeId[type];
     }
 
+    if (isLocked) {
+      cellColor = colorsByTypeDef.locked;
+    }
+
     return cellColor;
   };
 
@@ -166,7 +171,6 @@ class GridMap extends Component {
     let renderedMoveName = moveName;
 
     if (moveName.length > 11) {
-      // TODO: Maybe add logic to render the shortened `moveName` here
       if (shortenedMoveNameByCellId[abilityId]) {
         renderedMoveName = shortenedMoveNameByCellId[abilityId];
       }
@@ -190,7 +194,7 @@ class GridMap extends Component {
         q: cell.coords.q,
         r: cell.coords.r,
         s: 0,
-        fill: this.getFillColorByMoveType({type: cell.ability.type, group: cell.move.group}),
+        fill: this.getFillColorByMoveType({type: cell.ability.type, group: cell.move.group, isLocked: cell.move.locked}),
         onClickHandler: (e, data) => this.handleClick(e, index, data),
         className: this.props.grid.selectedCellsById[cell.cellId]
           ? "selected"
