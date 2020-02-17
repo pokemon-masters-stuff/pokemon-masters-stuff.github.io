@@ -91,6 +91,7 @@ class Hexagon extends Component {
         data-coords={`q: ${this.props.q}, r: ${this.props.r}`}
         data-q={this.props.q}
         data-r={this.props.r}
+        data-cell-id={this.props.data.cellId}
       >
         <g className={classNames('hexagon', className)}>
           <polygon points={points} fill={fillId} style={cellStyle} />
