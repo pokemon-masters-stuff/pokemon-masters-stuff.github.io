@@ -18,8 +18,6 @@ import {
   shortenedMoveNameByCellId
 } from '../../data';
 import {
-  selectGrid,
-  deselectGrid,
   addToGridList,
   removeFromGridList,
   subtractFromRemainingEnergy,
@@ -122,11 +120,9 @@ class GridMap extends Component {
     e.stopPropagation();
 
     if (!this.props.grid.selectedCellsById[data.cellId]) {
-      this.props.selectGrid(data.cellId);
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
     } else {
-      this.props.deselectGrid(data.cellId);
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
     }
@@ -402,8 +398,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-  selectGrid,
-  deselectGrid,
   addToGridList,
   removeFromGridList,
   subtractFromRemainingEnergy,

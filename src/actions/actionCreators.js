@@ -16,16 +16,6 @@ export const selectPokemon = selectedPokemon => ({
   selectedPokemon
 });
 
-export const selectGrid = cellNum => ({
-  type: SELECT_GRID,
-  cellNum
-});
-
-export const deselectGrid = cellNum => ({
-  type: DESELECT_GRID,
-  cellNum
-});
-
 export const addToGridList = gridData => ({
   type: ADD_TO_GRID_LIST,
   gridData
