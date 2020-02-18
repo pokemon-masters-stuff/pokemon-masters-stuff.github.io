@@ -7,7 +7,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistStore, persistReducer } from 'redux-persist';
+import { createMigrate, persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
 import MobileLayout from './containers/MobileLayout';
@@ -30,8 +30,8 @@ const migrations = {
     return {
       ...state,
       grid: {
-        ...grid,
-        selectedCellsById: state.selectedCellsById
+        ...state.grid,
+        selectedCellsById: state.grid.selectedCellsById
       }
     };
   }
