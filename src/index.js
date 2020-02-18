@@ -20,8 +20,6 @@ import './index.css';
 
 const persistConfig = {
   key: 'root',
-  // TODO: remove blacklisting, was added temporarily while plugging in the new grids
-  blacklist: ["grid"],
   storage
 };
 
