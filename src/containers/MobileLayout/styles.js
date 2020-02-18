@@ -4,7 +4,7 @@ export default createStyles(theme => ({
   mainContainer: {
     width: '100%',
     paddingTop: 136,
-    paddingBottom: 85
+    paddingBottom: 155
   },
   syncGridWrapper: {
     width: '100%',
