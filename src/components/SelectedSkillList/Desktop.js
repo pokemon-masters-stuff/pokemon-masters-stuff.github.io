@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 class SelectedSkillList extends Component {
   renderList() {
     const { selectedCellsById } = this.props.grid;
-    let activeGridList = Object.keys(selectedCellsById)
+    let skillList = Object.keys(selectedCellsById)
       .map(cellId => {
         return selectedCellsById[cellId].name;
       })
       .sort();
 
-    return activeGridList.map((item, index) => {
+    return skillList.map((item, index) => {
       return (
         <li className="active-grid list-group-item" key={index}>
           {item}
