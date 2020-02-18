@@ -179,7 +179,7 @@ class GridMap extends Component {
     allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
-        cell.move.name.substring(0, 4) === 'Move'
+        cell.move.name.substring(0, 5) === 'Move:'
           ? cell.move.name.substring(6)
           : cell.move.name;
 
@@ -205,7 +205,7 @@ class GridMap extends Component {
           (cell.coords.q === -1 && cell.coords.r === 5) ||
           (cell.coords.q === -2 && cell.coords.r === 6)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv3]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
         } else if (
           (cell.coords.q === 3 && cell.coords.r === -6) ||
           (cell.coords.q === 2 && cell.coords.r === -5) ||
@@ -220,7 +220,7 @@ class GridMap extends Component {
           (cell.coords.q === -2 && cell.coords.r === 5) ||
           (cell.coords.q === -3 && cell.coords.r === 6)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv2]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
         }
       }
 
@@ -237,7 +237,7 @@ class GridMap extends Component {
           (cell.coords.q === -1 && cell.coords.r === 3) ||
           (cell.coords.q === -2 && cell.coords.r === 4)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv3]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
         } else if (
           (cell.coords.q === 3 && cell.coords.r === -6) ||
           (cell.coords.q === 2 && cell.coords.r === -5) ||
@@ -252,7 +252,7 @@ class GridMap extends Component {
           (cell.coords.q === -3 && cell.coords.r === 4) ||
           (cell.coords.q === -2 && cell.coords.r === 3)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv2]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
         }
       }
 
@@ -269,7 +269,7 @@ class GridMap extends Component {
           (cell.coords.q === -1 && cell.coords.r === 4) ||
           (cell.coords.q === -3 && cell.coords.r === 5)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv3]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
         } else if (
           (cell.coords.q === 3 && cell.coords.r === -6) ||
           (cell.coords.q === 2 && cell.coords.r === -5) ||
@@ -284,7 +284,7 @@ class GridMap extends Component {
           (cell.coords.q === -2 && cell.coords.r === 4) ||
           (cell.coords.q === -1 && cell.coords.r === 3)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv2]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
         }
       }
 
@@ -300,7 +300,7 @@ class GridMap extends Component {
           (cell.coords.q === -4 && cell.coords.r === 0) ||
           (cell.coords.q === -4 && cell.coords.r === 1)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv3]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
         } else if (
           (cell.coords.q === -1 && cell.coords.r === -3) ||
           (cell.coords.q === 0 && cell.coords.r === -4) ||
@@ -312,7 +312,7 @@ class GridMap extends Component {
           (cell.coords.q === -4 && cell.coords.r === 4) ||
           (cell.coords.q === -4 && cell.coords.r === 3)
         ) {
-          nameWithSyncLvRequirement = moveName + ' [Req Sync Lv2]';
+          nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
         }
       }
 
