@@ -20,8 +20,21 @@ import './index.css';
 
 const persistConfig = {
   key: 'root',
-  blacklist: ['grid'],
-  storage
+  version: 0,
+  storage,
+  migrate: createMigrate(migrations, { debug: false })
+};
+
+const migrations = {
+  0: state => {
+    return {
+      ...state,
+      grid: {
+        ...grid,
+        selectedCellsById: state.selectedCellsById
+      }
+    };
+  }
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
