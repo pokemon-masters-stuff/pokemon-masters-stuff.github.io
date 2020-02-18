@@ -41,6 +41,12 @@ class MobileApp extends Component {
     const { isNavOpened, isSkillListOpened } = this.state;
     const { classes, pokemon, grid } = this.props;
 
+    let skillList = Object.keys(grid.selectedCellsById)
+      .map(cellId => {
+        return grid.selectedCellsById[cellId].name;
+      })
+      .sort();
+
     return (
       <>
         <Navigation
@@ -52,7 +58,7 @@ class MobileApp extends Component {
           isOpened={isSkillListOpened}
           onOpenHandler={this.handleOnOpenSkillList}
           onCloseHandler={this.handleOnCloseSkillList}
-          skillList={Object.keys(grid.selectedCellsById).map(cell => grid.selectedCellsById[cell])}
+          skillList={skillList}
         />
 
         <MainAppbar
@@ -80,7 +86,9 @@ class MobileApp extends Component {
 
           <SkillOverviewMobile
             skill={grid.gridData.name}
-            description={grid.gridData.description ? grid.gridData.description : ""}
+            description={
+              grid.gridData.description ? grid.gridData.description : ''
+            }
             energy={grid.gridData.energy}
           />
         </div>

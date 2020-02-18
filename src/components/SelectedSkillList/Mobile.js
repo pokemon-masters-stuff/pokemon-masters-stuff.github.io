@@ -33,9 +33,9 @@ function SelectedSkillList(props) {
         <Divider className={classes.listDivider} />
 
         {Boolean(skillList && skillList.length) &&
-          skillList.map((skill) => (
-            <ListItem key={skill.cellId}>
-              <ListItemText primary={skill.name} />
+          skillList.map((skill, index) => (
+            <ListItem key={index}>
+              <ListItemText primary={skill} />
             </ListItem>
           ))}
       </List>
