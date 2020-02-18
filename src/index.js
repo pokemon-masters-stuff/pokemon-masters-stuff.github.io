@@ -20,7 +20,7 @@ import './index.css';
 
 const persistConfig = {
   key: 'root',
-  blacklist: ["grid"],
+  // blacklist: ["grid"],
   storage
 };
 
