@@ -80,6 +80,7 @@ class MobileApp extends Component {
 
           <SkillOverviewMobile
             skill={grid.gridData.name}
+            description={grid.gridData.description ? grid.gridData.description : ""}
             energy={grid.gridData.energy}
           />
         </div>

@@ -7,16 +7,23 @@ import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 
 function SkillOverview(props) {
-  const { classes, skill, energy } = props;
+  const { classes, skill, description, energy } = props;
 
   return (
     Boolean(skill) && (
       <div className={classes.skillOverviewCardWrapper}>
         <Card className={classes.skillOverviewCard} variant="outlined">
           <CardContent>
-            <Typography variant="body2" component="p">
+            <Typography variant="h6" component="p" className={classes.skillOverviewCardTitle}>
               {skill}
-              <br /> Energy Cost: {energy}
+            </Typography>
+              {Boolean(description) && (
+            <Typography variant="body2" component="p" gutterBottom className={classes.skillOverviewContent}>
+                  {description}
+            </Typography>
+              )}
+            <Typography variant="body1" component="p" className={classes.skillOverviewContent}>
+              Energy Cost: {energy}
             </Typography>
           </CardContent>
         </Card>

@@ -13,7 +13,12 @@ export default createStyles(theme => ({
     textAlign: "center",
   },
   skillOverviewCardTitle: {
-    fontSize: 14,
+    fontSize: 16,
+  },
+  skillOverviewContent: {
+    maxWidth: 455,
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   skillOverviewCardFooter: {
     justifyContent: "center",
