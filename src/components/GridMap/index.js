@@ -135,7 +135,7 @@ class GridMap extends Component {
   getFillColorByMoveType = ({ type, group, isLocked }) => {
     let colorsByTypeDef = {
       statsBoost: '#66b6ec', // blue
-      passive: '#ffff00', // yellow
+      passive: '#fff04d', // yellow
       moveEffect: '#f24646', // red
       movePowerBoost: '#73d958', // green
       moveAccuracyBoost: '#73d958', // green
