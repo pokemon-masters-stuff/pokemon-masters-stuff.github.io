@@ -132,15 +132,15 @@ class GridMap extends Component {
     }
   }
 
-  getFillColorByMoveType = ({type, group, isLocked}) => {
+  getFillColorByMoveType = ({ type, group, isLocked }) => {
     let colorsByTypeDef = {
-      statsBoost: "#66b6ec", // blue
-      passive: "#ffff00", // yellow
-      moveEffect: "#f24646", // red
-      movePowerBoost: "#73d958", // green
-      moveAccuracyBoost: "#73d958", // green
-      syncBoost: "#d12deb", // purple
-      locked: "#dedbd3", // gray
+      statsBoost: '#66b6ec', // blue
+      passive: '#ffff00', // yellow
+      moveEffect: '#f24646', // red
+      movePowerBoost: '#73d958', // green
+      moveAccuracyBoost: '#73d958', // green
+      syncBoost: '#d12deb', // purple
+      locked: '#dedbd3' // gray
     };
     let colorsByTypeId = {
       1: colorsByTypeDef.statsBoost,
@@ -152,7 +152,7 @@ class GridMap extends Component {
       7: colorsByTypeDef.passive,
       8: colorsByTypeDef.moveEffect,
       9: colorsByTypeDef.movePowerBoost,
-      10: colorsByTypeDef.moveAccuracyBoost,
+      10: colorsByTypeDef.moveAccuracyBoost
     };
     let cellColor = colorsByTypeDef.syncBoost;
 
@@ -181,10 +181,143 @@ class GridMap extends Component {
 
   renderHexagonCells = () =>
     allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
+      let pokemon = this.props.pokemon;
+      let nameWithSyncLvRequirement;
+      if (
+        pokemon === 'pikachu' ||
+        pokemon === 'dewgong' ||
+        pokemon === 'infernape' ||
+        pokemon === 'haxorus' ||
+        pokemon === 'kingdra' ||
+        pokemon === 'metagross'
+      ) {
+        if (
+          (cell.coords.q === 0 && cell.coords.r === 3) ||
+          (cell.coords.q === 0 && cell.coords.r === -3) ||
+          (cell.coords.q === 1 && cell.coords.r === -5) ||
+          (cell.coords.q === 2 && cell.coords.r === -6) ||
+          (cell.coords.q === -3 && cell.coords.r === -1) ||
+          (cell.coords.q === -2 && cell.coords.r === -2) ||
+          (cell.coords.q === 2 && cell.coords.r === 2) ||
+          (cell.coords.q === 3 && cell.coords.r === 1) ||
+          (cell.coords.q === -1 && cell.coords.r === 5) ||
+          (cell.coords.q === -2 && cell.coords.r === 6)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv3]';
+        } else if (
+          (cell.coords.q === 3 && cell.coords.r === -6) ||
+          (cell.coords.q === 2 && cell.coords.r === -5) ||
+          (cell.coords.q === 1 && cell.coords.r === -4) ||
+          (cell.coords.q === -1 && cell.coords.r === -2) ||
+          (cell.coords.q === -2 && cell.coords.r === -1) ||
+          (cell.coords.q === -3 && cell.coords.r === 0) ||
+          (cell.coords.q === 3 && cell.coords.r === 0) ||
+          (cell.coords.q === 2 && cell.coords.r === 1) ||
+          (cell.coords.q === 1 && cell.coords.r === 2) ||
+          (cell.coords.q === -1 && cell.coords.r === 4) ||
+          (cell.coords.q === -2 && cell.coords.r === 5) ||
+          (cell.coords.q === -3 && cell.coords.r === 6)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv2]';
+        }
+      }
+
+      if (pokemon === 'torkoal' || pokemon === 'vileplume') {
+        if (
+          (cell.coords.q === 0 && cell.coords.r === 3) ||
+          (cell.coords.q === 0 && cell.coords.r === -3) ||
+          (cell.coords.q === 2 && cell.coords.r === -6) ||
+          (cell.coords.q === 1 && cell.coords.r === -5) ||
+          (cell.coords.q === -1 && cell.coords.r === -4) ||
+          (cell.coords.q === -2 && cell.coords.r === -4) ||
+          (cell.coords.q === 2 && cell.coords.r === 2) ||
+          (cell.coords.q === 1 && cell.coords.r === 2) ||
+          (cell.coords.q === -1 && cell.coords.r === 3) ||
+          (cell.coords.q === -2 && cell.coords.r === 4)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv3]';
+        } else if (
+          (cell.coords.q === 3 && cell.coords.r === -6) ||
+          (cell.coords.q === 2 && cell.coords.r === -5) ||
+          (cell.coords.q === 1 && cell.coords.r === -4) ||
+          (cell.coords.q === -1 && cell.coords.r === -3) ||
+          (cell.coords.q === -2 && cell.coords.r === -3) ||
+          (cell.coords.q === -3 && cell.coords.r === -3) ||
+          (cell.coords.q === 3 && cell.coords.r === 0) ||
+          (cell.coords.q === 3 && cell.coords.r === 1) ||
+          (cell.coords.q === 2 && cell.coords.r === 1) ||
+          (cell.coords.q === -3 && cell.coords.r === 3) ||
+          (cell.coords.q === -3 && cell.coords.r === 4) ||
+          (cell.coords.q === -2 && cell.coords.r === 3)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv2]';
+        }
+      }
+
+      if (pokemon === 'serperior') {
+        if (
+          (cell.coords.q === 0 && cell.coords.r === 3) ||
+          (cell.coords.q === 0 && cell.coords.r === -3) ||
+          (cell.coords.q === 2 && cell.coords.r === -6) ||
+          (cell.coords.q === 1 && cell.coords.r === -5) ||
+          (cell.coords.q === -1 && cell.coords.r === -3) ||
+          (cell.coords.q === -3 && cell.coords.r === -2) ||
+          (cell.coords.q === 2 && cell.coords.r === 4) ||
+          (cell.coords.q === 1 && cell.coords.r === 4) ||
+          (cell.coords.q === -1 && cell.coords.r === 4) ||
+          (cell.coords.q === -3 && cell.coords.r === 5)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv3]';
+        } else if (
+          (cell.coords.q === 3 && cell.coords.r === -6) ||
+          (cell.coords.q === 2 && cell.coords.r === -5) ||
+          (cell.coords.q === 1 && cell.coords.r === -4) ||
+          (cell.coords.q === -1 && cell.coords.r === -2) ||
+          (cell.coords.q === -2 && cell.coords.r === -2) ||
+          (cell.coords.q === -3 && cell.coords.r === -1) ||
+          (cell.coords.q === 1 && cell.coords.r === 3) ||
+          (cell.coords.q === 2 && cell.coords.r === 3) ||
+          (cell.coords.q === 3 && cell.coords.r === 3) ||
+          (cell.coords.q === -3 && cell.coords.r === 4) ||
+          (cell.coords.q === -2 && cell.coords.r === 4) ||
+          (cell.coords.q === -1 && cell.coords.r === 3)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv2]';
+        }
+      }
+
+      if (pokemon === 'mew') {
+        if (
+          (cell.coords.q === 3 && cell.coords.r === -4) ||
+          (cell.coords.q === 4 && cell.coords.r === -4) ||
+          (cell.coords.q === 4 && cell.coords.r === -3) ||
+          (cell.coords.q === 1 && cell.coords.r === 3) ||
+          (cell.coords.q === 0 && cell.coords.r === 4) ||
+          (cell.coords.q === -1 && cell.coords.r === 4) ||
+          (cell.coords.q === -3 && cell.coords.r === -1) ||
+          (cell.coords.q === -4 && cell.coords.r === 0) ||
+          (cell.coords.q === -4 && cell.coords.r === 1)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv3]';
+        } else if (
+          (cell.coords.q === -1 && cell.coords.r === -3) ||
+          (cell.coords.q === 0 && cell.coords.r === -4) ||
+          (cell.coords.q === 1 && cell.coords.r === -4) ||
+          (cell.coords.q === 4 && cell.coords.r === -1) ||
+          (cell.coords.q === 4 && cell.coords.r === 0) ||
+          (cell.coords.q === 3 && cell.coords.r === 1) ||
+          (cell.coords.q === -3 && cell.coords.r === 4) ||
+          (cell.coords.q === -4 && cell.coords.r === 4) ||
+          (cell.coords.q === -4 && cell.coords.r === 3)
+        ) {
+          nameWithSyncLvRequirement = cell.move.name + ' [Req Sync Lv2]';
+        }
+      }
+
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
-          name: cell.move.name,
+          name: nameWithSyncLvRequirement || cell.move.name,
           description: cell.move.description,
           energy: cell.move.energyCost
         },
@@ -194,17 +327,24 @@ class GridMap extends Component {
         q: cell.coords.q,
         r: cell.coords.r,
         s: 0,
-        fill: this.getFillColorByMoveType({type: cell.ability.type, group: cell.move.group, isLocked: cell.move.locked}),
+        fill: this.getFillColorByMoveType({
+          type: cell.ability.type,
+          group: cell.move.group,
+          isLocked: cell.move.locked
+        }),
         onClickHandler: (e, data) => this.handleClick(e, index, data),
         className: this.props.grid.selectedCellsById[cell.cellId]
-          ? "selected"
+          ? 'selected'
           : null
       };
 
       return (
         <Hexagon {...hexagonProps}>
-          <Text>{this.renderMoveName(cell.move.name, cell.ability.abilityId)}</Text>
-          {this.state.screenWidth < 960 && cell.move.energyCost !== undefined ? (
+          <Text>
+            {this.renderMoveName(cell.move.name, cell.ability.abilityId)}
+          </Text>
+          {this.state.screenWidth < 960 &&
+          cell.move.energyCost !== undefined ? (
             <text
               className="energy-inside-grid"
               textAnchor="middle"
@@ -238,8 +378,10 @@ class GridMap extends Component {
           spacing={1.1}
           origin={{ x: 0, y: 0 }}
         >
-          <Hexagon q={0} r={0} s={0} fill="#fff" data={{cellId: 0}}>
-            <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
+          <Hexagon q={0} r={0} s={0} fill="#fff" data={{ cellId: 0 }}>
+            <Text className={classes.selectedPokemonCell}>
+              {this.props.pokemon}
+            </Text>
           </Hexagon>
           {this.renderHexagonCells()}
         </Layout>
