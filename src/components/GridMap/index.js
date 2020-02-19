@@ -2,10 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
-import { pikachuSvgLink } from '../../images/PokemonSvgLink/';
-
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
+
+import {
+  pikachuSvgLink,
+  vileplumeSvgLink,
+  dewgongSvgLink,
+  torkoalSvgLink,
+  serperiorSvgLink,
+  kingdraSvgLink,
+  haxorusSvgLink,
+  infernapeSvgLink,
+  metagrossSvgLink
+} from '../../images/PokemonSvgLink/';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -27,6 +36,18 @@ import {
   resetGrids
 } from '../../actions/actionCreators';
 import styles from './styles';
+
+const allSvgLinks = {
+  pikachuSvgLink,
+  vileplumeSvgLink,
+  dewgongSvgLink,
+  torkoalSvgLink,
+  serperiorSvgLink,
+  kingdraSvgLink,
+  haxorusSvgLink,
+  infernapeSvgLink,
+  metagrossSvgLink
+};
 
 const allSyncGrids = {
   pikachuGridData,
@@ -362,6 +383,13 @@ class GridMap extends Component {
       );
     });
 
+  renderCenterGridText = classes => {
+    // Only renders text when no picture available
+    return allSvgLinks[`${this.props.pokemon}SvgLink`] === undefined ? (
+      <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
+    ) : null;
+  };
+
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes } = this.props;
@@ -386,19 +414,17 @@ class GridMap extends Component {
             q={0}
             r={0}
             s={0}
-            fill={`url(#${'pat-pikachu'})`}
+            fill={`url(#${this.props.pokemon})`}
             data={{ cellId: 0 }}
             className={'center-grid'}
           >
-            {/* <Text className={classes.selectedPokemonCell}>
-              {this.props.pokemon}
-            </Text> */}
+            {this.renderCenterGridText(classes)}
           </Hexagon>
           {this.renderHexagonCells()}
         </Layout>
         <Pattern
-          id="pat-pikachu"
-          link={pikachuSvgLink}
+          id={this.props.pokemon}
+          link={allSvgLinks[`${this.props.pokemon}SvgLink`]}
           size={{ x: 10, y: 10 }}
         />
       </HexGrid>
