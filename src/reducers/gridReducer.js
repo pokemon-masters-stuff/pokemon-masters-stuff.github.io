@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import {
   DISPLAY_GRID_DATA,
   HIDE_GRID_DATA,
@@ -5,7 +7,9 @@ import {
   REMOVE_FROM_GRID_LIST,
   SUBTRACT_FROM_REMAINING_ENERGY,
   ADD_BACK_TO_REMAINING_ENERGY,
-  RESET_GRIDS
+  RESET_GRIDS,
+  SAVE_CURRENT_BUILD,
+  LOAD_SELECTED_BUILD
 } from '../actions/types';
 
 const initialState = {
@@ -13,7 +17,15 @@ const initialState = {
   remainingEnergy: 60,
   orbSpent: 0,
   activeGridList: [],
-  selectedCellsById: {}
+  selectedCellsById: {},
+  savedBuilds: {
+    byIds: {},
+    allIds: []
+  },
+  selectedBuild: {
+    id: "",
+    name: ""
+  }
 };
 
 export default function(state = initialState, action) {
@@ -67,8 +79,44 @@ export default function(state = initialState, action) {
           state.orbSpent -
           (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12)
       };
+    case SAVE_CURRENT_BUILD:
+      const newBuildUUID = uuidv4();
+
+      return {
+        ...state,
+        savedBuilds: {
+          ...state.savedBuilds,
+          byIds: {
+            ...state.savedBuilds.byIds,
+            [newBuildUUID]: {
+              id: newBuildUUID,
+              pokemon: action.payload.selectedPokemon,
+              name: action.payload.buildName,
+              selectedCellsById: state.selectedCellsById
+            }
+          },
+          allIds: [...state.savedBuilds.allIds, newBuildUUID]
+        }
+      };
+    case LOAD_SELECTED_BUILD:
+      return {
+        ...state,
+        selectedCellsById: state.savedBuilds.byIds[action.payload.buildId].selectedCellsById,
+        selectedBuild: state.savedBuilds.byIds[action.payload.buildId]
+      };
     case RESET_GRIDS:
-      return initialState;
+      return {
+        ...state,
+        gridData: {},
+        remainingEnergy: 60,
+        orbSpent: 0,
+        activeGridList: [],
+        selectedCellsById: {},
+        selectedBuild: {
+          id: "",
+          name: ""
+        }
+      };
     default:
       return state;
   }

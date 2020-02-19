@@ -10,5 +10,8 @@ export default createStyles(theme => ({
     width: '100%',
     height: '100%',
     overflow: 'scroll'
+  },
+  buildNameField: {
+    minWidth: 250
   }
 }));

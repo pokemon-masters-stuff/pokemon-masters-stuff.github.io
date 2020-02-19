@@ -1,14 +1,14 @@
 import {
   SELECT_POKEMON,
-  SELECT_GRID,
-  DESELECT_GRID,
   ADD_TO_GRID_LIST,
   REMOVE_FROM_GRID_LIST,
   DISPLAY_GRID_DATA,
   HIDE_GRID_DATA,
   SUBTRACT_FROM_REMAINING_ENERGY,
   ADD_BACK_TO_REMAINING_ENERGY,
-  RESET_GRIDS
+  RESET_GRIDS,
+  SAVE_CURRENT_BUILD,
+  LOAD_SELECTED_BUILD
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -47,4 +47,14 @@ export const hideGridData = () => ({
 
 export const resetGrids = () => ({
   type: RESET_GRIDS
+});
+
+export const saveCurrentBuild = payload => ({
+  type: SAVE_CURRENT_BUILD,
+  payload
+});
+
+export const loadSelectedBuild = payload => ({
+  type: LOAD_SELECTED_BUILD,
+  payload
 });

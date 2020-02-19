@@ -7,8 +7,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { PersistGate } from 'redux-persist/integration/react';
-import { createMigrate, persistStore, persistReducer } from 'redux-persist';
+import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 
 import MobileLayout from './containers/MobileLayout';
 import DesktopLayout from './containers/DesktopLayout';
@@ -22,19 +23,7 @@ const persistConfig = {
   key: 'root',
   version: 0,
   storage,
-  migrate: createMigrate(migrations, { debug: false })
-};
-
-const migrations = {
-  0: state => {
-    return {
-      ...state,
-      grid: {
-        ...state.grid,
-        selectedCellsById: state.grid.selectedCellsById
-      }
-    };
-  }
+  stateReconciler: autoMergeLevel2,
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
