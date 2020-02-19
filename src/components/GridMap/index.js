@@ -15,8 +15,6 @@ import {
   infernapeSvgLink,
   metagrossSvgLink
 } from '../../images/PokemonSvgLink/';
-import './index.css';
-
 import {
   pikachuGridData,
   torkoalGridData,
