@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import './index.css';
 
-import { HexGrid, Layout, Hexagon, Text } from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -406,13 +407,26 @@ class GridMap extends Component {
           spacing={1.1}
           origin={{ x: 0, y: 0 }}
         >
-          <Hexagon q={0} r={0} s={0} fill="#fff" data={{ cellId: 0 }}>
-            <Text className={classes.selectedPokemonCell}>
+          <Hexagon
+            q={0}
+            r={0}
+            s={0}
+            fill={`url(#${'pat-pikachu'})`}
+            data={{ cellId: 0 }}
+            // className={`center-grid-${this.props.pokemon}`}
+            className={'center-grid'}
+          >
+            {/* <Text className={classes.selectedPokemonCell}>
               {this.props.pokemon}
-            </Text>
+            </Text> */}
           </Hexagon>
           {this.renderHexagonCells()}
         </Layout>
+        <Pattern
+          id="pat-pikachu"
+          link="https://imgur.com/LZWjSxF.png"
+          size={{ x: 10, y: 10 }}
+        />
       </HexGrid>
     );
   }
