@@ -20,6 +20,7 @@ import {
   liepardGridData,
   houndoomGridData,
   raichuGridData,
+  alakazamGridData,
   shortenedMoveNameByCellId
 } from '../../data';
 import {
@@ -46,7 +47,8 @@ const allSyncGrids = {
   palossandGridData,
   liepardGridData,
   houndoomGridData,
-  raichuGridData
+  raichuGridData,
+  alakazamGridData
 };
 
 class GridMap extends Component {
@@ -274,7 +276,7 @@ class GridMap extends Component {
         }
       }
 
-      if (pokemon === 'serperior') {
+      if (pokemon === 'serperior' || pokemon === 'alakazam') {
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
           (cell.coords.q === 0 && cell.coords.r === -3) ||

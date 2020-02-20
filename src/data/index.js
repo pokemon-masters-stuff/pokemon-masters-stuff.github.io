@@ -14,4 +14,5 @@ export { default as palossandGridData } from './grids/palossaand.json';
 export { default as liepardGridData } from './grids/liepard.json';
 export { default as houndoomGridData } from './grids/houndoom.json';
 export { default as raichuGridData } from './grids/raichu.json';
+export { default as alakazamGridData } from './grids/alakazam.json';
 export { default as shortenedMoveNameByCellId } from './shortenedMoveNameByCellId';
