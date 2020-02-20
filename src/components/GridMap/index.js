@@ -15,6 +15,7 @@ import {
   vileplumeGridData,
   mewGridData,
   metagrossGridData,
+  charizardGridData,
   shortenedMoveNameByCellId
 } from '../../data';
 import {
@@ -36,6 +37,7 @@ const allSyncGrids = {
   serperiorGridData,
   vileplumeGridData,
   mewGridData,
+  charizardGridData,
   metagrossGridData
 };
 
@@ -187,6 +189,7 @@ class GridMap extends Component {
       let nameWithSyncLvRequirement;
       if (
         pokemon === 'pikachu' ||
+        pokemon === 'charizard' ||
         pokemon === 'dewgong' ||
         pokemon === 'infernape' ||
         pokemon === 'haxorus' ||

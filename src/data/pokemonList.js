@@ -7,7 +7,8 @@ let list = [
   { name: 'Kingdra', id: 20038400 },
   { name: 'Serperior', id: 20049701 },
   { name: 'Vileplume', id: 20004501 },
-  { name: 'Mew', id: 20015111},
+  { name: 'Mew', id: 20000600 },
+  { name: 'Charizard', id: 20015111 },
   { name: 'Metagross', id: 20037600 }
 ];
 
@@ -16,7 +17,7 @@ let pokemonList = list.map((obj, index) => {
     ...obj,
     key: index,
     value: obj.name,
-    id: obj.id,
+    id: obj.id
   };
 });
 
