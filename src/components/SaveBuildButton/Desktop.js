@@ -12,7 +12,7 @@ class SaveBuildButton extends Component {
   handleOnSaveBuild = () => {
     this.props.saveCurrentBuild({
       selectedPokemon: this.props.pokemon.selectedPokemon,
-      buildName: this.newBuildNameRef.value
+      buildName: this.newBuildNameRef.current.value
     });
   };
 
@@ -31,7 +31,7 @@ class SaveBuildButton extends Component {
         <div
           className="modal fade"
           id="saveBuildModal"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="myModalLabel"
           aria-hidden="true"

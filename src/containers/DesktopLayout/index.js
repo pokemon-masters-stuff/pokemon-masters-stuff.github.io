@@ -8,14 +8,20 @@ import SelectPokemonDropdown from '../../components/SelectPokemonDropdown';
 import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
 import GridMap from '../../components/GridMap';
 import { SkillOverviewDesktop } from '../../components/SkillOverview';
-import { selectPokemon, resetGrids } from '../../actions/actionCreators';
+import {
+  selectPokemon,
+  resetGrids,
+  loadSelectedBuild
+} from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
+import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
 class DesktopLayout extends Component {
   constructor(props) {
     super(props);
 
     this.selectPokemon = this.selectPokemon.bind(this);
+    this.handleOnChangeSavedBuild = this.handleOnChangeSavedBuild.bind(this);
   }
 
   selectPokemon(value) {
@@ -26,6 +32,10 @@ class DesktopLayout extends Component {
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
+
+  handleOnChangeSavedBuild = value => {
+    this.props.loadSelectedBuild({ buildId: value });
+  };
 
   render() {
     const { pokemon } = this.props;
@@ -58,9 +68,13 @@ class DesktopLayout extends Component {
                     onChangeHandler={this.selectPokemon}
                   />
                   <br /> <ResetGridButtonDesktop />
-                  <br />
-                  <div style={{ marginLeft: 7, marginTop: 10 }}>
+                  <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <SaveBuildButtonDesktop />
+                  </div>
+                  <div style={{ marginTop: 5 }}>
+                    <LoadBuildDropdown
+                      onChangeHandler={this.handleOnChangeSavedBuild}
+                    />
                   </div>
                   <div className="grid-data-display position-fixed">
                     <SkillOverviewDesktop />
@@ -85,5 +99,6 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, {
   selectPokemon,
-  resetGrids
+  resetGrids,
+  loadSelectedBuild
 })(DesktopLayout);
