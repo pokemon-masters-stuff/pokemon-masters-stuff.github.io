@@ -10,7 +10,7 @@ export { default as vileplumeGridData } from './grids/vileplume.json';
 export { default as mewGridData } from './grids/mew.json';
 export { default as metagrossGridData } from './grids/metagross.json';
 export { default as charizardGridData } from './grids/charizard.json';
-export { default as palossandGridData } from './grids/palossaand.json';
+export { default as palossandGridData } from './grids/palossand.json';
 export { default as liepardGridData } from './grids/liepard.json';
 export { default as rotomGridData } from './grids/rotom.json';
 export { default as houndoomGridData } from './grids/houndoom.json';
