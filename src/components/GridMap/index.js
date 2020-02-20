@@ -18,6 +18,7 @@ import {
   charizardGridData,
   palossandGridData,
   liepardGridData,
+  rotomGridData,
   houndoomGridData,
   raichuGridData,
   alakazamGridData,
@@ -46,6 +47,7 @@ const allSyncGrids = {
   metagrossGridData,
   palossandGridData,
   liepardGridData,
+  rotomGridData,
   houndoomGridData,
   raichuGridData,
   alakazamGridData
@@ -276,7 +278,11 @@ class GridMap extends Component {
         }
       }
 
+<<<<<<< HEAD
       if (pokemon === 'serperior' || pokemon === 'alakazam') {
+=======
+      if (pokemon === 'serperior' || pokemon === 'rotom') {
+>>>>>>> 1d4903a7ccd7cdeced111f4c30870eeefbcc1d23
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
           (cell.coords.q === 0 && cell.coords.r === -3) ||
