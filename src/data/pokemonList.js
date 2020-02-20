@@ -8,8 +8,8 @@ let list = [
   { name: 'Serperior', id: 20049701 },
   { name: 'Vileplume', id: 20004501 },
   { name: 'Mew', id: 20000600 },
-  { name: 'Charizard', id: 20015111 },
-  { name: 'Metagross', id: 20037600 }
+  { name: 'Metagross', id: 20037600 },
+  { name: 'Charizard', id: 20015111 }
 ];
 
 let pokemonList = list.map((obj, index) => {
