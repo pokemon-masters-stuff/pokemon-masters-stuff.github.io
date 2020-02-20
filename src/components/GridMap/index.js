@@ -202,7 +202,9 @@ class GridMap extends Component {
         pokemon === 'infernape' ||
         pokemon === 'haxorus' ||
         pokemon === 'kingdra' ||
-        pokemon === 'metagross'
+        pokemon === 'metagross' ||
+        pokemon === 'houndoom' ||
+        pokemon === 'raichu'
       ) {
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -235,7 +237,12 @@ class GridMap extends Component {
         }
       }
 
-      if (pokemon === 'torkoal' || pokemon === 'vileplume') {
+      if (
+        pokemon === 'torkoal' ||
+        pokemon === 'vileplume' ||
+        pokemon === 'palossand' ||
+        pokemon === 'liepard'
+      ) {
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
           (cell.coords.q === 0 && cell.coords.r === -3) ||
