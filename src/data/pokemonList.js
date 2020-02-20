@@ -14,6 +14,8 @@ let list = [
   { name: 'Liepard', id: 20051001, characterId: 10048000000 },
   { name: 'Houndoom', id: 20022901, characterId: 10062000000 },
   { name: 'Raichu', id: 20002661, characterId: 10098000000 },
+  { name: 'Rotom', id: 20047911, characterId: 10106100000 },
+  { name: 'Alakazam', id: 20006500, characterId: 10114000000 },
 ];
 
 let pokemonList = list.map((obj, index) => {
