@@ -12,6 +12,7 @@ export { default as metagrossGridData } from './grids/metagross.json';
 export { default as charizardGridData } from './grids/charizard.json';
 export { default as palossandGridData } from './grids/palossaand.json';
 export { default as liepardGridData } from './grids/liepard.json';
+export { default as rotomGridData } from './grids/rotom.json';
 export { default as houndoomGridData } from './grids/houndoom.json';
 export { default as raichuGridData } from './grids/raichu.json';
 export { default as shortenedMoveNameByCellId } from './shortenedMoveNameByCellId';
