@@ -10,6 +10,7 @@ export { default as vileplumeSvgLink } from './vileplume.js';
 export { default as haxorusSvgLink } from './haxorus.js';
 export { default as infernapeSvgLink } from './infernape.js';
 export { default as dewgongSvgLink } from './dewgong.js';
+export { default as mewSvgLink } from './mew.js';
 export { default as metagrossSvgLink } from './metagross.js';
 <<<<<<< HEAD
 =======

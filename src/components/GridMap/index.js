@@ -13,7 +13,8 @@ import {
   kingdraSvgLink,
   haxorusSvgLink,
   infernapeSvgLink,
-  metagrossSvgLink
+  metagrossSvgLink,
+  mewSvgLink
 } from '../../images/PokemonSvgLink/';
 import {
   pikachuGridData,
@@ -53,7 +54,8 @@ const allSvgLinks = {
   kingdraSvgLink,
   haxorusSvgLink,
   infernapeSvgLink,
-  metagrossSvgLink
+  metagrossSvgLink,
+  mewSvgLink
 };
 
 const allSyncGrids = {
