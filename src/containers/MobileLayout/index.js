@@ -80,11 +80,15 @@ class MobileApp extends Component {
   };
 
   handleOnSaveBuild = () => {
-    this.props.saveCurrentBuild({
-      selectedPokemon: this.props.pokemon.selectedPokemon,
-      buildName: this.newBuildNameRef.current.value
-    });
-    this.handleOnCloseSaveBuildModal();
+    if (this.newBuildNameRef.current.value) {
+      this.props.saveCurrentBuild({
+        selectedPokemon: this.props.pokemon.selectedPokemon,
+        buildName: this.newBuildNameRef.current.value
+      });
+      this.handleOnCloseSaveBuildModal();
+    } else {
+      alert('Please enter a name');
+    }
   };
 
   render() {

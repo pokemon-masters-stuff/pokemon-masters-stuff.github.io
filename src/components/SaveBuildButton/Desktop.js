@@ -10,10 +10,12 @@ class SaveBuildButton extends Component {
   }
 
   handleOnSaveBuild = () => {
-    this.props.saveCurrentBuild({
-      selectedPokemon: this.props.pokemon.selectedPokemon,
-      buildName: this.newBuildNameRef.current.value
-    });
+    this.newBuildNameRef.current.value
+      ? this.props.saveCurrentBuild({
+          selectedPokemon: this.props.pokemon.selectedPokemon,
+          buildName: this.newBuildNameRef.current.value
+        })
+      : alert('Please enter a name');
   };
 
   render() {
