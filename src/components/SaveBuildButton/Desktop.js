@@ -1,65 +1,81 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { resetGrids } from '../../actions/actionCreators';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { saveCurrentBuild } from '../../actions/actionCreators';
 import './desktop.css';
 
-const SaveBuildButton = () => {
-  //   const [isSaveBuildModalVisible, setIsSaveBuildModalVisible] = React.useState(
-  //     false
-  //   );
+class SaveBuildButton extends Component {
+  constructor(props) {
+    super(props);
+    this.newBuildNameRef = React.createRef();
+  }
 
-  const dispatch = useDispatch();
+  handleOnSaveBuild = () => {
+    this.props.saveCurrentBuild({
+      selectedPokemon: this.props.pokemon.selectedPokemon,
+      buildName: this.newBuildNameRef.value
+    });
+  };
 
-  const handleOnClick = () => dispatch(resetGrids());
+  render() {
+    return (
+      <div>
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-toggle="modal"
+          data-target="#saveBuildModal"
+        >
+          Save Build
+        </button>
 
-  //   const handleOnOpenSaveBuildModal = () =>
-  //     setIsSaveBuildModalVisible({ isSaveBuildModalVisible: true });
-
-  return (
-    <div>
-      <button
-        type="button"
-        className="btn btn-primary"
-        id="feedback-button"
-        data-toggle="modal"
-        data-target="#saveBuildModal"
-      >
-        Save Build
-      </button>
-
-      <div
-        class="modal fade"
-        id="saveBuildModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="myModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h4 class="modal-title w-100 font-weight-bold">
-                Save a new build
-              </h4>
-            </div>
-            <div class="modal-body mx-3">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="save"
-                  placeholder="Build name"
-                />
+        <div
+          className="modal fade"
+          id="saveBuildModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="modal-header text-center">
+                <h4 className="modal-title w-100 font-weight-bold">
+                  Save a new build
+                </h4>
               </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button class="btn btn-default">Save</button>
+              <div className="modal-body mx-3">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="save"
+                    placeholder="Build name"
+                    ref={this.newBuildNameRef}
+                  />
+                </div>
+              </div>
+              <div className="modal-footer d-flex justify-content-center">
+                <button
+                  className="btn btn-default"
+                  onClick={this.handleOnSaveBuild}
+                  data-dismiss="modal"
+                >
+                  Save
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
+const mapStateToProps = state => ({
+  pokemon: state.pokemon,
+  grid: state.grid,
+  savedBuilds: state.grid.savedBuilds.allIds.map(
+    id => state.grid.savedBuilds.byIds[id]
+  )
+});
 
-export default SaveBuildButton;
+export default connect(mapStateToProps, { saveCurrentBuild })(SaveBuildButton);

@@ -58,7 +58,10 @@ class DesktopLayout extends Component {
                     onChangeHandler={this.selectPokemon}
                   />
                   <br /> <ResetGridButtonDesktop />
-                  <br /> <SaveBuildButtonDesktop />
+                  <br />
+                  <div style={{ marginLeft: 7, marginTop: 10 }}>
+                    <SaveBuildButtonDesktop />
+                  </div>
                   <div className="grid-data-display position-fixed">
                     <SkillOverviewDesktop />
                   </div>
