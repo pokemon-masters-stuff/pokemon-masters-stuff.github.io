@@ -17,12 +17,19 @@ import { SkillOverviewMobile } from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
-import { selectPokemon, resetGrids, saveCurrentBuild, loadSelectedBuild } from '../../actions/actionCreators';
+import {
+  selectPokemon,
+  resetGrids,
+  saveCurrentBuild,
+  loadSelectedBuild
+} from '../../actions/actionCreators';
 
 const mapStateToProps = state => ({
   pokemon: state.pokemon,
   grid: state.grid,
-  savedBuilds: state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
+  savedBuilds: state.grid.savedBuilds.allIds.map(
+    id => state.grid.savedBuilds.byIds[id]
+  )
 });
 
 const mapDispatchToProps = {
@@ -49,9 +56,11 @@ class MobileApp extends Component {
 
   handleOnOpenNav = () => this.setState({ isNavOpened: true });
 
-  handleOnCloseSaveBuildModal = () => this.setState({ isSaveBuildModalVisible: false });
+  handleOnCloseSaveBuildModal = () =>
+    this.setState({ isSaveBuildModalVisible: false });
 
-  handleOnOpenSaveBuildModal = () => this.setState({ isSaveBuildModalVisible: true });
+  handleOnOpenSaveBuildModal = () =>
+    this.setState({ isSaveBuildModalVisible: true });
 
   handleOnCloseSkillList = () => this.setState({ isSkillListOpened: false });
 
@@ -63,7 +72,7 @@ class MobileApp extends Component {
   };
 
   handleOnChangeSavedBuild = value => {
-    this.props.loadSelectedBuild({buildId: value});
+    this.props.loadSelectedBuild({ buildId: value });
   };
 
   handleOnSaveClickBuild = () => {
@@ -79,7 +88,11 @@ class MobileApp extends Component {
   };
 
   render() {
-    const { isNavOpened, isSkillListOpened, isSaveBuildModalVisible } = this.state;
+    const {
+      isNavOpened,
+      isSkillListOpened,
+      isSaveBuildModalVisible
+    } = this.state;
     const { classes, pokemon, grid } = this.props;
 
     let skillList = Object.keys(grid.selectedCellsById)
@@ -140,22 +153,18 @@ class MobileApp extends Component {
           open={isSaveBuildModalVisible}
           onClose={this.handleOnCloseSaveBuildModal}
         >
-          <DialogTitle>{"Save a new build"}</DialogTitle>
+          <DialogTitle>{'Save a new build'}</DialogTitle>
           <DialogContent>
             <TextField
               className={classes.buildNameField}
               label="Build name"
               placeholder="Enter a name as a reference"
-              inputProps={{ref: this.newBuildNameRef}}
+              inputProps={{ ref: this.newBuildNameRef }}
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleOnCloseSaveBuildModal}>
-              Cancel
-            </Button>
-            <Button onClick={this.handleOnSaveBuild}>
-              Save
-            </Button>
+            <Button onClick={this.handleOnCloseSaveBuildModal}>Cancel</Button>
+            <Button onClick={this.handleOnSaveBuild}>Save</Button>
           </DialogActions>
         </Dialog>
       </>
@@ -163,4 +172,7 @@ class MobileApp extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(MobileApp));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withStyles(styles)(MobileApp));

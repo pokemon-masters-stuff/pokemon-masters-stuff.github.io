@@ -42,7 +42,7 @@ function LoadBuildDropdown(props) {
       className={classes.formControl}
     >
       <InputLabel ref={inputLabel} id="select-build">
-        LOAD BUILDS
+        Load Builds
       </InputLabel>
       <Select
         labelId="select-build"
