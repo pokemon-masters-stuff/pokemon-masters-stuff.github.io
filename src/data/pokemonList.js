@@ -15,16 +15,22 @@ let list = [
   { name: 'Houndoom', id: 20022901, characterId: 10062000000 },
   { name: 'Raichu', id: 20002661, characterId: 10098000000 },
   { name: 'Rotom', id: 20047911, characterId: 10106100000 },
-  { name: 'Alakazam', id: 20006500, characterId: 10114000000 },
+  { name: 'Alakazam', id: 20006500, characterId: 10114000000 }
 ];
 
-let pokemonList = list.map((obj, index) => {
-  return {
-    ...obj,
-    key: index,
-    value: obj.name,
-    id: obj.id
-  };
-});
+let pokemonList = list
+  .map((obj, index) => {
+    return {
+      ...obj,
+      key: index,
+      value: obj.name,
+      id: obj.id
+    };
+  })
+  .sort((a, b) => {
+    let x = a.value;
+    let y = b.value;
+    return x < y ? -1 : x > y ? 1 : 0;
+  });
 
 export default pokemonList;
