@@ -14,7 +14,14 @@ import {
   haxorusSvgLink,
   infernapeSvgLink,
   metagrossSvgLink,
-  mewSvgLink
+  mewSvgLink,
+  charizardSvgLink,
+  alakazamSvgLink,
+  houndoomSvgLink,
+  liepardSvgLink,
+  palossandSvgLink,
+  raichuSvgLink,
+  rotomSvgLink
 } from '../../images/PokemonSvgLink/';
 import {
   pikachuGridData,
@@ -55,7 +62,14 @@ const allSvgLinks = {
   haxorusSvgLink,
   infernapeSvgLink,
   metagrossSvgLink,
-  mewSvgLink
+  mewSvgLink,
+  charizardSvgLink,
+  alakazamSvgLink,
+  houndoomSvgLink,
+  liepardSvgLink,
+  palossandSvgLink,
+  raichuSvgLink,
+  rotomSvgLink
 };
 
 const allSyncGrids = {
