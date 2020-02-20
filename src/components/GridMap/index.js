@@ -18,6 +18,7 @@ import {
   charizardGridData,
   palossandGridData,
   liepardGridData,
+  houndoomGridData,
   shortenedMoveNameByCellId
 } from '../../data';
 import {
@@ -42,7 +43,8 @@ const allSyncGrids = {
   charizardGridData,
   metagrossGridData,
   palossandGridData,
-  liepardGridData
+  liepardGridData,
+  houndoomGridData
 };
 
 class GridMap extends Component {
