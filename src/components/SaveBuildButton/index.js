@@ -1,10 +1,2 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-
-const SaveBuildButton = props => (
-  <Button variant="outlined" onClick={props.onClickHandler}>
-    Save Build
-  </Button>
-);
-
-export default SaveBuildButton;
+export { default as SaveBuildButtonMobile } from './Mobile';
+export { default as SaveBuildButtonDesktop } from './Desktop';

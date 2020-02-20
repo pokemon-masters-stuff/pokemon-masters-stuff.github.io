@@ -6,7 +6,7 @@ import ListIcon from '@material-ui/icons/List';
 
 import SelectPokemonDropdown from '../SelectPokemonDropdown';
 import { ResetGridButtonMobile } from '../ResetGridButton';
-import SaveBuildButton from '../SaveBuildButton';
+import { SaveBuildButtonMobile } from '../SaveBuildButton';
 import LoadBuildDropdown from '../LoadBuildDropdown';
 import styles from './styles';
 
@@ -74,7 +74,7 @@ function SyncGridControls(props) {
 
       <Grid item>
         <div style={{ marginTop: 10, paddingLeft: 10 }}>
-          <SaveBuildButton onClickHandler={handleOnSaveBuildClick} />
+          <SaveBuildButtonMobile onClickHandler={handleOnSaveBuildClick} />
         </div>
       </Grid>
 

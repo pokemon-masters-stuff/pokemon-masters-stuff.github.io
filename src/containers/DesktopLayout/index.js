@@ -9,6 +9,7 @@ import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
 import GridMap from '../../components/GridMap';
 import { SkillOverviewDesktop } from '../../components/SkillOverview';
 import { selectPokemon, resetGrids } from '../../actions/actionCreators';
+import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 
 class DesktopLayout extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class DesktopLayout extends Component {
                     onChangeHandler={this.selectPokemon}
                   />
                   <br /> <ResetGridButtonDesktop />
+                  <br /> <SaveBuildButtonDesktop />
                   <div className="grid-data-display position-fixed">
                     <SkillOverviewDesktop />
                   </div>
