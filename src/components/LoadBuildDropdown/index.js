@@ -10,11 +10,19 @@ import styles from './styles';
 const mapStateToProps = state => ({
   selectedPokemon: state.pokemon.selectedPokemon,
   selectedBuildId: state.grid.selectedBuild.id,
-  savedBuilds: state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
+  savedBuilds: state.grid.savedBuilds.allIds.map(
+    id => state.grid.savedBuilds.byIds[id]
+  )
 });
 
 function LoadBuildDropdown(props) {
-  const { classes, onChangeHandler, savedBuilds, selectedBuildId, selectedPokemon } = props;
+  const {
+    classes,
+    onChangeHandler,
+    savedBuilds,
+    selectedBuildId,
+    selectedPokemon
+  } = props;
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
@@ -34,7 +42,7 @@ function LoadBuildDropdown(props) {
       className={classes.formControl}
     >
       <InputLabel ref={inputLabel} id="select-build">
-        Saved Builds
+        LOAD BUILDS
       </InputLabel>
       <Select
         labelId="select-build"
@@ -42,14 +50,21 @@ function LoadBuildDropdown(props) {
         value={selectedBuildId}
         onChange={handleChange}
       >
-        {Boolean(savedBuilds.length) && savedBuilds.map((build) => build.pokemon === selectedPokemon && (
-          <MenuItem key={build.id} value={build.id}>
-            {build.name}
-          </MenuItem>
-        ))}
+        {Boolean(savedBuilds.length) &&
+          savedBuilds.map(
+            build =>
+              build.pokemon === selectedPokemon && (
+                <MenuItem key={build.id} value={build.id}>
+                  {build.name}
+                </MenuItem>
+              )
+          )}
       </Select>
     </FormControl>
   );
 }
 
-export default connect(mapStateToProps, {})(withStyles(styles)(LoadBuildDropdown));
+export default connect(
+  mapStateToProps,
+  {}
+)(withStyles(styles)(LoadBuildDropdown));

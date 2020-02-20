@@ -46,7 +46,7 @@ function SyncGridControls(props) {
       className={classes.pokemonControls}
       alignItems="flex-start"
       justify="space-evenly"
-      style={{ marginTop: 0 }}
+      style={{ marginTop: -10 }}
     >
       <Grid item>
         <SelectPokemonDropdown
@@ -56,22 +56,32 @@ function SyncGridControls(props) {
       </Grid>
 
       <Grid item>
-        <div style={{ marginTop: 10 }}>
-          <ResetGridButtonMobile />
-          <SaveBuildButton onClickHandler={handleOnSaveBuildClick} />
-          <LoadBuildDropdown onChangeHandler={handleOnChangeSavedBuild} />
-        </div>
-      </Grid>
-
-      <Grid item>
         <Button
           variant="outlined"
           onClick={handleOnOpenSkillList}
           startIcon={<ListIcon />}
           style={{ marginTop: 10 }}
         >
-          Selected
+          Selected Skills
         </Button>
+      </Grid>
+
+      <Grid item>
+        <div style={{ marginTop: 10, paddingLeft: 10, paddingBottom: 10 }}>
+          <ResetGridButtonMobile />
+        </div>
+      </Grid>
+
+      <Grid item>
+        <div style={{ marginTop: 10, paddingLeft: 10 }}>
+          <SaveBuildButton onClickHandler={handleOnSaveBuildClick} />
+        </div>
+      </Grid>
+
+      <Grid item>
+        <div>
+          <LoadBuildDropdown onChangeHandler={handleOnChangeSavedBuild} />
+        </div>
       </Grid>
     </Grid>
   );
