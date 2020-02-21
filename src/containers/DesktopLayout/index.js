@@ -85,7 +85,9 @@ class DesktopLayout extends Component {
                   <div className="grid-data-display position-fixed">
                     <SkillOverviewDesktop />
                   </div>
-                  <GridMap />
+                  <div style={{ marginTop: -100 }}>
+                    <GridMap />
+                  </div>
                 </div>
               </div>
               <div className="col-sm-4 position-static mt-5">
