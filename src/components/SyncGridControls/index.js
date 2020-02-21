@@ -52,7 +52,7 @@ function SyncGridControls(props) {
       className={classes.pokemonControls}
       alignItems="flex-start"
       justify="space-evenly"
-      style={{ marginTop: -10 }}
+      style={{ marginTop: 0 }}
     >
       <Grid item>
         <SelectPokemonDropdown
