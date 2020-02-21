@@ -17,7 +17,6 @@ const initialState = {
   gridData: {},
   remainingEnergy: 60,
   orbSpent: 0,
-  activeGridList: [],
   selectedCellsById: {},
   savedBuilds: {
     byIds: {},
@@ -38,10 +37,6 @@ export default function(state = initialState, action) {
     case ADD_TO_GRID_LIST:
       return {
         ...state,
-        activeGridList: [
-          ...state.activeGridList,
-          action.gridData.description
-        ].sort(),
         selectedCellsById: {
           ...state.selectedCellsById,
           [action.gridData.cellId]: action.gridData
@@ -53,15 +48,6 @@ export default function(state = initialState, action) {
 
       return {
         ...state,
-        activeGridList: [
-          ...state.activeGridList.slice(
-            0,
-            state.activeGridList.indexOf(action.gridData.description)
-          ),
-          ...state.activeGridList.slice(
-            state.activeGridList.indexOf(action.gridData.description) + 1
-          )
-        ],
         selectedCellsById: updateSelectedCellsById
       };
     case SUBTRACT_FROM_REMAINING_ENERGY:
@@ -132,7 +118,6 @@ export default function(state = initialState, action) {
         gridData: {},
         remainingEnergy: 60,
         orbSpent: 0,
-        activeGridList: [],
         selectedCellsById: {},
         selectedBuild: {
           id: '',
