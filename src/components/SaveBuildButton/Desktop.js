@@ -67,6 +67,8 @@ class SaveBuildButton extends Component {
                     className="form-control"
                     id="save"
                     placeholder="Build name"
+                    key={`${Math.floor(Math.random() * 1000)}-min`}
+                    defaultValue=""
                     ref={this.newBuildNameRef}
                   />
                 </div>
