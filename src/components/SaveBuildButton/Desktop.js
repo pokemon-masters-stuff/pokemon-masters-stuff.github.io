@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { saveCurrentBuild } from '../../actions/actionCreators';
+import {
+  saveCurrentBuild,
+  deleteSelectedBuild
+} from '../../actions/actionCreators';
 import './desktop.css';
 
 class SaveBuildButton extends Component {
@@ -10,12 +13,24 @@ class SaveBuildButton extends Component {
   }
 
   handleOnSaveBuild = () => {
-    this.newBuildNameRef.current.value
-      ? this.props.saveCurrentBuild({
-          selectedPokemon: this.props.pokemon.selectedPokemon,
-          buildName: this.newBuildNameRef.current.value
-        })
-      : alert('Please enter a name');
+    if (this.newBuildNameRef.current.value) {
+      // If already has a save with the same name, delete old save
+      for (let build in this.props.savedBuilds) {
+        if (
+          this.props.savedBuilds[build].name ===
+          this.newBuildNameRef.current.value
+        ) {
+          this.props.deleteSelectedBuild({
+            buildId: this.props.savedBuilds[build].id
+          });
+        }
+      }
+
+      this.props.saveCurrentBuild({
+        selectedPokemon: this.props.pokemon.selectedPokemon,
+        buildName: this.newBuildNameRef.current.value
+      });
+    } else alert('Please enter a name');
   };
 
   render() {
@@ -80,4 +95,7 @@ const mapStateToProps = state => ({
   )
 });
 
-export default connect(mapStateToProps, { saveCurrentBuild })(SaveBuildButton);
+export default connect(mapStateToProps, {
+  saveCurrentBuild,
+  deleteSelectedBuild
+})(SaveBuildButton);
