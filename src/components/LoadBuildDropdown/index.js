@@ -40,7 +40,8 @@ function LoadBuildDropdown(props) {
 
   const handleDelete = (buildId, event) => {
     event.stopPropagation();
-    onDeleteHandler(buildId);
+    window.confirm('Are you sure you wish to delete this save?') &&
+      onDeleteHandler(buildId);
   };
 
   return (
