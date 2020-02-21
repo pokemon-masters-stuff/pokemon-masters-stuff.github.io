@@ -11,7 +11,8 @@ import { SkillOverviewDesktop } from '../../components/SkillOverview';
 import {
   selectPokemon,
   resetGrids,
-  loadSelectedBuild
+  loadSelectedBuild,
+  deleteSelectedBuild
 } from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
@@ -35,6 +36,10 @@ class DesktopLayout extends Component {
 
   handleOnChangeSavedBuild = value => {
     this.props.loadSelectedBuild({ buildId: value });
+  };
+
+  handleOnDeleteSavedBuild = value => {
+    this.props.deleteSelectedBuild({ buildId: value });
   };
 
   render() {
@@ -74,6 +79,7 @@ class DesktopLayout extends Component {
                   <div style={{ marginTop: 5 }}>
                     <LoadBuildDropdown
                       onChangeHandler={this.handleOnChangeSavedBuild}
+                      onDeleteHandler={this.handleOnDeleteSavedBuild}
                     />
                   </div>
                   <div className="grid-data-display position-fixed">
@@ -100,5 +106,6 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, {
   selectPokemon,
   resetGrids,
-  loadSelectedBuild
+  loadSelectedBuild,
+  deleteSelectedBuild
 })(DesktopLayout);
