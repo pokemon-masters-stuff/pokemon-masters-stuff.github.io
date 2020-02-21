@@ -30,7 +30,6 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  console.log('savedBuilds', state.savedBuilds);
   switch (action.type) {
     case DISPLAY_GRID_DATA:
       return { ...state, gridData: action.gridData };
@@ -127,7 +126,6 @@ export default function(state = initialState, action) {
           ]
         }
       };
-      return state;
     case RESET_GRIDS:
       return {
         ...state,

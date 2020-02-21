@@ -87,6 +87,18 @@ class MobileApp extends Component {
 
   handleOnSaveBuild = () => {
     if (this.newBuildNameRef.current.value) {
+      // If already has a save with the same name, delete old save
+      for (let build in this.props.savedBuilds) {
+        if (
+          this.props.savedBuilds[build].name ===
+          this.newBuildNameRef.current.value
+        ) {
+          this.props.deleteSelectedBuild({
+            buildId: this.props.savedBuilds[build].id
+          });
+        }
+      }
+
       this.props.saveCurrentBuild({
         selectedPokemon: this.props.pokemon.selectedPokemon,
         buildName: this.newBuildNameRef.current.value
