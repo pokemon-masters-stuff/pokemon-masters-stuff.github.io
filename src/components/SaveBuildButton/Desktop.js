@@ -46,6 +46,7 @@ class SaveBuildButton extends Component {
           className="btn btn-primary"
           data-toggle="modal"
           data-target="#saveBuildModal"
+          style={{ position: 'relative', zIndex: 999 }}
         >
           Save Build
         </button>
