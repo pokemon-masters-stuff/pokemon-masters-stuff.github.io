@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
+
 const mapStateToProps = state => ({
   selectedPokemon: state.pokemon.selectedPokemon,
   selectedBuildId: state.grid.selectedBuild.id,
@@ -19,6 +21,7 @@ function LoadBuildDropdown(props) {
   const {
     classes,
     onChangeHandler,
+    onDeleteHandler,
     savedBuilds,
     selectedBuildId,
     selectedPokemon
@@ -33,6 +36,11 @@ function LoadBuildDropdown(props) {
 
   const handleChange = event => {
     onChangeHandler(event.target.value);
+  };
+
+  const handleDelete = (buildId, event) => {
+    event.stopPropagation();
+    onDeleteHandler(buildId);
   };
 
   return (
@@ -56,6 +64,12 @@ function LoadBuildDropdown(props) {
               build.pokemon === selectedPokemon && (
                 <MenuItem key={build.id} value={build.id}>
                   {build.name}
+                  <IconButton
+                    onClick={handleDelete.bind(this, build.id)}
+                    style={{ marginLeft: 'auto', padding: 0 }}
+                  >
+                    <HighlightOffIcon />
+                  </IconButton>
                 </MenuItem>
               )
           )}

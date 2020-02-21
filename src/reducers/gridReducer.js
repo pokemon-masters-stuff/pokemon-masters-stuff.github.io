@@ -9,7 +9,8 @@ import {
   ADD_BACK_TO_REMAINING_ENERGY,
   RESET_GRIDS,
   SAVE_CURRENT_BUILD,
-  LOAD_SELECTED_BUILD
+  LOAD_SELECTED_BUILD,
+  DELETE_SELECTED_BUILD
 } from '../actions/types';
 
 const initialState = {
@@ -23,12 +24,13 @@ const initialState = {
     allIds: []
   },
   selectedBuild: {
-    id: "",
-    name: ""
+    id: '',
+    name: ''
   }
 };
 
 export default function(state = initialState, action) {
+  console.log('savedBuilds', state.savedBuilds);
   switch (action.type) {
     case DISPLAY_GRID_DATA:
       return { ...state, gridData: action.gridData };
@@ -101,9 +103,31 @@ export default function(state = initialState, action) {
     case LOAD_SELECTED_BUILD:
       return {
         ...state,
-        selectedCellsById: state.savedBuilds.byIds[action.payload.buildId].selectedCellsById,
+        selectedCellsById:
+          state.savedBuilds.byIds[action.payload.buildId].selectedCellsById,
         selectedBuild: state.savedBuilds.byIds[action.payload.buildId]
       };
+    case DELETE_SELECTED_BUILD:
+      const updateSavedBuildsById = { ...state.savedBuilds.byIds };
+      delete updateSavedBuildsById[action.payload.buildId];
+
+      return {
+        ...state,
+        savedBuilds: {
+          ...state.savedBuilds,
+          byIds: updateSavedBuildsById,
+          allIds: [
+            ...state.savedBuilds.allIds.slice(
+              0,
+              state.savedBuilds.allIds.indexOf(action.payload.buildId)
+            ),
+            ...state.savedBuilds.allIds.slice(
+              state.savedBuilds.allIds.indexOf(action.payload.buildId) + 1
+            )
+          ]
+        }
+      };
+      return state;
     case RESET_GRIDS:
       return {
         ...state,
@@ -113,8 +137,8 @@ export default function(state = initialState, action) {
         activeGridList: [],
         selectedCellsById: {},
         selectedBuild: {
-          id: "",
-          name: ""
+          id: '',
+          name: ''
         }
       };
     default:

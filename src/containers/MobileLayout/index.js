@@ -21,7 +21,8 @@ import {
   selectPokemon,
   resetGrids,
   saveCurrentBuild,
-  loadSelectedBuild
+  loadSelectedBuild,
+  deleteSelectedBuild
 } from '../../actions/actionCreators';
 
 const mapStateToProps = state => ({
@@ -36,7 +37,8 @@ const mapDispatchToProps = {
   selectPokemon,
   resetGrids,
   saveCurrentBuild,
-  loadSelectedBuild
+  loadSelectedBuild,
+  deleteSelectedBuild
 };
 
 class MobileApp extends Component {
@@ -73,6 +75,10 @@ class MobileApp extends Component {
 
   handleOnChangeSavedBuild = value => {
     this.props.loadSelectedBuild({ buildId: value });
+  };
+
+  handleOnDeleteSavedBuild = value => {
+    this.props.deleteSelectedBuild({ buildId: value });
   };
 
   handleOnSaveClickBuild = () => {
@@ -132,6 +138,7 @@ class MobileApp extends Component {
             selectedPokemon={pokemon.selectedPokemon}
             onChangePokemonHandler={this.handleOnChangePokemon}
             onChangeSavedBuildHandler={this.handleOnChangeSavedBuild}
+            onDeleteSavedBuildHandler={this.handleOnDeleteSavedBuild}
             onOpenSkillListHandler={this.handleOnOpenSkillList}
             onSaveBuildClickHandler={this.handleOnSaveClickBuild}
           />

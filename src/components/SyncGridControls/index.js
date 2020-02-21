@@ -17,6 +17,7 @@ function SyncGridControls(props) {
     onChangePokemonHandler,
     onOpenSkillListHandler,
     onChangeSavedBuildHandler,
+    onDeleteSavedBuildHandler,
     onSaveBuildClickHandler
   } = props;
 
@@ -33,6 +34,11 @@ function SyncGridControls(props) {
   const handleOnChangeSavedBuild = value =>
     typeof onChangeSavedBuildHandler === 'function'
       ? onChangeSavedBuildHandler(value)
+      : null;
+
+  const handleOnDeleteSavedBuild = value =>
+    typeof onDeleteSavedBuildHandler === 'function'
+      ? onDeleteSavedBuildHandler(value)
       : null;
 
   const handleOnSaveBuildClick = () =>
@@ -80,7 +86,10 @@ function SyncGridControls(props) {
 
       <Grid item>
         <div>
-          <LoadBuildDropdown onChangeHandler={handleOnChangeSavedBuild} />
+          <LoadBuildDropdown
+            onDeleteHandler={handleOnDeleteSavedBuild}
+            onChangeHandler={handleOnChangeSavedBuild}
+          />
         </div>
       </Grid>
     </Grid>

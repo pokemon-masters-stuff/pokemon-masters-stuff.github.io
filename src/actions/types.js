@@ -8,3 +8,4 @@ export const ADD_BACK_TO_REMAINING_ENERGY = 'add_back_to_remaining_energy';
 export const RESET_GRIDS = 'reset_grids';
 export const SAVE_CURRENT_BUILD = 'save_current_build';
 export const LOAD_SELECTED_BUILD = 'load_selected_build';
+export const DELETE_SELECTED_BUILD = 'delete_selected_build';

@@ -8,7 +8,8 @@ import {
   ADD_BACK_TO_REMAINING_ENERGY,
   RESET_GRIDS,
   SAVE_CURRENT_BUILD,
-  LOAD_SELECTED_BUILD
+  LOAD_SELECTED_BUILD,
+  DELETE_SELECTED_BUILD
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -56,5 +57,10 @@ export const saveCurrentBuild = payload => ({
 
 export const loadSelectedBuild = payload => ({
   type: LOAD_SELECTED_BUILD,
+  payload
+});
+
+export const deleteSelectedBuild = payload => ({
+  type: DELETE_SELECTED_BUILD,
   payload
 });
