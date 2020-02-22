@@ -95,7 +95,7 @@ class DesktopLayout extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-4 mt-5">
+              <div className="col-sm-4">
                 <SelectedSkillListDesktop />
               </div>
             </div>
