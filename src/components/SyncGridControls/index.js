@@ -62,24 +62,24 @@ function SyncGridControls(props) {
       </Grid>
 
       <Grid item>
+        <div style={{ marginTop: 10 }}>
+          <ResetGridButtonMobile />
+        </div>
+      </Grid>
+
+      <Grid item>
         <Button
           variant="outlined"
           onClick={handleOnOpenSkillList}
           startIcon={<ListIcon />}
           style={{ marginTop: 10 }}
         >
-          Selected Skills
+          Selected
         </Button>
       </Grid>
 
       <Grid item>
-        <div style={{ marginTop: 10, paddingLeft: 10, paddingBottom: 10 }}>
-          <ResetGridButtonMobile />
-        </div>
-      </Grid>
-
-      <Grid item>
-        <div style={{ marginTop: 10, paddingLeft: 10 }}>
+        <div style={{ marginTop: 10, paddingBottom: 10 }}>
           <SaveBuildButtonMobile onClickHandler={handleOnSaveBuildClick} />
         </div>
       </Grid>
