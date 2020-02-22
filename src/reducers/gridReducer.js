@@ -79,7 +79,9 @@ export default function(state = initialState, action) {
               id: newBuildUUID,
               pokemon: action.payload.selectedPokemon,
               name: action.payload.buildName,
-              selectedCellsById: state.selectedCellsById
+              selectedCellsById: state.selectedCellsById,
+              remainingEnergy: state.remainingEnergy,
+              orbSpent: state.orbSpent
             }
           },
           allIds: [...state.savedBuilds.allIds, newBuildUUID]
@@ -90,7 +92,10 @@ export default function(state = initialState, action) {
         ...state,
         selectedCellsById:
           state.savedBuilds.byIds[action.payload.buildId].selectedCellsById,
-        selectedBuild: state.savedBuilds.byIds[action.payload.buildId]
+        selectedBuild: state.savedBuilds.byIds[action.payload.buildId],
+        remainingEnergy:
+          state.savedBuilds.byIds[action.payload.buildId].remainingEnergy,
+        orbSpent: state.savedBuilds.byIds[action.payload.buildId].orbSpent
       };
     case DELETE_SELECTED_BUILD:
       const updateSavedBuildsById = { ...state.savedBuilds.byIds };
