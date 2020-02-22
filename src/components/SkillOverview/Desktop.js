@@ -11,7 +11,10 @@ class SkillOverview extends Component {
               <strong>{this.props.grid.gridData.name}</strong>
             </li>
             {Boolean(this.props.grid.gridData.description) && (
-              <li className="text-center mb-0" style={{padding: "0 24px 8px"}}>
+              <li
+                className="text-center mb-0"
+                style={{ padding: '0 24px 8px' }}
+              >
                 {this.props.grid.gridData.description}
               </li>
             )}

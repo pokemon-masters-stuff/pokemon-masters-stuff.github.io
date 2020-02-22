@@ -72,25 +72,30 @@ class DesktopLayout extends Component {
                     selectedPokemon={pokemon.selectedPokemon}
                     onChangeHandler={this.selectPokemon}
                   />
-                  <br /> <ResetGridButtonDesktop />
-                  <div style={{ marginLeft: 8, marginTop: 10 }}>
+                  {/* <div> */}
+                  <LoadBuildDropdown
+                    onChangeHandler={this.handleOnChangeSavedBuild}
+                    onDeleteHandler={this.handleOnDeleteSavedBuild}
+                  />
+                  {/* </div> */}
+                  <div style={{ marginLeft: 8 }}>
                     <SaveBuildButtonDesktop />
                   </div>
                   <div style={{ marginTop: 5 }}>
-                    <LoadBuildDropdown
-                      onChangeHandler={this.handleOnChangeSavedBuild}
-                      onDeleteHandler={this.handleOnDeleteSavedBuild}
-                    />
+                    <ResetGridButtonDesktop />
                   </div>
-                  <div className="grid-data-display position-fixed">
-                    <SkillOverviewDesktop />
-                  </div>
-                  <div style={{ marginTop: -85 }}>
+                  <div style={{ marginTop: -50 }}>
                     <GridMap />
+                  </div>
+                  <div
+                    className="grid-data-display position-fixed"
+                    style={{ zIndex: 999 }}
+                  >
+                    <SkillOverviewDesktop />
                   </div>
                 </div>
               </div>
-              <div className="col-sm-4 position-static mt-5">
+              <div className="col-sm-4 mt-5">
                 <SelectedSkillListDesktop />
               </div>
             </div>

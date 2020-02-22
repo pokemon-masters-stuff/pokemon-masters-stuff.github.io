@@ -12,6 +12,7 @@ const ResetGridButton = () => {
       type="button"
       className="btn btn-warning ml-2"
       onClick={handleOnClick}
+      style={{ position: 'relative', zIndex: 999 }}
     >
       Reset
     </button>

@@ -31,7 +31,7 @@ a {
 
 .grid-data-display {
   margin-left: 11.5rem;
-  margin-top: -12.5rem;
+  margin-top: -8rem;
   width: 27rem;
   font-size: 0.8rem;
 }
@@ -45,6 +45,10 @@ a {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+.active-grid-list {
+  width: 23rem;
 }
 
 ul {
