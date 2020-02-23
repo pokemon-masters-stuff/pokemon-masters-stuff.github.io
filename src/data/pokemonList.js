@@ -1,4 +1,4 @@
-let list = [
+const listOfPokemonsWithId = [
   { name: 'Pikachu', id: 20002500, characterId: 18000000000 },
   { name: 'Torkoal', id: 20032401, characterId: 10029000000 },
   { name: 'Infernape', id: 20039200, characterId: 10006000000 },
@@ -18,7 +18,7 @@ let list = [
   { name: 'Alakazam', id: 20006500, characterId: 10114000000 }
 ];
 
-let pokemonList = list
+let pokemonNameList = listOfPokemonsWithId
   .map((obj, index) => {
     return {
       ...obj,
@@ -33,4 +33,4 @@ let pokemonList = list
     return x < y ? -1 : x > y ? 1 : 0;
   });
 
-export default pokemonList;
+export { listOfPokemonsWithId, pokemonNameList };

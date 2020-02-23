@@ -9,7 +9,8 @@ import {
   RESET_GRIDS,
   SAVE_CURRENT_BUILD,
   LOAD_SELECTED_BUILD,
-  DELETE_SELECTED_BUILD
+  DELETE_SELECTED_BUILD,
+  LOAD_GRID_FROM_URL
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -63,4 +64,11 @@ export const loadSelectedBuild = payload => ({
 export const deleteSelectedBuild = payload => ({
   type: DELETE_SELECTED_BUILD,
   payload
+});
+
+export const loadGridFromUrl = (gridData, remainingEnergy, orbSpent) => ({
+  type: LOAD_GRID_FROM_URL,
+  gridData,
+  remainingEnergy,
+  orbSpent
 });

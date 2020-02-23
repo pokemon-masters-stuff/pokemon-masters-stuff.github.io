@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
-
+import { listOfPokemonsWithId } from '../../data';
 import {
   pikachuSvgLink,
   vileplumeSvgLink,
@@ -42,20 +42,23 @@ import {
   houndoomGridData,
   raichuGridData,
   alakazamGridData,
-  shortenedMoveNameByCellId
+  shortenedMoveNameByCellId,
+  allDisplayedGridData
 } from '../../data';
 import {
   addToGridList,
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids
+  resetGrids,
+  loadGridFromUrl
 } from '../../actions/actionCreators';
 import styles from './styles';
 import {
   getGridQueryStringValue,
   filterGridQueryStringValue,
   setGridQueryStringValue,
+  getQueryStringValue,
   setQueryStringValue
 } from '../../queryString';
 
@@ -99,6 +102,7 @@ const allSyncGrids = {
   alakazamGridData
 };
 
+// const gridUrlLookUpData = {};
 class GridMap extends Component {
   state = {
     initialRender: true,
@@ -110,23 +114,41 @@ class GridMap extends Component {
     screenWidth: document.body.clientWidth
   };
 
+  loadUrlGridData() {
+    if (getGridQueryStringValue('grid')) {
+      let remainingEnergy = getQueryStringValue('e');
+      let orbSpent = Number(getQueryStringValue('o'));
+      let characterId;
+      listOfPokemonsWithId.map(obj => {
+        return obj.name === getQueryStringValue('pokemon')
+          ? (characterId = obj.characterId)
+          : null;
+      });
+      let cellIdArray = getGridQueryStringValue('grid').map(id => {
+        return characterId.toString().slice(0, -3) + id;
+      });
+      cellIdArray.map(id => {
+        return this.props.loadGridFromUrl(
+          allDisplayedGridData[id],
+          remainingEnergy,
+          orbSpent
+        );
+      });
+    }
+  }
+
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
-    // translate url's grid array into cellId, and then log them into the selectedCellById state
+    // gridUrlLookUpData !== {} && this.loadUrlGridData();
+    this.loadUrlGridData();
   }
-
-  // loadUrlGridData() {
-  //   let lastTwoDigitsArray=getGridQueryStringValue('grid').map((id) => {
-
-  //   }
-  //   )
-  // }
 
   componentDidUpdate() {
     ReactTooltip.rebuild();
     setQueryStringValue('e', this.props.grid.remainingEnergy);
     setQueryStringValue('o', this.props.grid.orbSpent);
+    // console.log('did update', gridUrlLookUpData);
   }
 
   componentWillUnmount() {
@@ -197,13 +219,10 @@ class GridMap extends Component {
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
       setGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
-      console.log(getGridQueryStringValue('grid'));
     } else {
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
       filterGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
-
-      console.log(getGridQueryStringValue('grid'));
     }
   }
 
@@ -407,6 +426,13 @@ class GridMap extends Component {
         }
       }
 
+      // gridUrlLookUpData[cell.cellId] = {
+      //   cellId: cell.cellId,
+      //   name: nameWithSyncLvRequirement || moveName,
+      //   description: cell.move.description,
+      //   energy: cell.move.energyCost
+      // };
+
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -526,5 +552,6 @@ export default connect(mapStateToProps, {
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids
+  resetGrids,
+  loadGridFromUrl
 })(withStyles(styles)(GridMap));

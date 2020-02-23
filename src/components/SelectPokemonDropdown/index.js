@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-import { pokemonList } from '../../data';
+import { pokemonNameList } from '../../data';
 import styles from './styles';
 
 function SimpleSelect(props) {
@@ -43,7 +43,7 @@ function SimpleSelect(props) {
         onChange={handleChange}
         labelWidth={labelWidth}
       >
-        {pokemonList.map((pokemon, index) => (
+        {pokemonNameList.map((pokemon, index) => (
           <MenuItem key={index} value={pokemon.name}>
             {pokemon.name}
           </MenuItem>

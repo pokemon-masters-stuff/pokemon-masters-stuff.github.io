@@ -30,6 +30,7 @@ class DesktopLayout extends Component {
     this.props.selectPokemon(value);
     this.props.resetGrids();
     setQueryStringValue('pokemon', value);
+    setQueryStringValue('grid', []);
   }
 
   componentDidMount() {

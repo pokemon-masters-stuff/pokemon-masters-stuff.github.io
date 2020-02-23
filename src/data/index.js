@@ -1,4 +1,5 @@
-export { default as pokemonList } from './pokemonList';
+export { pokemonNameList, listOfPokemonsWithId } from './pokemonList';
+export { default as allDisplayedGridData } from './grids/allDisplayedGridData';
 export { default as pikachuGridData } from './grids/pikachu.json';
 export { default as torkoalGridData } from './grids/torkoal.json';
 export { default as infernapeGridData } from './grids/infernape.json';

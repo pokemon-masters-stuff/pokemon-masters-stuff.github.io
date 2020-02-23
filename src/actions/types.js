@@ -9,3 +9,4 @@ export const RESET_GRIDS = 'reset_grids';
 export const SAVE_CURRENT_BUILD = 'save_current_build';
 export const LOAD_SELECTED_BUILD = 'load_selected_build';
 export const DELETE_SELECTED_BUILD = 'delete_selected_build';
+export const LOAD_GRID_FROM_URL = 'load_grid_from_url';

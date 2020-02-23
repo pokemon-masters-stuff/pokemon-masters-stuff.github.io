@@ -42,7 +42,7 @@ export const getGridQueryStringValue = (
   queryString = window.location.search
 ) => {
   const values = qs.parse(queryString, { arrayFormat: 'comma' });
-  return values[key];
+  return values[key] ? values[key].split(',') : values[key];
 };
 
 export const setGridQueryStringValue = (
@@ -65,7 +65,6 @@ export const setGridQueryStringValue = (
     },
     { arrayFormat: 'comma' }
   );
-  console.log('newQsValue', newQsValue);
   setQueryStringWithoutPageReload(`?${newQsValue}`);
 };
 
@@ -90,6 +89,5 @@ export const filterGridQueryStringValue = (
     },
     { arrayFormat: 'comma' }
   );
-  console.log('newQsValue', newQsValue);
   setQueryStringWithoutPageReload(`?${newQsValue}`);
 };
