@@ -76,10 +76,10 @@ class DesktopLayout extends Component {
                     onDeleteHandler={this.handleOnDeleteSavedBuild}
                   />
                   {/* </div> */}
-                  <div style={{ marginLeft: 8 }}>
+                  <div style={{ marginLeft: 8, marginTop: 3 }}>
                     <SaveBuildButtonDesktop />
                   </div>
-                  <div style={{ marginTop: 5 }}>
+                  <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>
                   <div style={{ marginTop: -50 }}>
