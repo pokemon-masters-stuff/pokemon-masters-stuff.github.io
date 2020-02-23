@@ -13,7 +13,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import SyncGridControls from '../../components/SyncGridControls';
 import Navigation from '../../components/Navigation';
 import { SelectedSkillListMobile } from '../../components/SelectedSkillList';
-import { SkillOverviewMobile } from '../../components/SkillOverview';
+import SkillOverview from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
@@ -168,7 +168,7 @@ class MobileApp extends Component {
             </Grid>
           </Grid>
 
-          <SkillOverviewMobile
+          <SkillOverview
             skill={grid.gridData.name}
             description={
               grid.gridData.description ? grid.gridData.description : ''
