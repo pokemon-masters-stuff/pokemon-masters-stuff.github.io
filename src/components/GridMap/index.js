@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text } from '../Hexagon';
 import {
   pikachuGridData,
@@ -53,6 +53,10 @@ class GridMap extends Component {
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
+  }
+
+  componentDidUpdate() {
+    ReactTooltip.rebuild();
   }
 
   componentWillUnmount() {
@@ -369,25 +373,40 @@ class GridMap extends Component {
         <CircularProgress color="secondary" />
       </div>
     ) : (
-      <HexGrid
-        width={mapSizeBoundaries.width}
-        height={mapSizeBoundaries.height}
-        viewBox={mapSizeBoundaries.viewbox}
-      >
-        <Layout
-          size={{ x: 4.5, y: 4.5 }}
-          flat={true}
-          spacing={1.1}
-          origin={{ x: 0, y: 0 }}
+      <div>
+        <HexGrid
+          width={mapSizeBoundaries.width}
+          height={mapSizeBoundaries.height}
+          viewBox={mapSizeBoundaries.viewbox}
         >
-          <Hexagon q={0} r={0} s={0} fill="#fff" data={{ cellId: 0 }}>
-            <Text className={classes.selectedPokemonCell}>
-              {this.props.pokemon}
-            </Text>
-          </Hexagon>
-          {this.renderHexagonCells()}
-        </Layout>
-      </HexGrid>
+          <Layout
+            size={{ x: 4.5, y: 4.5 }}
+            flat={true}
+            spacing={1.1}
+            origin={{ x: 0, y: 0 }}
+          >
+            <Hexagon q={0} r={0} s={0} fill="#fff" data={{ cellId: 0 }}>
+              <Text className={classes.selectedPokemonCell}>
+                {this.props.pokemon}
+              </Text>
+            </Hexagon>
+            {this.renderHexagonCells()}
+          </Layout>
+        </HexGrid>
+        {this.state.screenWidth >= 960 ? (
+          <ReactTooltip id="skillTooltip">
+            <ul style={{ margin: 0, padding: 0 }}>
+              <li>{this.props.grid.gridData.name}</li>
+              <li>Energy: {this.props.grid.gridData.energy}</li>
+              {this.props.grid.gridData.description ? (
+                <li style={{ marginTop: 1 }}>
+                  {this.props.grid.gridData.description}
+                </li>
+              ) : null}
+            </ul>
+          </ReactTooltip>
+        ) : null}
+      </div>
     );
   }
 }

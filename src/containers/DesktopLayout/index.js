@@ -7,7 +7,6 @@ import { FeedbackFormDesktop } from '../../components/FeedbackForm';
 import SelectPokemonDropdown from '../../components/SelectPokemonDropdown';
 import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
 import GridMap from '../../components/GridMap';
-import { SkillOverviewDesktop } from '../../components/SkillOverview';
 import {
   selectPokemon,
   resetGrids,
@@ -72,7 +71,6 @@ class DesktopLayout extends Component {
                     selectedPokemon={pokemon.selectedPokemon}
                     onChangeHandler={this.selectPokemon}
                   />
-                  {/* <div> */}
                   <LoadBuildDropdown
                     onChangeHandler={this.handleOnChangeSavedBuild}
                     onDeleteHandler={this.handleOnDeleteSavedBuild}
@@ -86,12 +84,6 @@ class DesktopLayout extends Component {
                   </div>
                   <div style={{ marginTop: -50 }}>
                     <GridMap />
-                  </div>
-                  <div
-                    className="grid-data-display position-fixed"
-                    style={{ zIndex: 999 }}
-                  >
-                    <SkillOverviewDesktop />
                   </div>
                 </div>
               </div>
