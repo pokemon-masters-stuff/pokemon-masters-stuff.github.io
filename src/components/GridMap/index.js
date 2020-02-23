@@ -3,7 +3,27 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
-import { HexGrid, Layout, Hexagon, Text } from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
+
+import {
+  pikachuSvgLink,
+  vileplumeSvgLink,
+  dewgongSvgLink,
+  torkoalSvgLink,
+  serperiorSvgLink,
+  kingdraSvgLink,
+  haxorusSvgLink,
+  infernapeSvgLink,
+  metagrossSvgLink,
+  mewSvgLink,
+  charizardSvgLink,
+  alakazamSvgLink,
+  houndoomSvgLink,
+  liepardSvgLink,
+  palossandSvgLink,
+  raichuSvgLink,
+  rotomSvgLink
+} from '../../images/PokemonSvgLink/';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -15,6 +35,13 @@ import {
   vileplumeGridData,
   mewGridData,
   metagrossGridData,
+  charizardGridData,
+  palossandGridData,
+  liepardGridData,
+  rotomGridData,
+  houndoomGridData,
+  raichuGridData,
+  alakazamGridData,
   shortenedMoveNameByCellId
 } from '../../data';
 import {
@@ -26,6 +53,26 @@ import {
 } from '../../actions/actionCreators';
 import styles from './styles';
 
+const allSvgLinks = {
+  pikachuSvgLink,
+  vileplumeSvgLink,
+  dewgongSvgLink,
+  torkoalSvgLink,
+  serperiorSvgLink,
+  kingdraSvgLink,
+  haxorusSvgLink,
+  infernapeSvgLink,
+  metagrossSvgLink,
+  mewSvgLink,
+  charizardSvgLink,
+  alakazamSvgLink,
+  houndoomSvgLink,
+  liepardSvgLink,
+  palossandSvgLink,
+  raichuSvgLink,
+  rotomSvgLink
+};
+
 const allSyncGrids = {
   pikachuGridData,
   torkoalGridData,
@@ -36,7 +83,14 @@ const allSyncGrids = {
   serperiorGridData,
   vileplumeGridData,
   mewGridData,
-  metagrossGridData
+  charizardGridData,
+  metagrossGridData,
+  palossandGridData,
+  liepardGridData,
+  rotomGridData,
+  houndoomGridData,
+  raichuGridData,
+  alakazamGridData
 };
 
 class GridMap extends Component {
@@ -191,11 +245,14 @@ class GridMap extends Component {
       let nameWithSyncLvRequirement;
       if (
         pokemon === 'pikachu' ||
+        pokemon === 'charizard' ||
         pokemon === 'dewgong' ||
         pokemon === 'infernape' ||
         pokemon === 'haxorus' ||
         pokemon === 'kingdra' ||
-        pokemon === 'metagross'
+        pokemon === 'metagross' ||
+        pokemon === 'houndoom' ||
+        pokemon === 'raichu'
       ) {
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -228,7 +285,12 @@ class GridMap extends Component {
         }
       }
 
-      if (pokemon === 'torkoal' || pokemon === 'vileplume') {
+      if (
+        pokemon === 'torkoal' ||
+        pokemon === 'vileplume' ||
+        pokemon === 'palossand' ||
+        pokemon === 'liepard'
+      ) {
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
           (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -260,7 +322,11 @@ class GridMap extends Component {
         }
       }
 
-      if (pokemon === 'serperior') {
+      if (
+        pokemon === 'serperior' ||
+        pokemon === 'alakazam' ||
+        pokemon === 'rotom'
+      ) {
         if (
           (cell.coords.q === 0 && cell.coords.r === 3) ||
           (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -364,6 +430,13 @@ class GridMap extends Component {
       );
     });
 
+  renderCenterGridText = classes => {
+    // Only renders text when no picture available
+    return allSvgLinks[`${this.props.pokemon}SvgLink`] === undefined ? (
+      <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
+    ) : null;
+  };
+
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes } = this.props;
@@ -385,13 +458,23 @@ class GridMap extends Component {
             spacing={1.1}
             origin={{ x: 0, y: 0 }}
           >
-            <Hexagon q={0} r={0} s={0} fill="#fff" data={{ cellId: 0 }}>
-              <Text className={classes.selectedPokemonCell}>
-                {this.props.pokemon}
-              </Text>
-            </Hexagon>
+           <Hexagon
+            q={0}
+            r={0}
+            s={0}
+            fill={`url(#${this.props.pokemon})`}
+            data={{ cellId: 0 }}
+            className={'center-grid'}
+          >
+            {this.renderCenterGridText(classes)}
+          </Hexagon>
             {this.renderHexagonCells()}
           </Layout>
+          <Pattern
+          id={this.props.pokemon}
+          link={allSvgLinks[`${this.props.pokemon}SvgLink`]}
+          size={{ x: 10, y: 10 }}
+        />
         </HexGrid>
         {this.state.screenWidth >= 960 &&
         this.props.grid.gridData.energy !== undefined ? (

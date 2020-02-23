@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package abilityitem;
+
+message AbilityItem {
+	int64 ability_item_id = 1;
+	int64 character_id = 2;		// Trainer.pb / 0 = Coop Sync Orb
+}
+
+message AbilityItemTable {
+	repeated AbilityItem entries = 1;
+}

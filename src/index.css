@@ -102,3 +102,11 @@ svg g text {
   -o-user-select: none;
   user-select: none;
 }
+
+svg .center-grid {
+  fill-opacity: 1;
+}
+
+svg g:hover .center-grid {
+  fill-opacity: 1;
+}
