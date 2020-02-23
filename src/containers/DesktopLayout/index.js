@@ -75,7 +75,6 @@ class DesktopLayout extends Component {
                     onChangeHandler={this.handleOnChangeSavedBuild}
                     onDeleteHandler={this.handleOnDeleteSavedBuild}
                   />
-                  {/* </div> */}
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
                     <SaveBuildButtonDesktop />
                   </div>
