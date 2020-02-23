@@ -17,6 +17,7 @@ import SkillOverview from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
+import { getQueryStringValue, setQueryStringValue } from '../../queryString';
 import {
   selectPokemon,
   resetGrids,
@@ -52,6 +53,9 @@ class MobileApp extends Component {
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
+    getQueryStringValue('pokemon')
+      ? this.props.selectPokemon(getQueryStringValue('pokemon'))
+      : setQueryStringValue('pokemon', this.props.pokemon.selectedPokemon);
   }
 
   handleOnCloseNav = () => this.setState({ isNavOpened: false });
@@ -71,6 +75,8 @@ class MobileApp extends Component {
   handleOnChangePokemon = value => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
+    setQueryStringValue('pokemon', value);
+    setQueryStringValue('grid', []);
   };
 
   handleOnChangeSavedBuild = value => {
