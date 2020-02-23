@@ -19,6 +19,10 @@ function SimpleSelect(props) {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
+  React.useEffect(() => {
+    setPokemon(selectedPokemon);
+  });
+
   const handleChange = event => {
     setPokemon(event.target.value);
     onChangeHandler(event.target.value);

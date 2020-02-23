@@ -16,6 +16,8 @@ import {
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
+import { getQueryStringValue, setQueryStringValue } from '../../queryString';
+
 class DesktopLayout extends Component {
   constructor(props) {
     super(props);
@@ -27,10 +29,15 @@ class DesktopLayout extends Component {
   selectPokemon(value) {
     this.props.selectPokemon(value);
     this.props.resetGrids();
+    setQueryStringValue('pokemon', value);
   }
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
+
+    getQueryStringValue('pokemon')
+      ? this.props.selectPokemon(getQueryStringValue('pokemon'))
+      : setQueryStringValue('pokemon', this.props.pokemon.selectedPokemon);
   }
 
   handleOnChangeSavedBuild = value => {
