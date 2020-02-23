@@ -114,6 +114,7 @@ class GridMap extends Component {
     screenWidth: document.body.clientWidth
   };
 
+  // TODO: refactor
   loadUrlGridData() {
     if (getGridQueryStringValue('grid')) {
       let remainingEnergy = getQueryStringValue('e');
@@ -148,7 +149,7 @@ class GridMap extends Component {
     ReactTooltip.rebuild();
     setQueryStringValue('e', this.props.grid.remainingEnergy);
     setQueryStringValue('o', this.props.grid.orbSpent);
-    // console.log('did update', gridUrlLookUpData);
+    // console.log('did update', gridUrlLookUpData); // TODO: refactor
   }
 
   componentWillUnmount() {
@@ -426,6 +427,7 @@ class GridMap extends Component {
         }
       }
 
+      // TODO: refactor
       // gridUrlLookUpData[cell.cellId] = {
       //   cellId: cell.cellId,
       //   name: nameWithSyncLvRequirement || moveName,
