@@ -396,7 +396,7 @@ class GridMap extends Component {
         {this.state.screenWidth >= 960 &&
         this.props.grid.gridData.energy !== undefined ? (
           <ReactTooltip effect="solid" id="skillTooltip">
-            <ul style={{ margin: 0, padding: 0 }}>
+            <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
               <li>{this.props.grid.gridData.name}</li>
               <li>Energy: {this.props.grid.gridData.energy}</li>
               {this.props.grid.gridData.description ? (
