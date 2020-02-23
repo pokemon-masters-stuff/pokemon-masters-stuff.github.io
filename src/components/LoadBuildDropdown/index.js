@@ -29,6 +29,7 @@ function LoadBuildDropdown(props) {
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
+  const [showClearIcon, setShowClearIcon] = React.useState(false);
 
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
@@ -36,6 +37,14 @@ function LoadBuildDropdown(props) {
 
   const handleChange = event => {
     onChangeHandler(event.target.value);
+  };
+
+  const handleOpen = () => {
+    setShowClearIcon(true);
+  };
+
+  const handleClose = () => {
+    setShowClearIcon(false);
   };
 
   const handleDelete = (buildId, event) => {
@@ -58,6 +67,8 @@ function LoadBuildDropdown(props) {
         labelWidth={labelWidth}
         value={selectedBuildId}
         onChange={handleChange}
+        onOpen={handleOpen}
+        onClose={handleClose}
       >
         {Boolean(savedBuilds.length) &&
           savedBuilds.map(
@@ -65,12 +76,14 @@ function LoadBuildDropdown(props) {
               build.pokemon === selectedPokemon && (
                 <MenuItem key={build.id} value={build.id}>
                   {build.name}
-                  <IconButton
-                    onClick={handleDelete.bind(this, build.id)}
-                    style={{ marginLeft: 'auto', padding: 0 }}
-                  >
-                    <HighlightOffIcon />
-                  </IconButton>
+                  {showClearIcon ? (
+                    <IconButton
+                      onClick={handleDelete.bind(this, build.id)}
+                      style={{ marginLeft: 'auto', padding: 0 }}
+                    >
+                      <HighlightOffIcon />
+                    </IconButton>
+                  ) : null}
                 </MenuItem>
               )
           )}
