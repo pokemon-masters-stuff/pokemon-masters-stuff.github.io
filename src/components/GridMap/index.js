@@ -52,6 +52,12 @@ import {
   resetGrids
 } from '../../actions/actionCreators';
 import styles from './styles';
+import {
+  getGridQueryStringValue,
+  filterGridQueryStringValue,
+  setGridQueryStringValue,
+  setQueryStringValue
+} from '../../queryString';
 
 const allSvgLinks = {
   pikachuSvgLink,
@@ -107,10 +113,20 @@ class GridMap extends Component {
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
+    // translate url's grid array into cellId, and then log them into the selectedCellById state
   }
+
+  // loadUrlGridData() {
+  //   let lastTwoDigitsArray=getGridQueryStringValue('grid').map((id) => {
+
+  //   }
+  //   )
+  // }
 
   componentDidUpdate() {
     ReactTooltip.rebuild();
+    setQueryStringValue('e', this.props.grid.remainingEnergy);
+    setQueryStringValue('o', this.props.grid.orbSpent);
   }
 
   componentWillUnmount() {
@@ -180,9 +196,14 @@ class GridMap extends Component {
     if (!this.props.grid.selectedCellsById[data.cellId]) {
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
+      setGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
+      console.log(getGridQueryStringValue('grid'));
     } else {
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
+      filterGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
+
+      console.log(getGridQueryStringValue('grid'));
     }
   }
 
@@ -458,23 +479,23 @@ class GridMap extends Component {
             spacing={1.1}
             origin={{ x: 0, y: 0 }}
           >
-           <Hexagon
-            q={0}
-            r={0}
-            s={0}
-            fill={`url(#${this.props.pokemon})`}
-            data={{ cellId: 0 }}
-            className={'center-grid'}
-          >
-            {this.renderCenterGridText(classes)}
-          </Hexagon>
+            <Hexagon
+              q={0}
+              r={0}
+              s={0}
+              fill={`url(#${this.props.pokemon})`}
+              data={{ cellId: 0 }}
+              className={'center-grid'}
+            >
+              {this.renderCenterGridText(classes)}
+            </Hexagon>
             {this.renderHexagonCells()}
           </Layout>
           <Pattern
-          id={this.props.pokemon}
-          link={allSvgLinks[`${this.props.pokemon}SvgLink`]}
-          size={{ x: 10, y: 10 }}
-        />
+            id={this.props.pokemon}
+            link={allSvgLinks[`${this.props.pokemon}SvgLink`]}
+            size={{ x: 10, y: 10 }}
+          />
         </HexGrid>
         {this.state.screenWidth >= 960 &&
         this.props.grid.gridData.energy !== undefined ? (
