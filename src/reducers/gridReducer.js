@@ -89,10 +89,6 @@ export default function(state = initialState, action) {
         }
       };
     case LOAD_SELECTED_BUILD:
-      console.log(
-        'state.savedBuilds.byIds[action.payload.buildId].selectedCellsById',
-        state.savedBuilds.byIds[action.payload.buildId].selectedCellsById
-      );
       return {
         ...state,
         selectedCellsById:
@@ -123,7 +119,6 @@ export default function(state = initialState, action) {
         }
       };
     case LOAD_GRID_FROM_URL:
-      console.log('load reducer', action);
       return {
         ...state,
         selectedCellsById: {
