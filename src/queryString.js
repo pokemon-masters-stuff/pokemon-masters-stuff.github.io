@@ -1,11 +1,5 @@
 import qs from 'query-string';
-
-function arrayRemove(arr, value) {
-  return arr.filter(function(element) {
-    return element != value;
-  });
-}
-
+//TODO: refactor
 const setQueryStringWithoutPageReload = qsValue => {
   const newurl =
     window.location.protocol +
@@ -74,14 +68,15 @@ export const filterGridQueryStringValue = (
   queryString = window.location.search
 ) => {
   const values = qs.parse(queryString, { arrayFormat: 'comma' });
+
   let gridArray = values.grid
     ? Array.isArray(values.grid)
       ? values.grid
-      : values.grid.split(' ')
+      : values.grid.split(',')
     : [];
-
-  gridArray = arrayRemove(gridArray, value);
-
+  gridArray = gridArray.filter(element => {
+    return element !== value;
+  });
   const newQsValue = qs.stringify(
     {
       ...values,
