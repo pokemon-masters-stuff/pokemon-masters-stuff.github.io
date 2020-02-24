@@ -110,3 +110,13 @@ svg .center-grid {
 svg g:hover .center-grid {
   fill-opacity: 1;
 }
+
+.tooltip {
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
