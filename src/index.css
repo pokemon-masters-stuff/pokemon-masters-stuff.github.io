@@ -29,13 +29,6 @@ a {
   text-decoration: none;
 }
 
-.grid-data-display {
-  margin-left: 11.5rem;
-  margin-top: -8rem;
-  width: 27rem;
-  font-size: 0.8rem;
-}
-
 .energy-inside-grid {
   margin-top: 10rem;
   /* make text unselectable */
