@@ -81,7 +81,7 @@ export default {
   },
   1000000013: {
     cellId: 1000000013,
-    name: 'Dire Hit +↵MP Refresh 3 [Sync Lv2]',
+    name: 'Dire Hit + MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -130,7 +130,7 @@ export default {
   },
   1000000021: {
     cellId: 1000000021,
-    name: 'My Destiny!↵MP Refresh 3',
+    name: 'My Destiny! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -262,7 +262,7 @@ export default {
   },
   1000000042: {
     cellId: 1000000042,
-    name: 'My Destiny!↵Stat’s Quo 4 [Sync Lv2]',
+    name: 'My Destiny! Stat’s Quo 4 [Sync Lv2]',
     description:
       'Has a good chance of returning the user’s lowered stats to normal when a move is successful.',
     energy: 10
@@ -287,13 +287,13 @@ export default {
   },
   1000000046: {
     cellId: 1000000046,
-    name: 'Living Legend↵Blast Burn: Power ↑ +25 [Sync Lv3]',
+    name: 'Living Legend Blast Burn: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1000000047: {
     cellId: 1000000047,
-    name: 'Living Legend↵Blast Burn: Power ↑ +25 [Sync Lv3]',
+    name: 'Living Legend Blast Burn: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -377,7 +377,7 @@ export default {
   },
   1000600013: {
     cellId: 1000600013,
-    name: 'Fire Punch↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Fire Punch Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -408,7 +408,7 @@ export default {
   },
   1000600018: {
     cellId: 1000600018,
-    name: 'We’re On Fire!↵MP Refresh 3',
+    name: 'We’re On Fire! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -501,7 +501,7 @@ export default {
   },
   1000600033: {
     cellId: 1000600033,
-    name: 'Fire Blast↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Fire Blast Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 7
@@ -526,7 +526,7 @@ export default {
   },
   1000600037: {
     cellId: 1000600037,
-    name: 'Dire Hit↵MP Refresh 3',
+    name: 'Dire Hit MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -583,13 +583,13 @@ export default {
   },
   1000600046: {
     cellId: 1000600046,
-    name: 'Burn-It-All↵Overheat: Power ↑ +25 [Sync Lv3]',
+    name: 'Burn-It-All Overheat: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1000600047: {
     cellId: 1000600047,
-    name: 'Burn-It-All↵Overheat: Power ↑ +25 [Sync Lv3]',
+    name: 'Burn-It-All Overheat: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -662,7 +662,7 @@ export default {
   },
   1000700011: {
     cellId: 1000700011,
-    name: 'X Defense↵MP Refresh 3 [Sync Lv2]',
+    name: 'X Defense MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -713,7 +713,7 @@ export default {
   },
   1000700019: {
     cellId: 1000700019,
-    name: 'Astonish↵Aggravation 1',
+    name: 'Astonish Aggravation 1',
     description:
       'Raises the chance of inflicting the flinching, con…d condition with the additional effects of moves.',
     energy: 10
@@ -750,7 +750,7 @@ export default {
   },
   1000700025: {
     cellId: 1000700025,
-    name: 'Astonish↵Move Gauge Refresh 4 [Sync Lv3]',
+    name: 'Astonish Move Gauge Refresh 4 [Sync Lv3]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -769,7 +769,7 @@ export default {
   },
   1000700028: {
     cellId: 1000700028,
-    name: 'Over Here!↵MP Refresh 2',
+    name: 'Over Here! MP Refresh 2',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
@@ -788,7 +788,7 @@ export default {
   },
   1000700031: {
     cellId: 1000700031,
-    name: 'Over Here!↵MP Refresh 2 [Sync Lv2]',
+    name: 'Over Here! MP Refresh 2 [Sync Lv2]',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
@@ -821,7 +821,7 @@ export default {
   },
   1000700036: {
     cellId: 1000700036,
-    name: 'Sandstorm↵MP Refresh 3',
+    name: 'Sandstorm MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -846,7 +846,7 @@ export default {
   },
   1000700040: {
     cellId: 1000700040,
-    name: 'Sandstorm↵Flag Bearer 9',
+    name: 'Sandstorm Flag Bearer 9',
     description:
       'Raises the Attack of all allied sync pairs when the user’s Pokémon uses a move.',
     energy: 10
@@ -859,21 +859,21 @@ export default {
   },
   1000700042: {
     cellId: 1000700042,
-    name: 'Sandstorm↵Focus Group 4 [Sync Lv2]',
+    name: 'Sandstorm Focus Group 4 [Sync Lv2]',
     description:
       'Has a good chance of raising the critical-hit rate…d sync pairs when the user’s Pokémon uses a move.',
     energy: 7
   },
   1000700043: {
     cellId: 1000700043,
-    name: 'Sandstorm↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Sandstorm Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
   },
   1000700044: {
     cellId: 1000700044,
-    name: 'Sandstorm↵Move Gauge Refresh 3 [Sync Lv3]',
+    name: 'Sandstorm Move Gauge Refresh 3 [Sync Lv3]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -886,13 +886,13 @@ export default {
   },
   1000700046: {
     cellId: 1000700046,
-    name: 'Never-Ending↵Royal Nightmare: Power ↑ +25 [Sync Lv3]',
+    name: 'Never-Ending Royal Nightmare: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1000700047: {
     cellId: 1000700047,
-    name: 'Never-Ending↵Royal Nightmare: Power ↑ +25 [Sync Lv3]',
+    name: 'Never-Ending Royal Nightmare: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -976,28 +976,28 @@ export default {
   },
   1000800013: {
     cellId: 1000800013,
-    name: 'Energy Ball↵On a Roll 2 [Sync Lv2]',
+    name: 'Energy Ball On a Roll 2 [Sync Lv2]',
     description:
       'Raises the chance of lowering stat values with the additional effects of moves.',
     energy: 8
   },
   1000800014: {
     cellId: 1000800014,
-    name: 'Energy Ball↵Move Gauge Refresh 2 [Sync Lv3]',
+    name: 'Energy Ball Move Gauge Refresh 2 [Sync Lv3]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 4
   },
   1000800015: {
     cellId: 1000800015,
-    name: 'Energy Ball↵Move Gauge Refresh 2 [Sync Lv2]',
+    name: 'Energy Ball Move Gauge Refresh 2 [Sync Lv2]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
   },
   1000800016: {
     cellId: 1000800016,
-    name: 'Energy Ball↵Move Gauge Refresh 2 [Sync Lv3]',
+    name: 'Energy Ball Move Gauge Refresh 2 [Sync Lv3]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -1022,7 +1022,7 @@ export default {
   },
   1000800020: {
     cellId: 1000800020,
-    name: 'Stun Spore↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Stun Spore Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 4
@@ -1041,14 +1041,14 @@ export default {
   },
   1000800023: {
     cellId: 1000800023,
-    name: 'Stun Spore↵Satisfied Snarl 9 [Sync Lv2]',
+    name: 'Stun Spore Satisfied Snarl 9 [Sync Lv2]',
     description:
       'Lowers the target’s Sp. Atk when a move targeting that opponent is successful.',
     energy: 9
   },
   1000800024: {
     cellId: 1000800024,
-    name: 'Energy Ball↵On a Roll 2 [Sync Lv3]',
+    name: 'Energy Ball On a Roll 2 [Sync Lv3]',
     description:
       'Raises the chance of lowering stat values with the additional effects of moves.',
     energy: 8
@@ -1067,14 +1067,14 @@ export default {
   },
   1000800027: {
     cellId: 1000800027,
-    name: 'X Sp. Def↵MP Refresh 3',
+    name: 'X Sp. Def MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
   },
   1000800028: {
     cellId: 1000800028,
-    name: 'Stun Spore↵Flabbergast 2',
+    name: 'Stun Spore Flabbergast 2',
     description:
       'Occasionally leaves the target confused if a move is successful.',
     energy: 9
@@ -1099,7 +1099,7 @@ export default {
   },
   1000800032: {
     cellId: 1000800032,
-    name: 'Pour It On!↵MP Refresh 3 [Sync Lv3]',
+    name: 'Pour It On! MP Refresh 3 [Sync Lv3]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -1124,7 +1124,7 @@ export default {
   },
   1000800036: {
     cellId: 1000800036,
-    name: 'Stun Spore↵Move Gauge Refresh 3',
+    name: 'Stun Spore Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 4
@@ -1186,13 +1186,13 @@ export default {
   },
   1000800046: {
     cellId: 1000800046,
-    name: 'Nature-Loving↵Petal Dance : Power ↑ +25 [Sync Lv3]',
+    name: 'Nature-Loving Petal Dance : Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1000800047: {
     cellId: 1000800047,
-    name: 'Nature-Loving↵Petal Dance : Power ↑ +25 [Sync Lv3]',
+    name: 'Nature-Loving Petal Dance : Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -1276,7 +1276,7 @@ export default {
   },
   1002800013: {
     cellId: 1002800013,
-    name: 'Dragon Breath↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Dragon Breath Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -1295,7 +1295,7 @@ export default {
   },
   1002800016: {
     cellId: 1002800016,
-    name: 'Dragon Breath↵Hostile Environment 1 [Sync Lv3]',
+    name: 'Dragon Breath Hostile Environment 1 [Sync Lv3]',
     description:
       'Raises the chance of inflicting status conditions with the additional effects of moves.',
     energy: 11
@@ -1412,14 +1412,14 @@ export default {
   },
   1002800035: {
     cellId: 1002800035,
-    name: 'Draco Meteor↵Stat’s Quo 4 [Sync Lv3]',
+    name: 'Draco Meteor Stat’s Quo 4 [Sync Lv3]',
     description:
       'Has a good chance of returning the user’s lowered stats to normal when a move is successful.',
     energy: 10
   },
   1002800036: {
     cellId: 1002800036,
-    name: 'Draco Meteor↵Move Gauge Refresh 4 [Sync Lv3]',
+    name: 'Draco Meteor Move Gauge Refresh 4 [Sync Lv3]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -1445,14 +1445,14 @@ export default {
   },
   1002800040: {
     cellId: 1002800040,
-    name: 'X Sp. Atk↵MP Refresh 3',
+    name: 'X Sp. Atk MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
   },
   1002800041: {
     cellId: 1002800041,
-    name: 'Victory Is Mine!↵MP Refresh 3 [Sync Lv2]',
+    name: 'Victory Is Mine! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -1479,19 +1479,19 @@ export default {
   },
   1002800045: {
     cellId: 1002800045,
-    name: 'Draco Meteor↵Paralysis Synergy 5 [Sync Lv3]',
+    name: 'Draco Meteor Paralysis Synergy 5 [Sync Lv3]',
     description: 'Powers up moves when the target is paralyzed.',
     energy: 10
   },
   1002800046: {
     cellId: 1002800046,
-    name: 'No Mercy↵Dragon Pulse: Power ↑ +25 [Sync Lv3]',
+    name: 'No Mercy Dragon Pulse: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1002800047: {
     cellId: 1002800047,
-    name: 'No Mercy↵Dragon Pulse: Power ↑ +25 [Sync Lv3]',
+    name: 'No Mercy Dragon Pulse: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -1557,7 +1557,7 @@ export default {
   },
   1002900010: {
     cellId: 1002900010,
-    name: 'X Sp. Atk↵MP Refresh 3',
+    name: 'X Sp. Atk MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -1576,7 +1576,7 @@ export default {
   },
   1002900013: {
     cellId: 1002900013,
-    name: 'Ember↵Move Gauge Refresh 4 [Sync Lv2]',
+    name: 'Ember Move Gauge Refresh 4 [Sync Lv2]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -1613,7 +1613,7 @@ export default {
   },
   1002900019: {
     cellId: 1002900019,
-    name: 'Will-O-Wisp↵Move Gauge Refresh 3',
+    name: 'Will-O-Wisp Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -1668,7 +1668,7 @@ export default {
   },
   1002900028: {
     cellId: 1002900028,
-    name: 'Too Hot to Handle!↵MP Refresh 3',
+    name: 'Too Hot to Handle! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -1719,7 +1719,7 @@ export default {
   },
   1002900036: {
     cellId: 1002900036,
-    name: 'Will-O-Wisp↵Move Gauge Refresh 3',
+    name: 'Will-O-Wisp Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -1782,13 +1782,13 @@ export default {
   },
   1002900046: {
     cellId: 1002900046,
-    name: 'Fiery Passion↵Overheat: Power ↑ +25 [Sync Lv3]',
+    name: 'Fiery Passion Overheat: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1002900047: {
     cellId: 1002900047,
-    name: 'Fiery Passion↵Overheat: Power ↑ +25 [Sync Lv3]',
+    name: 'Fiery Passion Overheat: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -1872,7 +1872,7 @@ export default {
   },
   1003200013: {
     cellId: 1003200013,
-    name: 'Ice Beam↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Ice Beam Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -1940,7 +1940,7 @@ export default {
   },
   1003200024: {
     cellId: 1003200024,
-    name: 'I’ll Teach↵You a Lesson!↵MP Refresh 3 [Sync Lv2]',
+    name: 'I’ll Teach You a Lesson! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -2013,7 +2013,7 @@ export default {
   },
   1003200036: {
     cellId: 1003200036,
-    name: 'Icy Wind↵Move Gauge Refresh 4 [Sync Lv3]',
+    name: 'Icy Wind Move Gauge Refresh 4 [Sync Lv3]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 8
@@ -2033,7 +2033,7 @@ export default {
   },
   1003200039: {
     cellId: 1003200039,
-    name: 'Dire Hit↵MP Refresh 3',
+    name: 'Dire Hit MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -2077,13 +2077,13 @@ export default {
   },
   1003200046: {
     cellId: 1003200046,
-    name: 'Winter’s Lesson↵Aurora Beam: Power ↑ +25 [Sync Lv3]',
+    name: 'Winter’s Lesson Aurora Beam: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1003200047: {
     cellId: 1003200047,
-    name: 'Winter’s Lesson↵Aurora Beam: Power ↑ +25 [Sync Lv3]',
+    name: 'Winter’s Lesson Aurora Beam: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -2167,7 +2167,7 @@ export default {
   },
   1004800013: {
     cellId: 1004800013,
-    name: 'All or Nothing!↵MP Refresh 3 [Sync Lv2]',
+    name: 'All or Nothing! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -2210,14 +2210,14 @@ export default {
   },
   1004800020: {
     cellId: 1004800020,
-    name: 'Snatch↵MP Refresh 2 [Sync Lv2]',
+    name: 'Snatch MP Refresh 2 [Sync Lv2]',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 5
   },
   1004800021: {
     cellId: 1004800021,
-    name: 'Night Slash↵Move Gauge Refresh 3',
+    name: 'Night Slash Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -2230,21 +2230,21 @@ export default {
   },
   1004800023: {
     cellId: 1004800023,
-    name: 'Snatch↵Catalytic Cure 4 [Sync Lv2]',
+    name: 'Snatch Catalytic Cure 4 [Sync Lv2]',
     description:
       'Has a good chance of restoring the user’s HP when a move is successful.',
     energy: 7
   },
   1004800024: {
     cellId: 1004800024,
-    name: 'Snatch↵Move Gauge Refresh 4 [Sync Lv3]',
+    name: 'Snatch Move Gauge Refresh 4 [Sync Lv3]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
   },
   1004800025: {
     cellId: 1004800025,
-    name: 'Snatch↵Catalytic Cure 4 [Sync Lv3]',
+    name: 'Snatch Catalytic Cure 4 [Sync Lv3]',
     description:
       'Has a good chance of restoring the user’s HP when a move is successful.',
     energy: 7
@@ -2270,7 +2270,7 @@ export default {
   },
   1004800029: {
     cellId: 1004800029,
-    name: 'Dark Pulse↵Move Gauge Refresh 3',
+    name: 'Dark Pulse Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -2303,7 +2303,7 @@ export default {
   },
   1004800034: {
     cellId: 1004800034,
-    name: 'Snatch↵Move Gauge Refresh 4 [Sync Lv3]',
+    name: 'Snatch Move Gauge Refresh 4 [Sync Lv3]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -2353,14 +2353,14 @@ export default {
   },
   1004800042: {
     cellId: 1004800042,
-    name: 'Snatch↵MP Refresh 2 [Sync Lv2]',
+    name: 'Snatch MP Refresh 2 [Sync Lv2]',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 5
   },
   1004800043: {
     cellId: 1004800043,
-    name: 'Snatch↵Propulsion 4 [Sync Lv2]',
+    name: 'Snatch Propulsion 4 [Sync Lv2]',
     description:
       'Has a good of reducing the user’s sync move countdown by one when the user’s move is successful.',
     energy: 10
@@ -2380,13 +2380,13 @@ export default {
   },
   1004800046: {
     cellId: 1004800046,
-    name: 'Card Shark↵Night Slash: Power ↑ +25 [Sync Lv3]',
+    name: 'Card Shark Night Slash: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1004800047: {
     cellId: 1004800047,
-    name: 'Card Shark↵Night Slash: Power ↑ +25 [Sync Lv3]',
+    name: 'Card Shark Night Slash: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -2470,7 +2470,7 @@ export default {
   },
   1006200013: {
     cellId: 1006200013,
-    name: 'Snarl↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Snarl Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -2507,7 +2507,7 @@ export default {
   },
   1006200019: {
     cellId: 1006200019,
-    name: 'Entertain Me!↵MP Refresh 3',
+    name: 'Entertain Me! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -2532,14 +2532,14 @@ export default {
   },
   1006200023: {
     cellId: 1006200023,
-    name: 'Dire Hit +↵MP Refresh 3 [Sync Lv2]',
+    name: 'Dire Hit + MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
   },
   1006200024: {
     cellId: 1006200024,
-    name: 'Dark Pulse↵Overpower [Sync Lv2]',
+    name: 'Dark Pulse Overpower [Sync Lv2]',
     description:
       'The more the opponent’s Sp. Atk has been lowered, the more it powers up moves.',
     energy: 8
@@ -2558,7 +2558,7 @@ export default {
   },
   1006200027: {
     cellId: 1006200027,
-    name: 'Bite↵Critical Countdown 2 [Sync Lv3]',
+    name: 'Bite Critical Countdown 2 [Sync Lv3]',
     description:
       'Occasionally reduces the sync move countdown by one when the user lands a critical hit.',
     energy: 10
@@ -2595,7 +2595,7 @@ export default {
   },
   1006200033: {
     cellId: 1006200033,
-    name: 'Dark Pulse↵Move Gauge Refresh 4 [Sync Lv2]',
+    name: 'Dark Pulse Move Gauge Refresh 4 [Sync Lv2]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -2644,14 +2644,14 @@ export default {
   },
   1006200041: {
     cellId: 1006200041,
-    name: 'Bite↵Aggravation 1 [Sync Lv2]',
+    name: 'Bite Aggravation 1 [Sync Lv2]',
     description:
       'Raises the chance of inflicting the flinching, con…d condition with the additional effects of moves.',
     energy: 10
   },
   1006200042: {
     cellId: 1006200042,
-    name: 'Bite↵Toxic Chance 4 [Sync Lv2]',
+    name: 'Bite Toxic Chance 4 [Sync Lv2]',
     description:
       'Has a good chance of leaving the target poisoned when a move targeting an opponent is successful.',
     energy: 10
@@ -2678,13 +2678,13 @@ export default {
   },
   1006200046: {
     cellId: 1006200046,
-    name: 'Beguiling↵Dark Pulse: Power ↑ +25 [Sync Lv3]',
+    name: 'Beguiling Dark Pulse: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1006200047: {
     cellId: 1006200047,
-    name: 'Beguiling↵Dark Pulse: Power ↑ +25 [Sync Lv3]',
+    name: 'Beguiling Dark Pulse: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -2750,7 +2750,7 @@ export default {
   },
   1009000010: {
     cellId: 1009000010,
-    name: 'Meteor Mash↵Move Gauge Refresh 2',
+    name: 'Meteor Mash Move Gauge Refresh 2',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -2769,7 +2769,7 @@ export default {
   },
   1009000013: {
     cellId: 1009000013,
-    name: 'Meteor Mash↵Move Gauge Refresh 2 [Sync Lv2]',
+    name: 'Meteor Mash Move Gauge Refresh 2 [Sync Lv2]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -2788,7 +2788,7 @@ export default {
   },
   1009000016: {
     cellId: 1009000016,
-    name: 'Meteor Mash↵Swag Bag 1 [Sync Lv3]',
+    name: 'Meteor Mash Swag Bag 1 [Sync Lv3]',
     description:
       'Meteor Mash Raises the chance of raising stat values with the additional effects of moves.',
     energy: 10
@@ -2807,7 +2807,7 @@ export default {
   },
   1009000019: {
     cellId: 1009000019,
-    name: 'X Attack↵MP Refresh 3',
+    name: 'X Attack MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -2832,7 +2832,7 @@ export default {
   },
   1009000023: {
     cellId: 1009000023,
-    name: 'Best There Is!↵MP Refresh 3 [Sync Lv2]',
+    name: 'Best There Is! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -2854,7 +2854,7 @@ export default {
     cellId: 1009000026,
     name: 'Natural Remedy [Sync Lv3]',
     description:
-      'Once per battle, removes all status conditions fro…n the user is inflicted by any status condition.↵',
+      'Once per battle, removes all status conditions fro…n the user is inflicted by any status condition. ',
     energy: 4
   },
   1009000027: {
@@ -2896,14 +2896,14 @@ export default {
   },
   1009000033: {
     cellId: 1009000033,
-    name: 'Iron Head↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Iron Head Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
   },
   1009000034: {
     cellId: 1009000034,
-    name: 'Iron Head↵Aggravation 1 [Sync Lv3]',
+    name: 'Iron Head Aggravation 1 [Sync Lv3]',
     description:
       'Raises the chance of inflicting the flinching, con…d condition with the additional effects of moves.',
     energy: 10
@@ -2972,20 +2972,20 @@ export default {
   },
   1009000045: {
     cellId: 1009000045,
-    name: 'Bullet Punch↵Eagle Eye 9 [Sync Lv3]',
+    name: 'Bullet Punch Eagle Eye 9 [Sync Lv3]',
     description:
       'Bullet Punch Raises the user’s critical-hit rate when the user’s Pokémon uses a move.',
     energy: 10
   },
   1009000046: {
     cellId: 1009000046,
-    name: 'Solid Steel↵Meteor Mash: Power ↑ +25 [Sync Lv3]',
+    name: 'Solid Steel Meteor Mash: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1009000047: {
     cellId: 1009000047,
-    name: 'Solid Steel↵Meteor Mash: Power ↑ +25 [Sync Lv3]',
+    name: 'Solid Steel Meteor Mash: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -3051,7 +3051,7 @@ export default {
   },
   1009200010: {
     cellId: 1009200010,
-    name: 'Dragon Claw↵Move Gauge Refresh 2',
+    name: 'Dragon Claw Move Gauge Refresh 2',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -3070,7 +3070,7 @@ export default {
   },
   1009200013: {
     cellId: 1009200013,
-    name: 'Dragon Claw↵Move Gauge Refresh 2 [Sync Lv2]',
+    name: 'Dragon Claw Move Gauge Refresh 2 [Sync Lv2]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -3089,7 +3089,7 @@ export default {
   },
   1009200016: {
     cellId: 1009200016,
-    name: 'Dragon Claw↵Zero In 1 [Sync Lv3]',
+    name: 'Dragon Claw Zero In 1 [Sync Lv3]',
     description: 'Critical hits land more easily when an attack move is used.',
     energy: 10
   },
@@ -3125,7 +3125,7 @@ export default {
   },
   1009200022: {
     cellId: 1009200022,
-    name: 'You’re Going↵Down!↵Durable 4',
+    name: 'You’re Going Down! Durable 4',
     description:
       'Has a good chance of making the user able to endure the next hit it takes when a move is successful.',
     energy: 8
@@ -3194,7 +3194,7 @@ export default {
   },
   1009200033: {
     cellId: 1009200033,
-    name: 'Outrage↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Outrage Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 7
@@ -3207,13 +3207,13 @@ export default {
   },
   1009200035: {
     cellId: 1009200035,
-    name: 'Outrage↵Confusion Boon 5 [Sync Lv3]',
+    name: 'Outrage Confusion Boon 5 [Sync Lv3]',
     description: 'Powers up moves when the user is confused.',
     energy: 8
   },
   1009200036: {
     cellId: 1009200036,
-    name: 'Outrage↵Move Gauge Refresh 3 [Sync Lv3]',
+    name: 'Outrage Move Gauge Refresh 3 [Sync Lv3]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 7
@@ -3239,14 +3239,14 @@ export default {
   },
   1009200040: {
     cellId: 1009200040,
-    name: 'X Attack↵MP Refresh 3',
+    name: 'X Attack MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
   },
   1009200041: {
     cellId: 1009200041,
-    name: 'You’re Going↵Down!↵MP Refresh 3 [Sync Lv2]',
+    name: 'You’re Going Down! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -3278,13 +3278,13 @@ export default {
   },
   1009200046: {
     cellId: 1009200046,
-    name: 'Dragon Sage↵Outrage: Power ↑ +25 [Sync Lv3]',
+    name: 'Dragon Sage Outrage: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1009200047: {
     cellId: 1009200047,
-    name: 'Dragon Sage↵Outrage: Power ↑ +25 [Sync Lv3]',
+    name: 'Dragon Sage Outrage: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -3350,7 +3350,7 @@ export default {
   },
   1009800010: {
     cellId: 1009800010,
-    name: 'Thunder Shock↵Move Gauge Refresh 2',
+    name: 'Thunder Shock Move Gauge Refresh 2',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -3369,7 +3369,7 @@ export default {
   },
   1009800013: {
     cellId: 1009800013,
-    name: 'Thunder Shock↵Move Gauge Refresh 2 [Sync Lv2]',
+    name: 'Thunder Shock Move Gauge Refresh 2 [Sync Lv2]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -3388,7 +3388,7 @@ export default {
   },
   1009800016: {
     cellId: 1009800016,
-    name: 'Thunder Shock↵Ramming Speed [Sync Lv3]',
+    name: 'Thunder Shock Ramming Speed [Sync Lv3]',
     description:
       'The more the user’s Speed has been raised, the more it powers up moves.',
     energy: 8
@@ -3401,7 +3401,7 @@ export default {
   },
   1009800018: {
     cellId: 1009800018,
-    name: 'Feel the↵Alolan Breeze!↵MP Refresh 3',
+    name: 'Feel the Alolan Breeze! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -3512,7 +3512,7 @@ export default {
   },
   1009800036: {
     cellId: 1009800036,
-    name: 'Discharge↵Move Gauge Refresh 3 [Sync Lv3]',
+    name: 'Discharge Move Gauge Refresh 3 [Sync Lv3]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 7
@@ -3531,7 +3531,7 @@ export default {
   },
   1009800039: {
     cellId: 1009800039,
-    name: 'X Sp. Atk↵MP Refresh 3',
+    name: 'X Sp. Atk MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -3576,13 +3576,13 @@ export default {
   },
   1009800046: {
     cellId: 1009800046,
-    name: 'Endless Summer↵Gigavolt Havoc: Power ↑ +25 [Sync Lv3]',
+    name: 'Endless Summer Gigavolt Havoc: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1009800047: {
     cellId: 1009800047,
-    name: 'Endless Summer↵Gigavolt Havoc: Power ↑ +25 [Sync Lv3]',
+    name: 'Endless Summer Gigavolt Havoc: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -3678,14 +3678,14 @@ export default {
   },
   1010100015: {
     cellId: 1010100015,
-    name: 'Giga Drain↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Giga Drain Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
   },
   1010100016: {
     cellId: 1010100016,
-    name: 'Energy Ball↵Move Gauge Refresh 3 [Sync Lv3]',
+    name: 'Energy Ball Move Gauge Refresh 3 [Sync Lv3]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -3734,7 +3734,7 @@ export default {
   },
   1010100024: {
     cellId: 1010100024,
-    name: 'Giga Drain↵Master Healer 2 [Sync Lv3]',
+    name: 'Giga Drain Master Healer 2 [Sync Lv3]',
     description:
       'Increases the amount of HP restored by the user’s healing moves.',
     energy: 10
@@ -3765,7 +3765,7 @@ export default {
   },
   1010100029: {
     cellId: 1010100029,
-    name: 'Time to↵Energize!↵MP Refresh 2',
+    name: 'Time to Energize! MP Refresh 2',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
@@ -3778,14 +3778,14 @@ export default {
   },
   1010100031: {
     cellId: 1010100031,
-    name: 'X Sp. Atk All↵MP Refresh 2 [Sync Lv2]',
+    name: 'X Sp. Atk All MP Refresh 2 [Sync Lv2]',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
   },
   1010100032: {
     cellId: 1010100032,
-    name: 'Time to↵Energize!↵MP Refresh 2',
+    name: 'Time to Energize! MP Refresh 2',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
@@ -3798,14 +3798,14 @@ export default {
   },
   1010100034: {
     cellId: 1010100034,
-    name: 'X Sp. Atk All↵MP Refresh 2 [Sync Lv3]',
+    name: 'X Sp. Atk All MP Refresh 2 [Sync Lv3]',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
   },
   1010100035: {
     cellId: 1010100035,
-    name: 'Time to↵Energize!↵Selfless [Sync Lv2]',
+    name: 'Time to Energize! Selfless [Sync Lv2]',
     description:
       'Makes opponents target the user for a short time when a move is successful in a pinch.',
     energy: 5
@@ -3819,7 +3819,7 @@ export default {
   },
   1010100037: {
     cellId: 1010100037,
-    name: 'Energy Ball↵On a Roll 1',
+    name: 'Energy Ball On a Roll 1',
     description:
       'Raises the chance of lowering stat values with the additional effects of moves.',
     energy: 7
@@ -3875,13 +3875,13 @@ export default {
   },
   1010100046: {
     cellId: 1010100046,
-    name: 'Shoot for the↵Stars Leaf Storm: Power ↑ +25 [Sync Lv3]',
+    name: 'Shoot for the Stars Leaf Storm: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1010100047: {
     cellId: 1010100047,
-    name: 'Shoot for the↵Stars Leaf Storm: Power ↑ +25 [Sync Lv3]',
+    name: 'Shoot for the Stars Leaf Storm: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -3947,7 +3947,7 @@ export default {
   },
   1010610010: {
     cellId: 1010610010,
-    name: 'Breathtaking!↵MP Refresh 3',
+    name: 'Breathtaking! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -3961,7 +3961,7 @@ export default {
   },
   1010610012: {
     cellId: 1010610012,
-    name: 'Breathtaking!↵Selfless',
+    name: 'Breathtaking! Selfless',
     description:
       'Makes opponents target the user for a short time when a move is successful in a pinch.',
     energy: 5
@@ -4011,7 +4011,7 @@ export default {
   },
   1010610020: {
     cellId: 1010610020,
-    name: 'Thunder Shock↵Move Gauge Refresh 3',
+    name: 'Thunder Shock Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 7
@@ -4042,7 +4042,7 @@ export default {
   },
   1010610025: {
     cellId: 1010610025,
-    name: 'Thunder Shock↵Hostile Environment 1 [Sync Lv3]',
+    name: 'Thunder Shock Hostile Environment 1 [Sync Lv3]',
     description:
       'Raises the chance of inflicting status conditions with the additional effects of moves.',
     energy: 8
@@ -4073,14 +4073,14 @@ export default {
   },
   1010610030: {
     cellId: 1010610030,
-    name: 'X Sp. Atk All↵MP Refresh 2',
+    name: 'X Sp. Atk All MP Refresh 2',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
   },
   1010610031: {
     cellId: 1010610031,
-    name: 'X Sp. Atk All↵MP Refresh 2 [Sync Lv2]',
+    name: 'X Sp. Atk All MP Refresh 2 [Sync Lv2]',
     description:
       'Occasionally restores one MP of the move used if the move is successful.',
     energy: 7
@@ -4137,7 +4137,7 @@ export default {
   },
   1010610040: {
     cellId: 1010610040,
-    name: 'Thunder↵Move Gauge Refresh 4',
+    name: 'Thunder Move Gauge Refresh 4',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 7
@@ -4174,13 +4174,13 @@ export default {
   },
   1010610046: {
     cellId: 1010610046,
-    name: 'High Fashion↵Thunderbolt: Power ↑ +25 [Sync Lv3]',
+    name: 'High Fashion Thunderbolt: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1010610047: {
     cellId: 1010610047,
-    name: 'High Fashion↵Thunderbolt: Power ↑ +25 [Sync Lv3]',
+    name: 'High Fashion Thunderbolt: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -4276,14 +4276,14 @@ export default {
   },
   1011400015: {
     cellId: 1011400015,
-    name: 'Psybeam↵Move Gauge Refresh 2 [Sync Lv2]',
+    name: 'Psybeam Move Gauge Refresh 2 [Sync Lv2]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
   },
   1011400016: {
     cellId: 1011400016,
-    name: 'Psybeam↵Move Gauge Refresh 2 [Sync Lv3]',
+    name: 'Psybeam Move Gauge Refresh 2 [Sync Lv3]',
     description:
       'Occasionally increases the user’s move gauge by one when a move is successful.',
     energy: 5
@@ -4308,7 +4308,7 @@ export default {
   },
   1011400020: {
     cellId: 1011400020,
-    name: 'Psychic↵Move Gauge Refresh 4',
+    name: 'Psychic Move Gauge Refresh 4',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 8
@@ -4364,7 +4364,7 @@ export default {
   },
   1011400029: {
     cellId: 1011400029,
-    name: 'Sixth Sense!↵MP Refresh 3',
+    name: 'Sixth Sense! MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -4377,7 +4377,7 @@ export default {
   },
   1011400031: {
     cellId: 1011400031,
-    name: 'Dire Hit All↵MP Refresh 3 [Sync Lv2]',
+    name: 'Dire Hit All MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -4403,14 +4403,14 @@ export default {
   },
   1011400035: {
     cellId: 1011400035,
-    name: 'Dire Hit All↵Critical Squad 1 [Sync Lv2]',
+    name: 'Dire Hit All Critical Squad 1 [Sync Lv2]',
     description:
       'Raises the critical-hit rate of all allied sync pairs when a move is successful.',
     energy: 6
   },
   1011400036: {
     cellId: 1011400036,
-    name: 'Sixth Sense!↵Ramp Up 1 [Sync Lv3]',
+    name: 'Sixth Sense! Ramp Up 1 [Sync Lv3]',
     description: 'Raises the user’s Sp. Atk when a move is successful.',
     energy: 7
   },
@@ -4434,7 +4434,7 @@ export default {
   },
   1011400040: {
     cellId: 1011400040,
-    name: 'Reflect↵MP Refresh 4',
+    name: 'Reflect MP Refresh 4',
     description:
       'Has a good chance of restoring one MP of the move used if the move is successful.',
     energy: 6
@@ -4447,21 +4447,21 @@ export default {
   },
   1011400042: {
     cellId: 1011400042,
-    name: 'Reflect↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Reflect Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
   },
   1011400043: {
     cellId: 1011400043,
-    name: 'Reflect↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Reflect Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 5
   },
   1011400044: {
     cellId: 1011400044,
-    name: 'Reflect↵Pep Rally 2 [Sync Lv3]',
+    name: 'Reflect Pep Rally 2 [Sync Lv3]',
     description:
       'Sharply raises the Speed of all allied sync pairs when a move is successful.',
     energy: 7
@@ -4474,13 +4474,13 @@ export default {
   },
   1011400046: {
     cellId: 1011400046,
-    name: 'ESP Prodigy↵Psywave: Power ↑ +25 [Sync Lv3]',
+    name: 'ESP Prodigy Psywave: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1011400047: {
     cellId: 1011400047,
-    name: 'ESP Prodigy↵Psywave: Power ↑ +25 [Sync Lv3]',
+    name: 'ESP Prodigy Psywave: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
@@ -4534,7 +4534,7 @@ export default {
   },
   1013700008: {
     cellId: 1013700008,
-    name: 'X Speed↵MP Refresh 3 [Sync Lv2]',
+    name: 'X Speed MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -4553,7 +4553,7 @@ export default {
   },
   1013700011: {
     cellId: 1013700011,
-    name: 'Swift↵Move Gauge Refresh 3',
+    name: 'Swift Move Gauge Refresh 3',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -4711,12 +4711,12 @@ export default {
     cellId: 1013700036,
     name: 'Natural Remedy [Sync Lv2]',
     description:
-      'Once per battle, removes all status conditions fro…n the user is inflicted by any status condition.↵',
+      'Once per battle, removes all status conditions fro…n the user is inflicted by any status condition. ',
     energy: 4
   },
   1013700037: {
     cellId: 1013700037,
-    name: 'A World of Dreams!↵MP Refresh 3 [Sync Lv2]',
+    name: 'A World of Dreams! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -4864,14 +4864,14 @@ export default {
   },
   1800000013: {
     cellId: 1800000013,
-    name: 'Jump Start!↵MP Refresh 3 [Sync Lv2]',
+    name: 'Jump Start! MP Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
   },
   1800000014: {
     cellId: 1800000014,
-    name: 'Thunderbolt↵Move Gauge Refresh 3 [Sync Lv2]',
+    name: 'Thunderbolt Move Gauge Refresh 3 [Sync Lv2]',
     description:
       'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -4884,7 +4884,7 @@ export default {
   },
   1800000016: {
     cellId: 1800000016,
-    name: 'Thunder Shock↵Move Gauge Refresh 4 [Sync Lv3]',
+    name: 'Thunder Shock Move Gauge Refresh 4 [Sync Lv3]',
     description:
       'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
     energy: 6
@@ -4921,7 +4921,7 @@ export default {
   },
   1800000022: {
     cellId: 1800000022,
-    name: 'Thunder Shock↵Hostile Environment 1',
+    name: 'Thunder Shock Hostile Environment 1',
     description:
       'Raises the chance of inflicting status conditions with the additional effects of moves.',
     energy: 5
@@ -4940,21 +4940,21 @@ export default {
   },
   1800000025: {
     cellId: 1800000025,
-    name: 'Thunder Shock↵Hostile Environment 1 [Sync Lv2]',
+    name: 'Thunder Shock Hostile Environment 1 [Sync Lv2]',
     description:
       'Raises the chance of inflicting status conditions with the additional effects of moves.',
     energy: 5
   },
   1800000026: {
     cellId: 1800000026,
-    name: 'Thunderbolt↵Hostile Environment 1 [Sync Lv3]',
+    name: 'Thunderbolt Hostile Environment 1 [Sync Lv3]',
     description:
       'Raises the chance of inflicting status conditions with the additional effects of moves.',
     energy: 5
   },
   1800000027: {
     cellId: 1800000027,
-    name: 'Thunder Shock↵Hostile Environment 1 [Sync Lv3]',
+    name: 'Thunder Shock Hostile Environment 1 [Sync Lv3]',
     description:
       'Raises the chance of inflicting status conditions with the additional effects of moves.',
     energy: 5
@@ -5027,7 +5027,7 @@ export default {
   },
   1800000039: {
     cellId: 1800000039,
-    name: 'Potion↵MP Refresh 3',
+    name: 'Potion MP Refresh 3',
     description:
       'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
     energy: 7
@@ -5060,27 +5060,27 @@ export default {
   },
   1800000044: {
     cellId: 1800000044,
-    name: 'Potion↵Master Healer 1 [Sync Lv3]',
+    name: 'Potion Master Healer 1 [Sync Lv3]',
     description:
       'Increases the amount of HP restored by the user’s healing moves.',
     energy: 10
   },
   1800000045: {
     cellId: 1800000045,
-    name: 'Potion↵Master Healer 1 [Sync Lv3]',
+    name: 'Potion Master Healer 1 [Sync Lv3]',
     description:
       'Increases the amount of HP restored by the user’s healing moves.',
     energy: 10
   },
   1800000046: {
     cellId: 1800000046,
-    name: 'Thunder of↵Newfound Passion: Power ↑ +25 [Sync Lv3]',
+    name: 'Thunder of Newfound Passion: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   },
   1800000047: {
     cellId: 1800000047,
-    name: 'Thunder of↵Newfound Passion: Power ↑ +25 [Sync Lv3]',
+    name: 'Thunder of Newfound Passion: Power ↑ +25 [Sync Lv3]',
     description: undefined,
     energy: 5
   }
