@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './desktop.css';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class ShareButton extends Component {
-  // state = {
-  //   url: window.location.href
-  // };
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.url !== prevState.url) {
-  //     this.setState({ url: window.location.href });
-  //   }
-  // }
   render() {
-    console.log(this.props.url);
     return (
       <div>
         <button
@@ -40,7 +32,23 @@ class ShareButton extends Component {
                   Share this link
                 </h4>
               </div>
-              <div className="modal-body mx-3">{this.props.url.link}</div>
+              <div className="modal-body mx-3">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={this.props.url.link}
+                    readOnly
+                  />
+                </div>
+              </div>
+              <div className="modal-footer d-flex justify-content-center">
+                <CopyToClipboard text={this.props.url.link}>
+                  <button className="btn btn-default" data-dismiss="modal">
+                    Copy
+                  </button>
+                </CopyToClipboard>
+              </div>
             </div>
           </div>
         </div>
