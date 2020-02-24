@@ -45,7 +45,7 @@ class ShareButton extends Component {
               <div className="modal-footer d-flex justify-content-center">
                 <CopyToClipboard text={this.props.url.link}>
                   <button className="btn btn-default" data-dismiss="modal">
-                    Copy
+                    Copy to Clipboard
                   </button>
                 </CopyToClipboard>
               </div>

@@ -231,7 +231,9 @@ class MobileApp extends Component {
           </DialogContent>
           <DialogActions>
             <CopyToClipboard text={this.props.url.link}>
-              <Button onClick={this.handleOnCloseShareModal}>Copy</Button>
+              <Button onClick={this.handleOnCloseShareModal}>
+                Copy to Clipboard
+              </Button>
             </CopyToClipboard>
           </DialogActions>
         </Dialog>
