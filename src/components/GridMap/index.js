@@ -117,7 +117,9 @@ class GridMap extends Component {
 
   // TODO: refactor
   loadUrlGridData() {
+    // if user uses an url that includes grid data
     if (getGridQueryStringValue('grid')) {
+      this.props.resetGrids();
       let remainingEnergy = getQueryStringValue('e');
       let orbSpent = Number(getQueryStringValue('o'));
       let characterId;
@@ -136,6 +138,16 @@ class GridMap extends Component {
           orbSpent
         );
       });
+    } else {
+      // if user goes to root url but grids were selected in the previous session and were preserved by redux-persist
+      for (const property in this.props.grid.selectedCellsById) {
+        setGridQueryStringValue(
+          'grid',
+          this.props.grid.selectedCellsById[property].cellId
+            .toString()
+            .slice(-2)
+        );
+      }
     }
   }
 
