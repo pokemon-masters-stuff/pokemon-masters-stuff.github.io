@@ -8,7 +8,10 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
-import { setGridQueryStringValue } from '../../queryString';
+import {
+  setQueryStringValue,
+  setGridQueryStringValue
+} from '../../queryString';
 
 const mapStateToProps = state => ({
   selectedPokemon: state.pokemon.selectedPokemon,
@@ -48,6 +51,7 @@ function LoadBuildDropdown(props) {
   }, [grid.selectedBuild]);
 
   const handleChange = event => {
+    setQueryStringValue('grid', []);
     onChangeHandler(event.target.value);
   };
 
