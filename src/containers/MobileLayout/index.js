@@ -25,13 +25,15 @@ import {
   loadSelectedBuild,
   deleteSelectedBuild
 } from '../../actions/actionCreators';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const mapStateToProps = state => ({
   pokemon: state.pokemon,
   grid: state.grid,
   savedBuilds: state.grid.savedBuilds.allIds.map(
     id => state.grid.savedBuilds.byIds[id]
-  )
+  ),
+  url: state.url
 });
 
 const mapDispatchToProps = {
@@ -217,20 +219,21 @@ class MobileApp extends Component {
           open={isShareModalVisible}
           onClose={this.handleOnCloseShareModal}
         >
-          <DialogTitle>{'Save this link'}</DialogTitle>
+          <DialogTitle>{'Share this link'}</DialogTitle>
           <DialogContent>
             <TextField
               className={classes.buildNameField}
-              // label="Build name"
-              // placeholder="Enter a name as a reference"
-              // inputProps={{ ref: this.newBuildNameRef }}
-              value={window.location.href}
+              value={this.props.url.link}
+              InputProps={{
+                readOnly: true
+              }}
             />
           </DialogContent>
-          {/* <DialogActions>
-            <Button onClick={this.handleOnCloseSaveBuildModal}>Cancel</Button>
-            <Button onClick={this.handleOnSaveBuild}>Save</Button>
-          </DialogActions> */}
+          <DialogActions>
+            <CopyToClipboard text={this.props.url.link}>
+              <Button onClick={this.handleOnCloseShareModal}>Copy</Button>
+            </CopyToClipboard>
+          </DialogActions>
         </Dialog>
       </>
     );
