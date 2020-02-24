@@ -122,7 +122,7 @@ class GridMap extends Component {
       let orbSpent = Number(getQueryStringValue('o'));
       let characterId;
       listOfPokemonsWithId.map(obj => {
-        return obj.name === getQueryStringValue('pokemon')
+        return obj.name === getQueryStringValue('p')
           ? (characterId = obj.characterId)
           : null;
       });

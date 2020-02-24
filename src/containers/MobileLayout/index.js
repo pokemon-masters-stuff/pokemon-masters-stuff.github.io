@@ -56,9 +56,9 @@ class MobileApp extends Component {
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
-    getQueryStringValue('pokemon')
-      ? this.props.selectPokemon(getQueryStringValue('pokemon'))
-      : setQueryStringValue('pokemon', this.props.pokemon.selectedPokemon);
+    getQueryStringValue('p')
+      ? this.props.selectPokemon(getQueryStringValue('p'))
+      : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
   }
 
   handleOnCloseNav = () => this.setState({ isNavOpened: false });
@@ -82,7 +82,7 @@ class MobileApp extends Component {
   handleOnChangePokemon = value => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
-    setQueryStringValue('pokemon', value);
+    setQueryStringValue('p', value);
     setQueryStringValue('grid', []);
   };
 
