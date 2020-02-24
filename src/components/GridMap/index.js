@@ -103,7 +103,7 @@ const allSyncGrids = {
   alakazamGridData
 };
 
-// const gridUrlLookUpData = {};
+// const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;
 class GridMap extends Component {
   state = {
     initialRender: true,
@@ -154,7 +154,6 @@ class GridMap extends Component {
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
-    // gridUrlLookUpData !== {} && this.loadUrlGridData();
     this.loadUrlGridData();
   }
 
@@ -163,11 +162,11 @@ class GridMap extends Component {
     setQueryStringValue('e', this.props.grid.remainingEnergy);
     setQueryStringValue('o', this.props.grid.orbSpent);
 
-    // TODO: refactor. causing component to rerender when clicking a grid
+    // TODO: refactor. This if block causes component to rerender twice instead of once when clicking a grid
     if (this.props.grid.url !== window.location.href) {
       this.props.updateUrl(window.location.href);
     }
-    // console.log('did update', gridUrlLookUpData); // TODO: refactor
+    // console.log('did update', gridUrlLookUpData); // Used this console log to generate data/grids/allDisplacedGridData; TODO: refactor
   }
 
   componentWillUnmount() {
@@ -445,7 +444,7 @@ class GridMap extends Component {
         }
       }
 
-      // TODO: refactor
+      // Used this to generate data/grids/allDisplacedGridData. TODO: refactor
       // gridUrlLookUpData[cell.cellId] = {
       //   cellId: cell.cellId,
       //   name: nameWithSyncLvRequirement || moveName,
