@@ -33,7 +33,7 @@ const mapStateToProps = state => ({
   savedBuilds: state.grid.savedBuilds.allIds.map(
     id => state.grid.savedBuilds.byIds[id]
   ),
-  url: state.url
+  url: state.grid.url
 });
 
 const mapDispatchToProps = {
@@ -223,14 +223,14 @@ class MobileApp extends Component {
           <DialogContent>
             <TextField
               className={classes.buildNameField}
-              value={this.props.url.link}
+              value={this.props.url}
               InputProps={{
                 readOnly: true
               }}
             />
           </DialogContent>
           <DialogActions>
-            <CopyToClipboard text={this.props.url.link}>
+            <CopyToClipboard text={this.props.url}>
               <Button onClick={this.handleOnCloseShareModal}>
                 Copy to Clipboard
               </Button>

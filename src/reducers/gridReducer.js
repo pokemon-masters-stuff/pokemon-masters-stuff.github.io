@@ -11,7 +11,8 @@ import {
   SAVE_CURRENT_BUILD,
   LOAD_SELECTED_BUILD,
   DELETE_SELECTED_BUILD,
-  LOAD_GRID_FROM_URL
+  LOAD_GRID_FROM_URL,
+  UPDATE_URL
 } from '../actions/types';
 
 const initialState = {
@@ -26,7 +27,8 @@ const initialState = {
   selectedBuild: {
     id: '',
     name: ''
-  }
+  },
+  url: ''
 };
 
 export default function(state = initialState, action) {
@@ -139,6 +141,11 @@ export default function(state = initialState, action) {
           id: '',
           name: ''
         }
+      };
+    case UPDATE_URL:
+      return {
+        ...state,
+        url: action.payload
       };
     default:
       return state;

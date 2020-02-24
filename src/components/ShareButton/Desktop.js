@@ -37,13 +37,13 @@ class ShareButton extends Component {
                   <input
                     type="text"
                     className="form-control"
-                    value={this.props.url.link}
+                    value={this.props.url}
                     readOnly
                   />
                 </div>
               </div>
               <div className="modal-footer d-flex justify-content-center">
-                <CopyToClipboard text={this.props.url.link}>
+                <CopyToClipboard text={this.props.url}>
                   <button className="btn btn-default" data-dismiss="modal">
                     Copy to Clipboard
                   </button>
@@ -58,7 +58,7 @@ class ShareButton extends Component {
 }
 
 const mapStateToProps = state => ({
-  url: state.url
+  url: state.grid.url
 });
 
 export default connect(mapStateToProps, {})(ShareButton);

@@ -150,7 +150,9 @@ class GridMap extends Component {
     ReactTooltip.rebuild();
     setQueryStringValue('e', this.props.grid.remainingEnergy);
     setQueryStringValue('o', this.props.grid.orbSpent);
-    this.props.updateUrl(window.location.href);
+    if (this.props.grid.url !== window.location.href) {
+      this.props.updateUrl(window.location.href);
+    }
     // console.log('did update', gridUrlLookUpData); // TODO: refactor
   }
 
