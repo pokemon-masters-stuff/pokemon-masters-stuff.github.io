@@ -3,15 +3,16 @@ import { connect } from 'react-redux';
 import './desktop.css';
 
 class ShareButton extends Component {
-  state = {
-    url: window.location.href
-  };
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.url !== prevState.url) {
-      this.setState({ url: window.location.href });
-    }
-  }
+  // state = {
+  //   url: window.location.href
+  // };
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (this.state.url !== prevState.url) {
+  //     this.setState({ url: window.location.href });
+  //   }
+  // }
   render() {
+    console.log(this.props.url);
     return (
       <div>
         <button
@@ -39,7 +40,7 @@ class ShareButton extends Component {
                   Share this link
                 </h4>
               </div>
-              <div className="modal-body mx-3">{this.state.url}</div>
+              <div className="modal-body mx-3">{this.props.url.link}</div>
             </div>
           </div>
         </div>
@@ -48,4 +49,8 @@ class ShareButton extends Component {
   }
 }
 
-export default ShareButton;
+const mapStateToProps = state => ({
+  url: state.url
+});
+
+export default connect(mapStateToProps, {})(ShareButton);

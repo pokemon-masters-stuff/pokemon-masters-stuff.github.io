@@ -51,7 +51,8 @@ import {
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
   resetGrids,
-  loadGridFromUrl
+  loadGridFromUrl,
+  updateUrl
 } from '../../actions/actionCreators';
 import styles from './styles';
 import {
@@ -149,6 +150,7 @@ class GridMap extends Component {
     ReactTooltip.rebuild();
     setQueryStringValue('e', this.props.grid.remainingEnergy);
     setQueryStringValue('o', this.props.grid.orbSpent);
+    this.props.updateUrl(window.location.href);
     // console.log('did update', gridUrlLookUpData); // TODO: refactor
   }
 
@@ -555,5 +557,6 @@ export default connect(mapStateToProps, {
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
   resetGrids,
-  loadGridFromUrl
+  loadGridFromUrl,
+  updateUrl
 })(withStyles(styles)(GridMap));
