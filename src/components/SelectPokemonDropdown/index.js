@@ -21,7 +21,7 @@ function SimpleSelect(props) {
 
   React.useEffect(() => {
     setPokemon(selectedPokemon);
-  });
+  }, [selectedPokemon]);
 
   const handleChange = event => {
     setPokemon(event.target.value);
