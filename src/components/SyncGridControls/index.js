@@ -7,6 +7,7 @@ import ListIcon from '@material-ui/icons/List';
 import SelectPokemonDropdown from '../SelectPokemonDropdown';
 import { ResetGridButtonMobile } from '../ResetGridButton';
 import { SaveBuildButtonMobile } from '../SaveBuildButton';
+import { ShareButtonMobile } from '../ShareButton';
 import LoadBuildDropdown from '../LoadBuildDropdown';
 import styles from './styles';
 
@@ -18,7 +19,8 @@ function SyncGridControls(props) {
     onOpenSkillListHandler,
     onChangeSavedBuildHandler,
     onDeleteSavedBuildHandler,
-    onSaveBuildClickHandler
+    onSaveBuildClickHandler,
+    onShareClickHandler
   } = props;
 
   const handleOnOpenSkillList = () =>
@@ -45,6 +47,9 @@ function SyncGridControls(props) {
     typeof onSaveBuildClickHandler === 'function'
       ? onSaveBuildClickHandler()
       : null;
+
+  const handleOnShareClick = () =>
+    typeof onShareClickHandler === 'function' ? onShareClickHandler() : null;
 
   return (
     <Grid
@@ -76,6 +81,12 @@ function SyncGridControls(props) {
         >
           Selected
         </Button>
+      </Grid>
+
+      <Grid item>
+        <div style={{ marginTop: 10, paddingBottom: 10 }}>
+          <ShareButtonMobile onClickHandler={handleOnShareClick} />
+        </div>
       </Grid>
 
       <Grid item>

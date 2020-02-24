@@ -46,7 +46,8 @@ class MobileApp extends Component {
   state = {
     isNavOpened: false,
     isSkillListOpened: false,
-    isSaveBuildModalVisible: false
+    isSaveBuildModalVisible: false,
+    isShareModalVisible: false
   };
 
   newBuildNameRef = React.createRef();
@@ -68,6 +69,10 @@ class MobileApp extends Component {
   handleOnOpenSaveBuildModal = () =>
     this.setState({ isSaveBuildModalVisible: true });
 
+  handleOnCloseShareModal = () => this.setState({ isShareModalVisible: false }); // New
+
+  handleOnOpenShareModal = () => this.setState({ isShareModalVisible: true });
+
   handleOnCloseSkillList = () => this.setState({ isSkillListOpened: false });
 
   handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
@@ -87,8 +92,12 @@ class MobileApp extends Component {
     this.props.deleteSelectedBuild({ buildId: value });
   };
 
-  handleOnSaveClickBuild = () => {
+  handleOnClickSaveBuild = () => {
     this.handleOnOpenSaveBuildModal();
+  };
+
+  handleOnClickShare = () => {
+    this.handleOnOpenShareModal();
   };
 
   handleOnSaveBuild = () => {
@@ -124,7 +133,8 @@ class MobileApp extends Component {
     const {
       isNavOpened,
       isSkillListOpened,
-      isSaveBuildModalVisible
+      isSaveBuildModalVisible,
+      isShareModalVisible
     } = this.state;
     const { classes, pokemon, grid } = this.props;
 
@@ -163,7 +173,8 @@ class MobileApp extends Component {
             onChangeSavedBuildHandler={this.handleOnChangeSavedBuild}
             onDeleteSavedBuildHandler={this.handleOnDeleteSavedBuild}
             onOpenSkillListHandler={this.handleOnOpenSkillList}
-            onSaveBuildClickHandler={this.handleOnSaveClickBuild}
+            onSaveBuildClickHandler={this.handleOnClickSaveBuild}
+            onShareClickHandler={this.handleOnClickShare}
           />
 
           <Grid container alignItems="stretch" justify="center">
@@ -200,6 +211,26 @@ class MobileApp extends Component {
             <Button onClick={this.handleOnCloseSaveBuildModal}>Cancel</Button>
             <Button onClick={this.handleOnSaveBuild}>Save</Button>
           </DialogActions>
+        </Dialog>
+
+        <Dialog
+          open={isShareModalVisible}
+          onClose={this.handleOnCloseShareModal}
+        >
+          <DialogTitle>{'Save this link'}</DialogTitle>
+          <DialogContent>
+            <TextField
+              className={classes.buildNameField}
+              // label="Build name"
+              // placeholder="Enter a name as a reference"
+              // inputProps={{ ref: this.newBuildNameRef }}
+              value={window.location.href}
+            />
+          </DialogContent>
+          {/* <DialogActions>
+            <Button onClick={this.handleOnCloseSaveBuildModal}>Cancel</Button>
+            <Button onClick={this.handleOnSaveBuild}>Save</Button>
+          </DialogActions> */}
         </Dialog>
       </>
     );

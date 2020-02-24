@@ -14,6 +14,8 @@ import {
   deleteSelectedBuild
 } from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
+import { ShareButtonDesktop } from '../../components/ShareButton';
+
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
 import { getQueryStringValue, setQueryStringValue } from '../../queryString';
@@ -86,10 +88,13 @@ class DesktopLayout extends Component {
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
                     <SaveBuildButtonDesktop />
                   </div>
+                  <div style={{ marginLeft: 8, marginTop: 10 }}>
+                    <ShareButtonDesktop />
+                  </div>
                   <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>
-                  <div style={{ marginTop: -50 }}>
+                  <div style={{ marginTop: -100 }}>
                     <GridMap />
                   </div>
                 </div>
