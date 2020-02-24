@@ -150,6 +150,8 @@ class GridMap extends Component {
     ReactTooltip.rebuild();
     setQueryStringValue('e', this.props.grid.remainingEnergy);
     setQueryStringValue('o', this.props.grid.orbSpent);
+
+    // TODO: refactor. causing component to rerender when clicking a grid
     if (this.props.grid.url !== window.location.href) {
       this.props.updateUrl(window.location.href);
     }
