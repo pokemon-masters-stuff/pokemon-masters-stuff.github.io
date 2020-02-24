@@ -1,5 +1,6 @@
 import qs from 'query-string';
-//TODO: refactor
+//TODO: refactor.
+
 const setQueryStringWithoutPageReload = qsValue => {
   const newurl =
     window.location.protocol +
@@ -35,7 +36,7 @@ export const getGridQueryStringValue = (
   key, //grid
   queryString = window.location.search
 ) => {
-  const values = qs.parse(queryString, { arrayFormat: 'comma' });
+  const values = qs.parse(queryString, { arrayFormat: 'comma' }); // browser always converts comma to %2C
   return values[key] ? values[key].split(',') : values[key];
 };
 

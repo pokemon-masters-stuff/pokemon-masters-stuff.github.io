@@ -117,7 +117,7 @@ class GridMap extends Component {
 
   // TODO: refactor
   loadUrlGridData() {
-    // if user uses an url that includes grid data
+    // if user uses an url that includes grid data, generate gridmap based on url
     if (getGridQueryStringValue('grid')) {
       this.props.resetGrids();
       let remainingEnergy = getQueryStringValue('e');
@@ -128,6 +128,8 @@ class GridMap extends Component {
           ? (characterId = obj.characterId)
           : null;
       });
+      // each selected grid is stored as a two-digit number in the url, which comes from the last two digits of cellId
+      // therefore, in order to re-generate gridmap from url, need to add characterId (except the last 3 digits) to the two digit number to arrive at the original cellId
       let cellIdArray = getGridQueryStringValue('grid').map(id => {
         return characterId.toString().slice(0, -3) + id;
       });
@@ -139,7 +141,7 @@ class GridMap extends Component {
         );
       });
     } else {
-      // if user goes to root url but grids were selected in the previous session and were preserved by redux-persist
+      // if user goes to root url but grids were selected in the previous session and were preserved by redux-persist, set url to conform to gridmap
       for (const property in this.props.grid.selectedCellsById) {
         setGridQueryStringValue(
           'grid',
@@ -163,6 +165,7 @@ class GridMap extends Component {
     setQueryStringValue('o', this.props.grid.orbSpent);
 
     // TODO: refactor. This if block causes component to rerender twice instead of once when clicking a grid
+    // But without this block, browser sometimes does not convert comma to %2C fast enough. Also, clicking on the Share button immediately after loading a build will show an old, incorrect url.
     if (this.props.grid.url !== window.location.href) {
       this.props.updateUrl(window.location.href);
     }
