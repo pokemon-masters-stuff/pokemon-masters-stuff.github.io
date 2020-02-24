@@ -84,7 +84,8 @@ export default function(state = initialState, action) {
               name: action.payload.buildName,
               selectedCellsById: state.selectedCellsById,
               remainingEnergy: state.remainingEnergy,
-              orbSpent: state.orbSpent
+              orbSpent: state.orbSpent,
+              url: state.url
             }
           },
           allIds: [...state.savedBuilds.allIds, newBuildUUID]
@@ -98,7 +99,8 @@ export default function(state = initialState, action) {
         selectedBuild: state.savedBuilds.byIds[action.payload.buildId],
         remainingEnergy:
           state.savedBuilds.byIds[action.payload.buildId].remainingEnergy,
-        orbSpent: state.savedBuilds.byIds[action.payload.buildId].orbSpent
+        orbSpent: state.savedBuilds.byIds[action.payload.buildId].orbSpent,
+        url: state.savedBuilds.byIds[action.payload.buildId].url
       };
     case DELETE_SELECTED_BUILD:
       const updateSavedBuildsById = { ...state.savedBuilds.byIds };
