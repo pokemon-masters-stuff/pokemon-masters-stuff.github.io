@@ -19,7 +19,9 @@ class SaveBuildButton extends Component {
       for (let build in this.props.savedBuilds) {
         if (
           this.props.savedBuilds[build].name ===
-          this.newBuildNameRef.current.value
+            this.newBuildNameRef.current.value &&
+          this.props.savedBuilds[build].pokemon ===
+            this.props.pokemon.selectedPokemon
         ) {
           userConfirmation = window.confirm(
             'There is a save with the same name. Do you wish to overwrite it?'
