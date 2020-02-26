@@ -120,7 +120,7 @@ class GridMap extends Component {
     // if user uses an url that includes grid data, generate gridmap based on url
     if (getGridQueryStringValue('grid')) {
       this.props.resetGrids();
-      let remainingEnergy = getQueryStringValue('e');
+      let remainingEnergy = Number(getQueryStringValue('e'));
       let orbSpent = Number(getQueryStringValue('o'));
       let characterId;
       listOfPokemonsWithId.map(obj => {
