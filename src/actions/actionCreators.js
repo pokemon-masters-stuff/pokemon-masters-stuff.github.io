@@ -11,7 +11,8 @@ import {
   LOAD_SELECTED_BUILD,
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
-  UPDATE_URL
+  UPDATE_URL,
+  CHANGE_MODE
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -77,4 +78,8 @@ export const loadGridFromUrl = (gridData, remainingEnergy, orbSpent) => ({
 export const updateUrl = payload => ({
   type: UPDATE_URL,
   payload
+});
+
+export const changeMode = () => ({
+  type: CHANGE_MODE
 });
