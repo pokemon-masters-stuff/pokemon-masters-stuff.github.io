@@ -4,7 +4,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
 import { pokemonNameList } from '../../data';
 import styles from './styles';
 
@@ -33,6 +32,7 @@ function SimpleSelect(props) {
       variant="outlined"
       size="small"
       className={classes.formControl}
+      color="primary"
     >
       <InputLabel ref={inputLabel} id="select-pokemon">
         Pokemon

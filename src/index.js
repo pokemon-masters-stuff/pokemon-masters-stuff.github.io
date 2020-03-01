@@ -3,21 +3,16 @@ import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { ThemeProvider } from '@material-ui/core/styles';
-import Hidden from '@material-ui/core/Hidden';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
-
-import MobileLayout from './containers/MobileLayout';
-import DesktopLayout from './containers/DesktopLayout';
 import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
-import theme from './theme';
 import { UA_ID } from './utils/constants';
 import './index.css';
+import App from './App.js';
 
 const persistConfig = {
   key: 'root',
@@ -41,14 +36,7 @@ ReactGA.initialize(UA_ID);
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <ThemeProvider theme={theme}>
-        <Hidden smDown>
-          <DesktopLayout />
-        </Hidden>
-        <Hidden mdUp>
-          <MobileLayout />
-        </Hidden>
-      </ThemeProvider>
+      <App />
     </PersistGate>
   </Provider>,
   document.getElementById('root')
