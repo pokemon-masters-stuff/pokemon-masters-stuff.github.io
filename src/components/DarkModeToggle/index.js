@@ -7,6 +7,13 @@ const DarkModeToggle = () => {
 
   const dispatch = useDispatch();
 
+  React.useEffect(() => {
+    if (darkMode) {
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('dark-mode');
+    }
+  }, []);
+
   const handleOnClick = () => {
     darkMode
       ? document.body.classList.remove('dark-mode')

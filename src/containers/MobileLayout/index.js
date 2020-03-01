@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactGA from 'react-ga';
 import { withStyles } from '@material-ui/core/styles';
@@ -150,7 +150,8 @@ class MobileApp extends Component {
       .sort();
 
     return (
-      <Fragment className={`${darkMode ? 'dark-mode' : null}`}>
+      // <div className={`${darkMode ? 'dark-mode' : null}`}>
+      <div>
         <Navigation
           isOpened={isNavOpened}
           onCloseHandler={this.handleOnCloseNav}
@@ -240,7 +241,7 @@ class MobileApp extends Component {
             </CopyToClipboard>
           </DialogActions>
         </Dialog>
-      </Fragment>
+      </div>
     );
   }
 }
