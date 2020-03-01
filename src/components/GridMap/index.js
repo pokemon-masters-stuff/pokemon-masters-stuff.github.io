@@ -294,7 +294,7 @@ class GridMap extends Component {
     return renderedMoveName;
   };
 
-  renderHexagonCells = () =>
+  renderHexagonCells = classes =>
     allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
@@ -454,7 +454,6 @@ class GridMap extends Component {
       //   description: cell.move.description,
       //   energy: cell.move.energyCost
       // };
-
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -474,14 +473,18 @@ class GridMap extends Component {
           isLocked: cell.move.locked
         }),
         onClickHandler: (e, data) => this.handleClick(e, index, data),
-        className: this.props.grid.selectedCellsById[cell.cellId]
+        className: this.props.darkMode
+          ? this.props.grid.selectedCellsById[cell.cellId]
+            ? 'selected dark-mode'
+            : 'dark-mode'
+          : this.props.grid.selectedCellsById[cell.cellId]
           ? 'selected'
           : null
       };
 
       return (
         <Hexagon {...hexagonProps}>
-          <Text>
+          <Text className={this.props.darkMode ? classes.darkMode : null}>
             {this.renderMoveName(cell.move.name, cell.ability.abilityId)}
           </Text>
           {this.state.screenWidth < 960 &&
@@ -537,7 +540,7 @@ class GridMap extends Component {
             >
               {this.renderCenterGridText(classes)}
             </Hexagon>
-            {this.renderHexagonCells()}
+            {this.renderHexagonCells(classes)}
           </Layout>
           <Pattern
             id={this.props.pokemon}
@@ -566,7 +569,8 @@ class GridMap extends Component {
 
 const mapStateToProps = state => ({
   pokemon: state.pokemon.selectedPokemon.toLowerCase(),
-  grid: state.grid
+  grid: state.grid,
+  darkMode: state.darkMode.mode
 });
 
 export default connect(mapStateToProps, {

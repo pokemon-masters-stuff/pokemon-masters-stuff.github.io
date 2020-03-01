@@ -15,7 +15,7 @@ import {
 } from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
-
+import DarkModeToggle from '../../components/DarkModeToggle';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
 import { getQueryStringValue, setQueryStringValue } from '../../queryString';
@@ -52,10 +52,10 @@ class DesktopLayout extends Component {
   };
 
   render() {
-    const { pokemon } = this.props;
+    const { pokemon, darkMode } = this.props;
 
     return (
-      <div className="App">
+      <div className={`App ${darkMode ? 'dark-mode' : null}`}>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="container container-s">
             <span className="navbar-brand mb-0 h1">Sync Grid Helper</span>
@@ -92,9 +92,12 @@ class DesktopLayout extends Component {
                     <ShareButtonDesktop />
                   </div>
                   <div style={{ marginTop: 10 }}>
+                    <DarkModeToggle />
+                  </div>
+                  <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>
-                  <div style={{ marginTop: -100 }}>
+                  <div style={{ marginTop: -130 }}>
                     <GridMap />
                   </div>
                 </div>
@@ -111,7 +114,8 @@ class DesktopLayout extends Component {
 }
 
 const mapStateToProps = state => ({
-  pokemon: state.pokemon
+  pokemon: state.pokemon,
+  darkMode: state.darkMode.mode
 });
 
 export default connect(mapStateToProps, {

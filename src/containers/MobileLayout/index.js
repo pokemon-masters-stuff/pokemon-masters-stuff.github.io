@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import ReactGA from 'react-ga';
 import { withStyles } from '@material-ui/core/styles';
@@ -33,7 +33,8 @@ const mapStateToProps = state => ({
   savedBuilds: state.grid.savedBuilds.allIds.map(
     id => state.grid.savedBuilds.byIds[id]
   ),
-  url: state.grid.url
+  url: state.grid.url,
+  darkMode: state.darkMode
 });
 
 const mapDispatchToProps = {
@@ -140,7 +141,7 @@ class MobileApp extends Component {
       isSaveBuildModalVisible,
       isShareModalVisible
     } = this.state;
-    const { classes, pokemon, grid } = this.props;
+    const { classes, pokemon, grid, darkMode } = this.props;
 
     let skillList = Object.keys(grid.selectedCellsById)
       .map(cellId => {
@@ -149,7 +150,7 @@ class MobileApp extends Component {
       .sort();
 
     return (
-      <>
+      <Fragment className={`${darkMode ? 'dark-mode' : null}`}>
         <Navigation
           isOpened={isNavOpened}
           onCloseHandler={this.handleOnCloseNav}
@@ -239,7 +240,7 @@ class MobileApp extends Component {
             </CopyToClipboard>
           </DialogActions>
         </Dialog>
-      </>
+      </Fragment>
     );
   }
 }

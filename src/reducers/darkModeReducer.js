@@ -1,12 +1,13 @@
 // For darkmode
 import { CHANGE_MODE } from '../actions/types';
 
-const initialState = { darkMode: false };
+const initialState = { mode: false };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case CHANGE_MODE:
-      return { darkMode: !state.darkMode };
+      console.log('reducer', state.mode);
+      return { mode: !state.mode };
     default:
       return state;
   }

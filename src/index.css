@@ -25,6 +25,12 @@ body {
   background-repeat: repeat;
 }
 
+.dark-mode {
+  background: rgba(0, 0, 0, 0.877);
+  background-image: url('./images/darktiles.png');
+  background-repeat: repeat;
+}
+
 a {
   text-decoration: none;
 }
@@ -62,12 +68,25 @@ svg g {
   fill-opacity: 0.15;
 }
 
+svg g .dark-mode {
+  fill: #9ea7e7;
+  fill-opacity: 0.12;
+}
+
 svg g:hover {
   fill-opacity: 0.5;
 }
 
+svg g:hover.dark-mode {
+  fill-opacity: 0.3;
+}
+
 svg g .selected {
   fill-opacity: 1;
+}
+
+svg g .selected.dark-mode {
+  fill-opacity: 0.5;
 }
 
 svg g:hover text {
@@ -83,7 +102,7 @@ svg g polygon {
 svg g text {
   font-size: 0.075rem;
   fill: #000000;
-  fill-opacity: 0.8;
+  fill-opacity: 0.9;
   transition: fill-opacity 0.2s;
   font-weight: bold;
 
@@ -94,6 +113,10 @@ svg g text {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+svg g text .dark-mode {
+  fill: white;
 }
 
 svg .center-grid {
