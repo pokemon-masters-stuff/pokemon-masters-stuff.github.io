@@ -86,7 +86,7 @@ svg g .selected {
 }
 
 svg g .selected.dark-mode {
-  fill-opacity: 0.5;
+  fill-opacity: 0.6;
 }
 
 svg g:hover text {

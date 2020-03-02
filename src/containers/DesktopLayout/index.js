@@ -15,7 +15,7 @@ import {
 } from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
-import DarkModeToggle from '../../components/DarkModeToggle';
+import { DarkModeToggleDesktop } from '../../components/DarkModeToggle';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
 import { getQueryStringValue, setQueryStringValue } from '../../queryString';
@@ -92,7 +92,7 @@ class DesktopLayout extends Component {
                     <ShareButtonDesktop />
                   </div>
                   <div style={{ marginTop: 10 }}>
-                    <DarkModeToggle />
+                    <DarkModeToggleDesktop />
                   </div>
                   <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />

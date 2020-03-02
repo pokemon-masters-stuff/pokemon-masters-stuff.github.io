@@ -494,6 +494,7 @@ class GridMap extends Component {
               textAnchor="middle"
               x="0"
               y="1.6em"
+              style={this.props.darkMode ? { fill: 'white' } : null}
             >
               ({cell.move.energyCost})
             </text>
