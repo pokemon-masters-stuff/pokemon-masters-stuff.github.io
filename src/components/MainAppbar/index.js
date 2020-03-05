@@ -6,11 +6,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import { DarkModeToggleMobile } from '../DarkModeToggle';
+import AnnouncementModal from '../AnnouncementModal/Mobile';
 import styles from './styles';
 import { useSelector } from 'react-redux';
 
 function MainAppbar(props) {
-  const { classes, onOpenNavHandler, data } = props;
+  const { classes, onOpenNavHandler, data, onAnnouncementClickHandler } = props;
   const darkMode = useSelector(state => state.darkMode.mode);
 
   const handleOnOpenNav = () =>
@@ -31,6 +32,7 @@ function MainAppbar(props) {
         <Typography variant="h6" className={classes.title}>
           Sync Grid Helper
         </Typography>
+        <AnnouncementModal handleClick={onAnnouncementClickHandler} />
         <DarkModeToggleMobile />
       </Toolbar>
 

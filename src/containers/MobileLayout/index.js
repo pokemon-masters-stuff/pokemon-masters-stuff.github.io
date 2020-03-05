@@ -50,7 +50,8 @@ class MobileApp extends Component {
     isNavOpened: false,
     isSkillListOpened: false,
     isSaveBuildModalVisible: false,
-    isShareModalVisible: false
+    isShareModalVisible: false,
+    isAnnouncementModalVisible: false
   };
 
   newBuildNameRef = React.createRef();
@@ -72,9 +73,15 @@ class MobileApp extends Component {
   handleOnOpenSaveBuildModal = () =>
     this.setState({ isSaveBuildModalVisible: true });
 
-  handleOnCloseShareModal = () => this.setState({ isShareModalVisible: false }); // New
+  handleOnCloseShareModal = () => this.setState({ isShareModalVisible: false });
+
+  handleOnCloseAnnouncementModal = () =>
+    this.setState({ isAnnouncementModalVisible: false });
 
   handleOnOpenShareModal = () => this.setState({ isShareModalVisible: true });
+
+  handleOnOpenAnnouncementModal = () =>
+    this.setState({ isAnnouncementModalVisible: true });
 
   handleOnCloseSkillList = () => this.setState({ isSkillListOpened: false });
 
@@ -101,6 +108,10 @@ class MobileApp extends Component {
 
   handleOnClickShare = () => {
     this.handleOnOpenShareModal();
+  };
+
+  handleOnClickAnnouncement = () => {
+    this.handleOnOpenAnnouncementModal();
   };
 
   handleOnSaveBuild = () => {
@@ -139,7 +150,8 @@ class MobileApp extends Component {
       isNavOpened,
       isSkillListOpened,
       isSaveBuildModalVisible,
-      isShareModalVisible
+      isShareModalVisible,
+      isAnnouncementModalVisible
     } = this.state;
     const { classes, pokemon, grid, darkMode } = this.props;
 
@@ -170,6 +182,7 @@ class MobileApp extends Component {
             energy: grid.remainingEnergy,
             orbs: grid.orbSpent
           }}
+          onAnnouncementClickHandler={this.handleOnClickAnnouncement}
         />
 
         <div className={classes.mainContainer}>
@@ -239,6 +252,46 @@ class MobileApp extends Component {
                 Copy to Clipboard
               </Button>
             </CopyToClipboard>
+          </DialogActions>
+        </Dialog>
+
+        <Dialog
+          open={isAnnouncementModalVisible}
+          onClose={this.handleOnCloseAnnouncementModal}
+        >
+          <DialogTitle>{'Announcement'}</DialogTitle>
+          <DialogContent>
+            {/* <TextField
+              className={classes.buildNameField}
+              value='Announcement here'
+              InputProps={{
+                readOnly: true
+              }}
+            /> */}
+            <text>
+              <p>
+                Several users reported continuous crashes when selecting cells.
+                I'm still looking into the causes but I suspect it is related to
+                the Share feature.{' '}
+              </p>
+              <p>
+                I created a test branch where the share feature is disabled and
+                deployed it on Heroku. Please try out the link below and let me
+                know if the issue goes away. Thank you.
+              </p>
+              https://pokemon-masters-stuff.herokuapp.com/
+            </text>
+          </DialogContent>
+          <DialogActions style={{ justifyContent: 'center' }}>
+            {/* <CopyToClipboard text={this.props.url}> */}
+            {/* <Button onClick={this.handleOnCloseShareModal}>
+                Copy to Clipboard
+              </Button> */}
+
+            {/* </CopyToClipboard> */}
+            <a href="https://pokemon-masters-stuff.herokuapp.com">
+              Go to this link
+            </a>
           </DialogActions>
         </Dialog>
       </div>
