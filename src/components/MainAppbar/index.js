@@ -6,7 +6,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import { DarkModeToggleMobile } from '../DarkModeToggle';
-import AnnouncementModal from '../AnnouncementModal/Mobile';
+import { AnnouncementModalMobile } from '../AnnouncementModal';
 import styles from './styles';
 import { useSelector } from 'react-redux';
 
@@ -33,7 +33,7 @@ function MainAppbar(props) {
         <Typography variant="h6" className={classes.title}>
           Sync Grid Helper
         </Typography>
-        <AnnouncementModal handleClick={onAnnouncementClickHandler} />
+        <AnnouncementModalMobile handleClick={onAnnouncementClickHandler} />
         <DarkModeToggleMobile />
       </Toolbar>
 
