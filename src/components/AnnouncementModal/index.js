@@ -1,2 +1,2 @@
-export { default as ShareButtonMobile } from './Mobile';
-export { default as ShareButtonDesktop } from './Desktop';
+export { default as AnnouncementModalMobile } from './Mobile';
+export { default as AnnouncementModalDesktop } from './Desktop';

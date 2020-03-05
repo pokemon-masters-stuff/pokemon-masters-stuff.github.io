@@ -1,58 +1,44 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import './desktop.css';
 
-export default function ShareButton() {
-  const url = useSelector(state => state.grid.url);
-
+export default function AnnouncementModal() {
+  const darkMode = useSelector(state => state.darkMode.mode);
   return (
-    <Fragment>
-      <button
-        type="button"
-        className="btn btn-success"
-        data-toggle="modal"
-        data-target="#shareLinkModal"
-        style={{ position: 'relative', zIndex: 999 }}
-      >
-        Share Link
-      </button>
-
-      <div
-        className="modal fade"
-        id="shareLinkModal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="myModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="modal-header text-center">
-              <h4 className="modal-title w-100 font-weight-bold">
-                Share this link
-              </h4>
-            </div>
-            <div className="modal-body mx-3">
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  value={url}
-                  readOnly
-                />
-              </div>
-            </div>
-            <div className="modal-footer d-flex justify-content-center">
-              <CopyToClipboard text={url}>
-                <button className="btn btn-default" data-dismiss="modal">
-                  Copy to Clipboard
-                </button>
-              </CopyToClipboard>
-            </div>
+    <div
+      className="modal fade"
+      id="announcementModal"
+      tabIndex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog modal-dialog-centered" role="document">
+        <div
+          className={`modal-content ${darkMode ? 'text-white bg-dark' : null}`}
+        >
+          <div className="modal-header text-center">
+            <h4 className="modal-title w-100 font-weight-bold">Announcement</h4>
+          </div>
+          <div className="modal-body mx-3">
+            <p>
+              Several users reported continuous crashes when selecting cells.
+              I'm still looking into the causes but I suspect it is related to
+              the Share feature.{' '}
+            </p>
+            <p>
+              I created a test branch where the Share feature is disabled and
+              deployed it on Heroku. Please try out the link below and let me
+              know if the issue goes away. Thank you.
+            </p>
+            https://pokemon-masters-stuff.herokuapp.com/
+          </div>
+          <div className="modal-footer d-flex justify-content-center">
+            <a href="https://pokemon-masters-stuff.herokuapp.com/">
+              Go To This Link
+            </a>
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }
