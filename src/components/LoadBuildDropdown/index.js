@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -13,25 +13,15 @@ import {
   setGridQueryStringValue
 } from '../../queryString';
 
-const mapStateToProps = state => ({
-  selectedPokemon: state.pokemon.selectedPokemon,
-  grid: state.grid,
-  selectedBuild: state.grid.selectedBuild,
-  savedBuilds: state.grid.savedBuilds.allIds.map(
-    id => state.grid.savedBuilds.byIds[id]
-  )
-});
-
 function LoadBuildDropdown(props) {
-  const {
-    classes,
-    onChangeHandler,
-    onDeleteHandler,
-    grid,
-    savedBuilds,
-    selectedBuild,
-    selectedPokemon
-  } = props;
+  const { classes, onChangeHandler, onDeleteHandler } = props;
+
+  const selectedPokemon = useSelector(state => state.pokemon.selectedPokemon);
+  const grid = useSelector(state => state.grid);
+  const selectedBuild = useSelector(state => state.grid.selectedBuild);
+  const savedBuilds = useSelector(state =>
+    state.grid.savedBuilds.allIds.map(id => state.grid.savedBuilds.byIds[id])
+  );
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
@@ -108,7 +98,4 @@ function LoadBuildDropdown(props) {
   );
 }
 
-export default connect(
-  mapStateToProps,
-  {}
-)(withStyles(styles)(LoadBuildDropdown));
+export default withStyles(styles)(LoadBuildDropdown);
