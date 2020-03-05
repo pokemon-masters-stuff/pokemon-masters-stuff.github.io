@@ -153,7 +153,7 @@ class MobileApp extends Component {
       isShareModalVisible,
       isAnnouncementModalVisible
     } = this.state;
-    const { classes, pokemon, grid, darkMode } = this.props;
+    const { classes, pokemon, grid } = this.props;
 
     let skillList = Object.keys(grid.selectedCellsById)
       .map(cellId => {
