@@ -23,14 +23,12 @@ export default function DarkModeToggle() {
   };
 
   return (
-    <div>
-      <Switch
-        checked={darkMode}
-        onChange={handleChange}
-        value="checked"
-        color="secondary"
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
-      />
-    </div>
+    <Switch
+      checked={darkMode}
+      onChange={handleChange}
+      value="checked"
+      color="secondary"
+      inputProps={{ 'aria-label': 'secondary checkbox' }}
+    />
   );
 }
