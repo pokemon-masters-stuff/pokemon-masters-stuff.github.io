@@ -260,38 +260,26 @@ class MobileApp extends Component {
           onClose={this.handleOnCloseAnnouncementModal}
         >
           <DialogTitle>{'Announcement'}</DialogTitle>
-          <DialogContent>
-            {/* <TextField
-              className={classes.buildNameField}
-              value='Announcement here'
-              InputProps={{
-                readOnly: true
-              }}
-            /> */}
-            <text>
-              <p>
-                Several users reported continuous crashes when selecting cells.
-                I'm still looking into the causes but I suspect it is related to
-                the Share feature.{' '}
-              </p>
-              <p>
-                I created a test branch where the share feature is disabled and
-                deployed it on Heroku. Please try out the link below and let me
-                know if the issue goes away. Thank you.
-              </p>
-              https://pokemon-masters-stuff.herokuapp.com/
-            </text>
+          <DialogContent dividers>
+            <p>
+              Several users reported continuous crashes when selecting cells.
+              I'm still looking into the causes but I suspect it is related to
+              the Share feature.{' '}
+            </p>
+            <p>
+              I created a test branch where the Share feature is disabled and
+              deployed it on Heroku. Please try out the link below and let me
+              know if the issue goes away. Thank you.
+            </p>
+            https://pokemon-masters-stuff.herokuapp.com/
           </DialogContent>
           <DialogActions style={{ justifyContent: 'center' }}>
-            {/* <CopyToClipboard text={this.props.url}> */}
-            {/* <Button onClick={this.handleOnCloseShareModal}>
-                Copy to Clipboard
-              </Button> */}
-
-            {/* </CopyToClipboard> */}
-            <a href="https://pokemon-masters-stuff.herokuapp.com">
+            <Button
+              href="https://pokemon-masters-stuff.herokuapp.com"
+              style={{ color: 'blue' }}
+            >
               Go to this link
-            </a>
+            </Button>
           </DialogActions>
         </Dialog>
       </div>

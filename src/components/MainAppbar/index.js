@@ -26,6 +26,7 @@ function MainAppbar(props) {
           color="inherit"
           aria-label="menu"
           onClick={handleOnOpenNav}
+          style={{ marginRight: 0, paddingRight: 12, paddingLeft: 6 }}
         >
           <MenuIcon />
         </IconButton>
