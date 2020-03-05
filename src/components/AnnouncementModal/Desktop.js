@@ -21,14 +21,14 @@ export default function AnnouncementModal() {
           </div>
           <div className="modal-body mx-3">
             <p>
-              Several users reported continuous crashes when selecting cells.
-              I'm still looking into the causes but I suspect it is related to
-              the Share feature.{' '}
+              Several users reported continuous crashes when selecting cells. It
+              has been confirmed that the crashes are caused by the Share
+              feature.{' '}
             </p>
             <p>
-              I created a test branch where the Share feature is disabled and
-              deployed it on Heroku. Please try out the link below and let me
-              know if the issue goes away. Thank you.
+              I need some time to look into it and rewrite the code. In the
+              meantime you can use a branch I deployed to Heroku, in which the
+              Share feature is disabled. See the link below.
             </p>
             https://pokemon-masters-stuff.herokuapp.com/
           </div>
