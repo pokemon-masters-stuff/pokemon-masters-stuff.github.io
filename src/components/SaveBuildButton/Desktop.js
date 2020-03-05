@@ -9,6 +9,7 @@ import './desktop.css';
 
 export default function SaveBuildButton() {
   const dispatch = useDispatch();
+  const darkMode = useSelector(state => state.darkMode.mode);
   const pokemon = useSelector(state => state.pokemon);
   const savedBuilds = useSelector(state =>
     state.grid.savedBuilds.allIds.map(id => state.grid.savedBuilds.byIds[id])
@@ -66,7 +67,11 @@ export default function SaveBuildButton() {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
+          <div
+            className={`modal-content ${
+              darkMode ? 'text-white bg-dark' : null
+            }`}
+          >
             <div className="modal-header text-center">
               <h4 className="modal-title w-100 font-weight-bold">
                 Save a new build
@@ -76,7 +81,9 @@ export default function SaveBuildButton() {
               <div className="form-group">
                 <input
                   type="text"
-                  className="form-control"
+                  className={`form-control ${
+                    darkMode ? 'text-white bg-dark' : null
+                  }`}
                   id="save"
                   placeholder="Build name"
                   key={`${Math.floor(Math.random() * 1000)}-min`}
@@ -87,7 +94,7 @@ export default function SaveBuildButton() {
             </div>
             <div className="modal-footer d-flex justify-content-center">
               <button
-                className="btn btn-default"
+                className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 onClick={handleOnSaveBuild}
                 data-dismiss="modal"
               >

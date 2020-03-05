@@ -5,7 +5,7 @@ import './desktop.css';
 
 export default function ShareButton() {
   const url = useSelector(state => state.grid.url);
-
+  const darkMode = useSelector(state => state.darkMode.mode);
   return (
     <Fragment>
       <button
@@ -27,7 +27,11 @@ export default function ShareButton() {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
+          <div
+            className={`modal-content ${
+              darkMode ? 'text-white bg-dark' : null
+            }`}
+          >
             <div className="modal-header text-center">
               <h4 className="modal-title w-100 font-weight-bold">
                 Share this link
@@ -37,7 +41,9 @@ export default function ShareButton() {
               <div className="form-group">
                 <input
                   type="text"
-                  className="form-control"
+                  className={`form-control ${
+                    darkMode ? 'text-white bg-dark' : null
+                  }`}
                   value={url}
                   readOnly
                 />
@@ -45,7 +51,12 @@ export default function ShareButton() {
             </div>
             <div className="modal-footer d-flex justify-content-center">
               <CopyToClipboard text={url}>
-                <button className="btn btn-default" data-dismiss="modal">
+                <button
+                  className={`btn btn-default ${
+                    darkMode ? 'text-white' : null
+                  }`}
+                  data-dismiss="modal"
+                >
                   Copy to Clipboard
                 </button>
               </CopyToClipboard>
