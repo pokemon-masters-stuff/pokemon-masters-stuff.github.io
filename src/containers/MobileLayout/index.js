@@ -58,8 +58,6 @@ class MobileApp extends Component {
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
-    // getQueryStringValue('p') &&
-    //   this.props.selectPokemon(getQueryStringValue('p'));
   }
 
   handleOnCloseNav = () => this.setState({ isNavOpened: false });
