@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -8,10 +8,12 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
+import { updateUrl } from '../../actions/actionCreators';
 
 function LoadBuildDropdown(props) {
   const { classes, onChangeHandler, onDeleteHandler } = props;
 
+  const dispatch = useDispatch();
   const selectedPokemon = useSelector(state => state.pokemon.selectedPokemon);
   const selectedBuild = useSelector(state => state.grid.selectedBuild);
   const savedBuilds = useSelector(state =>
@@ -28,6 +30,7 @@ function LoadBuildDropdown(props) {
 
   const handleChange = event => {
     onChangeHandler(event.target.value);
+    dispatch(updateUrl(selectedPokemon));
   };
 
   const handleOpen = () => {
