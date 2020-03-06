@@ -26,9 +26,9 @@ export default function AnnouncementModal() {
               feature.{' '}
             </p>
             <p>
-              I need some time to look into it and rewrite the code. In the
-              meantime you can use a branch I deployed to Heroku, in which the
-              Share feature is disabled. See the link below.
+              I need some time to look into it and fix the code. In the meantime
+              you can use a branch I deployed to Heroku, in which the Share
+              feature is disabled. See the link below.
             </p>
             https://pokemon-masters-stuff.herokuapp.com/
           </div>
