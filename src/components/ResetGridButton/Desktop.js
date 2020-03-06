@@ -7,7 +7,7 @@ const ResetGridButton = () => {
   const dispatch = useDispatch();
 
   const handleOnClick = () => {
-    setQueryStringValue('grid', []);
+    // setQueryStringValue('grid', []);
     dispatch(resetGrids());
   };
 

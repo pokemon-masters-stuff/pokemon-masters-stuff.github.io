@@ -12,6 +12,7 @@ import {
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
   UPDATE_URL,
+  CLEAR_URL,
   CHANGE_MODE
 } from './types';
 
@@ -78,6 +79,10 @@ export const loadGridFromUrl = (gridData, remainingEnergy, orbSpent) => ({
 export const updateUrl = payload => ({
   type: UPDATE_URL,
   payload
+});
+
+export const clearUrl = () => ({
+  type: CLEAR_URL
 });
 
 export const changeMode = () => ({

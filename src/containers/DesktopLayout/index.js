@@ -32,16 +32,19 @@ class DesktopLayout extends Component {
   selectPokemon(value) {
     this.props.selectPokemon(value);
     this.props.resetGrids();
-    setQueryStringValue('p', value);
-    setQueryStringValue('grid', []);
+    // setQueryStringValue('p', value);
+    // setQueryStringValue('grid', []);
   }
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
 
-    getQueryStringValue('p')
-      ? this.props.selectPokemon(getQueryStringValue('p'))
-      : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
+    getQueryStringValue('p') &&
+      this.props.selectPokemon(getQueryStringValue('p'));
+
+    // getQueryStringValue('p')
+    //   ? this.props.selectPokemon(getQueryStringValue('p'))
+    //   : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
   }
 
   handleOnChangeSavedBuild = value => {

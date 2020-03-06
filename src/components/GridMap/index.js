@@ -53,6 +53,7 @@ import {
   resetGrids,
   loadGridFromUrl,
   updateUrl
+  // clearUrl
 } from '../../actions/actionCreators';
 import styles from './styles';
 import {
@@ -60,7 +61,8 @@ import {
   filterGridQueryStringValue,
   setGridQueryStringValue,
   getQueryStringValue,
-  setQueryStringValue
+  setQueryStringValue,
+  clearQueryStringValue
 } from '../../queryString';
 
 const allSvgLinks = {
@@ -119,6 +121,7 @@ class GridMap extends Component {
   loadUrlGridData() {
     // if user uses an url that includes grid data, generate gridmap based on url
     if (getGridQueryStringValue('grid')) {
+      console.log('getvaluegrid');
       this.props.resetGrids();
       let remainingEnergy = Number(getQueryStringValue('e'));
       let orbSpent = Number(getQueryStringValue('o'));
@@ -140,17 +143,18 @@ class GridMap extends Component {
           orbSpent
         );
       });
-    } else {
-      // if user goes to root url but grids were selected in the previous session and were preserved by redux-persist, set url to conform to gridmap
-      for (const property in this.props.grid.selectedCellsById) {
-        setGridQueryStringValue(
-          'grid',
-          this.props.grid.selectedCellsById[property].cellId
-            .toString()
-            .slice(-2)
-        );
-      }
     }
+    // else {
+    //   // if user goes to root url but grids were selected in the previous session and were preserved by redux-persist, set url to conform to gridmap
+    //   for (const property in this.props.grid.selectedCellsById) {
+    //     setGridQueryStringValue(
+    //       'grid',
+    //       this.props.grid.selectedCellsById[property].cellId
+    //         .toString()
+    //         .slice(-2)
+    //     );
+    //   }
+    // }
   }
 
   componentDidMount() {
@@ -161,8 +165,8 @@ class GridMap extends Component {
 
   componentDidUpdate() {
     ReactTooltip.rebuild();
-    setQueryStringValue('e', this.props.grid.remainingEnergy);
-    setQueryStringValue('o', this.props.grid.orbSpent);
+    // setQueryStringValue('e', this.props.grid.remainingEnergy);
+    // setQueryStringValue('o', this.props.grid.orbSpent);
 
     // TODO: refactor. This if block causes component to rerender twice instead of once when clicking a grid
     // But without this block, browser sometimes does not convert comma to %2C fast enough. Also, clicking on the Share button immediately after loading a build will show an old, incorrect url.
@@ -174,6 +178,8 @@ class GridMap extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.fitMapToScreen);
+    clearQueryStringValue();
+    // this.props.clearUrl();
   }
 
   fitMapToScreen = () => {
@@ -239,11 +245,17 @@ class GridMap extends Component {
     if (!this.props.grid.selectedCellsById[data.cellId]) {
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
-      setGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
+      // setGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
+      this.props.updateUrl(
+        this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
+      );
     } else {
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
-      filterGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
+      // filterGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
+      this.props.updateUrl(
+        this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
+      );
     }
   }
 
@@ -511,6 +523,7 @@ class GridMap extends Component {
   };
 
   render() {
+    console.log('render');
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes } = this.props;
 

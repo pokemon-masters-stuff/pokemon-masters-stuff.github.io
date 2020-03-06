@@ -31,17 +31,17 @@ function LoadBuildDropdown(props) {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
-  React.useEffect(() => {
-    for (const property in selectedBuild.selectedCellsById) {
-      setGridQueryStringValue(
-        'grid',
-        selectedBuild.selectedCellsById[property].cellId.toString().slice(-2)
-      );
-    }
-  }, [grid.selectedBuild]);
+  // React.useEffect(() => {
+  //   for (const property in selectedBuild.selectedCellsById) {
+  //     setGridQueryStringValue(
+  //       'grid',
+  //       selectedBuild.selectedCellsById[property].cellId.toString().slice(-2)
+  //     );
+  //   }
+  // }, [grid.selectedBuild]);
 
   const handleChange = event => {
-    setQueryStringValue('grid', []);
+    // setQueryStringValue('grid', []);
     onChangeHandler(event.target.value);
   };
 

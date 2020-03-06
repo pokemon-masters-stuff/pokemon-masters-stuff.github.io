@@ -12,7 +12,8 @@ import {
   LOAD_SELECTED_BUILD,
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
-  UPDATE_URL
+  UPDATE_URL,
+  CLEAR_URL
 } from '../actions/types';
 
 const initialState = {
@@ -145,9 +146,27 @@ export default function(state = initialState, action) {
         }
       };
     case UPDATE_URL:
+      const gridUrlArray =
+        Object.keys(state.selectedCellsById).length === 0
+          ? ''
+          : '&grid=' +
+            Object.keys(state.selectedCellsById)
+              .map(e => {
+                return e.slice(-2);
+              })
+              .join('%2C');
+      console.log(
+        'url in reducer',
+        `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`
+      );
       return {
         ...state,
-        url: action.payload
+        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`
+      };
+    case CLEAR_URL:
+      return {
+        ...state,
+        url: 'https://pokemon-masters-stuff.github.io/'
       };
     default:
       return state;

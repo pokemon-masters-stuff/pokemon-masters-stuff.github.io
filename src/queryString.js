@@ -32,6 +32,11 @@ export const setQueryStringValue = (
   setQueryStringWithoutPageReload(`?${newQsValue}`);
 };
 
+export const clearQueryStringValue = () => {
+  console.log('clear');
+  setQueryStringWithoutPageReload('');
+};
+
 export const getGridQueryStringValue = (
   key, //grid
   queryString = window.location.search
