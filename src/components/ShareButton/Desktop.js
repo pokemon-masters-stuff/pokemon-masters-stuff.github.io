@@ -1,16 +1,24 @@
 import React, { Fragment } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateUrl } from '../../actions/actionCreators';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './desktop.css';
 
 export default function ShareButton() {
+  const dispatch = useDispatch();
   const url = useSelector(state => state.grid.url);
   const darkMode = useSelector(state => state.darkMode.mode);
+  const handleClick = () => {
+    if (url !== window.location.href) {
+      dispatch(updateUrl(window.location.href.replace(/,/g, '%2C')));
+    }
+  };
   return (
     <Fragment>
       <button
         type="button"
         className="btn btn-success"
+        onClick={handleClick}
         data-toggle="modal"
         data-target="#shareLinkModal"
         style={{ position: 'relative', zIndex: 999 }}

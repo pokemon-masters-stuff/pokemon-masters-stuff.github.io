@@ -23,7 +23,8 @@ import {
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
+  updateUrl
 } from '../../actions/actionCreators';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -42,7 +43,8 @@ const mapDispatchToProps = {
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
+  updateUrl
 };
 
 class MobileApp extends Component {
@@ -107,6 +109,9 @@ class MobileApp extends Component {
   };
 
   handleOnClickShare = () => {
+    if (this.props.url !== window.location.href) {
+      this.props.updateUrl(window.location.href.replace(/,/g, '%2C'));
+    }
     this.handleOnOpenShareModal();
   };
 
@@ -162,7 +167,6 @@ class MobileApp extends Component {
       .sort();
 
     return (
-      // <div className={`${darkMode ? 'dark-mode' : null}`}>
       <div>
         <Navigation
           isOpened={isNavOpened}

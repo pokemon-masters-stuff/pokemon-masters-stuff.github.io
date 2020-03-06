@@ -166,9 +166,9 @@ class GridMap extends Component {
 
     // TODO: refactor. This if block causes component to rerender twice instead of once when clicking a grid
     // But without this block, browser sometimes does not convert comma to %2C fast enough. Also, clicking on the Share button immediately after loading a build will show an old, incorrect url.
-    if (this.props.grid.url !== window.location.href) {
-      this.props.updateUrl(window.location.href);
-    }
+    // if (this.props.grid.url !== window.location.href) {
+    //   this.props.updateUrl(window.location.href);
+    // }
     // console.log('did update', gridUrlLookUpData); // Used this console log to generate data/grids/allDisplacedGridData; TODO: refactor
   }
 
