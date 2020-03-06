@@ -143,6 +143,8 @@ class GridMap extends Component {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
     this.loadUrlGridData();
+
+    getQueryStringValue('p') && this.props.updateUrl(getQueryStringValue('p'));
   }
 
   componentDidUpdate() {
