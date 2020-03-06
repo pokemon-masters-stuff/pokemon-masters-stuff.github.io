@@ -12,7 +12,6 @@ import {
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
   UPDATE_URL,
-  CLEAR_URL,
   CHANGE_MODE
 } from './types';
 
