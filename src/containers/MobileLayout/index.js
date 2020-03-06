@@ -271,9 +271,9 @@ class MobileApp extends Component {
               feature.{' '}
             </p>
             <p>
-              An update has been deployed to fix the issue. However, if you are
-              still experiencing it, please send me a feedback, and use the link
-              below for a branch where the Share feature is disabled.
+              I need some time to look into it and fix the code. In the meantime
+              you can use a branch I deployed to Heroku, in which the Share
+              feature is disabled. See the link below.
             </p>
             https://pokemon-masters-stuff.herokuapp.com/
           </DialogContent>
