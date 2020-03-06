@@ -2,13 +2,13 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { useDispatch } from 'react-redux';
 import { resetGrids } from '../../actions/actionCreators';
-import { setQueryStringValue } from '../../queryString';
+// import { setQueryStringValue } from '../../queryString';
 
 const ResetGridButton = () => {
   const dispatch = useDispatch();
 
   const handleOnClick = () => {
-    setQueryStringValue('grid', []);
+    // setQueryStringValue('grid', []);
     dispatch(resetGrids());
   };
 

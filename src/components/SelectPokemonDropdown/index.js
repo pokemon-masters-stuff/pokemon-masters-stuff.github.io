@@ -6,8 +6,11 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { pokemonNameList } from '../../data';
 import styles from './styles';
+import { updateUrl } from '../../actions/actionCreators';
+import { useDispatch } from 'react-redux';
 
 function SimpleSelect(props) {
+  const dispatch = useDispatch();
   const { classes, selectedPokemon, onChangeHandler } = props;
   const [pokemon, setPokemon] = React.useState(selectedPokemon);
 
@@ -25,6 +28,8 @@ function SimpleSelect(props) {
   const handleChange = event => {
     setPokemon(event.target.value);
     onChangeHandler(event.target.value);
+
+    dispatch(updateUrl(event.target.value));
   };
 
   return (

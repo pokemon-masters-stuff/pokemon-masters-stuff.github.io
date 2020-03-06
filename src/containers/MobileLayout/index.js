@@ -60,9 +60,11 @@ class MobileApp extends Component {
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
-    getQueryStringValue('p')
-      ? this.props.selectPokemon(getQueryStringValue('p'))
-      : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
+    getQueryStringValue('p') &&
+      this.props.selectPokemon(getQueryStringValue('p'));
+    // getQueryStringValue('p')
+    //   ? this.props.selectPokemon(getQueryStringValue('p'))
+    //   : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
   }
 
   handleOnCloseNav = () => this.setState({ isNavOpened: false });
@@ -92,8 +94,8 @@ class MobileApp extends Component {
   handleOnChangePokemon = value => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
-    setQueryStringValue('p', value);
-    setQueryStringValue('grid', []);
+    // setQueryStringValue('p', value);
+    // setQueryStringValue('grid', []);
   };
 
   handleOnChangeSavedBuild = value => {
@@ -109,9 +111,9 @@ class MobileApp extends Component {
   };
 
   handleOnClickShare = () => {
-    if (this.props.url !== window.location.href) {
-      this.props.updateUrl(window.location.href.replace(/,/g, '%2C'));
-    }
+    // if (this.props.url !== window.location.href) {
+    //   this.props.updateUrl(window.location.href.replace(/,/g, '%2C'));
+    // }
     this.handleOnOpenShareModal();
   };
 
