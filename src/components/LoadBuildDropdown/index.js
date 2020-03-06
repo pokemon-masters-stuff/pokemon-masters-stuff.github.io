@@ -8,16 +8,11 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
-import {
-  setQueryStringValue,
-  setGridQueryStringValue
-} from '../../queryString';
 
 function LoadBuildDropdown(props) {
   const { classes, onChangeHandler, onDeleteHandler } = props;
 
   const selectedPokemon = useSelector(state => state.pokemon.selectedPokemon);
-  const grid = useSelector(state => state.grid);
   const selectedBuild = useSelector(state => state.grid.selectedBuild);
   const savedBuilds = useSelector(state =>
     state.grid.savedBuilds.allIds.map(id => state.grid.savedBuilds.byIds[id])
@@ -31,17 +26,7 @@ function LoadBuildDropdown(props) {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
-  // React.useEffect(() => {
-  //   for (const property in selectedBuild.selectedCellsById) {
-  //     setGridQueryStringValue(
-  //       'grid',
-  //       selectedBuild.selectedCellsById[property].cellId.toString().slice(-2)
-  //     );
-  //   }
-  // }, [grid.selectedBuild]);
-
   const handleChange = event => {
-    // setQueryStringValue('grid', []);
     onChangeHandler(event.target.value);
   };
 

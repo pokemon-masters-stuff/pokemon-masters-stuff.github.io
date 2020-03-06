@@ -154,19 +154,10 @@ export default function(state = initialState, action) {
               .map(e => {
                 return e.slice(-2);
               })
-              .join('%2C');
-      console.log(
-        'url in reducer',
-        `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`
-      );
+              .join(',');
       return {
         ...state,
         url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`
-      };
-    case CLEAR_URL:
-      return {
-        ...state,
-        url: 'https://pokemon-masters-stuff.github.io/'
       };
     default:
       return state;

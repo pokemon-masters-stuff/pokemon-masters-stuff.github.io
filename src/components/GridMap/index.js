@@ -46,6 +46,7 @@ import {
   allDisplayedGridData
 } from '../../data';
 import {
+  selectPokemon,
   addToGridList,
   removeFromGridList,
   subtractFromRemainingEnergy,
@@ -53,17 +54,9 @@ import {
   resetGrids,
   loadGridFromUrl,
   updateUrl
-  // clearUrl
 } from '../../actions/actionCreators';
 import styles from './styles';
-import {
-  getGridQueryStringValue,
-  filterGridQueryStringValue,
-  setGridQueryStringValue,
-  getQueryStringValue,
-  setQueryStringValue,
-  clearQueryStringValue
-} from '../../queryString';
+import { getQueryStringValue, clearQueryStringValue } from '../../queryString';
 
 const allSvgLinks = {
   pikachuSvgLink,
@@ -117,11 +110,11 @@ class GridMap extends Component {
     screenWidth: document.body.clientWidth
   };
 
-  // TODO: refactor
   loadUrlGridData() {
+    getQueryStringValue('p') &&
+      this.props.selectPokemon(getQueryStringValue('p'));
     // if user uses an url that includes grid data, generate gridmap based on url
-    if (getGridQueryStringValue('grid')) {
-      console.log('getvaluegrid');
+    if (getQueryStringValue('grid')) {
       this.props.resetGrids();
       let remainingEnergy = Number(getQueryStringValue('e'));
       let orbSpent = Number(getQueryStringValue('o'));
@@ -133,7 +126,7 @@ class GridMap extends Component {
       });
       // each selected grid is stored as a two-digit number in the url, which comes from the last two digits of cellId
       // therefore, in order to re-generate gridmap from url, need to add characterId (except the last 3 digits) to the two digit number to arrive at the original cellId
-      let cellIdArray = getGridQueryStringValue('grid').map(id => {
+      let cellIdArray = getQueryStringValue('grid').map(id => {
         return characterId.toString().slice(0, -3) + id;
       });
       cellIdArray.map(id => {
@@ -144,17 +137,6 @@ class GridMap extends Component {
         );
       });
     }
-    // else {
-    //   // if user goes to root url but grids were selected in the previous session and were preserved by redux-persist, set url to conform to gridmap
-    //   for (const property in this.props.grid.selectedCellsById) {
-    //     setGridQueryStringValue(
-    //       'grid',
-    //       this.props.grid.selectedCellsById[property].cellId
-    //         .toString()
-    //         .slice(-2)
-    //     );
-    //   }
-    // }
   }
 
   componentDidMount() {
@@ -165,21 +147,11 @@ class GridMap extends Component {
 
   componentDidUpdate() {
     ReactTooltip.rebuild();
-    // setQueryStringValue('e', this.props.grid.remainingEnergy);
-    // setQueryStringValue('o', this.props.grid.orbSpent);
-
-    // TODO: refactor. This if block causes component to rerender twice instead of once when clicking a grid
-    // But without this block, browser sometimes does not convert comma to %2C fast enough. Also, clicking on the Share button immediately after loading a build will show an old, incorrect url.
-    // if (this.props.grid.url !== window.location.href) {
-    //   this.props.updateUrl(window.location.href);
-    // }
-    // console.log('did update', gridUrlLookUpData); // Used this console log to generate data/grids/allDisplacedGridData; TODO: refactor
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.fitMapToScreen);
     clearQueryStringValue();
-    // this.props.clearUrl();
   }
 
   fitMapToScreen = () => {
@@ -245,14 +217,12 @@ class GridMap extends Component {
     if (!this.props.grid.selectedCellsById[data.cellId]) {
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
-      // setGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
       this.props.updateUrl(
         this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
       );
     } else {
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
-      // filterGridQueryStringValue('grid', `${data.cellId.toString().slice(-2)}`);
       this.props.updateUrl(
         this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
       );
@@ -523,7 +493,6 @@ class GridMap extends Component {
   };
 
   render() {
-    console.log('render');
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes } = this.props;
 
@@ -588,6 +557,7 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
+  selectPokemon,
   addToGridList,
   removeFromGridList,
   subtractFromRemainingEnergy,

@@ -81,10 +81,6 @@ export const updateUrl = payload => ({
   payload
 });
 
-export const clearUrl = () => ({
-  type: CLEAR_URL
-});
-
 export const changeMode = () => ({
   type: CHANGE_MODE
 });

@@ -19,7 +19,7 @@ import { ShareButtonDesktop } from '../../components/ShareButton';
 import { DarkModeToggleDesktop } from '../../components/DarkModeToggle';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
-import { getQueryStringValue, setQueryStringValue } from '../../queryString';
+// import { getQueryStringValue } from '../../queryString';
 
 class DesktopLayout extends Component {
   constructor(props) {
@@ -32,19 +32,10 @@ class DesktopLayout extends Component {
   selectPokemon(value) {
     this.props.selectPokemon(value);
     this.props.resetGrids();
-    // setQueryStringValue('p', value);
-    // setQueryStringValue('grid', []);
   }
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
-
-    getQueryStringValue('p') &&
-      this.props.selectPokemon(getQueryStringValue('p'));
-
-    // getQueryStringValue('p')
-    //   ? this.props.selectPokemon(getQueryStringValue('p'))
-    //   : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
   }
 
   handleOnChangeSavedBuild = value => {

@@ -1,13 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { resetGrids } from '../../actions/actionCreators';
-import { setQueryStringValue } from '../../queryString';
 
 const ResetGridButton = () => {
   const dispatch = useDispatch();
 
   const handleOnClick = () => {
-    // setQueryStringValue('grid', []);
     dispatch(resetGrids());
   };
 

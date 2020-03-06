@@ -17,14 +17,13 @@ import SkillOverview from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
-import { getQueryStringValue, setQueryStringValue } from '../../queryString';
+// import { getQueryStringValue } from '../../queryString';
 import {
   selectPokemon,
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
-  deleteSelectedBuild,
-  updateUrl
+  deleteSelectedBuild
 } from '../../actions/actionCreators';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -43,8 +42,7 @@ const mapDispatchToProps = {
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
-  deleteSelectedBuild,
-  updateUrl
+  deleteSelectedBuild
 };
 
 class MobileApp extends Component {
@@ -60,11 +58,8 @@ class MobileApp extends Component {
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
-    getQueryStringValue('p') &&
-      this.props.selectPokemon(getQueryStringValue('p'));
-    // getQueryStringValue('p')
-    //   ? this.props.selectPokemon(getQueryStringValue('p'))
-    //   : setQueryStringValue('p', this.props.pokemon.selectedPokemon);
+    // getQueryStringValue('p') &&
+    //   this.props.selectPokemon(getQueryStringValue('p'));
   }
 
   handleOnCloseNav = () => this.setState({ isNavOpened: false });
@@ -94,8 +89,6 @@ class MobileApp extends Component {
   handleOnChangePokemon = value => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
-    // setQueryStringValue('p', value);
-    // setQueryStringValue('grid', []);
   };
 
   handleOnChangeSavedBuild = value => {
@@ -111,9 +104,6 @@ class MobileApp extends Component {
   };
 
   handleOnClickShare = () => {
-    // if (this.props.url !== window.location.href) {
-    //   this.props.updateUrl(window.location.href.replace(/,/g, '%2C'));
-    // }
     this.handleOnOpenShareModal();
   };
 
