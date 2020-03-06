@@ -21,22 +21,17 @@ export default function AnnouncementModal() {
           </div>
           <div className="modal-body mx-3">
             <p>
-              Several users reported continuous crashes when selecting cells. It
-              has been confirmed that the crashes are caused by the Share
-              feature.{' '}
+              <ol>
+                <li>Fixed crashing issues</li>
+                <li>Shortened url links</li>
+              </ol>
             </p>
-            <p>
-              I need some time to look into it and fix the code. In the meantime
-              you can use a branch I deployed to Heroku, in which the Share
-              feature is disabled. See the link below.
-            </p>
-            https://pokemon-masters-stuff.herokuapp.com/
           </div>
-          <div className="modal-footer d-flex justify-content-center">
+          {/* <div className="modal-footer d-flex justify-content-center">
             <a href="https://pokemon-masters-stuff.herokuapp.com/">
               Go To This Link
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

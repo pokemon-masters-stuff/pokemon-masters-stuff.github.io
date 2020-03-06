@@ -256,25 +256,20 @@ class MobileApp extends Component {
           <DialogTitle>{'Announcement'}</DialogTitle>
           <DialogContent dividers>
             <p>
-              Several users reported continuous crashes when selecting cells. It
-              has been confirmed that the crashes are caused by the Share
-              feature.{' '}
+              <ol>
+                <li>Fixed crashing issues</li>
+                <li>Shortened url links</li>
+              </ol>
             </p>
-            <p>
-              I need some time to look into it and fix the code. In the meantime
-              you can use a branch I deployed to Heroku, in which the Share
-              feature is disabled. See the link below.
-            </p>
-            https://pokemon-masters-stuff.herokuapp.com/
           </DialogContent>
-          <DialogActions style={{ justifyContent: 'center' }}>
+          {/* <DialogActions style={{ justifyContent: 'center' }}>
             <Button
               href="https://pokemon-masters-stuff.herokuapp.com"
               style={{ color: 'blue' }}
             >
               Go to this link
             </Button>
-          </DialogActions>
+          </DialogActions> */}
         </Dialog>
       </div>
     );
