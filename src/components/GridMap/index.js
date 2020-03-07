@@ -5,25 +5,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import { listOfPokemonsWithId } from '../../data';
-import {
-  pikachuSvgLink,
-  vileplumeSvgLink,
-  dewgongSvgLink,
-  torkoalSvgLink,
-  serperiorSvgLink,
-  kingdraSvgLink,
-  haxorusSvgLink,
-  infernapeSvgLink,
-  metagrossSvgLink,
-  mewSvgLink,
-  charizardSvgLink,
-  alakazamSvgLink,
-  houndoomSvgLink,
-  liepardSvgLink,
-  palossandSvgLink,
-  raichuSvgLink,
-  rotomSvgLink
-} from '../../images/PokemonSvgLink/';
+import styles from './styles';
+import { getQueryStringValue, clearQueryStringValue } from '../../queryString';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -55,27 +38,44 @@ import {
   loadGridFromUrl,
   updateUrl
 } from '../../actions/actionCreators';
-import styles from './styles';
-import { getQueryStringValue, clearQueryStringValue } from '../../queryString';
+import {
+  charizard,
+  pikachu,
+  raichu,
+  vileplume,
+  alakazam,
+  dewgong,
+  mew,
+  houndoom,
+  kingdra,
+  torkoal,
+  infernape,
+  metagross,
+  rotom,
+  serperior,
+  liepard,
+  palossand,
+  haxorus
+} from '../../images/PokemonThumbnails/';
 
-const allSvgLinks = {
-  pikachuSvgLink,
-  vileplumeSvgLink,
-  dewgongSvgLink,
-  torkoalSvgLink,
-  serperiorSvgLink,
-  kingdraSvgLink,
-  haxorusSvgLink,
-  infernapeSvgLink,
-  metagrossSvgLink,
-  mewSvgLink,
-  charizardSvgLink,
-  alakazamSvgLink,
-  houndoomSvgLink,
-  liepardSvgLink,
-  palossandSvgLink,
-  raichuSvgLink,
-  rotomSvgLink
+const allThumbnails = {
+  charizard,
+  pikachu,
+  raichu,
+  vileplume,
+  alakazam,
+  dewgong,
+  mew,
+  houndoom,
+  kingdra,
+  torkoal,
+  infernape,
+  metagross,
+  rotom,
+  serperior,
+  liepard,
+  palossand,
+  haxorus
 };
 
 const allSyncGrids = {
@@ -489,7 +489,7 @@ class GridMap extends Component {
 
   renderCenterGridText = classes => {
     // Only renders text when no picture available
-    return allSvgLinks[`${this.props.pokemon}SvgLink`] === undefined ? (
+    return allThumbnails[`${this.props.pokemon}`] === undefined ? (
       <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
     ) : null;
   };
@@ -529,7 +529,7 @@ class GridMap extends Component {
           </Layout>
           <Pattern
             id={this.props.pokemon}
-            link={allSvgLinks[`${this.props.pokemon}SvgLink`]}
+            link={allThumbnails[`${this.props.pokemon}`]}
             size={{ x: 10, y: 10 }}
           />
         </HexGrid>

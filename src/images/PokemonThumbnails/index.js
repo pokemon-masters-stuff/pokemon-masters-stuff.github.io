@@ -1,0 +1,17 @@
+export { default as charizard } from './pm0006.png';
+export { default as pikachu } from './pm0025.png';
+export { default as raichu } from './pm0026.png';
+export { default as vileplume } from './pm0045.png';
+export { default as alakazam } from './pm0065.png';
+export { default as dewgong } from './pm0087.png';
+export { default as mew } from './pm0151.png';
+export { default as houndoom } from './pm0229.png';
+export { default as kingdra } from './pm0230.png';
+export { default as torkoal } from './pm0324.png';
+export { default as infernape } from './pm0392.png';
+export { default as metagross } from './pm0376.png';
+export { default as rotom } from './pm0479.png';
+export { default as serperior } from './pm0497.png';
+export { default as liepard } from './pm0510.png';
+export { default as palossand } from './pm0823.png';
+export { default as haxorus } from './pm0612.png';
