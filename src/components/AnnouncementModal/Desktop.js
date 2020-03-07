@@ -17,7 +17,9 @@ export default function AnnouncementModal() {
           className={`modal-content ${darkMode ? 'text-white bg-dark' : null}`}
         >
           <div className="modal-header text-center">
-            <h4 className="modal-title w-100 font-weight-bold">Announcement</h4>
+            <h4 className="modal-title w-100 font-weight-bold">
+              Announcements
+            </h4>
           </div>
           <div className="modal-body mx-3">
             <ol>

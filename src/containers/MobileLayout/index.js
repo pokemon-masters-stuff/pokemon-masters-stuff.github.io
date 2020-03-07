@@ -9,7 +9,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-
+import DialogContentText from '@material-ui/core/DialogContentText';
 import SyncGridControls from '../../components/SyncGridControls';
 import Navigation from '../../components/Navigation';
 import { SelectedSkillListMobile } from '../../components/SelectedSkillList';
@@ -17,7 +17,6 @@ import SkillOverview from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
-// import { getQueryStringValue } from '../../queryString';
 import {
   selectPokemon,
   resetGrids,
@@ -253,12 +252,14 @@ class MobileApp extends Component {
           open={isAnnouncementModalVisible}
           onClose={this.handleOnCloseAnnouncementModal}
         >
-          <DialogTitle>{'Announcement'}</DialogTitle>
+          <DialogTitle>{'Announcements'}</DialogTitle>
           <DialogContent dividers>
-            <ol>
-              <li>Fixed crashing issues</li>
-              <li>Shortened url links (old links still compatible)</li>
-            </ol>
+            <DialogContentText>
+              <ol style={{ paddingLeft: 15 }}>
+                <li>Fixed crashing issues</li>
+                <li>Shortened url links (old links still compatible)</li>
+              </ol>
+            </DialogContentText>
           </DialogContent>
           {/* <DialogActions style={{ justifyContent: 'center' }}>
             <Button
