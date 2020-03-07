@@ -255,12 +255,10 @@ class MobileApp extends Component {
         >
           <DialogTitle>{'Announcement'}</DialogTitle>
           <DialogContent dividers>
-            <p>
-              <ol>
-                <li>Fixed crashing issues</li>
-                <li>Shortened url links</li>
-              </ol>
-            </p>
+            <ol>
+              <li>Fixed crashing issues</li>
+              <li>Shortened url links (old links still compatible)</li>
+            </ol>
           </DialogContent>
           {/* <DialogActions style={{ justifyContent: 'center' }}>
             <Button

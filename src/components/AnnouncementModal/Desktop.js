@@ -20,12 +20,10 @@ export default function AnnouncementModal() {
             <h4 className="modal-title w-100 font-weight-bold">Announcement</h4>
           </div>
           <div className="modal-body mx-3">
-            <p>
-              <ol>
-                <li>Fixed crashing issues</li>
-                <li>Shortened url links</li>
-              </ol>
-            </p>
+            <ol>
+              <li>Fixed crashing issues</li>
+              <li>Shortened url links (old links still compatible)</li>
+            </ol>
           </div>
           {/* <div className="modal-footer d-flex justify-content-center">
             <a href="https://pokemon-masters-stuff.herokuapp.com/">
