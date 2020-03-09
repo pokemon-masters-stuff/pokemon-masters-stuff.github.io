@@ -5,29 +5,33 @@ const BuildSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'users'
   },
-  name: {
+  username: {
+    type: String,
+    required: true
+  },
+  buildName: {
     type: String,
     required: true
   },
   description: {
     type: String
   },
-  pokemon: {
-    type: String,
-    required: true
-  },
-  grids: {
-    type: Array,
-    required: true
-  },
-  remainingEnergy: {
-    type: Number,
-    required: true
-  },
-  orbSpent: {
-    type: Number,
-    required: true
-  },
+  // pokemon: {
+  //   type: String,
+  //   required: true
+  // },
+  // grids: {
+  //   type: Array,
+  //   required: true
+  // },
+  // remainingEnergy: {
+  //   type: Number,
+  //   required: true
+  // },
+  // orbSpent: {
+  //   type: Number,
+  //   required: true
+  // },
   url: {
     type: String,
     required: true
@@ -35,7 +39,7 @@ const BuildSchema = mongoose.Schema({
   likes: [
     {
       user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'users'
       }
     }
@@ -45,6 +49,10 @@ const BuildSchema = mongoose.Schema({
       user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users'
+      },
+      username: {
+        type: String,
+        required: true
       },
       text: {
         type: String,
