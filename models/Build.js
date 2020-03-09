@@ -1,0 +1,65 @@
+const mongoose = require('mongoose');
+
+const BuildSchema = mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users'
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  },
+  pokemon: {
+    type: String,
+    required: true
+  },
+  grids: {
+    type: Array,
+    required: true
+  },
+  remainingEnergy: {
+    type: Number,
+    required: true
+  },
+  orbSpent: {
+    type: Number,
+    required: true
+  },
+  url: {
+    type: String,
+    required: true
+  },
+  likes: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+      }
+    }
+  ],
+  comments: [
+    {
+      user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users'
+      },
+      text: {
+        type: String,
+        required: true
+      },
+      date: {
+        type: Date,
+        default: Date.now
+      }
+    }
+  ],
+  date: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = mongoose.model('build', BuildSchema);
