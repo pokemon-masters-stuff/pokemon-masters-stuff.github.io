@@ -1,5 +1,5 @@
 {
-  "name": "pm",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://pokemon-masters-stuff.github.io",
@@ -53,5 +53,6 @@
   },
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
