@@ -31,6 +31,10 @@ router.post(
         username: user.username,
         user: req.user.id,
         buildName: req.body.buildName,
+        pokemon: req.body.pokemon,
+        grids: req.body.grids,
+        remainingEnergy: req.body.remainingEnergy,
+        orbSpent: req.body.orbSpent,
         url: req.body.url
       });
 

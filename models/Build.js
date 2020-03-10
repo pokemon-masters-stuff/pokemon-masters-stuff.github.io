@@ -16,25 +16,28 @@ const BuildSchema = mongoose.Schema({
   description: {
     type: String
   },
-  // pokemon: {
-  //   type: String,
-  //   required: true
-  // },
-  // grids: {
-  //   type: [String],
-  //   required: true
-  // },
-  // remainingEnergy: {
-  //   type: Number,
-  //   required: true
-  // },
-  // orbSpent: {
-  //   type: Number,
-  //   required: true
-  // },
+  pokemon: {
+    type: String,
+    required: true
+  },
+  grids: {
+    type: [String],
+    required: true
+  },
+  remainingEnergy: {
+    type: Number,
+    required: true
+  },
+  orbSpent: {
+    type: Number,
+    required: true
+  },
   url: {
     type: String,
     required: true
+  },
+  tags: {
+    type: [String]
   },
   likes: [
     {
