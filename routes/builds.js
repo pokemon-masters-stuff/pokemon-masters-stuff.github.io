@@ -57,6 +57,35 @@ router.get('/', async (req, res) => {
   }
 });
 
+// @route   GET api/builds/published
+// @desc    Get user's published builds
+// @access  Private
+router.get('/published', auth, async (req, res) => {
+  try {
+    const builds = await Build.find({ user: req.user.id }).sort({ date: -1 });
+    res.json(builds);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route   GET api/builds/liked
+// @desc    Get liked builds
+// @access  Private
+router.get('/liked', auth, async (req, res) => {
+  try {
+    console.log('console', await Build.find({ likes: [] }));
+    const builds = await Build.find({
+      likes: { $elemMatch: { user: req.user.id } }
+    }).sort({ date: -1 });
+    res.json(builds);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 // @route    GET api/builds/:id
 // @desc     Get build by ID
 // @access   Public
@@ -145,20 +174,6 @@ router.put('/unlike/:id', auth, async (req, res) => {
     }
     res.status(500).send('Server Error');
   }
-});
-
-// @route   GET api/builds/published
-// @desc    Get user's builds
-// @access  Private
-router.get('/published', auth, (req, res) => {
-  res.json({ msg: 'Get users published builds' });
-});
-
-// @route   GET api/builds/liked
-// @desc    Get liked builds
-// @access  Private
-router.get('/liked', auth, (req, res) => {
-  res.json({ msg: 'Get users liked builds' });
 });
 
 // @route   DELETE api/builds/:id

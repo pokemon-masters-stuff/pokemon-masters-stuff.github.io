@@ -21,7 +21,7 @@ const BuildSchema = mongoose.Schema({
   //   required: true
   // },
   // grids: {
-  //   type: Array,
+  //   type: [String],
   //   required: true
   // },
   // remainingEnergy: {
