@@ -4,9 +4,7 @@ import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
-import { listOfPokemonsWithId } from '../../data';
 import styles from './styles';
-import { getQueryStringValue, clearQueryStringValue } from '../../queryString';
 import {
   getFillColorByMoveType,
   renderMoveName,
@@ -29,8 +27,7 @@ import {
   rotomGridData,
   houndoomGridData,
   raichuGridData,
-  alakazamGridData,
-  allDisplayedGridData
+  alakazamGridData
 } from '../../data';
 import {
   selectPokemon,
@@ -38,9 +35,7 @@ import {
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids,
-  loadGridFromUrl,
-  updateUrl
+  resetGrids
 } from '../../actions/actionCreators';
 import {
   charizard,
@@ -114,41 +109,9 @@ class BuildItem extends Component {
     screenWidth: document.body.clientWidth
   };
 
-  loadUrlGridData() {
-    getQueryStringValue('p') &&
-      this.props.selectPokemon(getQueryStringValue('p'));
-    // if user uses an url that includes grid data, generate gridmap based on url
-    if (getQueryStringValue('grid')) {
-      this.props.resetGrids();
-      let remainingEnergy = Number(getQueryStringValue('e'));
-      let orbSpent = Number(getQueryStringValue('o'));
-      let characterId;
-      listOfPokemonsWithId.map(obj => {
-        return obj.name === getQueryStringValue('p')
-          ? (characterId = obj.characterId)
-          : null;
-      });
-      // each selected grid is stored as a two-digit number in the url, which comes from the last two digits of cellId
-      // therefore, in order to re-generate gridmap from url, need to add characterId (except the last 3 digits) to the two digit number to arrive at the original cellId
-      let cellIdArray = getQueryStringValue('grid').map(id => {
-        return characterId.toString().slice(0, -3) + id;
-      });
-      cellIdArray.map(id => {
-        return this.props.loadGridFromUrl(
-          allDisplayedGridData[id],
-          remainingEnergy,
-          orbSpent
-        );
-      });
-    }
-  }
-
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
-    this.loadUrlGridData();
-
-    getQueryStringValue('p') && this.props.updateUrl(getQueryStringValue('p'));
   }
 
   componentDidUpdate() {
@@ -157,7 +120,6 @@ class BuildItem extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.fitMapToScreen);
-    clearQueryStringValue();
   }
 
   fitMapToScreen = () => {
@@ -217,24 +179,6 @@ class BuildItem extends Component {
     }));
   };
 
-  handleClick(e, index, data) {
-    e.stopPropagation();
-
-    if (!this.props.grid.selectedCellsById[data.cellId]) {
-      this.props.addToGridList(data);
-      this.props.subtractFromRemainingEnergy(data);
-      this.props.updateUrl(
-        this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
-      );
-    } else {
-      this.props.removeFromGridList(data);
-      this.props.addBackToRemainingEnergy(data);
-      this.props.updateUrl(
-        this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
-      );
-    }
-  }
-
   renderHexagonCells = classes =>
     allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
       // remove "Move:" from the start of moveName
@@ -249,13 +193,6 @@ class BuildItem extends Component {
         moveName
       );
 
-      // Used this to generate data/grids/allDisplacedGridData. TODO: refactor
-      // gridUrlLookUpData[cell.cellId] = {
-      //   cellId: cell.cellId,
-      //   name: nameWithSyncLvRequirement || moveName,
-      //   description: cell.move.description,
-      //   energy: cell.move.energyCost
-      // };
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -274,7 +211,6 @@ class BuildItem extends Component {
           group: cell.move.group,
           isLocked: cell.move.locked
         }),
-        onClickHandler: (e, data) => this.handleClick(e, index, data),
         className: this.props.darkMode
           ? this.props.grid.selectedCellsById[cell.cellId]
             ? 'selected dark-mode'
@@ -382,7 +318,5 @@ export default connect(mapStateToProps, {
   removeFromGridList,
   subtractFromRemainingEnergy,
   addBackToRemainingEnergy,
-  resetGrids,
-  loadGridFromUrl,
-  updateUrl
+  resetGrids
 })(withStyles(styles)(BuildItem));
