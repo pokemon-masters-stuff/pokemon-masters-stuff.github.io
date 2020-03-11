@@ -20,8 +20,26 @@ const BuildSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  grids: {
-    type: [String],
+  selectedCellsById: {
+    type: Map,
+    of: {
+      _id: { id: false },
+      cellId: {
+        type: String,
+        required: true
+      },
+      name: {
+        type: String,
+        required: true
+      },
+      energy: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String
+      }
+    },
     required: true
   },
   remainingEnergy: {
