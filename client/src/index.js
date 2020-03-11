@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore, persistReducer } from 'redux-persist';
@@ -13,6 +14,8 @@ import * as serviceWorker from './serviceWorker';
 import { UA_ID } from './utils/constants';
 import './index.css';
 import App from './App.js';
+
+const middleware = [thunk];
 
 const persistConfig = {
   key: 'root',
@@ -26,8 +29,23 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = createStore(
   persistedReducer,
   {},
-  composeWithDevTools(applyMiddleware())
+  composeWithDevTools(applyMiddleware(...middleware))
 );
+
+let currentState;
+
+store.subscribe(() => {
+  // keep track of the previous and current state to compare changes
+  let previousState = currentState;
+  currentState = store.getState();
+  // if the token changes set the value in localStorage
+  if (previousState && previousState.auth.token !== currentState.auth.token) {
+    const token = currentState.auth.token;
+    token
+      ? localStorage.setItem('token', token)
+      : localStorage.removeItem('token');
+  }
+});
 
 const persistor = persistStore(store);
 

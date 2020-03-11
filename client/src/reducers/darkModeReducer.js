@@ -1,4 +1,3 @@
-// For darkmode
 import { CHANGE_MODE } from '../actions/types';
 
 const initialState = { mode: false };

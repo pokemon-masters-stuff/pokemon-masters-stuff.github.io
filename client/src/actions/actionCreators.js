@@ -1,3 +1,6 @@
+import axios from 'axios';
+import uuid from 'uuid';
+import setAuthToken from '../utils/setAuthToken';
 import {
   SELECT_POKEMON,
   ADD_TO_GRID_LIST,
@@ -12,7 +15,13 @@ import {
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
   UPDATE_URL,
-  CHANGE_MODE
+  CHANGE_MODE,
+  SET_ALERT,
+  REMOVE_ALERT,
+  REGISTER_SUCCESS,
+  USER_LOADED,
+  LOGIN_SUCCESS,
+  LOGOUT
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -83,3 +92,95 @@ export const updateUrl = payload => ({
 export const changeMode = () => ({
   type: CHANGE_MODE
 });
+
+export const setAlert = (msg, alertType, timeout = 2000) => dispatch => {
+  const id = uuid.v4();
+
+  dispatch({
+    type: SET_ALERT,
+    payload: { msg, alertType, id }
+  });
+
+  setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout);
+};
+
+// Load User
+export const loadUser = () => async dispatch => {
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
+
+  try {
+    const res = await axios.get('/api/auth');
+
+    dispatch({
+      type: USER_LOADED,
+      payload: res.data
+    });
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+    }
+  }
+};
+
+// Register User
+export const register = ({ username, password }) => async dispatch => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const body = JSON.stringify({ username, password });
+
+  try {
+    const res = await axios.post('/api/users', body, config);
+
+    dispatch({
+      type: REGISTER_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+    }
+  }
+};
+
+// Login User
+export const login = (username, password) => async dispatch => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const body = JSON.stringify({ username, password });
+
+  try {
+    const res = await axios.post('/api/auth', body, config);
+
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data
+    });
+
+    dispatch(loadUser());
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+    }
+  }
+};
+
+// Logout
+export const logout = () => dispatch => {
+  dispatch({ type: LOGOUT });
+};
