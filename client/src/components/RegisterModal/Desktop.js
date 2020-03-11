@@ -95,9 +95,6 @@ const Register = () => {
               </form>
             </div>
             <Alert />
-            <div className="modal-footer">
-              Already have an account? <Link to="/login">Sign In</Link>
-            </div>
           </div>
         </div>
       </div>
