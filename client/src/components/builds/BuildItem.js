@@ -103,7 +103,7 @@ const allSyncGrids = {
 };
 
 // const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;
-class GridMap extends Component {
+class BuildItem extends Component {
   state = {
     initialRender: true,
     mapSizeBoundaries: {
@@ -385,4 +385,4 @@ export default connect(mapStateToProps, {
   resetGrids,
   loadGridFromUrl,
   updateUrl
-})(withStyles(styles)(GridMap));
+})(withStyles(styles)(BuildItem));

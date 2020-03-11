@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactGA from 'react-ga';
-
 import { SelectedSkillListDesktop } from '../../components/SelectedSkillList';
-import { FeedbackFormDesktop } from '../../components/FeedbackForm';
-import { AnnouncementModalDesktop } from '../../components/AnnouncementModal';
 import SelectPokemonDropdown from '../../components/SelectPokemonDropdown';
 import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
 import GridMap from '../../components/GridMap';
@@ -50,35 +47,6 @@ class DesktopLayout extends Component {
 
     return (
       <div className={`App ${darkMode ? 'dark-mode' : null}`}>
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-          <div className="container container-s">
-            <span className="navbar-brand mb-0 h1">Sync Grid Helper</span>
-            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li className="nav-item active">
-                <button
-                  type="button"
-                  className="btn btn-dark"
-                  id="announcement-button"
-                  data-toggle="modal"
-                  data-target="#announcementModal"
-                >
-                  Announcement
-                </button>
-                <AnnouncementModalDesktop />
-              </li>
-            </ul>
-            <button
-              type="button"
-              className="btn btn-dark"
-              id="feedback-button"
-              data-toggle="modal"
-              data-target="#feedbackModal"
-            >
-              Submit Feedback
-            </button>
-            <FeedbackFormDesktop />
-          </div>
-        </nav>
         <div className="content">
           <div className="container container-s">
             <div className="row">

@@ -1,3 +1,4 @@
+// TODO: break into several files
 import axios from 'axios';
 import uuid from 'uuid';
 import setAuthToken from '../utils/setAuthToken';
@@ -21,7 +22,10 @@ import {
   REGISTER_SUCCESS,
   USER_LOADED,
   LOGIN_SUCCESS,
-  LOGOUT
+  LOGOUT,
+  GET_BUILDS,
+  GET_BUILD,
+  BUILD_ERROR
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -183,4 +187,39 @@ export const login = (username, password) => async dispatch => {
 // Logout
 export const logout = () => dispatch => {
   dispatch({ type: LOGOUT });
+};
+
+// Get Builds
+export const getBuilds = () => async dispatch => {
+  try {
+    const res = await axios.get('/api/builds');
+    console.log('res', res);
+    dispatch({
+      type: GET_BUILDS,
+      payload: res.data
+    });
+  } catch (error) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
+};
+
+// Get Builds
+export const getBuild = () => async dispatch => {
+  console.log('getBuild');
+  // try {
+  //   const res = await axios.get('/api/builds');
+  //   console.log('res', res);
+  //   dispatch({
+  //     type: GET_BUILDS,
+  //     payload: res.data
+  //   });
+  // } catch (error) {
+  //   dispatch({
+  //     type: BUILD_ERROR,
+  //     payload: { msg: error.response.statusText, status: error.response.status }
+  //   });
+  // }
 };

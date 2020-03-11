@@ -12,7 +12,10 @@ import {
   LOAD_SELECTED_BUILD,
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
-  UPDATE_URL
+  UPDATE_URL,
+  GET_BUILDS,
+  GET_BUILD,
+  BUILD_ERROR
 } from '../actions/types';
 
 const initialState = {
@@ -28,7 +31,13 @@ const initialState = {
     id: '',
     name: ''
   },
-  url: ''
+  url: '',
+
+  // builds from databse
+  builds: [],
+  build: null,
+  loading: true,
+  error: {}
 };
 
 export default function(state = initialState, action) {
@@ -157,6 +166,20 @@ export default function(state = initialState, action) {
       return {
         ...state,
         url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`
+      };
+
+    // builds from database
+    case GET_BUILDS:
+      return {
+        ...state,
+        builds: action.payload,
+        loading: false
+      };
+    case BUILD_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false
       };
     default:
       return state;

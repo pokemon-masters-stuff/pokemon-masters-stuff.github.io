@@ -11,7 +11,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import SyncGridControls from '../../components/SyncGridControls';
-import Navigation from '../../components/Navigation';
+import { NavigationMobile } from '../../components/Navigation';
 import { SelectedSkillListMobile } from '../../components/SelectedSkillList';
 import SkillOverview from '../../components/SkillOverview';
 import MainAppbar from '../../components/MainAppbar';
@@ -157,7 +157,7 @@ class MobileApp extends Component {
 
     return (
       <div>
-        <Navigation
+        <NavigationMobile
           isOpened={isNavOpened}
           onCloseHandler={this.handleOnCloseNav}
         />
