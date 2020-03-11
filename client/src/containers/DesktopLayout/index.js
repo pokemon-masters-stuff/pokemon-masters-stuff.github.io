@@ -16,10 +16,9 @@ import {
 } from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
+import { PublishBuildButtonDesktop } from '../../components/PublishBuildButton';
 import { DarkModeToggleDesktop } from '../../components/DarkModeToggle';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
-
-// import { getQueryStringValue } from '../../queryString';
 
 class DesktopLayout extends Component {
   constructor(props) {
@@ -102,10 +101,13 @@ class DesktopLayout extends Component {
                   <div style={{ marginTop: 10 }}>
                     <DarkModeToggleDesktop />
                   </div>
+                  <div style={{ marginLeft: 8, marginTop: 10 }}>
+                    <PublishBuildButtonDesktop />
+                  </div>
                   <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>
-                  <div style={{ marginTop: -130 }}>
+                  <div style={{ marginTop: -170 }}>
                     <GridMap />
                   </div>
                 </div>
