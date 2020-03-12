@@ -272,7 +272,7 @@ class BuildItem extends Component {
       <div>
         <Paper elevation={3} className={classes.buildName}>
           <div className="row">
-            <div className="col-sm-10">
+            <div className="col-sm-9">
               <Typography
                 variant="displayInline"
                 color="inherit"
@@ -284,7 +284,8 @@ class BuildItem extends Component {
                 {build.buildName} by {build.username}
               </Typography>
             </div>
-            <div className="col-sm offset-sm-1">
+            <div className="col-sm-1 mr-0">Share</div>
+            <div className="col-sm-1 offset-sm-1">
               <FavoriteBorderIcon /> {build.likes.length}
             </div>
           </div>
@@ -293,7 +294,7 @@ class BuildItem extends Component {
         <div
           className="row"
           style={{
-            backgroundColor: '#151212',
+            backgroundColor: '#1E1E1E',
             marginRight: -3,
             marginLeft: -3
           }}
@@ -378,15 +379,16 @@ class BuildItem extends Component {
             }}
           >
             <div>
-              <p style={{ color: 'white' }}></p>
-              <p style={{ color: 'white' }}>
+              <p style={{ color: 'white', fontWeight: 'bold' }}>
                 Remaining Energy: {build.remainingEnergy}
               </p>
-              <p style={{ color: 'white' }}>Orbs Spent: {build.orbSpent}</p>
-              <Typography style={{ color: 'white' }}>
+              <p style={{ color: 'white', fontWeight: 'bold' }}>
+                Orbs Spent: {build.orbSpent}
+              </p>
+              <Typography style={{ color: 'white', fontWeight: 'bold' }}>
                 Description:
-                <p>{build.description || 'none'}</p>
               </Typography>
+              <p style={{ color: 'white' }}>{build.description || 'none'}</p>
             </div>
           </div>
         </div>
