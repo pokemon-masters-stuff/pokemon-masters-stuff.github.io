@@ -73,6 +73,11 @@ svg g .dark-mode {
   fill-opacity: 0.12;
 }
 
+svg g .dark-mode.build {
+  fill: #9ea7e7;
+  fill-opacity: 0.02;
+}
+
 svg g:hover {
   fill-opacity: 0.5;
 }

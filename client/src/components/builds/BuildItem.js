@@ -225,11 +225,11 @@ class BuildItem extends Component {
         }),
         className: this.props.darkMode
           ? build.selectedCellsById[cell.cellId]
-            ? 'selected dark-mode'
-            : 'dark-mode'
+            ? 'selected dark-mode build'
+            : 'dark-mode build'
           : build.selectedCellsById[cell.cellId]
-          ? 'selected'
-          : null
+          ? 'selected build'
+          : 'build'
       };
       return (
         <Hexagon {...hexagonProps}>
@@ -275,6 +275,7 @@ class BuildItem extends Component {
             <div className="col-sm-10">
               <Typography
                 variant="displayInline"
+                color="inherit"
                 style={{ fontWeight: 'bold' }}
               >
                 Build Name:{' '}
