@@ -136,3 +136,9 @@ svg g:hover .center-grid {
   -o-user-select: none;
   user-select: none;
 }
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}

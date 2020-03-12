@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import styles from './styles';
@@ -29,14 +33,7 @@ import {
   raichuGridData,
   alakazamGridData
 } from '../../data';
-import {
-  selectPokemon,
-  addToGridList,
-  removeFromGridList,
-  subtractFromRemainingEnergy,
-  addBackToRemainingEnergy,
-  resetGrids
-} from '../../actions/actionCreators';
+import {} from '../../actions/actionCreators';
 import {
   charizard,
   pikachu,
@@ -97,21 +94,32 @@ const allSyncGrids = {
   alakazamGridData
 };
 
-// const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;
 class BuildItem extends Component {
-  state = {
-    initialRender: true,
-    mapSizeBoundaries: {
-      width: '100vw',
-      height: 440,
-      viewbox: '-35 -35 70 70'
-    },
-    screenWidth: document.body.clientWidth
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      initialRender: true,
+      mapSizeBoundaries: {
+        width: '100vw',
+        height: 440,
+        viewbox: '-35 -35 70 70'
+      },
+      screenWidth: document.body.clientWidth,
+      mouseEntered: false
+    };
+  }
 
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      this.state.initialRender ||
+      this.state.mouseEntered !== nextState.mouseEntered
+    );
   }
 
   componentDidUpdate() {
@@ -179,19 +187,23 @@ class BuildItem extends Component {
     }));
   };
 
-  renderHexagonCells = classes =>
-    allSyncGrids[`${this.props.pokemon}GridData`].map((cell, index) => {
+  mouseEnter = () => {
+    this.setState({ mouseEntered: true });
+  };
+
+  mouseLeave = () => {
+    this.setState({ mouseEntered: false });
+  };
+
+  renderHexagonCells = (classes, pokemon, build) =>
+    allSyncGrids[`${pokemon}GridData`].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
         cell.move.name.substring(0, 5) === 'Move:'
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      const nameWithSyncLvRequirement = addSyncLvReq(
-        this.props.pokemon,
-        cell,
-        moveName
-      );
+      const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
 
       const hexagonProps = {
         data: {
@@ -212,14 +224,13 @@ class BuildItem extends Component {
           isLocked: cell.move.locked
         }),
         className: this.props.darkMode
-          ? this.props.grid.selectedCellsById[cell.cellId]
+          ? build.selectedCellsById[cell.cellId]
             ? 'selected dark-mode'
             : 'dark-mode'
-          : this.props.grid.selectedCellsById[cell.cellId]
+          : build.selectedCellsById[cell.cellId]
           ? 'selected'
           : null
       };
-
       return (
         <Hexagon {...hexagonProps}>
           <Text className={this.props.darkMode ? classes.darkMode : null}>
@@ -241,16 +252,17 @@ class BuildItem extends Component {
       );
     });
 
-  renderCenterGridText = classes => {
+  renderCenterGridText = (classes, pokemon) => {
     // Only renders text when no picture available
-    return allThumbnails[`${this.props.pokemon}`] === undefined ? (
-      <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
+    return allThumbnails[`${pokemon}`] === undefined ? (
+      <Text className={classes.selectedPokemonCell}>{pokemon}</Text>
     ) : null;
   };
 
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
-    const { classes } = this.props;
+    const { classes, build } = this.props;
+    const pokemon = build.pokemon.toLowerCase();
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
@@ -258,49 +270,125 @@ class BuildItem extends Component {
       </div>
     ) : (
       <div>
-        <HexGrid
-          width={mapSizeBoundaries.width}
-          height={mapSizeBoundaries.height}
-          viewBox={mapSizeBoundaries.viewbox}
+        <Paper elevation={3} className={classes.buildName}>
+          <div className="row">
+            <div className="col-sm-10">
+              <Typography
+                variant="displayInline"
+                style={{ fontWeight: 'bold' }}
+              >
+                Build Name:{' '}
+              </Typography>
+              <Typography variant="displayInline">
+                {build.buildName} by {build.username}
+              </Typography>
+            </div>
+            <div className="col-sm offset-sm-1">
+              <FavoriteBorderIcon /> {build.likes.length}
+            </div>
+          </div>
+        </Paper>
+
+        <div
+          className="row"
+          style={{
+            backgroundColor: '#151212',
+            marginRight: -3,
+            marginLeft: -3
+          }}
         >
-          <Layout
-            size={{ x: 4.5, y: 4.5 }}
-            flat={true}
-            spacing={1.1}
-            origin={{ x: 0, y: 0 }}
+          <div
+            className="col-sm mt-2"
+            style={{
+              marginLeft: -150,
+              display: 'flex',
+              flexFlow: 'row wrap',
+              alignItems: 'center'
+            }}
           >
-            <Hexagon
-              q={0}
-              r={0}
-              s={0}
-              fill={`url(#${this.props.pokemon})`}
-              data={{ cellId: 0 }}
-              className={'center-grid'}
+            {/* <button
+              className="btn btn-primary border"
+              style={{ marginLeft: 150, width: 250 }}
             >
-              {this.renderCenterGridText(classes)}
-            </Hexagon>
-            {this.renderHexagonCells(classes)}
-          </Layout>
-          <Pattern
-            id={this.props.pokemon}
-            link={allThumbnails[`${this.props.pokemon}`]}
-            size={{ x: 10, y: 10 }}
-          />
-        </HexGrid>
-        {this.state.screenWidth >= 960 &&
-        this.props.grid.gridData.energy !== undefined ? (
-          <ReactTooltip className="tooltip" effect="solid" id="skillTooltip">
-            <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
-              <li>{this.props.grid.gridData.name}</li>
-              <li>Energy: {this.props.grid.gridData.energy}</li>
-              {this.props.grid.gridData.description ? (
-                <li style={{ marginTop: 1 }}>
-                  {this.props.grid.gridData.description}
-                </li>
-              ) : null}
-            </ul>
-          </ReactTooltip>
-        ) : null}
+              Like
+            </button>
+            <button
+              className="btn btn-success border"
+              style={{ marginLeft: 10, width: 250 }}
+            >
+              Share
+            </button> */}
+            <HexGrid
+              width={mapSizeBoundaries.width}
+              height={mapSizeBoundaries.height}
+              viewBox={mapSizeBoundaries.viewbox}
+            >
+              <Layout
+                size={{ x: 4.5, y: 4.5 }}
+                flat={true}
+                spacing={1.1}
+                origin={{ x: 0, y: 0 }}
+              >
+                <Hexagon
+                  q={0}
+                  r={0}
+                  s={0}
+                  fill={`url(#${pokemon})`}
+                  data={{ cellId: 0 }}
+                  className={'center-grid'}
+                >
+                  {this.renderCenterGridText(classes, pokemon)}
+                </Hexagon>
+                {this.renderHexagonCells(classes, pokemon, build)}
+              </Layout>
+              <Pattern
+                id={pokemon}
+                link={allThumbnails[`${pokemon}`]}
+                size={{ x: 10, y: 10 }}
+              />
+            </HexGrid>
+            {this.state.screenWidth >= 960 &&
+            this.props.grid.gridData.energy !== undefined ? (
+              <ReactTooltip
+                className="tooltip"
+                effect="solid"
+                id="skillTooltip"
+              >
+                <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
+                  <li>{this.props.grid.gridData.name}</li>
+                  <li>Energy: {this.props.grid.gridData.energy}</li>
+                  {this.props.grid.gridData.description ? (
+                    <li style={{ marginTop: 1 }}>
+                      {this.props.grid.gridData.description}
+                    </li>
+                  ) : null}
+                </ul>
+              </ReactTooltip>
+            ) : null}
+          </div>
+          <div
+            className="col-sm"
+            style={{
+              paddingLeft: 0,
+              marginLeft: -80,
+              display: 'flex',
+              flexFlow: 'row wrap',
+              alignItems: 'center'
+            }}
+          >
+            <div>
+              <p style={{ color: 'white' }}></p>
+              <p style={{ color: 'white' }}>
+                Remaining Energy: {build.remainingEnergy}
+              </p>
+              <p style={{ color: 'white' }}>Orbs Spent: {build.orbSpent}</p>
+              <Typography style={{ color: 'white' }}>
+                Description:
+                <p>{build.description || 'none'}</p>
+              </Typography>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -312,11 +400,4 @@ const mapStateToProps = state => ({
   darkMode: state.darkMode.mode
 });
 
-export default connect(mapStateToProps, {
-  selectPokemon,
-  addToGridList,
-  removeFromGridList,
-  subtractFromRemainingEnergy,
-  addBackToRemainingEnergy,
-  resetGrids
-})(withStyles(styles)(BuildItem));
+export default connect(mapStateToProps, {})(withStyles(styles)(BuildItem));

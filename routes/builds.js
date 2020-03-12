@@ -31,6 +31,7 @@ router.post(
         username: user.username,
         user: req.user.id,
         buildName: req.body.buildName,
+        description: req.body.description,
         pokemon: req.body.pokemon,
         selectedCellsById: req.body.selectedCellsById,
         remainingEnergy: req.body.remainingEnergy,

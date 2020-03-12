@@ -193,7 +193,7 @@ export const logout = () => dispatch => {
 export const getBuilds = () => async dispatch => {
   try {
     const res = await axios.get('/api/builds');
-    console.log('res', res);
+
     dispatch({
       type: GET_BUILDS,
       payload: res.data
