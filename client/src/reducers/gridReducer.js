@@ -14,8 +14,11 @@ import {
   LOAD_GRID_FROM_URL,
   UPDATE_URL,
   GET_BUILDS,
+  GET_LIKED_BUILDS,
+  GET_USERS_BUILDS,
   GET_BUILD,
-  BUILD_ERROR
+  BUILD_ERROR,
+  UPDATE_LIKES
 } from '../actions/types';
 
 const initialState = {
@@ -170,6 +173,8 @@ export default function(state = initialState, action) {
 
     // builds from database
     case GET_BUILDS:
+    case GET_LIKED_BUILDS:
+    case GET_USERS_BUILDS:
       return {
         ...state,
         builds: action.payload,
@@ -179,6 +184,17 @@ export default function(state = initialState, action) {
       return {
         ...state,
         error: action.payload,
+        loading: false
+      };
+    case UPDATE_LIKES:
+      const newBuilds = state.builds.map(build => {
+        return build._id === action.payload.id
+          ? { ...build, likes: action.payload.likes }
+          : build;
+      });
+      return {
+        ...state,
+        builds: newBuilds,
         loading: false
       };
     default:

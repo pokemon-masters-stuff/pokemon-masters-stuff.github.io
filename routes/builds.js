@@ -54,7 +54,11 @@ router.post(
 // @access  Public
 router.get('/', async (req, res) => {
   try {
-    const builds = await Build.find().sort({ date: -1 }); // Change to likes before deployment
+    const builds = await Build.aggregate([
+      { $addFields: { likesCount: { $size: '$likes' } } },
+      { $sort: { likesCount: -1 } }
+    ]);
+
     res.json(builds);
   } catch (error) {
     console.error(error.message);
@@ -62,10 +66,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-// @route   GET api/builds/published
-// @desc    Get user's published builds
+// @route   GET api/builds/users
+// @desc    Get user's builds
 // @access  Private
-router.get('/published', auth, async (req, res) => {
+router.get('/users', auth, async (req, res) => {
   try {
     const builds = await Build.find({ user: req.user.id }).sort({ date: -1 });
     res.json(builds);
@@ -80,7 +84,6 @@ router.get('/published', auth, async (req, res) => {
 // @access  Private
 router.get('/liked', auth, async (req, res) => {
   try {
-    console.log('console', await Build.find({ likes: [] }));
     const builds = await Build.find({
       likes: { $elemMatch: { user: req.user.id } }
     }).sort({ date: -1 });

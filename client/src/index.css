@@ -120,9 +120,25 @@ svg g text {
   user-select: none;
 }
 
-svg g text .dark-mode {
-  fill: white;
+svg g text.build {
+  font-size: 0.065rem;
+  /* fill: #000000; */
+  fill-opacity: 0.9;
+  transition: fill-opacity 0.2s;
+  font-weight: bold;
+
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
+
+/* svg g text .build.dark-mode {
+  fill: white;
+} */
 
 svg .center-grid {
   fill-opacity: 1;

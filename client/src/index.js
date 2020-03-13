@@ -54,7 +54,7 @@ ReactGA.initialize(UA_ID);
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <App />
+      <App store={store} />
     </PersistGate>
   </Provider>,
   document.getElementById('root')

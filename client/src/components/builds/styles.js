@@ -14,16 +14,11 @@ export default createStyles(theme => ({
     fill: 'white'
   },
   buildName: {
-    // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    marginTop: 3,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    border: 0,
-    borderRadius: 3,
-    color: 'white',
-    height: 60,
-    padding: '0 30px'
+    lineHeight: 4,
+    paddingLeft: 20
   },
   description: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',

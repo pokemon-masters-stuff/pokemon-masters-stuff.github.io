@@ -24,6 +24,9 @@ import {
   LOGIN_SUCCESS,
   LOGOUT,
   GET_BUILDS,
+  GET_LIKED_BUILDS,
+  GET_USERS_BUILDS,
+  UPDATE_LIKES,
   GET_BUILD,
   BUILD_ERROR
 } from './types';
@@ -206,20 +209,68 @@ export const getBuilds = () => async dispatch => {
   }
 };
 
-// Get Builds
-export const getBuild = () => async dispatch => {
-  console.log('getBuild');
-  // try {
-  //   const res = await axios.get('/api/builds');
-  //   console.log('res', res);
-  //   dispatch({
-  //     type: GET_BUILDS,
-  //     payload: res.data
-  //   });
-  // } catch (error) {
-  //   dispatch({
-  //     type: BUILD_ERROR,
-  //     payload: { msg: error.response.statusText, status: error.response.status }
-  //   });
-  // }
+// Get Liked Builds
+export const getLikedBuilds = () => async dispatch => {
+  try {
+    const res = await axios.get('/api/builds/liked');
+
+    dispatch({
+      type: GET_LIKED_BUILDS,
+      payload: res.data
+    });
+  } catch (error) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
+};
+
+// Get user's Builds
+export const getUsersBuilds = () => async dispatch => {
+  try {
+    const res = await axios.get('/api/builds/users');
+
+    dispatch({
+      type: GET_USERS_BUILDS,
+      payload: res.data
+    });
+  } catch (error) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
+};
+
+// Add like
+export const addLike = id => async dispatch => {
+  try {
+    const res = await axios.put(`/api/builds/like/${id}`);
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: { id, likes: res.data }
+    });
+  } catch (error) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
+};
+
+// Remove like
+export const removeLike = id => async dispatch => {
+  try {
+    const res = await axios.put(`/api/builds/unlike/${id}`);
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: { id, likes: res.data }
+    });
+  } catch (error) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
 };

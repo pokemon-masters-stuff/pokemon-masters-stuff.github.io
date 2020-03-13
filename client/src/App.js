@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
@@ -8,9 +8,17 @@ import { NavigationDesktop } from './components/Navigation';
 import Routes from './components/routing/Routes';
 import { theme, darkTheme } from './theme';
 import { useSelector } from 'react-redux';
-import { Divider } from '@material-ui/core';
+import setAuthToken from './utils/setAuthToken';
+import { loadUser } from './actions/actionCreators';
 
-export default function App() {
+export default function App({ store }) {
+  useEffect(() => {
+    if (localStorage.token) {
+      setAuthToken(localStorage.token);
+      store.dispatch(loadUser());
+    }
+  }, []);
+
   const darkMode = useSelector(state => state.darkMode.mode);
   return (
     <Router>

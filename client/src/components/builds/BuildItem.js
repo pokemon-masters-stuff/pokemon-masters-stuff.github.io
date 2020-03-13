@@ -6,6 +6,9 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import ShareBuildModal from './ShareBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import styles from './styles';
@@ -14,6 +17,7 @@ import {
   renderMoveName,
   addSyncLvReq
 } from '../../utils/functions';
+import { addLike, removeLike } from '../../actions/actionCreators';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -95,6 +99,8 @@ const allSyncGrids = {
 };
 
 class BuildItem extends Component {
+  _isMounted = false;
+
   constructor(props) {
     super(props);
 
@@ -108,9 +114,11 @@ class BuildItem extends Component {
       screenWidth: document.body.clientWidth,
       mouseEntered: false
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
+    this._isMounted = true;
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
   }
@@ -118,7 +126,8 @@ class BuildItem extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.state.initialRender ||
-      this.state.mouseEntered !== nextState.mouseEntered
+      this.state.mouseEntered !== nextState.mouseEntered ||
+      this.props.build.likes !== nextProps.build.likes
     );
   }
 
@@ -127,6 +136,7 @@ class BuildItem extends Component {
   }
 
   componentWillUnmount() {
+    this._isMounted = false;
     window.removeEventListener('resize', this.fitMapToScreen);
   }
 
@@ -152,9 +162,9 @@ class BuildItem extends Component {
       clientWrappingBoundaries.width < 1200
     ) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: 800,
         height: 768,
-        viewbox: '-15 -50 100 100'
+        viewbox: '-50 -50 100 100'
       };
     }
 
@@ -177,14 +187,16 @@ class BuildItem extends Component {
       };
     }
 
-    this.setState(prevState => ({
-      ...prevState,
-      initialRender: false,
-      mapSizeBoundaries: {
-        ...prevState.mapSizeBoundaries,
-        ...updatedMapSizeBoundaries
-      }
-    }));
+    if (this._isMounted) {
+      this.setState(prevState => ({
+        ...prevState,
+        initialRender: false,
+        mapSizeBoundaries: {
+          ...prevState.mapSizeBoundaries,
+          ...updatedMapSizeBoundaries
+        }
+      }));
+    }
   };
 
   mouseEnter = () => {
@@ -193,6 +205,12 @@ class BuildItem extends Component {
 
   mouseLeave = () => {
     this.setState({ mouseEntered: false });
+  };
+
+  handleClick = (build, buildLiked, e) => {
+    buildLiked
+      ? this.props.removeLike(build._id)
+      : this.props.addLike(build._id);
   };
 
   renderHexagonCells = (classes, pokemon, build) =>
@@ -233,7 +251,9 @@ class BuildItem extends Component {
       };
       return (
         <Hexagon {...hexagonProps}>
-          <Text className={this.props.darkMode ? classes.darkMode : null}>
+          <Text
+            className={`build ${this.props.darkMode ? classes.darkMode : null}`}
+          >
             {renderMoveName(cell.move.name, cell.ability.abilityId)}
           </Text>
           {this.state.screenWidth < 960 &&
@@ -259,6 +279,25 @@ class BuildItem extends Component {
     ) : null;
   };
 
+  renderFavoriteIcon = build => {
+    const currentUser = this.props.auth.user || '';
+    const arrayOfUsersLikedThisBuild = build.likes.map(like => {
+      return like.user;
+    });
+    const buildLiked = arrayOfUsersLikedThisBuild.includes(currentUser._id);
+
+    return (
+      <IconButton
+        value={build}
+        onClick={this.handleClick.bind(this, build, buildLiked)}
+        // edge="start"
+        style={{ marginLeft: 1 }}
+      >
+        {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+      </IconButton>
+    );
+  };
+
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build } = this.props;
@@ -273,24 +312,39 @@ class BuildItem extends Component {
         <Paper elevation={3} className={classes.buildName}>
           <div className="row">
             <div className="col-sm-9">
-              <Typography
-                variant="displayInline"
-                color="inherit"
-                style={{ fontWeight: 'bold' }}
+              <span
+                style={{
+                  fontWeight: 'bold',
+                  color: '#bdbdbd'
+                }}
               >
                 Build Name:{' '}
-              </Typography>
-              <Typography variant="displayInline">
-                {build.buildName} by {build.username}
-              </Typography>
+              </span>
+              <span>
+                {build.buildName}
+                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                  {' '}
+                  by{' '}
+                </span>
+                {build.username}
+              </span>
             </div>
-            <div className="col-sm-1 mr-0">Share</div>
-            <div className="col-sm-1 offset-sm-1">
-              <FavoriteBorderIcon /> {build.likes.length}
+            <div className="col-sm-1">
+              <Button
+                variant="outlined"
+                data-toggle="modal"
+                data-target="#shareLinkModal"
+              >
+                Share
+              </Button>
+              <ShareBuildModal build={build} />
+            </div>
+            <div className="col-sm-2">
+              {this.renderFavoriteIcon(build)}
+              {build.likes.length}
             </div>
           </div>
         </Paper>
-
         <div
           className="row"
           style={{
@@ -302,24 +356,12 @@ class BuildItem extends Component {
           <div
             className="col-sm mt-2"
             style={{
-              marginLeft: -150,
               display: 'flex',
               flexFlow: 'row wrap',
-              alignItems: 'center'
+              alignItems: 'center',
+              marginLeft: -120
             }}
           >
-            {/* <button
-              className="btn btn-primary border"
-              style={{ marginLeft: 150, width: 250 }}
-            >
-              Like
-            </button>
-            <button
-              className="btn btn-success border"
-              style={{ marginLeft: 10, width: 250 }}
-            >
-              Share
-            </button> */}
             <HexGrid
               width={mapSizeBoundaries.width}
               height={mapSizeBoundaries.height}
@@ -372,20 +414,30 @@ class BuildItem extends Component {
             className="col-sm"
             style={{
               paddingLeft: 0,
-              marginLeft: -80,
               display: 'flex',
               flexFlow: 'row wrap',
-              alignItems: 'center'
+              alignItems: 'center',
+              marginLeft: -110
             }}
           >
             <div>
-              <p style={{ color: 'white', fontWeight: 'bold' }}>
-                Remaining Energy: {build.remainingEnergy}
+              <p>
+                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                  Remaining Energy:{' '}
+                </span>
+                <span style={{ color: 'white', fontWeight: 'bold' }}>
+                  {build.remainingEnergy}
+                </span>
               </p>
-              <p style={{ color: 'white', fontWeight: 'bold' }}>
-                Orbs Spent: {build.orbSpent}
+              <p>
+                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                  Orbs Spent:{' '}
+                </span>
+                <span style={{ color: 'white', fontWeight: 'bold' }}>
+                  {build.orbSpent}
+                </span>
               </p>
-              <Typography style={{ color: 'white', fontWeight: 'bold' }}>
+              <Typography style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                 Description:
               </Typography>
               <p style={{ color: 'white' }}>{build.description || 'none'}</p>
@@ -400,7 +452,10 @@ class BuildItem extends Component {
 const mapStateToProps = state => ({
   pokemon: state.pokemon.selectedPokemon.toLowerCase(),
   grid: state.grid,
-  darkMode: state.darkMode.mode
+  darkMode: state.darkMode.mode,
+  auth: state.auth
 });
 
-export default connect(mapStateToProps, {})(withStyles(styles)(BuildItem));
+export default connect(mapStateToProps, { addLike, removeLike })(
+  withStyles(styles)(BuildItem)
+);
