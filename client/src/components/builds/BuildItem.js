@@ -493,6 +493,12 @@ class BuildItem extends Component {
                 Description:
               </Typography>
               <p style={{ color: 'white' }}>{build.description || 'none'}</p>
+              <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
+                Date:{' '}
+              </span>
+              <span style={{ color: 'white' }}>
+                {build.date.substring(0, 10)}
+              </span>
             </div>
           </div>
         </div>
