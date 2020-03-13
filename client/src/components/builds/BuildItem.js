@@ -19,7 +19,7 @@ import {
   renderMoveName,
   addSyncLvReq
 } from '../../utils/functions';
-import { addLike, removeLike } from '../../actions/actionCreators';
+import { addLike, removeLike, deleteBuild } from '../../actions/actionCreators';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -116,7 +116,8 @@ class BuildItem extends Component {
       screenWidth: document.body.clientWidth,
       mouseEntered: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClickLike = this.handleClickLike.bind(this);
+    this.handleClickDelete = this.handleClickDelete.bind(this);
   }
 
   componentDidMount() {
@@ -209,10 +210,15 @@ class BuildItem extends Component {
     this.setState({ mouseEntered: false });
   };
 
-  handleClick = (build, buildLiked, e) => {
+  handleClickLike = (build, buildLiked, e) => {
     buildLiked
       ? this.props.removeLike(build._id)
       : this.props.addLike(build._id);
+  };
+
+  handleClickDelete = (build, e) => {
+    window.confirm('Are you sure you wish to delete this build?') &&
+      this.props.deleteBuild(build._id);
   };
 
   renderHexagonCells = (classes, pokemon, build) =>
@@ -307,13 +313,13 @@ class BuildItem extends Component {
             <div className="col-sm-4">
               <IconButton
                 value={build}
-                onClick={this.handleClick.bind(this, build)}
+                onClick={this.handleClickLike.bind(this, build)}
               >
                 <EditIcon />
               </IconButton>
               <IconButton
                 value={build}
-                onClick={this.handleClick.bind(this, build)}
+                onClick={this.handleClickDelete.bind(this, build)}
               >
                 <DeleteIcon />
               </IconButton>
@@ -329,7 +335,7 @@ class BuildItem extends Component {
 
               <IconButton
                 value={build}
-                onClick={this.handleClick.bind(this, build, buildLiked)}
+                onClick={this.handleClickLike.bind(this, build, buildLiked)}
               >
                 {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
               </IconButton>
@@ -350,7 +356,7 @@ class BuildItem extends Component {
 
               <IconButton
                 value={build}
-                onClick={this.handleClick.bind(this, build, buildLiked)}
+                onClick={this.handleClickLike.bind(this, build, buildLiked)}
               >
                 {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
               </IconButton>
@@ -514,6 +520,6 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { addLike, removeLike })(
+export default connect(mapStateToProps, { addLike, removeLike, deleteBuild })(
   withStyles(styles)(BuildItem)
 );
