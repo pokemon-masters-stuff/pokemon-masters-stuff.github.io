@@ -42,7 +42,6 @@ const EditBuildModal = ({ index, description }) => {
                 }`}
                 id="desc"
                 value={desc}
-                // ref={newBuildDescRef}
                 onChange={onChange}
                 rows={15}
               />
