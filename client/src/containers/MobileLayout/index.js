@@ -261,14 +261,6 @@ class MobileApp extends Component {
               </ol>
             </DialogContentText>
           </DialogContent>
-          {/* <DialogActions style={{ justifyContent: 'center' }}>
-            <Button
-              href="https://pokemon-masters-stuff.herokuapp.com"
-              style={{ color: 'blue' }}
-            >
-              Go to this link
-            </Button>
-          </DialogActions> */}
         </Dialog>
       </div>
     );

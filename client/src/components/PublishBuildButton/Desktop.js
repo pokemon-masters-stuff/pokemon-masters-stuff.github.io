@@ -77,16 +77,15 @@ export default function PublishBuildButton() {
                     darkMode ? 'text-white bg-dark' : null
                   }`}
                   id="desc"
-                  placeholder="Build description (optional)"
+                  placeholder="Build description (Optional. Can be edited later.)"
                   key={`${Math.floor(Math.random() * 1000)}-min`}
                   defaultValue=""
                   ref={newBuildDescRef}
                 />
               </div>
               <div className="form-group">
-                Note: the community will be able to see this build once it is
-                published. You can delete your published builds, but you won't
-                be able to edit them.
+                Note: Once a build is published, You will only be able to edit
+                its description.
               </div>
             </div>
             <div className="modal-footer d-flex justify-content-center">

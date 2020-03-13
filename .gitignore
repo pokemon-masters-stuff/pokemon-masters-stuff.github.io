@@ -9,6 +9,7 @@
 # testing
 /coverage
 /note
+dev.js
 # production
 /build
 

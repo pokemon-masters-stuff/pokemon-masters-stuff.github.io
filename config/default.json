@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://Zx:bQ5s4wNKVp3SPQKE@pm-dev-yiei6.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "terces"
-}

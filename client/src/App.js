@@ -12,6 +12,7 @@ import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/actionCreators';
 
 export default function App({ store }) {
+  const darkMode = useSelector(state => state.darkMode.mode);
   useEffect(() => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
@@ -19,7 +20,6 @@ export default function App({ store }) {
     }
   }, []);
 
-  const darkMode = useSelector(state => state.darkMode.mode);
   return (
     <Router>
       <ThemeProvider theme={darkMode ? darkTheme : theme}>
