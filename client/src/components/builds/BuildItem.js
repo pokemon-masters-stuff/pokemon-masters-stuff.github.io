@@ -302,6 +302,7 @@ class BuildItem extends Component {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build } = this.props;
     const pokemon = build.pokemon.toLowerCase();
+    console.log('build id', build._id);
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
@@ -333,11 +334,11 @@ class BuildItem extends Component {
               <Button
                 variant="outlined"
                 data-toggle="modal"
-                data-target="#shareLinkModal"
+                data-target={`#shareLinkModal${build._id}`}
               >
                 Share
               </Button>
-              <ShareBuildModal build={build} />
+              <ShareBuildModal index={build._id} url={build.url} />
             </div>
             <div className="col-sm-2">
               {this.renderFavoriteIcon(build)}

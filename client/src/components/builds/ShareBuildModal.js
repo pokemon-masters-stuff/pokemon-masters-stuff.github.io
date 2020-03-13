@@ -2,14 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const ShareBuildModal = ({ build }) => {
-  const url = build.url;
+const ShareBuildModal = ({ index, url }) => {
+  console.log(index);
   const darkMode = useSelector(state => state.darkMode.mode);
 
   return (
     <div
       className="modal fade"
-      id="shareLinkModal"
+      id={`shareLinkModal${index}`}
       tabIndex="-1"
       role="dialog"
       aria-labelledby="myModalLabel"

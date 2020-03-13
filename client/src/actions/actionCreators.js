@@ -27,6 +27,8 @@ import {
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
   UPDATE_LIKES,
+  ADD_BUILD,
+  DELETE_BUILD,
   GET_BUILD,
   BUILD_ERROR
 } from './types';
@@ -271,6 +273,51 @@ export const removeLike = id => async dispatch => {
     dispatch({
       type: BUILD_ERROR,
       payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
+};
+
+// Add build
+export const addBuild = data => async dispatch => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  try {
+    const res = await axios.post('/api/builds', data, config);
+
+    dispatch({
+      type: ADD_BUILD,
+      payload: res.data
+    });
+    console.log('res.data', res.data);
+
+    dispatch(setAlert('Build Created', 'success'));
+  } catch (err) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
+// Delete post
+export const deleteBuild = id => async dispatch => {
+  try {
+    await axios.delete(`/api/builds/${id}`);
+
+    dispatch({
+      type: DELETE_BUILD,
+      payload: id
+    });
+
+    dispatch(setAlert('Build Removed', 'success'));
+  } catch (err) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
     });
   }
 };

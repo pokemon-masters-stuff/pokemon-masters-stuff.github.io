@@ -1,49 +1,27 @@
 import React, { Fragment, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  saveCurrentBuild,
-  deleteSelectedBuild
-} from '../../actions/actionCreators';
+import { addBuild } from '../../actions/actionCreators';
 import './desktop.css';
 
 export default function PublishBuildButton() {
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
   const pokemon = useSelector(state => state.pokemon);
-  const savedBuilds = useSelector(state =>
-    state.grid.savedBuilds.allIds.map(id => state.grid.savedBuilds.byIds[id])
-  );
+  const grid = useSelector(state => state.grid);
   const newBuildNameRef = useRef(null);
   const newBuildDescRef = useRef(null);
 
   const handleOnPublishBuild = () => {
-    let userConfirmation = true;
-    if (newBuildNameRef.current.value) {
-      // If already have a save with the same name, delete old save
-      for (let build in savedBuilds) {
-        if (
-          savedBuilds[build].name === newBuildNameRef.current.value &&
-          savedBuilds[build].pokemon === pokemon.selectedPokemon
-        ) {
-          userConfirmation = window.confirm(
-            'There is a save with the same name. Do you wish to overwrite it?'
-          );
-          userConfirmation &&
-            dispatch(
-              deleteSelectedBuild({
-                buildId: savedBuilds[build].id
-              })
-            );
-        }
-      }
-      userConfirmation &&
-        dispatch(
-          saveCurrentBuild({
-            selectedPokemon: pokemon.selectedPokemon,
-            buildName: newBuildNameRef.current.value
-          })
-        );
-    } else alert('Please enter a name');
+    let data = {
+      buildName: newBuildNameRef.current.value,
+      description: newBuildDescRef.current.value,
+      pokemon: pokemon.selectedPokemon,
+      selectedCellsById: grid.selectedCellsById,
+      remainingEnergy: grid.remainingEnergy,
+      orbSpent: grid.orbSpent,
+      url: grid.url
+    };
+    dispatch(addBuild(data));
   };
 
   return (

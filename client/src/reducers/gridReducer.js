@@ -17,6 +17,8 @@ import {
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
   GET_BUILD,
+  ADD_BUILD,
+  DELETE_BUILD,
   BUILD_ERROR,
   UPDATE_LIKES
 } from '../actions/types';
@@ -195,6 +197,18 @@ export default function(state = initialState, action) {
       return {
         ...state,
         builds: newBuilds,
+        loading: false
+      };
+    case ADD_BUILD:
+      return {
+        ...state,
+        builds: [action.payload, ...state.builds],
+        loading: false
+      };
+    case DELETE_BUILD:
+      return {
+        ...state,
+        builds: state.builds.filter(build => build._id !== action.payload),
         loading: false
       };
     default:
