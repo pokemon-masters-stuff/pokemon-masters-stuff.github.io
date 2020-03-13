@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const ShareBuildModal = ({ index, url }) => {
-  console.log(index);
   const darkMode = useSelector(state => state.darkMode.mode);
 
   return (

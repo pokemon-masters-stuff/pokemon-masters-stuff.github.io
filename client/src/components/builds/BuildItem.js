@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
@@ -279,30 +281,92 @@ class BuildItem extends Component {
     ) : null;
   };
 
-  renderFavoriteIcon = build => {
-    const currentUser = this.props.auth.user || '';
+  renderEditAndDeleteIcon = (build, currentUser) => {
+    return currentUser._id === build.user ? (
+      <IconButton
+        value={build}
+        onClick={this.handleClick.bind(this, build)}
+        // edge="start"
+        style={{ marginLeft: 1 }}
+      >
+        <EditIcon />
+      </IconButton>
+    ) : null;
+  };
+
+  renderIcons = (build, currentUser) => {
     const arrayOfUsersLikedThisBuild = build.likes.map(like => {
       return like.user;
     });
     const buildLiked = arrayOfUsersLikedThisBuild.includes(currentUser._id);
 
     return (
-      <IconButton
-        value={build}
-        onClick={this.handleClick.bind(this, build, buildLiked)}
-        // edge="start"
-        style={{ marginLeft: 1 }}
-      >
-        {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-      </IconButton>
+      <Fragment>
+        {currentUser._id === build.user ? (
+          <Fragment>
+            <div className="col-sm-4">
+              <IconButton
+                value={build}
+                onClick={this.handleClick.bind(this, build)}
+              >
+                <EditIcon />
+              </IconButton>
+              <IconButton
+                value={build}
+                onClick={this.handleClick.bind(this, build)}
+              >
+                <DeleteIcon />
+              </IconButton>
+
+              <Button
+                variant="outlined"
+                data-toggle="modal"
+                data-target={`#shareLinkModal${build._id}`}
+              >
+                Share
+              </Button>
+              <ShareBuildModal index={build._id} url={build.url} />
+
+              <IconButton
+                value={build}
+                onClick={this.handleClick.bind(this, build, buildLiked)}
+              >
+                {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+              </IconButton>
+              {build.likes.length}
+            </div>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <div className="col-sm-3 offset-sm-1">
+              <Button
+                variant="outlined"
+                data-toggle="modal"
+                data-target={`#shareLinkModal${build._id}`}
+              >
+                Share
+              </Button>
+              <ShareBuildModal index={build._id} url={build.url} />
+
+              <IconButton
+                value={build}
+                onClick={this.handleClick.bind(this, build, buildLiked)}
+              >
+                {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+              </IconButton>
+              {build.likes.length}
+            </div>
+          </Fragment>
+        )}
+      </Fragment>
     );
   };
 
   render() {
+    const currentUser = this.props.auth.user || '';
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build } = this.props;
     const pokemon = build.pokemon.toLowerCase();
-    console.log('build id', build._id);
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
@@ -312,7 +376,7 @@ class BuildItem extends Component {
       <div>
         <Paper elevation={3} className={classes.buildName}>
           <div className="row">
-            <div className="col-sm-9">
+            <div className="col-sm-8">
               <span
                 style={{
                   fontWeight: 'bold',
@@ -330,20 +394,7 @@ class BuildItem extends Component {
                 {build.username}
               </span>
             </div>
-            <div className="col-sm-1">
-              <Button
-                variant="outlined"
-                data-toggle="modal"
-                data-target={`#shareLinkModal${build._id}`}
-              >
-                Share
-              </Button>
-              <ShareBuildModal index={build._id} url={build.url} />
-            </div>
-            <div className="col-sm-2">
-              {this.renderFavoriteIcon(build)}
-              {build.likes.length}
-            </div>
+            {this.renderIcons(build, currentUser)}
           </div>
         </Paper>
         <div
