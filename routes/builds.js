@@ -114,6 +114,30 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// @route   EDIT api/builds/edit/:id
+// @desc    Edit a build
+// @access  Private
+router.put('/edit/:id', auth, async (req, res) => {
+  try {
+    const build = await Build.findByIdAndUpdate(
+      req.params.id,
+      {
+        description: req.body.description
+      },
+      { new: true }
+    );
+    if (!build) {
+      return res.status(404).json({ msg: 'Build not found' });
+    }
+    res.json(build.description);
+  } catch (error) {
+    if (!error.kind === 'ObjectId') {
+      return res.status(404).json({ msg: 'Build not found' });
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
 // @route    PUT api/builds/like/:id
 // @desc     Like a build
 // @access   Private

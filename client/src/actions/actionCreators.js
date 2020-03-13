@@ -28,6 +28,7 @@ import {
   GET_USERS_BUILDS,
   UPDATE_LIKES,
   ADD_BUILD,
+  EDIT_BUILD,
   DELETE_BUILD,
   GET_BUILD,
   BUILD_ERROR
@@ -292,9 +293,35 @@ export const addBuild = data => async dispatch => {
       type: ADD_BUILD,
       payload: res.data
     });
-    console.log('res.data', res.data);
 
     dispatch(setAlert('Build Created', 'success'));
+  } catch (err) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
+// Edit build
+export const editBuild = (id, description) => async dispatch => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const body = JSON.stringify({ description });
+
+  try {
+    const res = await axios.put(`/api/builds/edit/${id}`, body, config);
+
+    dispatch({
+      type: EDIT_BUILD,
+      payload: { id, description: res.data }
+    });
+
+    dispatch(setAlert('Build Updated', 'success'));
   } catch (err) {
     dispatch({
       type: BUILD_ERROR,

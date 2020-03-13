@@ -73,10 +73,11 @@ const Login = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <input
+                  <button
                     type="submit"
                     className="btn btn-primary btn-block btn-lg"
                     value="Login"
+                    data-dismiss="modal"
                   />
                 </div>
               </form>

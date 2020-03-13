@@ -18,6 +18,7 @@ import {
   GET_USERS_BUILDS,
   GET_BUILD,
   ADD_BUILD,
+  EDIT_BUILD,
   DELETE_BUILD,
   BUILD_ERROR,
   UPDATE_LIKES
@@ -203,6 +204,17 @@ export default function(state = initialState, action) {
       return {
         ...state,
         builds: [action.payload, ...state.builds],
+        loading: false
+      };
+    case EDIT_BUILD:
+      const newBuildsArray = state.builds.map(build => {
+        return build._id === action.payload.id
+          ? { ...build, description: action.payload.description }
+          : build;
+      });
+      return {
+        ...state,
+        builds: newBuildsArray,
         loading: false
       };
     case DELETE_BUILD:

@@ -11,6 +11,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import ShareBuildModal from './ShareBuildModal';
+import EditBuildModal from './EditBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import styles from './styles';
@@ -130,7 +131,8 @@ class BuildItem extends Component {
     return (
       this.state.initialRender ||
       this.state.mouseEntered !== nextState.mouseEntered ||
-      this.props.build.likes !== nextProps.build.likes
+      this.props.build.likes !== nextProps.build.likes ||
+      this.props.build.description !== nextProps.build.description
     );
   }
 
@@ -215,6 +217,10 @@ class BuildItem extends Component {
       ? this.props.removeLike(build._id)
       : this.props.addLike(build._id);
   };
+
+  // handleClickEdit = (build, e) => {
+  //     this.props.editBuild(build._id, description);
+  // };
 
   handleClickDelete = (build, e) => {
     window.confirm('Are you sure you wish to delete this build?') &&
@@ -313,10 +319,16 @@ class BuildItem extends Component {
             <div className="col-sm-4">
               <IconButton
                 value={build}
-                onClick={this.handleClickLike.bind(this, build)}
+                // onClick={this.handleClickEdit.bind(this, build)}
+                data-toggle="modal"
+                data-target={`#editLinkModal${build._id}`}
               >
                 <EditIcon />
               </IconButton>
+              <EditBuildModal
+                index={build._id}
+                description={build.description}
+              />
               <IconButton
                 value={build}
                 onClick={this.handleClickDelete.bind(this, build)}
