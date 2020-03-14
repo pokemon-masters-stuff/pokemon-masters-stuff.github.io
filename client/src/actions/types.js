@@ -21,6 +21,7 @@ export const LOGIN_SUCCESS = 'login_success';
 export const LOGOUT = 'logout';
 export const ACCOUNT_DELETED = 'account_deleted';
 export const GET_BUILDS = 'get_builds';
+export const GET_MORE_BUILDS = 'get_more_builds';
 export const GET_LIKED_BUILDS = 'get_liked_builds';
 export const GET_USERS_BUILDS = 'get_users_builds';
 export const GET_BUILD = 'get_build';

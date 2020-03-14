@@ -14,6 +14,7 @@ import {
   LOAD_GRID_FROM_URL,
   UPDATE_URL,
   GET_BUILDS,
+  GET_MORE_BUILDS,
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
   GET_BUILD,
@@ -43,11 +44,11 @@ const initialState = {
 
   // builds from databse
   builds: [],
-  count: 0,
+  totalCount: 0,
   build: null,
   loading: true,
   error: {},
-  filter: null,
+  filter: 'None',
   sort: 'popular'
 };
 
@@ -181,12 +182,13 @@ export default function(state = initialState, action) {
 
     // builds from database
     case GET_BUILDS:
+    case GET_MORE_BUILDS:
     case GET_LIKED_BUILDS:
     case GET_USERS_BUILDS:
       return {
         ...state,
-        builds: action.payload.builds,
-        count: action.payload.count,
+        builds: [...state.builds, ...action.payload.builds],
+        totalCount: action.payload.totalCount,
         loading: false
       };
     case BUILD_ERROR:

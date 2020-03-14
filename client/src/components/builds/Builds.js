@@ -40,9 +40,6 @@ const Builds = () => {
   const [value, setValue] = React.useState(0);
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
-  useEffect(() => {
-    dispatch(getBuilds());
-  }, [getBuilds]);
 
   const handleChangeTab = (event, newValue) => {
     setValue(newValue);
