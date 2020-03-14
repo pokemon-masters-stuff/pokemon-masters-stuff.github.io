@@ -41,6 +41,7 @@ const initialState = {
 
   // builds from databse
   builds: [],
+  count: 0,
   build: null,
   loading: true,
   error: {}
@@ -180,7 +181,8 @@ export default function(state = initialState, action) {
     case GET_USERS_BUILDS:
       return {
         ...state,
-        builds: action.payload,
+        builds: action.payload.builds,
+        count: action.payload.count,
         loading: false
       };
     case BUILD_ERROR:

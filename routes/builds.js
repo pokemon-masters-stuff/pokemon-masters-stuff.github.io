@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const router = express.Router();
 const auth = require('../middleware/auth');
 const { check, validationResult } = require('express-validator');
@@ -53,16 +54,37 @@ router.post(
 // @desc    Get all builds
 // @access  Public
 router.get('/', async (req, res) => {
-  const pokemon = req.query.pokemon;
+  const filter = req.query.filter;
   const sort = req.query.sort || 'popular';
   const limit = parseInt(req.query.limit) || 10;
   const skip = parseInt(req.query.skip) || 0;
   let builds;
+  let count;
   try {
-    if (sort === 'popular') {
-      builds = pokemon
+    if (sort === 'newest') {
+      builds = filter
+        ? await Build.find({ pokemon: filter })
+            .sort({ date: -1 })
+            .skip(skip)
+            .limit(limit)
+        : await Build.find()
+            .sort({ date: -1 })
+            .skip(skip)
+            .limit(limit);
+    } else if (sort === 'oldest') {
+      builds = filter
+        ? await Build.find({ pokemon: filter })
+            .sort({ date: 1 })
+            .skip(skip)
+            .limit(limit)
+        : await Build.find()
+            .sort({ date: 1 })
+            .skip(skip)
+            .limit(limit);
+    } else {
+      builds = filter
         ? await Build.aggregate([
-            { $match: { pokemon: pokemon } },
+            { $match: { pokemon: filter } },
             { $addFields: { likesCount: { $size: '$likes' } } },
             { $sort: { likesCount: -1 } }
           ])
@@ -74,19 +96,15 @@ router.get('/', async (req, res) => {
           ])
             .skip(skip)
             .limit(limit);
-    } else if (sort === 'new') {
-      builds = await Build.find()
-        .sort({ date: -1 })
-        .skip(skip)
-        .limit(limit);
-    } else {
-      builds = await Build.find()
-        .sort({ date: 1 })
-        .skip(skip)
-        .limit(limit);
     }
 
-    res.json(builds);
+    count = filter
+      ? await Build.find({
+          pokemon: filter
+        }).countDocuments()
+      : await Build.find().countDocuments();
+
+    res.json({ builds, count });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
@@ -97,9 +115,59 @@ router.get('/', async (req, res) => {
 // @desc    Get user's builds
 // @access  Private
 router.get('/users', auth, async (req, res) => {
+  const filter = req.query.filter;
+  const sort = req.query.sort || 'popular';
+  const limit = parseInt(req.query.limit) || 10;
+  const skip = parseInt(req.query.skip) || 0;
+  const userId = mongoose.Types.ObjectId(req.user.id);
+  let builds;
+  let count;
   try {
-    const builds = await Build.find({ user: req.user.id }).sort({ date: -1 });
-    res.json(builds);
+    if (sort === 'newest') {
+      builds = filter
+        ? await Build.find({ pokemon: filter, user: req.user.id })
+            .sort({ date: -1 })
+            .skip(skip)
+            .limit(limit)
+        : await Build.find({ user: req.user.id })
+            .sort({ date: -1 })
+            .skip(skip)
+            .limit(limit);
+    } else if (sort === 'oldest') {
+      builds = filter
+        ? await Build.find({ pokemon: filter, user: req.user.id })
+            .sort({ date: 1 })
+            .skip(skip)
+            .limit(limit)
+        : await Build.find({ user: req.user.id })
+            .sort({ date: 1 })
+            .skip(skip)
+            .limit(limit);
+    } else {
+      builds = filter
+        ? await Build.aggregate([
+            { $match: { $and: [{ pokemon: filter }, { user: userId }] } },
+            { $addFields: { likesCount: { $size: '$likes' } } },
+            { $sort: { likesCount: -1 } }
+          ])
+            .skip(skip)
+            .limit(limit)
+        : await Build.aggregate([
+            { $match: { user: userId } },
+            { $addFields: { likesCount: { $size: '$likes' } } },
+            { $sort: { likesCount: -1 } }
+          ])
+            .skip(skip)
+            .limit(limit);
+    }
+    count = filter
+      ? await Build.find({
+          pokemon: filter,
+          user: req.user.id
+        }).countDocuments()
+      : await Build.find({ user: req.user.id }).countDocuments();
+
+    res.json({ builds, count });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
@@ -110,11 +178,74 @@ router.get('/users', auth, async (req, res) => {
 // @desc    Get liked builds
 // @access  Private
 router.get('/liked', auth, async (req, res) => {
+  const filter = req.query.filter;
+  const sort = req.query.sort || 'popular';
+  const limit = parseInt(req.query.limit) || 10;
+  const skip = parseInt(req.query.skip) || 0;
+  const userId = mongoose.Types.ObjectId(req.user.id);
+  let builds;
+  let count;
   try {
-    const builds = await Build.find({
-      likes: { $elemMatch: { user: req.user.id } }
-    }).sort({ date: -1 });
-    res.json(builds);
+    if (sort === 'newest') {
+      builds = filter
+        ? await Build.find({
+            pokemon: filter,
+            likes: { $elemMatch: { user: req.user.id } }
+          })
+            .sort({ date: -1 })
+            .skip(skip)
+            .limit(limit)
+        : await Build.find({ likes: { $elemMatch: { user: req.user.id } } })
+            .sort({ date: -1 })
+            .skip(skip)
+            .limit(limit);
+    } else if (sort === 'oldest') {
+      builds = filter
+        ? await Build.find({
+            pokemon: filter,
+            likes: { $elemMatch: { user: req.user.id } }
+          })
+            .sort({ date: 1 })
+            .skip(skip)
+            .limit(limit)
+        : await Build.find({ likes: { $elemMatch: { user: req.user.id } } })
+            .sort({ date: 1 })
+            .skip(skip)
+            .limit(limit);
+    } else {
+      builds = filter
+        ? await Build.aggregate([
+            {
+              $match: {
+                $and: [
+                  { pokemon: filter },
+                  { likes: { $elemMatch: { user: userId } } }
+                ]
+              }
+            },
+            { $addFields: { likesCount: { $size: '$likes' } } },
+            { $sort: { likesCount: -1 } }
+          ])
+            .skip(skip)
+            .limit(limit)
+        : await Build.aggregate([
+            { $match: { likes: { $elemMatch: { user: userId } } } },
+            { $addFields: { likesCount: { $size: '$likes' } } },
+            { $sort: { likesCount: -1 } }
+          ])
+            .skip(skip)
+            .limit(limit);
+    }
+    count = filter
+      ? await Build.find({
+          pokemon: filter,
+          user: req.user.id
+        }).countDocuments()
+      : await Build.find({
+          likes: { $elemMatch: { user: req.user.id } }
+        }).countDocuments();
+
+    res.json({ builds, count });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
