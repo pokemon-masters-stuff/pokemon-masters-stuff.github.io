@@ -53,11 +53,38 @@ router.post(
 // @desc    Get all builds
 // @access  Public
 router.get('/', async (req, res) => {
+  const pokemon = req.query.pokemon;
+  const sort = req.query.sort || 'popular';
+  const limit = parseInt(req.query.limit) || 10;
+  const skip = parseInt(req.query.skip) || 0;
+  let builds;
   try {
-    const builds = await Build.aggregate([
-      { $addFields: { likesCount: { $size: '$likes' } } },
-      { $sort: { likesCount: -1 } }
-    ]);
+    if (sort === 'popular') {
+      builds = pokemon
+        ? await Build.aggregate([
+            { $match: { pokemon: pokemon } },
+            { $addFields: { likesCount: { $size: '$likes' } } },
+            { $sort: { likesCount: -1 } }
+          ])
+            .skip(skip)
+            .limit(limit)
+        : await Build.aggregate([
+            { $addFields: { likesCount: { $size: '$likes' } } },
+            { $sort: { likesCount: -1 } }
+          ])
+            .skip(skip)
+            .limit(limit);
+    } else if (sort === 'new') {
+      builds = await Build.find()
+        .sort({ date: -1 })
+        .skip(skip)
+        .limit(limit);
+    } else {
+      builds = await Build.find()
+        .sort({ date: 1 })
+        .skip(skip)
+        .limit(limit);
+    }
 
     res.json(builds);
   } catch (error) {
