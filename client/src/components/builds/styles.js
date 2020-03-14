@@ -28,5 +28,9 @@ export default createStyles(theme => ({
     color: 'white',
     height: 48,
     padding: '0 30px'
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120
   }
 }));

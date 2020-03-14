@@ -8,13 +8,22 @@ const PopularBuilds = () => {
   const [hasMoreItems, setHasMoreItems] = useState(true);
   const dispatch = useDispatch();
   const builds = useSelector(state => state.grid.builds);
+  const sort = useSelector(state => state.grid.sort);
+  const filter = useSelector(state => state.grid.filter);
+  const count = useSelector(state => state.grid.count);
 
   useEffect(() => {
-    dispatch(getBuilds());
+    // dispatch(getBuilds(filter, sort, skip, limit));
+    dispatch(getBuilds(filter, sort, 0, 5));
   }, [getBuilds]);
 
   const loadItems = page => {
-    console.log('loading more items');
+    if (builds.length <= count) {
+      console.log('loading more items');
+      dispatch(getBuilds(filter, sort, 5, 5));
+    } else {
+      setHasMoreItems(false);
+    }
   };
 
   return (

@@ -21,7 +21,9 @@ import {
   EDIT_BUILD,
   DELETE_BUILD,
   BUILD_ERROR,
-  UPDATE_LIKES
+  UPDATE_LIKES,
+  CHANGE_FILTER,
+  CHANGE_SORT
 } from '../actions/types';
 
 const initialState = {
@@ -44,7 +46,9 @@ const initialState = {
   count: 0,
   build: null,
   loading: true,
-  error: {}
+  error: {},
+  filter: null,
+  sort: 'popular'
 };
 
 export default function(state = initialState, action) {
@@ -224,6 +228,16 @@ export default function(state = initialState, action) {
         ...state,
         builds: state.builds.filter(build => build._id !== action.payload),
         loading: false
+      };
+    case CHANGE_FILTER:
+      return {
+        ...state,
+        filter: action.payload
+      };
+    case CHANGE_SORT:
+      return {
+        ...state,
+        sort: action.payload
       };
     default:
       return state;

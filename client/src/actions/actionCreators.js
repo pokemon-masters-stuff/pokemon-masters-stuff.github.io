@@ -31,7 +31,9 @@ import {
   EDIT_BUILD,
   DELETE_BUILD,
   GET_BUILD,
-  BUILD_ERROR
+  BUILD_ERROR,
+  CHANGE_FILTER,
+  CHANGE_SORT
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -348,3 +350,13 @@ export const deleteBuild = id => async dispatch => {
     });
   }
 };
+
+export const changeFilter = payload => ({
+  type: CHANGE_FILTER,
+  payload
+});
+
+export const changeSort = payload => ({
+  type: CHANGE_SORT,
+  payload
+});
