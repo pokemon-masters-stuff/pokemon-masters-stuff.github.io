@@ -2,12 +2,14 @@ import React, { Fragment, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBuild } from '../../actions/actionCreators';
 import './desktop.css';
+import RegisterOrLoginModal from '../auth/desktop/RegisterOrLoginModal';
 
 export default function PublishBuildButton() {
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
   const pokemon = useSelector(state => state.pokemon);
   const grid = useSelector(state => state.grid);
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   const newBuildNameRef = useRef(null);
   const newBuildDescRef = useRef(null);
 
@@ -30,11 +32,14 @@ export default function PublishBuildButton() {
         type="button"
         className="btn btn-primary"
         data-toggle="modal"
-        data-target="#publishBuildModal"
+        data-target={
+          isAuthenticated ? '#publishBuildModal' : '#RegisterOrLoginModal'
+        }
         style={{ position: 'relative', zIndex: 999 }}
       >
         Publish
       </button>
+      <RegisterOrLoginModal />
 
       <div
         className="modal fade"

@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FeedbackFormDesktop } from '../../components/FeedbackForm';
 import { AnnouncementModalDesktop } from '../../components/AnnouncementModal';
 
 const Navigation = () => {
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container container-s">
@@ -26,14 +28,25 @@ const Navigation = () => {
             <AnnouncementModalDesktop />
           </li>
           <li className="nav-item active">
-            <button type="button" className="btn btn-dark">
-              <Link
-                to="/builds"
-                style={{ textDecoration: 'none', color: 'white' }}
+            {isAuthenticated ? (
+              <button type="button" className="btn btn-dark">
+                <Link
+                  to="/builds"
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  Popular Builds
+                </Link>
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="btn btn-dark"
+                data-toggle="modal"
+                data-target="#RegisterOrLoginModal"
               >
                 Popular Builds
-              </Link>
-            </button>
+              </button>
+            )}
           </li>
         </ul>
         <button
