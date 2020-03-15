@@ -82,7 +82,15 @@ const BuildSchema = mongoose.Schema({
       date: {
         type: Date,
         default: Date.now
-      }
+      },
+      likes: [
+        {
+          user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'users'
+          }
+        }
+      ]
     }
   ],
   date: {
