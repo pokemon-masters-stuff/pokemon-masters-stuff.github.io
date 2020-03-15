@@ -35,7 +35,6 @@ class LikedBuilds extends Component {
   }
 
   componentWillUnmount() {
-    console.log('liked component unmounted');
     this.props.clearBuilds();
   }
 

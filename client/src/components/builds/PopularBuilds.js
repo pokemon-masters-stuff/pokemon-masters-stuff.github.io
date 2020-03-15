@@ -35,7 +35,6 @@ class PopularBuilds extends Component {
   }
 
   componentWillUnmount() {
-    console.log('popular component unmounted');
     this.props.clearBuilds();
   }
 

@@ -35,7 +35,6 @@ class UsersBuilds extends Component {
   }
 
   componentWillUnmount() {
-    console.log('users component unmounted');
     this.props.clearBuilds();
   }
 
