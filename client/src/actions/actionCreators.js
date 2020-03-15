@@ -31,6 +31,7 @@ import {
   ADD_BUILD,
   EDIT_BUILD,
   DELETE_BUILD,
+  CLEAR_BUILDS,
   BUILD_ERROR,
   CHANGE_FILTER,
   CHANGE_SORT
@@ -386,4 +387,8 @@ export const changeFilter = payload => ({
 export const changeSort = payload => ({
   type: CHANGE_SORT,
   payload
+});
+
+export const clearBuilds = () => ({
+  type: CLEAR_BUILDS
 });

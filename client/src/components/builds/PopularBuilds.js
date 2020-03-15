@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getBuilds, getMoreBuilds } from '../../actions/actionCreators';
+import {
+  getBuilds,
+  getMoreBuilds,
+  clearBuilds
+} from '../../actions/actionCreators';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import BuildItem from './BuildItem';
 
@@ -16,6 +20,9 @@ class PopularBuilds extends Component {
 
   componentDidMount() {
     this.setState({ hasMoreItems: true });
+    if (this.props.builds.length === 0) {
+      this.props.getBuilds(this.props.filter, this.props.sort, 5);
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -26,6 +33,10 @@ class PopularBuilds extends Component {
       this.setState({ hasMoreItems: true });
       this.props.getBuilds(this.props.filter, this.props.sort, 5);
     }
+  }
+
+  componentWillUnmount() {
+    this.props.clearBuilds();
   }
 
   loadItems = () => {
@@ -76,6 +87,8 @@ const mapStateToProps = state => ({
   totalCount: state.grid.totalCount
 });
 
-export default connect(mapStateToProps, { getBuilds, getMoreBuilds })(
-  PopularBuilds
-);
+export default connect(mapStateToProps, {
+  getBuilds,
+  getMoreBuilds,
+  clearBuilds
+})(PopularBuilds);

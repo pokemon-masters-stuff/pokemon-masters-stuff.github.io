@@ -20,6 +20,7 @@ import {
   ADD_BUILD,
   EDIT_BUILD,
   DELETE_BUILD,
+  CLEAR_BUILDS,
   BUILD_ERROR,
   UPDATE_LIKES,
   CHANGE_FILTER,
@@ -240,6 +241,12 @@ export default function(state = initialState, action) {
         ...state,
         builds: [],
         sort: action.payload
+      };
+    case CLEAR_BUILDS:
+      return {
+        ...state,
+        builds: [],
+        totalCount: 0
       };
     default:
       return state;

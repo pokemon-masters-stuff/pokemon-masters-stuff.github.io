@@ -29,6 +29,7 @@ export const BUILD_ERROR = 'build_error';
 export const UPDATE_LIKES = 'update_likes';
 export const EDIT_BUILD = 'edit_build';
 export const DELETE_BUILD = 'delete_build';
+export const CLEAR_BUILDS = 'clear_builds';
 export const ADD_BUILD = 'add_build';
 export const ADD_COMMENT = 'add_comment';
 export const REMOVE_COMMENT = 'remove_comment';
