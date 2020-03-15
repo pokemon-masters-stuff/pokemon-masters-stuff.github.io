@@ -132,7 +132,8 @@ class BuildItem extends Component {
       this.state.initialRender ||
       this.state.mouseEntered !== nextState.mouseEntered ||
       this.props.build.likes !== nextProps.build.likes ||
-      this.props.build.description !== nextProps.build.description
+      this.props.build.description !== nextProps.build.description ||
+      this.props.darkMode !== nextProps.darkMode
     );
   }
 

@@ -242,9 +242,13 @@ export const getMoreBuilds = (filter, sort, count, limit) => async dispatch => {
 };
 
 // Get Liked Builds
-export const getLikedBuilds = () => async dispatch => {
+export const getLikedBuilds = (filter, sort, limit) => async dispatch => {
   try {
-    const res = await axios.get('/api/builds/liked');
+    const res = await axios.get(
+      `/api/builds/liked?skip=0&limit=${limit}&sort=${sort}${
+        filter !== 'None' ? '&filter=' + filter : ''
+      }`
+    );
 
     dispatch({
       type: GET_LIKED_BUILDS,
@@ -259,9 +263,13 @@ export const getLikedBuilds = () => async dispatch => {
 };
 
 // Get user's Builds
-export const getUsersBuilds = () => async dispatch => {
+export const getUsersBuilds = (filter, sort, limit) => async dispatch => {
   try {
-    const res = await axios.get('/api/builds/users');
+    const res = await axios.get(
+      `/api/builds/users?skip=0&limit=${limit}&sort=${sort}${
+        filter !== 'None' ? '&filter=' + filter : ''
+      }`
+    );
 
     dispatch({
       type: GET_USERS_BUILDS,

@@ -19,10 +19,9 @@ class PopularBuilds extends Component {
   }
 
   componentDidMount() {
+    this.props.clearBuilds();
     this.setState({ hasMoreItems: true });
-    if (this.props.builds.length === 0) {
-      this.props.getBuilds(this.props.filter, this.props.sort, 5);
-    }
+    this.props.getBuilds(this.props.filter, this.props.sort, 5);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -36,6 +35,7 @@ class PopularBuilds extends Component {
   }
 
   componentWillUnmount() {
+    console.log('popular component unmounted');
     this.props.clearBuilds();
   }
 
