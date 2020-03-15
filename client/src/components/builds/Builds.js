@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   getBuilds,
@@ -38,6 +38,8 @@ const useStyles = makeStyles({
 const Builds = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const sort = useSelector(state => state.grid.sort);
+  const filter = useSelector(state => state.grid.filter);
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
 
@@ -52,6 +54,15 @@ const Builds = () => {
   const handleChangeFilter = event => {
     dispatch(changeFilter(event.target.value));
   };
+
+  // const mounted = useRef();
+  // useEffect(() => {
+  //   if (!mounted.current) {
+  //     mounted.current = true;
+  //   } else {
+  //     dispatch(getBuilds(filter, sort, 5));
+  //   }
+  // });
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
@@ -80,11 +91,7 @@ const Builds = () => {
             Sort by:{' '}
           </Typography>
           <FormControl className={classes.formControl}>
-            <Select
-              defaultValue="popular"
-              labelId="sort"
-              onChange={handleChangeSort}
-            >
+            <Select value={sort} labelId="sort" onChange={handleChangeSort}>
               <MenuItem value="popular">Popular</MenuItem>
               <MenuItem value="newest">Newest</MenuItem>
               <MenuItem value="oldest">Oldest</MenuItem>
@@ -100,7 +107,7 @@ const Builds = () => {
           </Typography>
           <FormControl className={classes.formControl}>
             <Select
-              defaultValue="None"
+              value={filter}
               labelId="filter"
               onChange={handleChangeFilter}
             >

@@ -49,7 +49,7 @@ const initialState = {
   loading: true,
   error: {},
   filter: 'None',
-  sort: 'popular'
+  sort: 'newest'
 };
 
 export default function(state = initialState, action) {
@@ -234,11 +234,13 @@ export default function(state = initialState, action) {
     case CHANGE_FILTER:
       return {
         ...state,
+        builds: [],
         filter: action.payload
       };
     case CHANGE_SORT:
       return {
         ...state,
+        builds: [],
         sort: action.payload
       };
     default:

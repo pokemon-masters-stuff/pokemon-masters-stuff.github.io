@@ -72,6 +72,7 @@ router.get('/', async (req, res) => {
             .skip(skip)
             .limit(limit);
     } else if (sort === 'oldest') {
+      console.log('sort by oldest');
       builds = filter
         ? await Build.find({ pokemon: filter })
             .sort({ date: 1 })
