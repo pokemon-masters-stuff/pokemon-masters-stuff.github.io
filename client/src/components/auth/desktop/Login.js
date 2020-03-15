@@ -1,12 +1,10 @@
 import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { login } from '../../../actions/actionCreators';
 import Alert from '../../Alert';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   const [formData, setFormData] = useState({
     username: '',
     password: ''
@@ -21,10 +19,6 @@ const Login = () => {
     e.preventDefault();
     dispatch(login(username, password));
   };
-
-  // if (isAuthenticated) {
-  //   return <Redirect to="/builds" />;
-  // }
 
   return (
     <Fragment>
@@ -71,12 +65,19 @@ const Login = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group">
+                <div className="btn-group btn-block">
                   <input
+                    style={{ margin: 3 }}
                     type="submit"
-                    className="btn btn-primary btn-block btn-lg"
+                    className="btn btn-primary"
                     value="Login"
-                    data-dismiss={isAuthenticated ? 'modal' : null}
+                  />
+                  <input
+                    style={{ margin: 3 }}
+                    type="submit"
+                    className="btn btn-dark"
+                    value="Close"
+                    data-dismiss="modal"
                   />
                 </div>
               </form>

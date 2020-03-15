@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-// import { Link, Redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { setAlert, register } from '../../../actions/actionCreators';
 import Alert from '../../Alert';
 
@@ -11,7 +10,6 @@ const Register = () => {
     password: '',
     password2: ''
   });
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
   const { username, password, password2 } = formData;
 
@@ -27,18 +25,8 @@ const Register = () => {
     }
   };
 
-  // if (isAuthenticated) {
-  //   return <Redirect to="/builds" />;
-  // }
-
   return (
     <Fragment>
-      {/* <div className="text-center">
-        <a href="#myModal" className="trigger-btn" data-toggle="modal">
-          Click to Open Register Modal
-        </a>
-      </div> */}
-
       <div id="registerModal" className="modal fade">
         <div className="modal-dialog modal-login">
           <div className="modal-content">
@@ -85,12 +73,19 @@ const Register = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group">
+                <div className="btn-group btn-block">
                   <input
+                    style={{ margin: 3 }}
                     type="submit"
-                    className="btn btn-primary btn-block btn-lg"
+                    className="btn btn-primary"
                     value="Register"
-                    data-dismiss={isAuthenticated ? 'modal' : null}
+                  />
+                  <input
+                    style={{ margin: 3 }}
+                    type="submit"
+                    className="btn btn-dark"
+                    value="Close"
+                    data-dismiss="modal"
                   />
                 </div>
               </form>
