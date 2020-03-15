@@ -218,10 +218,6 @@ class BuildItem extends Component {
       : this.props.addLike(build._id);
   };
 
-  // handleClickEdit = (build, e) => {
-  //     this.props.editBuild(build._id, description);
-  // };
-
   handleClickDelete = (build, e) => {
     window.confirm('Are you sure you wish to delete this build?') &&
       this.props.deleteBuild(build._id);

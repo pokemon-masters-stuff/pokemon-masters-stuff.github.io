@@ -17,7 +17,6 @@ import {
   GET_MORE_BUILDS,
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
-  GET_BUILD,
   ADD_BUILD,
   EDIT_BUILD,
   DELETE_BUILD,
@@ -45,11 +44,10 @@ const initialState = {
   // builds from databse
   builds: [],
   totalCount: 0,
-  build: null,
   loading: true,
   error: {},
   filter: 'None',
-  sort: 'newest'
+  sort: 'popular'
 };
 
 export default function(state = initialState, action) {
