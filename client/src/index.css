@@ -166,7 +166,7 @@ hr.rounded {
 
 /* Scroll-to-top button */
 .scroll {
-  opacity: 0.5;
+  opacity: 0.8;
   background-color: red;
   width: 40px;
   height: 40px;
@@ -179,7 +179,7 @@ hr.rounded {
 
 /* dark mode toggle for desktop */
 .dark-mode-toggle {
-  opacity: 1;
+  opacity: 0.8;
   background-color: blue;
   width: 40px;
   height: 40px;
