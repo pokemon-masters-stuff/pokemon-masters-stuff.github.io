@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addBuild } from '../../actions/actionCreators';
 import Alert from '../Alert';
 import './desktop.css';
-import RegisterOrLoginModal from '../auth/desktop/RegisterOrLoginModal';
+import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 
 export default function PublishBuildButton() {
   const dispatch = useDispatch();
@@ -34,13 +34,13 @@ export default function PublishBuildButton() {
         className="btn btn-primary"
         data-toggle="modal"
         data-target={
-          isAuthenticated ? '#publishBuildModal' : '#RegisterOrLoginModal'
+          isAuthenticated ? '#publishBuildModal' : '#loginOrRegisterModal'
         }
         style={{ position: 'relative', zIndex: 999 }}
       >
         Publish
       </button>
-      <RegisterOrLoginModal />
+      <LoginOrRegisterModal />
 
       <div
         className="modal fade"

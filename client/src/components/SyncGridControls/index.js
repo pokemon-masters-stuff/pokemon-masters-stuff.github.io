@@ -3,11 +3,12 @@ import { withStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import ListIcon from '@material-ui/icons/List';
-
+import { Link } from 'react-router-dom';
 import SelectPokemonDropdown from '../SelectPokemonDropdown';
 import { ResetGridButtonMobile } from '../ResetGridButton';
 import { SaveBuildButtonMobile } from '../SaveBuildButton';
 import { ShareButtonMobile } from '../ShareButton';
+import { PublishBuildButtonMobile } from '../PublishBuildButton';
 import LoadBuildDropdown from '../LoadBuildDropdown';
 import styles from './styles';
 
@@ -102,6 +103,24 @@ function SyncGridControls(props) {
             onChangeHandler={handleOnChangeSavedBuild}
           />
         </div>
+      </Grid>
+
+      <Grid item>
+        <div style={{ marginTop: 10, paddingBottom: 10 }}>
+          <PublishBuildButtonMobile />
+        </div>
+      </Grid>
+
+      <Grid item>
+        <Button
+          variant="outlined"
+          onClick={handleOnOpenSkillList}
+          style={{ marginTop: 10 }}
+        >
+          <Link to="/builds" style={{ color: 'white' }}>
+            Popular Builds
+          </Link>
+        </Button>
       </Grid>
     </Grid>
   );

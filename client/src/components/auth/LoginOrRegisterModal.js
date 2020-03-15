@@ -3,17 +3,18 @@ import { useSelector } from 'react-redux';
 import Register from './Register';
 import Login from './Login';
 
-const RegisterOrLoginModal = () => {
+const LoginOrRegisterModal = () => {
   const darkMode = useSelector(state => state.darkMode.mode);
   return (
     <Fragment>
       <div
         className="modal fade"
-        id="RegisterOrLoginModal"
+        id="loginOrRegisterModal"
         tabIndex="-1"
         role="dialog"
         aria-labelledby="myModalLabel"
         aria-hidden="true"
+        style={{ zIndex: 1900 }}
       >
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div
@@ -23,7 +24,7 @@ const RegisterOrLoginModal = () => {
           >
             <div className="modal-header text-center">
               <h4 className="modal-title w-100 font-weight-bold">
-                Please register or login
+                Please login or register
               </h4>
             </div>
             <div className="modal-body mx-3">
@@ -53,4 +54,4 @@ const RegisterOrLoginModal = () => {
   );
 };
 
-export default RegisterOrLoginModal;
+export default LoginOrRegisterModal;
