@@ -313,7 +313,6 @@ class GridMap extends Component {
   };
 
   render() {
-    console.log(this.props.grid.selectedCellsById);
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes } = this.props;
 

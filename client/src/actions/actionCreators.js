@@ -201,13 +201,7 @@ export const logout = () => dispatch => {
 // Get Builds
 export const getBuilds = (filter, sort, limit) => async dispatch => {
   try {
-    // const res = await axios.get('/api/builds');
     const res = await axios.get(
-      `/api/builds?skip=0&limit=${limit}&sort=${sort}${
-        filter !== 'None' ? '&filter=' + filter : ''
-      }`
-    );
-    console.log(
       `/api/builds?skip=0&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
@@ -228,18 +222,12 @@ export const getBuilds = (filter, sort, limit) => async dispatch => {
 // Get More Builds
 export const getMoreBuilds = (filter, sort, count, limit) => async dispatch => {
   try {
-    // const res = await axios.get('/api/builds');
     const res = await axios.get(
       `/api/builds?skip=${count}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
-    console.log(
-      'hit url',
-      `/api/builds?skip=${count}&limit=${limit}&sort=${sort}${
-        filter !== 'None' ? '&filter=' + filter : ''
-      }`
-    );
+
     dispatch({
       type: GET_MORE_BUILDS,
       payload: res.data

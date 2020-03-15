@@ -72,7 +72,6 @@ router.get('/', async (req, res) => {
             .skip(skip)
             .limit(limit);
     } else if (sort === 'oldest') {
-      console.log('sort by oldest');
       builds = filter
         ? await Build.find({ pokemon: filter })
             .sort({ date: 1 })
@@ -87,13 +86,13 @@ router.get('/', async (req, res) => {
         ? await Build.aggregate([
             { $match: { pokemon: filter } },
             { $addFields: { likesCount: { $size: '$likes' } } },
-            { $sort: { likesCount: -1 } }
+            { $sort: { likesCount: -1, _id: -1 } }
           ])
             .skip(skip)
             .limit(limit)
         : await Build.aggregate([
             { $addFields: { likesCount: { $size: '$likes' } } },
-            { $sort: { likesCount: -1 } }
+            { $sort: { likesCount: -1, _id: -1 } }
           ])
             .skip(skip)
             .limit(limit);

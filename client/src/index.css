@@ -163,3 +163,16 @@ hr.rounded {
   border-top: 8px solid #bbb;
   border-radius: 5px;
 }
+
+/* Scroll-to-top button */
+.scroll {
+  opacity: 0.5;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 5px;
+  border: none;
+}

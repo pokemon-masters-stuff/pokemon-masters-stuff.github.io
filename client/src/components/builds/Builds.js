@@ -1,30 +1,19 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  getBuilds,
-  changeFilter,
-  changeSort
-} from '../../actions/actionCreators';
+import { changeFilter, changeSort } from '../../actions/actionCreators';
 import { pokemonNameList } from '../../data';
-import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
-import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import MenuItem from '@material-ui/core/MenuItem';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import NativeSelect from '@material-ui/core/NativeSelect';
-import IconButton from '@material-ui/core/IconButton';
-import FilterListIcon from '@material-ui/icons/FilterList';
-import SortIcon from '@material-ui/icons/Sort';
 import TabPanel from './TabPanel';
 import PopularBuilds from './PopularBuilds';
 import LikedBuilds from './LikedBuilds';
 import UsersBuilds from './UsersBuilds';
+import ScrollButton from './ScrollButton';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -54,15 +43,6 @@ const Builds = () => {
   const handleChangeFilter = event => {
     dispatch(changeFilter(event.target.value));
   };
-
-  // const mounted = useRef();
-  // useEffect(() => {
-  //   if (!mounted.current) {
-  //     mounted.current = true;
-  //   } else {
-  //     dispatch(getBuilds(filter, sort, 5));
-  //   }
-  // });
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
@@ -130,6 +110,7 @@ const Builds = () => {
           <UsersBuilds />
         </TabPanel>
       </div>
+      <ScrollButton scrollStepInPx="150" delayInMs="10" />
     </div>
   );
 };
