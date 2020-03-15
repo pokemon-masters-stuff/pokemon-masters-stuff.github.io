@@ -58,7 +58,7 @@ const Builds = () => {
           >
             <Tab label="Popular Builds" />
             <Tab label="Liked Builds" />
-            <Tab label="My Builds" />
+            <Tab label="My Published Builds" />
           </Tabs>
         </Paper>
         <Paper width={1} className={classes.root}>
