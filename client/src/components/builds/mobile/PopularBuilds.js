@@ -4,7 +4,7 @@ import {
   getBuilds,
   getMoreBuilds,
   clearBuilds
-} from '../../actions/actionCreators';
+} from '../../../actions/actionCreators';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import BuildItem from './BuildItem';
 

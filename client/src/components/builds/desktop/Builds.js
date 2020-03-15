@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeFilter, changeSort } from '../../actions/actionCreators';
-import { pokemonNameList } from '../../data';
+import { changeFilter, changeSort } from '../../../actions/actionCreators';
+import { pokemonNameList } from '../../../data';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -9,11 +9,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TabPanel from './TabPanel';
+import TabPanel from '../TabPanel';
 import PopularBuilds from './PopularBuilds';
 import LikedBuilds from './LikedBuilds';
 import UsersBuilds from './UsersBuilds';
-import ScrollButton from './ScrollButton';
+import ScrollButton from '../ScrollButton';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({

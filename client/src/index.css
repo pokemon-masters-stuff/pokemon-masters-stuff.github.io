@@ -172,7 +172,7 @@ hr.rounded {
   height: 40px;
   position: fixed;
   bottom: 10px;
-  right: 60px;
+  right: 10px;
   border-radius: 5px;
   border: none;
 }
@@ -185,7 +185,7 @@ hr.rounded {
   height: 40px;
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 60px;
   border-radius: 5px;
   border: none;
   z-index: 999;

@@ -6,7 +6,9 @@ import MobileLayout from './containers/MobileLayout';
 import DesktopLayout from './containers/DesktopLayout';
 import { NavigationDesktop } from './components/Navigation';
 import { DarkModeToggleDesktop } from './components/DarkModeToggle';
-import Routes from './components/routing/Routes';
+import PrivateRoute from './components/routing/PrivateRoute';
+import BuildsDesktop from './components/builds/desktop/Builds';
+import BuildsMobile from './components/builds/mobile/Builds';
 import { theme, darkTheme } from './theme';
 import { useSelector } from 'react-redux';
 import setAuthToken from './utils/setAuthToken';
@@ -29,12 +31,13 @@ export default function App({ store }) {
           <DarkModeToggleDesktop />
           <Switch>
             <Route exact path="/" component={DesktopLayout} />
-            <Route component={Routes} />
+            <PrivateRoute exact path="/builds" component={BuildsDesktop} />
           </Switch>
         </Hidden>
         <Hidden mdUp>
           <Switch>
             <Route exact path="/" component={MobileLayout} />
+            <PrivateRoute exact path="/builds" component={BuildsMobile} />
           </Switch>
         </Hidden>
       </ThemeProvider>

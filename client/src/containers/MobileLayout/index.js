@@ -9,7 +9,6 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import SyncGridControls from '../../components/SyncGridControls';
 import { NavigationMobile } from '../../components/Navigation';
 import { SelectedSkillListMobile } from '../../components/SelectedSkillList';
@@ -49,8 +48,7 @@ class MobileApp extends Component {
     isNavOpened: false,
     isSkillListOpened: false,
     isSaveBuildModalVisible: false,
-    isShareModalVisible: false,
-    isAnnouncementModalVisible: false
+    isShareModalVisible: false
   };
 
   newBuildNameRef = React.createRef();
@@ -71,13 +69,7 @@ class MobileApp extends Component {
 
   handleOnCloseShareModal = () => this.setState({ isShareModalVisible: false });
 
-  handleOnCloseAnnouncementModal = () =>
-    this.setState({ isAnnouncementModalVisible: false });
-
   handleOnOpenShareModal = () => this.setState({ isShareModalVisible: true });
-
-  handleOnOpenAnnouncementModal = () =>
-    this.setState({ isAnnouncementModalVisible: true });
 
   handleOnCloseSkillList = () => this.setState({ isSkillListOpened: false });
 
@@ -102,10 +94,6 @@ class MobileApp extends Component {
 
   handleOnClickShare = () => {
     this.handleOnOpenShareModal();
-  };
-
-  handleOnClickAnnouncement = () => {
-    this.handleOnOpenAnnouncementModal();
   };
 
   handleOnSaveBuild = () => {
@@ -144,8 +132,7 @@ class MobileApp extends Component {
       isNavOpened,
       isSkillListOpened,
       isSaveBuildModalVisible,
-      isShareModalVisible,
-      isAnnouncementModalVisible
+      isShareModalVisible
     } = this.state;
     const { classes, pokemon, grid } = this.props;
 
@@ -175,7 +162,6 @@ class MobileApp extends Component {
             energy: grid.remainingEnergy,
             orbs: grid.orbSpent
           }}
-          onAnnouncementClickHandler={this.handleOnClickAnnouncement}
         />
 
         <div className={classes.mainContainer}>
@@ -246,21 +232,6 @@ class MobileApp extends Component {
               </Button>
             </CopyToClipboard>
           </DialogActions>
-        </Dialog>
-
-        <Dialog
-          open={isAnnouncementModalVisible}
-          onClose={this.handleOnCloseAnnouncementModal}
-        >
-          <DialogTitle>{'Announcements'}</DialogTitle>
-          <DialogContent dividers>
-            <DialogContentText>
-              <ol style={{ paddingLeft: 15 }}>
-                <li>Fixed crashing issues</li>
-                <li>Shortened url links (old links still compatible)</li>
-              </ol>
-            </DialogContentText>
-          </DialogContent>
         </Dialog>
       </div>
     );

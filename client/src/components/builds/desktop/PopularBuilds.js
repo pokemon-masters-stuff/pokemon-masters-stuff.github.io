@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  getLikedBuilds,
+  getBuilds,
   getMoreBuilds,
   clearBuilds
-} from '../../actions/actionCreators';
+} from '../../../actions/actionCreators';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import BuildItem from './BuildItem';
 
-class LikedBuilds extends Component {
+class PopularBuilds extends Component {
   constructor(props) {
     super(props);
 
@@ -21,7 +21,7 @@ class LikedBuilds extends Component {
   componentDidMount() {
     this.props.clearBuilds();
     this.setState({ hasMoreItems: true });
-    this.props.getLikedBuilds(this.props.filter, this.props.sort, 5);
+    this.props.getBuilds(this.props.filter, this.props.sort, 5);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -30,7 +30,7 @@ class LikedBuilds extends Component {
       this.props.filter !== prevProps.filter
     ) {
       this.setState({ hasMoreItems: true });
-      this.props.getLikedBuilds(this.props.filter, this.props.sort, 5);
+      this.props.getBuilds(this.props.filter, this.props.sort, 5);
     }
   }
 
@@ -87,7 +87,7 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-  getLikedBuilds,
+  getBuilds,
   getMoreBuilds,
   clearBuilds
-})(LikedBuilds);
+})(PopularBuilds);

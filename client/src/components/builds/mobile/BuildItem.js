@@ -13,17 +13,21 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-import ShareBuildModal from './ShareBuildModal';
-import EditBuildModal from './EditBuildModal';
+import ShareBuildModal from '../ShareBuildModal';
+import EditBuildModal from '../EditBuildModal';
 import ReactTooltip from 'react-tooltip';
-import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import styles from './styles';
 import {
   getFillColorByMoveType,
   renderMoveName,
   addSyncLvReq
-} from '../../utils/functions';
-import { addLike, removeLike, deleteBuild } from '../../actions/actionCreators';
+} from '../../../utils/functions';
+import {
+  addLike,
+  removeLike,
+  deleteBuild
+} from '../../../actions/actionCreators';
 import {
   pikachuGridData,
   torkoalGridData,
@@ -42,8 +46,8 @@ import {
   houndoomGridData,
   raichuGridData,
   alakazamGridData
-} from '../../data';
-import {} from '../../actions/actionCreators';
+} from '../../../data';
+import {} from '../../../actions/actionCreators';
 import {
   charizard,
   pikachu,
@@ -62,7 +66,7 @@ import {
   liepard,
   palossand,
   haxorus
-} from '../../images/PokemonThumbnails/';
+} from '../../../images/PokemonThumbnails';
 
 const allThumbnails = {
   charizard,
