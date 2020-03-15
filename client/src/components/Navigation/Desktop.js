@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FeedbackFormDesktop } from '../../components/FeedbackForm';
 import { AnnouncementModalDesktop } from '../../components/AnnouncementModal';
+import Register from '../auth/desktop/Register';
+import Login from '../auth/desktop/Login';
+import Logout from '../auth/desktop/Logout';
+import RegisterOrLoginModal from '../auth/desktop/RegisterOrLoginModal';
 
 const Navigation = () => {
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
@@ -47,6 +51,7 @@ const Navigation = () => {
                 Popular Builds
               </button>
             )}
+            <RegisterOrLoginModal />
           </li>
         </ul>
         <button
@@ -59,6 +64,32 @@ const Navigation = () => {
           Submit Feedback
         </button>
         <FeedbackFormDesktop />
+        {isAuthenticated ? (
+          <Logout />
+        ) : (
+          <Fragment>
+            <button
+              type="button"
+              className="btn btn-dark"
+              id="feedback-button"
+              data-toggle="modal"
+              data-target="#registerModal"
+            >
+              Register
+            </button>
+            <Register />
+            <button
+              type="button"
+              className="btn btn-dark"
+              id="feedback-button"
+              data-toggle="modal"
+              data-target="#loginModal"
+            >
+              Login
+            </button>
+            <Login />
+          </Fragment>
+        )}
       </div>
     </nav>
   );
