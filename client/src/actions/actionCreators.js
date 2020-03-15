@@ -159,7 +159,6 @@ export const register = ({ username, password }) => async dispatch => {
     dispatch(setAlert('Registration Successful', 'success'));
   } catch (err) {
     const errors = err.response.data.errors;
-
     if (errors) {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
@@ -324,8 +323,13 @@ export const addBuild = data => async dispatch => {
       payload: res.data
     });
 
-    dispatch(setAlert('Build Created', 'success'));
+    dispatch(setAlert('Build Published', 'success'));
   } catch (err) {
+    const errors = err.response.data.errors;
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+    }
+
     dispatch({
       type: BUILD_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status }

@@ -1,6 +1,7 @@
 import React, { Fragment, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBuild } from '../../actions/actionCreators';
+import Alert from '../Alert';
 import './desktop.css';
 import RegisterOrLoginModal from '../auth/desktop/RegisterOrLoginModal';
 
@@ -97,11 +98,17 @@ export default function PublishBuildButton() {
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 onClick={handleOnPublishBuild}
-                data-dismiss="modal"
               >
                 Publish
               </button>
+              <button
+                className={`btn btn-default ${darkMode ? 'text-white' : null}`}
+                data-dismiss="modal"
+              >
+                Close
+              </button>
             </div>
+            <Alert />
           </div>
         </div>
       </div>
