@@ -52,8 +52,8 @@ router.post(
 
 // @route   GET api/builds
 // @desc    Get all builds
-// @access  Public
-router.get('/', async (req, res) => {
+// @access  Private
+router.get('/', auth, async (req, res) => {
   const filter = req.query.filter;
   const sort = req.query.sort || 'popular';
   const limit = parseInt(req.query.limit);
