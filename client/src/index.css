@@ -172,7 +172,21 @@ hr.rounded {
   height: 40px;
   position: fixed;
   bottom: 10px;
+  right: 60px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* dark mode toggle for desktop */
+.dark-mode-toggle {
+  opacity: 1;
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 10px;
   right: 10px;
   border-radius: 5px;
   border: none;
+  z-index: 999;
 }

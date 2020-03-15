@@ -5,6 +5,7 @@ import Hidden from '@material-ui/core/Hidden';
 import MobileLayout from './containers/MobileLayout';
 import DesktopLayout from './containers/DesktopLayout';
 import { NavigationDesktop } from './components/Navigation';
+import { DarkModeToggleDesktop } from './components/DarkModeToggle';
 import Routes from './components/routing/Routes';
 import { theme, darkTheme } from './theme';
 import { useSelector } from 'react-redux';
@@ -25,6 +26,7 @@ export default function App({ store }) {
       <ThemeProvider theme={darkMode ? darkTheme : theme}>
         <Hidden smDown>
           <NavigationDesktop />
+          <DarkModeToggleDesktop />
           <Switch>
             <Route exact path="/" component={DesktopLayout} />
             <Route component={Routes} />

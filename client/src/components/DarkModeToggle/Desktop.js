@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeMode } from '../../actions/actionCreators';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 const DarkModeToggle = () => {
   const darkMode = useSelector(state => state.darkMode.mode);
@@ -22,13 +23,8 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <button
-      type="button"
-      className="btn btn-dark ml-2"
-      onClick={handleOnClick}
-      style={{ position: 'relative', zIndex: 999 }}
-    >
-      Dark Mode
+    <button className="dark-mode-toggle" onClick={handleOnClick}>
+      <Brightness4Icon />
     </button>
   );
 };

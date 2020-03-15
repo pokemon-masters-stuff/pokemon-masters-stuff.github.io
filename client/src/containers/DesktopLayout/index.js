@@ -14,7 +14,7 @@ import {
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
 import { PublishBuildButtonDesktop } from '../../components/PublishBuildButton';
-import { DarkModeToggleDesktop } from '../../components/DarkModeToggle';
+
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
 class DesktopLayout extends Component {
@@ -66,16 +66,13 @@ class DesktopLayout extends Component {
                   <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <ShareButtonDesktop />
                   </div>
-                  <div style={{ marginTop: 10 }}>
-                    <DarkModeToggleDesktop />
-                  </div>
                   <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <PublishBuildButtonDesktop />
                   </div>
                   <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>
-                  <div style={{ marginTop: -170 }}>
+                  <div style={{ marginTop: -130 }}>
                     <GridMap />
                   </div>
                 </div>
