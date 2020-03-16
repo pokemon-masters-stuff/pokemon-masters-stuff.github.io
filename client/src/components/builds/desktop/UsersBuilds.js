@@ -62,10 +62,11 @@ class UsersBuilds extends Component {
         hasMore={this.state.hasMoreItems}
         loader={
           <div
+            className="alert alert-success"
+            role="alert"
             key={`${Math.floor(Math.random() * 1000)}-min`}
-            className="loader"
           >
-             Loading ...
+            Loading...
           </div>
         }
       >
