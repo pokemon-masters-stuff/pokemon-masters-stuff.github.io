@@ -33,6 +33,7 @@ const LoginOrRegisterModal = () => {
                 className="btn btn-primary btn-lg btn-block"
                 data-toggle="modal"
                 data-target="#loginModal"
+                data-dismiss="modal"
               >
                 Login
               </button>
@@ -41,6 +42,7 @@ const LoginOrRegisterModal = () => {
                 className="btn btn-primary btn-lg btn-block"
                 data-toggle="modal"
                 data-target="#registerModal"
+                data-dismiss="modal"
               >
                 Register
               </button>

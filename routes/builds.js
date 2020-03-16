@@ -59,7 +59,7 @@ router.get('/', auth, async (req, res) => {
   const limit = parseInt(req.query.limit);
   const skip = parseInt(req.query.skip);
   let builds;
-  let totalCount;
+  let totalBuildCount;
   try {
     if (sort === 'newest') {
       builds = filter
@@ -98,13 +98,13 @@ router.get('/', auth, async (req, res) => {
             .limit(limit);
     }
 
-    totalCount = filter
+    totalBuildCount = filter
       ? await Build.find({
           pokemon: filter
         }).countDocuments()
       : await Build.find().countDocuments();
 
-    res.json({ builds, totalCount });
+    res.json({ builds, totalBuildCount });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
@@ -121,7 +121,7 @@ router.get('/users', auth, async (req, res) => {
   const skip = parseInt(req.query.skip);
   const userId = mongoose.Types.ObjectId(req.user.id);
   let builds;
-  let totalCount;
+  let totalBuildCount;
   try {
     if (sort === 'newest') {
       builds = filter
@@ -160,14 +160,14 @@ router.get('/users', auth, async (req, res) => {
             .skip(skip)
             .limit(limit);
     }
-    totalCount = filter
+    totalBuildCount = filter
       ? await Build.find({
           pokemon: filter,
           user: req.user.id
         }).countDocuments()
       : await Build.find({ user: req.user.id }).countDocuments();
 
-    res.json({ builds, totalCount });
+    res.json({ builds, totalBuildCount });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
@@ -184,7 +184,7 @@ router.get('/liked', auth, async (req, res) => {
   const skip = parseInt(req.query.skip) || 0;
   const userId = mongoose.Types.ObjectId(req.user.id);
   let builds;
-  let totalCount;
+  let totalBuildCount;
   try {
     if (sort === 'newest') {
       builds = filter
@@ -236,7 +236,7 @@ router.get('/liked', auth, async (req, res) => {
             .skip(skip)
             .limit(limit);
     }
-    totalCount = filter
+    totalBuildCount = filter
       ? await Build.find({
           pokemon: filter,
           user: req.user.id
@@ -245,7 +245,7 @@ router.get('/liked', auth, async (req, res) => {
           likes: { $elemMatch: { user: req.user.id } }
         }).countDocuments();
 
-    res.json({ builds, totalCount });
+    res.json({ builds, totalBuildCount });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');

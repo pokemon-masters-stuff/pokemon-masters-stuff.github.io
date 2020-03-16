@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {
-  getBuilds,
-  getMoreBuilds,
-  clearBuilds
-} from '../../../actions/actionCreators';
+import { getBuilds, clearBuilds } from '../../../actions/actionCreators';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import BuildItem from './BuildItem';
 import Box from '@material-ui/core/Box';
@@ -40,17 +36,17 @@ class PopularBuilds extends Component {
   }
 
   loadItems = () => {
-    const { builds, totalCount, filter, sort } = this.props;
-    let limit = Math.min(5, totalCount);
+    const { builds, totalBuildCount, filter, sort } = this.props;
+    let limit = Math.min(5, totalBuildCount);
     let count = builds.length;
 
-    if (builds.length >= totalCount) {
+    if (builds.length >= totalBuildCount) {
       this.setState({ hasMoreItems: false });
       return;
     }
 
     setTimeout(() => {
-      this.props.getMoreBuilds(filter, sort, count, limit);
+      this.props.getBuilds(filter, sort, count, limit);
     }, 500);
   };
 
@@ -85,11 +81,11 @@ const mapStateToProps = state => ({
   builds: state.grid.builds,
   sort: state.grid.sort,
   filter: state.grid.filter,
-  totalCount: state.grid.totalCount
+  totalBuildCount: state.grid.totalBuildCount
 });
 
 export default connect(mapStateToProps, {
   getBuilds,
-  getMoreBuilds,
+  // getMoreBuilds,
   clearBuilds
 })(PopularBuilds);

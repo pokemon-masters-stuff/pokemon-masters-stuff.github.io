@@ -12,14 +12,14 @@ const SubToolbar = props => {
       <Typography
         variant="body1"
         className={classes.title}
-        color={darkMode ? 'textPrimary' : 'default'}
+        color={darkMode ? 'textPrimary' : 'inherit'}
       >
         Remaining Energy: {data.energy}
       </Typography>
       <Typography
         variant="body1"
         className={classes.title}
-        color={darkMode ? 'textPrimary' : 'default'}
+        color={darkMode ? 'textPrimary' : 'inherit'}
       >
         Orbs Spent: {Boolean(data && data.orbs > -1) && data.orbs}
       </Typography>

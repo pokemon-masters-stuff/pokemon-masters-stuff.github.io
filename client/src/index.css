@@ -203,10 +203,10 @@ hr.rounded {
   z-index: 999;
 }
 
-* {
+/* * {
   -o-transition-property: none !important;
   -moz-transition-property: none !important;
   -ms-transition-property: none !important;
   -webkit-transition-property: none !important;
   transition-property: none !important;
-}
+} */

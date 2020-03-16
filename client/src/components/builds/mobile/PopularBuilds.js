@@ -1,27 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import {
-  getBuilds,
-  getMoreBuilds,
-  clearBuilds
-} from '../../../actions/actionCreators';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import { getBuilds, clearBuilds } from '../../../actions/actionCreators';
 import BuildItem from './BuildItem';
+import Pagination from '@material-ui/lab/Pagination';
 
 class PopularBuilds extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hasMoreItems: false
+      page: 1,
+      rowsPerPage: 5,
+      totalPageCount: null
     };
-    this.loadItems = this.loadItems.bind(this);
+    this.handleChangePage = this.handleChangePage.bind(this);
   }
 
   componentDidMount() {
     this.props.clearBuilds();
-    this.setState({ hasMoreItems: true });
-    this.props.getBuilds(this.props.filter, this.props.sort, 5);
+    this.props.getBuilds(
+      this.props.filter,
+      this.props.sort,
+      0,
+      this.state.rowsPerPage
+    );
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -29,8 +31,13 @@ class PopularBuilds extends Component {
       this.props.sort !== prevProps.sort ||
       this.props.filter !== prevProps.filter
     ) {
-      this.setState({ hasMoreItems: true });
-      this.props.getBuilds(this.props.filter, this.props.sort, 5);
+      this.props.getBuilds(this.props.filter, this.props.sort, 0, 5);
+    }
+    if (this.props.totalBuildCount !== prevProps.totalBuildCount) {
+      this.setState({
+        totalPageCount:
+          Math.ceil(this.props.totalBuildCount / this.state.rowsPerPage) || 1
+      });
     }
   }
 
@@ -38,43 +45,47 @@ class PopularBuilds extends Component {
     this.props.clearBuilds();
   }
 
-  loadItems = () => {
-    const { builds, totalCount, filter, sort } = this.props;
-    let limit = Math.min(5, totalCount);
-    let count = builds.length;
+  handleChangePage = (event, newPage) => {
+    const { totalBuildCount, filter, sort } = this.props;
+    let limit = Math.min(5, totalBuildCount);
+    let skip = (newPage - 1) * this.state.rowsPerPage;
 
-    if (builds.length >= totalCount) {
-      this.setState({ hasMoreItems: false });
-      return;
-    }
+    this.props.clearBuilds();
 
-    setTimeout(() => {
-      this.props.getMoreBuilds(filter, sort, count, limit);
-    }, 500);
+    this.setState({ page: newPage });
+
+    this.props.getBuilds(filter, sort, skip, limit);
+  };
+
+  handleChangeRowsPerPage = event => {
+    this.setState({ rowsPerPage: event.target.value });
+    this.setState({ page: 1 });
   };
 
   render() {
+    const { page, totalPageCount } = this.state;
     return (
-      <InfiniteScroll
-        style={{ overflowX: 'hidden' }}
-        dataLength={this.props.builds.length}
-        next={this.loadItems}
-        hasMore={this.state.hasMoreItems}
-        loader={
-          <div
-            key={`${Math.floor(Math.random() * 1000)}-min`}
-            className="loader"
-          >
-             Loading ...
-          </div>
-        }
-      >
-              
+      <Fragment>
         {this.props.builds.map(build => (
           <BuildItem key={build._id} build={build} />
         ))}
-            
-      </InfiniteScroll>
+
+        {totalPageCount ? (
+          <Pagination
+            page={page}
+            onChange={this.handleChangePage}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: 15,
+              marginBottom: 70
+            }}
+            count={totalPageCount}
+            color="primary"
+          />
+        ) : null}
+      </Fragment>
     );
   }
 }
@@ -83,11 +94,10 @@ const mapStateToProps = state => ({
   builds: state.grid.builds,
   sort: state.grid.sort,
   filter: state.grid.filter,
-  totalCount: state.grid.totalCount
+  totalBuildCount: state.grid.totalBuildCount
 });
 
 export default connect(mapStateToProps, {
   getBuilds,
-  getMoreBuilds,
   clearBuilds
 })(PopularBuilds);

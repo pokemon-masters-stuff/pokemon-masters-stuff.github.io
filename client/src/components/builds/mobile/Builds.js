@@ -85,7 +85,7 @@ const Builds = () => {
         <Tab label="My" />
       </Tabs>
 
-      <Box className={classes.root}>
+      <Box className={classes.root} style={{ marginBottom: 15 }}>
         <FormControl
           variant="outlined"
           size="small"
@@ -139,7 +139,6 @@ const Builds = () => {
       <TabPanel index={2} value={value}>
         <UsersBuilds />
       </TabPanel>
-      <ScrollButton scrollStepInPx="1000" delayInMs="1" />
     </div>
   );
 };

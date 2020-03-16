@@ -28,7 +28,7 @@ const Login = () => {
         </a>
       </div> */}
       <div id="loginModal" className="modal fade" style={{ zIndex: 2000 }}>
-        <div className="modal-dialog modal-login">
+        <div className="modal-dialog modal-dialog-centered modal-login">
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">Login</h4>

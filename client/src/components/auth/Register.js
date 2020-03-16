@@ -28,7 +28,7 @@ const Register = () => {
   return (
     <Fragment>
       <div id="registerModal" className="modal fade" style={{ zIndex: 2000 }}>
-        <div className="modal-dialog modal-login">
+        <div className="modal-dialog modal-dialog-centered modal-login">
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">Register</h4>
