@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package trainerbase;
+
+message TrainerBase {
+	uint64 trainer_base_id = 1;
+	string trainer_name_id = 2;
+	string trainer_name_id_short = 3;	// trainer_name_xx.lsd
+	int32 u4 = 4;
+	int32 u5 = 5;						// weird binary chunk on 1.0.0 (a string ?), empty otherwise
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 gender = 8;					// 1 for male, 2 for female
+	string pokeball_id = 9;
+	int32 is_generic = 10;				// 1 for generic trainers, else 0
+	string battle_theme_id = 11;
+	string victory_theme_id = 12;		// battle result theme
+}
+
+message TrainerBaseTable {
+	repeated TrainerBase entries = 1;
+}
+
+/* TODO
+trainer_name_id -> trainer_base_string_id
+trainer_name_id_short -> trainer_name_id
+*/

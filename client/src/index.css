@@ -1,0 +1,191 @@
+/* Defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  background: rgba(0, 0, 0, 0.877);
+  background-image: url('./images/tiles.png');
+  background-repeat: repeat;
+}
+
+.dark-mode {
+  background: rgba(0, 0, 0, 0.877);
+  background-image: url('./images/darktiles.png');
+  background-repeat: repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.energy-inside-grid {
+  margin-top: 10rem;
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.active-grid-list {
+  width: 23rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.4rem;
+}
+
+#textboxid {
+  height: 200px;
+  font-size: 14pt;
+}
+
+/* svg {
+} */
+svg g {
+  fill: #9ea7e7;
+  fill-opacity: 0.15;
+}
+
+svg g .dark-mode {
+  fill: #9ea7e7;
+  fill-opacity: 0.12;
+}
+
+svg g .dark-mode.build {
+  fill: #9ea7e7;
+  fill-opacity: 0.02;
+}
+
+svg g:hover {
+  fill-opacity: 0.5;
+}
+
+svg g:hover.dark-mode {
+  fill-opacity: 0.3;
+}
+
+svg g .selected {
+  fill-opacity: 1;
+}
+
+svg g .selected.dark-mode {
+  fill-opacity: 0.6;
+}
+
+svg g:hover text {
+  fill-opacity: 1;
+}
+
+svg g polygon {
+  stroke: #6e81ec;
+  stroke-width: 0.2;
+  transition: fill-opacity 0.2s;
+}
+
+svg g text {
+  font-size: 0.075rem;
+  fill: #000000;
+  fill-opacity: 0.9;
+  transition: fill-opacity 0.2s;
+  font-weight: bold;
+
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg g text.build {
+  font-size: 0.065rem;
+  /* fill: #000000; */
+  fill-opacity: 0.9;
+  transition: fill-opacity 0.2s;
+  font-weight: bold;
+
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* svg g text .build.dark-mode {
+  fill: white;
+} */
+
+svg .center-grid {
+  fill-opacity: 1;
+}
+
+svg g:hover .center-grid {
+  fill-opacity: 1;
+}
+
+.tooltip {
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.tooltip-mobile {
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  max-width: 70vw;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+/* dark mode toggle for desktop */
+.dark-mode-toggle {
+  opacity: 0.8;
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 5px;
+  border: none;
+  z-index: 999;
+}

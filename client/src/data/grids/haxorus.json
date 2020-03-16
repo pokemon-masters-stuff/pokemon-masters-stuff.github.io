@@ -1,0 +1,1258 @@
+[
+  {
+    "cellId": 1009200000,
+    "coords": {
+      "q": 1,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1009200001,
+    "coords": {
+      "q": 1,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1009200002,
+    "coords": {
+      "q": 0,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": {
+      "name": "Defense +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1009200003,
+    "coords": {
+      "q": -1,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1009200004,
+    "coords": {
+      "q": -1,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": {
+      "name": "Sp. Def +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1009200005,
+    "coords": {
+      "q": 0,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1009200006,
+    "coords": {
+      "q": 1,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009200007,
+    "coords": {
+      "q": 2,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009200008,
+    "coords": {
+      "q": 3,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 2100337003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 337,
+      "value": 3,
+      "u6": 99299955
+    },
+    "move": {
+      "name": "Dragon Claw: Power ↑ +3",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200009,
+    "coords": {
+      "q": 1,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 2100337003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 337,
+      "value": 3,
+      "u6": 99299955
+    },
+    "move": {
+      "name": "Dragon Claw: Power ↑ +3",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200010,
+    "coords": {
+      "q": 2,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 1202010200337,
+      "type": 8,
+      "passiveId": 12020102,
+      "moveId": 337,
+      "value": 0,
+      "u6": 98999988
+    },
+    "move": {
+      "name": "Move: Dragon Claw\nMove Gauge Refresh 2",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Occasionally increases the user’s move gauge by one when a move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009200011,
+    "coords": {
+      "q": 3,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 2100337003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 337,
+      "value": 3,
+      "u6": 99299955
+    },
+    "move": {
+      "name": "Dragon Claw: Power ↑ +3",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200012,
+    "coords": {
+      "q": 1,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 2100337003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 337,
+      "value": 3,
+      "u6": 99299955
+    },
+    "move": {
+      "name": "Dragon Claw: Power ↑ +3",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200013,
+    "coords": {
+      "q": 2,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 1202010200337,
+      "type": 8,
+      "passiveId": 12020102,
+      "moveId": 337,
+      "value": 0,
+      "u6": 98999988
+    },
+    "move": {
+      "name": "Move: Dragon Claw\nMove Gauge Refresh 2",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Occasionally increases the user’s move gauge by one when a move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009200014,
+    "coords": {
+      "q": 3,
+      "r": -6
+    },
+    "ability": {
+      "abilityId": 2100337004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 337,
+      "value": 4,
+      "u6": 99299954
+    },
+    "move": {
+      "name": "Dragon Claw: Power ↑ +4",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200015,
+    "coords": {
+      "q": 1,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 2100337004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 337,
+      "value": 4,
+      "u6": 99299954
+    },
+    "move": {
+      "name": "Dragon Claw: Power ↑ +4",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200016,
+    "coords": {
+      "q": 2,
+      "r": -6
+    },
+    "ability": {
+      "abilityId": 1805060100337,
+      "type": 8,
+      "passiveId": 18050601,
+      "moveId": 337,
+      "value": 0,
+      "u6": 98999871
+    },
+    "move": {
+      "name": "Move: Dragon Claw\nZero In 1",
+      "moveId": 337,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Critical hits land more easily when an attack move is used.",
+      "energyCost": 10,
+      "orbCost": 120,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200017,
+    "coords": {
+      "q": -1,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009200018,
+    "coords": {
+      "q": -2,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200019,
+    "coords": {
+      "q": -3,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200020,
+    "coords": {
+      "q": -1,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200021,
+    "coords": {
+      "q": -2,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": {
+      "name": "Speed +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200022,
+    "coords": {
+      "q": -3,
+      "r": 5
+    },
+    "ability": {
+      "abilityId": 1704060410920,
+      "type": 8,
+      "passiveId": 17040604,
+      "moveId": 10920,
+      "value": 0,
+      "u6": 98999895
+    },
+    "move": {
+      "name": "Move: You’re Going\nDown!\nDurable 4",
+      "moveId": 10920,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good chance of making the user able to endure the next hit it takes when a move is successful.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1009200023,
+    "coords": {
+      "q": -1,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1703030100000,
+      "type": 7,
+      "passiveId": 17030301,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099933
+    },
+    "move": {
+      "name": "Quick Cure",
+      "description": "Removes the confused, flinching, and trapped conditions from the user once during battle.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009200024,
+    "coords": {
+      "q": -2,
+      "r": 5
+    },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": {
+      "name": "Speed +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200025,
+    "coords": {
+      "q": -3,
+      "r": 6
+    },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": {
+      "name": "Sp. Def +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200026,
+    "coords": {
+      "q": -1,
+      "r": 5
+    },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99699998
+    },
+    "move": {
+      "name": "Defense +10",
+      "energyCost": 4,
+      "orbCost": 48,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200027,
+    "coords": {
+      "q": -2,
+      "r": 6
+    },
+    "ability": {
+      "abilityId": 1804180200000,
+      "type": 7,
+      "passiveId": 18041802,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099910
+    },
+    "move": {
+      "name": "Speedy Entry 2",
+      "description": "Sharply raises the user’s Speed when the Pokémon enters a battle.",
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200028,
+    "coords": {
+      "q": 2,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009200029,
+    "coords": {
+      "q": 3,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 2100200004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 200,
+      "value": 4,
+      "u6": 99299966
+    },
+    "move": {
+      "name": "Outrage: Power ↑ +4",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200030,
+    "coords": {
+      "q": 2,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009200031,
+    "coords": {
+      "q": 1,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 2100200004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 200,
+      "value": 4,
+      "u6": 99299966
+    },
+    "move": {
+      "name": "Outrage: Power ↑ +4",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200032,
+    "coords": {
+      "q": 3,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 2100200004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 200,
+      "value": 4,
+      "u6": 99299966
+    },
+    "move": {
+      "name": "Outrage: Power ↑ +4",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009200033,
+    "coords": {
+      "q": 2,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1202010300200,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 200,
+      "value": 0,
+      "u6": 98999975
+    },
+    "move": {
+      "name": "Move: Outrage\nMove Gauge Refresh 3",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009200034,
+    "coords": {
+      "q": 1,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 2100200004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 200,
+      "value": 4,
+      "u6": 99299966
+    },
+    "move": {
+      "name": "Outrage: Power ↑ +4",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009200035,
+    "coords": {
+      "q": 3,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1301170500200,
+      "type": 8,
+      "passiveId": 13011705,
+      "moveId": 200,
+      "value": 0,
+      "u6": 98999944
+    },
+    "move": {
+      "name": "Move: Outrage\nConfusion Boon 5",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Powers up moves when the user is confused.",
+      "energyCost": 8,
+      "orbCost": 96,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200036,
+    "coords": {
+      "q": 2,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1202010300200,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 200,
+      "value": 0,
+      "u6": 98999975
+    },
+    "move": {
+      "name": "Move: Outrage\nMove Gauge Refresh 3",
+      "moveId": 200,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 115,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 7,
+      "orbCost": 84,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200037,
+    "coords": {
+      "q": -2,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99899998
+    },
+    "move": {
+      "name": "HP +20",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1009200038,
+    "coords": {
+      "q": -3,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009200039,
+    "coords": {
+      "q": -2,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1804210100000,
+      "type": 7,
+      "passiveId": 18042101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099906
+    },
+    "move": {
+      "name": "Carry On 1",
+      "description": "Raises the user’s Attack each time another Pokémon on the field of play faints.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1009200040,
+    "coords": {
+      "q": -1,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1306020319010,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 19010,
+      "value": 0,
+      "u6": 98999910
+    },
+    "move": {
+      "name": "Move: X Attack\nMP Refresh 3",
+      "moveId": 19010,
+      "category": 3,
+      "u3": 2,
+      "user": 0,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009200041,
+    "coords": {
+      "q": -3,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1306020310920,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 10920,
+      "value": 0,
+      "u6": 98999921
+    },
+    "move": {
+      "name": "Move: You’re Going\nDown!\nMP Refresh 3",
+      "moveId": 10920,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009200042,
+    "coords": {
+      "q": -2,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": {
+      "name": "Speed +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009200043,
+    "coords": {
+      "q": -1,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": {
+      "name": "Sp. Def +10",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009200044,
+    "coords": {
+      "q": -3,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99699998
+    },
+    "move": {
+      "name": "Defense +10",
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200045,
+    "coords": {
+      "q": -2,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1901010100000,
+      "type": 7,
+      "passiveId": 19010101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099893
+    },
+    "move": {
+      "name": "Unhindered",
+      "description": "When the Pokémon attacks, ignores damage-reducing effects on the opponent’s field of play.",
+      "energyCost": 10,
+      "orbCost": 120,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200046,
+    "coords": {
+      "q": 0,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 2174900025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 74900,
+      "value": 25,
+      "u6": 99299919
+    },
+    "move": {
+      "name": "Dragon Sage\nOutrage: Power ↑ +25",
+      "moveId": 74900,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1009200047,
+    "coords": {
+      "q": 0,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 2174900025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 74900,
+      "value": 25,
+      "u6": 99299919
+    },
+    "move": {
+      "name": "Dragon Sage\nOutrage: Power ↑ +25",
+      "moveId": 74900,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 15,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  }
+]

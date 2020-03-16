@@ -1,0 +1,992 @@
+[
+  {
+    "cellId": 1000000000,
+    "coords": { "q": 1, "r": -1 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": { "name": "HP +10", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1000000001,
+    "coords": { "q": 1, "r": 0 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": { "name": "Attack +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1000000002,
+    "coords": { "q": 0, "r": 1 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "Defense +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1000000003,
+    "coords": { "q": -1, "r": 1 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1000000004,
+    "coords": { "q": -1, "r": 0 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1000000005,
+    "coords": { "q": 0, "r": -1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1000000006,
+    "coords": { "q": 1, "r": -2 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1000000007,
+    "coords": { "q": 2, "r": -3 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1000000008,
+    "coords": { "q": 3, "r": -4 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "Defense +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1000000009,
+    "coords": { "q": 1, "r": -3 },
+    "ability": {
+      "abilityId": 2100257003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 257,
+      "value": 3,
+      "u6": 99299959
+    },
+    "move": {
+      "name": "Heat Wave: Power ↑ +3",
+      "moveId": 257,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 109,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1000000010,
+    "coords": { "q": 2, "r": -4 },
+    "ability": {
+      "abilityId": 1200000020,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99799997
+    },
+    "move": { "name": "Attack +20", "energyCost": 10, "orbCost": 120 }
+  },
+  {
+    "cellId": 1000000011,
+    "coords": { "q": 3, "r": -5 },
+    "ability": {
+      "abilityId": 2100257003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 257,
+      "value": 3,
+      "u6": 99299959
+    },
+    "move": {
+      "name": "Heat Wave: Power ↑ +3",
+      "moveId": 257,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 109,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1000000012,
+    "coords": { "q": 1, "r": -4 },
+    "ability": {
+      "abilityId": 2100257003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 257,
+      "value": 3,
+      "u6": 99299959
+    },
+    "move": {
+      "name": "Heat Wave: Power ↑ +3",
+      "moveId": 257,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 109,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1000000013,
+    "coords": { "q": 2, "r": -5 },
+    "ability": {
+      "abilityId": 1306020319082,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 19082,
+      "value": 0,
+      "u6": 98999901
+    },
+    "move": {
+      "name": "Move: Dire Hit +\nMP Refresh 3",
+      "moveId": 19082,
+      "category": 3,
+      "u3": 2,
+      "user": 0,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1000000014,
+    "coords": { "q": 3, "r": -6 },
+    "ability": {
+      "abilityId": 2100257003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 257,
+      "value": 3,
+      "u6": 99299959
+    },
+    "move": {
+      "name": "Heat Wave: Power ↑ +3",
+      "moveId": 257,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 109,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000015,
+    "coords": { "q": 1, "r": -5 },
+    "ability": {
+      "abilityId": 2100257003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 257,
+      "value": 3,
+      "u6": 99299959
+    },
+    "move": {
+      "name": "Heat Wave: Power ↑ +3",
+      "moveId": 257,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 109,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000016,
+    "coords": { "q": 2, "r": -6 },
+    "ability": {
+      "abilityId": 2100257003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 257,
+      "value": 3,
+      "u6": 99299959
+    },
+    "move": {
+      "name": "Heat Wave: Power ↑ +3",
+      "moveId": 257,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 109,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000017,
+    "coords": { "q": -1, "r": 2 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1000000018,
+    "coords": { "q": -2, "r": 3 },
+    "ability": {
+      "abilityId": 2100394006,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 394,
+      "value": 6,
+      "u6": 99299952
+    },
+    "move": {
+      "name": "Flare Blitz: Power ↑ +6",
+      "moveId": 394,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 123,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 2080,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1000000019,
+    "coords": { "q": -3, "r": 4 },
+    "ability": {
+      "abilityId": 2100394006,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 394,
+      "value": 6,
+      "u6": 99299952
+    },
+    "move": {
+      "name": "Flare Blitz: Power ↑ +6",
+      "moveId": 394,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 123,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 2080,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1000000020,
+    "coords": { "q": -1, "r": 3 },
+    "ability": {
+      "abilityId": 2100394006,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 394,
+      "value": 6,
+      "u6": 99299952
+    },
+    "move": {
+      "name": "Flare Blitz: Power ↑ +6",
+      "moveId": 394,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 123,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 2080,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1000000021,
+    "coords": { "q": -2, "r": 4 },
+    "ability": {
+      "abilityId": 1306020310000,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 10000,
+      "value": 0,
+      "u6": 98999929
+    },
+    "move": {
+      "name": "Move: My Destiny!\nMP Refresh 3",
+      "moveId": 10000,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1000000022,
+    "coords": { "q": -3, "r": 5 },
+    "ability": {
+      "abilityId": 1302040500000,
+      "type": 7,
+      "passiveId": 13020405,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099951
+    },
+    "move": {
+      "name": "Standfast 5",
+      "description": "Reduces recoil damage received from using moves that have recoil in the effect tag.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1000000023,
+    "coords": { "q": -1, "r": 4 },
+    "ability": {
+      "abilityId": 2100394006,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 394,
+      "value": 6,
+      "u6": 99299952
+    },
+    "move": {
+      "name": "Flare Blitz: Power ↑ +6",
+      "moveId": 394,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 123,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 2080,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1000000024,
+    "coords": { "q": -2, "r": 5 },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99899998
+    },
+    "move": { "name": "HP +20", "energyCost": 5, "orbCost": 60 }
+  },
+  {
+    "cellId": 1000000025,
+    "coords": { "q": -3, "r": 6 },
+    "ability": {
+      "abilityId": 1601060100000,
+      "type": 7,
+      "passiveId": 16010601,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099940
+    },
+    "move": {
+      "name": "Haymaker",
+      "description": "The more the user’s Attack has been raised, the more it powers up sync moves.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1000000026,
+    "coords": { "q": -1, "r": 5 },
+    "ability": {
+      "abilityId": 1302040500000,
+      "type": 7,
+      "passiveId": 13020405,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099951
+    },
+    "move": {
+      "name": "Standfast 5",
+      "description": "Reduces recoil damage received from using moves that have recoil in the effect tag.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1000000027,
+    "coords": { "q": -2, "r": 6 },
+    "ability": {
+      "abilityId": 1501030100000,
+      "type": 7,
+      "passiveId": 15010301,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099947
+    },
+    "move": {
+      "name": "Adrenaline 1",
+      "description": "Reduces the sync move countdown by one when a sync move is used for the first time.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1000000028,
+    "coords": { "q": 2, "r": -1 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": { "name": "Speed +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1000000029,
+    "coords": { "q": 3, "r": -1 },
+    "ability": {
+      "abilityId": 2100307004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 307,
+      "value": 4,
+      "u6": 99299958
+    },
+    "move": {
+      "name": "Blast Burn: Power ↑ +4",
+      "moveId": 307,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 4,
+      "power": 178,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000030,
+    "coords": { "q": 2, "r": 0 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": { "name": "Speed +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1000000031,
+    "coords": { "q": 1, "r": 1 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": { "name": "Speed +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1000000032,
+    "coords": { "q": 3, "r": 0 },
+    "ability": {
+      "abilityId": 2100307004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 307,
+      "value": 4,
+      "u6": 99299958
+    },
+    "move": {
+      "name": "Blast Burn: Power ↑ +4",
+      "moveId": 307,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 4,
+      "power": 178,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000033,
+    "coords": { "q": 2, "r": 1 },
+    "ability": {
+      "abilityId": 1301010200000,
+      "type": 7,
+      "passiveId": 13010102,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099985
+    },
+    "move": {
+      "name": "Power Reserves 2",
+      "description": "Powers up moves in a pinch.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1000000034,
+    "coords": { "q": 1, "r": 2 },
+    "ability": {
+      "abilityId": 2100307004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 307,
+      "value": 4,
+      "u6": 99299958
+    },
+    "move": {
+      "name": "Blast Burn: Power ↑ +4",
+      "moveId": 307,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 4,
+      "power": 178,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000035,
+    "coords": { "q": 3, "r": 1 },
+    "ability": {
+      "abilityId": 1202020600000,
+      "type": 7,
+      "passiveId": 12020206,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099990
+    },
+    "move": {
+      "name": "Rejuvenate 6",
+      "description": "Increases the user’s move gauge by six after using a sync move.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1000000036,
+    "coords": { "q": 2, "r": 2 },
+    "ability": {
+      "abilityId": 2100307004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 307,
+      "value": 4,
+      "u6": 99299958
+    },
+    "move": {
+      "name": "Blast Burn: Power ↑ +4",
+      "moveId": 307,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 4,
+      "power": 178,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000037,
+    "coords": { "q": -2, "r": 1 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1000000038,
+    "coords": { "q": -3, "r": 1 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "Defense +5", "energyCost": 3, "orbCost": 36 }
+  },
+  {
+    "cellId": 1000000039,
+    "coords": { "q": -2, "r": 0 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 3, "orbCost": 36 }
+  },
+  {
+    "cellId": 1000000040,
+    "coords": { "q": -1, "r": -1 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 3, "orbCost": 36 }
+  },
+  {
+    "cellId": 1000000041,
+    "coords": { "q": -3, "r": 0 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1000000042,
+    "coords": { "q": -2, "r": -1 },
+    "ability": {
+      "abilityId": 1808010410000,
+      "type": 8,
+      "passiveId": 18080104,
+      "moveId": 10000,
+      "value": 0,
+      "u6": 98999864
+    },
+    "move": {
+      "name": "Move: My Destiny!\nStat’s Quo 4",
+      "moveId": 10000,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good chance of returning the user’s lowered stats to normal when a move is successful.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1000000043,
+    "coords": { "q": -1, "r": -2 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1000000044,
+    "coords": { "q": -3, "r": -1 },
+    "ability": {
+      "abilityId": 1601040500000,
+      "type": 7,
+      "passiveId": 16010405,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099944
+    },
+    "move": {
+      "name": "Solar Flare 5",
+      "description": "Powers up sync moves when the weather is sunny.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1000000045,
+    "coords": { "q": -2, "r": -2 },
+    "ability": {
+      "abilityId": 1201020200000,
+      "type": 7,
+      "passiveId": 12010202,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099992
+    },
+    "move": {
+      "name": "Speeding Sun 2",
+      "description": "Quickly charges the move gauge when the weather is sunny.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1000000046,
+    "coords": { "q": 0, "r": -3 },
+    "ability": {
+      "abilityId": 2160900025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60900,
+      "value": 25,
+      "u6": 99299927
+    },
+    "move": {
+      "name": "Living Legend\nBlast Burn: Power ↑ +25",
+      "moveId": 60900,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1000000047,
+    "coords": { "q": 0, "r": 3 },
+    "ability": {
+      "abilityId": 2160900025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60900,
+      "value": 25,
+      "u6": 99299927
+    },
+    "move": {
+      "name": "Living Legend\nBlast Burn: Power ↑ +25",
+      "moveId": 60900,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 2,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  }
+]

@@ -1,0 +1,1237 @@
+[
+  {
+    "cellId": 1004800000,
+    "coords": {
+      "q": 1,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1004800001,
+    "coords": {
+      "q": 1,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1004800002,
+    "coords": {
+      "q": 0,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": {
+      "name": "Defense +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1004800003,
+    "coords": {
+      "q": -1,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1004800004,
+    "coords": {
+      "q": -1,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": {
+      "name": "Sp. Def +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1004800005,
+    "coords": {
+      "q": 0,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1004800006,
+    "coords": {
+      "q": 1,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800007,
+    "coords": {
+      "q": 2,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800008,
+    "coords": {
+      "q": 1,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800009,
+    "coords": {
+      "q": 3,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 2100399004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 399,
+      "value": 4,
+      "u6": 99299951
+    },
+    "move": {
+      "name": "Dark Pulse: Power ↑ +4",
+      "moveId": 399,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 95,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800010,
+    "coords": {
+      "q": 2,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800011,
+    "coords": {
+      "q": 1,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 2100400005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 400,
+      "value": 5,
+      "u6": 99299949
+    },
+    "move": {
+      "name": "Night Slash: Power ↑ +5",
+      "moveId": 400,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 40,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800012,
+    "coords": {
+      "q": 3,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 2100399004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 399,
+      "value": 4,
+      "u6": 99299951
+    },
+    "move": {
+      "name": "Dark Pulse: Power ↑ +4",
+      "moveId": 399,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 95,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800013,
+    "coords": {
+      "q": 2,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 1306020310480,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 10480,
+      "value": 0,
+      "u6": 98999922
+    },
+    "move": {
+      "name": "Move: All or Nothing!\nMP Refresh 3",
+      "moveId": 10480,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1004800014,
+    "coords": {
+      "q": 1,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 2100400005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 400,
+      "value": 5,
+      "u6": 99299949
+    },
+    "move": {
+      "name": "Night Slash: Power ↑ +5",
+      "moveId": 400,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 40,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800015,
+    "coords": {
+      "q": 3,
+      "r": -6
+    },
+    "ability": {
+      "abilityId": 2100399004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 399,
+      "value": 4,
+      "u6": 99299951
+    },
+    "move": {
+      "name": "Dark Pulse: Power ↑ +4",
+      "moveId": 399,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 95,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800016,
+    "coords": {
+      "q": 2,
+      "r": -6
+    },
+    "ability": {
+      "abilityId": 2100400005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 400,
+      "value": 5,
+      "u6": 99299949
+    },
+    "move": {
+      "name": "Night Slash: Power ↑ +5",
+      "moveId": 400,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 40,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800017,
+    "coords": {
+      "q": -2,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 2100399004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 399,
+      "value": 4,
+      "u6": 99299951
+    },
+    "move": {
+      "name": "Dark Pulse: Power ↑ +4",
+      "moveId": 399,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 95,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800018,
+    "coords": {
+      "q": -3,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800019,
+    "coords": {
+      "q": -2,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800020,
+    "coords": {
+      "q": -3,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1306020200289,
+      "type": 8,
+      "passiveId": 13060202,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999938
+    },
+    "move": {
+      "name": "Move: Snatch\nMP Refresh 2",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Occasionally restores one MP of the move used if the move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800021,
+    "coords": {
+      "q": -1,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1202010300400,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 400,
+      "value": 0,
+      "u6": 98999966
+    },
+    "move": {
+      "name": "Move: Night Slash\nMove Gauge Refresh 3",
+      "moveId": 400,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 40,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1004800022,
+    "coords": {
+      "q": -2,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1200000010,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99799998
+    },
+    "move": {
+      "name": "Attack +10",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800023,
+    "coords": {
+      "q": -3,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1101040400289,
+      "type": 8,
+      "passiveId": 11010404,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999994
+    },
+    "move": {
+      "name": "Move: Snatch\nCatalytic Cure 4",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good chance of restoring the user’s HP when a move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1004800024,
+    "coords": {
+      "q": -1,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1202010400289,
+      "type": 8,
+      "passiveId": 12020104,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999950
+    },
+    "move": {
+      "name": "Move: Snatch\nMove Gauge Refresh 4",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800025,
+    "coords": {
+      "q": -2,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1101040400289,
+      "type": 8,
+      "passiveId": 11010404,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999994
+    },
+    "move": {
+      "name": "Move: Snatch\nCatalytic Cure 4",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good chance of restoring the user’s HP when a move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1004800026,
+    "coords": {
+      "q": 2,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 2100400005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 400,
+      "value": 5,
+      "u6": 99299949
+    },
+    "move": {
+      "name": "Night Slash: Power ↑ +5",
+      "moveId": 400,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 40,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800027,
+    "coords": {
+      "q": 3,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1804250500000,
+      "type": 7,
+      "passiveId": 18042505,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099902
+    },
+    "move": {
+      "name": "Bounce Back 5",
+      "description": "Has a very good chance of raising the user’s Attack if any of the user’s stats have been lowered.",
+      "energyCost": 9,
+      "orbCost": 108
+    }
+  },
+  {
+    "cellId": 1004800028,
+    "coords": {
+      "q": 2,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": {
+      "name": "Sp. Def +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800029,
+    "coords": {
+      "q": 1,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1202010300399,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 399,
+      "value": 0,
+      "u6": 98999967
+    },
+    "move": {
+      "name": "Move: Dark Pulse\nMove Gauge Refresh 3",
+      "moveId": 399,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 95,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1004800030,
+    "coords": {
+      "q": 3,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": {
+      "name": "Sp. Def +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800031,
+    "coords": {
+      "q": 2,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": {
+      "name": "Defense +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800032,
+    "coords": {
+      "q": 1,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1804100500000,
+      "type": 7,
+      "passiveId": 18041005,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099912
+    },
+    "move": {
+      "name": "Indomitable 5",
+      "description": "Has a very good chance of raising the user’s Sp. Atk if any of the user’s stats have been lowered.",
+      "energyCost": 9,
+      "orbCost": 108
+    }
+  },
+  {
+    "cellId": 1004800033,
+    "coords": {
+      "q": 3,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1804260600000,
+      "type": 7,
+      "passiveId": 18042606,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099900
+    },
+    "move": {
+      "name": "On the Run 6",
+      "description": "Once per battle, radically raises the user’s evasiveness in a pinch.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1004800034,
+    "coords": {
+      "q": 2,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1202010400289,
+      "type": 8,
+      "passiveId": 12020104,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999950
+    },
+    "move": {
+      "name": "Move: Snatch\nMove Gauge Refresh 4",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800035,
+    "coords": {
+      "q": -1,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800036,
+    "coords": {
+      "q": -2,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800037,
+    "coords": {
+      "q": -1,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800038,
+    "coords": {
+      "q": -3,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99799999
+    },
+    "move": {
+      "name": "Attack +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800039,
+    "coords": {
+      "q": -2,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1101030200000,
+      "type": 7,
+      "passiveId": 11010302,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099997
+    },
+    "move": {
+      "name": "Ridicure 2",
+      "description": "Occasionally restores the user’s HP when an opponent’s attack move targeting the user misses.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1004800040,
+    "coords": {
+      "q": -3,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99699998
+    },
+    "move": {
+      "name": "Defense +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1004800041,
+    "coords": {
+      "q": -1,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1004800042,
+    "coords": {
+      "q": -2,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1306020200289,
+      "type": 8,
+      "passiveId": 13060202,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999938
+    },
+    "move": {
+      "name": "Move: Snatch\nMP Refresh 2",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Occasionally restores one MP of the move used if the move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800043,
+    "coords": {
+      "q": -3,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1501060400289,
+      "type": 8,
+      "passiveId": 15010604,
+      "moveId": 289,
+      "value": 0,
+      "u6": 98999895
+    },
+    "move": {
+      "name": "Move: Snatch\nPropulsion 4",
+      "moveId": 289,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a good of reducing the user’s sync move countdown by one when the user’s move is successful.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1004800044,
+    "coords": {
+      "q": -1,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 1200000010,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99799998
+    },
+    "move": {
+      "name": "Attack +10",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800045,
+    "coords": {
+      "q": -2,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 1804270200000,
+      "type": 7,
+      "passiveId": 18042702,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099899
+    },
+    "move": {
+      "name": "Supercharger 2",
+      "description": "Occasionally raises the user’s Attack and/or Sp. Atk when a move targeting an opponent is successful.",
+      "energyCost": 9,
+      "orbCost": 108
+    }
+  },
+  {
+    "cellId": 1004800046,
+    "coords": {
+      "q": 0,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 2173600025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 73600,
+      "value": 25,
+      "u6": 99299917
+    },
+    "move": {
+      "name": "Card Shark\nNight Slash: Power ↑ +25",
+      "moveId": 73600,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1004800047,
+    "coords": {
+      "q": 0,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 2173600025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 73600,
+      "value": 25,
+      "u6": 99299917
+    },
+    "move": {
+      "name": "Card Shark\nNight Slash: Power ↑ +25",
+      "moveId": 73600,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 16,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  }
+]

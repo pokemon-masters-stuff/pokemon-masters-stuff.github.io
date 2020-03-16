@@ -1,0 +1,1205 @@
+[
+  {
+    "cellId": 1003200000,
+    "coords": {
+      "q": 1,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1003200001,
+    "coords": {
+      "q": 1,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1003200002,
+    "coords": {
+      "q": 0,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": {
+      "name": "Defense +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1003200003,
+    "coords": {
+      "q": -1,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1003200004,
+    "coords": {
+      "q": -1,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": {
+      "name": "Sp. Def +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1003200005,
+    "coords": {
+      "q": 0,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 0,
+      "orbCost": 5
+    }
+  },
+  {
+    "cellId": 1003200006,
+    "coords": {
+      "q": 1,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1003200007,
+    "coords": {
+      "q": 2,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": {
+      "name": "Sp. Atk +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1003200008,
+    "coords": {
+      "q": 3,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 2100058004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 58,
+      "value": 4,
+      "u6": 99299992
+    },
+    "move": {
+      "name": "Ice Beam: Power ↑ +4",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200009,
+    "coords": {
+      "q": 1,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 2100058004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 58,
+      "value": 4,
+      "u6": 99299992
+    },
+    "move": {
+      "name": "Ice Beam: Power ↑ +4",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200010,
+    "coords": {
+      "q": 2,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": {
+      "name": "Sp. Atk +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1003200011,
+    "coords": {
+      "q": 3,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 2100058004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 58,
+      "value": 4,
+      "u6": 99299992
+    },
+    "move": {
+      "name": "Ice Beam: Power ↑ +4",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200012,
+    "coords": {
+      "q": 1,
+      "r": -4
+    },
+    "ability": {
+      "abilityId": 2100058004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 58,
+      "value": 4,
+      "u6": 99299992
+    },
+    "move": {
+      "name": "Ice Beam: Power ↑ +4",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200013,
+    "coords": {
+      "q": 2,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 1202010300058,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 58,
+      "value": 0,
+      "u6": 98999983
+    },
+    "move": {
+      "name": "Move: Ice Beam\nMove Gauge Refresh 3",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1003200014,
+    "coords": {
+      "q": 3,
+      "r": -6
+    },
+    "ability": {
+      "abilityId": 2100058004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 58,
+      "value": 4,
+      "u6": 99299992
+    },
+    "move": {
+      "name": "Ice Beam: Power ↑ +4",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1003200015,
+    "coords": {
+      "q": 1,
+      "r": -5
+    },
+    "ability": {
+      "abilityId": 2100058004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 58,
+      "value": 4,
+      "u6": 99299992
+    },
+    "move": {
+      "name": "Ice Beam: Power ↑ +4",
+      "moveId": 58,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200016,
+    "coords": {
+      "q": 2,
+      "r": -6
+    },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": {
+      "name": "Sp. Atk +10",
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200017,
+    "coords": {
+      "q": -1,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1003200018,
+    "coords": {
+      "q": -2,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": {
+      "name": "Sp. Def +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1003200019,
+    "coords": {
+      "q": -3,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1704030100000,
+      "type": 7,
+      "passiveId": 17040301,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099930
+    },
+    "move": {
+      "name": "Healing Hail 1",
+      "description": "Restores the Pokémon’s HP whenever it takes an action during a hailstorm.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1003200020,
+    "coords": {
+      "q": -1,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 1701050100000,
+      "type": 7,
+      "passiveId": 17010501,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099935
+    },
+    "move": {
+      "name": "Snow Shelter",
+      "description": "Protects the Pokémon from damage from a hailstorm.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1003200021,
+    "coords": {
+      "q": -2,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1600000020,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99399997
+    },
+    "move": {
+      "name": "Speed +20",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200022,
+    "coords": {
+      "q": -3,
+      "r": 5
+    },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99899998
+    },
+    "move": {
+      "name": "HP +20",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200023,
+    "coords": {
+      "q": -1,
+      "r": 4
+    },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99699998
+    },
+    "move": {
+      "name": "Defense +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1003200024,
+    "coords": {
+      "q": -2,
+      "r": 5
+    },
+    "ability": {
+      "abilityId": 1306020310320,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 10320,
+      "value": 0,
+      "u6": 98999925
+    },
+    "move": {
+      "name": "Move: I’ll Teach\nYou a Lesson!\nMP Refresh 3",
+      "moveId": 10320,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1003200025,
+    "coords": {
+      "q": -3,
+      "r": 6
+    },
+    "ability": {
+      "abilityId": 1301140300000,
+      "type": 7,
+      "passiveId": 13011403,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099971
+    },
+    "move": {
+      "name": "Invigorating Hail 3",
+      "description": "Powers up moves in a hailstorm.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1003200026,
+    "coords": {
+      "q": -1,
+      "r": 5
+    },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99899998
+    },
+    "move": {
+      "name": "HP +20",
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200027,
+    "coords": {
+      "q": -2,
+      "r": 6
+    },
+    "ability": {
+      "abilityId": 1301140300000,
+      "type": 7,
+      "passiveId": 13011403,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099971
+    },
+    "move": {
+      "name": "Invigorating Hail 3",
+      "description": "Powers up moves in a hailstorm.",
+      "energyCost": 8,
+      "orbCost": 96,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200028,
+    "coords": {
+      "q": 2,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200029,
+    "coords": {
+      "q": 3,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 2100196005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 196,
+      "value": 5,
+      "u6": 99299967
+    },
+    "move": {
+      "name": "Icy Wind: Power ↑ +5",
+      "moveId": 196,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 92,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200030,
+    "coords": {
+      "q": 2,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": {
+      "name": "HP +10",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200031,
+    "coords": {
+      "q": 1,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": {
+      "name": "Speed +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200032,
+    "coords": {
+      "q": 3,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 2100196005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 196,
+      "value": 5,
+      "u6": 99299967
+    },
+    "move": {
+      "name": "Icy Wind: Power ↑ +5",
+      "moveId": 196,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 92,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200033,
+    "coords": {
+      "q": 2,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 2100196005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 196,
+      "value": 5,
+      "u6": 99299967
+    },
+    "move": {
+      "name": "Icy Wind: Power ↑ +5",
+      "moveId": 196,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 92,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200034,
+    "coords": {
+      "q": 1,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 2100196005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 196,
+      "value": 5,
+      "u6": 99299967
+    },
+    "move": {
+      "name": "Icy Wind: Power ↑ +5",
+      "moveId": 196,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 92,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200035,
+    "coords": {
+      "q": 3,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 2200196005,
+      "type": 10,
+      "passiveId": 0,
+      "moveId": 196,
+      "value": 5,
+      "u6": 99199994
+    },
+    "move": {
+      "name": "Icy Wind: Accuracy ↑ +5",
+      "moveId": 196,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 92,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 10,
+      "orbCost": 120,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200036,
+    "coords": {
+      "q": 2,
+      "r": 2
+    },
+    "ability": {
+      "abilityId": 1202010400196,
+      "type": 8,
+      "passiveId": 12020104,
+      "moveId": 196,
+      "value": 0,
+      "u6": 98999953
+    },
+    "move": {
+      "name": "Move: Icy Wind\nMove Gauge Refresh 4",
+      "moveId": 196,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 6,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 92,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 8,
+      "orbCost": 96,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200037,
+    "coords": {
+      "q": -2,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 2201010100000,
+      "type": 7,
+      "passiveId": 22010101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099890
+    },
+    "move": {
+      "name": "Hostile Environment 1",
+      "description": "Raises the chance of inflicting status conditions with the additional effects of moves.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1003200038,
+    "coords": {
+      "q": -3,
+      "r": 1
+    },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": {
+      "name": "Sp. Atk +5",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1003200039,
+    "coords": {
+      "q": -2,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1306020319080,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 19080,
+      "value": 0,
+      "u6": 98999905
+    },
+    "move": {
+      "name": "Move: Dire Hit\nMP Refresh 3",
+      "moveId": 19080,
+      "category": 3,
+      "u3": 2,
+      "user": 0,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1003200040,
+    "coords": {
+      "q": -1,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 2201010100000,
+      "type": 7,
+      "passiveId": 22010101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099890
+    },
+    "move": {
+      "name": "Hostile Environment 1",
+      "description": "Raises the chance of inflicting status conditions with the additional effects of moves.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1003200041,
+    "coords": {
+      "q": -3,
+      "r": 0
+    },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99699998
+    },
+    "move": {
+      "name": "Defense +10",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200042,
+    "coords": {
+      "q": -2,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": {
+      "name": "Sp. Def +10",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1003200043,
+    "coords": {
+      "q": -1,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": {
+      "name": "Speed +10",
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1003200044,
+    "coords": {
+      "q": -3,
+      "r": -1
+    },
+    "ability": {
+      "abilityId": 1301150800000,
+      "type": 7,
+      "passiveId": 13011508,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099969
+    },
+    "move": {
+      "name": "Freeze Synergy 8",
+      "description": "Powers up moves when the target is frozen.",
+      "energyCost": 10,
+      "orbCost": 120,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200045,
+    "coords": {
+      "q": -2,
+      "r": -2
+    },
+    "ability": {
+      "abilityId": 1301150800000,
+      "type": 7,
+      "passiveId": 13011508,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099969
+    },
+    "move": {
+      "name": "Freeze Synergy 8",
+      "description": "Powers up moves when the target is frozen.",
+      "energyCost": 10,
+      "orbCost": 120,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200046,
+    "coords": {
+      "q": 0,
+      "r": -3
+    },
+    "ability": {
+      "abilityId": 2172400025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 72400,
+      "value": 25,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Winter’s Lesson\nAurora Beam: Power ↑ +25",
+      "moveId": 72400,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  },
+  {
+    "cellId": 1003200047,
+    "coords": {
+      "q": 0,
+      "r": 3
+    },
+    "ability": {
+      "abilityId": 2172400025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 72400,
+      "value": 25,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Winter’s Lesson\nAurora Beam: Power ↑ +25",
+      "moveId": 72400,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 6,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60,
+      "locked": true
+    }
+  }
+]
