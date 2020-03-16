@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { editBuild } from '../../actions/actionCreators';
+import { editBuild } from '../../../actions/actionCreators';
 
 const EditBuildModal = ({ index, description }) => {
   const dispatch = useDispatch();

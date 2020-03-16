@@ -9,11 +9,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TabPanel from '../TabPanel';
-import PopularBuilds from './PopularBuilds';
-import LikedBuilds from './LikedBuilds';
-import UsersBuilds from './UsersBuilds';
-import ScrollButton from '../ScrollButton';
+import TabPanel from '../common/TabPanel';
+import PopularBuilds from '../common/PopularBuilds';
+import LikedBuilds from '../common/LikedBuilds';
+import UsersBuilds from '../common/UsersBuilds';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -61,7 +60,7 @@ const Builds = () => {
             <Tab label="My Published Builds" />
           </Tabs>
         </Paper>
-        <Paper width={1} className={classes.root}>
+        <Paper width={1} className={classes.root} style={{ marginBottom: 20 }}>
           <Typography
             style={{
               borderLeft: '15px solid transparent',
@@ -101,16 +100,15 @@ const Builds = () => {
           </FormControl>
         </Paper>
         <TabPanel index={0} value={value}>
-          <PopularBuilds />
+          <PopularBuilds screenSize={'large'} />
         </TabPanel>
         <TabPanel index={1} value={value}>
-          <LikedBuilds />
+          <LikedBuilds screenSize={'large'} />
         </TabPanel>
         <TabPanel index={2} value={value}>
-          <UsersBuilds />
+          <UsersBuilds screenSize={'large'} />
         </TabPanel>
       </div>
-      <ScrollButton scrollStepInPx="150" delayInMs="10" />
     </div>
   );
 };

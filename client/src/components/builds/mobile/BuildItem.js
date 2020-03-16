@@ -12,8 +12,8 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-import ShareBuildModal from '../ShareBuildModal';
-import EditBuildModal from '../EditBuildModal';
+import ShareBuildModal from '../common/ShareBuildModal';
+import EditBuildModal from '../common/EditBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -135,15 +135,6 @@ class BuildItem extends Component {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
   }
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return (
-  //     this.state.initialRender ||
-  //     this.props.build.likes !== nextProps.build.likes ||
-  //     this.props.build.description !== nextProps.build.description ||
-  //     this.props.darkMode !== nextProps.darkMode
-  //   );
-  // }
 
   componentDidUpdate() {
     ReactTooltip.rebuild();

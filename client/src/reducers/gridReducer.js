@@ -14,7 +14,6 @@ import {
   LOAD_GRID_FROM_URL,
   UPDATE_URL,
   GET_BUILDS,
-  // GET_MORE_BUILDS,
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
   ADD_BUILD,
@@ -181,7 +180,6 @@ export default function(state = initialState, action) {
 
     // builds from database
     case GET_BUILDS:
-    // case GET_MORE_BUILDS:
     case GET_LIKED_BUILDS:
     case GET_USERS_BUILDS:
       return {

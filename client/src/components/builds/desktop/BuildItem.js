@@ -12,8 +12,8 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-import ShareBuildModal from '../ShareBuildModal';
-import EditBuildModal from '../EditBuildModal';
+import ShareBuildModal from '../common/ShareBuildModal';
+import EditBuildModal from '../common/EditBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import styles from './styles';
@@ -301,7 +301,6 @@ class BuildItem extends Component {
       <IconButton
         value={build}
         onClick={this.handleClick.bind(this, build)}
-        // edge="start"
         style={{ marginLeft: 1 }}
       >
         <EditIcon />

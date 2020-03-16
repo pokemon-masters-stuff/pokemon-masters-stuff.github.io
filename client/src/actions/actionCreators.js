@@ -24,7 +24,6 @@ import {
   LOGIN_SUCCESS,
   LOGOUT,
   GET_BUILDS,
-  // GET_MORE_BUILDS,
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
   UPDATE_LIKES,
@@ -219,27 +218,6 @@ export const getBuilds = (filter, sort, skip, limit) => async dispatch => {
     });
   }
 };
-
-// // Get More Builds
-// export const getMoreBuilds = (filter, sort, skip, limit) => async dispatch => {
-//   try {
-//     const res = await axios.get(
-//       `/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
-//         filter !== 'None' ? '&filter=' + filter : ''
-//       }`
-//     );
-
-//     dispatch({
-//       type: GET_MORE_BUILDS,
-//       payload: res.data
-//     });
-//   } catch (error) {
-//     dispatch({
-//       type: BUILD_ERROR,
-//       payload: { msg: error.response.statusText, status: error.response.status }
-//     });
-//   }
-// };
 
 // Get Liked Builds
 export const getLikedBuilds = (filter, sort, skip, limit) => async dispatch => {
