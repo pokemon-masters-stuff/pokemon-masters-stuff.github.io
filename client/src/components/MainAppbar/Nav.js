@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -27,7 +28,9 @@ const Nav = props => {
         <MenuIcon />
       </IconButton>
       <Typography variant="h6" className={classes.title}>
-        Sync Grid Helper
+        <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit' }}>
+          Sync Grid Helper
+        </Link>
       </Typography>
       <AnnouncementModalMobile handleClick={onAnnouncementClickHandler} />
       <DarkModeToggleMobile />

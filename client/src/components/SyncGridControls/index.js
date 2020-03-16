@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -9,6 +10,7 @@ import { ResetGridButtonMobile } from '../ResetGridButton';
 import { SaveBuildButtonMobile } from '../SaveBuildButton';
 import { ShareButtonMobile } from '../ShareButton';
 import { PublishBuildButtonMobile } from '../PublishBuildButton';
+import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 import LoadBuildDropdown from '../LoadBuildDropdown';
 import styles from './styles';
 
@@ -23,6 +25,8 @@ function SyncGridControls(props) {
     onSaveBuildClickHandler,
     onShareClickHandler
   } = props;
+
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
   const handleOnOpenSkillList = () =>
     typeof onOpenSkillListHandler === 'function'
@@ -112,15 +116,26 @@ function SyncGridControls(props) {
       </Grid>
 
       <Grid item>
-        <Button
-          variant="outlined"
-          onClick={handleOnOpenSkillList}
-          style={{ marginTop: 10 }}
-        >
-          <Link to="/builds" style={{ color: 'white' }}>
+        {isAuthenticated ? (
+          <Button variant="outlined" style={{ marginTop: 10 }}>
+            <Link
+              to="/builds"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              Popular Builds
+            </Link>
+          </Button>
+        ) : (
+          <Button
+            variant="outlined"
+            style={{ marginTop: 10 }}
+            data-toggle="modal"
+            data-target="#loginOrRegisterModal"
+          >
             Popular Builds
-          </Link>
-        </Button>
+          </Button>
+        )}
+        <LoginOrRegisterModal />
       </Grid>
     </Grid>
   );

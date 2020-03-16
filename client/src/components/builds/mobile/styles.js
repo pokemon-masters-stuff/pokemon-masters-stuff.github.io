@@ -17,16 +17,17 @@ export default createStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    lineHeight: 4,
-    paddingLeft: 20
+    paddingLeft: 10,
+    backgroundColor: '#586e75',
+    minHeight: 60
   },
   buildNameDark: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    lineHeight: 4,
-    paddingLeft: 20,
-    backgroundColor: '#586e75'
+    paddingLeft: 10,
+    backgroundColor: '#586e75',
+    minHeight: 60
   },
   formControl: {
     margin: theme.spacing(1),

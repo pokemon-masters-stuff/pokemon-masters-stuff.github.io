@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addBuild } from '../../actions/actionCreators';
 import Alert from '../Alert';
 import './desktop.css';
-import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 import Button from '@material-ui/core/Button';
 
 const PublishBuildButton = () => {
@@ -39,7 +38,6 @@ const PublishBuildButton = () => {
       >
         Publish This Build
       </Button>
-      <LoginOrRegisterModal />
       <div
         className="modal fade"
         id="publishBuildModal"

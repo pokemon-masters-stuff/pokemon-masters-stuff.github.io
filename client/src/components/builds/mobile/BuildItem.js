@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Box from '@material-ui/core/Box';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -17,6 +16,10 @@ import ShareBuildModal from '../ShareBuildModal';
 import EditBuildModal from '../EditBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import styles from './styles';
 import {
   getFillColorByMoveType,
@@ -122,7 +125,7 @@ class BuildItem extends Component {
         viewbox: '-35 -35 70 70'
       },
       screenWidth: document.body.clientWidth,
-      mouseEntered: false
+      pressed: false
     };
     this.handleClickLike = this.handleClickLike.bind(this);
     this.handleClickDelete = this.handleClickDelete.bind(this);
@@ -137,7 +140,7 @@ class BuildItem extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.state.initialRender ||
-      this.state.mouseEntered !== nextState.mouseEntered ||
+      this.state.pressed !== nextState.pressed ||
       this.props.build.likes !== nextProps.build.likes ||
       this.props.build.description !== nextProps.build.description ||
       this.props.darkMode !== nextProps.darkMode
@@ -153,6 +156,14 @@ class BuildItem extends Component {
     window.removeEventListener('resize', this.fitMapToScreen);
   }
 
+  mouseDown = () => {
+    this.setState({ pressed: true });
+  };
+
+  mouseUp = () => {
+    this.setState({ pressed: false });
+  };
+
   fitMapToScreen = () => {
     const clientWrappingBoundaries = {
       width: document.body.clientWidth,
@@ -161,25 +172,6 @@ class BuildItem extends Component {
     let updatedMapSizeBoundaries = {
       ...this.state.mapSizeBoundaries
     };
-
-    if (clientWrappingBoundaries.width > 1200) {
-      updatedMapSizeBoundaries = {
-        width: 800,
-        height: 768,
-        viewbox: '-50 -50 100 100'
-      };
-    }
-
-    if (
-      clientWrappingBoundaries.width > 960 &&
-      clientWrappingBoundaries.width < 1200
-    ) {
-      updatedMapSizeBoundaries = {
-        width: 800,
-        height: 768,
-        viewbox: '-50 -50 100 100'
-      };
-    }
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
@@ -212,14 +204,6 @@ class BuildItem extends Component {
     }
   };
 
-  mouseEnter = () => {
-    this.setState({ mouseEntered: true });
-  };
-
-  mouseLeave = () => {
-    this.setState({ mouseEntered: false });
-  };
-
   handleClickLike = (build, buildLiked, e) => {
     buildLiked
       ? this.props.removeLike(build._id)
@@ -248,8 +232,6 @@ class BuildItem extends Component {
           description: cell.move.description,
           energy: cell.move.energyCost
         },
-        onMouseEnter: this.mouseEnter,
-        onMouseLeave: this.mouseLeave,
         key: cell.cellId,
         q: cell.coords.q,
         r: cell.coords.r,
@@ -302,7 +284,6 @@ class BuildItem extends Component {
       <IconButton
         value={build}
         onClick={this.handleClick.bind(this, build)}
-        // edge="start"
         style={{ marginLeft: 1 }}
       >
         <EditIcon />
@@ -320,63 +301,57 @@ class BuildItem extends Component {
       <Fragment>
         {currentUser._id === build.user ? (
           <Fragment>
-            <div className="col-sm-4">
-              <IconButton
-                value={build}
-                data-toggle="modal"
-                data-target={`#editLinkModal${build._id}`}
-              >
-                <EditIcon />
-              </IconButton>
-              <EditBuildModal
-                index={build._id}
-                description={build.description}
-              />
-              <IconButton
-                value={build}
-                onClick={this.handleClickDelete.bind(this, build)}
-              >
-                <DeleteIcon />
-              </IconButton>
+            <IconButton
+              value={build}
+              data-toggle="modal"
+              data-target={`#editLinkModal${build._id}`}
+            >
+              <EditIcon />
+            </IconButton>
+            <EditBuildModal index={build._id} description={build.description} />
+            <IconButton
+              value={build}
+              onClick={this.handleClickDelete.bind(this, build)}
+            >
+              <DeleteIcon />
+            </IconButton>
 
-              <Button
-                variant="outlined"
-                data-toggle="modal"
-                data-target={`#shareLinkModal${build._id}`}
-              >
-                Share
-              </Button>
-              <ShareBuildModal index={build._id} url={build.url} />
+            <Button
+              variant="outlined"
+              data-toggle="modal"
+              data-target={`#shareLinkModal${build._id}`}
+            >
+              Share
+            </Button>
+            <ShareBuildModal index={build._id} url={build.url} />
 
-              <IconButton
-                value={build}
-                onClick={this.handleClickLike.bind(this, build, buildLiked)}
-              >
-                {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-              </IconButton>
-              {build.likes.length}
-            </div>
+            <IconButton
+              value={build}
+              onClick={this.handleClickLike.bind(this, build, buildLiked)}
+            >
+              {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+            </IconButton>
+            <span style={{ marginLeft: -6 }}>{build.likes.length}</span>
           </Fragment>
         ) : (
           <Fragment>
-            <div className="col-sm-3 offset-sm-1">
-              <Button
-                variant="outlined"
-                data-toggle="modal"
-                data-target={`#shareLinkModal${build._id}`}
-              >
-                Share
-              </Button>
-              <ShareBuildModal index={build._id} url={build.url} />
+            <Button
+              variant="outlined"
+              data-toggle="modal"
+              data-target={`#shareLinkModal${build._id}`}
+              style={{ marginLeft: 10 }}
+            >
+              Share
+            </Button>
+            <ShareBuildModal index={build._id} url={build.url} />
 
-              <IconButton
-                value={build}
-                onClick={this.handleClickLike.bind(this, build, buildLiked)}
-              >
-                {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-              </IconButton>
-              {build.likes.length}
-            </div>
+            <IconButton
+              value={build}
+              onClick={this.handleClickLike.bind(this, build, buildLiked)}
+            >
+              {buildLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+            </IconButton>
+            <span style={{ marginLeft: -6 }}>{build.likes.length}</span>
           </Fragment>
         )}
       </Fragment>
@@ -384,6 +359,7 @@ class BuildItem extends Component {
   };
 
   render() {
+    console.log('renders');
     const currentUser = this.props.auth.user || '';
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build, darkMode } = this.props;
@@ -399,129 +375,116 @@ class BuildItem extends Component {
           darkMode ? classes.buildContainerDark : classes.buildContainer
         }
       >
-        <Paper
-          elevation={3}
-          className={darkMode ? classes.buildNameDark : classes.buildName}
-        >
-          <div className="row">
-            <div className="col-sm-8">
-              <span
-                style={{
-                  fontWeight: 'bold',
-                  color: '#bdbdbd'
-                }}
-              >
-                Build Name:{' '}
-              </span>
-              <span>
-                {build.buildName}
-                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                  {' '}
-                  by{' '}
-                </span>
-                {build.username}
-              </span>
-            </div>
+        <Paper className={darkMode ? classes.buildNameDark : classes.buildName}>
+          <div className="pl-1 pr-1">
+            <span
+              style={{
+                fontWeight: 'bold',
+                color: '#bdbdbd'
+              }}
+            >
+              Name:{' '}
+            </span>
+            <span style={{ color: 'white' }}>{build.buildName}</span>
+            <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}> by </span>
+            <span style={{ color: 'white' }}>{build.username}</span>
+          </div>
+        </Paper>
+        <Divider light />
+        <Paper>
+          <div className="pl-1 pr-1">
             {this.renderIcons(build, currentUser)}
           </div>
         </Paper>
-        <Divider />
+        <Divider light />
         <Paper
-          style={!darkMode ? { backgroundColor: fade('#fafafa', 0.4) } : null}
+          style={
+            !darkMode
+              ? { backgroundColor: fade('#fafafa', 0.6) }
+              : { backgroundColor: 'black' }
+          }
         >
-          <div className="row">
-            <div
-              className="col-sm mt-2"
-              style={{
-                display: 'flex',
-                flexFlow: 'row wrap',
-                alignItems: 'center',
-                marginLeft: -120
-              }}
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
             >
-              <HexGrid
-                width={mapSizeBoundaries.width}
-                height={mapSizeBoundaries.height}
-                viewBox={mapSizeBoundaries.viewbox}
-              >
-                <Layout
-                  size={{ x: 4.5, y: 4.5 }}
-                  flat={true}
-                  spacing={1.1}
-                  origin={{ x: 0, y: 0 }}
-                >
-                  <Hexagon
-                    q={0}
-                    r={0}
-                    s={0}
-                    fill={`url(#${pokemon})`}
-                    data={{ cellId: 0 }}
-                    className={'center-grid'}
-                  >
-                    {this.renderCenterGridText(classes, pokemon)}
-                  </Hexagon>
-                  {this.renderHexagonCells(classes, pokemon, build)}
-                </Layout>
-                <Pattern
-                  id={pokemon}
-                  link={allThumbnails[`${pokemon}`]}
-                  size={{ x: 10, y: 10 }}
-                />
-              </HexGrid>
-              {this.state.screenWidth >= 960 &&
-              this.props.grid.gridData.energy !== undefined ? (
-                <ReactTooltip
-                  className="tooltip"
-                  effect="solid"
-                  id="skillTooltip"
-                >
-                  <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
-                    <li>{this.props.grid.gridData.name}</li>
-                    <li>Energy: {this.props.grid.gridData.energy}</li>
-                    {this.props.grid.gridData.description ? (
-                      <li style={{ marginTop: 1 }}>
-                        {this.props.grid.gridData.description}
-                      </li>
-                    ) : null}
-                  </ul>
-                </ReactTooltip>
-              ) : null}
-            </div>
-            <div
-              className="col-sm"
-              style={{
-                paddingLeft: 0,
-                display: 'flex',
-                flexFlow: 'row wrap',
-                alignItems: 'center',
-                marginLeft: -110
-              }}
-            >
-              <div>
-                <p>
-                  <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                    Remaining Energy:{' '}
-                  </span>
-                  <span style={{ fontWeight: 'bold' }}>
-                    {build.remainingEnergy}
-                  </span>
-                </p>
-                <p>
-                  <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                    Orbs Spent:{' '}
-                  </span>
-                  <span style={{ fontWeight: 'bold' }}>{build.orbSpent}</span>
-                </p>
-                <Typography style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                  Description:
-                </Typography>
-                <p>{build.description || 'None'}</p>
+              <Typography className={classes.heading}>
+                Description and Details
+              </Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography>
+                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                  Remaining Energy:{' '}
+                </span>
+                <span>{build.remainingEnergy}</span>
+                <br />
+                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                  Orbs Spent:{' '}
+                </span>
+                <span>{build.orbSpent}</span>
+                <br />
+                <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
+                  Description:{' '}
+                </span>
+                {build.description || 'None'}
+                <br />
                 <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                   Date:{' '}
                 </span>
                 <span>{build.date.substring(0, 10)}</span>
-              </div>
-            </div>
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <div className="mt-3 pb-3">
+            <HexGrid
+              width={mapSizeBoundaries.width}
+              height={mapSizeBoundaries.height}
+              viewBox={mapSizeBoundaries.viewbox}
+            >
+              <Layout
+                size={{ x: 4.5, y: 4.5 }}
+                flat={true}
+                spacing={1.1}
+                origin={{ x: 0, y: 0 }}
+              >
+                <Hexagon
+                  q={0}
+                  r={0}
+                  s={0}
+                  fill={`url(#${pokemon})`}
+                  data={{ cellId: 0 }}
+                  className={'center-grid'}
+                >
+                  {this.renderCenterGridText(classes, pokemon)}
+                </Hexagon>
+                {this.renderHexagonCells(classes, pokemon, build)}
+              </Layout>
+              <Pattern
+                id={pokemon}
+                link={allThumbnails[`${pokemon}`]}
+                size={{ x: 10, y: 10 }}
+              />
+            </HexGrid>
+            {this.props.grid.gridData.energy !== undefined ? (
+              <ReactTooltip
+                className="tooltip-mobile"
+                effect="solid"
+                id="skillTooltip"
+              >
+                <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
+                  <li>{this.props.grid.gridData.name}</li>
+                  <li>Energy: {this.props.grid.gridData.energy}</li>
+                  {this.props.grid.gridData.description ? (
+                    <li style={{ marginTop: 1 }}>
+                      {this.props.grid.gridData.description}
+                    </li>
+                  ) : null}
+                </ul>
+              </ReactTooltip>
+            ) : null}
           </div>
         </Paper>
       </div>

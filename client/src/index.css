@@ -158,6 +158,18 @@ svg g:hover .center-grid {
   user-select: none;
 }
 
+.tooltip-mobile {
+  /* make text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  max-width: 70vw;
+}
+
 /* Rounded border */
 hr.rounded {
   border-top: 8px solid #bbb;
@@ -171,7 +183,7 @@ hr.rounded {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 10px;
+  bottom: 60px;
   right: 10px;
   border-radius: 5px;
   border: none;
@@ -184,7 +196,7 @@ hr.rounded {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 10px;
+  bottom: 60px;
   right: 60px;
   border-radius: 5px;
   border: none;
