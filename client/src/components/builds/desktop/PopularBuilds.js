@@ -7,6 +7,7 @@ import {
 } from '../../../actions/actionCreators';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import BuildItem from './BuildItem';
+import Box from '@material-ui/core/Box';
 
 class PopularBuilds extends Component {
   constructor(props) {
@@ -62,10 +63,11 @@ class PopularBuilds extends Component {
         hasMore={this.state.hasMoreItems}
         loader={
           <div
+            class="alert alert-success"
+            role="alert"
             key={`${Math.floor(Math.random() * 1000)}-min`}
-            className="loader"
           >
-             Loading ...
+            Loading...
           </div>
         }
       >
