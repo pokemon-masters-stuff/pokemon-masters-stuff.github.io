@@ -102,10 +102,10 @@ class UsersBuilds extends Component {
 }
 
 const mapStateToProps = state => ({
-  builds: state.grid.builds,
-  sort: state.grid.sort,
-  filter: state.grid.filter,
-  totalBuildCount: state.grid.totalBuildCount
+  builds: state.build.builds,
+  sort: state.build.sort,
+  filter: state.build.filter,
+  totalBuildCount: state.build.totalBuildCount
 });
 
 export default connect(mapStateToProps, {

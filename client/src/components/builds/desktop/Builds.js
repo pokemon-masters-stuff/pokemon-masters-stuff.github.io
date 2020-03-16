@@ -26,8 +26,8 @@ const useStyles = makeStyles({
 const Builds = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const sort = useSelector(state => state.grid.sort);
-  const filter = useSelector(state => state.grid.filter);
+  const sort = useSelector(state => state.build.sort);
+  const filter = useSelector(state => state.build.filter);
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
 
