@@ -5,8 +5,11 @@
 /.pnp
 .pnp.js
 /client/node_modules
+
 # testing
 /coverage
+note
+dev.js
 
 # production
 /build
@@ -24,4 +27,3 @@ yarn-error.log*
 
 # Jetbrains
 .idea
-note
