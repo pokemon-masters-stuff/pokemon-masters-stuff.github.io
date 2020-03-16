@@ -109,13 +109,13 @@ function SyncGridControls(props) {
         </div>
       </Grid>
 
-      <Grid item>
+      {/* <Grid item>
         <div style={{ marginTop: 10, paddingBottom: 10 }}>
           <PublishBuildButtonMobile />
         </div>
-      </Grid>
+      </Grid> */}
 
-      <Grid item>
+      {/* <Grid item>
         {isAuthenticated ? (
           <Button variant="outlined" style={{ marginTop: 10 }}>
             <Link
@@ -134,9 +134,9 @@ function SyncGridControls(props) {
           >
             Popular Builds
           </Button>
-        )}
-        <LoginOrRegisterModal />
-      </Grid>
+        )} */}
+      <LoginOrRegisterModal />
+      {/* </Grid> */}
     </Grid>
   );
 }

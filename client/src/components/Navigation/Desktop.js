@@ -29,7 +29,7 @@ const Navigation = () => {
             </button>
             <AnnouncementModalDesktop />
           </li>
-          <li className="nav-item active">
+          {/* <li className="nav-item active">
             {isAuthenticated ? (
               <button type="button" className="btn btn-dark">
                 <Link
@@ -48,9 +48,9 @@ const Navigation = () => {
               >
                 Popular Builds
               </button>
-            )}
-            <LoginOrRegisterModal />
-          </li>
+            )} */}
+          <LoginOrRegisterModal />
+          {/* </li> */}
         </ul>
         <button
           type="button"
@@ -62,7 +62,7 @@ const Navigation = () => {
           Submit Feedback
         </button>
         <FeedbackFormDesktop />
-        {isAuthenticated ? (
+        {/* {isAuthenticated ? (
           <Logout />
         ) : (
           <Fragment>
@@ -85,7 +85,7 @@ const Navigation = () => {
               Login
             </button>
           </Fragment>
-        )}
+        )} */}
       </div>
     </nav>
   );
