@@ -176,19 +176,6 @@ hr.rounded {
   border-radius: 5px;
 }
 
-/* Scroll-to-top button */
-.scroll {
-  opacity: 0.8;
-  background-color: red;
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  bottom: 60px;
-  right: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
 /* dark mode toggle for desktop */
 .dark-mode-toggle {
   opacity: 0.8;
@@ -196,17 +183,9 @@ hr.rounded {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 60px;
-  right: 60px;
+  bottom: 10px;
+  right: 10px;
   border-radius: 5px;
   border: none;
   z-index: 999;
-}
-
-* {
-  -o-transition-property: none !important;
-  -moz-transition-property: none !important;
-  -ms-transition-property: none !important;
-  -webkit-transition-property: none !important;
-  transition-property: none !important;
 }

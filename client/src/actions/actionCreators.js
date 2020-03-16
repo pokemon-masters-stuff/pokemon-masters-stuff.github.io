@@ -24,7 +24,6 @@ import {
   LOGIN_SUCCESS,
   LOGOUT,
   GET_BUILDS,
-  GET_MORE_BUILDS,
   GET_LIKED_BUILDS,
   GET_USERS_BUILDS,
   UPDATE_LIKES,
@@ -200,10 +199,10 @@ export const logout = () => dispatch => {
 };
 
 // Get Builds
-export const getBuilds = (filter, sort, limit) => async dispatch => {
+export const getBuilds = (filter, sort, skip, limit) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/builds?skip=0&limit=${limit}&sort=${sort}${
+      `/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
@@ -220,32 +219,11 @@ export const getBuilds = (filter, sort, limit) => async dispatch => {
   }
 };
 
-// Get More Builds
-export const getMoreBuilds = (filter, sort, count, limit) => async dispatch => {
-  try {
-    const res = await axios.get(
-      `/api/builds?skip=${count}&limit=${limit}&sort=${sort}${
-        filter !== 'None' ? '&filter=' + filter : ''
-      }`
-    );
-
-    dispatch({
-      type: GET_MORE_BUILDS,
-      payload: res.data
-    });
-  } catch (error) {
-    dispatch({
-      type: BUILD_ERROR,
-      payload: { msg: error.response.statusText, status: error.response.status }
-    });
-  }
-};
-
 // Get Liked Builds
-export const getLikedBuilds = (filter, sort, limit) => async dispatch => {
+export const getLikedBuilds = (filter, sort, skip, limit) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/builds/liked?skip=0&limit=${limit}&sort=${sort}${
+      `/api/builds/liked?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
@@ -263,10 +241,10 @@ export const getLikedBuilds = (filter, sort, limit) => async dispatch => {
 };
 
 // Get user's Builds
-export const getUsersBuilds = (filter, sort, limit) => async dispatch => {
+export const getUsersBuilds = (filter, sort, skip, limit) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/builds/users?skip=0&limit=${limit}&sort=${sort}${
+      `/api/builds/users?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );

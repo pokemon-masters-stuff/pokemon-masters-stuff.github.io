@@ -10,11 +10,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TabPanel from '../TabPanel';
-import PopularBuilds from './PopularBuilds';
-import LikedBuilds from './LikedBuilds';
-import UsersBuilds from './UsersBuilds';
-import ScrollButton from '../ScrollButton';
+import TabPanel from '../common/TabPanel';
+import PopularBuilds from '../common/PopularBuilds';
+import LikedBuilds from '../common/LikedBuilds';
+import UsersBuilds from '../common/UsersBuilds';
 import { makeStyles } from '@material-ui/core/styles';
 import Nav from '../../MainAppbar/Nav';
 import { NavigationMobile } from '../../Navigation';
@@ -85,7 +84,7 @@ const Builds = () => {
         <Tab label="My" />
       </Tabs>
 
-      <Box className={classes.root}>
+      <Box className={classes.root} style={{ marginBottom: 15 }}>
         <FormControl
           variant="outlined"
           size="small"
@@ -131,15 +130,14 @@ const Builds = () => {
       </BottomNavigation>
 
       <TabPanel index={0} value={value}>
-        <PopularBuilds />
+        <PopularBuilds screenSize={'small'} />
       </TabPanel>
       <TabPanel index={1} value={value}>
-        <LikedBuilds />
+        <LikedBuilds screenSize={'small'} />
       </TabPanel>
       <TabPanel index={2} value={value}>
-        <UsersBuilds />
+        <UsersBuilds screenSize={'small'} />
       </TabPanel>
-      <ScrollButton scrollStepInPx="1000" delayInMs="1" />
     </div>
   );
 };

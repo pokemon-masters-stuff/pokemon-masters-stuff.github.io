@@ -12,9 +12,9 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-import ShareBuildModal from '../ShareBuildModal';
-import EditBuildModal from '../EditBuildModal';
-// import ReactTooltip from 'react-tooltip';
+import ShareBuildModal from '../common/ShareBuildModal';
+import EditBuildModal from '../common/EditBuildModal';
+import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -136,18 +136,9 @@ class BuildItem extends Component {
     window.addEventListener('resize', this.fitMapToScreen);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return (
-      this.state.initialRender ||
-      this.props.build.likes !== nextProps.build.likes ||
-      this.props.build.description !== nextProps.build.description ||
-      this.props.darkMode !== nextProps.darkMode
-    );
+  componentDidUpdate() {
+    ReactTooltip.rebuild();
   }
-
-  // componentDidUpdate() {
-  //   ReactTooltip.rebuild();
-  // }
 
   componentWillUnmount() {
     this._isMounted = false;
@@ -349,7 +340,6 @@ class BuildItem extends Component {
   };
 
   render() {
-    console.log('renders');
     const currentUser = this.props.auth.user || '';
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build, darkMode } = this.props;
@@ -458,7 +448,7 @@ class BuildItem extends Component {
                 size={{ x: 10, y: 10 }}
               />
             </HexGrid>
-            {/* {this.props.grid.gridData.energy !== undefined ? (
+            {this.props.grid.gridData.energy !== undefined ? (
               <ReactTooltip
                 className="tooltip-mobile"
                 effect="solid"
@@ -474,7 +464,7 @@ class BuildItem extends Component {
                   ) : null}
                 </ul>
               </ReactTooltip>
-            ) : null} */}
+            ) : null}
           </div>
         </Paper>
       </div>
