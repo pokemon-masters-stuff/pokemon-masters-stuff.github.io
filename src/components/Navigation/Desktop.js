@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { FeedbackFormDesktop } from '../../components/FeedbackForm';
-import { AnnouncementModalDesktop } from '../../components/AnnouncementModal';
+import { FeedbackFormDesktop } from '../FeedbackForm';
+import { AnnouncementModalDesktop } from '../AnnouncementModal';
 import Logout from '../auth/Logout';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 
