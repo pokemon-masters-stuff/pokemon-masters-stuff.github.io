@@ -409,9 +409,10 @@ class BuildItem extends Component {
                 <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                   Description:{' '}
                 </span>
-                <p style={{ whiteSpace: 'pre-line' }}>
+                <br />
+                <span style={{ whiteSpace: 'pre-line' }}>
                   {build.description || 'None'}
-                </p>
+                </span>
                 <br />
                 <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                   Date:{' '}
