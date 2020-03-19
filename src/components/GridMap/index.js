@@ -60,7 +60,7 @@ import {
   liepard,
   palossand,
   haxorus
-} from '../../images/PokemonThumbnails/';
+} from '../../images/PokemonThumbnails';
 
 const allThumbnails = {
   charizard,

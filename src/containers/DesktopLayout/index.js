@@ -66,9 +66,9 @@ class DesktopLayout extends Component {
                   <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <ShareButtonDesktop />
                   </div>
-                  {/* <div style={{ marginLeft: 8, marginTop: 10 }}>
+                  <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <PublishBuildButtonDesktop />
-                  </div> */}
+                  </div>
                   <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>

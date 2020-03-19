@@ -49,7 +49,7 @@ function Navigation(props) {
           onCloseModalHandler={handleCloseModal}
         />
 
-        {/* {isAuthenticated ? (
+        {isAuthenticated ? (
           <ListItem button onClick={handleOnClickLogout}>
             <ListItemIcon className={classes.listIcon}>
               <ExitToAppIcon />
@@ -57,19 +57,19 @@ function Navigation(props) {
             <ListItemText primary="Logout" />
           </ListItem>
         ) : (
-          <Fragment> */}
-        <ListItem
-          button
-          onClick={handleOnClose}
-          data-toggle="modal"
-          data-target="#loginModal"
-        >
-          <ListItemIcon className={classes.listIcon}>
-            <VpnKeyIcon />
-          </ListItemIcon>
-          <ListItemText primary="Login" />
-        </ListItem>
-        {/* 
+          <Fragment>
+            <ListItem
+              button
+              onClick={handleOnClose}
+              data-toggle="modal"
+              data-target="#loginModal"
+            >
+              <ListItemIcon className={classes.listIcon}>
+                <VpnKeyIcon />
+              </ListItemIcon>
+              <ListItemText primary="Login" />
+            </ListItem>
+
             <ListItem
               button
               onClick={handleOnClose}
@@ -82,7 +82,7 @@ function Navigation(props) {
               <ListItemText primary="Register" />
             </ListItem>
           </Fragment>
-        )} */}
+        )}
       </List>
     </Drawer>
   );

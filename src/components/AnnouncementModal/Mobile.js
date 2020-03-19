@@ -35,10 +35,9 @@ const AnnouncementModal = () => {
         <DialogTitle>{'Announcements'}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
-            <ol style={{ paddingLeft: 15 }}>
-              <li>Fixed crashing issues</li>
-              <li>Shortened url links (old links still compatible)</li>
-            </ol>
+            3/19/2020:
+            <br />
+            Share your builds with the community, and check out what's popular!
           </DialogContentText>
         </DialogContent>
       </Dialog>
