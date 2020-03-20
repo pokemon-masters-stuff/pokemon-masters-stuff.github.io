@@ -22,7 +22,7 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
-            3/19/2020:
+            3/20/2020:
             <br />
             Share your builds with the community, and check out what's popular!
           </div>

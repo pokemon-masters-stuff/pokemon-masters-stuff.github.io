@@ -123,7 +123,9 @@ export const loadUser = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get('/api/auth');
+    const res = await axios.get(
+      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/auth'
+    );
 
     dispatch({
       type: USER_LOADED,
@@ -149,7 +151,11 @@ export const register = ({ username, password }) => async dispatch => {
   const body = JSON.stringify({ username, password });
 
   try {
-    const res = await axios.post('/api/users', body, config);
+    const res = await axios.post(
+      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/users',
+      body,
+      config
+    );
 
     dispatch({
       type: REGISTER_SUCCESS,
@@ -177,7 +183,11 @@ export const login = (username, password) => async dispatch => {
   const body = JSON.stringify({ username, password });
 
   try {
-    const res = await axios.post('/api/auth', body, config);
+    const res = await axios.post(
+      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/auth',
+      body,
+      config
+    );
 
     dispatch({
       type: LOGIN_SUCCESS,
@@ -204,7 +214,7 @@ export const logout = () => dispatch => {
 export const getBuilds = (filter, sort, skip, limit) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
@@ -225,7 +235,7 @@ export const getBuilds = (filter, sort, skip, limit) => async dispatch => {
 export const getLikedBuilds = (filter, sort, skip, limit) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/builds/liked?skip=${skip}&limit=${limit}&sort=${sort}${
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/liked?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
@@ -246,7 +256,7 @@ export const getLikedBuilds = (filter, sort, skip, limit) => async dispatch => {
 export const getUsersBuilds = (filter, sort, skip, limit) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/builds/users?skip=${skip}&limit=${limit}&sort=${sort}${
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/users?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
@@ -266,7 +276,9 @@ export const getUsersBuilds = (filter, sort, skip, limit) => async dispatch => {
 // Add like
 export const addLike = id => async dispatch => {
   try {
-    const res = await axios.put(`/api/builds/like/${id}`);
+    const res = await axios.put(
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/like/${id}`
+    );
     dispatch({
       type: UPDATE_LIKES,
       payload: { id, likes: res.data }
@@ -282,7 +294,9 @@ export const addLike = id => async dispatch => {
 // Remove like
 export const removeLike = id => async dispatch => {
   try {
-    const res = await axios.put(`/api/builds/unlike/${id}`);
+    const res = await axios.put(
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/unlike/${id}`
+    );
     dispatch({
       type: UPDATE_LIKES,
       payload: { id, likes: res.data }
@@ -304,7 +318,11 @@ export const addBuild = data => async dispatch => {
   };
 
   try {
-    const res = await axios.post('/api/builds', data, config);
+    const res = await axios.post(
+      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds',
+      data,
+      config
+    );
 
     dispatch({
       type: ADD_BUILD,
@@ -336,7 +354,11 @@ export const editBuild = (id, description) => async dispatch => {
   const body = JSON.stringify({ description });
 
   try {
-    const res = await axios.put(`/api/builds/edit/${id}`, body, config);
+    const res = await axios.put(
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/edit/${id}`,
+      body,
+      config
+    );
 
     dispatch({
       type: EDIT_BUILD,
@@ -355,7 +377,9 @@ export const editBuild = (id, description) => async dispatch => {
 // Delete post
 export const deleteBuild = id => async dispatch => {
   try {
-    await axios.delete(`/api/builds/${id}`);
+    await axios.delete(
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/${id}`
+    );
 
     dispatch({
       type: DELETE_BUILD,

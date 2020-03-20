@@ -35,7 +35,7 @@ const AnnouncementModal = () => {
         <DialogTitle>{'Announcements'}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
-            3/19/2020:
+            3/20/2020:
             <br />
             Share your builds with the community, and check out what's popular!
           </DialogContentText>

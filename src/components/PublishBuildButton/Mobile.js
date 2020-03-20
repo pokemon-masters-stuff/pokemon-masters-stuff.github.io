@@ -15,6 +15,14 @@ const PublishBuildButton = () => {
   const newBuildDescRef = useRef(null);
 
   const handleOnPublishBuild = () => {
+    if (Object.keys(grid.selectedCellsById).length === 0) {
+      alert('You cannot publish an empty grid');
+      return;
+    }
+    if (!newBuildNameRef.current.value) {
+      alert('Name is required');
+      return;
+    }
     let data = {
       buildName: newBuildNameRef.current.value,
       description: newBuildDescRef.current.value,
@@ -96,6 +104,7 @@ const PublishBuildButton = () => {
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 onClick={handleOnPublishBuild}
+                data-dismiss="modal"
               >
                 Publish
               </button>
