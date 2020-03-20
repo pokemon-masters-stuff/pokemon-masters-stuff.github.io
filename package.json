@@ -58,6 +58,5 @@
   },
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8"
-  },
-  "proxy": "https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/"
+  }
 }
