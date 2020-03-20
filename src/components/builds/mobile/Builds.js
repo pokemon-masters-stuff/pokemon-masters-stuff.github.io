@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
 import { pokemonNameList } from '../../../data';
@@ -22,6 +22,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
+import ReactGA from 'react-ga';
 
 const useStyles = makeStyles({
   root: {
@@ -46,6 +47,10 @@ const Builds = () => {
   const filter = useSelector(state => state.build.filter);
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const handleOnCloseNav = () => setIsNavOpened(false);
 

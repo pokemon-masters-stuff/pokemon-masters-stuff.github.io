@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
 import { pokemonNameList } from '../../../data';
@@ -13,6 +13,7 @@ import TabPanel from '../common/TabPanel';
 import PopularBuilds from '../common/PopularBuilds';
 import LikedBuilds from '../common/LikedBuilds';
 import UsersBuilds from '../common/UsersBuilds';
+import ReactGA from 'react-ga';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -30,6 +31,10 @@ const Builds = () => {
   const filter = useSelector(state => state.build.filter);
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const handleChangeTab = (event, newValue) => {
     setValue(newValue);
