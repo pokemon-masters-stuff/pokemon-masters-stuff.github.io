@@ -25,6 +25,11 @@ export default function AnnouncementModal() {
             3/20/2020:
             <br />
             Share your builds with the community, and check out what's popular!
+            <br />
+            <br />
+            Currently known issues:
+            <br />
+            1. Refreshing the page causes 404.
           </div>
           {/* <div className="modal-footer d-flex justify-content-center">
             <a href="https://pokemon-masters-stuff.herokuapp.com/">
