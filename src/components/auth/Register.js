@@ -1,10 +1,12 @@
 import React, { Fragment, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setAlert, register } from '../../actions/actionCreators';
 import Alert from '../Alert';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Register = () => {
   const dispatch = useDispatch();
+  const loading = useSelector(state => state.auth.loading);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -73,21 +75,34 @@ const Register = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="btn-group btn-block">
-                  <input
-                    style={{ margin: 3 }}
-                    type="submit"
-                    className="btn btn-primary"
-                    value="Register"
-                  />
-                  <input
-                    style={{ margin: 3 }}
-                    type="submit"
-                    className="btn btn-dark"
-                    value="Close"
-                    data-dismiss="modal"
-                  />
-                </div>
+                {loading ? (
+                  <div>
+                    <CircularProgress
+                      style={{
+                        display: 'block',
+                        marginLeft: 'auto',
+                        marginRight: 'auto'
+                      }}
+                      color="secondary"
+                    />
+                  </div>
+                ) : (
+                  <div className="btn-group btn-block">
+                    <input
+                      style={{ margin: 3 }}
+                      type="submit"
+                      className="btn btn-primary"
+                      value="Register"
+                    />
+                    <input
+                      style={{ margin: 3 }}
+                      type="submit"
+                      className="btn btn-dark"
+                      value="Close"
+                      data-dismiss="modal"
+                    />
+                  </div>
+                )}
               </form>
             </div>
             <Alert />

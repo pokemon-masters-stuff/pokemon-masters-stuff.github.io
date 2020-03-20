@@ -19,6 +19,7 @@ import {
   CHANGE_MODE,
   SET_ALERT,
   REMOVE_ALERT,
+  LOADING,
   REGISTER_SUCCESS,
   USER_LOADED,
   LOGIN_SUCCESS,
@@ -142,6 +143,11 @@ export const loadUser = () => async dispatch => {
 
 // Register User
 export const register = ({ username, password }) => async dispatch => {
+  dispatch({
+    type: LOADING,
+    payload: true
+  });
+
   const config = {
     headers: {
       'Content-Type': 'application/json'
@@ -163,6 +169,10 @@ export const register = ({ username, password }) => async dispatch => {
     });
 
     dispatch(loadUser());
+    dispatch({
+      type: LOADING,
+      payload: false
+    });
     dispatch(setAlert('Registration Successful', 'success'));
   } catch (err) {
     const errors = err.response.data.errors;
@@ -174,6 +184,11 @@ export const register = ({ username, password }) => async dispatch => {
 
 // Login User
 export const login = (username, password) => async dispatch => {
+  dispatch({
+    type: LOADING,
+    payload: true
+  });
+
   const config = {
     headers: {
       'Content-Type': 'application/json'
@@ -195,6 +210,10 @@ export const login = (username, password) => async dispatch => {
     });
 
     dispatch(loadUser());
+    dispatch({
+      type: LOADING,
+      payload: false
+    });
     dispatch(setAlert('Login Successful', 'success'));
   } catch (err) {
     const errors = err.response.data.errors;
