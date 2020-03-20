@@ -19,7 +19,7 @@ import {
   CHANGE_MODE,
   SET_ALERT,
   REMOVE_ALERT,
-  LOADING,
+  SET_LOADING,
   REGISTER_SUCCESS,
   USER_LOADED,
   LOGIN_SUCCESS,
@@ -143,10 +143,7 @@ export const loadUser = () => async dispatch => {
 
 // Register User
 export const register = ({ username, password }) => async dispatch => {
-  dispatch({
-    type: LOADING,
-    payload: true
-  });
+  dispatch(setLoading(true));
 
   const config = {
     headers: {
@@ -169,10 +166,7 @@ export const register = ({ username, password }) => async dispatch => {
     });
 
     dispatch(loadUser());
-    dispatch({
-      type: LOADING,
-      payload: false
-    });
+    dispatch(setLoading(false));
     dispatch(setAlert('Registration Successful', 'success'));
   } catch (err) {
     const errors = err.response.data.errors;
@@ -184,10 +178,7 @@ export const register = ({ username, password }) => async dispatch => {
 
 // Login User
 export const login = (username, password) => async dispatch => {
-  dispatch({
-    type: LOADING,
-    payload: true
-  });
+  dispatch(setLoading(true));
 
   const config = {
     headers: {
@@ -210,10 +201,7 @@ export const login = (username, password) => async dispatch => {
     });
 
     dispatch(loadUser());
-    dispatch({
-      type: LOADING,
-      payload: false
-    });
+    dispatch(setLoading(false));
     dispatch(setAlert('Login Successful', 'success'));
   } catch (err) {
     const errors = err.response.data.errors;
@@ -227,6 +215,14 @@ export const login = (username, password) => async dispatch => {
 // Logout
 export const logout = () => dispatch => {
   dispatch({ type: LOGOUT });
+};
+
+// Set Loading
+export const setLoading = payload => dispatch => {
+  dispatch({
+    type: SET_LOADING,
+    payload
+  });
 };
 
 // Get Builds

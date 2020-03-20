@@ -15,7 +15,7 @@ export const CHANGE_MODE = 'change_mode';
 
 export const SET_ALERT = 'set_alert';
 export const REMOVE_ALERT = 'remove_alert';
-export const LOADING = 'loading';
+export const SET_LOADING = 'set_loading';
 export const REGISTER_SUCCESS = 'register_success';
 export const USER_LOADED = 'user_loaded';
 export const LOGIN_SUCCESS = 'login_success';

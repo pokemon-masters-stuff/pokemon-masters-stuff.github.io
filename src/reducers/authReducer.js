@@ -1,5 +1,5 @@
 import {
-  LOADING,
+  SET_LOADING,
   REGISTER_SUCCESS,
   USER_LOADED,
   LOGIN_SUCCESS,
@@ -18,7 +18,7 @@ export default function(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case LOADING:
+    case SET_LOADING:
       return {
         ...state,
         loading: payload

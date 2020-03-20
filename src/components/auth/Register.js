@@ -1,12 +1,18 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAlert, register } from '../../actions/actionCreators';
 import Alert from '../Alert';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { setLoading } from '../../actions/actionCreators';
 
 const Register = () => {
   const dispatch = useDispatch();
   const loading = useSelector(state => state.auth.loading);
+
+  useEffect(() => {
+    dispatch(setLoading(false));
+  }, []);
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
