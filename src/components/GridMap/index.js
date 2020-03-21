@@ -157,7 +157,7 @@ class GridMap extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.fitMapToScreen);
-    clearQueryStringValue();
+    // clearQueryStringValue();
   }
 
   fitMapToScreen = () => {

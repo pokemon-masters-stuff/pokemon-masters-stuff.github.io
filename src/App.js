@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import MobileLayout from './containers/MobileLayout';
@@ -24,7 +24,7 @@ export default function App({ store }) {
   }, []);
 
   return (
-    <Router>
+    <HashRouter>
       <ThemeProvider theme={darkMode ? darkTheme : theme}>
         <Hidden smDown>
           <NavigationDesktop />
@@ -41,6 +41,6 @@ export default function App({ store }) {
           </Switch>
         </Hidden>
       </ThemeProvider>
-    </Router>
+    </HashRouter>
   );
 }
