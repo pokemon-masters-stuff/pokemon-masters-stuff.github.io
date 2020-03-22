@@ -23,6 +23,7 @@ const EditBuildModal = ({ index, description }) => {
       role="dialog"
       aria-labelledby="myModalLabel"
       aria-hidden="true"
+      style={{ zIndex: 4000 }}
     >
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div
@@ -43,7 +44,7 @@ const EditBuildModal = ({ index, description }) => {
                 id="desc"
                 value={desc}
                 onChange={onChange}
-                rows={15}
+                rows={12}
               />
             </div>
           </div>
@@ -53,7 +54,7 @@ const EditBuildModal = ({ index, description }) => {
               onClick={onSubmit}
               data-dismiss="modal"
             >
-              Edit
+              Finish
             </button>
           </div>
         </div>
