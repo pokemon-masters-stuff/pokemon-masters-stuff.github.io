@@ -112,7 +112,7 @@ const Builds = props => {
           color="primary"
           style={{ marginRight: 10 }}
         >
-          <InputLabel id="sort">Sort</InputLabel>
+          <InputLabel id="sort">Sort by</InputLabel>
           <Select value={sort} labelId="sort" onChange={handleChangeSort}>
             <MenuItem value="popular">Popular</MenuItem>
             <MenuItem value="newest">Newest</MenuItem>
@@ -126,7 +126,7 @@ const Builds = props => {
           color="primary"
           style={{ marginLeft: 10 }}
         >
-          <InputLabel id="filter">Filter</InputLabel>
+          <InputLabel id="filter">Filter by</InputLabel>
           <Select value={filter} labelId="filter" onChange={handleChangeFilter}>
             <MenuItem value="None">None</MenuItem>
             {pokemonNameList.map((pokemon, index) => (
