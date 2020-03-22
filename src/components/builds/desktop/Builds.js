@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
 import { pokemonNameList } from '../../../data';
 import Paper from '@material-ui/core/Paper';
@@ -9,10 +10,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TabPanel from '../common/TabPanel';
-import PopularBuilds from '../common/PopularBuilds';
-import LikedBuilds from '../common/LikedBuilds';
-import UsersBuilds from '../common/UsersBuilds';
 import ReactGA from 'react-ga';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -24,7 +21,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Builds = () => {
+const Builds = props => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const sort = useSelector(state => state.build.sort);
@@ -34,9 +31,27 @@ const Builds = () => {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+    if (props.history) {
+      if (props.history.location.pathname === '/builds/liked') {
+        setValue(1);
+      } else if (props.history.location.pathname === '/builds/users') {
+        setValue(2);
+      } else {
+        setValue(0);
+      }
+    }
   }, []);
 
   const handleChangeTab = (event, newValue) => {
+    let val;
+    if (newValue === 0) {
+      val = 'popular';
+    } else if (newValue === 1) {
+      val = 'liked';
+    } else {
+      val = 'users';
+    }
+    props.history.push(`/builds/${val}`);
     setValue(newValue);
   };
 
@@ -104,18 +119,9 @@ const Builds = () => {
             </Select>
           </FormControl>
         </Paper>
-        <TabPanel index={0} value={value}>
-          <PopularBuilds screenSize={'large'} />
-        </TabPanel>
-        <TabPanel index={1} value={value}>
-          <LikedBuilds screenSize={'large'} />
-        </TabPanel>
-        <TabPanel index={2} value={value}>
-          <UsersBuilds screenSize={'large'} />
-        </TabPanel>
       </div>
     </div>
   );
 };
 
-export default Builds;
+export default withRouter(Builds);

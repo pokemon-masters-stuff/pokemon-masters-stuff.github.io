@@ -119,7 +119,7 @@ function SyncGridControls(props) {
         {isAuthenticated ? (
           <Button variant="outlined" style={{ marginTop: 10 }}>
             <Link
-              to="/builds"
+              to="/builds/popular"
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               Popular Builds

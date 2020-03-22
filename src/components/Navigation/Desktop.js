@@ -33,7 +33,7 @@ const Navigation = () => {
             {isAuthenticated ? (
               <button type="button" className="btn btn-dark">
                 <Link
-                  to="/builds"
+                  to="/builds/popular"
                   style={{ textDecoration: 'none', color: 'white' }}
                 >
                   Popular Builds

@@ -6,12 +6,17 @@ import { connect } from 'react-redux';
 const PrivateRoute = ({
   component: Component,
   auth: { isAuthenticated, loading },
+  screenSize,
   ...rest
 }) => (
   <Route
     {...rest}
     render={props =>
-      isAuthenticated ? <Component {...props} /> : <Redirect to="/" />
+      isAuthenticated ? (
+        <Component {...props} screenSize={screenSize} />
+      ) : (
+        <Redirect to="/" />
+      )
     }
   />
 );

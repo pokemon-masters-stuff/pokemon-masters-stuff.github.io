@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
 import { pokemonNameList } from '../../../data';
 import AppBar from '@material-ui/core/AppBar';
@@ -10,10 +11,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TabPanel from '../common/TabPanel';
-import PopularBuilds from '../common/PopularBuilds';
-import LikedBuilds from '../common/LikedBuilds';
-import UsersBuilds from '../common/UsersBuilds';
 import { makeStyles } from '@material-ui/core/styles';
 import Nav from '../../MainAppbar/Nav';
 import { NavigationMobile } from '../../Navigation';
@@ -39,7 +36,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Builds = () => {
+const Builds = props => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [isNavOpened, setIsNavOpened] = React.useState(false);
@@ -50,6 +47,15 @@ const Builds = () => {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+    if (props.history) {
+      if (props.history.location.pathname === '/builds/liked') {
+        setValue(1);
+      } else if (props.history.location.pathname === '/builds/users') {
+        setValue(2);
+      } else {
+        setValue(0);
+      }
+    }
   }, []);
 
   const handleOnCloseNav = () => setIsNavOpened(false);
@@ -57,6 +63,15 @@ const Builds = () => {
   const handleOnOpenNav = () => setIsNavOpened(true);
 
   const handleChangeTab = (event, newValue) => {
+    let val;
+    if (newValue === 0) {
+      val = 'popular';
+    } else if (newValue === 1) {
+      val = 'liked';
+    } else {
+      val = 'users';
+    }
+    props.history.push(`/builds/${val}`);
     setValue(newValue);
   };
 
@@ -133,18 +148,8 @@ const Builds = () => {
         <BottomNavigationAction label="Liked" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="My" icon={<PersonIcon />} />
       </BottomNavigation>
-
-      <TabPanel index={0} value={value}>
-        <PopularBuilds screenSize={'small'} />
-      </TabPanel>
-      <TabPanel index={1} value={value}>
-        <LikedBuilds screenSize={'small'} />
-      </TabPanel>
-      <TabPanel index={2} value={value}>
-        <UsersBuilds screenSize={'small'} />
-      </TabPanel>
     </div>
   );
 };
 
-export default Builds;
+export default withRouter(Builds);
