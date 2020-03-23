@@ -1,5 +1,3 @@
-// TODO: refactor
-
 export default {
   1000000000: {
     cellId: 1000000000,
@@ -294,6 +292,306 @@ export default {
   1000000047: {
     cellId: 1000000047,
     name: 'Living Legend Blast Burn: Power ↑ +25 [Sync Lv3]',
+    description: undefined,
+    energy: 5
+  },
+  1000300000: {
+    cellId: 1000300000,
+    name: 'HP +10',
+    description: undefined,
+    energy: 0
+  },
+  1000300001: {
+    cellId: 1000300001,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1000300002: {
+    cellId: 1000300002,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 0
+  },
+  1000300003: {
+    cellId: 1000300003,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1000300004: {
+    cellId: 1000300004,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 0
+  },
+  1000300005: {
+    cellId: 1000300005,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 0
+  },
+  1000300006: {
+    cellId: 1000300006,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1000300007: {
+    cellId: 1000300007,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1000300008: {
+    cellId: 1000300008,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1000300009: {
+    cellId: 1000300009,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1000300010: {
+    cellId: 1000300010,
+    name: 'Psybeam Move Gauge Refresh 2',
+    description:
+      'Occasionally increases the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1000300011: {
+    cellId: 1000300011,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1000300012: {
+    cellId: 1000300012,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1000300013: {
+    cellId: 1000300013,
+    name: 'Psybeam Move Gauge Refresh 2',
+    description:
+      'Occasionally increases the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1000300014: {
+    cellId: 1000300014,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1000300015: {
+    cellId: 1000300015,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1000300016: {
+    cellId: 1000300016,
+    name: 'Psybeam: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1000300017: {
+    cellId: 1000300017,
+    name: 'Thunder Wave Move Gauge Refresh 4',
+    description:
+      'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1000300018: {
+    cellId: 1000300018,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1000300019: {
+    cellId: 1000300019,
+    name: 'We’re Not Done Yet! MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1000300020: {
+    cellId: 1000300020,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1000300021: {
+    cellId: 1000300021,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1000300022: {
+    cellId: 1000300022,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1000300023: {
+    cellId: 1000300023,
+    name: 'Thunder Wave Satisfied Snarl 9',
+    description:
+      'Lowers the target’s Sp. Atk when a move targeting that opponent is successful.',
+    energy: 9
+  },
+  1000300024: {
+    cellId: 1000300024,
+    name: 'Confusion Synergy 5',
+    description: 'Powers up moves when the target is confused.',
+    energy: 8
+  },
+  1000300025: {
+    cellId: 1000300025,
+    name: 'Aggravation 1',
+    description:
+      'Raises the chance of inflicting the flinching, con…d condition with the additional effects of moves.',
+    energy: 8
+  },
+  1000300026: {
+    cellId: 1000300026,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1000300027: {
+    cellId: 1000300027,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1000300028: {
+    cellId: 1000300028,
+    name: 'Grand Entry 1',
+    description: 'Raises the user’s Sp. Atk when the Pokémon enters a battle.',
+    energy: 8
+  },
+  1000300029: {
+    cellId: 1000300029,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 4
+  },
+  1000300030: {
+    cellId: 1000300030,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1000300031: {
+    cellId: 1000300031,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1000300032: {
+    cellId: 1000300032,
+    name: 'We’re Not Done Yet! Master Healer 2',
+    description:
+      'Increases the amount of HP restored by the user’s healing moves.',
+    energy: 8
+  },
+  1000300033: {
+    cellId: 1000300033,
+    name: 'Fuzzy Strike 5',
+    description: 'Powers up sync moves when the target is confused.',
+    energy: 8
+  },
+  1000300034: {
+    cellId: 1000300034,
+    name: 'Emergency Huddle 1',
+    description:
+      'Once per battle, raises the Defense of all allied sync pairs when in a pinch.',
+    energy: 8
+  },
+  1000300035: {
+    cellId: 1000300035,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1000300036: {
+    cellId: 1000300036,
+    name: 'Thunder Wave Move Gauge Refresh 4',
+    description:
+      'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1000300037: {
+    cellId: 1000300037,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1000300038: {
+    cellId: 1000300038,
+    name: 'HP +10',
+    description: undefined,
+    energy: 3
+  },
+  1000300039: {
+    cellId: 1000300039,
+    name: 'X Speed MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1000300040: {
+    cellId: 1000300040,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1000300041: {
+    cellId: 1000300041,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1000300042: {
+    cellId: 1000300042,
+    name: 'Pump Up 2',
+    description:
+      'Charges the move gauges of all allied sync pairs by two after using a sync move.',
+    energy: 10
+  },
+  1000300043: {
+    cellId: 1000300043,
+    name: 'X Speed Pep Rally 1',
+    description:
+      'Raises the Speed of all allied sync pairs when a move is successful.',
+    energy: 7
+  },
+  1000300044: {
+    cellId: 1000300044,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1000300045: {
+    cellId: 1000300045,
+    name: 'Paralysis Synergy 5',
+    description: 'Powers up moves when the target is paralyzed.',
+    energy: 8
+  },
+  1000300046: {
+    cellId: 1000300046,
+    name: 'Mind-Bending Psychic: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1000300047: {
+    cellId: 1000300047,
+    name: 'Mind-Bending Psychic: Power ↑ +25',
     description: undefined,
     energy: 5
   },
@@ -2087,6 +2385,303 @@ export default {
     description: undefined,
     energy: 5
   },
+  1003900000: {
+    cellId: 1003900000,
+    name: 'HP +10',
+    description: undefined,
+    energy: 0
+  },
+  1003900001: {
+    cellId: 1003900001,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1003900002: {
+    cellId: 1003900002,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 0
+  },
+  1003900003: {
+    cellId: 1003900003,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1003900004: {
+    cellId: 1003900004,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 0
+  },
+  1003900005: {
+    cellId: 1003900005,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 0
+  },
+  1003900006: {
+    cellId: 1003900006,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 2
+  },
+  1003900007: {
+    cellId: 1003900007,
+    name: 'Infestation: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1003900008: {
+    cellId: 1003900008,
+    name: 'Infestation: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1003900009: {
+    cellId: 1003900009,
+    name: 'Infestation: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1003900010: {
+    cellId: 1003900010,
+    name: 'Infestation Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1003900011: {
+    cellId: 1003900011,
+    name: 'Infestation: Power ↑ +6',
+    description: undefined,
+    energy: 3
+  },
+  1003900012: {
+    cellId: 1003900012,
+    name: 'Infestation: Power ↑ +6',
+    description: undefined,
+    energy: 3
+  },
+  1003900013: {
+    cellId: 1003900013,
+    name: 'Infestation: Power ↑ +6',
+    description: undefined,
+    energy: 3
+  },
+  1003900014: {
+    cellId: 1003900014,
+    name: 'Speed +10',
+    description: undefined,
+    energy: 3
+  },
+  1003900015: {
+    cellId: 1003900015,
+    name: 'Speed +10',
+    description: undefined,
+    energy: 3
+  },
+  1003900016: {
+    cellId: 1003900016,
+    name: 'X Speed Ramp Up 1',
+    description: 'Raises the user’s Sp. Atk when a move is successful.',
+    energy: 10
+  },
+  1003900017: {
+    cellId: 1003900017,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1003900018: {
+    cellId: 1003900018,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1003900019: {
+    cellId: 1003900019,
+    name: 'X Speed MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1003900020: {
+    cellId: 1003900020,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 4
+  },
+  1003900021: {
+    cellId: 1003900021,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1003900022: {
+    cellId: 1003900022,
+    name: 'Stationary Target 5',
+    description: 'Powers up moves when the target is trapped.',
+    energy: 8
+  },
+  1003900023: {
+    cellId: 1003900023,
+    name: 'Refreshing Rain 1',
+    description:
+      'Restores the Pokémon’s HP whenever it takes an action when the weather is rainy.',
+    energy: 8
+  },
+  1003900024: {
+    cellId: 1003900024,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1003900025: {
+    cellId: 1003900025,
+    name: 'Raging Rain 5',
+    description: 'Powers up moves when the weather is rainy.',
+    energy: 7
+  },
+  1003900026: {
+    cellId: 1003900026,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 2
+  },
+  1003900027: {
+    cellId: 1003900027,
+    name: 'Shower Power 5',
+    description: 'Powers up sync moves when the weather is rainy.',
+    energy: 7
+  },
+  1003900028: {
+    cellId: 1003900028,
+    name: 'Just Fantastic! MP Refresh 2',
+    description:
+      'Occasionally restores one MP of the move used if the move is successful.',
+    energy: 6
+  },
+  1003900029: {
+    cellId: 1003900029,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1003900030: {
+    cellId: 1003900030,
+    name: 'Just Fantastic! MP Refresh 2',
+    description:
+      'Occasionally restores one MP of the move used if the move is successful.',
+    energy: 6
+  },
+  1003900031: {
+    cellId: 1003900031,
+    name: 'Stationary Target 5',
+    description: 'Powers up moves when the target is trapped.',
+    energy: 8
+  },
+  1003900032: {
+    cellId: 1003900032,
+    name: 'Pokey Trap 2',
+    description:
+      'Increases the amount of damage the target takes from being trapped.',
+    energy: 10
+  },
+  1003900033: {
+    cellId: 1003900033,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1003900034: {
+    cellId: 1003900034,
+    name: 'Trip Wire 1',
+    description:
+      'Lowers the Speed of all opposing sync pairs when the Pokémon enters a battle.',
+    energy: 8
+  },
+  1003900035: {
+    cellId: 1003900035,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1003900036: {
+    cellId: 1003900036,
+    name: 'Struggle Bug: Power ↑ +5',
+    description: undefined,
+    energy: 3
+  },
+  1003900037: {
+    cellId: 1003900037,
+    name: 'Struggle Bug: Power ↑ +5',
+    description: undefined,
+    energy: 3
+  },
+  1003900038: {
+    cellId: 1003900038,
+    name: 'Struggle Bug: Power ↑ +5',
+    description: undefined,
+    energy: 3
+  },
+  1003900039: {
+    cellId: 1003900039,
+    name: 'Struggle Bug Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1003900040: {
+    cellId: 1003900040,
+    name: 'Struggle Bug: Power ↑ +5',
+    description: undefined,
+    energy: 3
+  },
+  1003900041: {
+    cellId: 1003900041,
+    name: 'Struggle Bug: Power ↑ +5',
+    description: undefined,
+    energy: 3
+  },
+  1003900042: {
+    cellId: 1003900042,
+    name: 'Struggle Bug: Power ↑ +5',
+    description: undefined,
+    energy: 3
+  },
+  1003900043: {
+    cellId: 1003900043,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 4
+  },
+  1003900044: {
+    cellId: 1003900044,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 4
+  },
+  1003900045: {
+    cellId: 1003900045,
+    name: 'First Aid 4',
+    description:
+      'Restores a bit of the Pokémon’s HP once during battle when the Pokémon is in a pinch.',
+    energy: 10
+  },
+  1003900046: {
+    cellId: 1003900046,
+    name: 'Silver Wind Victory Shot: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1003900047: {
+    cellId: 1003900047,
+    name: 'Silver Wind Victory Shot: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
   1004800000: {
     cellId: 1004800000,
     name: 'HP +10',
@@ -3288,6 +3883,306 @@ export default {
     description: undefined,
     energy: 5
   },
+  1009500000: {
+    cellId: 1009500000,
+    name: 'HP +10',
+    description: undefined,
+    energy: 0
+  },
+  1009500001: {
+    cellId: 1009500001,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1009500002: {
+    cellId: 1009500002,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 0
+  },
+  1009500003: {
+    cellId: 1009500003,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1009500004: {
+    cellId: 1009500004,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 0
+  },
+  1009500005: {
+    cellId: 1009500005,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 0
+  },
+  1009500006: {
+    cellId: 1009500006,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1009500007: {
+    cellId: 1009500007,
+    name: 'Psychic: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1009500008: {
+    cellId: 1009500008,
+    name: 'Psychic: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1009500009: {
+    cellId: 1009500009,
+    name: 'Psychic: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1009500010: {
+    cellId: 1009500010,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1009500011: {
+    cellId: 1009500011,
+    name: 'Psychic: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1009500012: {
+    cellId: 1009500012,
+    name: 'Psychic: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1009500013: {
+    cellId: 1009500013,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1009500014: {
+    cellId: 1009500014,
+    name: 'Psychic Move Gauge Refresh 2',
+    description:
+      'Occasionally increases the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1009500015: {
+    cellId: 1009500015,
+    name: 'Psychic: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1009500016: {
+    cellId: 1009500016,
+    name: 'Psychic Move Gauge Refresh 2',
+    description:
+      'Occasionally increases the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1009500017: {
+    cellId: 1009500017,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1009500018: {
+    cellId: 1009500018,
+    name: 'Don’t Bore Me! MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1009500019: {
+    cellId: 1009500019,
+    name: 'Snow Shelter',
+    description: 'Protects the Pokémon from damage from a hailstorm.',
+    energy: 3
+  },
+  1009500020: {
+    cellId: 1009500020,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1009500021: {
+    cellId: 1009500021,
+    name: 'Natural Remedy',
+    description:
+      'Once per battle, removes all status conditions fro…en the user is inflicted by any status condition.',
+    energy: 5
+  },
+  1009500022: {
+    cellId: 1009500022,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1009500023: {
+    cellId: 1009500023,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1009500024: {
+    cellId: 1009500024,
+    name: 'Healthy Healing',
+    description:
+      'Makes the user gradually heal itself if its HP is full when it enters a battle.',
+    energy: 7
+  },
+  1009500025: {
+    cellId: 1009500025,
+    name: 'Catalytic Cure 2',
+    description:
+      'Occasionally restores the user’s HP when a move is successful.',
+    energy: 8
+  },
+  1009500026: {
+    cellId: 1009500026,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 5
+  },
+  1009500027: {
+    cellId: 1009500027,
+    name: 'HP +50',
+    description: undefined,
+    energy: 10
+  },
+  1009500028: {
+    cellId: 1009500028,
+    name: 'Hidden Power: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1009500029: {
+    cellId: 1009500029,
+    name: 'Hidden Power: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1009500030: {
+    cellId: 1009500030,
+    name: 'Hidden Power Move Gauge Refresh 4',
+    description:
+      'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1009500031: {
+    cellId: 1009500031,
+    name: 'Hidden Power: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1009500032: {
+    cellId: 1009500032,
+    name: 'Hidden Power: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1009500033: {
+    cellId: 1009500033,
+    name: 'Broken Sleep Psychic: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1009500034: {
+    cellId: 1009500034,
+    name: 'Hidden Power Hype Up 1',
+    description:
+      'Has a small chance of raising the Sp. Atk of all a…d sync pairs when the user’s Pokémon uses a move.',
+    energy: 8
+  },
+  1009500035: {
+    cellId: 1009500035,
+    name: 'Hidden Power: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1009500036: {
+    cellId: 1009500036,
+    name: 'Hidden Power: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1009500037: {
+    cellId: 1009500037,
+    name: 'Move Gauge Boost MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1009500038: {
+    cellId: 1009500038,
+    name: 'Sand Shelter',
+    description: 'Protects the Pokémon from damage from a sandstorm.',
+    energy: 3
+  },
+  1009500039: {
+    cellId: 1009500039,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1009500040: {
+    cellId: 1009500040,
+    name: 'Revenge Boost 4',
+    description:
+      'Has a good chance of increasing the user’s move gauge by one when the user is hit by an attack move.',
+    energy: 5
+  },
+  1009500041: {
+    cellId: 1009500041,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1009500042: {
+    cellId: 1009500042,
+    name: 'Broken Sleep Psychic: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1009500043: {
+    cellId: 1009500043,
+    name: 'Move Gauge Boost Move Gauge Refresh 9',
+    description:
+      'Increases the user’s move gauge by one when a move is successful.',
+    energy: 10
+  },
+  1009500044: {
+    cellId: 1009500044,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1009500045: {
+    cellId: 1009500045,
+    name: 'Hidden Power Propulsion 1',
+    description:
+      'Has a small chance of reducing the user’s sync mov…ntdown by one when the user’s move is successful.',
+    energy: 8
+  },
+  1009500046: {
+    cellId: 1009500046,
+    name: 'Broken Sleep Psychic: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1009500047: {
+    cellId: 1009500047,
+    name: 'Broken Sleep Psychic: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
   1009800000: {
     cellId: 1009800000,
     name: 'HP +10',
@@ -4481,6 +5376,904 @@ export default {
   1011400047: {
     cellId: 1011400047,
     name: 'ESP Prodigy Psywave: Power ↑ +25 [Sync Lv3]',
+    description: undefined,
+    energy: 5
+  },
+  1012100000: {
+    cellId: 1012100000,
+    name: 'HP +10',
+    description: undefined,
+    energy: 0
+  },
+  1012100001: {
+    cellId: 1012100001,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1012100002: {
+    cellId: 1012100002,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 0
+  },
+  1012100003: {
+    cellId: 1012100003,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1012100004: {
+    cellId: 1012100004,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 0
+  },
+  1012100005: {
+    cellId: 1012100005,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 0
+  },
+  1012100006: {
+    cellId: 1012100006,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100007: {
+    cellId: 1012100007,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100008: {
+    cellId: 1012100008,
+    name: 'Smog: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1012100009: {
+    cellId: 1012100009,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100010: {
+    cellId: 1012100010,
+    name: 'Smog: Accuracy ↑ +20',
+    description: undefined,
+    energy: 5
+  },
+  1012100011: {
+    cellId: 1012100011,
+    name: 'Smog: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1012100012: {
+    cellId: 1012100012,
+    name: 'Smog: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1012100013: {
+    cellId: 1012100013,
+    name: 'Smog Move Gauge Refresh 4',
+    description:
+      'Has a good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1012100014: {
+    cellId: 1012100014,
+    name: 'Burst In',
+    description:
+      'Ensures that the user’s next attack will be a critical hit when the Pokémon enters a battle.',
+    energy: 10
+  },
+  1012100015: {
+    cellId: 1012100015,
+    name: 'Smog: Power ↑ +6',
+    description: undefined,
+    energy: 2
+  },
+  1012100016: {
+    cellId: 1012100016,
+    name: 'Harry 3',
+    description: 'Powers up moves when the target is flinching.',
+    energy: 10
+  },
+  1012100017: {
+    cellId: 1012100017,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1012100018: {
+    cellId: 1012100018,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100019: {
+    cellId: 1012100019,
+    name: 'Sludge Wave Move Gauge Refresh 2',
+    description:
+      'Occasionally increases the user’s move gauge by one when a move is successful.',
+    energy: 5
+  },
+  1012100020: {
+    cellId: 1012100020,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100021: {
+    cellId: 1012100021,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1012100022: {
+    cellId: 1012100022,
+    name: 'Sludge Wave: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1012100023: {
+    cellId: 1012100023,
+    name: 'Sludge Wave: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1012100024: {
+    cellId: 1012100024,
+    name: 'Sludge Wave Move Gauge Refresh 2',
+    description:
+      'Occasionally increases the user’s move gauge by one when a move is successful.',
+    energy: 5
+  },
+  1012100025: {
+    cellId: 1012100025,
+    name: 'Sludge Wave: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1012100026: {
+    cellId: 1012100026,
+    name: 'Sludge Wave: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1012100027: {
+    cellId: 1012100027,
+    name: 'Sludge Wave: Power ↑ +4',
+    description: undefined,
+    energy: 5
+  },
+  1012100028: {
+    cellId: 1012100028,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100029: {
+    cellId: 1012100029,
+    name: 'Defense +20',
+    description: undefined,
+    energy: 7
+  },
+  1012100030: {
+    cellId: 1012100030,
+    name: 'Outta My Way! MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1012100031: {
+    cellId: 1012100031,
+    name: 'Smog Staggering 4',
+    description:
+      'Has a good chance of making the target flinch when an attack is successful.',
+    energy: 10
+  },
+  1012100032: {
+    cellId: 1012100032,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100033: {
+    cellId: 1012100033,
+    name: 'Agile Entry 2',
+    description:
+      'Sharply raises the user’s evasiveness when the Pokémon enters a battle.',
+    energy: 7
+  },
+  1012100034: {
+    cellId: 1012100034,
+    name: 'Endurance',
+    description:
+      'If the Pokémon enters battle with full HP, allows …dure a single overwhelming attack with 1 HP left.',
+    energy: 7
+  },
+  1012100035: {
+    cellId: 1012100035,
+    name: 'Sp. Def +20',
+    description: undefined,
+    energy: 7
+  },
+  1012100036: {
+    cellId: 1012100036,
+    name: 'Toxic Power 3',
+    description:
+      'Powers up moves when the target is poisoned or badly poisoned.',
+    energy: 10
+  },
+  1012100037: {
+    cellId: 1012100037,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 2
+  },
+  1012100038: {
+    cellId: 1012100038,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1012100039: {
+    cellId: 1012100039,
+    name: 'Move Gauge Boost MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1012100040: {
+    cellId: 1012100040,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1012100041: {
+    cellId: 1012100041,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1012100042: {
+    cellId: 1012100042,
+    name: 'Move Gauge Boost Move Gauge Refresh 9',
+    description:
+      'Increases the user’s move gauge by one when a move is successful.',
+    energy: 10
+  },
+  1012100043: {
+    cellId: 1012100043,
+    name: 'Inertia',
+    description:
+      'The higher the user’s Speed, the more it powers up sync moves.',
+    energy: 7
+  },
+  1012100044: {
+    cellId: 1012100044,
+    name: 'Build Up',
+    description:
+      'Ensures that the user’s next attack will be a critical hit after using a sync move.',
+    energy: 7
+  },
+  1012100045: {
+    cellId: 1012100045,
+    name: 'Sp. Atk +30',
+    description: undefined,
+    energy: 10
+  },
+  1012100046: {
+    cellId: 1012100046,
+    name: 'Wicked Enforcer Acid Downpour: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1012100047: {
+    cellId: 1012100047,
+    name: 'Wicked Enforcer Acid Downpour: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1012500000: {
+    cellId: 1012500000,
+    name: 'HP +10',
+    description: undefined,
+    energy: 0
+  },
+  1012500001: {
+    cellId: 1012500001,
+    name: 'Attack +5',
+    description: undefined,
+    energy: 0
+  },
+  1012500002: {
+    cellId: 1012500002,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 0
+  },
+  1012500003: {
+    cellId: 1012500003,
+    name: 'Attack +5',
+    description: undefined,
+    energy: 0
+  },
+  1012500004: {
+    cellId: 1012500004,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 0
+  },
+  1012500005: {
+    cellId: 1012500005,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 0
+  },
+  1012500006: {
+    cellId: 1012500006,
+    name: 'Attack +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500007: {
+    cellId: 1012500007,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500008: {
+    cellId: 1012500008,
+    name: 'Dire Hit + MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1012500009: {
+    cellId: 1012500009,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500010: {
+    cellId: 1012500010,
+    name: 'Pin Missile Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1012500011: {
+    cellId: 1012500011,
+    name: 'Pin Missile: Power ↑ +1',
+    description: undefined,
+    energy: 2
+  },
+  1012500012: {
+    cellId: 1012500012,
+    name: 'Attack +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500013: {
+    cellId: 1012500013,
+    name: 'Pin Missile Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1012500014: {
+    cellId: 1012500014,
+    name: 'Pin Missile: Power ↑ +1',
+    description: undefined,
+    energy: 2
+  },
+  1012500015: {
+    cellId: 1012500015,
+    name: 'Pin Missile: Power ↑ +1',
+    description: undefined,
+    energy: 2
+  },
+  1012500016: {
+    cellId: 1012500016,
+    name: 'Pin Missile: Power ↑ +1',
+    description: undefined,
+    energy: 2
+  },
+  1012500017: {
+    cellId: 1012500017,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500018: {
+    cellId: 1012500018,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500019: {
+    cellId: 1012500019,
+    name: 'First Impression: Power ↑ +5',
+    description: undefined,
+    energy: 5
+  },
+  1012500020: {
+    cellId: 1012500020,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500021: {
+    cellId: 1012500021,
+    name: 'Burst In',
+    description:
+      'Ensures that the user’s next attack will be a critical hit when the Pokémon enters a battle.',
+    energy: 10
+  },
+  1012500022: {
+    cellId: 1012500022,
+    name: 'First Impression: Power ↑ +5',
+    description: undefined,
+    energy: 5
+  },
+  1012500023: {
+    cellId: 1012500023,
+    name: 'First Impression: Power ↑ +5',
+    description: undefined,
+    energy: 5
+  },
+  1012500024: {
+    cellId: 1012500024,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1012500025: {
+    cellId: 1012500025,
+    name: 'First Impression Mad Strength 4',
+    description:
+      'Has a good chance of raising the Pokémon’s Attack when one of its attacks is successful.',
+    energy: 7
+  },
+  1012500026: {
+    cellId: 1012500026,
+    name: 'First Impression: Power ↑ +5',
+    description: undefined,
+    energy: 5
+  },
+  1012500027: {
+    cellId: 1012500027,
+    name: 'First Impression Propulsion 4',
+    description:
+      'Has a good of reducing the user’s sync move countdown by one when the user’s move is successful.',
+    energy: 10
+  },
+  1012500028: {
+    cellId: 1012500028,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 3
+  },
+  1012500029: {
+    cellId: 1012500029,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 5
+  },
+  1012500030: {
+    cellId: 1012500030,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 3
+  },
+  1012500031: {
+    cellId: 1012500031,
+    name: 'On the Run 2',
+    description:
+      'Once per battle, sharply raises the user’s evasiveness in a pinch.',
+    energy: 7
+  },
+  1012500032: {
+    cellId: 1012500032,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 3
+  },
+  1012500033: {
+    cellId: 1012500033,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1012500034: {
+    cellId: 1012500034,
+    name: 'Your Boy’s X-Scissor: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1012500035: {
+    cellId: 1012500035,
+    name: 'Critastrophe 2',
+    description: 'Powers up sync moves if they become critical hits.',
+    energy: 10
+  },
+  1012500036: {
+    cellId: 1012500036,
+    name: 'No Quarter',
+    description:
+      'Maximizes the number of times multistrike moves hit when the user’s multistrike move is successful.',
+    energy: 15
+  },
+  1012500037: {
+    cellId: 1012500037,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1012500038: {
+    cellId: 1012500038,
+    name: 'HP +20',
+    description: undefined,
+    energy: 4
+  },
+  1012500039: {
+    cellId: 1012500039,
+    name: 'Beat ’Em Down! MP Refresh 3',
+    description:
+      'Has a moderately good chance of restoring one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1012500040: {
+    cellId: 1012500040,
+    name: 'Beat ’Em Down! Barricade 1',
+    description: 'Raises the user’s Sp. Def when a move is successful.',
+    energy: 7
+  },
+  1012500041: {
+    cellId: 1012500041,
+    name: 'Vigilance',
+    description: 'The Pokémon is protected against critical hits.',
+    energy: 5
+  },
+  1012500042: {
+    cellId: 1012500042,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1012500043: {
+    cellId: 1012500043,
+    name: 'Your Boy’s X-Scissor: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1012500044: {
+    cellId: 1012500044,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1012500045: {
+    cellId: 1012500045,
+    name: 'First Aid 4',
+    description:
+      'Restores a bit of the Pokémon’s HP once during battle when the Pokémon is in a pinch.',
+    energy: 10
+  },
+  1012500046: {
+    cellId: 1012500046,
+    name: 'Your Boy’s X-Scissor: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1012500047: {
+    cellId: 1012500047,
+    name: 'Your Boy’s X-Scissor: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1013100000: {
+    cellId: 1013100000,
+    name: 'HP +10',
+    description: undefined,
+    energy: 0
+  },
+  1013100001: {
+    cellId: 1013100001,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1013100002: {
+    cellId: 1013100002,
+    name: 'Defense +5',
+    description: undefined,
+    energy: 0
+  },
+  1013100003: {
+    cellId: 1013100003,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 0
+  },
+  1013100004: {
+    cellId: 1013100004,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 0
+  },
+  1013100005: {
+    cellId: 1013100005,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 0
+  },
+  1013100006: {
+    cellId: 1013100006,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1013100007: {
+    cellId: 1013100007,
+    name: 'Electroweb: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1013100008: {
+    cellId: 1013100008,
+    name: 'Electroweb: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1013100009: {
+    cellId: 1013100009,
+    name: 'Electroweb: Power ↑ +4',
+    description: undefined,
+    energy: 2
+  },
+  1013100010: {
+    cellId: 1013100010,
+    name: 'Electroweb: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1013100011: {
+    cellId: 1013100011,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 3
+  },
+  1013100012: {
+    cellId: 1013100012,
+    name: 'Electroweb: Power ↑ +4',
+    description: undefined,
+    energy: 3
+  },
+  1013100013: {
+    cellId: 1013100013,
+    name: 'Electroweb Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1013100014: {
+    cellId: 1013100014,
+    name: 'Electroweb Satisfied Snarl 2',
+    description:
+      'Occasionally lowers the target’s Sp. Atk when a move targeting that opponent is successful.',
+    energy: 9
+  },
+  1013100015: {
+    cellId: 1013100015,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 5
+  },
+  1013100016: {
+    cellId: 1013100016,
+    name: 'Mud-Slap Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 5
+  },
+  1013100017: {
+    cellId: 1013100017,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1013100018: {
+    cellId: 1013100018,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1013100019: {
+    cellId: 1013100019,
+    name: 'Activate! MP Refresh 2',
+    description:
+      'Occasionally restores one MP of the move used if the move is successful.',
+    energy: 8
+  },
+  1013100020: {
+    cellId: 1013100020,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1013100021: {
+    cellId: 1013100021,
+    name: 'Sp. Atk +5',
+    description: undefined,
+    energy: 3
+  },
+  1013100022: {
+    cellId: 1013100022,
+    name: 'Activate! MP Refresh 2',
+    description:
+      'Occasionally restores one MP of the move used if the move is successful.',
+    energy: 7
+  },
+  1013100023: {
+    cellId: 1013100023,
+    name: 'Cakewalk',
+    description:
+      'The more the target’s Speed is lowered, the more it powers up sync moves.',
+    energy: 7
+  },
+  1013100024: {
+    cellId: 1013100024,
+    name: 'Surging Sand 5',
+    description: 'Powers up moves in a sandstorm.',
+    energy: 7
+  },
+  1013100025: {
+    cellId: 1013100025,
+    name: 'Sands of Time 2',
+    description: 'Quickly charges the move gauge in a sandstorm.',
+    energy: 8
+  },
+  1013100026: {
+    cellId: 1013100026,
+    name: 'Sp. Def +5',
+    description: undefined,
+    energy: 2
+  },
+  1013100027: {
+    cellId: 1013100027,
+    name: 'Refreshing Rain 1',
+    description:
+      'Restores the Pokémon’s HP whenever it takes an action when the weather is rainy.',
+    energy: 6
+  },
+  1013100028: {
+    cellId: 1013100028,
+    name: 'Defense +10',
+    description: undefined,
+    energy: 4
+  },
+  1013100029: {
+    cellId: 1013100029,
+    name: 'Dizzying Power',
+    description:
+      'The more the target’s accuracy is lowered, the more it powers up moves.',
+    energy: 7
+  },
+  1013100030: {
+    cellId: 1013100030,
+    name: 'HP +20',
+    description: undefined,
+    energy: 5
+  },
+  1013100031: {
+    cellId: 1013100031,
+    name: 'Sp. Def +10',
+    description: undefined,
+    energy: 4
+  },
+  1013100032: {
+    cellId: 1013100032,
+    name: 'Mud-Slap Ramp Up 1',
+    description: 'Raises the user’s Sp. Atk when a move is successful.',
+    energy: 8
+  },
+  1013100033: {
+    cellId: 1013100033,
+    name: 'Raging Rain 5',
+    description: 'Powers up moves when the weather is rainy.',
+    energy: 7
+  },
+  1013100034: {
+    cellId: 1013100034,
+    name: 'Parabolic Charge Master Healer 1',
+    description:
+      'Increases the amount of HP restored by the user’s healing moves.',
+    energy: 13
+  },
+  1013100035: {
+    cellId: 1013100035,
+    name: 'HP +10',
+    description: undefined,
+    energy: 2
+  },
+  1013100036: {
+    cellId: 1013100036,
+    name: 'Parabolic Charge: Power ↑ +2',
+    description: undefined,
+    energy: 2
+  },
+  1013100037: {
+    cellId: 1013100037,
+    name: 'Parabolic Charge: Power ↑ +2',
+    description: undefined,
+    energy: 3
+  },
+  1013100038: {
+    cellId: 1013100038,
+    name: 'Parabolic Charge: Power ↑ +2',
+    description: undefined,
+    energy: 2
+  },
+  1013100039: {
+    cellId: 1013100039,
+    name: 'Parabolic Charge: Power ↑ +2',
+    description: undefined,
+    energy: 3
+  },
+  1013100040: {
+    cellId: 1013100040,
+    name: 'Speed +5',
+    description: undefined,
+    energy: 2
+  },
+  1013100041: {
+    cellId: 1013100041,
+    name: 'Parabolic Charge: Power ↑ +2',
+    description: undefined,
+    energy: 3
+  },
+  1013100042: {
+    cellId: 1013100042,
+    name: 'Parabolic Charge Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 6
+  },
+  1013100043: {
+    cellId: 1013100043,
+    name: 'Speed +10',
+    description: undefined,
+    energy: 4
+  },
+  1013100044: {
+    cellId: 1013100044,
+    name: 'Sp. Atk +10',
+    description: undefined,
+    energy: 5
+  },
+  1013100045: {
+    cellId: 1013100045,
+    name: 'Mud-Slap Move Gauge Refresh 3',
+    description:
+      'Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.',
+    energy: 5
+  },
+  1013100046: {
+    cellId: 1013100046,
+    name: 'Light-Up-the-World Thunderbolt: Power ↑ +25',
+    description: undefined,
+    energy: 5
+  },
+  1013100047: {
+    cellId: 1013100047,
+    name: 'Light-Up-the-World Thunderbolt: Power ↑ +25',
     description: undefined,
     energy: 5
   },

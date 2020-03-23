@@ -280,6 +280,7 @@ class GridMap extends Component {
       //   description: cell.move.description,
       //   energy: cell.move.energyCost
       // };
+
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -339,6 +340,8 @@ class GridMap extends Component {
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes } = this.props;
+
+    // console.log(gridUrlLookUpData); // Used this to generate data/grids/allDisplacedGridData. TODO: refactor
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
