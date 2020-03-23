@@ -15,7 +15,13 @@ const listOfPokemonsWithId = [
   { name: 'Houndoom', id: 20022901, characterId: 10062000000 },
   { name: 'Raichu', id: 20002661, characterId: 10098000000 },
   { name: 'Rotom', id: 20047911, characterId: 10106100000 },
-  { name: 'Alakazam', id: 20006500, characterId: 10114000000 }
+  { name: 'Alakazam', id: 20006500, characterId: 10114000000 },
+  { name: 'Reuniclus', id: 20057901, characterId: 10095000000 },
+  { name: 'Meowstic', id: 20073300, characterId: 10003000000 },
+  { name: 'Masquerain', id: 20028301, characterId: 10039000000 },
+  { name: 'Salazzle', id: 20080601, characterId: 10121000000 },
+  { name: 'Golisopod', id: 20086700, characterId: 10125000000 },
+  { name: 'Heliolisk', id: 20073200, characterId: 10131000000 }
 ];
 
 let pokemonNameList = listOfPokemonsWithId

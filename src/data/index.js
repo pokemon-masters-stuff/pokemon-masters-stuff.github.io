@@ -1,5 +1,7 @@
 export { pokemonNameList, listOfPokemonsWithId } from './pokemonList';
+export { default as shortenedMoveNameByCellId } from './shortenedMoveNameByCellId';
 export { default as allDisplayedGridData } from './grids/allDisplayedGridData';
+
 export { default as pikachuGridData } from './grids/pikachu.json';
 export { default as torkoalGridData } from './grids/torkoal.json';
 export { default as infernapeGridData } from './grids/infernape.json';
@@ -17,4 +19,9 @@ export { default as rotomGridData } from './grids/rotom.json';
 export { default as houndoomGridData } from './grids/houndoom.json';
 export { default as raichuGridData } from './grids/raichu.json';
 export { default as alakazamGridData } from './grids/alakazam.json';
-export { default as shortenedMoveNameByCellId } from './shortenedMoveNameByCellId';
+export { default as helioliskGridData } from './grids/heliolisk.json';
+export { default as golisopodGridData } from './grids/golisopod.json';
+export { default as salazzleGridData } from './grids/salazzle.json';
+export { default as masquerainGridData } from './grids/masquerain.json';
+export { default as meowsticGridData } from './grids/meowstic.json';
+export { default as reuniclusGridData } from './grids/reuniclus.json';
