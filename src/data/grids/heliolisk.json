@@ -1,0 +1,1022 @@
+[
+  {
+    "cellId": 1013100000,
+    "coords": { "q": 1, "r": -1 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": { "name": "HP +10", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1013100001,
+    "coords": { "q": 1, "r": 0 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1013100002,
+    "coords": { "q": 0, "r": 1 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "Defense +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1013100003,
+    "coords": { "q": -1, "r": 1 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1013100004,
+    "coords": { "q": -1, "r": 0 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1013100005,
+    "coords": { "q": 0, "r": -1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1013100006,
+    "coords": { "q": 1, "r": -2 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1013100007,
+    "coords": { "q": 2, "r": -3 },
+    "ability": {
+      "abilityId": 2100527004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 527,
+      "value": 4,
+      "u6": 99299926
+    },
+    "move": {
+      "name": "Electroweb: Power ↑ +4",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1013100008,
+    "coords": { "q": 3, "r": -4 },
+    "ability": {
+      "abilityId": 2100527004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 527,
+      "value": 4,
+      "u6": 99299926
+    },
+    "move": {
+      "name": "Electroweb: Power ↑ +4",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1013100009,
+    "coords": { "q": 1, "r": -3 },
+    "ability": {
+      "abilityId": 2100527004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 527,
+      "value": 4,
+      "u6": 99299926
+    },
+    "move": {
+      "name": "Electroweb: Power ↑ +4",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1013100010,
+    "coords": { "q": 2, "r": -4 },
+    "ability": {
+      "abilityId": 2100527004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 527,
+      "value": 4,
+      "u6": 99299926
+    },
+    "move": {
+      "name": "Electroweb: Power ↑ +4",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1013100011,
+    "coords": { "q": 3, "r": -5 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 3, "orbCost": 36 }
+  },
+  {
+    "cellId": 1013100012,
+    "coords": { "q": 1, "r": -4 },
+    "ability": {
+      "abilityId": 2100527004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 527,
+      "value": 4,
+      "u6": 99299926
+    },
+    "move": {
+      "name": "Electroweb: Power ↑ +4",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1013100013,
+    "coords": { "q": 2, "r": -5 },
+    "ability": {
+      "abilityId": 1202010300527,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 527,
+      "value": 0,
+      "u6": 98999951
+    },
+    "move": {
+      "name": "Move: Electroweb\nMove Gauge Refresh 3",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1013100014,
+    "coords": { "q": 3, "r": -6 },
+    "ability": {
+      "abilityId": 1804220200527,
+      "type": 8,
+      "passiveId": 18042202,
+      "moveId": 527,
+      "value": 0,
+      "u6": 98999861
+    },
+    "move": {
+      "name": "Move: Electroweb\nSatisfied Snarl 2",
+      "moveId": 527,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 39,
+      "accuracy": 95,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Occasionally lowers the target’s Sp. Atk when a move targeting that opponent is successful.",
+      "energyCost": 9,
+      "orbCost": 108
+    }
+  },
+  {
+    "cellId": 1013100015,
+    "coords": { "q": 1, "r": -5 },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": { "name": "Sp. Atk +10", "energyCost": 5, "orbCost": 60 }
+  },
+  {
+    "cellId": 1013100016,
+    "coords": { "q": 2, "r": -6 },
+    "ability": {
+      "abilityId": 1202010300189,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 189,
+      "value": 0,
+      "u6": 98999972
+    },
+    "move": {
+      "name": "Move: Mud-Slap\nMove Gauge Refresh 3",
+      "moveId": 189,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 1,
+      "power": 13,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1013100017,
+    "coords": { "q": -2, "r": 1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1013100018,
+    "coords": { "q": -3, "r": 2 },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": { "name": "Sp. Def +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1013100019,
+    "coords": { "q": -2, "r": 2 },
+    "ability": {
+      "abilityId": 1306020211310,
+      "type": 8,
+      "passiveId": 13060202,
+      "moveId": 11310,
+      "value": 0,
+      "u6": 98999917
+    },
+    "move": {
+      "name": "Move: Activate!\nMP Refresh 2",
+      "moveId": 11310,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Occasionally restores one MP of the move used if the move is successful.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1013100020,
+    "coords": { "q": -3, "r": 3 },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99899998
+    },
+    "move": { "name": "HP +20", "energyCost": 5, "orbCost": 60 }
+  },
+  {
+    "cellId": 1013100021,
+    "coords": { "q": -1, "r": 2 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "Sp. Atk +5", "energyCost": 3, "orbCost": 36 }
+  },
+  {
+    "cellId": 1013100022,
+    "coords": { "q": -2, "r": 3 },
+    "ability": {
+      "abilityId": 1306020211310,
+      "type": 8,
+      "passiveId": 13060202,
+      "moveId": 11310,
+      "value": 0,
+      "u6": 98999917
+    },
+    "move": {
+      "name": "Move: Activate!\nMP Refresh 2",
+      "moveId": 11310,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Occasionally restores one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1013100023,
+    "coords": { "q": -3, "r": 4 },
+    "ability": {
+      "abilityId": 1601130100000,
+      "type": 7,
+      "passiveId": 16011301,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099927
+    },
+    "move": {
+      "name": "Cakewalk",
+      "description": "The more the target’s Speed is lowered, the more it powers up sync moves.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1013100024,
+    "coords": { "q": -1, "r": 3 },
+    "ability": {
+      "abilityId": 1301020500000,
+      "type": 7,
+      "passiveId": 13010205,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099979
+    },
+    "move": {
+      "name": "Surging Sand 5",
+      "description": "Powers up moves in a sandstorm.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1013100025,
+    "coords": { "q": -2, "r": 4 },
+    "ability": {
+      "abilityId": 1201040200000,
+      "type": 7,
+      "passiveId": 12010402,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099990
+    },
+    "move": {
+      "name": "Sands of Time 2",
+      "description": "Quickly charges the move gauge in a sandstorm.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1013100026,
+    "coords": { "q": 2, "r": -1 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1013100027,
+    "coords": { "q": 3, "r": -1 },
+    "ability": {
+      "abilityId": 1704150100000,
+      "type": 7,
+      "passiveId": 17041501,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099913
+    },
+    "move": {
+      "name": "Refreshing Rain 1",
+      "description": "Restores the Pokémon’s HP whenever it takes an action when the weather is rainy.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1013100028,
+    "coords": { "q": 2, "r": 0 },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99699998
+    },
+    "move": { "name": "Defense +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1013100029,
+    "coords": { "q": 3, "r": 0 },
+    "ability": {
+      "abilityId": 1301300100000,
+      "type": 7,
+      "passiveId": 13013001,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099950
+    },
+    "move": {
+      "name": "Dizzying Power",
+      "description": "The more the target’s accuracy is lowered, the more it powers up moves.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1013100030,
+    "coords": { "q": 1, "r": 1 },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99899998
+    },
+    "move": { "name": "HP +20", "energyCost": 5, "orbCost": 60 }
+  },
+  {
+    "cellId": 1013100031,
+    "coords": { "q": 2, "r": 1 },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": { "name": "Sp. Def +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1013100032,
+    "coords": { "q": 3, "r": 1 },
+    "ability": {
+      "abilityId": 1804400100189,
+      "type": 8,
+      "passiveId": 18044001,
+      "moveId": 189,
+      "value": 0,
+      "u6": 98999851
+    },
+    "move": {
+      "name": "Move: Mud-Slap\nRamp Up 1",
+      "moveId": 189,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 1,
+      "power": 13,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Raises the user’s Sp. Atk when a move is successful.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1013100033,
+    "coords": { "q": 1, "r": 2 },
+    "ability": {
+      "abilityId": 1301160500000,
+      "type": 7,
+      "passiveId": 13011605,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099965
+    },
+    "move": {
+      "name": "Raging Rain 5",
+      "description": "Powers up moves when the weather is rainy.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1013100034,
+    "coords": { "q": 2, "r": 2 },
+    "ability": {
+      "abilityId": 1101020100570,
+      "type": 8,
+      "passiveId": 11010201,
+      "moveId": 570,
+      "value": 0,
+      "u6": 98999999
+    },
+    "move": {
+      "name": "Move: Parabolic Charge\nMaster Healer 1",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "description": "Increases the amount of HP restored by the user’s healing moves.",
+      "energyCost": 13,
+      "orbCost": 156
+    }
+  },
+  {
+    "cellId": 1013100035,
+    "coords": { "q": -1, "r": -1 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": { "name": "HP +10", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1013100036,
+    "coords": { "q": -2, "r": -1 },
+    "ability": {
+      "abilityId": 2100570002,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 570,
+      "value": 2,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Parabolic Charge: Power ↑ +2",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1013100037,
+    "coords": { "q": -3, "r": -1 },
+    "ability": {
+      "abilityId": 2100570002,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 570,
+      "value": 2,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Parabolic Charge: Power ↑ +2",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1013100038,
+    "coords": { "q": -1, "r": -2 },
+    "ability": {
+      "abilityId": 2100570002,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 570,
+      "value": 2,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Parabolic Charge: Power ↑ +2",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1013100039,
+    "coords": { "q": -2, "r": -2 },
+    "ability": {
+      "abilityId": 2100570002,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 570,
+      "value": 2,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Parabolic Charge: Power ↑ +2",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1013100040,
+    "coords": { "q": -3, "r": -2 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "Speed +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1013100041,
+    "coords": { "q": -1, "r": -3 },
+    "ability": {
+      "abilityId": 2100570002,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 570,
+      "value": 2,
+      "u6": 99299922
+    },
+    "move": {
+      "name": "Parabolic Charge: Power ↑ +2",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1013100042,
+    "coords": { "q": -2, "r": -3 },
+    "ability": {
+      "abilityId": 1202010300570,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 570,
+      "value": 0,
+      "u6": 98999949
+    },
+    "move": {
+      "name": "Move: Parabolic Charge\nMove Gauge Refresh 3",
+      "moveId": 570,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 4,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 46,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 512,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1013100043,
+    "coords": { "q": -3, "r": -3 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": { "name": "Speed +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1013100044,
+    "coords": { "q": -1, "r": -4 },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": { "name": "Sp. Atk +10", "energyCost": 5, "orbCost": 60 }
+  },
+  {
+    "cellId": 1013100045,
+    "coords": { "q": -2, "r": -4 },
+    "ability": {
+      "abilityId": 1202010300189,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 189,
+      "value": 0,
+      "u6": 98999972
+    },
+    "move": {
+      "name": "Move: Mud-Slap\nMove Gauge Refresh 3",
+      "moveId": 189,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 1,
+      "power": 13,
+      "accuracy": 90,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1013100046,
+    "coords": { "q": 0, "r": -3 },
+    "ability": {
+      "abilityId": 2178300025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 78300,
+      "value": 25,
+      "u6": 99299890
+    },
+    "move": {
+      "name": "Light-Up-the-World\nThunderbolt: Power ↑ +25",
+      "moveId": 78300,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 4,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1013100047,
+    "coords": { "q": 0, "r": 3 },
+    "ability": {
+      "abilityId": 2178300025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 78300,
+      "value": 25,
+      "u6": 99299890
+    },
+    "move": {
+      "name": "Light-Up-the-World\nThunderbolt: Power ↑ +25",
+      "moveId": 78300,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 4,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  }
+]
