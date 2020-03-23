@@ -13,6 +13,7 @@ import {
   addSyncLvReq
 } from '../../utils/functions';
 import {
+  allDisplayedGridData,
   pikachuGridData,
   torkoalGridData,
   infernapeGridData,
@@ -30,7 +31,12 @@ import {
   houndoomGridData,
   raichuGridData,
   alakazamGridData,
-  allDisplayedGridData
+  helioliskGridData,
+  golisopodGridData,
+  salazzleGridData,
+  masquerainGridData,
+  meowsticGridData,
+  reuniclusGridData
 } from '../../data';
 import {
   selectPokemon,
@@ -59,7 +65,13 @@ import {
   serperior,
   liepard,
   palossand,
-  haxorus
+  haxorus,
+  masquerain,
+  reuniclus,
+  heliolisk,
+  meowstic,
+  salazzle,
+  golisopod
 } from '../../images/PokemonThumbnails';
 
 const allThumbnails = {
@@ -79,7 +91,13 @@ const allThumbnails = {
   serperior,
   liepard,
   palossand,
-  haxorus
+  haxorus,
+  masquerain,
+  reuniclus,
+  heliolisk,
+  meowstic,
+  salazzle,
+  golisopod
 };
 
 const allSyncGrids = {
@@ -99,7 +117,13 @@ const allSyncGrids = {
   rotomGridData,
   houndoomGridData,
   raichuGridData,
-  alakazamGridData
+  alakazamGridData,
+  helioliskGridData,
+  golisopodGridData,
+  salazzleGridData,
+  masquerainGridData,
+  meowsticGridData,
+  reuniclusGridData
 };
 
 // const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;

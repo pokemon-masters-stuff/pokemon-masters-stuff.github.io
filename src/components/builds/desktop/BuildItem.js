@@ -44,7 +44,13 @@ import {
   rotomGridData,
   houndoomGridData,
   raichuGridData,
-  alakazamGridData
+  alakazamGridData,
+  helioliskGridData,
+  golisopodGridData,
+  salazzleGridData,
+  masquerainGridData,
+  meowsticGridData,
+  reuniclusGridData
 } from '../../../data';
 import {} from '../../../actions/actionCreators';
 import {
@@ -64,7 +70,13 @@ import {
   serperior,
   liepard,
   palossand,
-  haxorus
+  haxorus,
+  masquerain,
+  reuniclus,
+  heliolisk,
+  meowstic,
+  salazzle,
+  golisopod
 } from '../../../images/PokemonThumbnails';
 
 const allThumbnails = {
@@ -84,7 +96,13 @@ const allThumbnails = {
   serperior,
   liepard,
   palossand,
-  haxorus
+  haxorus,
+  masquerain,
+  reuniclus,
+  heliolisk,
+  meowstic,
+  salazzle,
+  golisopod
 };
 
 const allSyncGrids = {
@@ -104,7 +122,13 @@ const allSyncGrids = {
   rotomGridData,
   houndoomGridData,
   raichuGridData,
-  alakazamGridData
+  alakazamGridData,
+  helioliskGridData,
+  golisopodGridData,
+  salazzleGridData,
+  masquerainGridData,
+  meowsticGridData,
+  reuniclusGridData
 };
 
 class BuildItem extends Component {
