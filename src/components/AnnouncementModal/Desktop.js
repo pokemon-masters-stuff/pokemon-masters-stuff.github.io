@@ -22,9 +22,9 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
-            3/20/2020:
+            3/23/2020:
             <br />
-            Share your builds with the community, and check out what's popular!
+            Added new sync grids.
           </div>
           {/* <div className="modal-footer d-flex justify-content-center">
             <a href="https://pokemon-masters-stuff.herokuapp.com/">
