@@ -537,10 +537,12 @@ class BuildItem extends Component {
                 >
                   {build.description || 'None'}
                 </p>
-                <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                  Date:{' '}
-                </span>
-                <span>{build.date.substring(0, 10)}</span>
+                <p>
+                  <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
+                    Date:{' '}
+                  </span>
+                  <span>{build.date.substring(0, 10)}</span>
+                </p>
               </div>
             </div>
           </div>
