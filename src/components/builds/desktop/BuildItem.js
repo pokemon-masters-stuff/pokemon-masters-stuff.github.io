@@ -527,9 +527,16 @@ class BuildItem extends Component {
                 <Typography style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                   Description:
                 </Typography>
-                <p style={{ whiteSpace: 'pre-line', paddingRight: 10 }}>
+                <Typography
+                  style={{
+                    display: 'inline-block',
+                    wordBreak: 'break-word',
+                    whiteSpace: 'pre-line',
+                    paddingRight: 10
+                  }}
+                >
                   {build.description || 'None'}
-                </p>
+                </Typography>
                 <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                   Date:{' '}
                 </span>

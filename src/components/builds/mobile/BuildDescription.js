@@ -18,7 +18,9 @@ const BuildDescription = ({ classes, build }) => {
         </Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
-        <Typography>
+        <Typography
+          style={{ display: 'inline-block', wordBreak: 'break-word' }}
+        >
           <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
             Remaining Energy:{' '}
           </span>
