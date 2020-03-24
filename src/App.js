@@ -16,6 +16,7 @@ import { theme, darkTheme } from './theme';
 import { useSelector } from 'react-redux';
 import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/actionCreators';
+import withTracker from './utils/withTracker';
 import Box from '@material-ui/core/Box';
 
 export default function App({ store }) {
@@ -33,11 +34,11 @@ export default function App({ store }) {
         <Hidden smDown>
           <NavigationDesktop />
           <DarkModeToggleDesktop />
-          <Route exact path="/" component={DesktopLayout} />
+          <Route exact path="/" component={withTracker(DesktopLayout)} />
           <PrivateRoute
             path="/builds"
             screenSize={'large'}
-            component={BuildsDesktop}
+            component={withTracker(BuildsDesktop)}
           />
           <div className="container container-s">
             <Box>
@@ -64,8 +65,11 @@ export default function App({ store }) {
         </Hidden>
         <Hidden mdUp>
           <Box>
-            <Route exact path="/" component={MobileLayout} />
-            <PrivateRoute path="/builds" component={BuildsMobile} />
+            <Route exact path="/" component={withTracker(MobileLayout)} />
+            <PrivateRoute
+              path="/builds"
+              component={withTracker(BuildsMobile)}
+            />
             <PrivateRoute
               exact
               path="/builds/popular"

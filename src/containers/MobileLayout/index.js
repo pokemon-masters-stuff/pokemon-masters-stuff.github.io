@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -53,9 +53,9 @@ class MobileApp extends Component {
 
   newBuildNameRef = React.createRef();
 
-  componentDidMount() {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }
+  // componentDidMount() {
+  //   ReactGA.pageview(window.location.pathname + window.location.search);
+  // }
 
   handleOnCloseNav = () => this.setState({ isNavOpened: false });
 

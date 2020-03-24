@@ -19,7 +19,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 const useStyles = makeStyles({
   root: {
@@ -46,7 +46,7 @@ const Builds = props => {
   const darkMode = useSelector(state => state.darkMode.mode);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    // ReactGA.pageview(window.location.pathname + window.location.search);
     if (props.history) {
       if (props.history.location.pathname === '/builds/liked') {
         setValue(1);
