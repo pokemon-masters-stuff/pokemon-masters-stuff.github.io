@@ -20,14 +20,25 @@ const Comments = ({ classes, build }) => {
           Comments ({build.comments.length || 0})
         </Typography>
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails style={{ flexDirection: 'column' }}>
+      <ExpansionPanelDetails
+        style={{
+          flexDirection: 'column',
+          paddingLeft: 10,
+          paddingRight: 10,
+          display: 'inline-block',
+          width: '100%',
+          wordBreak: 'break-word',
+          whiteSpace: 'pre-line'
+        }}
+      >
         {build.comments
           .sort((a, b) => new Date(a.date) - new Date(b.date))
           .map(comment => (
             <CommentItem key={comment._id} build={build} comment={comment} />
           ))}
+        <div style={{ height: 25 }}></div>
         <Button
-          style={{ marginTop: 10 }}
+          style={{ width: 300, left: '50%', transform: 'translateX(-50%)' }}
           variant="outlined"
           data-toggle="modal"
           data-target={`#addComment${build._id}`}
