@@ -48,5 +48,10 @@ export default createStyles(theme => ({
   subToolbar: {
     background: theme.palette.background.paper,
     color: theme.palette.common.black
+  },
+  expanded: {
+    '&$expanded': {
+      margin: 0
+    }
   }
 }));

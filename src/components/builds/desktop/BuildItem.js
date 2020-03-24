@@ -16,6 +16,7 @@ import ShareBuildModal from '../common/ShareBuildModal';
 import EditBuildModal from '../common/EditBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
+import Comments from '../common/Comments';
 import styles from './styles';
 import {
   getFillColorByMoveType,
@@ -162,6 +163,7 @@ class BuildItem extends Component {
       this.state.initialRender ||
       this.state.mouseEntered !== nextState.mouseEntered ||
       this.props.build.likes !== nextProps.build.likes ||
+      this.props.build.comments !== nextProps.build.comments ||
       this.props.build.description !== nextProps.build.description ||
       this.props.darkMode !== nextProps.darkMode
     );
@@ -320,18 +322,6 @@ class BuildItem extends Component {
     ) : null;
   };
 
-  renderEditAndDeleteIcon = (build, currentUser) => {
-    return currentUser._id === build.user ? (
-      <IconButton
-        value={build}
-        onClick={this.handleClick.bind(this, build)}
-        style={{ marginLeft: 1 }}
-      >
-        <EditIcon />
-      </IconButton>
-    ) : null;
-  };
-
   renderIcons = (build, currentUser) => {
     const arrayOfUsersLikedThisBuild = build.likes.map(like => {
       return like.user;
@@ -346,7 +336,7 @@ class BuildItem extends Component {
               <IconButton
                 value={build}
                 data-toggle="modal"
-                data-target={`#editLinkModal${build._id}`}
+                data-target={`#editBuildModal${build._id}`}
               >
                 <EditIcon />
               </IconButton>
@@ -547,6 +537,8 @@ class BuildItem extends Component {
               </div>
             </div>
           </div>
+
+          <Comments build={build} classes={classes} />
         </Paper>
       </div>
     );

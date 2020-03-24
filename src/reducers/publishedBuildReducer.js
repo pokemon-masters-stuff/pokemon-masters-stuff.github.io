@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 import {
   GET_BUILDS,
   GET_LIKED_BUILDS,
@@ -9,6 +7,8 @@ import {
   DELETE_BUILD,
   CLEAR_BUILDS,
   BUILD_ERROR,
+  ADD_COMMENT,
+  DELETE_COMMENT,
   UPDATE_LIKES,
   CHANGE_FILTER,
   CHANGE_SORT
@@ -72,6 +72,33 @@ export default function(state = initialState, action) {
       return {
         ...state,
         builds: state.builds.filter(build => build._id !== action.payload),
+        loading: false
+      };
+    case ADD_COMMENT:
+      const updatedBuildsWithNewComment = state.builds.map(build => {
+        return build._id === action.payload.buildId
+          ? { ...build, comments: action.payload.data }
+          : build;
+      });
+      return {
+        ...state,
+        builds: updatedBuildsWithNewComment,
+        loading: false
+      };
+    case DELETE_COMMENT:
+      const updatedBuildsAfterRemovingComment = state.builds.map(build => {
+        return build._id === action.payload.buildId
+          ? {
+              ...build,
+              comments: build.comments.filter(
+                comment => comment._id !== action.payload.commentId
+              )
+            }
+          : build;
+      });
+      return {
+        ...state,
+        builds: updatedBuildsAfterRemovingComment,
         loading: false
       };
     case CHANGE_FILTER:

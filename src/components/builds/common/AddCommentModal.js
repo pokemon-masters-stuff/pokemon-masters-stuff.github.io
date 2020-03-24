@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { editBuild } from '../../../actions/actionCreators';
+import { addComment } from '../../../actions/actionCreators';
 
-const EditBuildModal = ({ index, description }) => {
+const AddCommentModal = ({ index }) => {
   const dispatch = useDispatch();
   const darkMode = useSelector(state => state.darkMode.mode);
-  const [desc, setDesc] = useState(description);
+  const [text, setText] = useState('');
 
   const onChange = e => {
-    setDesc(e.target.value);
+    setText(e.target.value);
   };
 
-  const onSubmit = () => {
-    dispatch(editBuild(index, desc));
+  const onSubmit = e => {
+    dispatch(addComment(index, text));
+    setText('');
   };
 
   return (
     <div
       className="modal fade"
-      id={`editBuildModal${index}`}
+      id={`addComment${index}`}
       tabIndex="-1"
       role="dialog"
       aria-labelledby="myModalLabel"
@@ -30,9 +31,7 @@ const EditBuildModal = ({ index, description }) => {
           className={`modal-content ${darkMode ? 'text-white bg-dark' : null}`}
         >
           <div className="modal-header text-center">
-            <h4 className="modal-title w-100 font-weight-bold">
-              Edit description
-            </h4>
+            <h4 className="modal-title w-100 font-weight-bold">Add Comment</h4>
           </div>
           <div className="modal-body mx-3">
             <div className="form-group">
@@ -41,10 +40,10 @@ const EditBuildModal = ({ index, description }) => {
                 className={`form-control ${
                   darkMode ? 'text-white bg-dark' : null
                 }`}
-                id="desc"
-                value={desc}
+                id="text"
+                value={text}
                 onChange={onChange}
-                rows={12}
+                rows={6}
               />
             </div>
           </div>
@@ -63,4 +62,4 @@ const EditBuildModal = ({ index, description }) => {
   );
 };
 
-export default EditBuildModal;
+export default AddCommentModal;

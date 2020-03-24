@@ -32,6 +32,8 @@ import {
   EDIT_BUILD,
   DELETE_BUILD,
   CLEAR_BUILDS,
+  ADD_COMMENT,
+  DELETE_COMMENT,
   BUILD_ERROR,
   CHANGE_FILTER,
   CHANGE_SORT
@@ -389,7 +391,7 @@ export const editBuild = (id, description) => async dispatch => {
   }
 };
 
-// Delete post
+// Delete build
 export const deleteBuild = id => async dispatch => {
   try {
     await axios.delete(
@@ -402,6 +404,61 @@ export const deleteBuild = id => async dispatch => {
     });
 
     dispatch(setAlert('Build Removed', 'success'));
+  } catch (err) {
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
+// Add comment
+export const addComment = (buildId, text) => async dispatch => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  const body = JSON.stringify({ text });
+  try {
+    const res = await axios.post(
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/comment/${buildId}`,
+      body,
+      config
+    );
+
+    dispatch({
+      type: ADD_COMMENT,
+      payload: { buildId: buildId, data: res.data }
+    });
+
+    dispatch(setAlert('Comment Added', 'success'));
+  } catch (err) {
+    const errors = err.response.data.errors;
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+    }
+
+    dispatch({
+      type: BUILD_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
+// Delete comment
+export const deleteComment = (buildId, commentId) => async dispatch => {
+  try {
+    await axios.delete(
+      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/comment/${buildId}/${commentId}`
+    );
+
+    dispatch({
+      type: DELETE_COMMENT,
+      payload: { buildId, commentId }
+    });
+
+    dispatch(setAlert('Comment Removed', 'success'));
   } catch (err) {
     dispatch({
       type: BUILD_ERROR,

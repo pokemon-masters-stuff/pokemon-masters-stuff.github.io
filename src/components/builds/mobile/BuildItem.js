@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -16,11 +15,8 @@ import ShareBuildModal from '../common/ShareBuildModal';
 import EditBuildModal from '../common/EditBuildModal';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import styles from './styles';
+import Comments from '../common/Comments';
 import {
   getFillColorByMoveType,
   renderMoveName,
@@ -82,6 +78,7 @@ import {
   salazzle,
   golisopod
 } from '../../../images/PokemonThumbnails';
+import BuildDescription from './BuildDescription';
 
 const allThumbnails = {
   charizard,
@@ -284,18 +281,6 @@ class BuildItem extends Component {
     ) : null;
   };
 
-  renderEditAndDeleteIcon = (build, currentUser) => {
-    return currentUser._id === build.user ? (
-      <IconButton
-        value={build}
-        onClick={this.handleClick.bind(this, build)}
-        style={{ marginLeft: 1 }}
-      >
-        <EditIcon />
-      </IconButton>
-    ) : null;
-  };
-
   renderIcons = (build, currentUser) => {
     const arrayOfUsersLikedThisBuild = build.likes.map(like => {
       return like.user;
@@ -309,7 +294,7 @@ class BuildItem extends Component {
             <IconButton
               value={build}
               data-toggle="modal"
-              data-target={`#editLinkModal${build._id}`}
+              data-target={`#editBuildModal${build._id}`}
             >
               <EditIcon />
             </IconButton>
@@ -408,43 +393,10 @@ class BuildItem extends Component {
               : { backgroundColor: 'black' }
           }
         >
-          <ExpansionPanel>
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography className={classes.heading}>
-                Description and Details
-              </Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                  Remaining Energy:{' '}
-                </span>
-                <span>{build.remainingEnergy}</span>
-                <br />
-                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                  Orbs Spent:{' '}
-                </span>
-                <span>{build.orbSpent}</span>
-                <br />
-                <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                  Description:{' '}
-                </span>
-                <br />
-                <span style={{ whiteSpace: 'pre-line' }}>
-                  {build.description || 'None'}
-                </span>
-                <br />
-                <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                  Date:{' '}
-                </span>
-                <span>{build.date.substring(0, 10)}</span>
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+          <BuildDescription build={build} classes={classes} />
+
+          <Comments build={build} classes={classes} />
+
           <div className="mt-3 pb-3">
             <HexGrid
               width={mapSizeBoundaries.width}

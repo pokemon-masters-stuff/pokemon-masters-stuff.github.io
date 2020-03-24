@@ -189,3 +189,7 @@ hr.rounded {
   border: none;
   z-index: 999;
 }
+
+.svg_delete_icons {
+  transform: scale(0.7);
+}

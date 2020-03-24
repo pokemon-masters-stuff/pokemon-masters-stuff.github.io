@@ -32,6 +32,6 @@ export const DELETE_BUILD = 'delete_build';
 export const CLEAR_BUILDS = 'clear_builds';
 export const ADD_BUILD = 'add_build';
 export const ADD_COMMENT = 'add_comment';
-export const REMOVE_COMMENT = 'remove_comment';
+export const DELETE_COMMENT = 'delete_comment';
 export const CHANGE_FILTER = 'change_filter';
 export const CHANGE_SORT = 'change_sort';
