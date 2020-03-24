@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import ReactGA from 'react-ga';
 import { SelectedSkillListDesktop } from '../../components/SelectedSkillList';
 import SelectPokemonDropdown from '../../components/SelectPokemonDropdown';
 import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
@@ -29,10 +28,6 @@ class DesktopLayout extends Component {
     this.props.selectPokemon(value);
     this.props.resetGrids();
   }
-
-  // componentDidMount() {
-  //   ReactGA.pageview(window.location.pathname + window.location.search);
-  // }
 
   handleOnChangeSavedBuild = value => {
     this.props.loadSelectedBuild({ buildId: value });

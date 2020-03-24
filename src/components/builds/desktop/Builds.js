@@ -10,7 +10,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-// import ReactGA from 'react-ga';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -30,7 +29,6 @@ const Builds = props => {
   const darkMode = useSelector(state => state.darkMode.mode);
 
   useEffect(() => {
-    // ReactGA.pageview(window.location.pathname + window.location.search);
     if (props.history) {
       if (props.history.location.pathname === '/builds/liked') {
         setValue(1);
