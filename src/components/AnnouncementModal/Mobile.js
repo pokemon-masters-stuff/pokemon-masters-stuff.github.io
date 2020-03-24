@@ -37,7 +37,9 @@ const AnnouncementModal = () => {
           <DialogContentText>
             3/23/2020:
             <br />
-            Added new sync grids.
+            1. Added new sync grids.
+            <br />
+            2. You can now comment on other people's builds.
           </DialogContentText>
         </DialogContent>
       </Dialog>
