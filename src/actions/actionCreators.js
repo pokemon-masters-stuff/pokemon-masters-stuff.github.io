@@ -175,6 +175,7 @@ export const register = ({ username, password }) => async dispatch => {
     if (errors) {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
+    dispatch(setLoading(false));
   }
 };
 
@@ -211,6 +212,7 @@ export const login = (username, password) => async dispatch => {
     if (errors) {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
+    dispatch(setLoading(false));
   }
 };
 

@@ -21,7 +21,7 @@ const CommentItem = ({ build, comment }) => {
       <IconButton
         value={comment}
         onClick={handleClickDelete}
-        style={{ margin: 0, padding: 0, float: 'right' }}
+        style={{ margin: 0, padding: 0, float: 'right', marginTop: -3 }}
       >
         <DeleteIcon className="svg_delete_icons" />
       </IconButton>
