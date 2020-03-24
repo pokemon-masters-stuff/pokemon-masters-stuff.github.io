@@ -85,8 +85,7 @@ class UsersBuilds extends Component {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginTop: 15,
-              marginBottom: 70
+              marginTop: 15
             }}
             count={totalPageCount}
             color="primary"
@@ -96,6 +95,7 @@ class UsersBuilds extends Component {
             No record found.
           </div>
         )}
+        <div style={{ height: '70px' }}></div>
       </Fragment>
     );
   }
