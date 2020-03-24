@@ -12,8 +12,6 @@ const CommentItem = ({ build, comment }) => {
   const currentUser = useSelector(state => state.auth.user);
 
   const handleClickDelete = () => {
-    console.log('build._id', build._id);
-    console.log('comment._id', comment._id);
     window.confirm('Are you sure you wish to delete this comment?') &&
       dispatch(deleteComment(build._id, comment._id));
   };
