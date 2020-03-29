@@ -9,11 +9,11 @@ const moveNameDB = require('../rawdata/MoveName.json');
 const moveDescriptionDB = require('../rawdata/MoveDescription.json');
 const passiveAbilityDescriptionDB = require('../rawdata/PassiveAbilityDescription.json');
 const passiveSkillDescriptionDB = require('../rawdata/PassiveSkillDescription.json');
-const triangularCoordsToCollumns = require("../utils/triangularCoordsToCollumns");
+const triangularCoordsToCollumns = require('../utils/triangularCoordsToCollumns');
 
 /*
-* Usage i.e: node extractAbilityByCharacterId.js --characterId=18000000000 --filename=pikachu
-* */
+ * Usage i.e: node extractAbilityByCharacterIdEN.js --characterId=18000000000 --filename=pikachu
+ * */
 
 const extractAbilityByCharacterId = () => {
   const abilities = [];
@@ -23,26 +23,20 @@ const extractAbilityByCharacterId = () => {
 
   abilityPanelDB.entries.forEach(entry => {
     if (entry.characterId === args.characterId) {
-      const {
-        cellId,
-        energyCost,
-        orbCost,
-        x,
-        y,
-        z,
-        abilityId,
-      } = entry;
-      const coords = triangularCoordsToCollumns({x, y, z});
+      const { cellId, energyCost, orbCost, x, y, z, abilityId } = entry;
+      const coords = triangularCoordsToCollumns({ x, y, z });
       let move = {};
 
-      ability = abilityDB.entries.find(ability => ability.abilityId === abilityId);
+      ability = abilityDB.entries.find(
+        ability => ability.abilityId === abilityId
+      );
 
       move.name = abilityDescriptionDB[ability.type];
 
       if (ability.moveId) {
         moveDB.entries.forEach(moveEntry => {
           if (moveEntry.moveId === ability.moveId) {
-            let updatedMove = {...moveEntry};
+            let updatedMove = { ...moveEntry };
             let moveName = moveNameDB[moveEntry.moveId]
               ? moveNameDB[moveEntry.moveId]
               : null;
@@ -50,11 +44,11 @@ const extractAbilityByCharacterId = () => {
             if (moveName) {
               updatedMove = {
                 ...updatedMove,
-                name: move.name.replace("[Name:Move ]", moveName)
+                name: move.name.replace('[Name:Move ]', moveName)
               };
             }
 
-            move = {...move, ...updatedMove};
+            move = { ...move, ...updatedMove };
           }
         });
       }
@@ -62,8 +56,11 @@ const extractAbilityByCharacterId = () => {
       if (ability.passiveId) {
         move = {
           ...move,
-          name: move.name.replace("[Name:AbilityDescription ]", passiveAbilityDescriptionDB[ability.passiveId]),
-          description: passiveSkillDescriptionDB[ability.passiveId],
+          name: move.name.replace(
+            '[Name:AbilityDescription ]',
+            passiveAbilityDescriptionDB[ability.passiveId]
+          ),
+          description: passiveSkillDescriptionDB[ability.passiveId]
         };
       }
 
@@ -78,17 +75,19 @@ const extractAbilityByCharacterId = () => {
           ...move,
           name: move.name.replace(/\[Digit:5digits \]/gi, `+${ability.value}`),
           energyCost,
-          orbCost,
-        },
+          orbCost
+        }
       });
     }
   });
 
   if (args.filename) {
-    fs.writeFile(`${__dirname}/../../src/data/grids/${args.filename}.json`, JSON.stringify(abilities),
-      (err) => {
+    fs.writeFile(
+      `${__dirname}/../../src/data/grids/${args.filename}.json`,
+      JSON.stringify(abilities),
+      err => {
         if (err) throw err;
-        console.log('Successfully written to file')
+        console.log('Successfully written to file');
       }
     );
   }

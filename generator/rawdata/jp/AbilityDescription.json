@@ -1,0 +1,12 @@
+{
+    "1": "HP[Digit:5digits ]",
+    "2": "こうげき[Digit:5digits ]",
+    "3": "ぼうぎょ[Digit:5digits ]",
+    "4": "とくこう[Digit:5digits ]",
+    "5": "とくぼう[Digit:5digits ]",
+    "6": "すばやさ[Digit:5digits ]",
+    "7": "[Name:AbilityDescription ]",
+    "8": "対象わざ：[Name:Move ]\n[Name:AbilityDescription ]",
+    "9": "[Name:Move ]：威力アップ[Digit:5digits ]",
+    "10": "[Name:Move ]：命中率アップ[Digit:5digits ]"
+}
