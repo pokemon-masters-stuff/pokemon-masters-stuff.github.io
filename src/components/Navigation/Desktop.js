@@ -5,6 +5,7 @@ import { FeedbackFormDesktop } from '../FeedbackForm';
 import { AnnouncementModalDesktop } from '../AnnouncementModal';
 import Logout from '../auth/Logout';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
+import { LanguageDropdownDesktop } from '../LanguageDropdown';
 
 const Navigation = () => {
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
@@ -61,6 +62,7 @@ const Navigation = () => {
         >
           Submit Feedback
         </button>
+        <LanguageDropdownDesktop />
         <FeedbackFormDesktop />
         {isAuthenticated ? (
           <Logout />

@@ -3,12 +3,12 @@ const fs = require('fs');
 
 const abilityPanelDB = require('../rawdata/AbilityPanel.json');
 const abilityDB = require('../rawdata/Ability.json');
-const abilityDescriptionDB = require('../rawdata/AbilityDescription.json');
+const abilityDescriptionDB = require('../rawdata/en/AbilityDescription.json');
 const moveDB = require('../rawdata/Move.json');
-const moveNameDB = require('../rawdata/MoveName.json');
-const moveDescriptionDB = require('../rawdata/MoveDescription.json');
-const passiveAbilityDescriptionDB = require('../rawdata/PassiveAbilityDescription.json');
-const passiveSkillDescriptionDB = require('../rawdata/PassiveSkillDescription.json');
+const moveNameDB = require('../rawdata/en/MoveName.json');
+const moveDescriptionDB = require('../rawdata/en/MoveDescription.json');
+const passiveAbilityDescriptionDB = require('../rawdata/en/PassiveSkillName.json');
+const passiveSkillDescriptionDB = require('../rawdata/en/PassiveSkillDescription.json');
 const triangularCoordsToCollumns = require('../utils/triangularCoordsToCollumns');
 
 /*
@@ -83,7 +83,7 @@ const extractAbilityByCharacterId = () => {
 
   if (args.filename) {
     fs.writeFile(
-      `${__dirname}/../../src/data/grids/${args.filename}.json`,
+      `${__dirname}/../../src/data/grids/en/${args.filename}.json`,
       JSON.stringify(abilities),
       err => {
         if (err) throw err;

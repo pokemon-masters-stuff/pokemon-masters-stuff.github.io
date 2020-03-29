@@ -13,6 +13,8 @@ export const LOAD_GRID_FROM_URL = 'load_grid_from_url';
 export const UPDATE_URL = 'update_url';
 export const CHANGE_MODE = 'change_mode';
 
+export const SET_LANGUAGE = 'set_language';
+
 export const SET_ALERT = 'set_alert';
 export const REMOVE_ALERT = 'remove_alert';
 export const SET_LOADING = 'set_loading';

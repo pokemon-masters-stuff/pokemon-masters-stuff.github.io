@@ -36,7 +36,8 @@ import {
   DELETE_COMMENT,
   BUILD_ERROR,
   CHANGE_FILTER,
-  CHANGE_SORT
+  CHANGE_SORT,
+  SET_LANGUAGE
 } from './types';
 
 export const selectPokemon = selectedPokemon => ({
@@ -481,4 +482,9 @@ export const changeSort = payload => ({
 
 export const clearBuilds = () => ({
   type: CLEAR_BUILDS
+});
+
+export const setLanguage = payload => ({
+  type: SET_LANGUAGE,
+  payload
 });

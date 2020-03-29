@@ -5,6 +5,7 @@ import darkModeReducer from './darkModeReducer';
 import alertReducer from './alertReducer';
 import authReducer from './authReducer';
 import publishedBuildReducer from './publishedBuildReducer';
+import languageReducer from './languageReducer';
 
 export default combineReducers({
   pokemon: pokemonReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
   darkMode: darkModeReducer,
   alert: alertReducer,
   auth: authReducer,
-  build: publishedBuildReducer
+  build: publishedBuildReducer,
+  language: languageReducer
 });

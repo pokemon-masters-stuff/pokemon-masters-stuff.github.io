@@ -1,0 +1,1053 @@
+[
+  {
+    "cellId": 1011400000,
+    "coords": { "q": 1, "r": -1 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": { "name": "HP+10", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1011400001,
+    "coords": { "q": 1, "r": 0 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "とくこう+5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1011400002,
+    "coords": { "q": 0, "r": 1 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "ぼうぎょ+5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1011400003,
+    "coords": { "q": -1, "r": 1 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "とくこう+5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1011400004,
+    "coords": { "q": -1, "r": 0 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "とくぼう+5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1011400005,
+    "coords": { "q": 0, "r": -1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99399999
+    },
+    "move": { "name": "すばやさ+5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1011400006,
+    "coords": { "q": 1, "r": -2 },
+    "ability": {
+      "abilityId": 1400000005,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99599999
+    },
+    "move": { "name": "とくこう+5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400007,
+    "coords": { "q": 2, "r": -3 },
+    "ability": {
+      "abilityId": 2100060004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60,
+      "value": 4,
+      "u6": 99299988
+    },
+    "move": {
+      "name": "サイケこうせん：威力アップ+4",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1011400008,
+    "coords": { "q": 1, "r": -3 },
+    "ability": {
+      "abilityId": 2100060004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60,
+      "value": 4,
+      "u6": 99299988
+    },
+    "move": {
+      "name": "サイケこうせん：威力アップ+4",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1011400009,
+    "coords": { "q": 3, "r": -4 },
+    "ability": {
+      "abilityId": 2100060004,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60,
+      "value": 4,
+      "u6": 99299988
+    },
+    "move": {
+      "name": "サイケこうせん：威力アップ+4",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400010,
+    "coords": { "q": 2, "r": -4 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": { "name": "すばやさ+10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1011400011,
+    "coords": { "q": 1, "r": -4 },
+    "ability": {
+      "abilityId": 2100060005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60,
+      "value": 5,
+      "u6": 99299987
+    },
+    "move": {
+      "name": "サイケこうせん：威力アップ+5",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400012,
+    "coords": { "q": 3, "r": -5 },
+    "ability": {
+      "abilityId": 2100060005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60,
+      "value": 5,
+      "u6": 99299987
+    },
+    "move": {
+      "name": "サイケこうせん：威力アップ+5",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400013,
+    "coords": { "q": 2, "r": -5 },
+    "ability": {
+      "abilityId": 1400000020,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 99599997
+    },
+    "move": { "name": "とくこう+20", "energyCost": 7, "orbCost": 84 }
+  },
+  {
+    "cellId": 1011400014,
+    "coords": { "q": 1, "r": -5 },
+    "ability": {
+      "abilityId": 2100060005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60,
+      "value": 5,
+      "u6": 99299987
+    },
+    "move": {
+      "name": "サイケこうせん：威力アップ+5",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400015,
+    "coords": { "q": 3, "r": -6 },
+    "ability": {
+      "abilityId": 1202010200060,
+      "type": 8,
+      "passiveId": 12020102,
+      "moveId": 60,
+      "value": 0,
+      "u6": 98999991
+    },
+    "move": {
+      "name": "対象わざ：サイケこうせん\nわざ後わざゲージ↑２",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "技が成功したときにたまに\n自分のわざゲージを１増やす",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1011400016,
+    "coords": { "q": 2, "r": -6 },
+    "ability": {
+      "abilityId": 1202010200060,
+      "type": 8,
+      "passiveId": 12020102,
+      "moveId": 60,
+      "value": 0,
+      "u6": 98999991
+    },
+    "move": {
+      "name": "対象わざ：サイケこうせん\nわざ後わざゲージ↑２",
+      "moveId": 60,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 48,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "技が成功したときにたまに\n自分のわざゲージを１増やす",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1011400017,
+    "coords": { "q": -2, "r": 2 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "ぼうぎょ+5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400018,
+    "coords": { "q": -3, "r": 3 },
+    "ability": {
+      "abilityId": 2100094005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 94,
+      "value": 5,
+      "u6": 99299970
+    },
+    "move": {
+      "name": "サイコキネシス：威力アップ+5",
+      "moveId": 94,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 99,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400019,
+    "coords": { "q": -1, "r": 2 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "ぼうぎょ+5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400020,
+    "coords": { "q": -2, "r": 3 },
+    "ability": {
+      "abilityId": 1202010400094,
+      "type": 8,
+      "passiveId": 12020104,
+      "moveId": 94,
+      "value": 0,
+      "u6": 98999942
+    },
+    "move": {
+      "name": "対象わざ：サイコキネシス\nわざ後わざゲージ↑４",
+      "moveId": 94,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 99,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "技が成功したときにときどき\n自分のわざゲージを１増やす",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1011400021,
+    "coords": { "q": -3, "r": 4 },
+    "ability": {
+      "abilityId": 2100094005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 94,
+      "value": 5,
+      "u6": 99299970
+    },
+    "move": {
+      "name": "サイコキネシス：威力アップ+5",
+      "moveId": 94,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 99,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400022,
+    "coords": { "q": -1, "r": 3 },
+    "ability": {
+      "abilityId": 2100094005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 94,
+      "value": 5,
+      "u6": 99299970
+    },
+    "move": {
+      "name": "サイコキネシス：威力アップ+5",
+      "moveId": 94,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 99,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400023,
+    "coords": { "q": -2, "r": 4 },
+    "ability": {
+      "abilityId": 2100094005,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 94,
+      "value": 5,
+      "u6": 99299970
+    },
+    "move": {
+      "name": "サイコキネシス：威力アップ+5",
+      "moveId": 94,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 99,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1011400024,
+    "coords": { "q": -3, "r": 5 },
+    "ability": {
+      "abilityId": 1501020100000,
+      "type": 7,
+      "passiveId": 15010201,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099943
+    },
+    "move": {
+      "name": "技急所時ＢＣ加速１",
+      "description": "技が相手の急所に当たったときにまれに\nバディーズわざ発動可能状態までのカウントを１減らす",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1011400025,
+    "coords": { "q": -1, "r": 4 },
+    "ability": {
+      "abilityId": 1101060100000,
+      "type": 7,
+      "passiveId": 11010601,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099994
+    },
+    "move": {
+      "name": "Ｂわざ後ＨＰ回復１",
+      "description": "バディーズわざを使ったあと自分のＨＰを回復する",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1011400026,
+    "coords": { "q": 1, "r": 1 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99699999
+    },
+    "move": { "name": "ぼうぎょ+5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400027,
+    "coords": { "q": 2, "r": 1 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": { "name": "HP+10", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400028,
+    "coords": { "q": 1, "r": 2 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99899999
+    },
+    "move": { "name": "HP+10", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400029,
+    "coords": { "q": 3, "r": 1 },
+    "ability": {
+      "abilityId": 1306020311140,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 11140,
+      "value": 0,
+      "u6": 98999895
+    },
+    "move": {
+      "name": "対象わざ：私にはみえる\nわざ後わざ回数回復３",
+      "moveId": 11140,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 0,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 256,
+      "description": "技が成功したときにときたまその技の回数を１回復する",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1011400030,
+    "coords": { "q": 2, "r": 2 },
+    "ability": {
+      "abilityId": 1804510100000,
+      "type": 7,
+      "passiveId": 18045101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099883
+    },
+    "move": {
+      "name": "登場時特攻アップ１",
+      "description": "登場したとき自分の特攻をあげる",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1011400031,
+    "coords": { "q": 1, "r": 3 },
+    "ability": {
+      "abilityId": 1306020319081,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 19081,
+      "value": 0,
+      "u6": 98999880
+    },
+    "move": {
+      "name": "対象わざ：クリティカットＧ\nわざ後わざ回数回復３",
+      "moveId": 19081,
+      "category": 3,
+      "u3": 2,
+      "user": 0,
+      "group": 2,
+      "type": 0,
+      "target": 1,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "技が成功したときにときたまその技の回数を１回復する",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1011400032,
+    "coords": { "q": 3, "r": 2 },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": { "name": "とくこう+10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1011400033,
+    "coords": { "q": 2, "r": 3 },
+    "ability": {
+      "abilityId": 1302020300000,
+      "type": 7,
+      "passiveId": 13020203,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099948
+    },
+    "move": {
+      "name": "ピンチ時物理軽減３",
+      "description": "ピンチのときに\n物理技で攻撃を受けたときのダメージを軽減する",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1011400034,
+    "coords": { "q": 1, "r": 4 },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": { "name": "とくぼう+10", "energyCost": 5, "orbCost": 60 }
+  },
+  {
+    "cellId": 1011400035,
+    "coords": { "q": 3, "r": 3 },
+    "ability": {
+      "abilityId": 1804390119081,
+      "type": 8,
+      "passiveId": 18043901,
+      "moveId": 19081,
+      "value": 0,
+      "u6": 98999852
+    },
+    "move": {
+      "name": "対象わざ：クリティカットＧ\nわざ後急所率アップＧ１",
+      "moveId": 19081,
+      "category": 3,
+      "u3": 2,
+      "user": 0,
+      "group": 2,
+      "type": 0,
+      "target": 1,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "技が成功したときに\n味方のバディーズ全員の急所率をあげる",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1011400036,
+    "coords": { "q": 2, "r": 4 },
+    "ability": {
+      "abilityId": 1804400111140,
+      "type": 8,
+      "passiveId": 18044001,
+      "moveId": 11140,
+      "value": 0,
+      "u6": 98999850
+    },
+    "move": {
+      "name": "対象わざ：私にはみえる\nわざ後特攻アップ１",
+      "moveId": 11140,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 0,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 256,
+      "description": "技が成功したときに自分の特攻をあげる",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1011400037,
+    "coords": { "q": -2, "r": 0 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 99499999
+    },
+    "move": { "name": "とくぼう+5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1011400038,
+    "coords": { "q": -1, "r": -1 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99399998
+    },
+    "move": { "name": "すばやさ+10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1011400039,
+    "coords": { "q": -3, "r": 0 },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99499998
+    },
+    "move": { "name": "とくぼう+10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1011400040,
+    "coords": { "q": -2, "r": -1 },
+    "ability": {
+      "abilityId": 1306020400115,
+      "type": 8,
+      "passiveId": 13060204,
+      "moveId": 115,
+      "value": 0,
+      "u6": 98999877
+    },
+    "move": {
+      "name": "対象わざ：リフレクター\nわざ後わざ回数回復４",
+      "moveId": 115,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 7,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "技が成功したときにときどきその技の回数を１回復する",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1011400041,
+    "coords": { "q": -1, "r": -2 },
+    "ability": {
+      "abilityId": 1400000010,
+      "type": 4,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 99599998
+    },
+    "move": { "name": "とくこう+10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1011400042,
+    "coords": { "q": -3, "r": -1 },
+    "ability": {
+      "abilityId": 1202010300115,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 115,
+      "value": 0,
+      "u6": 98999975
+    },
+    "move": {
+      "name": "対象わざ：リフレクター\nわざ後わざゲージ↑３",
+      "moveId": 115,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 7,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "技が成功したときにときたま\n自分のわざゲージを１増やす",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1011400043,
+    "coords": { "q": -2, "r": -2 },
+    "ability": {
+      "abilityId": 1202010300115,
+      "type": 8,
+      "passiveId": 12020103,
+      "moveId": 115,
+      "value": 0,
+      "u6": 98999975
+    },
+    "move": {
+      "name": "対象わざ：リフレクター\nわざ後わざゲージ↑３",
+      "moveId": 115,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 7,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "技が成功したときにときたま\n自分のわざゲージを１増やす",
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1011400044,
+    "coords": { "q": -1, "r": -3 },
+    "ability": {
+      "abilityId": 1804410200115,
+      "type": 8,
+      "passiveId": 18044102,
+      "moveId": 115,
+      "value": 0,
+      "u6": 98999846
+    },
+    "move": {
+      "name": "対象わざ：リフレクター\nわざ後素早さアップＧ２",
+      "moveId": 115,
+      "category": 3,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 11,
+      "target": 7,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "技が成功したときに\n味方のバディーズ全員の素早さをぐーんとあげる",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1011400045,
+    "coords": { "q": -3, "r": -2 },
+    "ability": {
+      "abilityId": 1301060200000,
+      "type": 7,
+      "passiveId": 13010602,
+      "moveId": 0,
+      "value": 0,
+      "u6": 99099975
+    },
+    "move": {
+      "name": "急所時威力上昇２",
+      "description": "相手の急所に当たるときだけ攻撃の威力があがる",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1011400046,
+    "coords": { "q": 0, "r": -3 },
+    "ability": {
+      "abilityId": 2161300025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 61300,
+      "value": 25,
+      "u6": 99299908
+    },
+    "move": {
+      "name": "エスパー少女の\nサイコウェーブ：威力アップ+25",
+      "moveId": 61300,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1011400047,
+    "coords": { "q": 0, "r": 3 },
+    "ability": {
+      "abilityId": 2161300025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 61300,
+      "value": 25,
+      "u6": 99299908
+    },
+    "move": {
+      "name": "エスパー少女の\nサイコウェーブ：威力アップ+25",
+      "moveId": 61300,
+      "category": 2,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 11,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  }
+]

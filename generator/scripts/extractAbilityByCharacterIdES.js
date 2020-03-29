@@ -3,16 +3,16 @@ const fs = require('fs');
 
 const abilityPanelDB = require('../rawdata/AbilityPanel.json');
 const abilityDB = require('../rawdata/Ability.json');
-const abilityDescriptionDB = require('../rawdata/jp/AbilityDescription.json');
+const abilityDescriptionDB = require('../rawdata/es/AbilityDescription.json');
 const moveDB = require('../rawdata/Move.json');
-const moveNameDB = require('../rawdata/jp/MoveName.json');
-const moveDescriptionDB = require('../rawdata/jp/MoveDescription.json');
-const passiveAbilityDescriptionDB = require('../rawdata/jp/PassiveAbilityDescription.json');
-const passiveSkillDescriptionDB = require('../rawdata/jp/PassiveSkillDescription.json');
+const moveNameDB = require('../rawdata/es/MoveName.json');
+const moveDescriptionDB = require('../rawdata/es/MoveDescription.json');
+const passiveAbilityDescriptionDB = require('../rawdata/es/PassiveSkillName.json');
+const passiveSkillDescriptionDB = require('../rawdata/es/PassiveSkillDescription.json');
 const triangularCoordsToCollumns = require('../utils/triangularCoordsToCollumns');
 
 /*
- * Usage i.e: node extractAbilityByCharacterIdJP.js --characterId=18000000000 --filename=pikachu
+ * Usage i.e: node extractAbilityByCharacterIdES.js --characterId=18000000000 --filename=pikachu
  * */
 
 const extractAbilityByCharacterId = () => {
@@ -83,7 +83,7 @@ const extractAbilityByCharacterId = () => {
 
   if (args.filename) {
     fs.writeFile(
-      `${__dirname}/../../src/data/grids/jp/${args.filename}.json`,
+      `${__dirname}/../../src/data/grids/es/${args.filename}.json`,
       JSON.stringify(abilities),
       err => {
         if (err) throw err;

@@ -13,6 +13,7 @@ import FeedbackIcon from '@material-ui/icons/Feedback';
 import { FeedbackFormMobile } from '../FeedbackForm';
 import styles from './styles';
 import { logout } from '../../actions/actionCreators';
+import { AnnouncementModalMobile } from '../AnnouncementModal';
 
 function Navigation(props) {
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
@@ -38,6 +39,7 @@ function Navigation(props) {
   return (
     <Drawer open={isOpened} onClose={handleOnClose}>
       <List className={classes.listRoot}>
+        <AnnouncementModalMobile classes={classes} />
         <ListItem button onClick={handleClickOpenModal}>
           <ListItemIcon className={classes.listIcon}>
             <FeedbackIcon />

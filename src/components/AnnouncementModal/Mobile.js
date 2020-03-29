@@ -1,12 +1,14 @@
 import React, { Fragment, useState } from 'react';
-import IconButton from '@material-ui/core/IconButton';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import InfoIcon from '@material-ui/icons/Info';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContentText from '@material-ui/core/DialogContentText';
 
-const AnnouncementModal = () => {
+const AnnouncementModal = props => {
   const [isAnnouncementModalVisible, setIsAnnouncementModalVisible] = useState(
     false
   );
@@ -21,12 +23,12 @@ const AnnouncementModal = () => {
 
   return (
     <Fragment>
-      <IconButton
-        style={{ color: 'white' }}
-        onClick={handleOnOpenAnnouncementModal}
-      >
-        <InfoIcon />
-      </IconButton>
+      <ListItem button onClick={handleOnOpenAnnouncementModal}>
+        <ListItemIcon className={props.classes.listIcon}>
+          <InfoIcon />
+        </ListItemIcon>
+        <ListItemText primary="Announcements" />
+      </ListItem>
 
       <Dialog
         open={isAnnouncementModalVisible}
