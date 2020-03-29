@@ -37,11 +37,12 @@ const AnnouncementModal = props => {
         <DialogTitle>{'Announcements'}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
-            3/23/2020:
+            3/29/2020:
             <br />
-            1. Added new sync grids.
-            <br />
-            2. You can now comment on other people's builds.
+            Added multi-language support for Skill Names and Skill Descriptions.
+            Still need to work on skill name abbreviations but I need help on
+            that. If you believe you can help please send me a feedback with
+            your contact info so I can get in touch with you. Thanks in advance!
           </DialogContentText>
         </DialogContent>
       </Dialog>
