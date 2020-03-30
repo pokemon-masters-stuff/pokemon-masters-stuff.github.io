@@ -1,4 +1,4 @@
-import { shortenedMoveNameByCellId } from '../data';
+import { shortenedMoveNameByAbilityId } from '../data';
 
 export const getFillColorByMoveType = ({ type, group, isLocked }) => {
   let colorsByTypeDef = {
@@ -39,8 +39,8 @@ export const renderMoveName = (moveName, abilityId) => {
   let renderedMoveName = moveName;
 
   if (moveName.length > 11) {
-    if (shortenedMoveNameByCellId[abilityId]) {
-      renderedMoveName = shortenedMoveNameByCellId[abilityId];
+    if (shortenedMoveNameByAbilityId[abilityId]) {
+      renderedMoveName = shortenedMoveNameByAbilityId[abilityId];
     }
   }
 
