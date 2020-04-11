@@ -8,7 +8,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContentText from '@material-ui/core/DialogContentText';
 
-const AnnouncementModal = props => {
+const AnnouncementModal = (props) => {
   const [isAnnouncementModalVisible, setIsAnnouncementModalVisible] = useState(
     false
   );
@@ -37,6 +37,11 @@ const AnnouncementModal = props => {
         <DialogTitle>{'Announcements'}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            4/11/2020:
+            <br />
+            Added multi-language support for Pokemon names.
+            <br />
+            <br />
             3/29/2020:
             <br />
             Added multi-language support for Skill Names and Skill Descriptions.

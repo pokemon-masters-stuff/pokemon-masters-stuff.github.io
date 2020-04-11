@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 export default function AnnouncementModal() {
-  const darkMode = useSelector(state => state.darkMode.mode);
+  const darkMode = useSelector((state) => state.darkMode.mode);
   return (
     <div
       className="modal fade"
@@ -22,6 +22,11 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
+            4/11/2020:
+            <br />
+            Added multi-language support for Pokemon names.
+            <br />
+            <br />
             3/29/2020:
             <br />
             Added multi-language support for Skill Names and Skill Descriptions.
