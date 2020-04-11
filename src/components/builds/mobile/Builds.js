@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
-import { pokemonNameList } from '../../../data';
+import { getPokemonNameList } from '../../../data';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -25,24 +25,25 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30
+    marginTop: 30,
   },
   bottomNav: {
     width: '100%',
     position: 'fixed',
     bottom: 0,
-    zIndex: 2000
-  }
+    zIndex: 2000,
+  },
 });
 
-const Builds = props => {
+const Builds = (props) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [isNavOpened, setIsNavOpened] = React.useState(false);
-  const sort = useSelector(state => state.build.sort);
-  const filter = useSelector(state => state.build.filter);
+  const sort = useSelector((state) => state.build.sort);
+  const filter = useSelector((state) => state.build.filter);
+  const language = useSelector((state) => state.language.currentLanguage);
   const dispatch = useDispatch();
-  const darkMode = useSelector(state => state.darkMode.mode);
+  const darkMode = useSelector((state) => state.darkMode.mode);
 
   useEffect(() => {
     if (props.history) {
@@ -73,11 +74,11 @@ const Builds = props => {
     setValue(newValue);
   };
 
-  const handleChangeSort = event => {
+  const handleChangeSort = (event) => {
     dispatch(changeSort(event.target.value));
   };
 
-  const handleChangeFilter = event => {
+  const handleChangeFilter = (event) => {
     dispatch(changeFilter(event.target.value));
   };
 
@@ -127,9 +128,9 @@ const Builds = props => {
           <InputLabel id="filter">Filter by</InputLabel>
           <Select value={filter} labelId="filter" onChange={handleChangeFilter}>
             <MenuItem value="None">None</MenuItem>
-            {pokemonNameList.map((pokemon, index) => (
+            {getPokemonNameList(language).map((pokemon, index) => (
               <MenuItem key={index} value={pokemon.name}>
-                {pokemon.name}
+                {pokemon.value}
               </MenuItem>
             ))}
           </Select>

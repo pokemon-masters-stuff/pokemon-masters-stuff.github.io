@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
-import { pokemonNameList } from '../../../data';
+import { getPokemonNameList } from '../../../data';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -16,17 +16,18 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 });
 
-const Builds = props => {
+const Builds = (props) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const sort = useSelector(state => state.build.sort);
-  const filter = useSelector(state => state.build.filter);
+  const sort = useSelector((state) => state.build.sort);
+  const filter = useSelector((state) => state.build.filter);
   const dispatch = useDispatch();
-  const darkMode = useSelector(state => state.darkMode.mode);
+  const language = useSelector((state) => state.language.currentLanguage);
+  const darkMode = useSelector((state) => state.darkMode.mode);
 
   useEffect(() => {
     if (props.history) {
@@ -53,11 +54,11 @@ const Builds = props => {
     setValue(newValue);
   };
 
-  const handleChangeSort = event => {
+  const handleChangeSort = (event) => {
     dispatch(changeSort(event.target.value));
   };
 
-  const handleChangeFilter = event => {
+  const handleChangeFilter = (event) => {
     dispatch(changeFilter(event.target.value));
   };
 
@@ -82,7 +83,7 @@ const Builds = props => {
           <Typography
             style={{
               borderLeft: '15px solid transparent',
-              borderRight: '10px solid transparent'
+              borderRight: '10px solid transparent',
             }}
           >
             Sort by:{' '}
@@ -97,7 +98,7 @@ const Builds = props => {
           <Typography
             style={{
               borderLeft: '35px solid transparent',
-              borderRight: '10px solid transparent'
+              borderRight: '10px solid transparent',
             }}
           >
             Filter by:{' '}
@@ -109,9 +110,9 @@ const Builds = props => {
               onChange={handleChangeFilter}
             >
               <MenuItem value="None">None</MenuItem>
-              {pokemonNameList.map((pokemon, index) => (
+              {getPokemonNameList(language).map((pokemon, index) => (
                 <MenuItem key={index} value={pokemon.name}>
-                  {pokemon.name}
+                  {pokemon.value}
                 </MenuItem>
               ))}
             </Select>

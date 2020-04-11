@@ -4,10 +4,10 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import { pokemonNameList } from '../../data';
+import { getPokemonNameList } from '../../data';
 import styles from './styles';
 import { updateUrl } from '../../actions/actionCreators';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 function SimpleSelect(props) {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function SimpleSelect(props) {
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
-
+  const language = useSelector((state) => state.language.currentLanguage);
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
@@ -25,7 +25,7 @@ function SimpleSelect(props) {
     setPokemon(selectedPokemon);
   }, [selectedPokemon]);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setPokemon(event.target.value);
     onChangeHandler(event.target.value);
 
@@ -48,9 +48,9 @@ function SimpleSelect(props) {
         onChange={handleChange}
         labelWidth={labelWidth}
       >
-        {pokemonNameList.map((pokemon, index) => (
+        {getPokemonNameList(language).map((pokemon, index) => (
           <MenuItem key={index} value={pokemon.name}>
-            {pokemon.name}
+            {pokemon.value}
           </MenuItem>
         ))}
       </Select>

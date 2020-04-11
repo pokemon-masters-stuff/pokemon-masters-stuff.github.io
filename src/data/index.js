@@ -1,4 +1,4 @@
-export { pokemonNameList, listOfPokemonsWithId } from './pokemonList';
+export { getPokemonNameList, listOfPokemonsWithId } from './pokemonList';
 export { default as shortenedMoveNameByAbilityId } from './shortenedMoveNameByAbilityId';
 export { default as allDisplayedGridData } from './grids/allDisplayedGridData';
 
