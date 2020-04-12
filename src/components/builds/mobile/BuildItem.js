@@ -18,457 +18,18 @@ import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import styles from './styles';
 import Comments from '../common/Comments';
 import {
-  getFillColorByMoveType,
-  renderMoveName,
-  addSyncLvReq
-} from '../../../utils/functions';
-import {
   addLike,
   removeLike,
-  deleteBuild
+  deleteBuild,
 } from '../../../actions/actionCreators';
 import {
-  pikachuGridDataDE,
-  torkoalGridDataDE,
-  infernapeGridDataDE,
-  dewgongGridDataDE,
-  haxorusGridDataDE,
-  kingdraGridDataDE,
-  serperiorGridDataDE,
-  vileplumeGridDataDE,
-  mewGridDataDE,
-  metagrossGridDataDE,
-  charizardGridDataDE,
-  palossandGridDataDE,
-  liepardGridDataDE,
-  rotomGridDataDE,
-  houndoomGridDataDE,
-  raichuGridDataDE,
-  alakazamGridDataDE,
-  helioliskGridDataDE,
-  golisopodGridDataDE,
-  salazzleGridDataDE,
-  masquerainGridDataDE,
-  meowsticGridDataDE,
-  reuniclusGridDataDE,
-  pikachuGridDataEN,
-  torkoalGridDataEN,
-  infernapeGridDataEN,
-  dewgongGridDataEN,
-  haxorusGridDataEN,
-  kingdraGridDataEN,
-  serperiorGridDataEN,
-  vileplumeGridDataEN,
-  mewGridDataEN,
-  metagrossGridDataEN,
-  charizardGridDataEN,
-  palossandGridDataEN,
-  liepardGridDataEN,
-  rotomGridDataEN,
-  houndoomGridDataEN,
-  raichuGridDataEN,
-  alakazamGridDataEN,
-  helioliskGridDataEN,
-  golisopodGridDataEN,
-  salazzleGridDataEN,
-  masquerainGridDataEN,
-  meowsticGridDataEN,
-  reuniclusGridDataEN,
-  pikachuGridDataES,
-  torkoalGridDataES,
-  infernapeGridDataES,
-  dewgongGridDataES,
-  haxorusGridDataES,
-  kingdraGridDataES,
-  serperiorGridDataES,
-  vileplumeGridDataES,
-  mewGridDataES,
-  metagrossGridDataES,
-  charizardGridDataES,
-  palossandGridDataES,
-  liepardGridDataES,
-  rotomGridDataES,
-  houndoomGridDataES,
-  raichuGridDataES,
-  alakazamGridDataES,
-  helioliskGridDataES,
-  golisopodGridDataES,
-  salazzleGridDataES,
-  masquerainGridDataES,
-  meowsticGridDataES,
-  reuniclusGridDataES,
-  pikachuGridDataFR,
-  torkoalGridDataFR,
-  infernapeGridDataFR,
-  dewgongGridDataFR,
-  haxorusGridDataFR,
-  kingdraGridDataFR,
-  serperiorGridDataFR,
-  vileplumeGridDataFR,
-  mewGridDataFR,
-  metagrossGridDataFR,
-  charizardGridDataFR,
-  palossandGridDataFR,
-  liepardGridDataFR,
-  rotomGridDataFR,
-  houndoomGridDataFR,
-  raichuGridDataFR,
-  alakazamGridDataFR,
-  helioliskGridDataFR,
-  golisopodGridDataFR,
-  salazzleGridDataFR,
-  masquerainGridDataFR,
-  meowsticGridDataFR,
-  reuniclusGridDataFR,
-  pikachuGridDataIT,
-  torkoalGridDataIT,
-  infernapeGridDataIT,
-  dewgongGridDataIT,
-  haxorusGridDataIT,
-  kingdraGridDataIT,
-  serperiorGridDataIT,
-  vileplumeGridDataIT,
-  mewGridDataIT,
-  metagrossGridDataIT,
-  charizardGridDataIT,
-  palossandGridDataIT,
-  liepardGridDataIT,
-  rotomGridDataIT,
-  houndoomGridDataIT,
-  raichuGridDataIT,
-  alakazamGridDataIT,
-  helioliskGridDataIT,
-  golisopodGridDataIT,
-  salazzleGridDataIT,
-  masquerainGridDataIT,
-  meowsticGridDataIT,
-  reuniclusGridDataIT,
-  pikachuGridDataJA,
-  torkoalGridDataJA,
-  infernapeGridDataJA,
-  dewgongGridDataJA,
-  haxorusGridDataJA,
-  kingdraGridDataJA,
-  serperiorGridDataJA,
-  vileplumeGridDataJA,
-  mewGridDataJA,
-  metagrossGridDataJA,
-  charizardGridDataJA,
-  palossandGridDataJA,
-  liepardGridDataJA,
-  rotomGridDataJA,
-  houndoomGridDataJA,
-  raichuGridDataJA,
-  alakazamGridDataJA,
-  helioliskGridDataJA,
-  golisopodGridDataJA,
-  salazzleGridDataJA,
-  masquerainGridDataJA,
-  meowsticGridDataJA,
-  reuniclusGridDataJA,
-  pikachuGridDataKO,
-  torkoalGridDataKO,
-  infernapeGridDataKO,
-  dewgongGridDataKO,
-  haxorusGridDataKO,
-  kingdraGridDataKO,
-  serperiorGridDataKO,
-  vileplumeGridDataKO,
-  mewGridDataKO,
-  metagrossGridDataKO,
-  charizardGridDataKO,
-  palossandGridDataKO,
-  liepardGridDataKO,
-  rotomGridDataKO,
-  houndoomGridDataKO,
-  raichuGridDataKO,
-  alakazamGridDataKO,
-  helioliskGridDataKO,
-  golisopodGridDataKO,
-  salazzleGridDataKO,
-  masquerainGridDataKO,
-  meowsticGridDataKO,
-  reuniclusGridDataKO,
-  pikachuGridDataZH,
-  torkoalGridDataZH,
-  infernapeGridDataZH,
-  dewgongGridDataZH,
-  haxorusGridDataZH,
-  kingdraGridDataZH,
-  serperiorGridDataZH,
-  vileplumeGridDataZH,
-  mewGridDataZH,
-  metagrossGridDataZH,
-  charizardGridDataZH,
-  palossandGridDataZH,
-  liepardGridDataZH,
-  rotomGridDataZH,
-  houndoomGridDataZH,
-  raichuGridDataZH,
-  alakazamGridDataZH,
-  helioliskGridDataZH,
-  golisopodGridDataZH,
-  salazzleGridDataZH,
-  masquerainGridDataZH,
-  meowsticGridDataZH,
-  reuniclusGridDataZH
-} from '../../../data';
-import {} from '../../../actions/actionCreators';
-import {
-  charizard,
-  pikachu,
-  raichu,
-  vileplume,
-  alakazam,
-  dewgong,
-  mew,
-  houndoom,
-  kingdra,
-  torkoal,
-  infernape,
-  metagross,
-  rotom,
-  serperior,
-  liepard,
-  palossand,
-  haxorus,
-  masquerain,
-  reuniclus,
-  heliolisk,
-  meowstic,
-  salazzle,
-  golisopod
-} from '../../../images/PokemonThumbnails';
+  getFillColorByMoveType,
+  renderMoveName,
+  addSyncLvReq,
+} from '../../../utils/functions';
+import { allThumbnails, allSyncGrids } from '../../../utils/constants';
 import BuildDescription from './BuildDescription';
 
-const allThumbnails = {
-  charizard,
-  pikachu,
-  raichu,
-  vileplume,
-  alakazam,
-  dewgong,
-  mew,
-  houndoom,
-  kingdra,
-  torkoal,
-  infernape,
-  metagross,
-  rotom,
-  serperior,
-  liepard,
-  palossand,
-  haxorus,
-  masquerain,
-  reuniclus,
-  heliolisk,
-  meowstic,
-  salazzle,
-  golisopod
-};
-
-const allSyncGrids = {
-  de: {
-    pikachuGridDataDE,
-    torkoalGridDataDE,
-    infernapeGridDataDE,
-    dewgongGridDataDE,
-    haxorusGridDataDE,
-    kingdraGridDataDE,
-    serperiorGridDataDE,
-    vileplumeGridDataDE,
-    mewGridDataDE,
-    metagrossGridDataDE,
-    charizardGridDataDE,
-    palossandGridDataDE,
-    liepardGridDataDE,
-    rotomGridDataDE,
-    houndoomGridDataDE,
-    raichuGridDataDE,
-    alakazamGridDataDE,
-    helioliskGridDataDE,
-    golisopodGridDataDE,
-    salazzleGridDataDE,
-    masquerainGridDataDE,
-    meowsticGridDataDE,
-    reuniclusGridDataDE
-  },
-  en: {
-    pikachuGridDataEN,
-    torkoalGridDataEN,
-    infernapeGridDataEN,
-    dewgongGridDataEN,
-    haxorusGridDataEN,
-    kingdraGridDataEN,
-    serperiorGridDataEN,
-    vileplumeGridDataEN,
-    mewGridDataEN,
-    charizardGridDataEN,
-    metagrossGridDataEN,
-    palossandGridDataEN,
-    liepardGridDataEN,
-    rotomGridDataEN,
-    houndoomGridDataEN,
-    raichuGridDataEN,
-    alakazamGridDataEN,
-    helioliskGridDataEN,
-    golisopodGridDataEN,
-    salazzleGridDataEN,
-    masquerainGridDataEN,
-    meowsticGridDataEN,
-    reuniclusGridDataEN
-  },
-  es: {
-    pikachuGridDataES,
-    torkoalGridDataES,
-    infernapeGridDataES,
-    dewgongGridDataES,
-    haxorusGridDataES,
-    kingdraGridDataES,
-    serperiorGridDataES,
-    vileplumeGridDataES,
-    mewGridDataES,
-    metagrossGridDataES,
-    charizardGridDataES,
-    palossandGridDataES,
-    liepardGridDataES,
-    rotomGridDataES,
-    houndoomGridDataES,
-    raichuGridDataES,
-    alakazamGridDataES,
-    helioliskGridDataES,
-    golisopodGridDataES,
-    salazzleGridDataES,
-    masquerainGridDataES,
-    meowsticGridDataES,
-    reuniclusGridDataES
-  },
-  fr: {
-    pikachuGridDataFR,
-    torkoalGridDataFR,
-    infernapeGridDataFR,
-    dewgongGridDataFR,
-    haxorusGridDataFR,
-    kingdraGridDataFR,
-    serperiorGridDataFR,
-    vileplumeGridDataFR,
-    mewGridDataFR,
-    metagrossGridDataFR,
-    charizardGridDataFR,
-    palossandGridDataFR,
-    liepardGridDataFR,
-    rotomGridDataFR,
-    houndoomGridDataFR,
-    raichuGridDataFR,
-    alakazamGridDataFR,
-    helioliskGridDataFR,
-    golisopodGridDataFR,
-    salazzleGridDataFR,
-    masquerainGridDataFR,
-    meowsticGridDataFR,
-    reuniclusGridDataFR
-  },
-  it: {
-    pikachuGridDataIT,
-    torkoalGridDataIT,
-    infernapeGridDataIT,
-    dewgongGridDataIT,
-    haxorusGridDataIT,
-    kingdraGridDataIT,
-    serperiorGridDataIT,
-    vileplumeGridDataIT,
-    mewGridDataIT,
-    metagrossGridDataIT,
-    charizardGridDataIT,
-    palossandGridDataIT,
-    liepardGridDataIT,
-    rotomGridDataIT,
-    houndoomGridDataIT,
-    raichuGridDataIT,
-    alakazamGridDataIT,
-    helioliskGridDataIT,
-    golisopodGridDataIT,
-    salazzleGridDataIT,
-    masquerainGridDataIT,
-    meowsticGridDataIT,
-    reuniclusGridDataIT
-  },
-  ja: {
-    pikachuGridDataJA,
-    torkoalGridDataJA,
-    infernapeGridDataJA,
-    dewgongGridDataJA,
-    haxorusGridDataJA,
-    kingdraGridDataJA,
-    serperiorGridDataJA,
-    vileplumeGridDataJA,
-    mewGridDataJA,
-    metagrossGridDataJA,
-    charizardGridDataJA,
-    palossandGridDataJA,
-    liepardGridDataJA,
-    rotomGridDataJA,
-    houndoomGridDataJA,
-    raichuGridDataJA,
-    alakazamGridDataJA,
-    helioliskGridDataJA,
-    golisopodGridDataJA,
-    salazzleGridDataJA,
-    masquerainGridDataJA,
-    meowsticGridDataJA,
-    reuniclusGridDataJA
-  },
-  ko: {
-    pikachuGridDataKO,
-    torkoalGridDataKO,
-    infernapeGridDataKO,
-    dewgongGridDataKO,
-    haxorusGridDataKO,
-    kingdraGridDataKO,
-    serperiorGridDataKO,
-    vileplumeGridDataKO,
-    mewGridDataKO,
-    metagrossGridDataKO,
-    charizardGridDataKO,
-    palossandGridDataKO,
-    liepardGridDataKO,
-    rotomGridDataKO,
-    houndoomGridDataKO,
-    raichuGridDataKO,
-    alakazamGridDataKO,
-    helioliskGridDataKO,
-    golisopodGridDataKO,
-    salazzleGridDataKO,
-    masquerainGridDataKO,
-    meowsticGridDataKO,
-    reuniclusGridDataKO
-  },
-  zh: {
-    pikachuGridDataZH,
-    torkoalGridDataZH,
-    infernapeGridDataZH,
-    dewgongGridDataZH,
-    haxorusGridDataZH,
-    kingdraGridDataZH,
-    serperiorGridDataZH,
-    vileplumeGridDataZH,
-    mewGridDataZH,
-    metagrossGridDataZH,
-    charizardGridDataZH,
-    palossandGridDataZH,
-    liepardGridDataZH,
-    rotomGridDataZH,
-    houndoomGridDataZH,
-    raichuGridDataZH,
-    alakazamGridDataZH,
-    helioliskGridDataZH,
-    golisopodGridDataZH,
-    salazzleGridDataZH,
-    masquerainGridDataZH,
-    meowsticGridDataZH,
-    reuniclusGridDataZH
-  }
-};
 class BuildItem extends Component {
   _isMounted = false;
 
@@ -480,9 +41,9 @@ class BuildItem extends Component {
       mapSizeBoundaries: {
         width: '100vw',
         height: 440,
-        viewbox: '-35 -35 70 70'
+        viewbox: '-35 -35 70 70',
       },
-      screenWidth: document.body.clientWidth
+      screenWidth: document.body.clientWidth,
     };
     this.handleClickLike = this.handleClickLike.bind(this);
     this.handleClickDelete = this.handleClickDelete.bind(this);
@@ -506,17 +67,17 @@ class BuildItem extends Component {
   fitMapToScreen = () => {
     const clientWrappingBoundaries = {
       width: document.body.clientWidth,
-      height: document.body.clientHeight
+      height: document.body.clientHeight,
     };
     let updatedMapSizeBoundaries = {
-      ...this.state.mapSizeBoundaries
+      ...this.state.mapSizeBoundaries,
     };
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
         width: '100vw',
         height: 768,
-        viewbox: '-50 -50 100 100'
+        viewbox: '-50 -50 100 100',
       };
     }
 
@@ -527,18 +88,18 @@ class BuildItem extends Component {
           ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
           clientWrappingBoundaries.width
         ).toFixed(),
-        viewbox: '-35 -35 70 70'
+        viewbox: '-35 -35 70 70',
       };
     }
 
     if (this._isMounted) {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         ...prevState,
         initialRender: false,
         mapSizeBoundaries: {
           ...prevState.mapSizeBoundaries,
-          ...updatedMapSizeBoundaries
-        }
+          ...updatedMapSizeBoundaries,
+        },
       }));
     }
   };
@@ -571,7 +132,7 @@ class BuildItem extends Component {
           cellId: cell.cellId,
           name: nameWithSyncLvRequirement || moveName,
           description: cell.move.description,
-          energy: cell.move.energyCost
+          energy: cell.move.energyCost,
         },
         key: cell.cellId,
         q: cell.coords.q,
@@ -580,7 +141,7 @@ class BuildItem extends Component {
         fill: getFillColorByMoveType({
           type: cell.ability.type,
           group: cell.move.group,
-          isLocked: cell.move.locked
+          isLocked: cell.move.locked,
         }),
         className: this.props.darkMode
           ? build.selectedCellsById[cell.cellId]
@@ -588,7 +149,7 @@ class BuildItem extends Component {
             : 'dark-mode build'
           : build.selectedCellsById[cell.cellId]
           ? 'selected build'
-          : 'build'
+          : 'build',
       };
       return (
         <Hexagon {...hexagonProps}>
@@ -621,7 +182,7 @@ class BuildItem extends Component {
   };
 
   renderIcons = (build, currentUser) => {
-    const arrayOfUsersLikedThisBuild = build.likes.map(like => {
+    const arrayOfUsersLikedThisBuild = build.likes.map((like) => {
       return like.user;
     });
     const buildLiked = arrayOfUsersLikedThisBuild.includes(currentUser._id);
@@ -708,7 +269,7 @@ class BuildItem extends Component {
             <span
               style={{
                 fontWeight: 'bold',
-                color: '#bdbdbd'
+                color: '#bdbdbd',
               }}
             >
               Name:{' '}
@@ -790,12 +351,12 @@ class BuildItem extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   pokemon: state.pokemon.selectedPokemon.toLowerCase(),
   grid: state.grid,
   darkMode: state.darkMode.mode,
   auth: state.auth,
-  language: state.language.currentLanguage
+  language: state.language.currentLanguage,
 });
 
 export default connect(mapStateToProps, { addLike, removeLike, deleteBuild })(
