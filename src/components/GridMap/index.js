@@ -4,16 +4,14 @@ import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
-import { listOfPokemonsWithId } from '../../data';
 import styles from './styles';
 import { getQueryStringValue, clearQueryStringValue } from '../../queryString';
 import {
   getFillColorByMoveType,
   renderMoveName,
-  addSyncLvReq
+  addSyncLvReq,
 } from '../../utils/functions';
 import {
-  allDisplayedGridData,
   pikachuGridDataDE,
   torkoalGridDataDE,
   infernapeGridDataDE,
@@ -197,7 +195,7 @@ import {
   salazzleGridDataZH,
   masquerainGridDataZH,
   meowsticGridDataZH,
-  reuniclusGridDataZH
+  reuniclusGridDataZH,
 } from '../../data';
 import {
   selectPokemon,
@@ -207,7 +205,7 @@ import {
   addBackToRemainingEnergy,
   resetGrids,
   loadGridFromUrl,
-  updateUrl
+  updateUrl,
 } from '../../actions/actionCreators';
 import {
   charizard,
@@ -232,7 +230,7 @@ import {
   heliolisk,
   meowstic,
   salazzle,
-  golisopod
+  golisopod,
 } from '../../images/PokemonThumbnails';
 
 const allThumbnails = {
@@ -258,7 +256,7 @@ const allThumbnails = {
   heliolisk,
   meowstic,
   salazzle,
-  golisopod
+  golisopod,
 };
 
 const allSyncGrids = {
@@ -285,7 +283,7 @@ const allSyncGrids = {
     salazzleGridDataDE,
     masquerainGridDataDE,
     meowsticGridDataDE,
-    reuniclusGridDataDE
+    reuniclusGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -310,7 +308,7 @@ const allSyncGrids = {
     salazzleGridDataEN,
     masquerainGridDataEN,
     meowsticGridDataEN,
-    reuniclusGridDataEN
+    reuniclusGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -335,7 +333,7 @@ const allSyncGrids = {
     salazzleGridDataES,
     masquerainGridDataES,
     meowsticGridDataES,
-    reuniclusGridDataES
+    reuniclusGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -360,7 +358,7 @@ const allSyncGrids = {
     salazzleGridDataFR,
     masquerainGridDataFR,
     meowsticGridDataFR,
-    reuniclusGridDataFR
+    reuniclusGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -385,7 +383,7 @@ const allSyncGrids = {
     salazzleGridDataIT,
     masquerainGridDataIT,
     meowsticGridDataIT,
-    reuniclusGridDataIT
+    reuniclusGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -410,7 +408,7 @@ const allSyncGrids = {
     salazzleGridDataJA,
     masquerainGridDataJA,
     meowsticGridDataJA,
-    reuniclusGridDataJA
+    reuniclusGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -435,7 +433,7 @@ const allSyncGrids = {
     salazzleGridDataKO,
     masquerainGridDataKO,
     meowsticGridDataKO,
-    reuniclusGridDataKO
+    reuniclusGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -460,8 +458,8 @@ const allSyncGrids = {
     salazzleGridDataZH,
     masquerainGridDataZH,
     meowsticGridDataZH,
-    reuniclusGridDataZH
-  }
+    reuniclusGridDataZH,
+  },
 };
 
 // const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;
@@ -471,33 +469,42 @@ class GridMap extends Component {
     mapSizeBoundaries: {
       width: '100vw',
       height: 440,
-      viewbox: '-35 -35 70 70'
+      viewbox: '-35 -35 70 70',
     },
-    screenWidth: document.body.clientWidth
+    screenWidth: document.body.clientWidth,
   };
 
   loadUrlGridData() {
-    getQueryStringValue('p') &&
-      this.props.selectPokemon(getQueryStringValue('p'));
+    let pokemonFromUrl;
+    if (getQueryStringValue('p')) {
+      pokemonFromUrl = getQueryStringValue('p');
+      this.props.selectPokemon(pokemonFromUrl);
+    }
+
     // if user uses an url that includes grid data, generate gridmap based on url
     if (getQueryStringValue('grid')) {
       this.props.resetGrids();
       let remainingEnergy = Number(getQueryStringValue('e'));
       let orbSpent = Number(getQueryStringValue('o'));
-      let characterId;
-      listOfPokemonsWithId.map(obj => {
-        return obj.name === getQueryStringValue('p')
-          ? (characterId = obj.characterId)
-          : null;
-      });
-      // each selected grid is stored as a two-digit number in the url, which comes from the last two digits of cellId
-      // therefore, in order to re-generate gridmap from url, need to add characterId (except the last 3 digits) to the two digit number to arrive at the original cellId
-      let cellIdArray = getQueryStringValue('grid').map(id => {
-        return characterId.toString().slice(0, -3) + id;
-      });
-      cellIdArray.map(id => {
+
+      let cellData = {};
+      let selectedCellByIdFromUrl = {};
+
+      getQueryStringValue('grid').map((id) => {
+        cellData =
+          allSyncGrids[this.props.language][
+            `${pokemonFromUrl.toLowerCase()}GridData${this.props.language.toUpperCase()}`
+          ][Number(id)];
+
+        selectedCellByIdFromUrl = {
+          cellId: cellData.cellId,
+          name: cellData.move.name,
+          description: cellData.move.description,
+          energy: cellData.move.energyCost,
+        };
+
         return this.props.loadGridFromUrl(
-          allDisplayedGridData[id],
+          selectedCellByIdFromUrl,
           remainingEnergy,
           orbSpent
         );
@@ -525,17 +532,17 @@ class GridMap extends Component {
   fitMapToScreen = () => {
     const clientWrappingBoundaries = {
       width: document.body.clientWidth,
-      height: document.body.clientHeight
+      height: document.body.clientHeight,
     };
     let updatedMapSizeBoundaries = {
-      ...this.state.mapSizeBoundaries
+      ...this.state.mapSizeBoundaries,
     };
 
     if (clientWrappingBoundaries.width > 1200) {
       updatedMapSizeBoundaries = {
         width: 800,
         height: 768,
-        viewbox: '-50 -50 100 100'
+        viewbox: '-50 -50 100 100',
       };
     }
 
@@ -546,7 +553,7 @@ class GridMap extends Component {
       updatedMapSizeBoundaries = {
         width: '100vw',
         height: 768,
-        viewbox: '-15 -50 100 100'
+        viewbox: '-15 -50 100 100',
       };
     }
 
@@ -554,7 +561,7 @@ class GridMap extends Component {
       updatedMapSizeBoundaries = {
         width: '100vw',
         height: 768,
-        viewbox: '-50 -50 100 100'
+        viewbox: '-50 -50 100 100',
       };
     }
 
@@ -565,17 +572,17 @@ class GridMap extends Component {
           ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
           clientWrappingBoundaries.width
         ).toFixed(),
-        viewbox: '-35 -35 70 70'
+        viewbox: '-35 -35 70 70',
       };
     }
 
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       ...prevState,
       initialRender: false,
       mapSizeBoundaries: {
         ...prevState.mapSizeBoundaries,
-        ...updatedMapSizeBoundaries
-      }
+        ...updatedMapSizeBoundaries,
+      },
     }));
   };
 
@@ -597,7 +604,7 @@ class GridMap extends Component {
     }
   }
 
-  renderHexagonCells = classes =>
+  renderHexagonCells = (classes) =>
     allSyncGrids[this.props.language][
       `${this.props.pokemon}GridData${this.props.language.toUpperCase()}`
     ].map((cell, index) => {
@@ -626,7 +633,7 @@ class GridMap extends Component {
           cellId: cell.cellId,
           name: nameWithSyncLvRequirement || moveName,
           description: cell.move.description,
-          energy: cell.move.energyCost
+          energy: cell.move.energyCost,
         },
         onMouseEnter: this.mouseEnter,
         onMouseLeave: this.mouseLeave,
@@ -637,7 +644,7 @@ class GridMap extends Component {
         fill: getFillColorByMoveType({
           type: cell.ability.type,
           group: cell.move.group,
-          isLocked: cell.move.locked
+          isLocked: cell.move.locked,
         }),
         onClickHandler: (e, data) => this.handleClick(e, index, data),
         className: this.props.darkMode
@@ -646,7 +653,7 @@ class GridMap extends Component {
             : 'dark-mode'
           : this.props.grid.selectedCellsById[cell.cellId]
           ? 'selected'
-          : null
+          : null,
       };
 
       return (
@@ -670,7 +677,7 @@ class GridMap extends Component {
       );
     });
 
-  renderCenterGridText = classes => {
+  renderCenterGridText = (classes) => {
     // Only renders text when no picture available
     return allThumbnails[`${this.props.pokemon}`] === undefined ? (
       <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
@@ -737,11 +744,11 @@ class GridMap extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   pokemon: state.pokemon.selectedPokemon.toLowerCase(),
   grid: state.grid,
   darkMode: state.darkMode.mode,
-  language: state.language.currentLanguage
+  language: state.language.currentLanguage,
 });
 
 export default connect(mapStateToProps, {
@@ -752,5 +759,5 @@ export default connect(mapStateToProps, {
   addBackToRemainingEnergy,
   resetGrids,
   loadGridFromUrl,
-  updateUrl
+  updateUrl,
 })(withStyles(styles)(GridMap));
