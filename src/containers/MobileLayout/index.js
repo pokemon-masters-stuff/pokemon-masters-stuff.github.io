@@ -20,18 +20,20 @@ import {
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
 } from '../../actions/actionCreators';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import UI from '../../utils/translations';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   pokemon: state.pokemon,
   grid: state.grid,
   savedBuilds: state.grid.savedBuilds.allIds.map(
-    id => state.grid.savedBuilds.byIds[id]
+    (id) => state.grid.savedBuilds.byIds[id]
   ),
   url: state.grid.url,
-  darkMode: state.darkMode
+  darkMode: state.darkMode,
+  language: state.language.currentLanguage,
 });
 
 const mapDispatchToProps = {
@@ -39,7 +41,7 @@ const mapDispatchToProps = {
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
 };
 
 class MobileApp extends Component {
@@ -47,7 +49,7 @@ class MobileApp extends Component {
     isNavOpened: false,
     isSkillListOpened: false,
     isSaveBuildModalVisible: false,
-    isShareModalVisible: false
+    isShareModalVisible: false,
   };
 
   newBuildNameRef = React.createRef();
@@ -70,16 +72,16 @@ class MobileApp extends Component {
 
   handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
 
-  handleOnChangePokemon = value => {
+  handleOnChangePokemon = (value) => {
     this.props.selectPokemon(value);
     this.props.resetGrids();
   };
 
-  handleOnChangeSavedBuild = value => {
+  handleOnChangeSavedBuild = (value) => {
     this.props.loadSelectedBuild({ buildId: value });
   };
 
-  handleOnDeleteSavedBuild = value => {
+  handleOnDeleteSavedBuild = (value) => {
     this.props.deleteSelectedBuild({ buildId: value });
   };
 
@@ -107,14 +109,14 @@ class MobileApp extends Component {
           );
           userConfirmation &&
             this.props.deleteSelectedBuild({
-              buildId: this.props.savedBuilds[build].id
+              buildId: this.props.savedBuilds[build].id,
             });
         }
       }
       userConfirmation &&
         this.props.saveCurrentBuild({
           selectedPokemon: this.props.pokemon.selectedPokemon,
-          buildName: this.newBuildNameRef.current.value
+          buildName: this.newBuildNameRef.current.value,
         });
       this.handleOnCloseSaveBuildModal();
     } else {
@@ -127,12 +129,12 @@ class MobileApp extends Component {
       isNavOpened,
       isSkillListOpened,
       isSaveBuildModalVisible,
-      isShareModalVisible
+      isShareModalVisible,
     } = this.state;
-    const { classes, pokemon, grid } = this.props;
+    const { classes, pokemon, grid, language } = this.props;
 
     let skillList = Object.keys(grid.selectedCellsById)
-      .map(cellId => {
+      .map((cellId) => {
         return grid.selectedCellsById[cellId].name;
       })
       .sort();
@@ -155,13 +157,15 @@ class MobileApp extends Component {
           onOpenNavHandler={this.handleOnOpenNav}
           data={{
             energy: grid.remainingEnergy,
-            orbs: grid.orbSpent
+            orbs: grid.orbSpent,
           }}
         />
 
         <div className={classes.mainContainer}>
           <SyncGridControls
             selectedPokemon={pokemon.selectedPokemon}
+            language={language}
+            UI={UI}
             onChangePokemonHandler={this.handleOnChangePokemon}
             onChangeSavedBuildHandler={this.handleOnChangeSavedBuild}
             onDeleteSavedBuildHandler={this.handleOnDeleteSavedBuild}
@@ -191,18 +195,22 @@ class MobileApp extends Component {
           open={isSaveBuildModalVisible}
           onClose={this.handleOnCloseSaveBuildModal}
         >
-          <DialogTitle>{'Save a new build'}</DialogTitle>
+          <DialogTitle>{UI['Save Build'][language]}</DialogTitle>
           <DialogContent>
             <TextField
               className={classes.buildNameField}
-              label="Build name"
+              label={UI['Build name'][language]}
               placeholder="Enter a name as a reference"
               inputProps={{ ref: this.newBuildNameRef }}
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleOnCloseSaveBuildModal}>Cancel</Button>
-            <Button onClick={this.handleOnSaveBuild}>Save</Button>
+            <Button onClick={this.handleOnCloseSaveBuildModal}>
+              {UI['Close'][language]}
+            </Button>
+            <Button onClick={this.handleOnSaveBuild}>
+              {UI['Save'][language]}
+            </Button>
           </DialogActions>
         </Dialog>
 
@@ -216,7 +224,7 @@ class MobileApp extends Component {
               className={classes.buildNameField}
               value={this.props.url}
               InputProps={{
-                readOnly: true
+                readOnly: true,
               }}
             />
           </DialogContent>

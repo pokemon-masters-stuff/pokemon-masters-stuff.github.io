@@ -23,27 +23,29 @@ function SyncGridControls(props) {
     onChangeSavedBuildHandler,
     onDeleteSavedBuildHandler,
     onSaveBuildClickHandler,
-    onShareClickHandler
+    onShareClickHandler,
+    language,
+    UI,
   } = props;
 
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   const handleOnOpenSkillList = () =>
     typeof onOpenSkillListHandler === 'function'
       ? onOpenSkillListHandler()
       : null;
 
-  const handleOnChangePokemonHandler = pokemon =>
+  const handleOnChangePokemonHandler = (pokemon) =>
     typeof onChangePokemonHandler === 'function'
       ? onChangePokemonHandler(pokemon)
       : null;
 
-  const handleOnChangeSavedBuild = value =>
+  const handleOnChangeSavedBuild = (value) =>
     typeof onChangeSavedBuildHandler === 'function'
       ? onChangeSavedBuildHandler(value)
       : null;
 
-  const handleOnDeleteSavedBuild = value =>
+  const handleOnDeleteSavedBuild = (value) =>
     typeof onDeleteSavedBuildHandler === 'function'
       ? onDeleteSavedBuildHandler(value)
       : null;
@@ -96,7 +98,11 @@ function SyncGridControls(props) {
 
       <Grid item>
         <div style={{ marginTop: 10, paddingBottom: 10 }}>
-          <SaveBuildButtonMobile onClickHandler={handleOnSaveBuildClick} />
+          <SaveBuildButtonMobile
+            onClickHandler={handleOnSaveBuildClick}
+            language={language}
+            UI={UI}
+          />
         </div>
       </Grid>
 
