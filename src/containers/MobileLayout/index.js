@@ -151,6 +151,8 @@ class MobileApp extends Component {
           onOpenHandler={this.handleOnOpenSkillList}
           onCloseHandler={this.handleOnCloseSkillList}
           skillList={skillList}
+          UI={UI}
+          language={language}
         />
 
         <MainAppbar

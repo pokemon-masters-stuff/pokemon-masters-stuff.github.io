@@ -86,7 +86,7 @@ function SyncGridControls(props) {
           startIcon={<ListIcon />}
           style={{ marginTop: 10 }}
         >
-          Selected
+          {UI['Selected'][language]}
         </Button>
       </Grid>
 

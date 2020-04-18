@@ -10,7 +10,15 @@ import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 
 function SelectedSkillList(props) {
-  const { classes, isOpened, onOpenHandler, onCloseHandler, skillList } = props;
+  const {
+    classes,
+    isOpened,
+    onOpenHandler,
+    onCloseHandler,
+    skillList,
+    UI,
+    language,
+  } = props;
 
   const handleOnOpen = () =>
     typeof onOpenHandler === 'function' ? onOpenHandler() : null;
@@ -27,7 +35,7 @@ function SelectedSkillList(props) {
     >
       <List dense className={classes.listRoot}>
         <Typography variant="h6" className={classes.listTitle}>
-          Selected Grids
+          {UI['Selected'][language]}
         </Typography>
 
         <Divider className={classes.listDivider} />

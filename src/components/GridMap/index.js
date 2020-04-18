@@ -22,6 +22,7 @@ import {
   addSyncLvReq,
 } from '../../utils/functions';
 import { allThumbnails, allSyncGrids } from '../../utils/constants';
+import UI from '../../utils/translations';
 
 // const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;
 class GridMap extends Component {
@@ -247,7 +248,7 @@ class GridMap extends Component {
 
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
-    const { classes } = this.props;
+    const { classes, language } = this.props;
 
     // console.log(gridUrlLookUpData); // Used this to generate data/grids/allDisplacedGridData. TODO: refactor
 
@@ -291,7 +292,9 @@ class GridMap extends Component {
           <ReactTooltip className="tooltip" effect="solid" id="skillTooltip">
             <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
               <li>{this.props.grid.gridData.name}</li>
-              <li>Energy: {this.props.grid.gridData.energy}</li>
+              <li>
+                {UI['Energy'][language]}: {this.props.grid.gridData.energy}
+              </li>
               {this.props.grid.gridData.description ? (
                 <li style={{ marginTop: 1 }}>
                   {this.props.grid.gridData.description}
