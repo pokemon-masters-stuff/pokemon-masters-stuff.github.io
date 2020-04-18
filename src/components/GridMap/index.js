@@ -24,7 +24,6 @@ import {
 import { allThumbnails, allSyncGrids } from '../../utils/constants';
 import UI from '../../utils/translations';
 
-// const gridUrlLookUpData = {}; // Used this to generate data/grids/allDisplacedGridData;
 class GridMap extends Component {
   state = {
     initialRender: true,
@@ -182,14 +181,6 @@ class GridMap extends Component {
         moveName
       );
 
-      // Used this to generate data/grids/allDisplacedGridData. TODO: refactor
-      // gridUrlLookUpData[cell.cellId] = {
-      //   cellId: cell.cellId,
-      //   name: nameWithSyncLvRequirement || moveName,
-      //   description: cell.move.description,
-      //   energy: cell.move.energyCost
-      // };
-
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -249,8 +240,6 @@ class GridMap extends Component {
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, language } = this.props;
-
-    // console.log(gridUrlLookUpData); // Used this to generate data/grids/allDisplacedGridData. TODO: refactor
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
