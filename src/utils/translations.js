@@ -267,6 +267,16 @@ const UI = {
     ko: '참고 : 빌드가 게시되면 해당 설명 만 편집 할 수 있습니다.',
     zh: '注意：發布後，您將只能編輯其描述。',
   },
+  Reset: {
+    de: 'Zurücksetzen',
+    en: 'Reset',
+    es: 'Reiniciar',
+    fr: 'Réinitialiser',
+    it: 'Ripristina',
+    ja: 'リセット',
+    ko: '초기화',
+    zh: '重置',
+  },
 
   // Popular Builds Page
   //     Liked Builds: {
