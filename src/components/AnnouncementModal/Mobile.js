@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { useSelector } from 'react-redux';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -7,8 +8,11 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContentText from '@material-ui/core/DialogContentText';
+import UI from '../../utils/translations';
 
 const AnnouncementModal = (props) => {
+  const language = useSelector((state) => state.language.currentLanguage);
+
   const [isAnnouncementModalVisible, setIsAnnouncementModalVisible] = useState(
     false
   );
@@ -27,14 +31,14 @@ const AnnouncementModal = (props) => {
         <ListItemIcon className={props.classes.listIcon}>
           <InfoIcon />
         </ListItemIcon>
-        <ListItemText primary="Announcements" />
+        <ListItemText primary={UI['Announcements'][language]} />
       </ListItem>
 
       <Dialog
         open={isAnnouncementModalVisible}
         onClose={handleOnCloseAnnouncementModal}
       >
-        <DialogTitle>{'Announcements'}</DialogTitle>
+        <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
             4/11/2020:

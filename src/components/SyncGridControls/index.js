@@ -132,7 +132,7 @@ function SyncGridControls(props) {
               to="/builds/popular"
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
-              Popular Builds
+              {UI['Popular Builds'][language]}
             </Link>
           </Button>
         ) : (
@@ -142,7 +142,7 @@ function SyncGridControls(props) {
             data-toggle="modal"
             data-target="#loginOrRegisterModal"
           >
-            Popular Builds
+            {UI['Popular Builds'][language]}
           </Button>
         )}
         <LoginOrRegisterModal />

@@ -6,9 +6,11 @@ import { AnnouncementModalDesktop } from '../AnnouncementModal';
 import Logout from '../auth/Logout';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 import { LanguageDropdownDesktop } from '../LanguageDropdown';
+import UI from '../../utils/translations';
 
 const Navigation = () => {
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const language = useSelector((state) => state.language.currentLanguage);
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container container-s">
@@ -26,7 +28,7 @@ const Navigation = () => {
               data-toggle="modal"
               data-target="#announcementModal"
             >
-              Announcement
+              {UI['Announcements'][language]}
             </button>
             <AnnouncementModalDesktop />
           </li>
@@ -37,7 +39,7 @@ const Navigation = () => {
                   to="/builds/popular"
                   style={{ textDecoration: 'none', color: 'white' }}
                 >
-                  Popular Builds
+                  {UI['Popular Builds'][language]}
                 </Link>
               </button>
             ) : (
@@ -47,7 +49,7 @@ const Navigation = () => {
                 data-toggle="modal"
                 data-target="#loginOrRegisterModal"
               >
-                Popular Builds
+                {UI['Popular Builds'][language]}
               </button>
             )}
             <LoginOrRegisterModal />
@@ -60,7 +62,7 @@ const Navigation = () => {
           data-toggle="modal"
           data-target="#feedbackModal"
         >
-          Submit Feedback
+          {UI['Submit Feedback'][language]}
         </button>
         <LanguageDropdownDesktop />
         <FeedbackFormDesktop />
@@ -71,20 +73,20 @@ const Navigation = () => {
             <button
               type="button"
               className="btn btn-dark"
-              id="feedback-button"
+              id="register-button"
               data-toggle="modal"
               data-target="#registerModal"
             >
-              Register
+              {UI['Register'][language]}
             </button>
             <button
               type="button"
               className="btn btn-dark"
-              id="feedback-button"
+              id="login-button"
               data-toggle="modal"
               data-target="#loginModal"
             >
-              Login
+              {UI['Login'][language]}
             </button>
           </Fragment>
         )}

@@ -14,9 +14,11 @@ import { FeedbackFormMobile } from '../FeedbackForm';
 import styles from './styles';
 import { logout } from '../../actions/actionCreators';
 import { AnnouncementModalMobile } from '../AnnouncementModal';
+import UI from '../../utils/translations';
 
 function Navigation(props) {
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const language = useSelector((state) => state.language.currentLanguage);
   const dispatch = useDispatch();
   const handleOnClickLogout = () => {
     dispatch(logout());
@@ -44,7 +46,7 @@ function Navigation(props) {
           <ListItemIcon className={classes.listIcon}>
             <FeedbackIcon />
           </ListItemIcon>
-          <ListItemText primary="Submit Feedback" />
+          <ListItemText primary={UI['Submit Feedback'][language]} />
         </ListItem>
         <FeedbackFormMobile
           open={open}
@@ -69,7 +71,7 @@ function Navigation(props) {
               <ListItemIcon className={classes.listIcon}>
                 <VpnKeyIcon />
               </ListItemIcon>
-              <ListItemText primary="Login" />
+              <ListItemText primary={UI['Login'][language]} />
             </ListItem>
 
             <ListItem
@@ -81,7 +83,7 @@ function Navigation(props) {
               <ListItemIcon className={classes.listIcon}>
                 <AccountCircleIcon />
               </ListItemIcon>
-              <ListItemText primary="Register" />
+              <ListItemText primary={UI['Register'][language]} />
             </ListItem>
           </Fragment>
         )}

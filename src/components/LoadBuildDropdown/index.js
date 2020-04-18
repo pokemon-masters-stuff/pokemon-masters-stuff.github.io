@@ -9,15 +9,17 @@ import Select from '@material-ui/core/Select';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
 import { updateUrl } from '../../actions/actionCreators';
+import UI from '../../utils/translations';
 
 function LoadBuildDropdown(props) {
   const { classes, onChangeHandler, onDeleteHandler } = props;
 
   const dispatch = useDispatch();
-  const selectedPokemon = useSelector(state => state.pokemon.selectedPokemon);
-  const selectedBuild = useSelector(state => state.grid.selectedBuild);
-  const savedBuilds = useSelector(state =>
-    state.grid.savedBuilds.allIds.map(id => state.grid.savedBuilds.byIds[id])
+  const language = useSelector((state) => state.language.currentLanguage);
+  const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
+  const selectedBuild = useSelector((state) => state.grid.selectedBuild);
+  const savedBuilds = useSelector((state) =>
+    state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
   );
 
   const inputLabel = React.useRef(null);
@@ -28,7 +30,7 @@ function LoadBuildDropdown(props) {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     onChangeHandler(event.target.value);
     dispatch(updateUrl(selectedPokemon));
   };
@@ -54,7 +56,7 @@ function LoadBuildDropdown(props) {
       className={classes.formControl}
     >
       <InputLabel ref={inputLabel} id="select-build">
-        Load Builds
+        {UI['Load Builds'][language]}
       </InputLabel>
       <Select
         labelId="select-build"
@@ -66,7 +68,7 @@ function LoadBuildDropdown(props) {
       >
         {Boolean(savedBuilds.length) &&
           savedBuilds.map(
-            build =>
+            (build) =>
               build.pokemon === selectedPokemon && (
                 <MenuItem key={build.id} value={build.id}>
                   {build.name}

@@ -2,9 +2,12 @@ import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import Register from './Register';
 import Login from './Login';
+import UI from '../../utils/translations';
 
 const LoginOrRegisterModal = () => {
-  const darkMode = useSelector(state => state.darkMode.mode);
+  const darkMode = useSelector((state) => state.darkMode.mode);
+  const language = useSelector((state) => state.language.currentLanguage);
+
   return (
     <Fragment>
       <div
@@ -24,7 +27,7 @@ const LoginOrRegisterModal = () => {
           >
             <div className="modal-header text-center">
               <h4 className="modal-title w-100 font-weight-bold">
-                Please login or register
+                {UI['Please login or register'][language]}
               </h4>
             </div>
             <div className="modal-body mx-3">
@@ -35,7 +38,7 @@ const LoginOrRegisterModal = () => {
                 data-target="#loginModal"
                 data-dismiss="modal"
               >
-                Login
+                {UI['Login'][language]}
               </button>
               <button
                 type="button"
@@ -44,7 +47,7 @@ const LoginOrRegisterModal = () => {
                 data-target="#registerModal"
                 data-dismiss="modal"
               >
-                Register
+                {UI['Register'][language]}
               </button>
             </div>
           </div>

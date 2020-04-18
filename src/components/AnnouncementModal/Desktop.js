@@ -1,8 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import UI from '../../utils/translations';
 
 export default function AnnouncementModal() {
   const darkMode = useSelector((state) => state.darkMode.mode);
+  const language = useSelector((state) => state.language.currentLanguage);
+
   return (
     <div
       className="modal fade"
@@ -18,7 +21,7 @@ export default function AnnouncementModal() {
         >
           <div className="modal-header text-center">
             <h4 className="modal-title w-100 font-weight-bold">
-              Announcements
+              {UI['Announcements'][language]}
             </h4>
           </div>
           <div className="modal-body mx-3">

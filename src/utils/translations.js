@@ -28,7 +28,7 @@ const UI = {
     ja: 'エネルギー',
     ko: '에너지',
     it: 'Energia',
-    zh: '能源',
+    zh: '能量',
   },
   'Energy Cost': {
     de: 'Energiekosten',
@@ -38,7 +38,7 @@ const UI = {
     ja: 'エネルギーコスト',
     ko: '에너지 비용',
     it: 'Costo Energetico',
-    zh: '能源消耗',
+    zh: '能量消耗',
   },
   Announcements: {
     de: 'Ankündigungen',
@@ -58,7 +58,7 @@ const UI = {
     ja: '人気のビルド',
     ko: '인기 빌드',
     it: 'Uniteche Popolari',
-    zh: '熱門',
+    zh: '熱門配置',
   },
   'Submit Feedback': {
     de: 'Feedback Senden',
@@ -89,6 +89,16 @@ const UI = {
     ja: '言語',
     ko: '언어',
     zh: '語言',
+  },
+  'Please login or register': {
+    de: 'Bitte einloggen oder anmelden',
+    en: 'Please login or register',
+    es: 'Por favor, inicie sesión o regístrese',
+    fr: "S'il vous plaît vous connecter ou vous inscrire",
+    it: 'Effettua il login o registrati',
+    ja: 'ログインまたは登録してください',
+    ko: '로그인 또는 등록하십시오',
+    zh: '請登錄或註冊',
   },
   Register: {
     de: 'Registrieren',
@@ -153,8 +163,8 @@ const UI = {
   Logout: {
     de: 'Ausloggen',
     en: 'Logout',
-    es: 'Cerrar sesión',
-    fr: 'Se déconnecter',
+    es: 'Cerrar Sesión',
+    fr: 'Se Déconnecter',
     it: 'Esci',
     ja: 'ログアウト',
     ko: '로그 아웃',
@@ -163,8 +173,8 @@ const UI = {
   'Save Build': {
     de: 'Build Speichern',
     en: 'Save Build',
-    es: 'Guardar compilación',
-    fr: 'Enregistrer la construction',
+    es: 'Guardar Compilación',
+    fr: 'Enregistrer la Construction',
     it: 'Salva Uniteca',
     ja: 'ビルドを保存',
     ko: '빌드 저장',
@@ -179,6 +189,16 @@ const UI = {
     ja: '保存',
     ko: '저장',
     zh: '保存',
+  },
+  'Load Builds': {
+    de: 'Lade Builds',
+    en: 'Load Builds',
+    es: 'Cargars',
+    fr: 'Charger',
+    it: 'Carica',
+    ja: '読み込み',
+    ko: '로드 빌드',
+    zh: '加載配置',
   },
   Share: {
     de: 'Teilen',

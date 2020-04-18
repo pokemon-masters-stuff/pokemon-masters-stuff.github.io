@@ -4,10 +4,12 @@ import { login } from '../../actions/actionCreators';
 import Alert from '../Alert';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { setLoading } from '../../actions/actionCreators';
+import UI from '../../utils/translations';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const loading = useSelector(state => state.auth.loading);
+  const loading = useSelector((state) => state.auth.loading);
+  const language = useSelector((state) => state.language.currentLanguage);
 
   useEffect(() => {
     dispatch(setLoading(false));
@@ -15,15 +17,15 @@ const Login = () => {
 
   const [formData, setFormData] = useState({
     username: '',
-    password: ''
+    password: '',
   });
 
   const { username, password } = formData;
 
-  const onChange = e =>
+  const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     dispatch(login(username, password));
   };
@@ -39,7 +41,7 @@ const Login = () => {
         <div className="modal-dialog modal-dialog-centered modal-login">
           <div className="modal-content">
             <div className="modal-header">
-              <h4 className="modal-title">Login</h4>
+              <h4 className="modal-title">{UI['Login'][language]}</h4>
               <button
                 type="button"
                 className="close"
@@ -50,14 +52,14 @@ const Login = () => {
               </button>
             </div>
             <div className="modal-body">
-              <form onSubmit={e => onSubmit(e)}>
+              <form onSubmit={(e) => onSubmit(e)}>
                 <div className="form-group">
                   <input
                     type="text"
-                    placeholder="Username"
+                    placeholder={UI['Username'][language]}
                     name="username"
                     value={username}
-                    onChange={e => onChange(e)}
+                    onChange={(e) => onChange(e)}
                     required
                     className="form-control"
                   />
@@ -65,10 +67,10 @@ const Login = () => {
                 <div className="form-group">
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder={UI['Password'][language]}
                     name="password"
                     value={password}
-                    onChange={e => onChange(e)}
+                    onChange={(e) => onChange(e)}
                     minLength="6"
                     className="form-control"
                   />
@@ -79,7 +81,7 @@ const Login = () => {
                       style={{
                         display: 'block',
                         marginLeft: 'auto',
-                        marginRight: 'auto'
+                        marginRight: 'auto',
                       }}
                       color="secondary"
                     />
@@ -90,13 +92,13 @@ const Login = () => {
                       style={{ margin: 3 }}
                       type="submit"
                       className="btn btn-primary"
-                      value="Login"
+                      value={UI['Login'][language]}
                     />
                     <input
                       style={{ margin: 3 }}
                       type="submit"
                       className="btn btn-dark"
-                      value="Close"
+                      value={UI['Close'][language]}
                       data-dismiss="modal"
                     />
                   </div>
