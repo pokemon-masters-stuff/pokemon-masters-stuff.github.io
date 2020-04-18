@@ -92,7 +92,11 @@ function SyncGridControls(props) {
 
       <Grid item>
         <div style={{ marginTop: 10, paddingBottom: 10 }}>
-          <ShareButtonMobile onClickHandler={handleOnShareClick} />
+          <ShareButtonMobile
+            onClickHandler={handleOnShareClick}
+            language={language}
+            UI={UI}
+          />
         </div>
       </Grid>
 

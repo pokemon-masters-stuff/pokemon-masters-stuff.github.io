@@ -218,7 +218,7 @@ class MobileApp extends Component {
           open={isShareModalVisible}
           onClose={this.handleOnCloseShareModal}
         >
-          <DialogTitle>{'Share this link'}</DialogTitle>
+          <DialogTitle> {UI['Share this link'][language]}</DialogTitle>
           <DialogContent>
             <TextField
               className={classes.buildNameField}
@@ -231,7 +231,7 @@ class MobileApp extends Component {
           <DialogActions>
             <CopyToClipboard text={this.props.url}>
               <Button onClick={this.handleOnCloseShareModal}>
-                Copy to Clipboard
+                {UI['Copy to Clipboard'][language]}
               </Button>
             </CopyToClipboard>
           </DialogActions>

@@ -160,6 +160,16 @@ const UI = {
     ko: '저장',
     zh: '保存',
   },
+  Share: {
+    de: 'Teilen',
+    en: 'Share',
+    es: 'Compartir',
+    fr: 'Partager',
+    it: 'Condividi',
+    ja: '分かち合い',
+    ko: '공유',
+    zh: '分享',
+  },
   'Share Link': {
     de: 'Teilen',
     en: 'Share Link',
@@ -180,7 +190,7 @@ const UI = {
     ko: '이 링크를 공유',
     zh: '分享這個連結',
   },
-  'Copy to clipboard': {
+  'Copy to Clipboard': {
     de: 'In die Zwischenablage kopieren',
     en: 'Copy to clipboard',
     es: 'Copiar al portapapeles',
