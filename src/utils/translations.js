@@ -1,6 +1,4 @@
-//  ITALIAN TRANSLATIONS by Jo
-
-export const UI = {
+const UI = {
   // Home Page
   'Remaining Energy': {
     de: 'Verbleibende Energie',
@@ -192,6 +190,16 @@ export const UI = {
     ko: '게시',
     zh: '發布',
   },
+  'Publish this build': {
+    de: 'Veröffentlichen Sie den aktuellen Build',
+    en: 'Publish this build',
+    es: 'Publicar compilación actual',
+    fr: 'Publier la version actuelle',
+    it: "Pubblica l'Uniteca attuale",
+    ja: '現在のビルドを公開',
+    ko: '현재 빌드 게시',
+    zh: '發布當前配置',
+  },
   'Publish current build': {
     de: 'Veröffentlichen Sie den aktuellen Build',
     en: 'Publish current build',
@@ -213,24 +221,16 @@ export const UI = {
     zh: '配置名稱',
   },
   'Build description': {
-    de: '',
-    en: 'Build description',
-    es: 'Descripción de la compilación',
-    fr: 'Description de la build',
-    it: 'Descrizione Uniteca',
-    ja: 'ビルドの説明',
-    ko: '빌드 설명',
-    zh: '配置說明',
-  },
-  'Optional. Can be edited later.': {
-    de: '',
-    en: 'Optional. Can be edited later.',
-    es: 'Opcional. Se puede editar más tarde.',
-    fr: 'Optionnel. Peut être modifié ultérieurement.',
-    it: 'Opzionale. Può essere modificata successivamente.',
-    ja: 'オプション。 後で編集できます。',
-    ko: '선택 과목. 나중에 편집 할 수 있습니다.',
-    zh: '可選的。 以後可以編輯。',
+    de: 'Build-Beschreibung (Optional. Kann später bearbeitet werden.)',
+    en: 'Build description (Optional. Can be edited later.)',
+    es: 'Descripción de la compilación (Opcional. Se puede editar más tarde).',
+    fr:
+      'Description de la construction (Facultatif. Peut être modifiée ultérieurement.)',
+    it:
+      'Descrizione Uniteca (Opzionale. Può essere modificata successivamente.)',
+    ja: 'ビルドの説明（オプション。後で編集できます。）',
+    ko: '빌드 설명 (선택 사항. 나중에 편집 할 수 있음)',
+    zh: '配置說明（可選。以後可以編輯。）',
   },
   Note: {
     de:
@@ -260,3 +260,5 @@ export const UI = {
   // zh:"喜歡的配置"
   //     },
 };
+
+export default UI;

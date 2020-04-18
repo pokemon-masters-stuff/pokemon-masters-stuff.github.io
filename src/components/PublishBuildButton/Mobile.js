@@ -4,13 +4,15 @@ import { addBuild } from '../../actions/actionCreators';
 import Alert from '../Alert';
 import './desktop.css';
 import Button from '@material-ui/core/Button';
+import UI from '../../utils/translations';
 
 const PublishBuildButton = () => {
   const dispatch = useDispatch();
-  const darkMode = useSelector(state => state.darkMode.mode);
-  const pokemon = useSelector(state => state.pokemon);
-  const grid = useSelector(state => state.grid);
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  const language = useSelector((state) => state.language.currentLanguage);
+  const darkMode = useSelector((state) => state.darkMode.mode);
+  const pokemon = useSelector((state) => state.pokemon);
+  const grid = useSelector((state) => state.grid);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const newBuildNameRef = useRef(null);
   const newBuildDescRef = useRef(null);
 
@@ -30,7 +32,7 @@ const PublishBuildButton = () => {
       selectedCellsById: grid.selectedCellsById,
       remainingEnergy: grid.remainingEnergy,
       orbSpent: grid.orbSpent,
-      url: grid.url
+      url: grid.url,
     };
     dispatch(addBuild(data));
   };
@@ -44,7 +46,7 @@ const PublishBuildButton = () => {
           isAuthenticated ? '#publishBuildModal' : '#loginOrRegisterModal'
         }
       >
-        Publish This Build
+        {UI['Publish this build'][language]}
       </Button>
       <div
         className="modal fade"
@@ -63,7 +65,7 @@ const PublishBuildButton = () => {
           >
             <div className="modal-header text-center">
               <h4 className="modal-title w-100 font-weight-bold">
-                Publish current build
+                {UI['Publish current build'][language]}
               </h4>
             </div>
             <div className="modal-body mx-3">
@@ -74,7 +76,7 @@ const PublishBuildButton = () => {
                     darkMode ? 'text-white bg-dark' : null
                   }`}
                   id="name"
-                  placeholder="Build name"
+                  placeholder={UI['Build name'][language]}
                   key={`${Math.floor(Math.random() * 1000)}-min`}
                   defaultValue=""
                   ref={newBuildNameRef}
@@ -89,16 +91,13 @@ const PublishBuildButton = () => {
                     darkMode ? 'text-white bg-dark' : null
                   }`}
                   id="desc"
-                  placeholder="Build description (Optional. Can be edited later.)"
+                  placeholder={UI['Build description'][language]}
                   key={`${Math.floor(Math.random() * 1000)}-min`}
                   defaultValue=""
                   ref={newBuildDescRef}
                 />
               </div>
-              <div className="form-group">
-                Note: Once a build is published, You will only be able to edit
-                its description.
-              </div>
+              <div className="form-group">{UI['Note'][language]}</div>
             </div>
             <div className="modal-footer d-flex justify-content-center">
               <button
@@ -106,13 +105,13 @@ const PublishBuildButton = () => {
                 onClick={handleOnPublishBuild}
                 data-dismiss="modal"
               >
-                Publish
+                {UI['Publish'][language]}
               </button>
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 data-dismiss="modal"
               >
-                Close
+                {UI['Close'][language]}
               </button>
             </div>
             <Alert />

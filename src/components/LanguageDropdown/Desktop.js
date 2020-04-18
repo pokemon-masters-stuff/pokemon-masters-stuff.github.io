@@ -1,13 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setLanguage } from '../../actions/actionCreators';
+import UI from '../../utils/translations';
 
 const LanguageDropdown = () => {
-  const language = useSelector(state => state.language.currentLanguage);
+  const language = useSelector((state) => state.language.currentLanguage);
   const dispatch = useDispatch();
-  const onClick = e => {
+  const onClick = (e) => {
     dispatch(setLanguage(e.target.value));
   };
+
   return (
     <div className="dropdown">
       <button
@@ -18,7 +20,7 @@ const LanguageDropdown = () => {
         aria-haspopup="true"
         aria-expanded="false"
       >
-        Language
+        {UI['Language'][language]}
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
         <button
