@@ -2,16 +2,18 @@ import React, { Fragment, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   saveCurrentBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
 } from '../../actions/actionCreators';
+import UI from '../../utils/translations';
 import './desktop.css';
 
 export default function SaveBuildButton() {
   const dispatch = useDispatch();
-  const darkMode = useSelector(state => state.darkMode.mode);
-  const pokemon = useSelector(state => state.pokemon);
-  const savedBuilds = useSelector(state =>
-    state.grid.savedBuilds.allIds.map(id => state.grid.savedBuilds.byIds[id])
+  const language = useSelector((state) => state.language.currentLanguage);
+  const darkMode = useSelector((state) => state.darkMode.mode);
+  const pokemon = useSelector((state) => state.pokemon);
+  const savedBuilds = useSelector((state) =>
+    state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
   );
   const newBuildNameRef = useRef(null);
 
@@ -30,7 +32,7 @@ export default function SaveBuildButton() {
           userConfirmation &&
             dispatch(
               deleteSelectedBuild({
-                buildId: savedBuilds[build].id
+                buildId: savedBuilds[build].id,
               })
             );
         }
@@ -39,7 +41,7 @@ export default function SaveBuildButton() {
         dispatch(
           saveCurrentBuild({
             selectedPokemon: pokemon.selectedPokemon,
-            buildName: newBuildNameRef.current.value
+            buildName: newBuildNameRef.current.value,
           })
         );
     } else alert('Please enter a name');
@@ -54,7 +56,7 @@ export default function SaveBuildButton() {
         data-target="#saveBuildModal"
         style={{ position: 'relative', zIndex: 999 }}
       >
-        Save Build
+        {UI['Save Build'][language]}
       </button>
 
       <div
@@ -73,7 +75,7 @@ export default function SaveBuildButton() {
           >
             <div className="modal-header text-center">
               <h4 className="modal-title w-100 font-weight-bold">
-                Save a new build
+                {UI['Save Build'][language]}
               </h4>
             </div>
             <div className="modal-body mx-3">
@@ -84,7 +86,7 @@ export default function SaveBuildButton() {
                     darkMode ? 'text-white bg-dark' : null
                   }`}
                   id="save"
-                  placeholder="Build name"
+                  placeholder={UI['Build name'][language]}
                   key={`${Math.floor(Math.random() * 1000)}-min`}
                   defaultValue=""
                   ref={newBuildNameRef}
@@ -97,7 +99,7 @@ export default function SaveBuildButton() {
                 onClick={handleOnSaveBuild}
                 data-dismiss="modal"
               >
-                Save
+                {UI['Save'][language]}
               </button>
             </div>
           </div>
