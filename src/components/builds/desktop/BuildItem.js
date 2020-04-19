@@ -199,7 +199,11 @@ class BuildItem extends Component {
           <Text
             className={`build ${this.props.darkMode ? classes.darkMode : null}`}
           >
-            {renderMoveName(cell.move.name, cell.ability.abilityId)}
+            {renderMoveName(
+              cell.move.name,
+              cell.ability.abilityId,
+              this.props.language
+            )}
           </Text>
           {this.state.screenWidth < 960 &&
           cell.move.energyCost !== undefined ? (

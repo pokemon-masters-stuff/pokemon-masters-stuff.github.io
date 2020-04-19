@@ -1,4 +1,4 @@
-import { shortenedMoveNameByAbilityId } from '../data';
+import { shortenedMoveNameByAbilityId } from './constants';
 
 export const getFillColorByMoveType = ({ type, group, isLocked }) => {
   let colorsByTypeDef = {
@@ -8,7 +8,7 @@ export const getFillColorByMoveType = ({ type, group, isLocked }) => {
     movePowerBoost: '#73d958', // green
     moveAccuracyBoost: '#73d958', // green
     syncBoost: '#d12deb', // purple
-    locked: '#dedbd3' // gray
+    locked: '#dedbd3', // gray
   };
   let colorsByTypeId = {
     1: colorsByTypeDef.statsBoost,
@@ -20,7 +20,7 @@ export const getFillColorByMoveType = ({ type, group, isLocked }) => {
     7: colorsByTypeDef.passive,
     8: colorsByTypeDef.moveEffect,
     9: colorsByTypeDef.movePowerBoost,
-    10: colorsByTypeDef.moveAccuracyBoost
+    10: colorsByTypeDef.moveAccuracyBoost,
   };
   let cellColor = colorsByTypeDef.syncBoost;
 
@@ -35,12 +35,18 @@ export const getFillColorByMoveType = ({ type, group, isLocked }) => {
   return cellColor;
 };
 
-export const renderMoveName = (moveName, abilityId) => {
+export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
 
   if (moveName.length > 11) {
-    if (shortenedMoveNameByAbilityId[abilityId]) {
-      renderedMoveName = shortenedMoveNameByAbilityId[abilityId];
+    if (shortenedMoveNameByAbilityId[language]) {
+      if (shortenedMoveNameByAbilityId[language][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
+      }
+    } else {
+      if (shortenedMoveNameByAbilityId['en'][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
+      }
     }
   }
 
