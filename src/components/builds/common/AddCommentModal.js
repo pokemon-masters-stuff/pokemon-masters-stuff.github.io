@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addComment } from '../../../actions/actionCreators';
+import UI from '../../../utils/translations';
 
 const AddCommentModal = ({ index }) => {
   const dispatch = useDispatch();
-  const darkMode = useSelector(state => state.darkMode.mode);
+  const language = useSelector((state) => state.language.currentLanguage);
+  const darkMode = useSelector((state) => state.darkMode.mode);
   const [text, setText] = useState('');
 
-  const onChange = e => {
+  const onChange = (e) => {
     setText(e.target.value);
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     dispatch(addComment(index, text));
     setText('');
   };
@@ -31,7 +33,9 @@ const AddCommentModal = ({ index }) => {
           className={`modal-content ${darkMode ? 'text-white bg-dark' : null}`}
         >
           <div className="modal-header text-center">
-            <h4 className="modal-title w-100 font-weight-bold">Add Comment</h4>
+            <h4 className="modal-title w-100 font-weight-bold">
+              {UI['Add a comment'][language]}
+            </h4>
           </div>
           <div className="modal-body mx-3">
             <div className="form-group">
@@ -53,7 +57,7 @@ const AddCommentModal = ({ index }) => {
               onClick={onSubmit}
               data-dismiss="modal"
             >
-              Finish
+              {UI['Submit'][language]}
             </button>
           </div>
         </div>

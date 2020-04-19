@@ -29,6 +29,7 @@ import {
   addSyncLvReq,
 } from '../../../utils/functions';
 import { allThumbnails, allSyncGrids } from '../../../utils/constants';
+import UI from '../../../utils/translations';
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -299,7 +300,7 @@ class BuildItem extends Component {
   render() {
     const currentUser = this.props.auth.user || '';
     const { mapSizeBoundaries, initialRender } = this.state;
-    const { classes, build, darkMode } = this.props;
+    const { classes, build, darkMode, language } = this.props;
     const pokemon = build.pokemon.toLowerCase();
 
     return initialRender ? (
@@ -324,7 +325,7 @@ class BuildItem extends Component {
                   color: '#bdbdbd',
                 }}
               >
-                Build Name:{' '}
+                {UI['Build name'][language]}:{' '}
               </span>
               <span>
                 {build.buildName}
@@ -413,7 +414,7 @@ class BuildItem extends Component {
               <div>
                 <p>
                   <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                    Remaining Energy:{' '}
+                    {UI['Remaining Energy'][language]}:{' '}
                   </span>
                   <span style={{ fontWeight: 'bold' }}>
                     {build.remainingEnergy}
@@ -421,12 +422,12 @@ class BuildItem extends Component {
                 </p>
                 <p>
                   <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                    Orbs Spent:{' '}
+                    {UI['Orbs Spent'][language]}:{' '}
                   </span>
                   <span style={{ fontWeight: 'bold' }}>{build.orbSpent}</span>
                 </p>
                 <Typography style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                  Description:
+                  {UI['Description'][language]}:
                 </Typography>
                 <p
                   style={{
@@ -440,7 +441,7 @@ class BuildItem extends Component {
                 </p>
                 <p>
                   <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                    Date:{' '}
+                    {UI['Date'][language]}:{' '}
                   </span>
                   <span>{build.date.substring(0, 10)}</span>
                 </p>

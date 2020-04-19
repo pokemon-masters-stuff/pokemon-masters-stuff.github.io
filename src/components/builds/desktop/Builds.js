@@ -11,6 +11,7 @@ import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
+import UI from '../../../utils/translations';
 
 const useStyles = makeStyles({
   root: {
