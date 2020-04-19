@@ -25,23 +25,28 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
-            4/11/2020:
-            <br />
-            Added multi-language support for Pokemon names.
+            4/19/2020:
             <br />
             <br />
-            3/29/2020:
+            Added multi-language support for UI. Credit to Jo from Discord for
+            the Italian translations. He also abbreviated all the Italian skill
+            names. It was a lot of work so many thanks to him!
             <br />
-            Added multi-language support for Skill Names and Skill Descriptions.
-            Still need to work on skill name abbreviations but I need help on
-            that. If you believe you can help please send me a feedback with
-            your contact info so I can get in touch with you. Thanks in advance!
+            <br />
+            For the other languages I relied on Google Translate. If you see any
+            mistranslation, you can help me correct it by editing this Google
+            Doc:
+            <br />
+            https://docs.google.com/document/d/19HZYH4QvrnB-G52n18igDVOWtJKgvJUCxTk3v7Y6gEU/edit?usp=sharing
           </div>
-          {/* <div className="modal-footer d-flex justify-content-center">
-            <a href="https://pokemon-masters-stuff.herokuapp.com/">
-              Go To This Link
+          <div className="modal-footer d-flex justify-content-center">
+            <a
+              href="https://docs.google.com/document/d/19HZYH4QvrnB-G52n18igDVOWtJKgvJUCxTk3v7Y6gEU/edit?usp=sharing"
+              target="_blank"
+            >
+              Open link in new tab
             </a>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
