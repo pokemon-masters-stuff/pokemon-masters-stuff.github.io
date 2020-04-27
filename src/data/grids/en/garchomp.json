@@ -1,0 +1,1030 @@
+[
+  {
+    "cellId": 1009100000,
+    "coords": { "q": 1, "r": -1 },
+    "ability": {
+      "abilityId": 1100000010,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 999998990
+    },
+    "move": { "name": "HP +10", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1009100001,
+    "coords": { "q": 1, "r": 0 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999997995
+    },
+    "move": { "name": "Attack +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1009100002,
+    "coords": { "q": 0, "r": 1 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999996995
+    },
+    "move": { "name": "Defense +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1009100003,
+    "coords": { "q": -1, "r": 1 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999997995
+    },
+    "move": { "name": "Attack +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1009100004,
+    "coords": { "q": -1, "r": 0 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999994995
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1009100005,
+    "coords": { "q": 0, "r": -1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999993995
+    },
+    "move": { "name": "Speed +5", "energyCost": 0, "orbCost": 5 }
+  },
+  {
+    "cellId": 1009100006,
+    "coords": { "q": 1, "r": -2 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999997995
+    },
+    "move": { "name": "Attack +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100007,
+    "coords": { "q": 2, "r": -3 },
+    "ability": {
+      "abilityId": 2100660007,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 660,
+      "value": 7,
+      "u6": 799340930
+    },
+    "move": {
+      "name": "Stomping Tantrum: Power ↑ +7",
+      "moveId": 660,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 44,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009100008,
+    "coords": { "q": 3, "r": -4 },
+    "ability": {
+      "abilityId": 2100163008,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 163,
+      "value": 8,
+      "u6": 799837920
+    },
+    "move": {
+      "name": "Slash: Power ↑ +8",
+      "moveId": 163,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 1,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009100009,
+    "coords": { "q": 1, "r": -3 },
+    "ability": {
+      "abilityId": 2100660007,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 660,
+      "value": 7,
+      "u6": 799340930
+    },
+    "move": {
+      "name": "Stomping Tantrum: Power ↑ +7",
+      "moveId": 660,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 44,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009100010,
+    "coords": { "q": 2, "r": -4 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999997995
+    },
+    "move": { "name": "Attack +5", "energyCost": 3, "orbCost": 36 }
+  },
+  {
+    "cellId": 1009100011,
+    "coords": { "q": 3, "r": -5 },
+    "ability": {
+      "abilityId": 2100163008,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 163,
+      "value": 8,
+      "u6": 799837920
+    },
+    "move": {
+      "name": "Slash: Power ↑ +8",
+      "moveId": 163,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 1,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009100012,
+    "coords": { "q": 1, "r": -4 },
+    "ability": {
+      "abilityId": 2100660007,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 660,
+      "value": 7,
+      "u6": 799340930
+    },
+    "move": {
+      "name": "Stomping Tantrum: Power ↑ +7",
+      "moveId": 660,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 44,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009100013,
+    "coords": { "q": 2, "r": -5 },
+    "ability": {
+      "abilityId": 1202010400660,
+      "type": 8,
+      "passiveId": 12020104,
+      "moveId": 660,
+      "value": 0,
+      "u6": 277985340
+    },
+    "move": {
+      "name": "Move: Stomping Tantrum\nMove Gauge Refresh 4",
+      "moveId": 660,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 44,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
+      "energyCost": 6,
+      "orbCost": 72
+    }
+  },
+  {
+    "cellId": 1009100014,
+    "coords": { "q": 3, "r": -6 },
+    "ability": {
+      "abilityId": 2100163008,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 163,
+      "value": 8,
+      "u6": 799837920
+    },
+    "move": {
+      "name": "Slash: Power ↑ +8",
+      "moveId": 163,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 1,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 2,
+      "orbCost": 24
+    }
+  },
+  {
+    "cellId": 1009100015,
+    "coords": { "q": 1, "r": -5 },
+    "ability": {
+      "abilityId": 1804070400660,
+      "type": 8,
+      "passiveId": 18040704,
+      "moveId": 660,
+      "value": 0,
+      "u6": 215925340
+    },
+    "move": {
+      "name": "Move: Stomping Tantrum\nDefense Crush 4",
+      "moveId": 660,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 44,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a good chance of lowering the target’s Defense when an attack against it is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009100016,
+    "coords": { "q": 2, "r": -6 },
+    "ability": {
+      "abilityId": 1301060300163,
+      "type": 8,
+      "passiveId": 13010603,
+      "moveId": 163,
+      "value": 0,
+      "u6": 268936837
+    },
+    "move": {
+      "name": "Move: Slash\nCritical Strike 3",
+      "moveId": 163,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 1,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 50,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Powers up attacks if they become critical hits.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009100017,
+    "coords": { "q": -1, "r": 2 },
+    "ability": {
+      "abilityId": 2001010100000,
+      "type": 7,
+      "passiveId": 20010101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 399898990
+    },
+    "move": {
+      "name": "Sand Shelter",
+      "description": "Protects the Pokémon from damage from a sandstorm.",
+      "energyCost": 3,
+      "orbCost": 36
+    }
+  },
+  {
+    "cellId": 1009100018,
+    "coords": { "q": -2, "r": 3 },
+    "ability": {
+      "abilityId": 1300000005,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999996995
+    },
+    "move": { "name": "Defense +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100019,
+    "coords": { "q": -3, "r": 4 },
+    "ability": {
+      "abilityId": 1306020319010,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 19010,
+      "value": 0,
+      "u6": 263976070
+    },
+    "move": {
+      "name": "Move: X Attack\nMP Refresh 3",
+      "moveId": 19010,
+      "category": 3,
+      "u3": 2,
+      "user": 0,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009100020,
+    "coords": { "q": -1, "r": 3 },
+    "ability": {
+      "abilityId": 1500000005,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999994995
+    },
+    "move": { "name": "Sp. Def +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100021,
+    "coords": { "q": -2, "r": 4 },
+    "ability": {
+      "abilityId": 2301010100000,
+      "type": 7,
+      "passiveId": 23010101,
+      "moveId": 0,
+      "value": 0,
+      "u6": 369898990
+    },
+    "move": {
+      "name": "Sand Screen",
+      "description": "Sp. Def increases 50% in a sandstorm.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009100022,
+    "coords": { "q": -3, "r": 5 },
+    "ability": {
+      "abilityId": 1500000010,
+      "type": 5,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 999994990
+    },
+    "move": { "name": "Sp. Def +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1009100023,
+    "coords": { "q": -1, "r": 4 },
+    "ability": {
+      "abilityId": 1704090100000,
+      "type": 7,
+      "passiveId": 17040901,
+      "moveId": 0,
+      "value": 0,
+      "u6": 429590990
+    },
+    "move": {
+      "name": "Soothing Sand 1",
+      "description": "Restores the Pokémon’s HP whenever it takes an action during a sandstorm.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1009100024,
+    "coords": { "q": -2, "r": 5 },
+    "ability": {
+      "abilityId": 1600000010,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 999993990
+    },
+    "move": { "name": "Speed +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1009100025,
+    "coords": { "q": -3, "r": 6 },
+    "ability": {
+      "abilityId": 1100000050,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 50,
+      "u6": 999998950
+    },
+    "move": { "name": "HP +50", "energyCost": 8, "orbCost": 96 }
+  },
+  {
+    "cellId": 1009100026,
+    "coords": { "q": -1, "r": 5 },
+    "ability": {
+      "abilityId": 1704140100000,
+      "type": 7,
+      "passiveId": 17041401,
+      "moveId": 0,
+      "value": 0,
+      "u6": 429585990
+    },
+    "move": {
+      "name": "Build Up",
+      "description": "Ensures that the user’s next attack will be a critical hit after using a sync move.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1009100027,
+    "coords": { "q": -2, "r": 6 },
+    "ability": {
+      "abilityId": 1301020300000,
+      "type": 7,
+      "passiveId": 13010203,
+      "moveId": 0,
+      "value": 0,
+      "u6": 469897970
+    },
+    "move": {
+      "name": "Surging Sand 3",
+      "description": "Powers up moves in a sandstorm.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1009100028,
+    "coords": { "q": 2, "r": -1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999993995
+    },
+    "move": { "name": "Speed +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100029,
+    "coords": { "q": 3, "r": -1 },
+    "ability": {
+      "abilityId": 1600000005,
+      "type": 6,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999993995
+    },
+    "move": { "name": "Speed +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100030,
+    "coords": { "q": 2, "r": 0 },
+    "ability": {
+      "abilityId": 2100089003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 89,
+      "value": 3,
+      "u6": 799911970
+    },
+    "move": {
+      "name": "Earthquake: Power ↑ +3",
+      "moveId": 89,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 100,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009100031,
+    "coords": { "q": 1, "r": 1 },
+    "ability": {
+      "abilityId": 2100089003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 89,
+      "value": 3,
+      "u6": 799911970
+    },
+    "move": {
+      "name": "Earthquake: Power ↑ +3",
+      "moveId": 89,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 100,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009100032,
+    "coords": { "q": 3, "r": 0 },
+    "ability": {
+      "abilityId": 2100089003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 89,
+      "value": 3,
+      "u6": 799911970
+    },
+    "move": {
+      "name": "Earthquake: Power ↑ +3",
+      "moveId": 89,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 100,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009100033,
+    "coords": { "q": 2, "r": 1 },
+    "ability": {
+      "abilityId": 2160800025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60800,
+      "value": 25,
+      "u6": 739200750
+    },
+    "move": {
+      "name": "Earthquake of\nAncient Lore: Power ↑ +25",
+      "moveId": 60800,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009100034,
+    "coords": { "q": 1, "r": 2 },
+    "ability": {
+      "abilityId": 2100089003,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 89,
+      "value": 3,
+      "u6": 799911970
+    },
+    "move": {
+      "name": "Earthquake: Power ↑ +3",
+      "moveId": 89,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 100,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4,
+      "orbCost": 48
+    }
+  },
+  {
+    "cellId": 1009100035,
+    "coords": { "q": 3, "r": 1 },
+    "ability": {
+      "abilityId": 1301230100000,
+      "type": 7,
+      "passiveId": 13012301,
+      "moveId": 0,
+      "value": 0,
+      "u6": 469876990
+    },
+    "move": {
+      "name": "Ramming Speed",
+      "description": "The more the user’s Speed has been raised, the more it powers up moves.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1009100036,
+    "coords": { "q": 2, "r": 2 },
+    "ability": {
+      "abilityId": 1202010400089,
+      "type": 8,
+      "passiveId": 12020104,
+      "moveId": 89,
+      "value": 0,
+      "u6": 277985911
+    },
+    "move": {
+      "name": "Move: Earthquake\nMove Gauge Refresh 4",
+      "moveId": 89,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 2,
+      "type": 9,
+      "target": 3,
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 100,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009100037,
+    "coords": { "q": -2, "r": 1 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999997995
+    },
+    "move": { "name": "Attack +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100038,
+    "coords": { "q": -3, "r": 1 },
+    "ability": {
+      "abilityId": 1200000005,
+      "type": 2,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 5,
+      "u6": 999997995
+    },
+    "move": { "name": "Attack +5", "energyCost": 2, "orbCost": 24 }
+  },
+  {
+    "cellId": 1009100039,
+    "coords": { "q": -2, "r": 0 },
+    "ability": {
+      "abilityId": 1306020310910,
+      "type": 8,
+      "passiveId": 13060203,
+      "moveId": 10910,
+      "value": 0,
+      "u6": 263976200
+    },
+    "move": {
+      "name": "Move: This Match Is\nToo Fun!\nMP Refresh 3",
+      "moveId": 10910,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7,
+      "orbCost": 84
+    }
+  },
+  {
+    "cellId": 1009100040,
+    "coords": { "q": -1, "r": -1 },
+    "ability": {
+      "abilityId": 1100000020,
+      "type": 1,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 20,
+      "u6": 999998980
+    },
+    "move": { "name": "HP +20", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1009100041,
+    "coords": { "q": -3, "r": 0 },
+    "ability": {
+      "abilityId": 1300000010,
+      "type": 3,
+      "passiveId": 0,
+      "moveId": 0,
+      "value": 10,
+      "u6": 999996990
+    },
+    "move": { "name": "Defense +10", "energyCost": 4, "orbCost": 48 }
+  },
+  {
+    "cellId": 1009100042,
+    "coords": { "q": -2, "r": -1 },
+    "ability": {
+      "abilityId": 2160800025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60800,
+      "value": 25,
+      "u6": 739200750
+    },
+    "move": {
+      "name": "Earthquake of\nAncient Lore: Power ↑ +25",
+      "moveId": 60800,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009100043,
+    "coords": { "q": -1, "r": -2 },
+    "ability": {
+      "abilityId": 1201040200000,
+      "type": 7,
+      "passiveId": 12010402,
+      "moveId": 0,
+      "value": 0,
+      "u6": 479895980
+    },
+    "move": {
+      "name": "Sands of Time 2",
+      "description": "Quickly charges the move gauge in a sandstorm.",
+      "energyCost": 8,
+      "orbCost": 96
+    }
+  },
+  {
+    "cellId": 1009100044,
+    "coords": { "q": -3, "r": -1 },
+    "ability": {
+      "abilityId": 1501060310910,
+      "type": 8,
+      "passiveId": 15010603,
+      "moveId": 10910,
+      "value": 0,
+      "u6": 248936200
+    },
+    "move": {
+      "name": "Move: This Match Is\nToo Fun!\nPropulsion 3",
+      "moveId": 10910,
+      "category": 3,
+      "u3": 2,
+      "user": 1,
+      "group": 2,
+      "type": 0,
+      "target": 4,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderately good chance of reducing the user’s sync move countdown by one when the user’s move is successful.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1009100045,
+    "coords": { "q": -2, "r": -2 },
+    "ability": {
+      "abilityId": 1804190100000,
+      "type": 7,
+      "passiveId": 18041901,
+      "moveId": 0,
+      "value": 0,
+      "u6": 419580990
+    },
+    "move": {
+      "name": "Sharp Entry 1",
+      "description": "Raises the user’s critical-hit rate when the Pokémon enters a battle.",
+      "energyCost": 10,
+      "orbCost": 120
+    }
+  },
+  {
+    "cellId": 1009100046,
+    "coords": { "q": 0, "r": -3 },
+    "ability": {
+      "abilityId": 2160800025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60800,
+      "value": 25,
+      "u6": 739200750
+    },
+    "move": {
+      "name": "Earthquake of\nAncient Lore: Power ↑ +25",
+      "moveId": 60800,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  },
+  {
+    "cellId": 1009100047,
+    "coords": { "q": 0, "r": 3 },
+    "ability": {
+      "abilityId": 2160800025,
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 60800,
+      "value": 25,
+      "u6": 739200750
+    },
+    "move": {
+      "name": "Earthquake of\nAncient Lore: Power ↑ +25",
+      "moveId": 60800,
+      "category": 1,
+      "u3": 1,
+      "user": 0,
+      "group": 3,
+      "type": 9,
+      "target": 2,
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5,
+      "orbCost": 60
+    }
+  }
+]
