@@ -67,7 +67,10 @@ export const addSyncLvReq = (pokemon, cell, moveName) => {
     pokemon === 'raichu' ||
     pokemon === 'reuniclus' ||
     pokemon === 'golisopod' ||
-    pokemon === 'salazzle'
+    pokemon === 'salazzle' ||
+    pokemon === 'gallade' ||
+    pokemon === 'garchomp' ||
+    pokemon === 'lucario'
   ) {
     if (
       (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -107,7 +110,8 @@ export const addSyncLvReq = (pokemon, cell, moveName) => {
     pokemon === 'liepard' ||
     pokemon === 'heliolisk' ||
     pokemon === 'masquerain' ||
-    pokemon === 'meowstic'
+    pokemon === 'meowstic' ||
+    pokemon === 'milotic'
   ) {
     if (
       (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -143,7 +147,9 @@ export const addSyncLvReq = (pokemon, cell, moveName) => {
   if (
     pokemon === 'serperior' ||
     pokemon === 'alakazam' ||
-    pokemon === 'rotom'
+    pokemon === 'rotom' ||
+    pokemon === 'steelix' ||
+    pokemon === 'swanna'
   ) {
     if (
       (cell.coords.q === 0 && cell.coords.r === 3) ||
