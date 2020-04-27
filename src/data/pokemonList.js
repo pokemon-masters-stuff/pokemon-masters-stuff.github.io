@@ -22,6 +22,12 @@ const pokemonList = [
   'Salazzle',
   'Golisopod',
   'Heliolisk',
+  'Swanna',
+  'Lucario',
+  'Garchomp',
+  'Milotic',
+  'Steelix',
+  'Gallade',
 ];
 
 const namesByLanguage = {
@@ -277,6 +283,82 @@ const namesByLanguage = {
     ko: '일레도리자드',
     zh: '光電傘蜥',
   },
+
+  Swanna: {
+    en: 'Swanna',
+    de: 'Swaroness',
+    es: 'Swanna',
+    fr: 'Lakmécygne',
+    it: 'Swanna',
+    ja: 'スワンナ',
+    ko: '스완나',
+    zh: '舞天鵝',
+  },
+
+  Lucario: {
+    en: 'Lucario',
+    de: 'Lucario',
+    es: 'Lucario',
+    fr: 'Lucario',
+    it: 'Lucario',
+    ja: 'ルカリオ',
+    ko: '루카리오',
+    zh: '路卡利歐',
+  },
+
+  Garchomp: {
+    en: 'Garchomp',
+    de: 'Knakrack',
+    es: 'Garchomp',
+    fr: 'Carchacrok',
+    it: 'Garchomp',
+    ja: 'ガブリアス',
+    ko: '한카리아스',
+    zh: '烈咬陸鯊',
+  },
+
+  Steelix: {
+    en: 'Steelix',
+    de: 'Stahlos',
+    es: 'Steelix',
+    fr: 'Steelix',
+    it: 'Steelix',
+    ja: 'ハガネール',
+    ko: '강철톤',
+    zh: '大鋼蛇',
+  },
+
+  Gallade: {
+    en: 'Gallade',
+    de: 'Galagladi',
+    es: 'Gallade',
+    fr: 'Gallame',
+    it: 'Gallade',
+    ja: 'エルレイド',
+    ko: '엘레이드',
+    zh: '艾路雷朵',
+  },
+
+  Milotic: {
+    en: 'Milotic',
+    de: 'Milotic',
+    es: 'Milotic',
+    fr: 'Milobellus',
+    it: 'Milotic',
+    ja: 'ミロカロス',
+    ko: '밀로틱',
+    zh: '美納斯',
+  },
+  // Pokemon: {
+  //   en: '',
+  //   de: '',
+  //   es: '',
+  //   fr: '',
+  //   it: '',
+  //   ja: '',
+  //   ko: '',
+  //   zh: '',
+  // },
 };
 
 const getPokemonNameList = (language) =>
