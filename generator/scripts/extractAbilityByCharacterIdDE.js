@@ -3,12 +3,12 @@ const fs = require('fs');
 
 const abilityPanelDB = require('../rawdata/AbilityPanel.json');
 const abilityDB = require('../rawdata/Ability.json');
-const abilityDescriptionDB = require('../rawdata/de/AbilityDescription.json');
+const abilityDescriptionDB = require('../rawdata/de/ability_description_de.lsd.json');
 const moveDB = require('../rawdata/Move.json');
-const moveNameDB = require('../rawdata/de/MoveName.json');
-const moveDescriptionDB = require('../rawdata/de/MoveDescription.json');
-const passiveAbilityDescriptionDB = require('../rawdata/de/PassiveSkillName.json');
-const passiveSkillDescriptionDB = require('../rawdata/de/PassiveSkillDescription.json');
+const moveNameDB = require('../rawdata/de/move_name_de.lsd.json');
+const moveDescriptionDB = require('../rawdata/de/move_description_de.lsd.json');
+const passiveAbilityDescriptionDB = require('../rawdata/de/passive_skill_name_de.lsd.json');
+const passiveSkillDescriptionDB = require('../rawdata/de/passive_skill_description_de.lsd.json');
 const triangularCoordsToCollumns = require('../utils/triangularCoordsToCollumns');
 
 /*
@@ -21,20 +21,20 @@ const extractAbilityByCharacterId = () => {
 
   if (!args.characterId) return null;
 
-  abilityPanelDB.entries.forEach(entry => {
+  abilityPanelDB.entries.forEach((entry) => {
     if (entry.characterId === args.characterId) {
       const { cellId, energyCost, orbCost, x, y, z, abilityId } = entry;
       const coords = triangularCoordsToCollumns({ x, y, z });
       let move = {};
 
       ability = abilityDB.entries.find(
-        ability => ability.abilityId === abilityId
+        (ability) => ability.abilityId === abilityId
       );
 
       move.name = abilityDescriptionDB[ability.type];
 
       if (ability.moveId) {
-        moveDB.entries.forEach(moveEntry => {
+        moveDB.entries.forEach((moveEntry) => {
           if (moveEntry.moveId === ability.moveId) {
             let updatedMove = { ...moveEntry };
             let moveName = moveNameDB[moveEntry.moveId]
@@ -44,7 +44,7 @@ const extractAbilityByCharacterId = () => {
             if (moveName) {
               updatedMove = {
                 ...updatedMove,
-                name: move.name.replace('[Name:Move ]', moveName)
+                name: move.name.replace('[Name:Move ]', moveName),
               };
             }
 
@@ -60,7 +60,7 @@ const extractAbilityByCharacterId = () => {
             '[Name:AbilityDescription ]',
             passiveAbilityDescriptionDB[ability.passiveId]
           ),
-          description: passiveSkillDescriptionDB[ability.passiveId]
+          description: passiveSkillDescriptionDB[ability.passiveId],
         };
       }
 
@@ -68,15 +68,15 @@ const extractAbilityByCharacterId = () => {
         cellId,
         coords: {
           q: coords.col,
-          r: coords.row
+          r: coords.row,
         },
         ability,
         move: {
           ...move,
           name: move.name.replace(/\[Digit:5digits \]/gi, `+${ability.value}`),
           energyCost,
-          orbCost
-        }
+          orbCost,
+        },
       });
     }
   });
@@ -85,7 +85,7 @@ const extractAbilityByCharacterId = () => {
     fs.writeFile(
       `${__dirname}/../../src/data/grids/de/${args.filename}.json`,
       JSON.stringify(abilities),
-      err => {
+      (err) => {
         if (err) throw err;
         console.log('Successfully written to file');
       }
