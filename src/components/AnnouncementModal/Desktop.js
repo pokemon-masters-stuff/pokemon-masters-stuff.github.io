@@ -25,8 +25,13 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
-            4/19/2020:
+            4/27/2020:
             <br />
+            Added grids for Garchomp, Lucario, Milotic, Swanna, Gallade, and
+            Steelix.
+            <br />
+            <br />
+            4/19/2020:
             <br />
             Added multi-language support for UI. Credit to Jo from Discord for
             the Italian translations. He also abbreviated all the Italian skill
