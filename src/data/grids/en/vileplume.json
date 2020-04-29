@@ -389,8 +389,7 @@
       "tags": 0,
       "description": "Occasionally increases the user’s move gauge by one when a move is successful.",
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -458,8 +457,7 @@
       "tags": 0,
       "description": "Occasionally increases the user’s move gauge by one when a move is successful.",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -675,8 +673,7 @@
       "tags": 0,
       "description": "Raises the chance of lowering stat values with the additional effects of moves.",
       "energyCost": 8,
-      "orbCost": 96,
-      "locked": true
+      "orbCost": 96
     }
   },
   {
@@ -696,8 +693,7 @@
     "move": {
       "name": "Sp. Atk +10",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -892,8 +888,7 @@
       "tags": 0,
       "description": "Has a moderately good chance of restoring one MP of the move used if the move is successful.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -934,8 +929,7 @@
     "move": {
       "name": "Sp. Atk +10",
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -1164,8 +1158,7 @@
       "name": "Solar Flare 5",
       "description": "Powers up sync moves when the weather is sunny.",
       "energyCost": 9,
-      "orbCost": 108,
-      "locked": true
+      "orbCost": 108
     }
   },
   {
@@ -1185,8 +1178,7 @@
     "move": {
       "name": "HP +30",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1219,8 +1211,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1253,8 +1244,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]

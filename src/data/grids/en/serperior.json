@@ -374,8 +374,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 3,
-      "orbCost": 36,
-      "locked": true
+      "orbCost": 36
     }
   },
   {
@@ -443,8 +442,7 @@
       "tags": 0,
       "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
       "energyCost": 6,
-      "orbCost": 72,
-      "locked": true
+      "orbCost": 72
     }
   },
   {
@@ -632,8 +630,7 @@
       "tags": 512,
       "description": "Increases the amount of HP restored by the user’s healing moves.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -654,8 +651,7 @@
       "name": "Solar Flare 5",
       "description": "Powers up sync moves when the weather is sunny.",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -917,8 +913,7 @@
       "tags": 0,
       "description": "Occasionally restores one MP of the move used if the move is successful.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -973,8 +968,7 @@
       "name": "On the Ropes 3",
       "description": "Reduces damage when the Pokémon is in a pinch and is hit by a physical attack move.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1163,8 +1157,7 @@
       "name": "Speeding Sun 2",
       "description": "Quickly charges the move gauge when the weather is sunny.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1185,8 +1178,7 @@
       "name": "Solar Shield",
       "description": "The Pokémon is not affected by status conditions when the weather is sunny.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -1219,8 +1211,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1253,8 +1244,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]

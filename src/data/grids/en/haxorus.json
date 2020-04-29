@@ -422,8 +422,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -457,8 +456,7 @@
       "tags": 0,
       "description": "Critical hits land more easily when an attack move is used.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -673,8 +671,7 @@
     "move": {
       "name": "Defense +10",
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -695,8 +692,7 @@
       "name": "Speedy Entry 2",
       "description": "Sharply raises the user’s Speed when the Pokémon enters a battle.",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -936,8 +932,7 @@
       "tags": 0,
       "description": "Powers up moves when the user is confused.",
       "energyCost": 8,
-      "orbCost": 96,
-      "locked": true
+      "orbCost": 96
     }
   },
   {
@@ -971,8 +966,7 @@
       "tags": 0,
       "description": "Has a moderately good chance of increasing the user’s move gauge by one when a move is successful.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -1161,8 +1155,7 @@
     "move": {
       "name": "Defense +10",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1183,8 +1176,7 @@
       "name": "Unhindered",
       "description": "When the Pokémon attacks, ignores damage-reducing effects on the opponent’s field of play.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1217,8 +1209,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1251,8 +1242,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]

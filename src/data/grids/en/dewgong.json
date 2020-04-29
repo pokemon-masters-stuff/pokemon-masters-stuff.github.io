@@ -408,8 +408,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -429,8 +428,7 @@
     "move": {
       "name": "Sp. Atk +10",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -647,8 +645,7 @@
     "move": {
       "name": "HP +20",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -669,8 +666,7 @@
       "name": "Invigorating Hail 3",
       "description": "Powers up moves in a hailstorm.",
       "energyCost": 8,
-      "orbCost": 96,
-      "locked": true
+      "orbCost": 96
     }
   },
   {
@@ -895,8 +891,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -930,8 +925,7 @@
       "tags": 0,
       "description": "Has a good chance of increasing the user’s move gauge by one when a move is successful.",
       "energyCost": 8,
-      "orbCost": 96,
-      "locked": true
+      "orbCost": 96
     }
   },
   {
@@ -1108,8 +1102,7 @@
       "name": "Freeze Synergy 8",
       "description": "Powers up moves when the target is frozen.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1130,8 +1123,7 @@
       "name": "Freeze Synergy 8",
       "description": "Powers up moves when the target is frozen.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1164,8 +1156,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1198,8 +1189,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]
