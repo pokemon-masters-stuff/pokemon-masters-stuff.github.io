@@ -37,3 +37,4 @@ export const ADD_COMMENT = 'add_comment';
 export const DELETE_COMMENT = 'delete_comment';
 export const CHANGE_FILTER = 'change_filter';
 export const CHANGE_SORT = 'change_sort';
+export const SET_SYNC_LEVEL = 'set_sync_level';
