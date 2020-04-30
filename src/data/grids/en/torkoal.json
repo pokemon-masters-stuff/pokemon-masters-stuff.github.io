@@ -390,8 +390,7 @@
       "name": "Power Chain 1",
       "description": "Powers up moves when unity bonus is in effect.",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -433,8 +432,7 @@
       "name": "Power Chain 1",
       "description": "Powers up moves when unity bonus is in effect.",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -636,8 +634,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -657,8 +654,7 @@
     "move": {
       "name": "Sp. Atk +10",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -826,8 +822,7 @@
       "name": "Healing Sun 1",
       "description": "Restores the Pokémon’s HP whenever it takes an action while the weather is sunny.",
       "energyCost": 6,
-      "orbCost": 72,
-      "locked": true
+      "orbCost": 72
     }
   },
   {
@@ -868,8 +863,7 @@
     "move": {
       "name": "Sp. Atk +20",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1111,8 +1105,7 @@
       "name": "Solar Shield",
       "description": "The Pokémon is not affected by status conditions when the weather is sunny.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -1133,8 +1126,7 @@
       "name": "Fortuitous 4",
       "description": "Has a good chance of raising the user’s Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness at random when an attack is successful.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1167,8 +1159,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1201,8 +1192,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]

@@ -408,8 +408,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -429,8 +428,7 @@
     "move": {
       "name": "Attack +20",
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -646,8 +644,7 @@
     "move": {
       "name": "Sp. Atk +10",
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -668,8 +665,7 @@
       "name": "Power Reserves 2",
       "description": "Powers up moves in a pinch.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -895,8 +891,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -929,8 +924,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -1106,8 +1100,7 @@
       "name": "Sharp Entry 1",
       "description": "Raises the user’s critical-hit rate when the Pokémon enters a battle.",
       "energyCost": 15,
-      "orbCost": 180,
-      "locked": true
+      "orbCost": 180
     }
   },
   {
@@ -1128,8 +1121,7 @@
       "name": "Critical Strike 1",
       "description": "Powers up attacks if they become critical hits.",
       "energyCost": 12,
-      "orbCost": 144,
-      "locked": true
+      "orbCost": 144
     }
   },
   {
@@ -1162,8 +1154,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1196,8 +1187,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]

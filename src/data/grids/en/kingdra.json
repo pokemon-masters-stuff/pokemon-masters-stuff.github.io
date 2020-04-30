@@ -408,8 +408,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -443,8 +442,7 @@
       "tags": 0,
       "description": "Raises the chance of inflicting status conditions with the additional effects of moves.",
       "energyCost": 11,
-      "orbCost": 132,
-      "locked": true
+      "orbCost": 132
     }
   },
   {
@@ -646,8 +644,7 @@
     "move": {
       "name": "Defense +10",
       "energyCost": 4,
-      "orbCost": 48,
-      "locked": true
+      "orbCost": 48
     }
   },
   {
@@ -668,8 +665,7 @@
       "name": "Dire Rain 1",
       "description": "Critical hits land more easily when an attack move is used while the weather is rainy.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -908,8 +904,7 @@
       "tags": 0,
       "description": "Has a good chance of returning the user’s lowered stats to normal when a move is successful.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -943,8 +938,7 @@
       "tags": 0,
       "description": "Has a good chance of increasing the user’s move gauge by one when a move is successful.",
       "energyCost": 6,
-      "orbCost": 72,
-      "locked": true
+      "orbCost": 72
     }
   },
   {
@@ -1135,8 +1129,7 @@
       "name": "Stamina Reserves 6",
       "description": "Once per battle, increases the user’s move gauge by six when the user is in a pinch.",
       "energyCost": 7,
-      "orbCost": 84,
-      "locked": true
+      "orbCost": 84
     }
   },
   {
@@ -1170,8 +1163,7 @@
       "tags": 0,
       "description": "Powers up moves when the target is paralyzed.",
       "energyCost": 10,
-      "orbCost": 120,
-      "locked": true
+      "orbCost": 120
     }
   },
   {
@@ -1204,8 +1196,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   },
   {
@@ -1238,8 +1229,7 @@
       "maxUses": 0,
       "tags": 0,
       "energyCost": 5,
-      "orbCost": 60,
-      "locked": true
+      "orbCost": 60
     }
   }
 ]
