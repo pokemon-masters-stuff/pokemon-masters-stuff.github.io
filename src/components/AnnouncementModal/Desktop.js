@@ -25,6 +25,11 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
+            4/30/2020:
+            <br />
+            Fixed French UI translation errors thanks to EternalStay!
+            <br />
+            <br />
             4/27/2020:
             <br />
             Added grids for Garchomp, Lucario, Milotic, Swanna, Gallade, and

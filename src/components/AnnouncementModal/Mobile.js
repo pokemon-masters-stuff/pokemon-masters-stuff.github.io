@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            4/30/2020:
+            <br />
+            Fixed French UI translation errors thanks to EternalStay!
+            <br />
+            <br />
             4/27/2020:
             <br />
             Added grids for Garchomp, Lucario, Milotic, Swanna, Gallade, and
