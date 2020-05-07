@@ -43,6 +43,12 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            5/7/2020:
+            <br />
+            Added Italian skill name abbreviations for the new sync grids.
+            Thanks to Jo from Discord!
+            <br />
+            <br />
             4/30/2020:
             <br />
             Fixed French UI translation errors thanks to EternalStay!
