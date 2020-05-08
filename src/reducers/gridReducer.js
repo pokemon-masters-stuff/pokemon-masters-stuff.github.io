@@ -157,7 +157,6 @@ export default function (state = initialState, action) {
           : Object.keys(state.selectedCellsById).map((e) => {
               return e.slice(-2);
             });
-      console.log('gridUrlArray', gridUrlArray);
       if (gridUrlArray === '') {
         b64GridUrlArray = '';
       } else {
@@ -168,10 +167,13 @@ export default function (state = initialState, action) {
         }
         b64GridUrlArray = '&grid=' + window.btoa(chArray.join(''));
       }
-
+      let syncLevelForUrl = state.syncLevel;
+      if (state.syncLevel === '3+') {
+        syncLevelForUrl = '3';
+      }
       return {
         ...state,
-        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}`,
+        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}&s=${syncLevelForUrl}`,
       };
     case SET_SYNC_LEVEL:
       return {

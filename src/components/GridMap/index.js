@@ -15,6 +15,7 @@ import {
   resetGrids,
   loadGridFromUrl,
   updateUrl,
+  setSyncLevel,
 } from '../../actions/actionCreators';
 import {
   getFillColorByMoveType,
@@ -41,6 +42,17 @@ class GridMap extends Component {
     if (getQueryStringValue('p')) {
       pokemonFromUrl = getQueryStringValue('p');
       this.props.selectPokemon(pokemonFromUrl);
+    }
+
+    let syncLevelFromUrl;
+    if (getQueryStringValue('s')) {
+      syncLevelFromUrl = getQueryStringValue('s');
+      if (syncLevelFromUrl === '3') {
+        syncLevelFromUrl = '3+';
+      }
+      this.props.setSyncLevel(syncLevelFromUrl);
+    } else {
+      this.props.setSyncLevel('3+');
     }
 
     // if user uses an url that includes grid data, generate gridmap based on url
@@ -338,4 +350,5 @@ export default connect(mapStateToProps, {
   resetGrids,
   loadGridFromUrl,
   updateUrl,
+  setSyncLevel,
 })(withStyles(styles)(GridMap));
