@@ -14,6 +14,7 @@ import { FeedbackFormMobile } from '../FeedbackForm';
 import styles from './styles';
 import { logout } from '../../actions/actionCreators';
 import { AnnouncementModalMobile } from '../AnnouncementModal';
+import { ContributeModalMobile } from '../ContributeModal';
 import UI from '../../utils/translations';
 
 function Navigation(props) {
@@ -42,6 +43,7 @@ function Navigation(props) {
     <Drawer open={isOpened} onClose={handleOnClose}>
       <List className={classes.listRoot}>
         <AnnouncementModalMobile classes={classes} />
+        <ContributeModalMobile classes={classes} />
         <ListItem button onClick={handleClickOpenModal}>
           <ListItemIcon className={classes.listIcon}>
             <FeedbackIcon />

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FeedbackFormDesktop } from '../FeedbackForm';
 import { AnnouncementModalDesktop } from '../AnnouncementModal';
+import { ContributeModalDesktop } from '../ContributeModal';
 import Logout from '../auth/Logout';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 import { LanguageDropdownDesktop } from '../LanguageDropdown';
@@ -64,6 +65,18 @@ const Navigation = () => {
         >
           {UI['Submit Feedback'][language]}
         </button>
+
+        <button
+          type="button"
+          className="btn btn-dark"
+          id="contribute-button"
+          data-toggle="modal"
+          data-target="#contributeModal"
+        >
+          {UI['Contribute'][language]}
+        </button>
+        <ContributeModalDesktop />
+
         <LanguageDropdownDesktop />
         <FeedbackFormDesktop />
         {isAuthenticated ? (

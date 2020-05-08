@@ -25,6 +25,17 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
+            5/7/2020:
+            <br />
+            Added Italian skill name abbreviations for the new sync grids.
+            Thanks to Jo from Discord!
+            <br />
+            <br />
+            4/30/2020:
+            <br />
+            Fixed French UI translation errors thanks to EternalStay!
+            <br />
+            <br />
             4/27/2020:
             <br />
             Added grids for Garchomp, Lucario, Milotic, Swanna, Gallade, and

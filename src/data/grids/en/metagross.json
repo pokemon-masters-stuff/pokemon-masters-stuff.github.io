@@ -1025,7 +1025,7 @@
       "u6": 99099943
     },
     "move": {
-      "name": "Haymaker 1",
+      "name": "Haymaker",
       "description": "The more the user’s Attack has been raised, the more it powers up sync moves.",
       "energyCost": 10,
       "orbCost": 120
