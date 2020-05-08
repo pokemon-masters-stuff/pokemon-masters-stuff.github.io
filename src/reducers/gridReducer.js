@@ -150,18 +150,28 @@ export default function (state = initialState, action) {
         },
       };
     case UPDATE_URL:
+      let b64GridUrlArray;
       const gridUrlArray =
         Object.keys(state.selectedCellsById).length === 0
           ? ''
-          : '&grid=' +
-            Object.keys(state.selectedCellsById)
-              .map((e) => {
-                return e.slice(-2);
-              })
-              .join(',');
+          : Object.keys(state.selectedCellsById).map((e) => {
+              return e.slice(-2);
+            });
+      console.log('gridUrlArray', gridUrlArray);
+      if (gridUrlArray === '') {
+        b64GridUrlArray = '';
+      } else {
+        let len = gridUrlArray.length;
+        let chArray = new Array(len);
+        for (let i = 0; i < len; i++) {
+          chArray[i] = String.fromCharCode(gridUrlArray[i]);
+        }
+        b64GridUrlArray = '&grid=' + window.btoa(chArray.join(''));
+      }
+
       return {
         ...state,
-        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`,
+        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}`,
       };
     case SET_SYNC_LEVEL:
       return {
