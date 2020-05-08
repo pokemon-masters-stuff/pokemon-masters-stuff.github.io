@@ -12,6 +12,7 @@ import { ShareButtonMobile } from '../ShareButton';
 import { PublishBuildButtonMobile } from '../PublishBuildButton';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 import LoadBuildDropdown from '../LoadBuildDropdown';
+import SyncLevelDropdown from '../../components/SyncLevelDropdown';
 import styles from './styles';
 
 function SyncGridControls(props) {
@@ -72,7 +73,9 @@ function SyncGridControls(props) {
           onChangeHandler={handleOnChangePokemonHandler}
         />
       </Grid>
-
+      <Grid item>
+        <SyncLevelDropdown />
+      </Grid>
       <Grid item>
         <div style={{ marginTop: 10 }}>
           <ResetGridButtonMobile />

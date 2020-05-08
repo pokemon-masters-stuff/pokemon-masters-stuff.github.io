@@ -178,7 +178,8 @@ class GridMap extends Component {
       const nameWithSyncLvRequirement = addSyncLvReq(
         this.props.pokemon,
         cell,
-        moveName
+        moveName,
+        this.props.grid.syncLevel
       );
 
       const hexagonProps = {
@@ -197,7 +198,9 @@ class GridMap extends Component {
         fill: getFillColorByMoveType({
           type: cell.ability.type,
           group: cell.move.group,
-          isLocked: cell.move.locked,
+          // pokemon: this.props.pokemon, // will need this and the two lines below if want to add a Lock pattern
+          // cell: cell,
+          // syncLevel: this.props.grid.syncLevel,
         }),
         onClickHandler: (e, data) => this.handleClick(e, index, data),
         className: this.props.darkMode
@@ -209,17 +212,23 @@ class GridMap extends Component {
           : null,
       };
 
+      const renderedMoveName = renderMoveName(
+        cell.move.name,
+        cell.ability.abilityId,
+        this.props.language,
+        cell,
+        this.props.pokemon,
+        this.props.grid.syncLevel
+      );
+
       return (
         <Hexagon {...hexagonProps}>
           <Text className={this.props.darkMode ? classes.darkMode : null}>
-            {renderMoveName(
-              cell.move.name,
-              cell.ability.abilityId,
-              this.props.language
-            )}
+            {renderedMoveName}
           </Text>
           {this.state.screenWidth < 960 &&
-          cell.move.energyCost !== undefined ? (
+          cell.move.energyCost !== undefined &&
+          renderedMoveName !== '' ? (
             <text
               className="energy-inside-grid"
               textAnchor="middle"

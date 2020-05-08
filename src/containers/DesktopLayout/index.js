@@ -14,7 +14,6 @@ import {
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
 import { PublishBuildButtonDesktop } from '../../components/PublishBuildButton';
-
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
 
 class DesktopLayout extends Component {
