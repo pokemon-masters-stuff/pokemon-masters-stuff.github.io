@@ -398,6 +398,27 @@ const UI = {
     ko: '설명 및 세부 사항',
     zh: '描述和細節',
   },
+  Contribute: {
+    de: 'Beitrag',
+    en: 'Contribute',
+    es: 'Contribuir',
+    fr: 'Contribuer',
+    it: 'Contribuire',
+    ja: '助ける',
+    ko: '기여하다',
+    zh: '幫助',
+  },
+  'Contribute Title': {
+    de: 'Bitte helfen Sie mir mit Abkürzungen für Fertigkeitsnamen',
+    en: 'Please Help Me With Skill Name Abbreviations',
+    es:
+      'Por favor, ayúdame con las abreviaturas de los nombres de las habilidades',
+    fr: "Veuillez m'aider avec les abréviations des noms de compétences",
+    it: 'Aiutatemi con le abbreviazioni dei nomi delle abilità',
+    ja: 'スキル名の省略形について教えてください',
+    ko: '기술 이름 약어로 도와주세요',
+    zh: '請幫助我提供技能名稱縮寫',
+  },
 };
 
 export default UI;
