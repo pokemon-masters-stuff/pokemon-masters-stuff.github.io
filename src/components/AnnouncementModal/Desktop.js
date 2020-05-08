@@ -25,6 +25,16 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
+            5/8/2020:
+            <br />
+            1. You can now select sync levels and the grids will change
+            accordingly. Also added to url so other people with the link will
+            see the same thing
+            <br />
+            2. Further shortened url. Thanks to u/f3xjc for teaching me how to
+            b64 encode!
+            <br />
+            <br />
             5/7/2020:
             <br />
             Added Italian skill name abbreviations for the new sync grids.
