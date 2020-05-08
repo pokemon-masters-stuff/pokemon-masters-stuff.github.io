@@ -6,7 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { getPokemonNameList } from '../../data';
 import styles from './styles';
-import { updateUrl } from '../../actions/actionCreators';
+import { updateUrl, setSyncLevel } from '../../actions/actionCreators';
 import { useSelector, useDispatch } from 'react-redux';
 
 function SimpleSelect(props) {
@@ -30,6 +30,7 @@ function SimpleSelect(props) {
     onChangeHandler(event.target.value);
 
     dispatch(updateUrl(event.target.value));
+    dispatch(setSyncLevel('3+'));
   };
 
   return (
