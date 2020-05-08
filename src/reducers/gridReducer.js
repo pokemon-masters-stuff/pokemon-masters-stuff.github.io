@@ -12,7 +12,8 @@ import {
   LOAD_SELECTED_BUILD,
   DELETE_SELECTED_BUILD,
   LOAD_GRID_FROM_URL,
-  UPDATE_URL
+  UPDATE_URL,
+  SET_SYNC_LEVEL,
 } from '../actions/types';
 
 const initialState = {
@@ -22,16 +23,17 @@ const initialState = {
   selectedCellsById: {},
   savedBuilds: {
     byIds: {},
-    allIds: []
+    allIds: [],
   },
   selectedBuild: {
     id: '',
-    name: ''
+    name: '',
   },
-  url: ''
+  url: '',
+  syncLevel: '3+',
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case DISPLAY_GRID_DATA:
       return { ...state, gridData: action.gridData };
@@ -42,8 +44,8 @@ export default function(state = initialState, action) {
         ...state,
         selectedCellsById: {
           ...state.selectedCellsById,
-          [action.gridData.cellId]: action.gridData
-        }
+          [action.gridData.cellId]: action.gridData,
+        },
       };
     case REMOVE_FROM_GRID_LIST:
       const updateSelectedCellsById = { ...state.selectedCellsById };
@@ -51,7 +53,7 @@ export default function(state = initialState, action) {
 
       return {
         ...state,
-        selectedCellsById: updateSelectedCellsById
+        selectedCellsById: updateSelectedCellsById,
       };
     case SUBTRACT_FROM_REMAINING_ENERGY:
       return {
@@ -59,7 +61,7 @@ export default function(state = initialState, action) {
         remainingEnergy: state.remainingEnergy - action.gridData.energy,
         orbSpent:
           state.orbSpent +
-          (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12)
+          (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12),
       };
     case ADD_BACK_TO_REMAINING_ENERGY:
       return {
@@ -67,7 +69,7 @@ export default function(state = initialState, action) {
         remainingEnergy: state.remainingEnergy + action.gridData.energy,
         orbSpent:
           state.orbSpent -
-          (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12)
+          (action.gridData.energy === 0 ? 5 : action.gridData.energy * 12),
       };
     case SAVE_CURRENT_BUILD:
       const newBuildUUID = uuidv4();
@@ -85,11 +87,12 @@ export default function(state = initialState, action) {
               selectedCellsById: state.selectedCellsById,
               remainingEnergy: state.remainingEnergy,
               orbSpent: state.orbSpent,
-              url: state.url
-            }
+              url: state.url,
+              syncLevel: state.syncLevel,
+            },
           },
-          allIds: [...state.savedBuilds.allIds, newBuildUUID]
-        }
+          allIds: [...state.savedBuilds.allIds, newBuildUUID],
+        },
       };
     case LOAD_SELECTED_BUILD:
       return {
@@ -100,7 +103,9 @@ export default function(state = initialState, action) {
         remainingEnergy:
           state.savedBuilds.byIds[action.payload.buildId].remainingEnergy,
         orbSpent: state.savedBuilds.byIds[action.payload.buildId].orbSpent,
-        url: state.savedBuilds.byIds[action.payload.buildId].url
+        url: state.savedBuilds.byIds[action.payload.buildId].url,
+        syncLevel:
+          state.savedBuilds.byIds[action.payload.buildId].syncLevel || '3+', // old saves don't have sync level
       };
     case DELETE_SELECTED_BUILD:
       const updateSavedBuildsById = { ...state.savedBuilds.byIds };
@@ -118,19 +123,19 @@ export default function(state = initialState, action) {
             ),
             ...state.savedBuilds.allIds.slice(
               state.savedBuilds.allIds.indexOf(action.payload.buildId) + 1
-            )
-          ]
-        }
+            ),
+          ],
+        },
       };
     case LOAD_GRID_FROM_URL:
       return {
         ...state,
         selectedCellsById: {
           ...state.selectedCellsById,
-          [action.gridData.cellId]: action.gridData
+          [action.gridData.cellId]: action.gridData,
         },
         remainingEnergy: action.remainingEnergy,
-        orbSpent: action.orbSpent
+        orbSpent: action.orbSpent,
       };
     case RESET_GRIDS:
       return {
@@ -141,8 +146,8 @@ export default function(state = initialState, action) {
         selectedCellsById: {},
         selectedBuild: {
           id: '',
-          name: ''
-        }
+          name: '',
+        },
       };
     case UPDATE_URL:
       const gridUrlArray =
@@ -150,13 +155,18 @@ export default function(state = initialState, action) {
           ? ''
           : '&grid=' +
             Object.keys(state.selectedCellsById)
-              .map(e => {
+              .map((e) => {
                 return e.slice(-2);
               })
               .join(',');
       return {
         ...state,
-        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`
+        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${gridUrlArray}&o=${state.orbSpent}&p=${action.payload}`,
+      };
+    case SET_SYNC_LEVEL:
+      return {
+        ...state,
+        syncLevel: action.payload,
       };
     default:
       return state;

@@ -6,28 +6,23 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import styles from './styles';
 import { useSelector, useDispatch } from 'react-redux';
+import { setSyncLevel } from '../../actions/actionCreators';
 
 const syncLevelList = ['3+', '2', '1'];
 
 function SyncLevelDropdown(props) {
   const dispatch = useDispatch();
-  const { classes, onChangeHandler } = props;
-  const [syncLevel, setSyncLevel] = React.useState('3+');
+  const { classes } = props;
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
-  const language = useSelector((state) => state.language.currentLanguage);
+  const syncLevel = useSelector((state) => state.grid.syncLevel);
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
-  React.useEffect(() => {
-    setSyncLevel('3+');
-  }, []);
-
   const handleChange = (event) => {
-    setSyncLevel(event.target.value);
-    onChangeHandler(event.target.value);
+    dispatch(setSyncLevel(event.target.value));
   };
 
   return (
