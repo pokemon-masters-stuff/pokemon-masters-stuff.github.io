@@ -7,12 +7,12 @@ import Select from '@material-ui/core/Select';
 import styles from './styles';
 import { useSelector, useDispatch } from 'react-redux';
 
-const syncLevelList = [1, 2, 3, 4, 5];
+const syncLevelList = ['3+', '2', '1'];
 
-function SyncLevelSelect(props) {
+function SyncLevelDropdown(props) {
   const dispatch = useDispatch();
   const { classes, onChangeHandler } = props;
-  const [syncLevel, setSyncLevel] = React.useState(3);
+  const [syncLevel, setSyncLevel] = React.useState('3+');
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
@@ -22,7 +22,7 @@ function SyncLevelSelect(props) {
   }, []);
 
   React.useEffect(() => {
-    setSyncLevel(3);
+    setSyncLevel('3+');
   }, []);
 
   const handleChange = (event) => {
@@ -42,7 +42,7 @@ function SyncLevelSelect(props) {
       </InputLabel>
       <Select
         labelId="select-sync-level"
-        value={pokemon}
+        value={syncLevel}
         onChange={handleChange}
         labelWidth={labelWidth}
       >
@@ -56,4 +56,4 @@ function SyncLevelSelect(props) {
   );
 }
 
-export default withStyles(styles)(SyncLevelSelect);
+export default withStyles(styles)(SyncLevelDropdown);

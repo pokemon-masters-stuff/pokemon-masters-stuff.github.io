@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { SelectedSkillListDesktop } from '../../components/SelectedSkillList';
 import SelectPokemonDropdown from '../../components/SelectPokemonDropdown';
+import SyncLevelDropdown from '../../components/SyncLevelDropdown';
 import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
 import GridMap from '../../components/GridMap';
 import {
   selectPokemon,
   resetGrids,
   loadSelectedBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
 } from '../../actions/actionCreators';
 import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
@@ -29,11 +30,11 @@ class DesktopLayout extends Component {
     this.props.resetGrids();
   }
 
-  handleOnChangeSavedBuild = value => {
+  handleOnChangeSavedBuild = (value) => {
     this.props.loadSelectedBuild({ buildId: value });
   };
 
-  handleOnDeleteSavedBuild = value => {
+  handleOnDeleteSavedBuild = (value) => {
     this.props.deleteSelectedBuild({ buildId: value });
   };
 
@@ -51,10 +52,12 @@ class DesktopLayout extends Component {
                     selectedPokemon={pokemon.selectedPokemon}
                     onChangeHandler={this.selectPokemon}
                   />
+                  <SyncLevelDropdown />
                   <LoadBuildDropdown
                     onChangeHandler={this.handleOnChangeSavedBuild}
                     onDeleteHandler={this.handleOnDeleteSavedBuild}
                   />
+
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
                     <SaveBuildButtonDesktop />
                   </div>
@@ -83,14 +86,14 @@ class DesktopLayout extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   pokemon: state.pokemon,
-  darkMode: state.darkMode.mode
+  darkMode: state.darkMode.mode,
 });
 
 export default connect(mapStateToProps, {
   selectPokemon,
   resetGrids,
   loadSelectedBuild,
-  deleteSelectedBuild
+  deleteSelectedBuild,
 })(DesktopLayout);
