@@ -25,7 +25,7 @@ import {
 import {
   getFillColorByMoveType,
   renderMoveName,
-  addSyncLvReq,
+  // addSyncLvReq,
 } from '../../../utils/functions';
 import { allThumbnails, allSyncGrids } from '../../../utils/constants';
 import BuildDescription from './BuildDescription';
@@ -125,12 +125,13 @@ class BuildItem extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
+      // const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
 
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
-          name: nameWithSyncLvRequirement || moveName,
+          // name: nameWithSyncLvRequirement || moveName,
+          name: moveName,
           description: cell.move.description,
           energy: cell.move.energyCost,
         },

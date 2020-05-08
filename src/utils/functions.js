@@ -1,13 +1,7 @@
 import { shortenedMoveNameByAbilityId } from './constants';
 
 // TO DO: REFACTOR
-export const getFillColorByMoveType = ({
-  type,
-  group,
-  // pokemon,
-  // cell,
-  // syncLevel,
-}) => {
+export const getFillColorByMoveType = ({ type, group }) => {
   let colorsByTypeDef = {
     statsBoost: '#66b6ec', // blue
     passive: '#fff04d', // yellow
@@ -15,7 +9,7 @@ export const getFillColorByMoveType = ({
     movePowerBoost: '#73d958', // green
     moveAccuracyBoost: '#73d958', // green
     syncBoost: '#d12deb', // purple
-    locked: '#dedbd3', // gray
+    // locked: '#dedbd3', // gray
   };
   let colorsByTypeId = {
     1: colorsByTypeDef.statsBoost,
@@ -35,288 +29,11 @@ export const getFillColorByMoveType = ({
     cellColor = colorsByTypeId[type];
   }
 
-  // if (isLocked) {
-  //   // cellColor = colorsByTypeDef.locked;
-  //   cellColor = `url(#${pokemon})`;
-  // }
-
-  // The code below is for adding a Lock pattern
-  // if (syncLevel === '1') {
-  //   if (
-  //     pokemon === 'pikachu' ||
-  //     pokemon === 'charizard' ||
-  //     pokemon === 'dewgong' ||
-  //     pokemon === 'infernape' ||
-  //     pokemon === 'haxorus' ||
-  //     pokemon === 'kingdra' ||
-  //     pokemon === 'metagross' ||
-  //     pokemon === 'houndoom' ||
-  //     pokemon === 'raichu' ||
-  //     pokemon === 'reuniclus' ||
-  //     pokemon === 'golisopod' ||
-  //     pokemon === 'salazzle' ||
-  //     pokemon === 'gallade' ||
-  //     pokemon === 'garchomp' ||
-  //     pokemon === 'lucario'
-  //   ) {
-  //     if (
-  //       (cell.coords.q === 0 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -5) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -6) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -1) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -2) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 2) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 1) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 5) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 6) ||
-  //       (cell.coords.q === 3 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -5) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -2) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -1) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 0) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 0) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 1) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 2) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 5) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 6)
-  //     ) {
-  //       // cellColor = `url(#${pokemon})`;
-  //       cellColor = 'url(#locked)';
-  //     }
-  //   }
-
-  //   if (
-  //     pokemon === 'torkoal' ||
-  //     pokemon === 'vileplume' ||
-  //     pokemon === 'palossand' ||
-  //     pokemon === 'liepard' ||
-  //     pokemon === 'heliolisk' ||
-  //     pokemon === 'masquerain' ||
-  //     pokemon === 'meowstic' ||
-  //     pokemon === 'milotic'
-  //   ) {
-  //     if (
-  //       (cell.coords.q === 0 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -5) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -4) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 2) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 2) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 3) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 4) ||
-  //       (cell.coords.q === 3 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -5) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -3) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -3) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 0) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 1) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 1) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 3) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 3)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-
-  //   if (
-  //     pokemon === 'serperior' ||
-  //     pokemon === 'alakazam' ||
-  //     pokemon === 'rotom' ||
-  //     pokemon === 'steelix' ||
-  //     pokemon === 'swanna'
-  //   ) {
-  //     if (
-  //       (cell.coords.q === 0 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -5) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -3) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -2) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 4) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 5) ||
-  //       (cell.coords.q === 3 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -5) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -2) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -2) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -1) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 3) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 3)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-
-  //   if (pokemon === 'mew') {
-  //     if (
-  //       (cell.coords.q === 3 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 4 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 4 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -1) ||
-  //       (cell.coords.q === -4 && cell.coords.r === 0) ||
-  //       (cell.coords.q === -4 && cell.coords.r === 1) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 4 && cell.coords.r === -1) ||
-  //       (cell.coords.q === 4 && cell.coords.r === 0) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 1) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -4 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -4 && cell.coords.r === 3)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-  // }
-
-  // if (syncLevel === '2') {
-  //   if (
-  //     pokemon === 'pikachu' ||
-  //     pokemon === 'charizard' ||
-  //     pokemon === 'dewgong' ||
-  //     pokemon === 'infernape' ||
-  //     pokemon === 'haxorus' ||
-  //     pokemon === 'kingdra' ||
-  //     pokemon === 'metagross' ||
-  //     pokemon === 'houndoom' ||
-  //     pokemon === 'raichu' ||
-  //     pokemon === 'reuniclus' ||
-  //     pokemon === 'golisopod' ||
-  //     pokemon === 'salazzle' ||
-  //     pokemon === 'gallade' ||
-  //     pokemon === 'garchomp' ||
-  //     pokemon === 'lucario'
-  //   ) {
-  //     if (
-  //       (cell.coords.q === 0 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -5) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -6) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -1) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -2) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 2) ||
-  //       (cell.coords.q === 3 && cell.coords.r === 1) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 5) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 6)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-
-  //   if (
-  //     pokemon === 'torkoal' ||
-  //     pokemon === 'vileplume' ||
-  //     pokemon === 'palossand' ||
-  //     pokemon === 'liepard' ||
-  //     pokemon === 'heliolisk' ||
-  //     pokemon === 'masquerain' ||
-  //     pokemon === 'meowstic' ||
-  //     pokemon === 'milotic'
-  //   ) {
-  //     if (
-  //       (cell.coords.q === 0 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -5) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -4) ||
-  //       (cell.coords.q === -2 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 2) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 2) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 3) ||
-  //       (cell.coords.q === -2 && cell.coords.r === 4)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-
-  //   if (
-  //     pokemon === 'serperior' ||
-  //     pokemon === 'alakazam' ||
-  //     pokemon === 'rotom' ||
-  //     pokemon === 'steelix' ||
-  //     pokemon === 'swanna'
-  //   ) {
-  //     if (
-  //       (cell.coords.q === 0 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 2 && cell.coords.r === -6) ||
-  //       (cell.coords.q === 1 && cell.coords.r === -5) ||
-  //       (cell.coords.q === -1 && cell.coords.r === -3) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -2) ||
-  //       (cell.coords.q === 2 && cell.coords.r === 4) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -3 && cell.coords.r === 5)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-
-  //   if (pokemon === 'mew') {
-  //     if (
-  //       (cell.coords.q === 3 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 4 && cell.coords.r === -4) ||
-  //       (cell.coords.q === 4 && cell.coords.r === -3) ||
-  //       (cell.coords.q === 1 && cell.coords.r === 3) ||
-  //       (cell.coords.q === 0 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -1 && cell.coords.r === 4) ||
-  //       (cell.coords.q === -3 && cell.coords.r === -1) ||
-  //       (cell.coords.q === -4 && cell.coords.r === 0) ||
-  //       (cell.coords.q === -4 && cell.coords.r === 1)
-  //     ) {
-  //       cellColor = `url(#${pokemon})`;
-  //     }
-  //   }
-  // }
-
   return cellColor;
 };
 
-// let names = {}; // to generate list of skills to be abbreviated
-
-export const renderMoveName = (
-  moveName,
-  abilityId,
-  language,
-  cell,
-  pokemon,
-  syncLevel
-) => {
-  let renderedMoveName = moveName;
-
-  if (moveName.length > 11) {
-    if (shortenedMoveNameByAbilityId[language]) {
-      if (shortenedMoveNameByAbilityId[language][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
-      }
-      // else {// to generate list of skills to be abbreviated
-      //   names[abilityId] = moveName; // to generate list of skills to be abbreviated
-      //   console.log(names); // to generate list of skills to be abbreviated
-      // }
-    } else {
-      if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
-      }
-    }
-  }
+export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
+  let selectable = true;
 
   if (syncLevel === '1') {
     if (
@@ -360,7 +77,7 @@ export const renderMoveName = (
         (cell.coords.q === -2 && cell.coords.r === 5) ||
         (cell.coords.q === -3 && cell.coords.r === 6)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
 
@@ -398,7 +115,7 @@ export const renderMoveName = (
         (cell.coords.q === -3 && cell.coords.r === 4) ||
         (cell.coords.q === -2 && cell.coords.r === 3)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
 
@@ -433,7 +150,7 @@ export const renderMoveName = (
         (cell.coords.q === -2 && cell.coords.r === 4) ||
         (cell.coords.q === -1 && cell.coords.r === 3)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
 
@@ -458,7 +175,7 @@ export const renderMoveName = (
         (cell.coords.q === -4 && cell.coords.r === 4) ||
         (cell.coords.q === -4 && cell.coords.r === 3)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
   }
@@ -493,7 +210,7 @@ export const renderMoveName = (
         (cell.coords.q === -1 && cell.coords.r === 5) ||
         (cell.coords.q === -2 && cell.coords.r === 6)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
 
@@ -519,7 +236,7 @@ export const renderMoveName = (
         (cell.coords.q === -1 && cell.coords.r === 3) ||
         (cell.coords.q === -2 && cell.coords.r === 4)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
 
@@ -542,7 +259,7 @@ export const renderMoveName = (
         (cell.coords.q === -1 && cell.coords.r === 4) ||
         (cell.coords.q === -3 && cell.coords.r === 5)
       ) {
-        renderedMoveName = '';
+        selectable = false;
       }
     }
 
@@ -558,7 +275,30 @@ export const renderMoveName = (
         (cell.coords.q === -4 && cell.coords.r === 0) ||
         (cell.coords.q === -4 && cell.coords.r === 1)
       ) {
-        renderedMoveName = '';
+        selectable = false;
+      }
+    }
+  }
+  return selectable;
+};
+
+// let names = {}; // to generate list of skills to be abbreviated
+
+export const renderMoveName = (moveName, abilityId, language) => {
+  let renderedMoveName = moveName;
+
+  if (moveName.length > 11) {
+    if (shortenedMoveNameByAbilityId[language]) {
+      if (shortenedMoveNameByAbilityId[language][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
+      }
+      // else {// to generate list of skills to be abbreviated
+      //   names[abilityId] = moveName; // to generate list of skills to be abbreviated
+      //   console.log(names); // to generate list of skills to be abbreviated
+      // }
+    } else {
+      if (shortenedMoveNameByAbilityId['en'][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
       }
     }
   }
@@ -566,161 +306,161 @@ export const renderMoveName = (
   return renderedMoveName;
 };
 
-export const addSyncLvReq = (pokemon, cell, moveName) => {
-  let nameWithSyncLvRequirement;
-  if (
-    pokemon === 'pikachu' ||
-    pokemon === 'charizard' ||
-    pokemon === 'dewgong' ||
-    pokemon === 'infernape' ||
-    pokemon === 'haxorus' ||
-    pokemon === 'kingdra' ||
-    pokemon === 'metagross' ||
-    pokemon === 'houndoom' ||
-    pokemon === 'raichu' ||
-    pokemon === 'reuniclus' ||
-    pokemon === 'golisopod' ||
-    pokemon === 'salazzle' ||
-    pokemon === 'gallade' ||
-    pokemon === 'garchomp' ||
-    pokemon === 'lucario'
-  ) {
-    if (
-      (cell.coords.q === 0 && cell.coords.r === 3) ||
-      (cell.coords.q === 0 && cell.coords.r === -3) ||
-      (cell.coords.q === 1 && cell.coords.r === -5) ||
-      (cell.coords.q === 2 && cell.coords.r === -6) ||
-      (cell.coords.q === -3 && cell.coords.r === -1) ||
-      (cell.coords.q === -2 && cell.coords.r === -2) ||
-      (cell.coords.q === 2 && cell.coords.r === 2) ||
-      (cell.coords.q === 3 && cell.coords.r === 1) ||
-      (cell.coords.q === -1 && cell.coords.r === 5) ||
-      (cell.coords.q === -2 && cell.coords.r === 6)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
-    } else if (
-      (cell.coords.q === 3 && cell.coords.r === -6) ||
-      (cell.coords.q === 2 && cell.coords.r === -5) ||
-      (cell.coords.q === 1 && cell.coords.r === -4) ||
-      (cell.coords.q === -1 && cell.coords.r === -2) ||
-      (cell.coords.q === -2 && cell.coords.r === -1) ||
-      (cell.coords.q === -3 && cell.coords.r === 0) ||
-      (cell.coords.q === 3 && cell.coords.r === 0) ||
-      (cell.coords.q === 2 && cell.coords.r === 1) ||
-      (cell.coords.q === 1 && cell.coords.r === 2) ||
-      (cell.coords.q === -1 && cell.coords.r === 4) ||
-      (cell.coords.q === -2 && cell.coords.r === 5) ||
-      (cell.coords.q === -3 && cell.coords.r === 6)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
-    }
-  }
+// export const addSyncLvReq = (pokemon, cell, moveName) => {
+//   let nameWithSyncLvRequirement;
+//   if (
+//     pokemon === 'pikachu' ||
+//     pokemon === 'charizard' ||
+//     pokemon === 'dewgong' ||
+//     pokemon === 'infernape' ||
+//     pokemon === 'haxorus' ||
+//     pokemon === 'kingdra' ||
+//     pokemon === 'metagross' ||
+//     pokemon === 'houndoom' ||
+//     pokemon === 'raichu' ||
+//     pokemon === 'reuniclus' ||
+//     pokemon === 'golisopod' ||
+//     pokemon === 'salazzle' ||
+//     pokemon === 'gallade' ||
+//     pokemon === 'garchomp' ||
+//     pokemon === 'lucario'
+//   ) {
+//     if (
+//       (cell.coords.q === 0 && cell.coords.r === 3) ||
+//       (cell.coords.q === 0 && cell.coords.r === -3) ||
+//       (cell.coords.q === 1 && cell.coords.r === -5) ||
+//       (cell.coords.q === 2 && cell.coords.r === -6) ||
+//       (cell.coords.q === -3 && cell.coords.r === -1) ||
+//       (cell.coords.q === -2 && cell.coords.r === -2) ||
+//       (cell.coords.q === 2 && cell.coords.r === 2) ||
+//       (cell.coords.q === 3 && cell.coords.r === 1) ||
+//       (cell.coords.q === -1 && cell.coords.r === 5) ||
+//       (cell.coords.q === -2 && cell.coords.r === 6)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
+//     } else if (
+//       (cell.coords.q === 3 && cell.coords.r === -6) ||
+//       (cell.coords.q === 2 && cell.coords.r === -5) ||
+//       (cell.coords.q === 1 && cell.coords.r === -4) ||
+//       (cell.coords.q === -1 && cell.coords.r === -2) ||
+//       (cell.coords.q === -2 && cell.coords.r === -1) ||
+//       (cell.coords.q === -3 && cell.coords.r === 0) ||
+//       (cell.coords.q === 3 && cell.coords.r === 0) ||
+//       (cell.coords.q === 2 && cell.coords.r === 1) ||
+//       (cell.coords.q === 1 && cell.coords.r === 2) ||
+//       (cell.coords.q === -1 && cell.coords.r === 4) ||
+//       (cell.coords.q === -2 && cell.coords.r === 5) ||
+//       (cell.coords.q === -3 && cell.coords.r === 6)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
+//     }
+//   }
 
-  if (
-    pokemon === 'torkoal' ||
-    pokemon === 'vileplume' ||
-    pokemon === 'palossand' ||
-    pokemon === 'liepard' ||
-    pokemon === 'heliolisk' ||
-    pokemon === 'masquerain' ||
-    pokemon === 'meowstic' ||
-    pokemon === 'milotic'
-  ) {
-    if (
-      (cell.coords.q === 0 && cell.coords.r === 3) ||
-      (cell.coords.q === 0 && cell.coords.r === -3) ||
-      (cell.coords.q === 2 && cell.coords.r === -6) ||
-      (cell.coords.q === 1 && cell.coords.r === -5) ||
-      (cell.coords.q === -1 && cell.coords.r === -4) ||
-      (cell.coords.q === -2 && cell.coords.r === -4) ||
-      (cell.coords.q === 2 && cell.coords.r === 2) ||
-      (cell.coords.q === 1 && cell.coords.r === 2) ||
-      (cell.coords.q === -1 && cell.coords.r === 3) ||
-      (cell.coords.q === -2 && cell.coords.r === 4)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
-    } else if (
-      (cell.coords.q === 3 && cell.coords.r === -6) ||
-      (cell.coords.q === 2 && cell.coords.r === -5) ||
-      (cell.coords.q === 1 && cell.coords.r === -4) ||
-      (cell.coords.q === -1 && cell.coords.r === -3) ||
-      (cell.coords.q === -2 && cell.coords.r === -3) ||
-      (cell.coords.q === -3 && cell.coords.r === -3) ||
-      (cell.coords.q === 3 && cell.coords.r === 0) ||
-      (cell.coords.q === 3 && cell.coords.r === 1) ||
-      (cell.coords.q === 2 && cell.coords.r === 1) ||
-      (cell.coords.q === -3 && cell.coords.r === 3) ||
-      (cell.coords.q === -3 && cell.coords.r === 4) ||
-      (cell.coords.q === -2 && cell.coords.r === 3)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
-    }
-  }
+//   if (
+//     pokemon === 'torkoal' ||
+//     pokemon === 'vileplume' ||
+//     pokemon === 'palossand' ||
+//     pokemon === 'liepard' ||
+//     pokemon === 'heliolisk' ||
+//     pokemon === 'masquerain' ||
+//     pokemon === 'meowstic' ||
+//     pokemon === 'milotic'
+//   ) {
+//     if (
+//       (cell.coords.q === 0 && cell.coords.r === 3) ||
+//       (cell.coords.q === 0 && cell.coords.r === -3) ||
+//       (cell.coords.q === 2 && cell.coords.r === -6) ||
+//       (cell.coords.q === 1 && cell.coords.r === -5) ||
+//       (cell.coords.q === -1 && cell.coords.r === -4) ||
+//       (cell.coords.q === -2 && cell.coords.r === -4) ||
+//       (cell.coords.q === 2 && cell.coords.r === 2) ||
+//       (cell.coords.q === 1 && cell.coords.r === 2) ||
+//       (cell.coords.q === -1 && cell.coords.r === 3) ||
+//       (cell.coords.q === -2 && cell.coords.r === 4)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
+//     } else if (
+//       (cell.coords.q === 3 && cell.coords.r === -6) ||
+//       (cell.coords.q === 2 && cell.coords.r === -5) ||
+//       (cell.coords.q === 1 && cell.coords.r === -4) ||
+//       (cell.coords.q === -1 && cell.coords.r === -3) ||
+//       (cell.coords.q === -2 && cell.coords.r === -3) ||
+//       (cell.coords.q === -3 && cell.coords.r === -3) ||
+//       (cell.coords.q === 3 && cell.coords.r === 0) ||
+//       (cell.coords.q === 3 && cell.coords.r === 1) ||
+//       (cell.coords.q === 2 && cell.coords.r === 1) ||
+//       (cell.coords.q === -3 && cell.coords.r === 3) ||
+//       (cell.coords.q === -3 && cell.coords.r === 4) ||
+//       (cell.coords.q === -2 && cell.coords.r === 3)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
+//     }
+//   }
 
-  if (
-    pokemon === 'serperior' ||
-    pokemon === 'alakazam' ||
-    pokemon === 'rotom' ||
-    pokemon === 'steelix' ||
-    pokemon === 'swanna'
-  ) {
-    if (
-      (cell.coords.q === 0 && cell.coords.r === 3) ||
-      (cell.coords.q === 0 && cell.coords.r === -3) ||
-      (cell.coords.q === 2 && cell.coords.r === -6) ||
-      (cell.coords.q === 1 && cell.coords.r === -5) ||
-      (cell.coords.q === -1 && cell.coords.r === -3) ||
-      (cell.coords.q === -3 && cell.coords.r === -2) ||
-      (cell.coords.q === 2 && cell.coords.r === 4) ||
-      (cell.coords.q === 1 && cell.coords.r === 4) ||
-      (cell.coords.q === -1 && cell.coords.r === 4) ||
-      (cell.coords.q === -3 && cell.coords.r === 5)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
-    } else if (
-      (cell.coords.q === 3 && cell.coords.r === -6) ||
-      (cell.coords.q === 2 && cell.coords.r === -5) ||
-      (cell.coords.q === 1 && cell.coords.r === -4) ||
-      (cell.coords.q === -1 && cell.coords.r === -2) ||
-      (cell.coords.q === -2 && cell.coords.r === -2) ||
-      (cell.coords.q === -3 && cell.coords.r === -1) ||
-      (cell.coords.q === 1 && cell.coords.r === 3) ||
-      (cell.coords.q === 2 && cell.coords.r === 3) ||
-      (cell.coords.q === 3 && cell.coords.r === 3) ||
-      (cell.coords.q === -3 && cell.coords.r === 4) ||
-      (cell.coords.q === -2 && cell.coords.r === 4) ||
-      (cell.coords.q === -1 && cell.coords.r === 3)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
-    }
-  }
+//   if (
+//     pokemon === 'serperior' ||
+//     pokemon === 'alakazam' ||
+//     pokemon === 'rotom' ||
+//     pokemon === 'steelix' ||
+//     pokemon === 'swanna'
+//   ) {
+//     if (
+//       (cell.coords.q === 0 && cell.coords.r === 3) ||
+//       (cell.coords.q === 0 && cell.coords.r === -3) ||
+//       (cell.coords.q === 2 && cell.coords.r === -6) ||
+//       (cell.coords.q === 1 && cell.coords.r === -5) ||
+//       (cell.coords.q === -1 && cell.coords.r === -3) ||
+//       (cell.coords.q === -3 && cell.coords.r === -2) ||
+//       (cell.coords.q === 2 && cell.coords.r === 4) ||
+//       (cell.coords.q === 1 && cell.coords.r === 4) ||
+//       (cell.coords.q === -1 && cell.coords.r === 4) ||
+//       (cell.coords.q === -3 && cell.coords.r === 5)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
+//     } else if (
+//       (cell.coords.q === 3 && cell.coords.r === -6) ||
+//       (cell.coords.q === 2 && cell.coords.r === -5) ||
+//       (cell.coords.q === 1 && cell.coords.r === -4) ||
+//       (cell.coords.q === -1 && cell.coords.r === -2) ||
+//       (cell.coords.q === -2 && cell.coords.r === -2) ||
+//       (cell.coords.q === -3 && cell.coords.r === -1) ||
+//       (cell.coords.q === 1 && cell.coords.r === 3) ||
+//       (cell.coords.q === 2 && cell.coords.r === 3) ||
+//       (cell.coords.q === 3 && cell.coords.r === 3) ||
+//       (cell.coords.q === -3 && cell.coords.r === 4) ||
+//       (cell.coords.q === -2 && cell.coords.r === 4) ||
+//       (cell.coords.q === -1 && cell.coords.r === 3)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
+//     }
+//   }
 
-  if (pokemon === 'mew') {
-    if (
-      (cell.coords.q === 3 && cell.coords.r === -4) ||
-      (cell.coords.q === 4 && cell.coords.r === -4) ||
-      (cell.coords.q === 4 && cell.coords.r === -3) ||
-      (cell.coords.q === 1 && cell.coords.r === 3) ||
-      (cell.coords.q === 0 && cell.coords.r === 4) ||
-      (cell.coords.q === -1 && cell.coords.r === 4) ||
-      (cell.coords.q === -3 && cell.coords.r === -1) ||
-      (cell.coords.q === -4 && cell.coords.r === 0) ||
-      (cell.coords.q === -4 && cell.coords.r === 1)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
-    } else if (
-      (cell.coords.q === -1 && cell.coords.r === -3) ||
-      (cell.coords.q === 0 && cell.coords.r === -4) ||
-      (cell.coords.q === 1 && cell.coords.r === -4) ||
-      (cell.coords.q === 4 && cell.coords.r === -1) ||
-      (cell.coords.q === 4 && cell.coords.r === 0) ||
-      (cell.coords.q === 3 && cell.coords.r === 1) ||
-      (cell.coords.q === -3 && cell.coords.r === 4) ||
-      (cell.coords.q === -4 && cell.coords.r === 4) ||
-      (cell.coords.q === -4 && cell.coords.r === 3)
-    ) {
-      nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
-    }
-  }
-  return nameWithSyncLvRequirement;
-};
+//   if (pokemon === 'mew') {
+//     if (
+//       (cell.coords.q === 3 && cell.coords.r === -4) ||
+//       (cell.coords.q === 4 && cell.coords.r === -4) ||
+//       (cell.coords.q === 4 && cell.coords.r === -3) ||
+//       (cell.coords.q === 1 && cell.coords.r === 3) ||
+//       (cell.coords.q === 0 && cell.coords.r === 4) ||
+//       (cell.coords.q === -1 && cell.coords.r === 4) ||
+//       (cell.coords.q === -3 && cell.coords.r === -1) ||
+//       (cell.coords.q === -4 && cell.coords.r === 0) ||
+//       (cell.coords.q === -4 && cell.coords.r === 1)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv3]';
+//     } else if (
+//       (cell.coords.q === -1 && cell.coords.r === -3) ||
+//       (cell.coords.q === 0 && cell.coords.r === -4) ||
+//       (cell.coords.q === 1 && cell.coords.r === -4) ||
+//       (cell.coords.q === 4 && cell.coords.r === -1) ||
+//       (cell.coords.q === 4 && cell.coords.r === 0) ||
+//       (cell.coords.q === 3 && cell.coords.r === 1) ||
+//       (cell.coords.q === -3 && cell.coords.r === 4) ||
+//       (cell.coords.q === -4 && cell.coords.r === 4) ||
+//       (cell.coords.q === -4 && cell.coords.r === 3)
+//     ) {
+//       nameWithSyncLvRequirement = moveName + ' [Sync Lv2]';
+//     }
+//   }
+//   return nameWithSyncLvRequirement;
+// };

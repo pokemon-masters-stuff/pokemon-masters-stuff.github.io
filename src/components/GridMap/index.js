@@ -19,7 +19,8 @@ import {
 import {
   getFillColorByMoveType,
   renderMoveName,
-  addSyncLvReq,
+  // addSyncLvReq,
+  checkSelectabilityBasedOnSyncLv,
 } from '../../utils/functions';
 import { allThumbnails, allSyncGrids } from '../../utils/constants';
 import UI from '../../utils/translations';
@@ -175,17 +176,24 @@ class GridMap extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      const nameWithSyncLvRequirement = addSyncLvReq(
+      // const nameWithSyncLvRequirement = addSyncLvReq(
+      //   this.props.pokemon,
+      //   cell,
+      //   moveName,
+      //   this.props.grid.syncLevel
+      // );
+
+      const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         this.props.pokemon,
         cell,
-        moveName,
         this.props.grid.syncLevel
       );
 
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
-          name: nameWithSyncLvRequirement || moveName,
+          // name: nameWithSyncLvRequirement || moveName,
+          name: moveName,
           description: cell.move.description,
           energy: cell.move.energyCost,
         },
@@ -202,7 +210,11 @@ class GridMap extends Component {
           // cell: cell,
           // syncLevel: this.props.grid.syncLevel,
         }),
-        onClickHandler: (e, data) => this.handleClick(e, index, data),
+        onClickHandler:
+          isSeletableBasedOnSyncLv ||
+          this.props.grid.selectedCellsById[cell.cellId]
+            ? (e, data) => this.handleClick(e, index, data)
+            : null,
         className: this.props.darkMode
           ? this.props.grid.selectedCellsById[cell.cellId]
             ? 'selected dark-mode'
@@ -215,20 +227,20 @@ class GridMap extends Component {
       const renderedMoveName = renderMoveName(
         cell.move.name,
         cell.ability.abilityId,
-        this.props.language,
-        cell,
-        this.props.pokemon,
-        this.props.grid.syncLevel
+        this.props.language
+        // cell,
+        // this.props.pokemon,
+        // this.props.grid.syncLevel
       );
 
       return (
         <Hexagon {...hexagonProps}>
           <Text className={this.props.darkMode ? classes.darkMode : null}>
-            {renderedMoveName}
+            {isSeletableBasedOnSyncLv ? renderedMoveName : ''}
           </Text>
           {this.state.screenWidth < 960 &&
           cell.move.energyCost !== undefined &&
-          renderedMoveName !== '' ? (
+          isSeletableBasedOnSyncLv ? (
             <text
               className="energy-inside-grid"
               textAnchor="middle"

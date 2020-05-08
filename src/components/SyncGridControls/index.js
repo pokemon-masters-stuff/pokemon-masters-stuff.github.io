@@ -72,14 +72,7 @@ function SyncGridControls(props) {
           selectedPokemon={selectedPokemon}
           onChangeHandler={handleOnChangePokemonHandler}
         />
-      </Grid>
-      <Grid item>
         <SyncLevelDropdown />
-      </Grid>
-      <Grid item>
-        <div style={{ marginTop: 10 }}>
-          <ResetGridButtonMobile />
-        </div>
       </Grid>
 
       <Grid item>
@@ -149,6 +142,12 @@ function SyncGridControls(props) {
           </Button>
         )}
         <LoginOrRegisterModal />
+      </Grid>
+
+      <Grid item>
+        <div style={{ marginTop: 10 }}>
+          <ResetGridButtonMobile />
+        </div>
       </Grid>
     </Grid>
   );
