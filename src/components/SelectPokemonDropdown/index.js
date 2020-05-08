@@ -41,7 +41,7 @@ function SimpleSelect(props) {
       color="primary"
     >
       <InputLabel ref={inputLabel} id="select-pokemon">
-        Pokemon
+        Pokémon
       </InputLabel>
       <Select
         labelId="select-pokemon"
