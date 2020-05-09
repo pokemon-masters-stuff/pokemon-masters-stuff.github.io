@@ -1,6 +1,7 @@
 import {
   shortenedMoveNameByAbilityIdEN,
   shortenedMoveNameByAbilityIdIT,
+  shortenedMoveNameByAbilityIdES,
   pikachuGridDataDE,
   torkoalGridDataDE,
   infernapeGridDataDE,
@@ -301,6 +302,7 @@ export const allThumbnails = {
 export const shortenedMoveNameByAbilityId = {
   en: shortenedMoveNameByAbilityIdEN,
   it: shortenedMoveNameByAbilityIdIT,
+  es: shortenedMoveNameByAbilityIdES,
 };
 
 export const allSyncGrids = {

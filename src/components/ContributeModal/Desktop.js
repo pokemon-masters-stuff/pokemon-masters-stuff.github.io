@@ -54,14 +54,6 @@ export default function ContributeModal() {
               </li>
               <li>
                 <a
-                  href="https://docs.google.com/document/d/1gWGFU8T31Tca1KRYe7VP8AnSbPf30z9nujMGSJfWdZ8/edit?usp=sharing"
-                  target="_blank"
-                >
-                  Spanish
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://docs.google.com/document/d/19Vkn5ZVHSdwQmTiZTUs2W2cQTX3SbCjBmcmkKhBguoM/edit?usp=sharing"
                   target="_blank"
                 >
@@ -94,6 +86,7 @@ export default function ContributeModal() {
                 </a>
               </li>
               <li>Italian (Completed by Jo)</li>
+              <li>Spanish (Completed by Felipow and Zinfogel)</li>
             </ul>
           </div>
           {/* <div className="modal-footer d-flex justify-content-center">

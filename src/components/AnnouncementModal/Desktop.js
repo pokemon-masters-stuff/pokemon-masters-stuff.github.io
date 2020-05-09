@@ -25,6 +25,12 @@ export default function AnnouncementModal() {
             </h4>
           </div>
           <div className="modal-body mx-3">
+            5/9/2020:
+            <br />
+            Added Spanish skill name abbreviations for all sync grids thanks to
+            Felipow and Zinfogel. I really appreciate your help!
+            <br />
+            <br />
             5/8/2020:
             <br />
             1. You can now select sync levels and the grids will change

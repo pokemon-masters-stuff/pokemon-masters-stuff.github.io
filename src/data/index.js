@@ -1,6 +1,7 @@
 export { default as getPokemonNameList } from './pokemonList';
 export { default as shortenedMoveNameByAbilityIdEN } from './shortenedMoveNameByAbilityId/en';
 export { default as shortenedMoveNameByAbilityIdIT } from './shortenedMoveNameByAbilityId/it';
+export { default as shortenedMoveNameByAbilityIdES } from './shortenedMoveNameByAbilityId/es';
 
 export { default as pikachuGridDataDE } from './grids/de/pikachu.json';
 export { default as torkoalGridDataDE } from './grids/de/torkoal.json';
