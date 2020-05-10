@@ -308,7 +308,7 @@
       "u6": 98999969
     },
     "move": {
-      "name": "Movimiento: Gigadrenado\nMov. Recuperabarras +3",
+      "name": "Movimiento: Gigadrenado\nMovimiento Llenabarras +3",
       "moveId": 202,
       "category": 2,
       "u3": 1,
@@ -339,7 +339,7 @@
       "u6": 98999956
     },
     "move": {
-      "name": "Movimiento: Energibola\nMov. Recuperabarras +3",
+      "name": "Movimiento: Energibola\nMovimiento Llenabarras +3",
       "moveId": 412,
       "category": 2,
       "u3": 1,

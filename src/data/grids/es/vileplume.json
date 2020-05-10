@@ -296,7 +296,7 @@
       "u6": 98999985
     },
     "move": {
-      "name": "Movimiento: Energibola\nMov. Recuperabarras +2",
+      "name": "Movimiento: Energibola\nMovimiento Llenabarras +2",
       "moveId": 412,
       "category": 2,
       "u3": 1,
@@ -327,7 +327,7 @@
       "u6": 98999985
     },
     "move": {
-      "name": "Movimiento: Energibola\nMov. Recuperabarras +2",
+      "name": "Movimiento: Energibola\nMovimiento Llenabarras +2",
       "moveId": 412,
       "category": 2,
       "u3": 1,
@@ -358,7 +358,7 @@
       "u6": 98999985
     },
     "move": {
-      "name": "Movimiento: Energibola\nMov. Recuperabarras +2",
+      "name": "Movimiento: Energibola\nMovimiento Llenabarras +2",
       "moveId": 412,
       "category": 2,
       "u3": 1,
@@ -433,7 +433,7 @@
       "u6": 98999979
     },
     "move": {
-      "name": "Movimiento: Paralizador\nMov. Recuperabarras +3",
+      "name": "Movimiento: Paralizador\nMovimiento Llenabarras +3",
       "moveId": 78,
       "category": 3,
       "u3": 1,
@@ -788,7 +788,7 @@
       "u6": 98999979
     },
     "move": {
-      "name": "Movimiento: Paralizador\nMov. Recuperabarras +3",
+      "name": "Movimiento: Paralizador\nMovimiento Llenabarras +3",
       "moveId": 78,
       "category": 3,
       "u3": 1,

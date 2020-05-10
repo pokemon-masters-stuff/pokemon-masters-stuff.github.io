@@ -265,7 +265,7 @@
       "u6": 98999950
     },
     "move": {
-      "name": "Movimiento: Alarido\nMov. Recuperabarras +3",
+      "name": "Movimiento: Alarido\nMovimiento Llenabarras +3",
       "moveId": 555,
       "category": 2,
       "u3": 1,
@@ -688,7 +688,7 @@
       "u6": 98999936
     },
     "move": {
-      "name": "Movimiento: Pulso Umbrío\nMov. Recuperabarras +4",
+      "name": "Movimiento: Pulso Umbrío\nMovimiento Llenabarras +4",
       "moveId": 399,
       "category": 2,
       "u3": 1,

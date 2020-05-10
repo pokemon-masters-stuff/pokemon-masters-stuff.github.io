@@ -248,7 +248,7 @@
       "u6": 98999983
     },
     "move": {
-      "name": "Movimiento: Puño Fuego\nMov. Recuperabarras +3",
+      "name": "Movimiento: Puño Fuego\nMovimiento Llenabarras +3",
       "moveId": 7,
       "category": 1,
       "u3": 1,
@@ -627,7 +627,7 @@
       "u6": 98999974
     },
     "move": {
-      "name": "Movimiento: Llamarada\nMov. Recuperabarras +3",
+      "name": "Movimiento: Llamarada\nMovimiento Llenabarras +3",
       "moveId": 126,
       "category": 2,
       "u3": 1,

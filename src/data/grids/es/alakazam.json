@@ -308,7 +308,7 @@
       "u6": 98999991
     },
     "move": {
-      "name": "Movimiento: Psicorrayo\nMov. Recuperabarras +2",
+      "name": "Movimiento: Psicorrayo\nMovimiento Llenabarras +2",
       "moveId": 60,
       "category": 2,
       "u3": 1,
@@ -339,7 +339,7 @@
       "u6": 98999991
     },
     "move": {
-      "name": "Movimiento: Psicorrayo\nMov. Recuperabarras +2",
+      "name": "Movimiento: Psicorrayo\nMovimiento Llenabarras +2",
       "moveId": 60,
       "category": 2,
       "u3": 1,
@@ -426,7 +426,7 @@
       "u6": 98999942
     },
     "move": {
-      "name": "Movimiento: Psíquico\nMov. Recuperabarras +4",
+      "name": "Movimiento: Psíquico\nMovimiento Llenabarras +4",
       "moveId": 94,
       "category": 2,
       "u3": 1,
@@ -891,7 +891,7 @@
       "u6": 98999975
     },
     "move": {
-      "name": "Movimiento: Reflejo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Reflejo\nMovimiento Llenabarras +3",
       "moveId": 115,
       "category": 3,
       "u3": 1,
@@ -922,7 +922,7 @@
       "u6": 98999975
     },
     "move": {
-      "name": "Movimiento: Reflejo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Reflejo\nMovimiento Llenabarras +3",
       "moveId": 115,
       "category": 3,
       "u3": 1,

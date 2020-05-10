@@ -192,7 +192,7 @@
       "u6": 98999948
     },
     "move": {
-      "name": "Movimiento: Acoso\nMov. Recuperabarras +3",
+      "name": "Movimiento: Acoso\nMovimiento Llenabarras +3",
       "moveId": 611,
       "category": 2,
       "u3": 1,
@@ -796,7 +796,7 @@
       "u6": 98999952
     },
     "move": {
-      "name": "Movimiento: Estoicismo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Estoicismo\nMovimiento Llenabarras +3",
       "moveId": 522,
       "category": 2,
       "u3": 1,

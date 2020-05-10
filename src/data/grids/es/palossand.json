@@ -482,7 +482,7 @@
       "u6": 98999938
     },
     "move": {
-      "name": "Movimiento: Impresionar\nMov. Recuperabarras +4",
+      "name": "Movimiento: Impresionar\nMovimiento Llenabarras +4",
       "moveId": 310,
       "category": 1,
       "u3": 1,
@@ -839,7 +839,7 @@
       "u6": 98999970
     },
     "move": {
-      "name": "Movimiento: Tormenta Arena\nMov. Recuperabarras +3",
+      "name": "Movimiento: Tormenta Arena\nMovimiento Llenabarras +3",
       "moveId": 201,
       "category": 3,
       "u3": 1,
@@ -870,7 +870,7 @@
       "u6": 98999970
     },
     "move": {
-      "name": "Movimiento: Tormenta Arena\nMov. Recuperabarras +3",
+      "name": "Movimiento: Tormenta Arena\nMovimiento Llenabarras +3",
       "moveId": 201,
       "category": 3,
       "u3": 1,

@@ -175,7 +175,7 @@
       "u6": 98999990
     },
     "move": {
-      "name": "Movimiento: Impactrueno\nMov. Recuperabarras +2",
+      "name": "Movimiento: Impactrueno\nMovimiento Llenabarras +2",
       "moveId": 84,
       "category": 2,
       "u3": 1,
@@ -266,7 +266,7 @@
       "u6": 98999990
     },
     "move": {
-      "name": "Movimiento: Impactrueno\nMov. Recuperabarras +2",
+      "name": "Movimiento: Impactrueno\nMovimiento Llenabarras +2",
       "moveId": 84,
       "category": 2,
       "u3": 1,
@@ -753,7 +753,7 @@
       "u6": 98999955
     },
     "move": {
-      "name": "Movimiento: Chispazo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Chispazo\nMovimiento Llenabarras +3",
       "moveId": 435,
       "category": 2,
       "u3": 1,

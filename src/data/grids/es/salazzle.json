@@ -248,7 +248,7 @@
       "u6": 98999941
     },
     "move": {
-      "name": "Movimiento: Polución\nMov. Recuperabarras +4",
+      "name": "Movimiento: Polución\nMovimiento Llenabarras +4",
       "moveId": 123,
       "category": 2,
       "u3": 1,
@@ -371,7 +371,7 @@
       "u6": 98999984
     },
     "move": {
-      "name": "Movimiento: Onda Tóxica\nMov. Recuperabarras +2",
+      "name": "Movimiento: Onda Tóxica\nMovimiento Llenabarras +2",
       "moveId": 482,
       "category": 2,
       "u3": 1,
@@ -488,7 +488,7 @@
       "u6": 98999984
     },
     "move": {
-      "name": "Movimiento: Onda Tóxica\nMov. Recuperabarras +2",
+      "name": "Movimiento: Onda Tóxica\nMovimiento Llenabarras +2",
       "moveId": 482,
       "category": 2,
       "u3": 1,
@@ -860,7 +860,7 @@
       "u6": 98999931
     },
     "move": {
-      "name": "Movimiento: Barra Mov. ↑\nMov. Recuperabarras +9",
+      "name": "Movimiento: Barra Mov. ↑\nMovimiento Llenabarras +9",
       "moveId": 19100,
       "category": 3,
       "u3": 2,

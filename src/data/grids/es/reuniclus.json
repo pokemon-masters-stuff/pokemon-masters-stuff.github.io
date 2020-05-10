@@ -278,7 +278,7 @@
       "u6": 98999989
     },
     "move": {
-      "name": "Movimiento: Psíquico\nMov. Recuperabarras +2",
+      "name": "Movimiento: Psíquico\nMovimiento Llenabarras +2",
       "moveId": 94,
       "category": 2,
       "u3": 1,
@@ -339,7 +339,7 @@
       "u6": 98999989
     },
     "move": {
-      "name": "Movimiento: Psíquico\nMov. Recuperabarras +2",
+      "name": "Movimiento: Psíquico\nMovimiento Llenabarras +2",
       "moveId": 94,
       "category": 2,
       "u3": 1,
@@ -611,7 +611,7 @@
       "u6": 98999934
     },
     "move": {
-      "name": "Movimiento: Poder Oculto\nMov. Recuperabarras +4",
+      "name": "Movimiento: Poder Oculto\nMovimiento Llenabarras +4",
       "moveId": 8011,
       "category": 2,
       "u3": 1,
@@ -946,7 +946,7 @@
       "u6": 98999931
     },
     "move": {
-      "name": "Movimiento: Barra Mov. ↑\nMov. Recuperabarras +9",
+      "name": "Movimiento: Barra Mov. ↑\nMovimiento Llenabarras +9",
       "moveId": 19100,
       "category": 3,
       "u3": 2,

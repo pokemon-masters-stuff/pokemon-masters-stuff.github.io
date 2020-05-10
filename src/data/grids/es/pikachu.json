@@ -296,7 +296,7 @@
       "u6": 98999977
     },
     "move": {
-      "name": "Movimiento: Rayo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Rayo\nMovimiento Llenabarras +3",
       "moveId": 85,
       "category": 2,
       "u3": 1,
@@ -357,7 +357,7 @@
       "u6": 98999945
     },
     "move": {
-      "name": "Movimiento: Impactrueno\nMov. Recuperabarras +4",
+      "name": "Movimiento: Impactrueno\nMovimiento Llenabarras +4",
       "moveId": 84,
       "category": 2,
       "u3": 1,

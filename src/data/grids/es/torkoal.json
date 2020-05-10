@@ -283,7 +283,7 @@
       "u6": 98999946
     },
     "move": {
-      "name": "Movimiento: Ascuas\nMov. Recuperabarras +4",
+      "name": "Movimiento: Ascuas\nMovimiento Llenabarras +4",
       "moveId": 52,
       "category": 2,
       "u3": 1,
@@ -399,7 +399,7 @@
       "u6": 98999963
     },
     "move": {
-      "name": "Movimiento: Fuego Fatuo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Fuego Fatuo\nMovimiento Llenabarras +3",
       "moveId": 261,
       "category": 3,
       "u3": 1,
@@ -722,7 +722,7 @@
       "u6": 98999963
     },
     "move": {
-      "name": "Movimiento: Fuego Fatuo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Fuego Fatuo\nMovimiento Llenabarras +3",
       "moveId": 261,
       "category": 3,
       "u3": 1,

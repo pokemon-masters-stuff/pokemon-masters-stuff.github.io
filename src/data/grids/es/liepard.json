@@ -439,7 +439,7 @@
       "u6": 98999958
     },
     "move": {
-      "name": "Movimiento: Tajo Umbrío\nMov. Recuperabarras +3",
+      "name": "Movimiento: Tajo Umbrío\nMovimiento Llenabarras +3",
       "moveId": 400,
       "category": 1,
       "u3": 1,
@@ -514,7 +514,7 @@
       "u6": 98999939
     },
     "move": {
-      "name": "Movimiento: Robo\nMov. Recuperabarras +4",
+      "name": "Movimiento: Robo\nMovimiento Llenabarras +4",
       "moveId": 289,
       "category": 3,
       "u3": 1,
@@ -637,7 +637,7 @@
       "u6": 98999959
     },
     "move": {
-      "name": "Movimiento: Pulso Umbrío\nMov. Recuperabarras +3",
+      "name": "Movimiento: Pulso Umbrío\nMovimiento Llenabarras +3",
       "moveId": 399,
       "category": 2,
       "u3": 1,
@@ -730,7 +730,7 @@
       "u6": 98999939
     },
     "move": {
-      "name": "Movimiento: Robo\nMov. Recuperabarras +4",
+      "name": "Movimiento: Robo\nMovimiento Llenabarras +4",
       "moveId": 289,
       "category": 3,
       "u3": 1,

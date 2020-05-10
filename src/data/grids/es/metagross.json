@@ -175,7 +175,7 @@
       "u6": 98999987
     },
     "move": {
-      "name": "Movimiento: Puño Meteoro\nMov. Recuperabarras +2",
+      "name": "Movimiento: Puño Meteoro\nMovimiento Llenabarras +2",
       "moveId": 309,
       "category": 1,
       "u3": 1,
@@ -266,7 +266,7 @@
       "u6": 98999987
     },
     "move": {
-      "name": "Movimiento: Puño Meteoro\nMov. Recuperabarras +2",
+      "name": "Movimiento: Puño Meteoro\nMovimiento Llenabarras +2",
       "moveId": 309,
       "category": 1,
       "u3": 1,
@@ -681,7 +681,7 @@
       "u6": 98999954
     },
     "move": {
-      "name": "Movimiento: Cabeza de Hierro\nMov. Recuperabarras +3",
+      "name": "Movimiento: Cabeza de Hierro\nMovimiento Llenabarras +3",
       "moveId": 442,
       "category": 1,
       "u3": 1,

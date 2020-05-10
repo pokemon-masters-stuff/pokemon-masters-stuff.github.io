@@ -248,7 +248,7 @@
       "u6": 98999968
     },
     "move": {
-      "name": "Movimiento: Dragoaliento\nMov. Recuperabarras +3",
+      "name": "Movimiento: Dragoaliento\nMovimiento Llenabarras +3",
       "moveId": 225,
       "category": 2,
       "u3": 1,
@@ -735,7 +735,7 @@
       "u6": 98999935
     },
     "move": {
-      "name": "Movimiento: Cometa Draco\nMov. Recuperabarras +4",
+      "name": "Movimiento: Cometa Draco\nMovimiento Llenabarras +4",
       "moveId": 434,
       "category": 2,
       "u3": 1,

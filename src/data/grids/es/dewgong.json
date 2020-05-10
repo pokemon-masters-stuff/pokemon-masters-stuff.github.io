@@ -248,7 +248,7 @@
       "u6": 98999980
     },
     "move": {
-      "name": "Movimiento: Rayo Hielo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Rayo Hielo\nMovimiento Llenabarras +3",
       "moveId": 58,
       "category": 2,
       "u3": 1,
@@ -722,7 +722,7 @@
       "u6": 98999940
     },
     "move": {
-      "name": "Movimiento: Viento Hielo\nMov. Recuperabarras +4",
+      "name": "Movimiento: Viento Hielo\nMovimiento Llenabarras +4",
       "moveId": 196,
       "category": 2,
       "u3": 1,

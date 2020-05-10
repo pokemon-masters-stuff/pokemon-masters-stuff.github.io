@@ -159,7 +159,7 @@
       "u6": 98999981
     },
     "move": {
-      "name": "Movimiento: Pin Misil\nMov. Recuperabarras +3",
+      "name": "Movimiento: Pin Misil\nMovimiento Llenabarras +3",
       "moveId": 42,
       "category": 1,
       "u3": 1,
@@ -233,7 +233,7 @@
       "u6": 98999981
     },
     "move": {
-      "name": "Movimiento: Pin Misil\nMov. Recuperabarras +3",
+      "name": "Movimiento: Pin Misil\nMovimiento Llenabarras +3",
       "moveId": 42,
       "category": 1,
       "u3": 1,

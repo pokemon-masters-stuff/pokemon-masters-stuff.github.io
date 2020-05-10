@@ -175,7 +175,7 @@
       "u6": 98999986
     },
     "move": {
-      "name": "Movimiento: Garra Dragón\nMov. Recuperabarras +2",
+      "name": "Movimiento: Garra Dragón\nMovimiento Llenabarras +2",
       "moveId": 337,
       "category": 1,
       "u3": 1,
@@ -266,7 +266,7 @@
       "u6": 98999986
     },
     "move": {
-      "name": "Movimiento: Garra Dragón\nMov. Recuperabarras +2",
+      "name": "Movimiento: Garra Dragón\nMovimiento Llenabarras +2",
       "moveId": 337,
       "category": 1,
       "u3": 1,
@@ -675,7 +675,7 @@
       "u6": 98999971
     },
     "move": {
-      "name": "Movimiento: Enfado\nMov. Recuperabarras +3",
+      "name": "Movimiento: Enfado\nMovimiento Llenabarras +3",
       "moveId": 200,
       "category": 1,
       "u3": 1,
@@ -767,7 +767,7 @@
       "u6": 98999971
     },
     "move": {
-      "name": "Movimiento: Enfado\nMov. Recuperabarras +3",
+      "name": "Movimiento: Enfado\nMovimiento Llenabarras +3",
       "moveId": 200,
       "category": 1,
       "u3": 1,

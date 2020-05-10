@@ -265,7 +265,7 @@
       "u6": 98999951
     },
     "move": {
-      "name": "Movimiento: Electrotela\nMov. Recuperabarras +3",
+      "name": "Movimiento: Electrotela\nMovimiento Llenabarras +3",
       "moveId": 527,
       "category": 2,
       "u3": 1,
@@ -340,7 +340,7 @@
       "u6": 98999972
     },
     "move": {
-      "name": "Movimiento: Bofetón Lodo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Bofetón Lodo\nMovimiento Llenabarras +3",
       "moveId": 189,
       "category": 2,
       "u3": 1,
@@ -883,7 +883,7 @@
       "u6": 98999949
     },
     "move": {
-      "name": "Movimiento: Carga Parábola\nMov. Recuperabarras +3",
+      "name": "Movimiento: Carga Parábola\nMovimiento Llenabarras +3",
       "moveId": 570,
       "category": 2,
       "u3": 1,
@@ -940,7 +940,7 @@
       "u6": 98999972
     },
     "move": {
-      "name": "Movimiento: Bofetón Lodo\nMov. Recuperabarras +3",
+      "name": "Movimiento: Bofetón Lodo\nMovimiento Llenabarras +3",
       "moveId": 189,
       "category": 2,
       "u3": 1,
