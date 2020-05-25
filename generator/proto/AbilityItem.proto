@@ -4,7 +4,7 @@ package abilityitem;
 
 message AbilityItem {
 	int64 ability_item_id = 1;
-	int64 character_id = 2;		// Trainer.pb / 0 = Coop Sync Orb
+	int64 trainer_id = 2;		// Trainer.pb / 0 = Coop Sync Orb
 }
 
 message AbilityItemTable {

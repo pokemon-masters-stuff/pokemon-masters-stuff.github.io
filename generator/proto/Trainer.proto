@@ -3,7 +3,7 @@ syntax = "proto3";
 package trainer;
 
 message Trainer {
-	int64 character_id = 1;
+	int64 trainer_id = 1;
 	int32 u2 = 2;					// 1 for the mc, 2 otherwise
 	int32 scout_method = 3;			// 1 for gacha, 2 for story
 	int64 exclusivity = 4;			// 1 Regular, 2 Fair-limited, 3 Seasonal
@@ -11,7 +11,7 @@ message Trainer {
 	int32 type = 6;					// motif_type_name_xx.lsd
 	int32 rarity = 7;
 	int32 role = 8;					// role_type_name_xx.lsd (0 = Phy Strike)
-	uint64 trainer_id = 9;			// Monster.pb
+	uint64 monster_id = 9;			// Monster.pb
 	int32 move_1_id = 10;			// Move.pb
 	int32 move_2_id = 11;
 	int32 move_3_id = 12;
