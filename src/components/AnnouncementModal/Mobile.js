@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            5/25/2020:
+            <br />
+            Added grids for Starmie, Torterra, Empoleon, Sharpedo, and Leavanny.
+            <br />
+            <br />
             5/9/2020:
             <br />
             Added Spanish skill name abbreviations for all sync grids thanks to
