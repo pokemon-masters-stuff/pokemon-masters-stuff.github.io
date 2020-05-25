@@ -87,20 +87,26 @@ const moveNameDB = {
   ko: moveNameDBko,
   zh: moveNameDBzh,
 };
+
+// On 5/25/2020 the following changes have been made to the .proto files:
+// monsterId->monsterBaseId
+// trainerId->monsterId
+// characterId->trainerId
+
 /*
- * Usage i.e: node extractAbilityByCharacterId.js --characterId=18000000000 --filename=pikachu
+ * Usage i.e: node extractAbilityByTrainerId.js --trainerId=18000000000 --filename=pikachu
  * */
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
-const extractAbilityByCharacterId = () => {
+const extractAbilityByTrainerId = () => {
   languages.forEach((language) => {
     const abilities = [];
     let ability = {};
 
-    if (!args.characterId) return null;
+    if (!args.trainerId) return null;
 
     abilityPanelDB.entries.forEach((entry) => {
-      if (entry.characterId === args.characterId) {
+      if (entry.trainerId === args.trainerId) {
         const { cellId, energyCost, orbCost, x, y, z, abilityId } = entry;
         const coords = triangularCoordsToCollumns({ x, y, z });
         let move = {};
@@ -177,4 +183,4 @@ const extractAbilityByCharacterId = () => {
   });
 };
 
-extractAbilityByCharacterId();
+extractAbilityByTrainerId();
