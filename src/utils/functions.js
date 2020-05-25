@@ -51,7 +51,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'salazzle' ||
       pokemon === 'gallade' ||
       pokemon === 'garchomp' ||
-      pokemon === 'lucario'
+      pokemon === 'lucario' ||
+      pokemon === 'empoleon' ||
+      pokemon === 'leavanny' ||
+      pokemon === 'sharpedo'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -124,7 +127,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'alakazam' ||
       pokemon === 'rotom' ||
       pokemon === 'steelix' ||
-      pokemon === 'swanna'
+      pokemon === 'swanna' ||
+      pokemon === 'starmie' ||
+      pokemon === 'torterra'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -196,7 +201,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'salazzle' ||
       pokemon === 'gallade' ||
       pokemon === 'garchomp' ||
-      pokemon === 'lucario'
+      pokemon === 'lucario' ||
+      pokemon === 'empoleon' ||
+      pokemon === 'leavanny' ||
+      pokemon === 'sharpedo'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -245,7 +253,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'alakazam' ||
       pokemon === 'rotom' ||
       pokemon === 'steelix' ||
-      pokemon === 'swanna'
+      pokemon === 'swanna' ||
+      pokemon === 'starmie' ||
+      pokemon === 'torterra'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
