@@ -27,3 +27,8 @@ export { default as heliolisk } from './pm0732.png';
 export { default as meowstic } from './pm0734.png';
 export { default as salazzle } from './pm0806.png';
 export { default as golisopod } from './pm0867.png';
+export { default as starmie } from './pm0121.png';
+export { default as torterra } from './pm0389.png';
+export { default as sharpedo } from './pm0319.png';
+export { default as empoleon } from './pm0395.png';
+export { default as leavanny } from './pm0542.png';

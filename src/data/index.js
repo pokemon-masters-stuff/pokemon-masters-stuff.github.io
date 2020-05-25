@@ -32,6 +32,7 @@ export { default as swannaGridDataDE } from './grids/de/swanna.json';
 export { default as galladeGridDataDE } from './grids/de/gallade.json';
 export { default as miloticGridDataDE } from './grids/de/milotic.json';
 export { default as steelixGridDataDE } from './grids/de/steelix.json';
+export { default as starmieGridDataDE } from './grids/de/starmie.json';
 
 export { default as pikachuGridDataEN } from './grids/en/pikachu.json';
 export { default as torkoalGridDataEN } from './grids/en/torkoal.json';
@@ -62,6 +63,7 @@ export { default as swannaGridDataEN } from './grids/en/swanna.json';
 export { default as galladeGridDataEN } from './grids/en/gallade.json';
 export { default as miloticGridDataEN } from './grids/en/milotic.json';
 export { default as steelixGridDataEN } from './grids/en/steelix.json';
+export { default as starmieGridDataEN } from './grids/en/starmie.json';
 
 export { default as pikachuGridDataES } from './grids/es/pikachu.json';
 export { default as torkoalGridDataES } from './grids/es/torkoal.json';
@@ -92,6 +94,7 @@ export { default as swannaGridDataES } from './grids/es/swanna.json';
 export { default as galladeGridDataES } from './grids/es/gallade.json';
 export { default as miloticGridDataES } from './grids/es/milotic.json';
 export { default as steelixGridDataES } from './grids/es/steelix.json';
+export { default as starmieGridDataES } from './grids/es/starmie.json';
 
 export { default as pikachuGridDataFR } from './grids/fr/pikachu.json';
 export { default as torkoalGridDataFR } from './grids/fr/torkoal.json';
@@ -122,6 +125,7 @@ export { default as swannaGridDataFR } from './grids/fr/swanna.json';
 export { default as galladeGridDataFR } from './grids/fr/gallade.json';
 export { default as miloticGridDataFR } from './grids/fr/milotic.json';
 export { default as steelixGridDataFR } from './grids/fr/steelix.json';
+export { default as starmieGridDataFR } from './grids/fr/starmie.json';
 
 export { default as pikachuGridDataIT } from './grids/it/pikachu.json';
 export { default as torkoalGridDataIT } from './grids/it/torkoal.json';
@@ -152,6 +156,7 @@ export { default as swannaGridDataIT } from './grids/it/swanna.json';
 export { default as galladeGridDataIT } from './grids/it/gallade.json';
 export { default as miloticGridDataIT } from './grids/it/milotic.json';
 export { default as steelixGridDataIT } from './grids/it/steelix.json';
+export { default as starmieGridDataIT } from './grids/it/starmie.json';
 
 export { default as pikachuGridDataJA } from './grids/ja/pikachu.json';
 export { default as torkoalGridDataJA } from './grids/ja/torkoal.json';
@@ -182,6 +187,7 @@ export { default as swannaGridDataJA } from './grids/ja/swanna.json';
 export { default as galladeGridDataJA } from './grids/ja/gallade.json';
 export { default as miloticGridDataJA } from './grids/ja/milotic.json';
 export { default as steelixGridDataJA } from './grids/ja/steelix.json';
+export { default as starmieGridDataJA } from './grids/ja/starmie.json';
 
 export { default as pikachuGridDataKO } from './grids/ko/pikachu.json';
 export { default as torkoalGridDataKO } from './grids/ko/torkoal.json';
@@ -212,6 +218,7 @@ export { default as swannaGridDataKO } from './grids/ko/swanna.json';
 export { default as galladeGridDataKO } from './grids/ko/gallade.json';
 export { default as miloticGridDataKO } from './grids/ko/milotic.json';
 export { default as steelixGridDataKO } from './grids/ko/steelix.json';
+export { default as starmieGridDataKO } from './grids/ko/starmie.json';
 
 export { default as pikachuGridDataZH } from './grids/zh/pikachu.json';
 export { default as torkoalGridDataZH } from './grids/zh/torkoal.json';
@@ -242,3 +249,40 @@ export { default as swannaGridDataZH } from './grids/zh/swanna.json';
 export { default as galladeGridDataZH } from './grids/zh/gallade.json';
 export { default as miloticGridDataZH } from './grids/zh/milotic.json';
 export { default as steelixGridDataZH } from './grids/zh/steelix.json';
+export { default as starmieGridDataZH } from './grids/zh/starmie.json';
+
+export { default as torterraGridDataDE } from './grids/de/torterra.json';
+export { default as torterraGridDataEN } from './grids/en/torterra.json';
+export { default as torterraGridDataES } from './grids/es/torterra.json';
+export { default as torterraGridDataFR } from './grids/fr/torterra.json';
+export { default as torterraGridDataIT } from './grids/it/torterra.json';
+export { default as torterraGridDataJA } from './grids/ja/torterra.json';
+export { default as torterraGridDataKO } from './grids/ko/torterra.json';
+export { default as torterraGridDataZH } from './grids/zh/torterra.json';
+
+export { default as sharpedoGridDataDE } from './grids/de/sharpedo.json';
+export { default as sharpedoGridDataEN } from './grids/en/sharpedo.json';
+export { default as sharpedoGridDataES } from './grids/es/sharpedo.json';
+export { default as sharpedoGridDataFR } from './grids/fr/sharpedo.json';
+export { default as sharpedoGridDataIT } from './grids/it/sharpedo.json';
+export { default as sharpedoGridDataJA } from './grids/ja/sharpedo.json';
+export { default as sharpedoGridDataKO } from './grids/ko/sharpedo.json';
+export { default as sharpedoGridDataZH } from './grids/zh/sharpedo.json';
+
+export { default as empoleonGridDataDE } from './grids/de/empoleon.json';
+export { default as empoleonGridDataEN } from './grids/en/empoleon.json';
+export { default as empoleonGridDataES } from './grids/es/empoleon.json';
+export { default as empoleonGridDataFR } from './grids/fr/empoleon.json';
+export { default as empoleonGridDataIT } from './grids/it/empoleon.json';
+export { default as empoleonGridDataJA } from './grids/ja/empoleon.json';
+export { default as empoleonGridDataKO } from './grids/ko/empoleon.json';
+export { default as empoleonGridDataZH } from './grids/zh/empoleon.json';
+
+export { default as leavannyGridDataDE } from './grids/de/leavanny.json';
+export { default as leavannyGridDataEN } from './grids/en/leavanny.json';
+export { default as leavannyGridDataES } from './grids/es/leavanny.json';
+export { default as leavannyGridDataFR } from './grids/fr/leavanny.json';
+export { default as leavannyGridDataIT } from './grids/it/leavanny.json';
+export { default as leavannyGridDataJA } from './grids/ja/leavanny.json';
+export { default as leavannyGridDataKO } from './grids/ko/leavanny.json';
+export { default as leavannyGridDataZH } from './grids/zh/leavanny.json';

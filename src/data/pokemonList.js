@@ -28,6 +28,11 @@ const pokemonList = [
   'Milotic',
   'Steelix',
   'Gallade',
+  'Starmie',
+  'Torterra',
+  'Leavanny',
+  'Empoleon',
+  'Sharpedo',
 ];
 
 const namesByLanguage = {
@@ -348,6 +353,66 @@ const namesByLanguage = {
     ja: 'ミロカロス',
     ko: '밀로틱',
     zh: '美納斯',
+  },
+
+  Starmie: {
+    // 20012100
+    en: 'Starmie',
+    de: 'Starmie',
+    es: 'Starmie',
+    fr: 'Staross',
+    it: 'Starmie',
+    ja: 'スターミー',
+    ko: '아쿠스타',
+    zh: '寶石海星',
+  },
+
+  Sharpedo: {
+    // 20031900
+    en: 'Sharpedo',
+    de: 'Tohaido',
+    es: 'Sharpedo',
+    fr: 'Sharpedo',
+    it: 'Sharpedo',
+    ja: 'サメハダー',
+    ko: '샤크니아',
+    zh: '巨牙鯊',
+  },
+
+  Torterra: {
+    // 20038900
+    en: 'Torterra',
+    de: 'Chelterrar',
+    es: 'Torterra',
+    fr: 'Torterra',
+    it: 'Torterra',
+    ja: 'ドダイトス',
+    ko: '토대부기',
+    zh: '土台龜',
+  },
+
+  Empoleon: {
+    // 20039500
+    en: 'Empoleon',
+    de: 'Impoleon',
+    es: 'Empoleon',
+    fr: 'Pingoléon',
+    it: 'Empoleon',
+    ja: 'エンペルト',
+    ko: '엠페르트',
+    zh: '帝王拿波',
+  },
+
+  Leavanny: {
+    // 20054200
+    en: 'Leavanny',
+    de: 'Matrifol',
+    es: 'Leavanny',
+    fr: 'Manternel',
+    it: 'Leavanny',
+    ja: 'ハハコモリ',
+    ko: '모아머',
+    zh: '保母蟲',
   },
   // Pokemon: {
   //   en: '',
