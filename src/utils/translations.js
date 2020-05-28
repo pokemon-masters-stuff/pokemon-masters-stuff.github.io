@@ -1,5 +1,5 @@
 const UI = {
-  // Home Page
+  // Home Page and Sidebar
   'Remaining Energy': {
     de: 'Verbleibende Energie',
     en: 'Remaining Energy',
@@ -39,6 +39,16 @@ const UI = {
     ko: '에너지 비용',
     it: 'Costo Energetico',
     zh: '能量消耗',
+  },
+  Home: {
+    de: 'Startseite',
+    en: 'Home',
+    es: 'Página de inicio',
+    fr: "Page d'accueil",
+    ja: 'ホームページ',
+    ko: '홈페이지',
+    it: 'Home',
+    zh: '主頁',
   },
   Announcements: {
     de: 'Ankündigungen',

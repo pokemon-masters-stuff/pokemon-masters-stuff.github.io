@@ -58,6 +58,8 @@ ul {
 
 #textboxid {
   height: 200px;
+  width: 35vmin;
+  min-width: 200px;
   font-size: 14pt;
 }
 

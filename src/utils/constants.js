@@ -647,3 +647,5 @@ export const allSyncGrids = {
 };
 
 export const UA_ID = 'UA-157426792-1';
+
+export const DRAWER_WIDTH = 240;

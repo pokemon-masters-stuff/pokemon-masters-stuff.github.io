@@ -10,11 +10,11 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import FeedbackIcon from '@material-ui/icons/Feedback';
-import { FeedbackFormMobile } from '../FeedbackForm';
+import FeedbackForm from '../FeedbackForm';
 import styles from './styles';
 import { logout } from '../../actions/actionCreators';
-import { AnnouncementModalMobile } from '../AnnouncementModal';
-import { ContributeModalMobile } from '../ContributeModal';
+import AnnouncementModal from '../AnnouncementModal';
+import ContributeModal from '../ContributeModal';
 import UI from '../../utils/translations';
 
 function Navigation(props) {
@@ -42,18 +42,15 @@ function Navigation(props) {
   return (
     <Drawer open={isOpened} onClose={handleOnClose}>
       <List className={classes.listRoot}>
-        <AnnouncementModalMobile classes={classes} />
-        <ContributeModalMobile classes={classes} />
+        <AnnouncementModal classes={classes} />
+        <ContributeModal classes={classes} />
         <ListItem button onClick={handleClickOpenModal}>
           <ListItemIcon className={classes.listIcon}>
             <FeedbackIcon />
           </ListItemIcon>
           <ListItemText primary={UI['Submit Feedback'][language]} />
         </ListItem>
-        <FeedbackFormMobile
-          open={open}
-          onCloseModalHandler={handleCloseModal}
-        />
+        <FeedbackForm open={open} onCloseModalHandler={handleCloseModal} />
 
         {isAuthenticated ? (
           <ListItem button onClick={handleOnClickLogout}>

@@ -4,8 +4,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import MobileLayout from './containers/MobileLayout';
 import DesktopLayout from './containers/DesktopLayout';
-import { NavigationDesktop } from './components/Navigation';
-import { DarkModeToggleDesktop } from './components/DarkModeToggle';
 import PrivateRoute from './components/routing/PrivateRoute';
 import BuildsDesktop from './components/builds/desktop/Builds';
 import PopularBuilds from './components/builds/common/PopularBuilds';
@@ -18,9 +16,12 @@ import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/actionCreators';
 import withTracker from './utils/withTracker';
 import Box from '@material-ui/core/Box';
+import { NavigationDesktop } from './components/Navigation';
+import { DarkModeToggleDesktop } from './components/DarkModeToggle';
 
 export default function App({ store }) {
-  const darkMode = useSelector(state => state.darkMode.mode);
+  const darkMode = useSelector((state) => state.darkMode.mode);
+
   useEffect(() => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
@@ -34,33 +35,35 @@ export default function App({ store }) {
         <Hidden smDown>
           <NavigationDesktop />
           <DarkModeToggleDesktop />
-          <Route exact path="/" component={withTracker(DesktopLayout)} />
-          <PrivateRoute
-            path="/builds"
-            screenSize={'large'}
-            component={withTracker(BuildsDesktop)}
-          />
-          <div className="container container-s">
-            <Box>
-              <PrivateRoute
-                exact
-                path="/builds/popular"
-                screenSize={'large'}
-                component={PopularBuilds}
-              />
-              <PrivateRoute
-                exact
-                path="/builds/liked"
-                screenSize={'large'}
-                component={LikedBuilds}
-              />
-              <PrivateRoute
-                exact
-                path="/builds/users"
-                screenSize={'large'}
-                component={UsersBuilds}
-              />
-            </Box>
+          <div style={{ marginTop: 64 }}>
+            <Route exact path="/" component={withTracker(DesktopLayout)} />
+            <PrivateRoute
+              path="/builds"
+              screenSize={'large'}
+              component={withTracker(BuildsDesktop)}
+            />
+            <div className="container container-s">
+              <Box>
+                <PrivateRoute
+                  exact
+                  path="/builds/popular"
+                  screenSize={'large'}
+                  component={PopularBuilds}
+                />
+                <PrivateRoute
+                  exact
+                  path="/builds/liked"
+                  screenSize={'large'}
+                  component={LikedBuilds}
+                />
+                <PrivateRoute
+                  exact
+                  path="/builds/users"
+                  screenSize={'large'}
+                  component={UsersBuilds}
+                />
+              </Box>
+            </div>
           </div>
         </Hidden>
         <Hidden mdUp>
