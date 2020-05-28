@@ -166,17 +166,30 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
 
-          <Link
-            to="/builds/popular"
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <ListItem button>
+          {isAuthenticated ? (
+            <Link
+              to="/builds/popular"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <ListItem button>
+                <ListItemIcon>
+                  <WhatshotIcon />
+                </ListItemIcon>
+                <ListItemText primary={UI['Popular Builds'][language]} />
+              </ListItem>
+            </Link>
+          ) : (
+            <ListItem
+              button
+              data-toggle="modal"
+              data-target="#loginOrRegisterModal"
+            >
               <ListItemIcon>
                 <WhatshotIcon />
               </ListItemIcon>
               <ListItemText primary={UI['Popular Builds'][language]} />
             </ListItem>
-          </Link>
+          )}
         </List>
 
         <Divider />

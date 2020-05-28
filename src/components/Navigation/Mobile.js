@@ -55,18 +55,31 @@ function Navigation(props) {
             <ListItemText primary={UI['Home'][language]} />
           </ListItem>
         </Link>
-
-        <Link
-          to="/builds/popular"
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <ListItem button>
+        {isAuthenticated ? (
+          <Link
+            to="/builds/popular"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ListItem button>
+              <ListItemIcon className={classes.listIcon}>
+                <WhatshotIcon />
+              </ListItemIcon>
+              <ListItemText primary={UI['Popular Builds'][language]} />
+            </ListItem>
+          </Link>
+        ) : (
+          <ListItem
+            button
+            onClick={handleOnClose}
+            data-toggle="modal"
+            data-target="#loginOrRegisterModal"
+          >
             <ListItemIcon className={classes.listIcon}>
               <WhatshotIcon />
             </ListItemIcon>
             <ListItemText primary={UI['Popular Builds'][language]} />
           </ListItem>
-        </Link>
+        )}
       </List>
 
       <Divider />
