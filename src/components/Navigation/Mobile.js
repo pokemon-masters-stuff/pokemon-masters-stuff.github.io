@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -15,7 +16,11 @@ import styles from './styles';
 import { logout } from '../../actions/actionCreators';
 import AnnouncementModal from '../AnnouncementModal';
 import ContributeModal from '../ContributeModal';
+import LanguageModal from '../LanguageModal';
 import UI from '../../utils/translations';
+import Divider from '@material-ui/core/Divider';
+import WhatshotIcon from '@material-ui/icons/Whatshot';
+import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
 
 function Navigation(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -42,6 +47,31 @@ function Navigation(props) {
   return (
     <Drawer open={isOpened} onClose={handleOnClose}>
       <List className={classes.listRoot}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem button>
+            <ListItemIcon className={classes.listIcon}>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary={UI['Home'][language]} />
+          </ListItem>
+        </Link>
+
+        <Link
+          to="/builds/popular"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ListItem button>
+            <ListItemIcon className={classes.listIcon}>
+              <WhatshotIcon />
+            </ListItemIcon>
+            <ListItemText primary={UI['Popular Builds'][language]} />
+          </ListItem>
+        </Link>
+      </List>
+
+      <Divider />
+
+      <List className={classes.listRoot}>
         <AnnouncementModal classes={classes} />
         <ContributeModal classes={classes} />
         <ListItem button onClick={handleClickOpenModal}>
@@ -51,6 +81,7 @@ function Navigation(props) {
           <ListItemText primary={UI['Submit Feedback'][language]} />
         </ListItem>
         <FeedbackForm open={open} onCloseModalHandler={handleCloseModal} />
+        <LanguageModal classes={classes} />
 
         {isAuthenticated ? (
           <ListItem button onClick={handleOnClickLogout}>

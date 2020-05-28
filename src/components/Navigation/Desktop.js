@@ -26,9 +26,9 @@ import FeedbackForm from '../FeedbackForm';
 import { logout } from '../../actions/actionCreators';
 import AnnouncementModal from '../AnnouncementModal';
 import ContributeModal from '../ContributeModal';
+import LanguageModal from '../LanguageModal';
 import UI from '../../utils/translations';
 
-import LanguageIcon from '@material-ui/icons/Language';
 import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
 import ViewColumnIcon from '@material-ui/icons/ViewColumn'; // for teams
 
@@ -190,6 +190,8 @@ export default function PersistentDrawerLeft() {
             <ListItemText primary={UI['Submit Feedback'][language]} />
           </ListItem>
           <FeedbackForm open={open} onCloseModalHandler={handleCloseModal} />
+
+          <LanguageModal classes={classes} />
 
           {isAuthenticated ? (
             <ListItem button onClick={handleOnClickLogout}>

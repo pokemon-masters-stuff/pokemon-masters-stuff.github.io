@@ -6,10 +6,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 import { DarkModeToggleMobile } from '../DarkModeToggle';
-import { LanguageDropdownMobile } from '../LanguageDropdown';
 import styles from './styles';
 
-const Nav = props => {
+const Nav = (props) => {
   const { classes, onOpenNavHandler } = props;
 
   const handleOnOpenNav = () =>
@@ -32,7 +31,6 @@ const Nav = props => {
           Sync Grid Helper
         </Link>
       </Typography>
-      <LanguageDropdownMobile />
       <DarkModeToggleMobile />
     </Toolbar>
   );
