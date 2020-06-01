@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { changeFilter, changeSort } from '../../../actions/actionCreators';
-import { getPokemonNameList } from '../../../data';
+import { getPokemonNameList } from '../../../utils/functions';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';

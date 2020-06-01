@@ -1,4 +1,3 @@
-export { default as getPokemonNameList } from './gridedPokemonList';
 export { default as shortenedMoveNameByAbilityIdEN } from './shortenedMoveNameByAbilityId/en';
 export { default as shortenedMoveNameByAbilityIdIT } from './shortenedMoveNameByAbilityId/it';
 export { default as shortenedMoveNameByAbilityIdES } from './shortenedMoveNameByAbilityId/es';

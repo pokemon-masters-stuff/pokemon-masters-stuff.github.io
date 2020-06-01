@@ -1,4 +1,21 @@
+import pokemonNameListByMonsterBaseId from '../data/pokemonNameListByMonsterBaseId';
+import arrayOfAllGridedPokemon from '../data/allGridedPokemon.json';
 import { shortenedMoveNameByAbilityId } from './constants';
+
+export const getPokemonNameList = (language) =>
+  arrayOfAllGridedPokemon
+    .map((entry, index) => {
+      return {
+        key: index,
+        name: pokemonNameListByMonsterBaseId[entry.monsterBaseId]['en'],
+        value: pokemonNameListByMonsterBaseId[entry.monsterBaseId][language], // value changes as language changes. name stays the same so old links and saves are compatible
+      };
+    })
+    .sort((a, b) => {
+      let x = a.value;
+      let y = b.value;
+      return x < y ? -1 : x > y ? 1 : 0;
+    });
 
 // TO DO: REFACTOR
 export const getFillColorByMoveType = ({ type, group }) => {

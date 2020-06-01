@@ -26,11 +26,11 @@ const pokemonNameDB = {
 // characterId->trainerId
 
 /*
- * Usage i.e: node extractPokemonName.js
+ * Usage i.e: node extractAllPokemonNames.js
  * */
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
-const extractPokemonName = () => {
+const extractAllPokemonNames = () => {
   const pokemonNames = {};
 
   Object.keys(pokemonNameDB['en']).forEach((key) => {
@@ -64,4 +64,4 @@ const extractPokemonName = () => {
   return pokemonNames;
 };
 
-extractPokemonName();
+extractAllPokemonNames();
