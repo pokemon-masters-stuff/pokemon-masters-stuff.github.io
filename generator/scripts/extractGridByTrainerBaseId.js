@@ -95,11 +95,11 @@ const moveNameDB = {
 // characterId->trainerId
 
 /*
- * Usage i.e: node extractAbilityByTrainerBaseId.js --trainerBaseId=10700000 --filename=pikachu
+ * Usage i.e: node extractGridByTrainerBaseId.js --trainerBaseId=10700000 --filename=pikachu
  * */
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
-const extractAbilityByTrainerBaseId = () => {
+const extractGridByTrainerBaseId = () => {
   if (!args.trainerBaseId) return null;
   // find trainerId by trainerBaseId
   let trainer = {};
@@ -197,4 +197,4 @@ const extractAbilityByTrainerBaseId = () => {
   });
 };
 
-extractAbilityByTrainerBaseId();
+extractGridByTrainerBaseId();
