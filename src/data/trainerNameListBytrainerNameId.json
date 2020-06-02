@@ -1,0 +1,1232 @@
+{
+  "ch0000": {
+    "de": "Rot",
+    "en": "Red",
+    "es": "Rojo",
+    "fr": "Red",
+    "it": "Rosso",
+    "ja": "レッド",
+    "ko": "레드",
+    "zh": "赤紅"
+  },
+  "ch0001": {
+    "de": "Kukui",
+    "en": "Kukui",
+    "es": "Kukui",
+    "fr": "Euphorbe",
+    "it": "Kukui",
+    "ja": "ククイ",
+    "ko": "쿠쿠이",
+    "zh": "庫庫伊"
+  },
+  "ch0002": {
+    "de": "Lyra",
+    "en": "Lyra",
+    "es": "Lira",
+    "fr": "Célesta",
+    "it": "Cetra",
+    "ja": "コトネ",
+    "ko": "금선",
+    "zh": "琴音"
+  },
+  "ch0003": {
+    "de": "Kalem",
+    "en": "Calem",
+    "es": "Kalm",
+    "fr": "Kalem",
+    "it": "Calem",
+    "ja": "カルム",
+    "ko": "칼름",
+    "zh": "卡魯穆"
+  },
+  "ch0004": {
+    "de": "Lotta",
+    "en": "Hilda",
+    "es": "Liza",
+    "fr": "Ludvina",
+    "it": "Anita",
+    "ja": "トウコ",
+    "ko": "투희",
+    "zh": "鬥子"
+  },
+  "ch0005": {
+    "de": "Lorelei",
+    "en": "Lorelei",
+    "es": "Lorelei",
+    "fr": "Olga",
+    "it": "Lorelei",
+    "ja": "カンナ",
+    "ko": "칸나",
+    "zh": "科拿"
+  },
+  "ch0006": {
+    "de": "Ignaz",
+    "en": "Flint",
+    "es": "Fausto",
+    "fr": "Adrien",
+    "it": "Vulcano",
+    "ja": "オーバ",
+    "ko": "대엽",
+    "zh": "大葉"
+  },
+  "ch0007": {
+    "de": "Lola",
+    "en": "Acerola",
+    "es": "Zarala",
+    "fr": "Margie",
+    "it": "Malpi",
+    "ja": "アセロラ",
+    "ko": "아세로라",
+    "zh": "阿塞蘿拉"
+  },
+  "ch0008": {
+    "de": "Erika",
+    "en": "Erika",
+    "es": "Erika",
+    "fr": "Erika",
+    "it": "Erika",
+    "ja": "エリカ",
+    "ko": "민화",
+    "zh": "莉佳"
+  },
+  "ch0009": {
+    "de": "Norman",
+    "en": "Norman",
+    "es": "Norman",
+    "fr": "Norman",
+    "it": "Norman",
+    "ja": "センリ",
+    "ko": "종길",
+    "zh": "千里"
+  },
+  "ch0010": {
+    "de": "Marinus",
+    "en": "Crasher Wake",
+    "es": "Mananti",
+    "fr": "Lovis",
+    "it": "Omar",
+    "ja": "マキシ",
+    "ko": "맥실러",
+    "zh": "吉憲"
+  },
+  "ch0011": {
+    "de": "Mica",
+    "en": "Roxie",
+    "es": "Hiedra",
+    "fr": "Strykna",
+    "it": "Velia",
+    "ja": "ホミカ",
+    "ko": "보미카",
+    "zh": "霍米加"
+  },
+  "ch0012": {
+    "de": "Connie",
+    "en": "Korrina",
+    "es": "Corelia",
+    "fr": "Cornélia",
+    "it": "Ornella",
+    "ja": "コルニ",
+    "ko": "코르니",
+    "zh": "可爾妮"
+  },
+  "ch0013": {
+    "de": "Hapu’u",
+    "en": "Hapu",
+    "es": "Hela",
+    "fr": "Paulie",
+    "it": "Hapi",
+    "ja": "ハプウ",
+    "ko": "하푸우",
+    "zh": "哈普烏"
+  },
+  "ch0014": {
+    "de": "Cheren",
+    "en": "Cheren",
+    "es": "Cheren",
+    "fr": "Tcheren",
+    "it": "Komor",
+    "ja": "チェレン",
+    "ko": "체렌",
+    "zh": "黑連"
+  },
+  "ch0015": {
+    "de": "Rocko",
+    "en": "Brock",
+    "es": "Brock",
+    "fr": "Pierre",
+    "it": "Brock",
+    "ja": "タケシ",
+    "ko": "웅",
+    "zh": "小剛"
+  },
+  "ch0016": {
+    "de": "Géraldine",
+    "en": "Skyla",
+    "es": "Gerania",
+    "fr": "Carolina",
+    "it": "Anemone",
+    "ja": "フウロ",
+    "ko": "풍란",
+    "zh": "風露"
+  },
+  "ch0017": {
+    "de": "Leaf",
+    "en": "Leaf",
+    "es": "Hoja",
+    "fr": "Leaf",
+    "it": "Leaf",
+    "ja": "リーフ",
+    "ko": "리프",
+    "zh": "葉子"
+  },
+  "ch0018": {
+    "de": "Krista",
+    "en": "Kris",
+    "es": "Cristi",
+    "fr": "Christy",
+    "it": "Kristy",
+    "ja": "クリス",
+    "ko": "크리스",
+    "zh": "克麗絲"
+  },
+  "ch0019": {
+    "de": "Brix",
+    "en": "Brendan",
+    "es": "Bruno",
+    "fr": "Brice",
+    "it": "Brendon",
+    "ja": "ユウキ",
+    "ko": "휘웅",
+    "zh": "小悠"
+  },
+  "ch0020": {
+    "de": "Warren",
+    "en": "Hilbert",
+    "es": "Lucho",
+    "fr": "Ludwig",
+    "it": "Alcide",
+    "ja": "トウヤ",
+    "ko": "투지",
+    "zh": "鬥也"
+  },
+  "ch0021": {
+    "de": "Blau",
+    "en": "Blue",
+    "es": "Azul",
+    "fr": "Blue",
+    "it": "Blu",
+    "ja": "グリーン",
+    "ko": "그린",
+    "zh": "青綠"
+  },
+  "ch0022": {
+    "de": "Galantho",
+    "en": "Wulfric",
+    "es": "Édel",
+    "fr": "Urup",
+    "it": "Edel",
+    "ja": "ウルップ",
+    "ko": "우르프",
+    "zh": "得撫"
+  },
+  "ch0023": {
+    "de": "Raissa",
+    "en": "Cheryl",
+    "es": "Malta",
+    "fr": "Sara",
+    "it": "Demetra",
+    "ja": "モミ",
+    "ko": "모미",
+    "zh": "芽米"
+  },
+  "ch0024": {
+    "de": "Anissa",
+    "en": "Shauntal",
+    "es": "Anís",
+    "fr": "Anis",
+    "it": "Antemia",
+    "ja": "シキミ",
+    "ko": "망초",
+    "zh": "婉龍"
+  },
+  "ch0025": {
+    "de": "Frida",
+    "en": "Candice",
+    "es": "Inverna",
+    "fr": "Gladys",
+    "it": "Bianca",
+    "ja": "スズナ",
+    "ko": "무청",
+    "zh": "小菘"
+  },
+  "ch0026": {
+    "de": "Bianka",
+    "en": "Whitney",
+    "es": "Blanca",
+    "fr": "Blanche",
+    "it": "Chiara",
+    "ja": "アカネ",
+    "ko": "꼭두",
+    "zh": "小茜"
+  },
+  "ch0027": {
+    "de": "Silvana",
+    "en": "Gardenia",
+    "es": "Gardenia",
+    "fr": "Flo",
+    "it": "Gardenia",
+    "ja": "ナタネ",
+    "ko": "유채",
+    "zh": "菜種"
+  },
+  "ch0028": {
+    "de": "Sandra",
+    "en": "Clair",
+    "es": "Débora",
+    "fr": "Sandra",
+    "it": "Sandra",
+    "ja": "イブキ",
+    "ko": "이향",
+    "zh": "小椿"
+  },
+  "ch0029": {
+    "de": "Flavia",
+    "en": "Flannery",
+    "es": "Candela",
+    "fr": "Adriane",
+    "it": "Fiammetta",
+    "ja": "アスナ",
+    "ko": "민지",
+    "zh": "亞莎"
+  },
+  "ch0030": {
+    "de": "Svenja",
+    "en": "Liza",
+    "es": "Leti",
+    "fr": "Tatia",
+    "it": "Pat",
+    "ja": "ラン",
+    "ko": "란",
+    "zh": "小南"
+  },
+  "ch0031": {
+    "de": "Ben",
+    "en": "Tate",
+    "es": "Vito",
+    "fr": "Lévy",
+    "it": "Tell",
+    "ja": "フウ",
+    "ko": "풍",
+    "zh": "小楓"
+  },
+  "ch0032": {
+    "de": "Norbert",
+    "en": "Pryce",
+    "es": "Fredo",
+    "fr": "Frédo",
+    "it": "Alfredo",
+    "ja": "ヤナギ",
+    "ko": "류옹",
+    "zh": "柳伯"
+  },
+  "ch0033": {
+    "de": "Turner",
+    "en": "Clay",
+    "es": "Yakón",
+    "fr": "Bardane",
+    "it": "Rafan",
+    "ja": "ヤーコン",
+    "ko": "야콘",
+    "zh": "菊老大"
+  },
+  "ch0034": {
+    "de": "Matsurika",
+    "en": "Mina",
+    "es": "Rika",
+    "fr": "Oléa",
+    "it": "Rika",
+    "ja": "マツリカ",
+    "ko": "말리화",
+    "zh": "茉莉"
+  },
+  "ch0035": {
+    "de": "Major Bob",
+    "en": "Lt. Surge",
+    "es": "Teniente Surge",
+    "fr": "Major Bob",
+    "it": "Lt. Surge",
+    "ja": "マチス",
+    "ko": "마티스",
+    "zh": "馬志士"
+  },
+  "ch0036": {
+    "de": "Chrys",
+    "en": "Sophocles",
+    "es": "Chris",
+    "fr": "Chrys",
+    "it": "Chrys",
+    "ja": "マーマネ",
+    "ko": "마마네",
+    "zh": "馬瑪內"
+  },
+  "ch0037": {
+    "de": "Amaro",
+    "en": "Ramos",
+    "es": "Amaro",
+    "fr": "Amaro",
+    "it": "Amur",
+    "ja": "フクジ",
+    "ko": "후쿠지",
+    "zh": "福爺"
+  },
+  "ch0038": {
+    "de": "Veit",
+    "en": "Roark",
+    "es": "Roco",
+    "fr": "Pierrick",
+    "it": "Pedro",
+    "ja": "ヒョウタ",
+    "ko": "강석",
+    "zh": "瓢太"
+  },
+  "ch0039": {
+    "de": "Viola",
+    "en": "Viola",
+    "es": "Violeta",
+    "fr": "Violette",
+    "it": "Violetta",
+    "ja": "ビオラ",
+    "ko": "비올라",
+    "zh": "紫羅蘭"
+  },
+  "ch0040": {
+    "de": "Sandro",
+    "en": "Brycen",
+    "es": "Junco",
+    "fr": "Zhu",
+    "it": "Silvestro",
+    "ja": "ハチク",
+    "ko": "담죽",
+    "zh": "哈奇庫"
+  },
+  "ch0041": {
+    "de": "Distmar",
+    "en": "Thorton",
+    "es": "Espinal",
+    "fr": "Cardus",
+    "it": "Spino",
+    "ja": "ネジキ",
+    "ko": "수철",
+    "zh": "捩木"
+  },
+  "ch0042": {
+    "de": "Wibke",
+    "en": "Winona",
+    "es": "Alana",
+    "fr": "Alizée",
+    "it": "Alice",
+    "ja": "ナギ",
+    "ko": "은송",
+    "zh": "娜琪"
+  },
+  "ch0043": {
+    "de": "Kamillo",
+    "en": "Brawly",
+    "es": "Marcial",
+    "fr": "Bastien",
+    "it": "Rudi",
+    "ja": "トウキ",
+    "ko": "철구",
+    "zh": "藤樹"
+  },
+  "ch0044": {
+    "de": "Felizia",
+    "en": "Roxanne",
+    "es": "Petra",
+    "fr": "Roxanne",
+    "it": "Petra",
+    "ja": "ツツジ",
+    "ko": "원규",
+    "zh": "杜娟"
+  },
+  "ch0045": {
+    "de": "Kai",
+    "en": "Bugsy",
+    "es": "Antón",
+    "fr": "Hector",
+    "it": "Raffaello",
+    "ja": "ツクシ",
+    "ko": "호일",
+    "zh": "阿筆"
+  },
+  "ch0046": {
+    "de": "Kevin",
+    "en": "Noland",
+    "es": "Sabino",
+    "fr": "Sam",
+    "it": "Savino",
+    "ja": "ダツラ",
+    "ko": "다투라",
+    "zh": "達拉"
+  },
+  "ch0047": {
+    "de": "Willi",
+    "en": "Will",
+    "es": "Mento",
+    "fr": "Clément",
+    "it": "Pino",
+    "ja": "イツキ",
+    "ko": "일목",
+    "zh": "一樹"
+  },
+  "ch0048": {
+    "de": "Astor",
+    "en": "Grimsley",
+    "es": "Aza",
+    "fr": "Pieris",
+    "it": "Mirton",
+    "ja": "ギーマ",
+    "ko": "블래리",
+    "zh": "越橘"
+  },
+  "ch0049": {
+    "de": "Antonia",
+    "en": "Phoebe",
+    "es": "Fátima",
+    "fr": "Spectra",
+    "it": "Ester",
+    "ja": "フヨウ",
+    "ko": "회연",
+    "zh": "芙蓉"
+  },
+  "ch0050": {
+    "de": "Hilda",
+    "en": "Maylene",
+    "es": "Brega",
+    "fr": "Mélina",
+    "it": "Marzia",
+    "ja": "スモモ",
+    "ko": "자두",
+    "zh": "阿李"
+  },
+  "ch0051": {
+    "de": "Mayla",
+    "en": "Olivia",
+    "es": "Mayla",
+    "fr": "Alyxia",
+    "it": "Alyxia",
+    "ja": "ライチ",
+    "ko": "라이치",
+    "zh": "麗姿"
+  },
+  "ch0052": {
+    "de": "Benson",
+    "en": "Marlon",
+    "es": "Ciprián",
+    "fr": "Amana",
+    "it": "Ciprian",
+    "ja": "シズイ",
+    "ko": "시즈",
+    "zh": "西子伊"
+  },
+  "ch0053": {
+    "de": "Lino",
+    "en": "Grant",
+    "es": "Lino",
+    "fr": "Lino",
+    "it": "Lino",
+    "ja": "ザクロ",
+    "ko": "자크로",
+    "zh": "查克洛"
+  },
+  "ch0054": {
+    "de": "Koga",
+    "en": "Koga",
+    "es": "Koga",
+    "fr": "Koga",
+    "it": "Koga",
+    "ja": "キョウ",
+    "ko": "독수",
+    "zh": "阿桔"
+  },
+  "ch0055": {
+    "de": "Thymelot",
+    "en": "Wikstrom",
+    "es": "Tileo",
+    "fr": "Thyméo",
+    "it": "Timeus",
+    "ja": "ガンピ",
+    "ko": "간피",
+    "zh": "雁鎧"
+  },
+  "ch0056": {
+    "de": "Yasu",
+    "en": "Nanu",
+    "es": "Denio",
+    "fr": "Danh",
+    "it": "Augusto",
+    "ja": "クチナシ",
+    "ko": "나누",
+    "zh": "默丹"
+  },
+  "ch0057": {
+    "de": "Bruno",
+    "en": "Bruno",
+    "es": "Bruno",
+    "fr": "Aldo",
+    "it": "Bruno",
+    "ja": "シバ",
+    "ko": "시바",
+    "zh": "希巴"
+  },
+  "ch0058": {
+    "de": "Kahili",
+    "en": "Kahili",
+    "es": "Kahili",
+    "fr": "Kahili",
+    "it": "Kahili",
+    "ja": "カヒリ",
+    "ko": "카일리",
+    "zh": "卡希麗"
+  },
+  "ch0059": {
+    "de": "Pyro",
+    "en": "Blaine",
+    "es": "Blaine",
+    "fr": "Auguste",
+    "it": "Blaine",
+    "ja": "カツラ",
+    "ko": "강연",
+    "zh": "夏伯"
+  },
+  "ch0060": {
+    "de": "Janina",
+    "en": "Janine",
+    "es": "Sachiko",
+    "fr": "Jeannine",
+    "it": "Nina",
+    "ja": "アンズ",
+    "ko": "도희",
+    "zh": "阿杏"
+  },
+  "ch0061": {
+    "de": "Agathe",
+    "en": "Agatha",
+    "es": "Agatha",
+    "fr": "Agatha",
+    "it": "Agatha",
+    "ja": "キクコ",
+    "ko": "국화",
+    "zh": "菊子"
+  },
+  "ch0062": {
+    "de": "Melanie",
+    "en": "Karen",
+    "es": "Karen",
+    "fr": "Marion",
+    "it": "Karen",
+    "ja": "カリン",
+    "ko": "카렌",
+    "zh": "梨花"
+  },
+  "ch0063": {
+    "de": "Eugen",
+    "en": "Marshal",
+    "es": "Lotto",
+    "fr": "Kunz",
+    "it": "Marzio",
+    "ja": "レンブ",
+    "ko": "연무",
+    "zh": "連武"
+  },
+  "ch0064": {
+    "de": "Kilian",
+    "en": "Paulo",
+    "es": "Paolo",
+    "fr": "Kyrill",
+    "it": "Owen",
+    "ja": "キリヤ",
+    "ko": "고상",
+    "zh": "梧桐"
+  },
+  "ch0065": {
+    "de": "Professor Daisy",
+    "en": "Professor Bellis",
+    "es": "Profesora Margarita",
+    "fr": "Professeure Bellis",
+    "it": "Professoressa Bellisperia",
+    "ja": "ヒナギク博士",
+    "ko": "데이지박사",
+    "zh": "雛菊博士"
+  },
+  "ch0066": {
+    "de": "Lyer",
+    "en": "Lear",
+    "es": "Alik",
+    "fr": "Alexis",
+    "it": "Kelian",
+    "ja": "ライヤー",
+    "ko": "라이어",
+    "zh": "鎯琊"
+  },
+  "ch0067": {
+    "de": "Chetta",
+    "en": "Rachel",
+    "es": "Serra",
+    "fr": "Cléa",
+    "it": "Chette",
+    "ja": "チェッタ",
+    "ko": "치터",
+    "zh": "棘兒"
+  },
+  "ch0068": {
+    "de": "Drival",
+    "en": "Sawyer",
+    "es": "Néstor",
+    "fr": "Elvis",
+    "it": "Ravi",
+    "ja": "ドリバル",
+    "ko": "드리버",
+    "zh": "螺伯"
+  },
+  "ch0069": {
+    "de": "Ass-Trainer",
+    "en": "Ace Trainer",
+    "es": "Entrenador Guay",
+    "fr": "Topdresseur",
+    "it": "Fantallenatore",
+    "ja": "エリートトレーナー",
+    "ko": "엘리트 트레이너",
+    "zh": "精英訓練家"
+  },
+  "ch0070": {
+    "de": "Ass-Trainer",
+    "en": "Ace Trainer",
+    "es": "Entrenadora Guay",
+    "fr": "Topdresseuse",
+    "it": "Fantallenatrice",
+    "ja": "エリートトレーナー",
+    "ko": "엘리트 트레이너",
+    "zh": "精英訓練家"
+  },
+  "ch0071": {
+    "de": "Schönheit",
+    "en": "Beauty",
+    "es": "Modelo",
+    "fr": "Canon",
+    "it": "Bellezza",
+    "ja": "おとなのおねえさん",
+    "ko": "아가씨",
+    "zh": "大姐姐"
+  },
+  "ch0072": {
+    "de": "Schwimmer",
+    "en": "Swimmer",
+    "es": "Nadador",
+    "fr": "Nageur",
+    "it": "Nuotatore",
+    "ja": "かいパンやろう",
+    "ko": "수영팬티소년",
+    "zh": "泳褲小伙子"
+  },
+  "ch0073": {
+    "de": "Schwarzgurt",
+    "en": "Black Belt",
+    "es": "Karateka",
+    "fr": "Karatéka",
+    "it": "Cinturanera",
+    "ja": "からておう",
+    "ko": "태권왕",
+    "zh": "空手道王"
+  },
+  "ch0074": {
+    "de": "Knirps",
+    "en": "Youngster",
+    "es": "Joven",
+    "fr": "Gamin",
+    "it": "Marmocchio",
+    "ja": "たんぱんこぞう",
+    "ko": "반바지 꼬마",
+    "zh": "短褲小子"
+  },
+  "ch0075": {
+    "de": "Schwimmerin",
+    "en": "Swimmer",
+    "es": "Nadadora",
+    "fr": "Nageuse",
+    "it": "Nuotatrice",
+    "ja": "ビキニのおねえさん",
+    "ko": "비키니 아가씨",
+    "zh": "比基尼姐姐"
+  },
+  "ch0076": {
+    "de": "Pokémon-Sammler",
+    "en": "Collector",
+    "es": "Pokécolector",
+    "fr": "Collectionneur",
+    "it": "Cercapokémon",
+    "ja": "ポケモンコレクター",
+    "ko": "포켓몬 컬렉터",
+    "zh": "寶可夢收藏家"
+  },
+  "ch0077": {
+    "de": "Pokéfan",
+    "en": "Poké Fan",
+    "es": "Pokéfan",
+    "fr": "Pokéfan",
+    "it": "Pokéfan",
+    "ja": "だいすきクラブ",
+    "ko": "애호가클럽",
+    "zh": "發燒友俱樂部"
+  },
+  "ch0078": {
+    "de": "Pokémon-Ranger",
+    "en": "Pokémon Ranger",
+    "es": "Pokémon Ranger",
+    "fr": "Pokémon Ranger",
+    "it": "Pokémon Ranger",
+    "ja": "ポケモンレンジャー",
+    "ko": "포켓몬 레인저",
+    "zh": "寶可夢巡護員"
+  },
+  "ch0079": {
+    "de": "Göre",
+    "en": "Lass",
+    "es": "Chica",
+    "fr": "Fillette",
+    "it": "Teenager",
+    "ja": "ミニスカート",
+    "ko": "짧은 치마",
+    "zh": "迷你裙"
+  },
+  "ch0080": {
+    "de": "Wanderer",
+    "en": "Hiker",
+    "es": "Montañero",
+    "fr": "Montagnard",
+    "it": "Montanaro",
+    "ja": "やまおとこ",
+    "ko": "등산가",
+    "zh": "登山男"
+  },
+  "ch0081": {
+    "de": "Vorschülerin",
+    "en": "Preschooler",
+    "es": "Preescolar",
+    "fr": "Petite",
+    "it": "Bimba",
+    "ja": "えんじ",
+    "ko": "보육원아",
+    "zh": "幼稚園小朋友"
+  },
+  "ch0082": {
+    "de": "Raubein",
+    "en": "Street Thug",
+    "es": "Macarra",
+    "fr": "Terreur",
+    "it": "Tipaccio",
+    "ja": "こわいおじさん",
+    "ko": "무서운 아저씨",
+    "zh": "可怕的大叔"
+  },
+  "ch0083": {
+    "de": "Punkerin",
+    "en": "Punk Girl",
+    "es": "Chica Mala",
+    "fr": "Vaurienne",
+    "it": "Ribelle",
+    "ja": "バッドガール",
+    "ko": "배드걸",
+    "zh": "壞女孩"
+  },
+  "ch0084": {
+    "de": "Forscher",
+    "en": "Scientist",
+    "es": "Científico",
+    "fr": "Scientifique",
+    "it": "Scienziato",
+    "ja": "けんきゅういん",
+    "ko": "연구원",
+    "zh": "研究員"
+  },
+  "ch0085": {
+    "de": "Trainerhoffnung",
+    "en": "Rising Star",
+    "es": "Entrenadora Promesa",
+    "fr": "Dresseuse en Herbe",
+    "it": "Giovane speranza",
+    "ja": "ホープトレーナー",
+    "ko": "호프 트레이너",
+    "zh": "新星訓練家"
+  },
+  "ch0086": {
+    "de": "Camper",
+    "en": "Camper",
+    "es": "Campista",
+    "fr": "Fan de Camping",
+    "it": "Campeggiatore",
+    "ja": "キャンプボーイ",
+    "ko": "캠프보이",
+    "zh": "露營少年"
+  },
+  "ch0090": {
+    "de": "Troy",
+    "en": "Steven",
+    "es": "Máximo",
+    "fr": "Pierre Rochard",
+    "it": "Rocco",
+    "ja": "ダイゴ",
+    "ko": "성호",
+    "zh": "大吾"
+  },
+  "ch0091": {
+    "de": "Cynthia",
+    "en": "Cynthia",
+    "es": "Cintia",
+    "fr": "Cynthia",
+    "it": "Camilla",
+    "ja": "シロナ",
+    "ko": "난천",
+    "zh": "竹蘭"
+  },
+  "ch0092": {
+    "de": "Lilia",
+    "en": "Iris",
+    "es": "Iris",
+    "fr": "Iris",
+    "it": "Iris",
+    "ja": "アイリス",
+    "ko": "아이리스",
+    "zh": "艾莉絲"
+  },
+  "ch0093": {
+    "de": "Courtney",
+    "en": "Trista",
+    "es": "Tris",
+    "fr": "Thalie",
+    "it": "Tish",
+    "ja": "クルティ",
+    "ko": "커티",
+    "zh": "紅菫"
+  },
+  "ch0094": {
+    "de": "Dragan",
+    "en": "Drake",
+    "es": "Dracón",
+    "fr": "Aragon",
+    "it": "Drake",
+    "ja": "ゲンジ",
+    "ko": "권수",
+    "zh": "源治"
+  },
+  "ch0095": {
+    "de": "Kattlea",
+    "en": "Caitlin",
+    "es": "Catleya",
+    "fr": "Percila",
+    "it": "Catlina",
+    "ja": "カトレア",
+    "ko": "카틀레야",
+    "zh": "嘉德麗雅"
+  },
+  "ch0096": {
+    "de": "Narcisse",
+    "en": "Siebold",
+    "es": "Narciso",
+    "fr": "Narcisse",
+    "it": "Narciso",
+    "ja": "ズミ",
+    "ko": "즈미",
+    "zh": "志米"
+  },
+  "ch0097": {
+    "de": "Charlie",
+    "en": "Marley",
+    "es": "Sémola",
+    "fr": "Viviane",
+    "it": "Risetta",
+    "ja": "マイ",
+    "ko": "미정",
+    "zh": "米依"
+  },
+  "ch0098": {
+    "de": "Tali",
+    "en": "Hau",
+    "es": "Tilo",
+    "fr": "Tili",
+    "it": "Hau",
+    "ja": "ハウ",
+    "ko": "하우",
+    "zh": "哈烏"
+  },
+  "ch0099": {
+    "de": "Barry",
+    "en": "Barry",
+    "es": "Israel",
+    "fr": "René",
+    "it": "Barry",
+    "ja": "ジュン",
+    "ko": "용식",
+    "zh": "阿馴"
+  },
+  "ch0101": {
+    "de": "Rosy",
+    "en": "Rosa",
+    "es": "Nanci",
+    "fr": "Écho",
+    "it": "Rina",
+    "ja": "メイ",
+    "ko": "명희",
+    "zh": "鳴依"
+  },
+  "ch0103": {
+    "de": "Trixi",
+    "en": "Tricia",
+    "es": "Tricia",
+    "fr": "Aglaé",
+    "it": "Tricia",
+    "ja": "トリカ",
+    "ko": "트리커",
+    "zh": "藍菫"
+  },
+  "ch0104": {
+    "de": "Sasha",
+    "en": "Trinnia",
+    "es": "Trini",
+    "fr": "Euphrosyne",
+    "it": "Tilia",
+    "ja": "サクサ",
+    "ko": "사크사",
+    "zh": "綠菫"
+  },
+  "ch0106": {
+    "de": "Kamilla",
+    "en": "Elesa",
+    "es": "Camila",
+    "fr": "Inezia",
+    "it": "Camelia",
+    "ja": "カミツレ",
+    "ko": "카밀레",
+    "zh": "小菊兒"
+  },
+  "ch0110": {
+    "de": "Misty",
+    "en": "Misty",
+    "es": "Misty",
+    "fr": "Ondine",
+    "it": "Misty",
+    "ja": "カスミ",
+    "ko": "이슬",
+    "zh": "小霞"
+  },
+  "ch0111": {
+    "de": "Siegfried",
+    "en": "Lance",
+    "es": "Lance",
+    "fr": "Peter",
+    "it": "Lance",
+    "ja": "ワタル",
+    "ko": "목호",
+    "zh": "阿渡"
+  },
+  "ch0112": {
+    "de": "Klarin",
+    "en": "Ethan",
+    "es": "Eco",
+    "fr": "Luth",
+    "it": "Armonio",
+    "ja": "ヒビキ",
+    "ko": "심향",
+    "zh": "阿響"
+  },
+  "ch0113": {
+    "de": "Jasmin",
+    "en": "Jasmine",
+    "es": "Yasmina",
+    "fr": "Jasmine",
+    "it": "Jasmine",
+    "ja": "ミカン",
+    "ko": "규리",
+    "zh": "阿蜜"
+  },
+  "ch0114": {
+    "de": "Sabrina",
+    "en": "Sabrina",
+    "es": "Sabrina",
+    "fr": "Morgane",
+    "it": "Sabrina",
+    "ja": "ナツメ",
+    "ko": "초련",
+    "zh": "娜姿"
+  },
+  "ch0116": {
+    "de": "Lucia",
+    "en": "Dawn",
+    "es": "Maya",
+    "fr": "Aurore",
+    "it": "Lucinda",
+    "ja": "ヒカリ",
+    "ko": "빛나",
+    "zh": "小光"
+  },
+  "ch0121": {
+    "de": "Fran",
+    "en": "Plumeria",
+    "es": "Francine",
+    "fr": "Apocyne",
+    "it": "Plumeria",
+    "ja": "プルメリ",
+    "ko": "플루메리",
+    "zh": "布爾美麗"
+  },
+  "ch0124": {
+    "de": "Maho",
+    "en": "Mallow",
+    "es": "Lulú",
+    "fr": "Barbara",
+    "it": "Ibis",
+    "ja": "マオ",
+    "ko": "마오",
+    "zh": "瑪奧"
+  },
+  "ch0125": {
+    "de": "Bromley",
+    "en": "Guzma",
+    "es": "Guzmán",
+    "fr": "Guzma",
+    "it": "Guzman",
+    "ja": "グズマ",
+    "ko": "구즈마",
+    "zh": "古茲馬"
+  },
+  "ch0127": {
+    "de": "Wassili",
+    "en": "Wallace",
+    "es": "Plubio",
+    "fr": "Marc",
+    "it": "Adriano",
+    "ja": "ミクリ",
+    "ko": "윤진",
+    "zh": "米可利"
+  },
+  "ch0128": {
+    "de": "Heiko",
+    "en": "Wally",
+    "es": "Blasco",
+    "fr": "Timmy",
+    "it": "Lino",
+    "ja": "ミツル",
+    "ko": "민진",
+    "zh": "滿充"
+  },
+  "ch0129": {
+    "de": "Amalia",
+    "en": "Zinnia",
+    "es": "Tristana",
+    "fr": "Amaryllis",
+    "it": "Lyris",
+    "ja": "ヒガナ",
+    "ko": "피아나",
+    "zh": "希嘉娜"
+  },
+  "ch0131": {
+    "de": "Citro",
+    "en": "Clemont",
+    "es": "Lem",
+    "fr": "Lem",
+    "it": "Lem",
+    "ja": "シトロン",
+    "ko": "시트론",
+    "zh": "希特隆"
+  },
+  "ch0133": {
+    "de": "Silber",
+    "en": "Silver",
+    "es": "Plata",
+    "fr": "Silver",
+    "it": "Argento",
+    "ja": "シルバー",
+    "ko": "실버",
+    "zh": "小銀"
+  },
+  "ch0137": {
+    "de": "Eich",
+    "en": "Professor Oak",
+    "es": "Oak",
+    "fr": "Chen",
+    "it": "Professor Oak",
+    "ja": "オーキド",
+    "ko": "오박사",
+    "zh": "大木"
+  },
+  "ch0140": {
+    "de": "Giovanni",
+    "en": "Giovanni",
+    "es": "Giovanni",
+    "fr": "Giovanni",
+    "it": "Giovanni",
+    "ja": "サカキ",
+    "ko": "비주기",
+    "zh": "阪木"
+  },
+  "ch0151": {
+    "de": "Lamina",
+    "en": "Fantina",
+    "es": "Fantina",
+    "fr": "Kiméra",
+    "it": "Fannie",
+    "ja": "メリッサ",
+    "ko": "멜리사",
+    "zh": "梅麗莎"
+  },
+  "ch0153": {
+    "de": "Frosina",
+    "en": "Glacia",
+    "es": "Nívea",
+    "fr": "Glacia",
+    "it": "Frida",
+    "ja": "プリム",
+    "ko": "미혜",
+    "zh": "波妮"
+  },
+  "ch0157": {
+    "de": "Valerie",
+    "en": "Valerie",
+    "es": "Valeria",
+    "fr": "Valériane",
+    "it": "Valérie",
+    "ja": "マーシュ",
+    "ko": "마슈",
+    "zh": "瑪綉"
+  },
+  "ch9000": {
+    "de": "",
+    "en": "",
+    "es": "",
+    "fr": "",
+    "it": "",
+    "ja": "",
+    "ko": "",
+    "zh": ""
+  },
+  "ch0159": {
+    "de": "Perenus",
+    "en": "Darach",
+    "es": "Kokuran",
+    "fr": "Parsley",
+    "it": "Paride",
+    "ja": "コクラン",
+    "ko": "코크런",
+    "zh": "石蘭"
+  },
+  "ch0170": {
+    "de": "Artie",
+    "en": "Burgh",
+    "es": "Camus",
+    "fr": "Artie",
+    "it": "Artemisio",
+    "ja": "アーティ",
+    "ko": "아티",
+    "zh": "亞堤"
+  }
+}
