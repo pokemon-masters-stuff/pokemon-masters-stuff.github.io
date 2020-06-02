@@ -6,6 +6,7 @@ const trainerDB = require('../rawdata/Trainer.json');
 const trainerBaseDB = require('../rawdata/TrainerBase.json');
 const trainerNameDBen = require('../rawdata/en/trainer_name_en.lsd.json');
 const pokemonNameDBen = require('../rawdata/en/monster_name_en.lsd.json');
+const monsterVariationDB = require('../rawdata/MonsterVariation.json');
 
 const moveNameDBde = require('../rawdata/de/move_name_de.lsd.json');
 const moveNameDBen = require('../rawdata/en/move_name_en.lsd.json');
@@ -90,7 +91,7 @@ const passiveDescriptionDB = {
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
 // Update this list (of trainerBaseId) based on new datamine
-const newGridedTrainerList = [
+const gridedTrainerList = [
   // trainerBaseId
   '10700000',
   '10002900',
@@ -139,12 +140,14 @@ const newGridedTrainerList = [
 
 const extractPokemonListByTrainerBaseId = () => {
   const monsterAndTrainerList = [];
+  let monsterAndTrainerData = {};
   let monsterId = '';
   let monsterBaseId = '';
+  let syncMoveId = '';
   let trainerNameId = '';
   let moves = {};
   let passives = {};
-  newGridedTrainerList.forEach((trainerBaseIdFromList) => {
+  gridedTrainerList.forEach((trainerBaseIdFromList) => {
     // Find entry in Trainer.json
     let trainer = trainerDB.entries.find(
       (trainer) => trainer.trainerBaseId.toString() === trainerBaseIdFromList
@@ -187,8 +190,6 @@ const extractPokemonListByTrainerBaseId = () => {
         passive1Id,
         passive2Id,
         passive3Id,
-        passive4Id,
-        passive5Id,
         type,
         weakType,
       } = trainer;
@@ -362,8 +363,6 @@ const extractPokemonListByTrainerBaseId = () => {
       };
 
       // Use passiveId to find passive skill name and description in passive_skill_name_xx.lsd.json and passive_skill_description_xx.lsd.json
-      // Use passiveId to find passive name in passive_name_xx.lsd.json
-      // Use passiveId to find passive description in passive_description_xx.lsd.json
       let passive1NameByLanguage = {
           de: '',
           en: '',
@@ -465,12 +464,392 @@ const extractPokemonListByTrainerBaseId = () => {
           },
         });
 
-      // Use monsterId to find monsterBaseId in Monster.json
+      // Use monsterId to find syncMoveId and monsterBaseId in Monster.json
       let monster = monsterDB.entries.find(
         (monster) => monster.monsterId.toString() === monsterId.toString()
       );
 
+      syncMoveId = monster.syncMoveId;
+
       monsterBaseId = monster.monsterBaseId;
+
+      // Use syncMoveId to find sync move data in Move.json
+      let syncMoveNameByLanguage = {
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
+      };
+
+      let syncMoveDescriptionByLanguage = {
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
+      };
+
+      languages.forEach((language) => {
+        syncMoveNameByLanguage[language] = moveNameDB[language][syncMoveId];
+        syncMoveDescriptionByLanguage[language] =
+          moveDescriptionDB[language][syncMoveId];
+      });
+
+      // Use moveId to find move data, eg. power, accuracy, etc. from Move.json
+      let syncMoveEntry = moveDB.entries.find(
+        (move) => move.moveId.toString() === syncMoveId.toString()
+      );
+
+      moves = {
+        ...moves,
+        syncMove: {
+          id: syncMoveEntry.moveId,
+          name: syncMoveNameByLanguage,
+          description: syncMoveDescriptionByLanguage,
+          category: syncMoveEntry.category,
+          group: syncMoveEntry.group,
+          type: syncMoveEntry.type,
+          target: syncMoveEntry.target,
+          gaugeDrain: syncMoveEntry.gaugeDrain,
+          power: syncMoveEntry.power,
+          accuracy: syncMoveEntry.accuracy,
+          maxUses: syncMoveEntry.maxUses,
+        },
+      };
+
+      // Use monsterBaseId to see if there is a mega form, i.e. monsterBaseId ends in '51'
+      let monsterMegaFormBaseId;
+      let monsterMegaFormEntry;
+      let megaMoves;
+      let megaPassives;
+      let potentialMegaBaseId =
+        monsterBaseId
+          .toString()
+          .substring(0, monsterBaseId.toString().length - 2) + '51';
+
+      if (pokemonNameDBen[potentialMegaBaseId]) {
+        monsterMegaFormBaseId = potentialMegaBaseId;
+
+        monsterMegaFormEntry = monsterVariationDB.entries.find(
+          (monster) => monster.monsterId.toString() === monsterId.toString()
+        );
+
+        // Use megaMoveId to find megaMove name in megaMove_name_xx.lsd.json
+        // Use megaMoveId to find megaMove description in megaMove_description_xx.lsd.json
+        let megaMove1NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove2NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove3NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove4NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          };
+
+        let megaMove1DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove2DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove3DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove4DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          };
+
+        languages.forEach((language) => {
+          megaMove1NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move1Id];
+          megaMove2NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move2Id];
+          megaMove3NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move3Id];
+          megaMove4NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move4Id];
+          megaMove1DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move1Id];
+          megaMove2DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move2Id];
+          megaMove3DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move3Id];
+          megaMove4DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move4Id];
+        });
+
+        // Use megaMoveId to find megaMove data, eg. power, accuracy, etc. from MegaMove.json
+        let megaMove1, megaMove2, megaMove3, megaMove4;
+        monsterMegaFormEntry.move1Id !== -1
+          ? (megaMove1 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterMegaFormEntry.move1Id.toString()
+            ))
+          : null;
+        monsterMegaFormEntry.move2Id !== -1
+          ? (megaMove2 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterMegaFormEntry.move2Id.toString()
+            ))
+          : null;
+        monsterMegaFormEntry.move3Id !== -1
+          ? (megaMove3 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterMegaFormEntry.move3Id.toString()
+            ))
+          : null;
+        monsterMegaFormEntry.move4Id !== -1
+          ? (megaMove4 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterMegaFormEntry.move4Id.toString()
+            ))
+          : null;
+
+        megaMove1 &&
+          (megaMoves = {
+            ...megaMoves,
+            move1: {
+              id: megaMove1.moveId,
+              name: megaMove1NameByLanguage,
+              description: megaMove1DescriptionByLanguage,
+              category: megaMove1.category,
+              group: megaMove1.group,
+              type: megaMove1.type,
+              target: megaMove1.target,
+              gaugeDrain: megaMove1.gaugeDrain,
+              power: megaMove1.power,
+              accuracy: megaMove1.accuracy,
+              maxUses: megaMove1.maxUses,
+            },
+          });
+        megaMove2 &&
+          (megaMoves = {
+            ...megaMoves,
+            move2: {
+              id: megaMove2.moveId,
+              name: megaMove2NameByLanguage,
+              description: megaMove2DescriptionByLanguage,
+              category: megaMove2.category,
+              group: megaMove2.group,
+              type: megaMove2.type,
+              target: megaMove2.target,
+              gaugeDrain: megaMove2.gaugeDrain,
+              power: megaMove2.power,
+              accuracy: megaMove2.accuracy,
+              maxUses: megaMove2.maxUses,
+            },
+          });
+        megaMove3 &&
+          (megaMoves = {
+            ...megaMoves,
+            move3: {
+              id: megaMove3.moveId,
+              name: megaMove3NameByLanguage,
+              description: megaMove3DescriptionByLanguage,
+              category: megaMove3.category,
+              group: megaMove3.group,
+              type: megaMove3.type,
+              target: megaMove3.target,
+              gaugeDrain: megaMove3.gaugeDrain,
+              power: megaMove3.power,
+              accuracy: megaMove3.accuracy,
+              maxUses: megaMove3.maxUses,
+            },
+          });
+        megaMove4 &&
+          (megaMoves = {
+            ...megaMoves,
+            move4: {
+              id: megaMove4.moveId,
+              name: megaMove4NameByLanguage,
+              description: megaMove4DescriptionByLanguage,
+              category: megaMove4.category,
+              group: megaMove4.group,
+              type: megaMove4.type,
+              target: megaMove4.target,
+              gaugeDrain: megaMove4.gaugeDrain,
+              power: megaMove4.power,
+              accuracy: megaMove4.accuracy,
+              maxUses: megaMove4.maxUses,
+            },
+          });
+
+        // Use passiveId to find passive skill name and description in passive_skill_name_xx.lsd.json and passive_skill_description_xx.lsd.json
+        let megaPassive1NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaPassive2NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaPassive3NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          };
+
+        let megaPassive1DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaPassive2DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaPassive3DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          };
+
+        languages.forEach((language) => {
+          megaPassive1NameByLanguage[language] =
+            passiveNameDB[language][passive1Id];
+          megaPassive2NameByLanguage[language] =
+            passiveNameDB[language][passive2Id];
+          megaPassive3NameByLanguage[language] =
+            passiveNameDB[language][passive3Id];
+          megaPassive1DescriptionByLanguage[language] =
+            passiveDescriptionDB[language][passive1Id];
+          megaPassive2DescriptionByLanguage[language] =
+            passiveDescriptionDB[language][passive2Id];
+          megaPassive3DescriptionByLanguage[language] =
+            passiveDescriptionDB[language][passive3Id];
+        });
+
+        passive1Id !== 0 &&
+          (megaPassives = {
+            ...megaPassives,
+            passive1: {
+              id: passive1Id,
+              name: megaPassive1NameByLanguage,
+              description: megaPassive1DescriptionByLanguage,
+            },
+          });
+        passive2Id !== 0 &&
+          (megaPassives = {
+            ...megaPassives,
+            passive2: {
+              id: passive2Id,
+              name: megaPassive1NameByLanguage,
+              description: megaPassive2DescriptionByLanguage,
+            },
+          });
+        passive3Id !== 0 &&
+          (megaPassives = {
+            ...megaPassives,
+            passive3: {
+              id: passive3Id,
+              name: megaPassive1NameByLanguage,
+              description: megaPassive3DescriptionByLanguage,
+            },
+          });
+      }
 
       // Use trainerBaseId to find trainerNameId in TrainerBase.json
       trainerBase = trainerBaseDB.entries.find(
@@ -481,16 +860,30 @@ const extractPokemonListByTrainerBaseId = () => {
       trainerNameId = trainerBase.trainerNameId;
 
       // Push to monsterAndTrainerList
-      monsterAndTrainerList.push({
-        monsterBaseId: monsterBaseId.toString(),
-        monsterId: monsterId.toString(),
-        trainerBaseId: trainerBaseIdFromList,
-        trainerNameId,
-        moves,
-        passives,
-        type,
-        weakType,
-      });
+      monsterMegaFormBaseId
+        ? (monsterAndTrainerData = {
+            monsterBaseId: monsterBaseId.toString(),
+            monsterMegaFormBaseId,
+            monsterId: monsterId.toString(),
+            trainerBaseId: trainerBaseIdFromList,
+            trainerNameId,
+            moves,
+            passives,
+            type,
+            weakType,
+            megaForm: { moves: megaMoves, passives: megaPassives },
+          })
+        : (monsterAndTrainerData = {
+            monsterBaseId: monsterBaseId.toString(),
+            monsterId: monsterId.toString(),
+            trainerBaseId: trainerBaseIdFromList,
+            trainerNameId,
+            moves,
+            passives,
+            type,
+            weakType,
+          });
+      monsterAndTrainerList.push(monsterAndTrainerData);
     } else {
       let newMonsterId =
         monsterId.toString().substring(0, monsterId.toString().length - 1) +
@@ -510,27 +903,55 @@ const extractPokemonListByTrainerBaseId = () => {
 
         trainerNameId = trainerBase.trainerNameId;
         // Push to monsterAndTrainerList
-        monsterAndTrainerList.push({
-          monsterBaseId: monsterBaseId.toString(),
-          monsterId: monsterId.toString(),
-          trainerBaseId: trainerBaseIdFromList,
-          trainerNameId,
-          moves,
-          passives,
-          type,
-          weakType,
-        });
+        monsterMegaFormBaseId
+          ? (monsterAndTrainerData = {
+              monsterBaseId: monsterBaseId.toString(),
+              monsterMegaFormBaseId,
+              monsterId: monsterId.toString(),
+              trainerBaseId: trainerBaseIdFromList,
+              trainerNameId,
+              moves,
+              passives,
+              type,
+              weakType,
+              megaForm: { moves: megaMoves, passives: megaPassives },
+            })
+          : (monsterAndTrainerData = {
+              monsterBaseId: monsterBaseId.toString(),
+              monsterId: monsterId.toString(),
+              trainerBaseId: trainerBaseIdFromList,
+              trainerNameId,
+              moves,
+              passives,
+              type,
+              weakType,
+            });
+        monsterAndTrainerList.push(monsterAndTrainerData);
       } else {
-        monsterAndTrainerList.push({
-          monsterBaseId: monsterBaseId.toString(),
-          monsterId: monsterId.toString(),
-          trainerBaseId: trainerBaseIdFromList,
-          trainerNameId: 'No trainer',
-          moves,
-          passives,
-          type,
-          weakType,
-        });
+        monsterMegaFormBaseId
+          ? (monsterAndTrainerData = {
+              monsterBaseId: monsterBaseId.toString(),
+              monsterMegaFormBaseId,
+              monsterId: monsterId.toString(),
+              trainerBaseId: trainerBaseIdFromList,
+              trainerNameId: 'No Trainer',
+              moves,
+              passives,
+              type,
+              weakType,
+              megaForm: { moves: megaMoves, passives: megaPassives },
+            })
+          : (monsterAndTrainerData = {
+              monsterBaseId: monsterBaseId.toString(),
+              monsterId: monsterId.toString(),
+              trainerBaseId: trainerBaseIdFromList,
+              trainerNameId: 'No Trainer',
+              moves,
+              passives,
+              type,
+              weakType,
+            });
+        monsterAndTrainerList.push(monsterAndTrainerData);
       }
     }
   });

@@ -128,6 +128,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 75900,
+        "name": {
+          "de": "Donner\ndes Aufbruchs",
+          "en": "Thunder of\nNewfound Passion",
+          "es": "Trueno\nAventurero",
+          "fr": "J'ai confiance en toi !\nFatal-Foudre !",
+          "it": "Impetuono dell'esordio",
+          "ja": "走り出す情熱の\nかみなり",
+          "ko": "달려나가는 정열의\n번개",
+          "zh": "熱情衝衝衝之\n打雷"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 4,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -289,6 +320,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 70700,
+        "name": {
+          "de": "Hitzekoller der\nflammenden Leidenschaft",
+          "en": "Fiery Passion\nOverheat",
+          "es": "Sofoco\nCandente",
+          "fr": "Que brûle le feu de la\npassion ! Surchauffe !",
+          "it": "Vampata di passione ustionante",
+          "ja": "やけどしそうな情熱の\nオーバーヒート",
+          "ko": "화상을 입을 정도로 열정적인\n오버히트",
+          "zh": "熱情如火之\n過熱"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel an\nVerbrennungen leidet.",
+          "en": "Its power increases if the target is burned.",
+          "es": "Causa más daño si el\nobjetivo está quemado.",
+          "fr": "Augmente en puissance\nsi l'ennemi est brûlé.",
+          "it": "Aumenta di potenza\nquando il bersaglio\nè scottato.",
+          "ja": "相手がやけど状態のとき威力があがる",
+          "ko": "상대가 화상 상태일 때 위력이 오른다",
+          "zh": "當對手陷入灼傷狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 2,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -450,6 +512,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 71700,
+        "name": {
+          "de": "Hitzekoller des\nlodernden Willens",
+          "en": "Burn-It-All\nOverheat",
+          "es": "Sofoco\nde la Determinación",
+          "fr": "Mets le feu à l'Arène !\nSurchauffe !",
+          "it": "Vampata vulcanica",
+          "ja": "燃えつきる覚悟の\nオーバーヒート",
+          "ko": "타오르는 각오의\n오버히트",
+          "zh": "做好燃盡覺悟之\n過熱"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 2,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -611,6 +704,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 72400,
+        "name": {
+          "de": "Aurorastrahl\nder Winterkälte",
+          "en": "Winter’s Lesson\nAurora Beam",
+          "es": "Rayo Aurora\ndel Crudo Invierno",
+          "fr": "La rudesse du froid hivernal !\nOnde Boréale !",
+          "it": "Raggiaurora del duro inverno",
+          "ja": "冬の厳しさ教える\nオーロラビーム",
+          "ko": "겨울의 혹독함을 가르쳐주는\n오로라빔",
+          "zh": "領會寒冬嚴酷之\n極光束"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 6,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -772,6 +896,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 74900,
+        "name": {
+          "de": "Wutanfall der\nDrachenflüsterin",
+          "en": "Dragon Sage\nOutrage",
+          "es": "Enfado\ndel Dragón",
+          "fr": "Admire la danse des dragons !\nColère !",
+          "it": "Oltraggio del cuore di drago",
+          "ja": "竜の心を知りし\nげきりん",
+          "ko": "용의 마음을 아는\n역린",
+          "zh": "熟知龍心之\n逆鱗"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 15,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -933,6 +1088,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 70600,
+        "name": {
+          "de": "Drachenpuls\nder Weltklasse",
+          "en": "No Mercy\nDragon Pulse",
+          "es": "Pulso Dragón\nIncontenible",
+          "fr": "Admire la force pure !\nDracochoc !",
+          "it": "Dragopulsar tabula rasa",
+          "ja": "全力でぶつかる\nりゅうのはどう",
+          "ko": "전력을 다해 싸우는\n용의파동",
+          "zh": "全力以赴之\n龍之波動"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 15,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -1093,6 +1279,37 @@
         "gaugeDrain": 3,
         "power": 91,
         "accuracy": 100,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 70000,
+        "name": {
+          "de": "Blättersturm der\nunendlichen Möglichkeiten",
+          "en": "Shoot for the\nStars Leaf Storm",
+          "es": "Lluevehojas\nInfinito",
+          "fr": "Rien n'est impossible !\nTempête Verte !",
+          "it": "Verdebufera delle infinite possibilità",
+          "ja": "可能性は無限大の\nリーフストーム",
+          "ko": "가능성은 무한대\n리프스톰",
+          "zh": "無限可能之\n飛葉風暴"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 5,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
         "maxUses": 0
       }
     },
@@ -1255,6 +1472,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 70900,
+        "name": {
+          "de": "Blättertanz der\nBlumenprinzessin",
+          "en": "Nature-Loving\nPetal Dance ",
+          "es": "Danza Pétalo\nBucólica",
+          "fr": "Voici la fiancée de la\nnature ! Danse-Fleur !",
+          "it": "Petalodanza della natura",
+          "ja": "しぜんをあいする\nはなびらのまい",
+          "ko": "자연을 사랑하는\n꽃잎댄스",
+          "zh": "熱愛自然之\n花瓣舞"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel\nparalysiert ist.",
+          "en": "Its power increases if the target is paralyzed.",
+          "es": "Causa más daño si el\nobjetivo está paralizado.",
+          "fr": "Augmente en puissance\nsi l'ennemi est paralysé.",
+          "it": "Aumenta di potenza\nquando il bersaglio\nè paralizzato.",
+          "ja": "相手がまひ状態のとき威力があがる",
+          "ko": "상대가 마비 상태일 때 위력이 오른다",
+          "zh": "當對手陷入麻痺狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 5,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -1416,6 +1664,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 79700,
+        "name": {
+          "de": "Psychokinese des Pokémon-Professors",
+          "en": "Pokémon Professor\nPsychic",
+          "es": "Psíquico del Profesor Renombrado",
+          "fr": "Étudions les Pokémon !\nPsyko !",
+          "it": "Psichico del luminare\nPokémon",
+          "ja": "偉大なポケモン博士の\nサイコキネシス",
+          "ko": "위대한 포켓몬 박사의\n사이코키네시스",
+          "zh": "偉大的寶可夢博士之\n精神強念"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 11,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -1473,6 +1752,7 @@
   },
   {
     "monsterBaseId": "20037600",
+    "monsterMegaFormBaseId": "20037651",
     "monsterId": "20090000000",
     "trainerBaseId": "10009000",
     "trainerNameId": "ch0090",
@@ -1600,6 +1880,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 60700,
+        "name": {
+          "de": "Sternenhieb des Steinesammlers",
+          "en": "Solid Steel\nMeteor Mash",
+          "es": "Puño Meteoro de los Vestigios",
+          "fr": "Poing Météore du\ncollectionneur éclairé !",
+          "it": "Meteorpugno\ndel cercapietre",
+          "ja": "さすらいの石集め\nコメットパンチ",
+          "ko": "방랑하는 돌수집가의\n코멧펀치",
+          "zh": "漂泊藏石家之\n彗星拳"
+        },
+        "description": {
+          "de": "Löst bei Metagross bis\nzum Ende des Kampfes\ndie Mega-Entwicklung zu\nMega-Metagross aus.",
+          "en": "Become Mega Metagross until the end of the battle.",
+          "es": "Evoluciona a\nMega-Metagross.\nVuelve a la normalidad\ntras terminar el combate.",
+          "fr": "Permet à Métalosse\nde devenir\nMéga-Métalosse\njusqu'à la fin du combat.",
+          "it": "Permette a Metagross\ndi megaevolversi.\nL'effetto svanisce\nal termine della lotta.",
+          "ja": "バトル終了までメガメタグロスになる",
+          "ko": "배틀이 끝날 때까지 메가메타그로스가 된다",
+          "zh": "變成超級巨金怪直到對戰結束。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 17,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -1652,11 +1963,126 @@
     },
     "type": 17,
     "weakType": 14,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 442,
+          "name": {
+            "de": "Eisenschädel",
+            "en": "Iron Head",
+            "es": "Cabeza de Hierro",
+            "fr": "Tête de Fer",
+            "it": "Metaltestata",
+            "ja": "アイアンヘッド",
+            "ko": "아이언헤드",
+            "zh": "鐵頭"
+          },
+          "description": {
+            "de": "Lässt das Ziel eventuell\nzurückschrecken.",
+            "en": "Has a moderate chance of making the target flinch.",
+            "es": "A veces hace retroceder\nal objetivo.",
+            "fr": "Apeure l'ennemi\n(assez rarement).",
+            "it": "A volte fa tentennare\nil bersaglio.",
+            "ja": "たまに相手をひるみ状態にする",
+            "ko": "가끔 상대를 풀죽음 상태로 만든다",
+            "zh": "偶爾會讓對手陷入畏縮狀態。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 17,
+          "target": 2,
+          "gaugeDrain": 3,
+          "power": 92,
+          "accuracy": 100,
+          "maxUses": 0
+        },
+        "move3": {
+          "id": 418,
+          "name": {
+            "de": "Patronenhieb",
+            "en": "Bullet Punch",
+            "es": "Puño Bala",
+            "fr": "Pisto-Poing",
+            "it": "Pugnoscarica",
+            "ja": "バレットパンチ",
+            "ko": "불릿펀치",
+            "zh": "子彈拳"
+          },
+          "description": {
+            "de": "Hat keinen Zusatzeffekt.",
+            "en": "No additional effect.",
+            "es": "Sin efectos secundarios.",
+            "fr": "Aucun effet additionnel.",
+            "it": "Non ha effetti aggiuntivi.",
+            "ja": "追加効果なし",
+            "ko": "추가 효과 없음",
+            "zh": "沒有追加效果。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 17,
+          "target": 2,
+          "gaugeDrain": 0,
+          "power": 75,
+          "accuracy": 100,
+          "maxUses": 3
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 13010703,
+          "name": {
+            "de": "Harmoniestärke↑ 3",
+            "en": "Power Chain 3",
+            "es": "Combo Mejora +3",
+            "fr": "Renforce-Combo 3",
+            "it": "Combiforza 3",
+            "ja": "ＩＣ時威力上昇３",
+            "ko": "동시찬스시위력상승3",
+            "zh": "一齊機會時威力提升３"
+          },
+          "description": {
+            "de": "Erhöht während einer Harmoniechance die Stärke\nvon Attacken.",
+            "en": "Powers up moves when unity bonus is in effect.",
+            "es": "Aumenta la potencia de los movimientos durante\nel frenesí combo.",
+            "fr": "Augmente la puissance des capacités lors\ndes Bonus Synchro.",
+            "it": "Quando è in corso una Combichance,\nla potenza delle mosse aumenta.",
+            "ja": "イッセイチャンスのとき技の威力をあげる",
+            "ko": "동시찬스일 때 기술의 위력이 오른다",
+            "zh": "一齊機會時，會提高招式的威力。"
+          }
+        },
+        "passive2": {
+          "id": 18020901,
+          "name": {
+            "de": "Harmoniestärke↑ 3",
+            "en": "Power Chain 3",
+            "es": "Combo Mejora +3",
+            "fr": "Renforce-Combo 3",
+            "it": "Combiforza 3",
+            "ja": "ＩＣ時威力上昇３",
+            "ko": "동시찬스시위력상승3",
+            "zh": "一齊機會時威力提升３"
+          },
+          "description": {
+            "de": "Schützt vor einer Senkung aller Statuswerte.",
+            "en": "Stats cannot be lowered.",
+            "es": "Impide que el Pokémon sufra reducciones en las\ncaracterísticas.",
+            "fr": "Empêche les baisses de stats.",
+            "it": "Rende immuni alle riduzioni delle statistiche.",
+            "ja": "すべての能力がさがらない",
+            "ko": "모든 능력이 떨어지지 않는다",
+            "zh": "所有的能力都不會降低。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Metagross",
     "trainerEnglishName": "Steven"
   },
   {
     "monsterBaseId": "20000600",
+    "monsterMegaFormBaseId": "20000651",
     "monsterId": "20000000000",
     "trainerBaseId": "10000000",
     "trainerNameId": "ch0000",
@@ -1784,6 +2210,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 60900,
+        "name": {
+          "de": "Lohekanonade der\nlebenden Legende",
+          "en": "Living Legend\nBlast Burn",
+          "es": "Anillo Ígneo\ndel Entrenador Legendario",
+          "fr": "La légende vivante !\nRafale Feu !",
+          "it": "Incendio della leggenda vivente",
+          "ja": "リビングレジェンド\nブラストバーン",
+          "ko": "리빙 레전드\n블러스트번",
+          "zh": "活生生的傳奇之\n爆炸烈焰"
+        },
+        "description": {
+          "de": "Löst bei Glurak bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Glurak X aus.\nErhöht die Volltrefferquote\ndes Anwenders.",
+          "en": "Become Mega Charizard X until the end of battle. Raises the user’s critical-hit rate.",
+          "es": "Evoluciona a Mega-Charizard X hasta el final del combate. Aumenta la probabilidad de asestar golpes críticos del usuario.",
+          "fr": "Permet à Dracaufeu\nde devenir\nMéga-Dracaufeu X\njusqu'à la fin du combat.\nAugmente légèrement\nson taux de critiques.",
+          "it": "Permette a Charizard\ndi megaevolversi\nin MegaCharizard X\n(l'effetto svanisce\nal termine della lotta).\nInoltre, rende più\nprobabili i brutti colpi\nper chi la usa.",
+          "ja": "バトル終了までメガリザードンＸになる\n自分の急所率をあげる",
+          "ko": "배틀이 끝날 때까지 메가리자몽X가 된다\n자신의 급소율이 오른다",
+          "zh": "變成超級噴火龍Ｘ直到對戰結束。\n提高自己的擊中要害率。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 2,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -1859,6 +2316,112 @@
     },
     "type": 2,
     "weakType": 13,
+    "megaForm": {
+      "moves": {
+        "move2": {
+          "id": 394,
+          "name": {
+            "de": "Flammenblitz",
+            "en": "Flare Blitz",
+            "es": "Envite Ígneo",
+            "fr": "Boutefeu",
+            "it": "Fuococarica",
+            "ja": "フレアドライブ",
+            "ko": "플레어드라이브",
+            "zh": "閃焰衝鋒"
+          },
+          "description": {
+            "de": "Ist der Anwender\ngefroren, wird er von\ndem Statusproblem\nbefreit.\nDer Anwender erleidet\nein Viertel des beim Ziel\nangerichteten Schadens.\nFügt dem Ziel in\nsehr seltenen Fällen\nVerbrennungen zu.",
+            "en": "Removes the frozen condition from the user. The user also takes 25% of the damage it dealt to the target. Has a very small chance of leaving the target burned.",
+            "es": "Descongela al usuario.\nEl usuario recibe un\ncuarto del daño infligido\nal objetivo.\nMuy rara vez quema al\nobjetivo.",
+            "fr": "Dégèle le lanceur.\nLe lanceur subit un quart\ndes dégâts infligés. Brûle\nl'ennemi (très rarement).",
+            "it": "Molto raramente\nscotta il bersaglio.\nChi la usa guarisce dal\ncongelamento e subisce\nuna quantità di danni\npari a 1/4 del danno\ninflitto.",
+            "ja": "自分のこおり状態を解除する\n相手に与えたダメージの１／４を自分も受ける\nすごくまれに相手をやけど状態にする",
+            "ko": "자신의 얼음 상태를 해제한다\n상대에게 준 데미지의 1/4을 자신도 받는다\n매우 드물게 상대를 화상 상태로 만든다",
+            "zh": "解除自己的冰凍狀態。\n給予對手傷害後自己也會受到１／４的傷害。\n極少數情況下會讓對手陷入灼傷狀態。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 2,
+          "target": 2,
+          "gaugeDrain": 3,
+          "power": 123,
+          "accuracy": 100,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 15010601,
+          "name": {
+            "de": "Att.-GA-Countdown↓ 1",
+            "en": "Propulsion 1",
+            "es": "Movimiento Furor +1",
+            "fr": "Capacité Compteur ↓ 1",
+            "it": "Mossasprint 1",
+            "ja": "わざ後ＢＣ加速１",
+            "ko": "기술후BC가속1",
+            "zh": "招式後計數加速１"
+          },
+          "description": {
+            "de": "Reduziert in seltenen Fällen nach Erfolg einer\nAttacke den Wert des Gefährtenattacken-\nCountdowns um 1.",
+            "en": "Has a small chance of reducing the user’s sync move countdown by one when the user’s move is successful.",
+            "es": "Rara vez se reduce en 1 el contador de\nmovimientos compi del usuario si uno de sus\nmovimientos acierta.",
+            "fr": "Quand le Duo utilise avec succès une capacité,\nréduit de 1 le nombre d'actions nécessaires pour\nlancer une capacité Duo (rarement).",
+            "it": "Quando una mossa va a segno, raramente\nabbassa di 1 il numero di azioni necessarie\nper sferrare un'Unimossa.",
+            "ja": "技が成功したときにまれに\n自分のバディーズわざ発動可能状態までのカウントを\n１減らす",
+            "ko": "기술이 성공했을 때 드물게\n자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를\n1 줄인다",
+            "zh": "招式成功時，少數情況下會讓自己\n發動拍組招式所需的行動數減少１次。"
+          }
+        },
+        "passive2": {
+          "id": 13030101,
+          "name": {
+            "de": "Att.-GA-Countdown↓ 1",
+            "en": "Propulsion 1",
+            "es": "Movimiento Furor +1",
+            "fr": "Capacité Compteur ↓ 1",
+            "it": "Mossasprint 1",
+            "ja": "わざ後ＢＣ加速１",
+            "ko": "기술후BC가속1",
+            "zh": "招式後計數加速１"
+          },
+          "description": {
+            "de": "Attacken treffen garantiert.",
+            "en": "Moves never miss.",
+            "es": "Hace que los movimientos acierten siempre.",
+            "fr": "Les capacités n'échouent jamais.",
+            "it": "Le mosse vanno sempre a segno.",
+            "ja": "技が必ず命中する",
+            "ko": "기술이 반드시 명중한다",
+            "zh": "招式必定會命中。"
+          }
+        },
+        "passive3": {
+          "id": 12020104,
+          "name": {
+            "de": "Att.-GA-Countdown↓ 1",
+            "en": "Propulsion 1",
+            "es": "Movimiento Furor +1",
+            "fr": "Capacité Compteur ↓ 1",
+            "it": "Mossasprint 1",
+            "ja": "わざ後ＢＣ加速１",
+            "ko": "기술후BC가속1",
+            "zh": "招式後計數加速１"
+          },
+          "description": {
+            "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Pokémon um 1 Segment auf.",
+            "en": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
+            "es": "Es muy probable que llene 1 punto de la barra\nde movimientos del usuario si uno de sus\nmovimientos acierta.",
+            "fr": "Restaure un segment de la Jauge Capacité quand\nle Duo utilise avec succès une capacité\n(assez souvent).",
+            "it": "Quando una mossa va a segno, spesso viene\naggiunta una barretta alla propria barra mosse.",
+            "ja": "技が成功したときにときどき\n自分のわざゲージを１増やす",
+            "ko": "기술이 성공했을 때 종종\n자신의 기술게이지를 1 추가한다",
+            "zh": "招式成功時，有時會\n幫自己增加１條招式計量槽。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Charizard",
     "trainerEnglishName": "Red"
   },
@@ -1991,6 +2554,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 1
+      },
+      "syncMove": {
+        "id": 51401,
+        "name": {
+          "de": "Ewige Nacht des\nuralten Volkes",
+          "en": "Never-Ending\nRoyal Nightmare",
+          "es": "Presa Espectral\nInmemorial",
+          "fr": "Appel des Ombres\nde la famille royale !",
+          "it": "Abbraccio Spettrale della principessa",
+          "ja": "古代プリンセスの\nむげんあんやへのいざない",
+          "ko": "고대 프린세스의\n무한암야로의유인",
+          "zh": "古代公主之\n無盡暗夜之誘惑"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nist umso höher, je stärker\ndie Verteidigung des\nAnwenders erhöht\nwurde.",
+          "en": "The more the user’s Defense has been raised, the greater the power of this move.",
+          "es": "Causa más daño cuanto\nmás haya aumentado la\nDefensa del usuario.",
+          "fr": "Plus la Défense du\nlanceur a été augmentée,\nplus cette capacité est\npuissante.",
+          "it": "Più è stata aumentata\nla Difesa di chi la usa,\npiù questa mossa è\npotente.",
+          "ja": "自分の防御があがっているほど威力があがる",
+          "ko": "자신의 방어가 올라가 있는 만큼 위력이 오른다",
+          "zh": "自己的防禦提高得越多，威力就越大。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 14,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -2152,6 +2746,37 @@
         "power": 95,
         "accuracy": 100,
         "maxUses": 0
+      },
+      "syncMove": {
+        "id": 73600,
+        "name": {
+          "de": "Nachthieb des\nSchicksalsblatts",
+          "en": "Card Shark\nNight Slash",
+          "es": "Tajo Umbrío\ndel Azar",
+          "fr": "Quinte Flush Royale !\nTranche-Nuit !",
+          "it": "Nottesferza della sorte",
+          "ja": "与えられたカードでの\nつじぎり",
+          "ko": "주어진 카드로 펼치는\n깜짝베기",
+          "zh": "有什麼牌打什麼牌之\n暗襲要害"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn keiner der\nStatuswerte des Zieles\nerhöht wurde.",
+          "en": "The power of this move is increased if none of the opponent’s stats are raised.",
+          "es": "Causa más daño si no ha\naumentado ninguna de\nlas características del\nobjetivo.",
+          "fr": "Augmente en puissance\nsi aucune des stats de\nl'ennemi n'a été\naugmentée.",
+          "it": "Se le statistiche del\nbersaglio non sono state\naumentate, questa mossa\nè più potente.",
+          "ja": "相手のすべての能力があがっていなければ威力があがる",
+          "ko": "상대의 모든 능력이 올라가 있지 않다면 위력이 오른다",
+          "zh": "對手的所有能力皆未提高時，威力會提高。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 16,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -2186,6 +2811,7 @@
   },
   {
     "monsterBaseId": "20022901",
+    "monsterMegaFormBaseId": "20022951",
     "monsterId": "20062000000",
     "trainerBaseId": "10006200",
     "trainerNameId": "ch0062",
@@ -2313,6 +2939,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 60600,
+        "name": {
+          "de": "Finsteraura des\nerwählten Pokémon",
+          "en": "Beguiling\nDark Pulse",
+          "es": "Pulso Umbrío\ndel Favorito",
+          "fr": "Pour l'amour des Ténèbres !\nVibrobscur !",
+          "it": "Neropulsar ribelle",
+          "ja": "好きなポケモンが放つ\nあくのはどう",
+          "ko": "좋아하는 포켓몬이 발산하는\n악의파동",
+          "zh": "心愛的寶可夢釋放之\n惡之波動"
+        },
+        "description": {
+          "de": "Löst bei Hundemon bis\nzum Ende des Kampfes\ndie Mega-Entwicklung\nzu Mega-Hundemon aus.",
+          "en": "Become Mega Houndoom until the end of battle.",
+          "es": "Evoluciona a\nMega-Houndoom.\nVuelve a la normalidad\ntras terminar el combate.",
+          "fr": "Permet à Démolosse\nde devenir\nMéga-Démolosse\njusqu'à la fin du combat.",
+          "it": "Permette a Houndoom\ndi megaevolversi.\nL'effetto svanisce\nal termine della lotta.",
+          "ja": "バトル終了までメガヘルガーになる",
+          "ko": "배틀이 끝날 때까지 메가헬가가 된다",
+          "zh": "變成超級黑魯加直到對戰結束。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 16,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -2365,6 +3022,120 @@
     },
     "type": 16,
     "weakType": 7,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 555,
+          "name": {
+            "de": "Standpauke",
+            "en": "Snarl",
+            "es": "Alarido",
+            "fr": "Aboiement",
+            "it": "Urlorabbia",
+            "ja": "バークアウト",
+            "ko": "바크아웃",
+            "zh": "大聲咆哮"
+          },
+          "description": {
+            "de": "Senkt den Spezial-Angriff\ndes Zieles.",
+            "en": "Lowers the target’s Sp. Atk.",
+            "es": "Reduce el Ataque\nEspecial del objetivo.",
+            "fr": "Baisse légèrement\nl'Attaque Spéciale\nde l'ennemi.",
+            "it": "Riduce l'Attacco Speciale\ndel bersaglio.",
+            "ja": "相手の特攻をさげる",
+            "ko": "상대의 특수공격을 떨어뜨린다",
+            "zh": "降低對手的特攻。"
+          },
+          "category": 2,
+          "group": 2,
+          "type": 16,
+          "target": 3,
+          "gaugeDrain": 2,
+          "power": 39,
+          "accuracy": 95,
+          "maxUses": 0
+        },
+        "move3": {
+          "id": 399,
+          "name": {
+            "de": "Finsteraura",
+            "en": "Dark Pulse",
+            "es": "Pulso Umbrío",
+            "fr": "Vibrobscur",
+            "it": "Neropulsar",
+            "ja": "あくのはどう",
+            "ko": "악의파동",
+            "zh": "惡之波動"
+          },
+          "description": {
+            "de": "Lässt das Ziel in seltenen\nFällen zurückschrecken.",
+            "en": "Has a small chance of making the target flinch.",
+            "es": "Rara vez hace retroceder\nal objetivo.",
+            "fr": "Apeure l'ennemi\n(rarement).",
+            "it": "Raramente fa tentennare\nil bersaglio.",
+            "ja": "まれに相手をひるみ状態にする",
+            "ko": "드물게 상대를 풀죽음 상태로 만든다",
+            "zh": "少數情況下會讓對手陷入畏縮狀態。"
+          },
+          "category": 2,
+          "group": 2,
+          "type": 16,
+          "target": 2,
+          "gaugeDrain": 3,
+          "power": 95,
+          "accuracy": 100,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 17010201,
+          "name": {
+            "de": "Brandschutz",
+            "en": "Flameproof",
+            "es": "Inmunidad Quemaduras",
+            "fr": "Immunité Brûlure",
+            "it": "Estintore",
+            "ja": "やけど無効",
+            "ko": "화상무효",
+            "zh": "灼傷無效"
+          },
+          "description": {
+            "de": "Schützt vor Verbrennungen.",
+            "en": "Prevents the Pokémon from getting burned.",
+            "es": "Impide que el Pokémon sufra quemaduras.",
+            "fr": "Protège des brûlures.",
+            "it": "Impedisce all'Unità di venire scottata.",
+            "ja": "やけど状態にならない",
+            "ko": "화상 상태가 되지 않는다",
+            "zh": "不會陷入灼傷狀態。"
+          }
+        },
+        "passive2": {
+          "id": 17010601,
+          "name": {
+            "de": "Brandschutz",
+            "en": "Flameproof",
+            "es": "Inmunidad Quemaduras",
+            "fr": "Immunité Brûlure",
+            "it": "Estintore",
+            "ja": "やけど無効",
+            "ko": "화상무효",
+            "zh": "灼傷無效"
+          },
+          "description": {
+            "de": "Schützt vor Schlaf.",
+            "en": "Prevents the Pokémon from falling asleep.",
+            "es": "Impide que el Pokémon se quede dormido.",
+            "fr": "Protège du sommeil.",
+            "it": "Impedisce all'Unità di venire addormentata.",
+            "ja": "ねむり状態にならない",
+            "ko": "잠듦 상태가 되지 않는다",
+            "zh": "不會陷入睡眠狀態。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Houndoom",
     "trainerEnglishName": "Karen"
   },
@@ -2497,6 +3268,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 50401,
+        "name": {
+          "de": "Gigavolt-Funkensalve\ndes ewigen Sommers",
+          "en": "Endless Summer\nGigavolt Havoc",
+          "es": "Gigavoltio Destructor\nTropical",
+          "fr": "Trooop bien !\nFulguro-Lance Gigavolt !",
+          "it": "Gigascarica Folgorante spensierata",
+          "ja": "常夏のイノセント\nスパーキングギガボルト",
+          "ko": "끝없는 여름의 이노센트\n스파킹기가볼트",
+          "zh": "四季如夏之\n終極伏特狂雷閃"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 4,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -2658,6 +3460,37 @@
         "power": 124,
         "accuracy": 70,
         "maxUses": 0
+      },
+      "syncMove": {
+        "id": 77700,
+        "name": {
+          "de": "Donnerblitz der Ausstrahlung",
+          "en": "High Fashion\nThunderbolt",
+          "es": "Rayo Encantador y Fulgurante",
+          "fr": "Flashs braqués sur moi !\nTonnerre !",
+          "it": "Fulmine abbagliante\nal massimo carisma",
+          "ja": "華々しく魅せる本気の\n１０まんボルト",
+          "ko": "눈부시게 매력적인 전력의\n10만볼트",
+          "zh": "華麗展現極致完美之\n十萬伏特"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 4,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -2715,6 +3548,7 @@
   },
   {
     "monsterBaseId": "20006500",
+    "monsterMegaFormBaseId": "20006551",
     "monsterId": "20114000000",
     "trainerBaseId": "10011400",
     "trainerNameId": "ch0114",
@@ -2842,6 +3676,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 61300,
+        "name": {
+          "de": "Psywelle der Psycho-Pokémon-Meisterin",
+          "en": "ESP Prodigy\nPsywave",
+          "es": "Psicoonda de la Experta Psíquica",
+          "fr": "J'avais prédit ce combat.\nVague Psy !",
+          "it": "Psiconda\nparanormale",
+          "ja": "エスパー少女の\nサイコウェーブ",
+          "ko": "에스퍼 소녀의\n사이코웨이브",
+          "zh": "超能力少女之\n精神波"
+        },
+        "description": {
+          "de": "Löst bei Simsala bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Simsala aus.",
+          "en": "Become Mega Alakazam until the end of battle.",
+          "es": "Evoluciona a Mega-Alakazam.\nVuelve a la normalidad tras terminar el combate.",
+          "fr": "Permet à Alakazam\nde devenir\nMéga-Alakazam\njusqu'à la fin du combat.",
+          "it": "Permette ad Alakazam di megaevolversi. L'effetto svanisce al termine della lotta.",
+          "ja": "バトル終了までメガフーディンになる",
+          "ko": "배틀이 끝날 때까지 메가후딘이 된다",
+          "zh": "變成超級胡地直到對戰結束。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 11,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -2917,6 +3782,112 @@
     },
     "type": 11,
     "weakType": 16,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 94,
+          "name": {
+            "de": "Psychokinese",
+            "en": "Psychic",
+            "es": "Psíquico",
+            "fr": "Psyko",
+            "it": "Psichico",
+            "ja": "サイコキネシス",
+            "ko": "사이코키네시스",
+            "zh": "精神強念"
+          },
+          "description": {
+            "de": "Senkt in sehr\nseltenen Fällen die\nSpezial-Verteidigung\ndes Zieles.",
+            "en": "Has a very small chance of lowering the target’s Sp. Def.",
+            "es": "Muy rara vez reduce la\nDefensa Especial del\nobjetivo.",
+            "fr": "Baisse légèrement la\nDéfense Spéciale de\nl'ennemi (très rarement).",
+            "it": "Molto raramente riduce\nla Difesa Speciale\ndel bersaglio.",
+            "ja": "すごくまれに相手の特防をさげる",
+            "ko": "매우 드물게 상대의 특수방어를 떨어뜨린다",
+            "zh": "極少數情況下會降低對手的特防。"
+          },
+          "category": 2,
+          "group": 2,
+          "type": 11,
+          "target": 2,
+          "gaugeDrain": 3,
+          "power": 99,
+          "accuracy": 100,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 17010801,
+          "name": {
+            "de": "Schreckschutz",
+            "en": "Unflappable",
+            "es": "Inmunidad Retroceso",
+            "fr": "Immunité Peur",
+            "it": "Pilastro",
+            "ja": "ひるみ無効",
+            "ko": "풀죽음무효",
+            "zh": "畏縮無效"
+          },
+          "description": {
+            "de": "Schützt vor Zurückschrecken.",
+            "en": "Prevents the Pokémon from flinching.",
+            "es": "Impide que el Pokémon retroceda.",
+            "fr": "Protège de la peur.",
+            "it": "Impedisce all'Unità di tentennare.",
+            "ja": "ひるみ状態にならない",
+            "ko": "풀죽음 상태가 되지 않는다",
+            "zh": "不會陷入畏縮狀態。"
+          }
+        },
+        "passive2": {
+          "id": 18041801,
+          "name": {
+            "de": "Schreckschutz",
+            "en": "Unflappable",
+            "es": "Inmunidad Retroceso",
+            "fr": "Immunité Peur",
+            "it": "Pilastro",
+            "ja": "ひるみ無効",
+            "ko": "풀죽음무효",
+            "zh": "畏縮無效"
+          },
+          "description": {
+            "de": "Erhöht bei Kampfantritt die Initiative des\nPokémon.",
+            "en": "Raises the user’s Speed when the Pokémon enters a battle.",
+            "es": "Aumenta la Velocidad del usuario al entrar en\ncombate.",
+            "fr": "Augmente légèrement la Vitesse quand\nle Pokémon arrive au combat.",
+            "it": "Quando l'Unità entra in campo, la sua Velocità\naumenta.",
+            "ja": "登場したとき自分の素早さをあげる",
+            "ko": "등장했을 때 자신의 스피드가 오른다",
+            "zh": "上場時，會提高自己的速度。"
+          }
+        },
+        "passive3": {
+          "id": 18020301,
+          "name": {
+            "de": "Schreckschutz",
+            "en": "Unflappable",
+            "es": "Inmunidad Retroceso",
+            "fr": "Immunité Peur",
+            "it": "Pilastro",
+            "ja": "ひるみ無効",
+            "ko": "풀죽음무효",
+            "zh": "畏縮無效"
+          },
+          "description": {
+            "de": "Schützt vor einer Senkung des Spezial-Angriffs.",
+            "en": "Sp. Atk cannot be lowered.",
+            "es": "Impide que el Pokémon sufra reducciones en el\nAtaque Especial.",
+            "fr": "Protège des baisses d'Attaque Spéciale.",
+            "it": "Rende immuni alle riduzioni dell'Attacco Speciale.",
+            "ja": "特攻がさがらない",
+            "ko": "특수공격이 떨어지지 않는다",
+            "zh": "特攻不會降低。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Alakazam",
     "trainerEnglishName": "Sabrina"
   },
@@ -3049,6 +4020,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 75100,
+        "name": {
+          "de": "Psychokinese des\nSchönheitsschlafs",
+          "en": "Broken Sleep\nPsychic",
+          "es": "Psíquico\ndel Sueño Perturbado",
+          "fr": "La douceur du sommeil\néternel ! Psyko !",
+          "it": "Psichico assonnato",
+          "ja": "眠りを妨げられた\nサイコキネシス",
+          "ko": "잠을 방해받은\n사이코키네시스",
+          "zh": "睡得好好被吵醒之\n精神強念"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 11,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -3256,6 +4258,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 71500,
+        "name": {
+          "de": "Psychokinese der\nVerbundenheit",
+          "en": "Mind-Bending\nPsychic",
+          "es": "Psíquico\nde Espíritu Calmado",
+          "fr": "Soif d'aventure, soif\nde combat ! Psyko !",
+          "it": "Psichico della calma",
+          "ja": "想いに触れる\nサイコキネシス",
+          "ko": "마음에 전해지는\n사이코키네시스",
+          "zh": "勾起回憶之\n精神強念"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel\nparalysiert ist.",
+          "en": "Its power increases if the target is paralyzed.",
+          "es": "Causa más daño si el\nobjetivo está paralizado.",
+          "fr": "Augmente en puissance\nsi l'ennemi est paralysé.",
+          "it": "Aumenta di potenza\nquando il bersaglio\nè paralizzato.",
+          "ja": "相手がまひ状態のとき威力があがる",
+          "ko": "상대가 마비 상태일 때 위력이 오른다",
+          "zh": "當對手陷入麻痺狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 11,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -3440,6 +4473,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 72800,
+        "name": {
+          "de": "Silberhauch\nder Fotografin",
+          "en": "Silver Wind\nVictory Shot",
+          "es": "Ráfaga\nde Viento Plata",
+          "fr": "Déclencheur en mode\nrafale ! Vent Argenté !",
+          "it": "Ventargenteo superzoom",
+          "ja": "レンズ越しに狙う\nぎんいろのかぜ",
+          "ko": "렌즈 너머로 노리는\n은빛바람",
+          "zh": "用鏡頭捕捉之\n銀色旋風"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel in\neiner Umschlingung\ngefangen ist.",
+          "en": "Its power increases if the target is trapped.",
+          "es": "Causa más daño si el\nobjetivo está bajo\nataduras.",
+          "fr": "Augmente en puissance\nsi l'ennemi est ligoté.",
+          "it": "Aumenta di potenza\nquando il bersaglio\nè imprigionato.",
+          "ja": "相手がバインド状態のとき威力があがる",
+          "ko": "상대가 바인드 상태일 때 위력이 오른다",
+          "zh": "當對手陷入束縛狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 12,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -3601,6 +4665,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 50801,
+        "name": {
+          "de": "Vernichtender Säureregen der Sis",
+          "en": "Wicked Enforcer\nAcid Downpour",
+          "es": "Diluvio Corrosivo de la Jefa",
+          "fr": "Déluge Causti-Toxique\nde la Sista !",
+          "it": "Acidiluvio\nCorrosivo Skull",
+          "ja": "頼れる姉御の\nアシッドポイズンデリート",
+          "ko": "믿음직한 누님의\n애시드포이즌딜리트",
+          "zh": "可靠的大姐大之\n強酸劇毒滅絕雨"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 8,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -3808,6 +4903,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 78200,
+        "name": {
+          "de": "Kreuzschere der Erbarmungslosigkeit",
+          "en": "Your Boy’s\nX-Scissor",
+          "es": "Tijera X del Amo del Cotarro",
+          "fr": "Place au boss !\nPlaie-Croix !",
+          "it": "Forbice X\nsbriciolante",
+          "ja": "ブッ壊してもブッ壊す\nシザークロス",
+          "ko": "박살 내고 박살 내는\n시저크로스",
+          "zh": "不管破壞多少次也從不手軟之\n十字剪"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 12,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -3968,6 +5094,37 @@
         "gaugeDrain": 2,
         "power": 46,
         "accuracy": 100,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 78300,
+        "name": {
+          "de": "Donnerblitz der Zukunft",
+          "en": "Light-Up-the-World\nThunderbolt",
+          "es": "Rayo de un Futuro Deslumbrante",
+          "fr": "Science, ouvre la\nvoie ! Tonnerre !",
+          "it": "Fulmine del trionfo\ndella scienza",
+          "ja": "未来を切りひらく\n１０まんボルト",
+          "ko": "미래를 개척하는\n10만볼트",
+          "zh": "開創未來之\n十萬伏特"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nist umso höher, je stärker\ndie Initiative des Zieles\ngesenkt wurde.",
+          "en": "The more the target’s Speed is lowered, the greater the power of this move.",
+          "es": "Causa más daño cuanto más se haya reducido la Velocidad del objetivo.",
+          "fr": "Plus la Vitesse de\nl'ennemi a été abaissée,\nplus cette capacité est\npuissante.",
+          "it": "Più è stata ridotta la Velocità del bersaglio, più questa mossa è potente.",
+          "ja": "相手の素早さがさがっているほど威力があがる",
+          "ko": "상대의 스피드가 떨어져 있는 만큼 위력이 오른다",
+          "zh": "對手的速度降低得越多，威力就越大。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 4,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
         "maxUses": 0
       }
     },
@@ -4176,6 +5333,37 @@
         "power": 45,
         "accuracy": 0,
         "maxUses": 0
+      },
+      "syncMove": {
+        "id": 73900,
+        "name": {
+          "de": "Himmelsfeger\nder Luftakrobatin",
+          "en": "High-Flying\nSky Attack",
+          "es": "Ataque Aéreo\nde Altos Vuelos",
+          "fr": "Piqué de l'acrobate\ndes cieux !",
+          "it": "Aeroattacco del vento",
+          "ja": "大空ぶっとび\nゴッドバード",
+          "ko": "넓은 하늘을 힘차게 나는\n불새",
+          "zh": "翱翔天際之\n神鳥猛擊"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nist umso höher, je stärker\ndie Initiative des\nAnwenders erhöht\nwurde.",
+          "en": "The more the user’s Speed has been raised, the greater the power of this move.",
+          "es": "Causa más daño cuanto\nmás haya aumentado la\nVelocidad del usuario.",
+          "fr": "Plus la Vitesse du lanceur\na été augmentée, plus\ncette capacité est\npuissante.",
+          "it": "Più è stata aumentata\nla Velocità di chi la usa,\npiù questa mossa è\npotente.",
+          "ja": "自分の素早さがあがっているほど威力があがる",
+          "ko": "자신의 스피드가 올라가 있는 만큼 위력이 오른다",
+          "zh": "自己的速度提高得越多，威力就越大。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 10,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -4210,6 +5398,7 @@
   },
   {
     "monsterBaseId": "20044800",
+    "monsterMegaFormBaseId": "20044851",
     "monsterId": "20012000000",
     "trainerBaseId": "10001200",
     "trainerNameId": "ch0012",
@@ -4337,6 +5526,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 60000,
+        "name": {
+          "de": "Steigerungshieb\ndes Antriebs",
+          "en": "Give-It-All-Ya-Got\nPower-Up Punch",
+          "es": "Puño Incremento\nExplosivo",
+          "fr": "Fais chauffer la gomme !\nPoing Boost !",
+          "it": "Crescipugno acrobatico",
+          "ja": "命　爆発！！\nグロウパンチ",
+          "ko": "생명 폭발!!\n그로우펀치",
+          "zh": "生命力爆發！！\n增強拳"
+        },
+        "description": {
+          "de": "Löst bei Lucario bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Lucario aus.",
+          "en": "Become Mega Lucario until the end of battle.",
+          "es": "Evoluciona a\nMega-Lucario.\nVuelve a la normalidad\ntras terminar el combate.",
+          "fr": "Permet à Lucario\nde devenir\nMéga-Lucario\njusqu'à la fin du combat.",
+          "it": "Permette a Lucario\ndi megaevolversi.\nL'effetto svanisce\nal termine della lotta.",
+          "ja": "バトル終了までメガルカリオになる",
+          "ko": "배틀이 끝날 때까지 메가루카리오가 된다",
+          "zh": "變成超級路卡利歐直到對戰結束。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 7,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -4366,11 +5586,72 @@
     },
     "type": 7,
     "weakType": 2,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 612,
+          "name": {
+            "de": "Steigerungshieb",
+            "en": "Power-Up Punch",
+            "es": "Puño Incremento",
+            "fr": "Poing Boost",
+            "it": "Crescipugno",
+            "ja": "グロウパンチ",
+            "ko": "그로우펀치",
+            "zh": "增強拳"
+          },
+          "description": {
+            "de": "Erhöht den Angriff des\nAnwenders.",
+            "en": "Raises the user’s Attack.",
+            "es": "Aumenta el Ataque del\nusuario.",
+            "fr": "Augmente légèrement\nl'Attaque du lanceur.",
+            "it": "Aumenta l'Attacco\ndi chi la usa.",
+            "ja": "自分の攻撃をあげる",
+            "ko": "자신의 공격이 오른다",
+            "zh": "提高自己的攻擊。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 7,
+          "target": 2,
+          "gaugeDrain": 2,
+          "power": 30,
+          "accuracy": 100,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 17010801,
+          "name": {
+            "de": "Schreckschutz",
+            "en": "Unflappable",
+            "es": "Inmunidad Retroceso",
+            "fr": "Immunité Peur",
+            "it": "Pilastro",
+            "ja": "ひるみ無効",
+            "ko": "풀죽음무효",
+            "zh": "畏縮無效"
+          },
+          "description": {
+            "de": "Schützt vor Zurückschrecken.",
+            "en": "Prevents the Pokémon from flinching.",
+            "es": "Impide que el Pokémon retroceda.",
+            "fr": "Protège de la peur.",
+            "it": "Impedisce all'Unità di tentennare.",
+            "ja": "ひるみ状態にならない",
+            "ko": "풀죽음 상태가 되지 않는다",
+            "zh": "不會陷入畏縮狀態。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Lucario",
     "trainerEnglishName": "Korrina"
   },
   {
     "monsterBaseId": "20044501",
+    "monsterMegaFormBaseId": "20044551",
     "monsterId": "20091000000",
     "trainerBaseId": "10009100",
     "trainerNameId": "ch0091",
@@ -4498,6 +5779,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 60800,
+        "name": {
+          "de": "Erdbeben der\nLegendenforscherin",
+          "en": "Earthquake of\nAncient Lore",
+          "es": "Terremoto\nMitológico",
+          "fr": "Le choc des mythes !\nSéisme !",
+          "it": "Terremoto della verità mitologica",
+          "ja": "神話の真実に迫る\nじしん",
+          "ko": "신화의 진실에 다가가는\n지진",
+          "zh": "探究神話真相之\n地震"
+        },
+        "description": {
+          "de": "Löst bei Knakrack bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Knakrack aus.",
+          "en": "Become Mega Garchomp until the end of battle.",
+          "es": "Evoluciona a\nMega-Garchomp.\nVuelve a la normalidad\ntras terminar el combate.",
+          "fr": "Permet à Carchacrok\nde devenir\nMéga-Carchacrok\njusqu'à la fin du combat.",
+          "it": "Permette a Garchomp\ndi megaevolversi.\nL'effetto svanisce\nal termine della lotta.",
+          "ja": "バトル終了までメガガブリアスになる",
+          "ko": "배틀이 끝날 때까지 메가한카리아스가 된다",
+          "zh": "變成超級烈咬陸鯊直到對戰結束。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 9,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -4550,6 +5862,120 @@
     },
     "type": 9,
     "weakType": 6,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 89,
+          "name": {
+            "de": "Erdbeben",
+            "en": "Earthquake",
+            "es": "Terremoto",
+            "fr": "Séisme",
+            "it": "Terremoto",
+            "ja": "じしん",
+            "ko": "지진",
+            "zh": "地震"
+          },
+          "description": {
+            "de": "Hat keinen Zusatzeffekt.",
+            "en": "No additional effect.",
+            "es": "Sin efectos secundarios.",
+            "fr": "Aucun effet additionnel.",
+            "it": "Non ha effetti aggiuntivi.",
+            "ja": "追加効果なし",
+            "ko": "추가 효과 없음",
+            "zh": "沒有追加效果。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 9,
+          "target": 3,
+          "gaugeDrain": 3,
+          "power": 100,
+          "accuracy": 100,
+          "maxUses": 0
+        },
+        "move3": {
+          "id": 163,
+          "name": {
+            "de": "Schlitzer",
+            "en": "Slash",
+            "es": "Cuchillada",
+            "fr": "Tranche",
+            "it": "Lacerazione",
+            "ja": "きりさく",
+            "ko": "베어가르기",
+            "zh": "劈開"
+          },
+          "description": {
+            "de": "Hat eine hohe\nVolltrefferquote.",
+            "en": "Critical hits land more easily.",
+            "es": "Suele ser crítico.",
+            "fr": "Taux de critiques élevé.",
+            "it": "Probabile brutto colpo.",
+            "ja": "急所に当たりやすい",
+            "ko": "급소에 맞기 쉽다",
+            "zh": "容易擊中要害。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 1,
+          "target": 2,
+          "gaugeDrain": 2,
+          "power": 50,
+          "accuracy": 100,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 18040502,
+          "name": {
+            "de": "P-Attacken-Initiative↑ 2",
+            "en": "Fast-Track 2",
+            "es": "Acción Veloz +2",
+            "fr": "Célérité 2",
+            "it": "Marcia in più 2",
+            "ja": "Ｐ技後素早さアップ２",
+            "ko": "P기술후스피드업2",
+            "zh": "寶可夢出招後速度↑２"
+          },
+          "description": {
+            "de": "Erhöht nach Einsatz einer Attacke des Pokémon\neventuell die Initiative.",
+            "en": "Has a moderate chance of raising the Pokémon’s Speed after it uses a move.",
+            "es": "A veces aumenta la Velocidad tras usar un movimiento.",
+            "fr": "Augmente la Vitesse du Pokémon quand il utilise\nune capacité (assez rarement).",
+            "it": "Quando il Pokémon usa una mossa,\na volte la sua Velocità aumenta.",
+            "ja": "ポケモンが技をつかったときに\nたまに自分の素早さをあげる",
+            "ko": "포켓몬이 기술을 사용하면\n가끔 자신의 스피드가 오른다",
+            "zh": "在寶可夢使出招式時，\n偶爾會提高自己的速度。"
+          }
+        },
+        "passive2": {
+          "id": 13010205,
+          "name": {
+            "de": "P-Attacken-Initiative↑ 2",
+            "en": "Fast-Track 2",
+            "es": "Acción Veloz +2",
+            "fr": "Célérité 2",
+            "it": "Marcia in più 2",
+            "ja": "Ｐ技後素早さアップ２",
+            "ko": "P기술후스피드업2",
+            "zh": "寶可夢出招後速度↑２"
+          },
+          "description": {
+            "de": "Erhöht bei Sandstürmen die Stärke von Attacken.",
+            "en": "Powers up moves in a sandstorm.",
+            "es": "Aumenta la potencia de los movimientos cuando\nhay una tormenta de arena.",
+            "fr": "Augmente la puissance des capacités en cas de\ntempête de sable.",
+            "it": "Durante le tempeste di sabbia,\nla potenza delle mosse aumenta.",
+            "ja": "天気がすなあらしの場合は技の威力をあげる",
+            "ko": "날씨가 모래바람일 때 기술의 위력이 오른다",
+            "zh": "當天氣為沙暴時，會提高招式的威力。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Garchomp",
     "trainerEnglishName": "Cynthia"
   },
@@ -4682,6 +6108,37 @@
         "power": 100,
         "accuracy": 100,
         "maxUses": 0
+      },
+      "syncMove": {
+        "id": 78000,
+        "name": {
+          "de": "Hydropumpe der Wasser-Illusionen",
+          "en": "Aquatic Prince\nHydro Pump",
+          "es": "Hidrobomba del Amante del Agua",
+          "fr": "Le prince de l'eau !\nHydrocanon !",
+          "it": "Idropompa\ndell'illusionista",
+          "ja": "水のプリンスが魅せる\nハイドロポンプ",
+          "ko": "물의 프린스의 매혹적인\n하이드로펌프",
+          "zh": "展現水之王子魅力之\n水炮"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel in\neiner Umschlingung\ngefangen ist.",
+          "en": "Its power increases if the target is trapped.",
+          "es": "Causa más daño si el\nobjetivo está bajo\nataduras.",
+          "fr": "Augmente en puissance\nsi l'ennemi est ligoté.",
+          "it": "Aumenta di potenza quando il bersaglio è imprigionato.",
+          "ja": "相手がバインド状態のとき威力があがる",
+          "ko": "상대가 바인드 상태일 때 위력이 오른다",
+          "zh": "當對手陷入束縛狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -4762,6 +6219,7 @@
   },
   {
     "monsterBaseId": "20020801",
+    "monsterMegaFormBaseId": "20020851",
     "monsterId": "20113000000",
     "trainerBaseId": "10011300",
     "trainerNameId": "ch0113",
@@ -4889,6 +6347,37 @@
         "power": 132,
         "accuracy": 75,
         "maxUses": 0
+      },
+      "syncMove": {
+        "id": 61100,
+        "name": {
+          "de": "Eisenschweif der Stahlhärte",
+          "en": "Steel-Clad\nIron Tail",
+          "es": "Cola Férrea Acerada",
+          "fr": "Une défense d'acier !\nQueue de Fer !",
+          "it": "Codacciaio dell'animo gentile",
+          "ja": "鉄壁ガードの\nアイアンテール",
+          "ko": "철벽 방어의\n아이언테일",
+          "zh": "銅牆鐵壁之\n鐵尾"
+        },
+        "description": {
+          "de": "Löst bei Stahlos bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Stahlos aus.\nDie Stärke dieser Attacke\nist umso höher, je stärker\ndie Verteidigung des\nAnwenders erhöht\nwurde.",
+          "en": "Become Mega Steelix until the end of battle. The more the user’s Defense has been raised, the greater the power of this move.",
+          "es": "Evoluciona a\nMega-Steelix.\nVuelve a la normalidad\ntras terminar el combate.\nCausa más daño cuanto\nmás haya aumentado\nla Defensa del usuario.",
+          "fr": "Permet à Steelix de\ndevenir Méga-Steelix\njusqu'à la fin du combat.\nPlus la Défense du\nlanceur a été augmentée,\nplus cette capacité est\npuissante.",
+          "it": "Permette a Steelix di megaevolversi. L'effetto svanisce al termine della lotta. Più è stata aumentata la Difesa di chi la usa, più questa mossa è potente.",
+          "ja": "バトル終了までメガハガネールになる\n自分の防御があがっているほど威力があがる",
+          "ko": "배틀이 끝날 때까지 메가강철톤이 된다\n자신의 방어가 올라가 있는 만큼 위력이 오른다",
+          "zh": "變成超級大鋼蛇直到對戰結束。\n自己的防禦提高得越多，威力就越大。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 17,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -4918,11 +6407,39 @@
     },
     "type": 17,
     "weakType": 3,
+    "megaForm": {
+      "passives": {
+        "passive1": {
+          "id": 17040201,
+          "name": {
+            "de": "Topform-K.O.-Schutz",
+            "en": "Endurance",
+            "es": "Cuerpo Robusto",
+            "fr": "Coriacité",
+            "it": "Salututela",
+            "ja": "無傷時こらえる",
+            "ko": "HP최대시버티기",
+            "zh": "無傷時挺住"
+          },
+          "description": {
+            "de": "Bei Kampfantritt mit vollen KP kann das Pokémon\nden nächsten Angriff garantiert überstehen.",
+            "en": "If the Pokémon enters battle with full HP, allows it to endure a single overwhelming attack with 1 HP left.",
+            "es": "Si entra al combate con los PS al máximo, el\nPokémon resistirá el siguiente ataque y se\nquedará con, al menos, 1 PS.",
+            "fr": "Le Pokémon est prêt à encaisser les coups\ns'il arrive au combat avec tous ses PV.",
+            "it": "Se l'Unità entra in campo con tutti i PS,\nsi prepara a resistere a un colpo micidiale.",
+            "ja": "ＨＰが満タンで登場した場合は\n自分をこらえる状態にする",
+            "ko": "HP가 꽉 찬 상태로 등장한 경우 자신을 버티기 상태로 만든다",
+            "zh": "在ＨＰ全滿的狀態登場時，會讓自己變成挺住狀態。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Steelix",
     "trainerEnglishName": "Jasmine"
   },
   {
     "monsterBaseId": "20047500",
+    "monsterMegaFormBaseId": "20047551",
     "monsterId": "20128000000",
     "trainerBaseId": "10012800",
     "trainerNameId": "ch0128",
@@ -5050,6 +6567,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 61200,
+        "name": {
+          "de": "Nahkampf des Kraftspendens",
+          "en": "Rallying\nClose Combat",
+          "es": "A Bocajarro con Vigor y Valentía",
+          "fr": "Donnez-moi du\ncourage ! Close Combat !",
+          "it": "Zuffa di forza\ne coraggio",
+          "ja": "勇気と元気をくれた\nインファイト",
+          "ko": "힘과 용기를 준\n인파이트",
+          "zh": "給我勇氣與活力之\n近身戰"
+        },
+        "description": {
+          "de": "Löst bei Galagladi bis\nzum Ende des Kampfes\ndie Mega-Entwicklung zu\nMega-Galagladi aus.\nErhöht die Volltrefferquote\ndes Anwenders.",
+          "en": "Become Mega Gallade until the end of battle. Raises the user’s critical-hit rate.",
+          "es": "Evoluciona a Mega-Gallade.\nVuelve a la normalidad tras terminar el combate.\nAumenta la probabilidad del usuario de asestar golpes críticos.",
+          "fr": "Permet à Gallame de\ndevenir Méga-Gallame\njusqu'à la fin du combat.\nAugmente légèrement le\ntaux de critiques du\nlanceur.",
+          "it": "Permette a Gallade di megaevolversi (l'effetto svanisce al termine della lotta).\nInoltre, rende più probabili i brutti colpi.",
+          "ja": "バトル終了までメガエルレイドになる\n自分の急所率をあげる",
+          "ko": "배틀이 끝날 때까지 메가엘레이드가 된다\n자신의 급소율이 오른다",
+          "zh": "變成超級艾路雷朵直到對戰結束。\n提高自己的擊中要害率。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 7,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -5079,6 +6627,66 @@
     },
     "type": 7,
     "weakType": 14,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 370,
+          "name": {
+            "de": "Nahkampf",
+            "en": "Close Combat",
+            "es": "A Bocajarro",
+            "fr": "Close Combat",
+            "it": "Zuffa",
+            "ja": "インファイト",
+            "ko": "인파이트",
+            "zh": "近身戰"
+          },
+          "description": {
+            "de": "Senkt die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.",
+            "en": "Lowers the user’s Defense and Sp. Def.",
+            "es": "Reduce la Defensa y la\nDefensa Especial del\nusuario.",
+            "fr": "Baisse légèrement la\nDéfense et la Défense\nSpéciale du lanceur.",
+            "it": "Riduce la Difesa\ne la Difesa Speciale\ndi chi la usa.",
+            "ja": "自分の防御と特防をさげる",
+            "ko": "자신의 방어와 특수방어를 떨어뜨린다",
+            "zh": "降低自己的防禦和特防。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 7,
+          "target": 2,
+          "gaugeDrain": 3,
+          "power": 124,
+          "accuracy": 100,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 18041309,
+          "name": {
+            "de": "Gegentreffer-Init.↑ 9",
+            "en": "Posthaste 9",
+            "es": "Daño Veloz +9",
+            "fr": "Réflexe Vitesse ↑ 9",
+            "it": "Reazione rapida 9",
+            "ja": "被攻撃時素早さアップ９",
+            "ko": "피격시스피드업9",
+            "zh": "被攻擊時速度提升９"
+          },
+          "description": {
+            "de": "Erhöht die Initiative des Pokémon stark, wenn es\nvon einer Attacke getroffen wird.",
+            "en": "Sharply raises the user’s Speed when the user is hit by an attack move.",
+            "es": "Siempre aumenta bastante la Velocidad del usuario si es atacado.",
+            "fr": "Quand le Duo subit une attaque, sa Vitesse\naugmente modérément (à coup sûr).",
+            "it": "Quando l'Unità subisce un attacco semplice,\nla sua Velocità aumenta di molto.",
+            "ja": "技で攻撃を受けたときに\n自分の素早さをぐーんとあげる",
+            "ko": "기술로 공격받았을 때\n자신의 스피드가 크게 오른다",
+            "zh": "受到招式攻擊時，\n會大幅提高自己的速度。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Gallade",
     "trainerEnglishName": "Wally"
   },
@@ -5210,6 +6818,37 @@
         "gaugeDrain": 3,
         "power": 125,
         "accuracy": 80,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 77000,
+        "name": {
+          "de": "Blubbstrahl der\nkecken Meerjungfrau",
+          "en": "Tomboyish Mermaid\nBubble Beam",
+          "es": "Rayo Burbuja\nTemperamental",
+          "fr": "La sirène en short !\nBulles d'O !",
+          "it": "Bollaraggio della sirena maschiaccio",
+          "ja": "おてんば人魚の\nバブルこうせん",
+          "ko": "말괄량이 인어의\n거품광선",
+          "zh": "俏皮人魚之\n泡沫光線"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nist umso höher, je stärker\ndie Spezial-Verteidigung\ndes Anwenders erhöht\nwurde.",
+          "en": "The more the user’s Sp. Def has been raised, the greater the power of this move.",
+          "es": "Causa más daño cuanto\nmás haya aumentado la\nDefensa Especial del\nusuario.",
+          "fr": "Plus la Défense Spéciale\ndu lanceur a été\naugmentée, plus cette\ncapacité est puissante.",
+          "it": "Più è stata aumentata\nla Difesa Speciale di chi\nla usa, più questa mossa\nè potente.",
+          "ja": "自分の特防があがっているほど威力があがる",
+          "ko": "자신의 특수방어가 올라가 있는 만큼 위력이 오른다",
+          "zh": "自己的特防提高得越多，威力就越大。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
         "maxUses": 0
       }
     },
@@ -5371,6 +7010,37 @@
         "gaugeDrain": 3,
         "power": 100,
         "accuracy": 100,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 79000,
+        "name": {
+          "de": "Holzhammer der Unschlagbarkeit",
+          "en": "New Dawn\nWood Hammer",
+          "es": "Mazazo Invencible",
+          "fr": "Unissons nos forces !\nMartobois !",
+          "it": "Mazzuolegno invincibile",
+          "ja": "負けるわけなしの\nウッドハンマー",
+          "ko": "질 리 없는\n우드해머",
+          "zh": "不可能會輸之\n木槌"
+        },
+        "description": {
+          "de": "Die Stärke der Attacke\nist umso höher, je stärker\nder Angriff des \nAnwenders erhöht\nwurde.",
+          "en": "The more the user’s Attack has been raised, the greater the power of this move.",
+          "es": "Causa más daño cuanto\nmás haya aumentado\nel Ataque del usuario.",
+          "fr": "Plus l'Attaque du\nPokémon est élevée,\nplus les capacités sont\npuissantes.",
+          "it": "Più è stato aumentato l'Attacco di chi la usa, più questa mossa è potente.",
+          "ja": "自分の攻撃があがっているほど威力があがる",
+          "ko": "자신의 공격이 올라가 있는 만큼 위력이 오른다",
+          "zh": "自己的攻擊提高得越多，威力就越大。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 5,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
         "maxUses": 0
       }
     },
@@ -5556,6 +7226,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 79200,
+        "name": {
+          "de": "Käfertrutz des Künstlers",
+          "en": "Insectible\nStruggle Bug",
+          "es": "Estoicismo del\nDécimo Arte",
+          "fr": "L'art des Insectes !\nSurvinsecte !",
+          "it": "Entomoblocco dell'artista",
+          "ja": "虫を愛する芸術家の\nむしのていこう",
+          "ko": "벌레를 사랑하는 예술가의\n벌레의저항",
+          "zh": "寵蟲藝術家之\n蟲之抵抗"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 12,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -5763,6 +7464,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 2
+      },
+      "syncMove": {
+        "id": 75400,
+        "name": {
+          "de": "Blubbstrahl der\nMillionenstrafe",
+          "en": "Late Fee\nBubble Beam",
+          "es": "Rayo Burbuja\nCastigador",
+          "fr": "Pas de crédit !\nBulles d'O !",
+          "it": "Bollaraggio della multa salatissima",
+          "ja": "罰金１００万円分の\nバブルこうせん",
+          "ko": "벌금 100만 원어치\n거품광선",
+          "zh": "罰金一百萬之\n泡沫光線"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -5797,6 +7529,7 @@
   },
   {
     "monsterBaseId": "20031900",
+    "monsterMegaFormBaseId": "20031951",
     "monsterId": "20048100000",
     "trainerBaseId": "10004810",
     "trainerNameId": "ch0048",
@@ -5924,6 +7657,37 @@
         "power": 0,
         "accuracy": 0,
         "maxUses": 1
+      },
+      "syncMove": {
+        "id": 61400,
+        "name": {
+          "de": "Aquadurchstoß des Draufgängers",
+          "en": "High-Stakes\nLiquidation",
+          "es": "Hidroariete del\nSurcaolas Temerario",
+          "fr": "Joker sur la vague !\nAqua-Brèche !",
+          "it": "Idrobreccia sulla cresta del rischio",
+          "ja": "波に乗る勝負師の\nアクアブレイク",
+          "ko": "파도를 타는 승부사의\n아쿠아브레이크",
+          "zh": "賭運高漲之\n水流裂破"
+        },
+        "description": {
+          "de": "Löst bei Tohaido bis\nzum Ende des Kampfes\ndie Mega-Entwicklung zu\nMega-Tohaido aus.",
+          "en": "Become Mega Sharpedo until the end of battle.",
+          "es": "Evoluciona a\nMega-Sharpedo.\nVuelve a la normalidad\ntras terminar el combate.",
+          "fr": "Permet à Sharpedo de\ndevenir Méga-Sharpedo\njusqu'à la fin du combat.",
+          "it": "Permette a Sharpedo di megaevolversi. L'effetto svanisce al termine della lotta.",
+          "ja": "バトル終了までメガサメハダーになる",
+          "ko": "배틀이 끝날 때까지 메가샤크니아가 된다",
+          "zh": "變成超級巨牙鯊直到對戰結束。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
       }
     },
     "passives": {
@@ -5999,6 +7763,143 @@
     },
     "type": 3,
     "weakType": 18,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 663,
+          "name": {
+            "de": "Aquadurchstoß",
+            "en": "Liquidation",
+            "es": "Hidroariete",
+            "fr": "Aqua-Brèche",
+            "it": "Idrobreccia",
+            "ja": "アクアブレイク",
+            "ko": "아쿠아브레이크",
+            "zh": "水流裂破"
+          },
+          "description": {
+            "de": "Senkt in seltenen Fällen\ndie Verteidigung des\nZieles.",
+            "en": "Has a small chance of lowering the target’s Defense.",
+            "es": "Rara vez reduce la\nDefensa del objetivo.",
+            "fr": "Baisse légèrement la\nDéfense de l'ennemi\n(rarement).",
+            "it": "Raramente riduce\nla Difesa del bersaglio.",
+            "ja": "まれに相手の防御をさげる",
+            "ko": "드물게 상대의 방어를 떨어뜨린다",
+            "zh": "少數情況下會降低對手的防禦。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 3,
+          "target": 2,
+          "gaugeDrain": 3,
+          "power": 99,
+          "accuracy": 100,
+          "maxUses": 0
+        },
+        "move3": {
+          "id": 453,
+          "name": {
+            "de": "Wasserdüse",
+            "en": "Aqua Jet",
+            "es": "Acua Jet",
+            "fr": "Aqua-Jet",
+            "it": "Acquagetto",
+            "ja": "アクアジェット",
+            "ko": "아쿠아제트",
+            "zh": "水流噴射"
+          },
+          "description": {
+            "de": "Hat keinen Zusatzeffekt.",
+            "en": "No additional effect.",
+            "es": "Sin efectos secundarios.",
+            "fr": "Aucun effet additionnel.",
+            "it": "Non ha effetti aggiuntivi.",
+            "ja": "追加効果なし",
+            "ko": "추가 효과 없음",
+            "zh": "沒有追加效果。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 3,
+          "target": 2,
+          "gaugeDrain": 0,
+          "power": 75,
+          "accuracy": 100,
+          "maxUses": 3
+        }
+      },
+      "passives": {
+        "passive1": {
+          "id": 18040502,
+          "name": {
+            "de": "P-Attacken-Initiative↑ 2",
+            "en": "Fast-Track 2",
+            "es": "Acción Veloz +2",
+            "fr": "Célérité 2",
+            "it": "Marcia in più 2",
+            "ja": "Ｐ技後素早さアップ２",
+            "ko": "P기술후스피드업2",
+            "zh": "寶可夢出招後速度↑２"
+          },
+          "description": {
+            "de": "Erhöht nach Einsatz einer Attacke des Pokémon\neventuell die Initiative.",
+            "en": "Has a moderate chance of raising the Pokémon’s Speed after it uses a move.",
+            "es": "A veces aumenta la Velocidad tras usar un movimiento.",
+            "fr": "Augmente la Vitesse du Pokémon quand il utilise\nune capacité (assez rarement).",
+            "it": "Quando il Pokémon usa una mossa,\na volte la sua Velocità aumenta.",
+            "ja": "ポケモンが技をつかったときに\nたまに自分の素早さをあげる",
+            "ko": "포켓몬이 기술을 사용하면\n가끔 자신의 스피드가 오른다",
+            "zh": "在寶可夢使出招式時，\n偶爾會提高自己的速度。"
+          }
+        },
+        "passive2": {
+          "id": 13010505,
+          "name": {
+            "de": "P-Attacken-Initiative↑ 2",
+            "en": "Fast-Track 2",
+            "es": "Acción Veloz +2",
+            "fr": "Célérité 2",
+            "it": "Marcia in più 2",
+            "ja": "Ｐ技後素早さアップ２",
+            "ko": "P기술후스피드업2",
+            "zh": "寶可夢出招後速度↑２"
+          },
+          "description": {
+            "de": "Erhöht die Stärke von Attacken abhängig davon,\nwie sehr die Attackenleiste aufgefüllt ist.",
+            "en": "The fuller the move gauge, the more this powers up moves.",
+            "es": "Aumenta la potencia de los movimientos cuanto\nmás llena esté la barra de movimientos.",
+            "fr": "Plus la Jauge Capacité est remplie, plus les\ncapacités du Pokémon sont puissantes.",
+            "it": "Aumenta la potenza delle mosse in proporzione\nalle barrette residue nella barra mosse.",
+            "ja": "わざゲージの残量が多いほど技の威力をあげる",
+            "ko": "남은 기술게이지가 많을수록 기술의 위력이 오른다",
+            "zh": "招式計量槽的剩餘量越多，招式的威力就提高得越多。"
+          }
+        },
+        "passive3": {
+          "id": 16010305,
+          "name": {
+            "de": "P-Attacken-Initiative↑ 2",
+            "en": "Fast-Track 2",
+            "es": "Acción Veloz +2",
+            "fr": "Célérité 2",
+            "it": "Marcia in più 2",
+            "ja": "Ｐ技後素早さアップ２",
+            "ko": "P기술후스피드업2",
+            "zh": "寶可夢出招後速度↑２"
+          },
+          "description": {
+            "de": "Erhöht die Stärke von sehr effektiven\nGefährtenattacken.",
+            "en": "Powers up sync moves that are super effective.",
+            "es": "Aumenta la potencia del movimiento compi\ncuando este resulta supereficaz.",
+            "fr": "Augmente la puissance des capacités Duo super\nefficaces.",
+            "it": "Quando un'Unimossa è superefficace, aumenta\nla potenza delle Unimosse superefficaci.",
+            "ja": "効果抜群のときにバディーズわざの威力をあげる",
+            "ko": "효과가 굉장한 버디즈기술의 위력이 오른다",
+            "zh": "當拍組招式的效果絕佳時，會提高該招式的威力。"
+          }
+        }
+      }
+    },
     "monsterEnglishName": "Sharpedo",
     "trainerEnglishName": "Grimsley"
   }
