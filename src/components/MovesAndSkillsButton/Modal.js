@@ -276,6 +276,7 @@ export default function MovesAndSkillsModal(props) {
 
   const handleOnCloseMovesAndSkillsModal = () => {
     setIsMovesAndSkillsModalVisible(false);
+    setIsMega(false);
   };
 
   const handleOnClickMegaButton = (e) => {
