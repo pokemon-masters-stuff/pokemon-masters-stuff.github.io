@@ -13,6 +13,7 @@ import { PublishBuildButtonMobile } from '../PublishBuildButton';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 import LoadBuildDropdown from '../LoadBuildDropdown';
 import SyncLevelDropdown from '../../components/SyncLevelDropdown';
+import { MovesAndSkillsButtonMobile } from '../MovesAndSkillsButton';
 import styles from './styles';
 
 function SyncGridControls(props) {
@@ -142,6 +143,12 @@ function SyncGridControls(props) {
           </Button>
         )}
         <LoginOrRegisterModal />
+      </Grid>
+
+      <Grid item>
+        <div>
+          <MovesAndSkillsButtonMobile />
+        </div>
       </Grid>
 
       <Grid item>

@@ -15,6 +15,7 @@ import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
 import { PublishBuildButtonDesktop } from '../../components/PublishBuildButton';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
+import { MovesAndSkillsButtonDesktop } from '../../components/MovesAndSkillsButton';
 
 class DesktopLayout extends Component {
   constructor(props) {
@@ -56,8 +57,10 @@ class DesktopLayout extends Component {
                     onChangeHandler={this.handleOnChangeSavedBuild}
                     onDeleteHandler={this.handleOnDeleteSavedBuild}
                   />
-
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
+                    <MovesAndSkillsButtonDesktop />
+                  </div>
+                  <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <SaveBuildButtonDesktop />
                   </div>
                   <div style={{ marginLeft: 8, marginTop: 10 }}>
@@ -69,7 +72,7 @@ class DesktopLayout extends Component {
                   <div style={{ marginTop: 10 }}>
                     <ResetGridButtonDesktop />
                   </div>
-                  <div style={{ marginTop: -130 }}>
+                  <div style={{ marginTop: -180 }}>
                     <GridMap />
                   </div>
                 </div>

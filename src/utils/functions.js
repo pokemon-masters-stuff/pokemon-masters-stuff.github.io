@@ -17,6 +17,16 @@ export const getPokemonNameList = (language) =>
       return x < y ? -1 : x > y ? 1 : 0;
     });
 
+export const getPokemonDataByName = (pokemonName) => {
+  let pokemonData;
+  arrayOfAllGridedPokemon.forEach((pokemon) => {
+    if (pokemon.monsterEnglishName === pokemonName) {
+      pokemonData = pokemon;
+    }
+  });
+  return pokemonData;
+};
+
 // TO DO: REFACTOR
 export const getFillColorByMoveType = ({ type, group }) => {
   let colorsByTypeDef = {

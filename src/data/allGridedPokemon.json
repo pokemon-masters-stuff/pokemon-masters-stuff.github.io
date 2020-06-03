@@ -1724,14 +1724,14 @@
       "passive2": {
         "id": 18041609,
         "name": {
-          "de": "Effektivitätsstärke↑ 1",
-          "en": "Superduper Effective 1",
-          "es": "Ultraeficacia +1",
-          "fr": "Ultra-Efficace 1",
-          "it": "Iperefficace 1",
-          "ja": "抜群時威力上昇１",
-          "ko": "발군시위력상승1",
-          "zh": "效果絕佳時威力提升１"
+          "de": "Treffer-Wert↓ 9",
+          "en": "Unfortuitous 9",
+          "es": "Ataque Característica ↓ +9",
+          "fr": "Capa. Stat Ennemi ↓ 9",
+          "it": "Peggiorandom 9",
+          "ja": "攻撃時能力ダウン９",
+          "ko": "공격시능력다운9",
+          "zh": "攻擊時能力下降９"
         },
         "description": {
           "de": "Senkt nach Erfolg einer Angriffsattacke zufällig\nentweder den Angriff, die Verteidigung, den\nSpezial-Angriff, die Spezial-Verteidigung, die\nInitiative, die Genauigkeit oder den Fluchtwert\ndes Gegners.",
@@ -1940,14 +1940,14 @@
       "passive2": {
         "id": 18020901,
         "name": {
-          "de": "Harmoniestärke↑ 3",
-          "en": "Power Chain 3",
-          "es": "Combo Mejora +3",
-          "fr": "Renforce-Combo 3",
-          "it": "Combiforza 3",
-          "ja": "ＩＣ時威力上昇３",
-          "ko": "동시찬스시위력상승3",
-          "zh": "一齊機會時威力提升３"
+          "de": "Werte↓-Schutz",
+          "en": "Impervious",
+          "es": "Inmunidad Caract. ↓",
+          "fr": "Immunité ↓Stats",
+          "it": "Status quo",
+          "ja": "全ダウン無効",
+          "ko": "전체다운무효",
+          "zh": "全種類下降無效"
         },
         "description": {
           "de": "Schützt vor einer Senkung aller Statuswerte.",
@@ -2055,14 +2055,14 @@
         "passive2": {
           "id": 18020901,
           "name": {
-            "de": "Harmoniestärke↑ 3",
-            "en": "Power Chain 3",
-            "es": "Combo Mejora +3",
-            "fr": "Renforce-Combo 3",
-            "it": "Combiforza 3",
-            "ja": "ＩＣ時威力上昇３",
-            "ko": "동시찬스시위력상승3",
-            "zh": "一齊機會時威力提升３"
+            "de": "Werte↓-Schutz",
+            "en": "Impervious",
+            "es": "Inmunidad Caract. ↓",
+            "fr": "Immunité ↓Stats",
+            "it": "Status quo",
+            "ja": "全ダウン無効",
+            "ko": "전체다운무효",
+            "zh": "全種類下降無效"
           },
           "description": {
             "de": "Schützt vor einer Senkung aller Statuswerte.",
@@ -2270,14 +2270,14 @@
       "passive2": {
         "id": 13030101,
         "name": {
-          "de": "Att.-GA-Countdown↓ 1",
-          "en": "Propulsion 1",
-          "es": "Movimiento Furor +1",
-          "fr": "Capacité Compteur ↓ 1",
-          "it": "Mossasprint 1",
-          "ja": "わざ後ＢＣ加速１",
-          "ko": "기술후BC가속1",
-          "zh": "招式後計數加速１"
+          "de": "Treffergarantie",
+          "en": "Piercing Gaze",
+          "es": "Vista Aguda",
+          "fr": "Œil Aiguisé",
+          "it": "Diecidecimi",
+          "ja": "必中化",
+          "ko": "필중화",
+          "zh": "必中化"
         },
         "description": {
           "de": "Attacken treffen garantiert.",
@@ -2293,14 +2293,14 @@
       "passive3": {
         "id": 12020104,
         "name": {
-          "de": "Att.-GA-Countdown↓ 1",
-          "en": "Propulsion 1",
-          "es": "Movimiento Furor +1",
-          "fr": "Capacité Compteur ↓ 1",
-          "it": "Mossasprint 1",
-          "ja": "わざ後ＢＣ加速１",
-          "ko": "기술후BC가속1",
-          "zh": "招式後計數加速１"
+          "de": "Att.-Attackenleiste↑ 4",
+          "en": "Move Gauge Refresh 4",
+          "es": "Movimiento Llenabarras +4",
+          "fr": "Récup'Jauge 4",
+          "it": "Ciclo continuo 4",
+          "ja": "わざ後わざゲージ↑４",
+          "ko": "기술후기술게이지↑4",
+          "zh": "招式後招式計量槽增加４"
         },
         "description": {
           "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Pokémon um 1 Segment auf.",
@@ -2348,77 +2348,6 @@
           "power": 123,
           "accuracy": 100,
           "maxUses": 0
-        }
-      },
-      "passives": {
-        "passive1": {
-          "id": 15010601,
-          "name": {
-            "de": "Att.-GA-Countdown↓ 1",
-            "en": "Propulsion 1",
-            "es": "Movimiento Furor +1",
-            "fr": "Capacité Compteur ↓ 1",
-            "it": "Mossasprint 1",
-            "ja": "わざ後ＢＣ加速１",
-            "ko": "기술후BC가속1",
-            "zh": "招式後計數加速１"
-          },
-          "description": {
-            "de": "Reduziert in seltenen Fällen nach Erfolg einer\nAttacke den Wert des Gefährtenattacken-\nCountdowns um 1.",
-            "en": "Has a small chance of reducing the user’s sync move countdown by one when the user’s move is successful.",
-            "es": "Rara vez se reduce en 1 el contador de\nmovimientos compi del usuario si uno de sus\nmovimientos acierta.",
-            "fr": "Quand le Duo utilise avec succès une capacité,\nréduit de 1 le nombre d'actions nécessaires pour\nlancer une capacité Duo (rarement).",
-            "it": "Quando una mossa va a segno, raramente\nabbassa di 1 il numero di azioni necessarie\nper sferrare un'Unimossa.",
-            "ja": "技が成功したときにまれに\n自分のバディーズわざ発動可能状態までのカウントを\n１減らす",
-            "ko": "기술이 성공했을 때 드물게\n자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를\n1 줄인다",
-            "zh": "招式成功時，少數情況下會讓自己\n發動拍組招式所需的行動數減少１次。"
-          }
-        },
-        "passive2": {
-          "id": 13030101,
-          "name": {
-            "de": "Att.-GA-Countdown↓ 1",
-            "en": "Propulsion 1",
-            "es": "Movimiento Furor +1",
-            "fr": "Capacité Compteur ↓ 1",
-            "it": "Mossasprint 1",
-            "ja": "わざ後ＢＣ加速１",
-            "ko": "기술후BC가속1",
-            "zh": "招式後計數加速１"
-          },
-          "description": {
-            "de": "Attacken treffen garantiert.",
-            "en": "Moves never miss.",
-            "es": "Hace que los movimientos acierten siempre.",
-            "fr": "Les capacités n'échouent jamais.",
-            "it": "Le mosse vanno sempre a segno.",
-            "ja": "技が必ず命中する",
-            "ko": "기술이 반드시 명중한다",
-            "zh": "招式必定會命中。"
-          }
-        },
-        "passive3": {
-          "id": 12020104,
-          "name": {
-            "de": "Att.-GA-Countdown↓ 1",
-            "en": "Propulsion 1",
-            "es": "Movimiento Furor +1",
-            "fr": "Capacité Compteur ↓ 1",
-            "it": "Mossasprint 1",
-            "ja": "わざ後ＢＣ加速１",
-            "ko": "기술후BC가속1",
-            "zh": "招式後計數加速１"
-          },
-          "description": {
-            "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Pokémon um 1 Segment auf.",
-            "en": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
-            "es": "Es muy probable que llene 1 punto de la barra\nde movimientos del usuario si uno de sus\nmovimientos acierta.",
-            "fr": "Restaure un segment de la Jauge Capacité quand\nle Duo utilise avec succès une capacité\n(assez souvent).",
-            "it": "Quando una mossa va a segno, spesso viene\naggiunta una barretta alla propria barra mosse.",
-            "ja": "技が成功したときにときどき\n自分のわざゲージを１増やす",
-            "ko": "기술이 성공했을 때 종종\n자신의 기술게이지를 1 추가한다",
-            "zh": "招式成功時，有時會\n幫自己增加１條招式計量槽。"
-          }
         }
       }
     },
@@ -2999,14 +2928,14 @@
       "passive2": {
         "id": 17010601,
         "name": {
-          "de": "Brandschutz",
-          "en": "Flameproof",
-          "es": "Inmunidad Quemaduras",
-          "fr": "Immunité Brûlure",
-          "it": "Estintore",
-          "ja": "やけど無効",
-          "ko": "화상무효",
-          "zh": "灼傷無效"
+          "de": "Schlafschutz",
+          "en": "Wide Awake",
+          "es": "Inmunidad Sueño",
+          "fr": "Immunité Sommeil",
+          "it": "Allerta",
+          "ja": "ねむり無効",
+          "ko": "잠듦무효",
+          "zh": "睡眠無效"
         },
         "description": {
           "de": "Schützt vor Schlaf.",
@@ -3085,54 +3014,6 @@
           "power": 95,
           "accuracy": 100,
           "maxUses": 0
-        }
-      },
-      "passives": {
-        "passive1": {
-          "id": 17010201,
-          "name": {
-            "de": "Brandschutz",
-            "en": "Flameproof",
-            "es": "Inmunidad Quemaduras",
-            "fr": "Immunité Brûlure",
-            "it": "Estintore",
-            "ja": "やけど無効",
-            "ko": "화상무효",
-            "zh": "灼傷無效"
-          },
-          "description": {
-            "de": "Schützt vor Verbrennungen.",
-            "en": "Prevents the Pokémon from getting burned.",
-            "es": "Impide que el Pokémon sufra quemaduras.",
-            "fr": "Protège des brûlures.",
-            "it": "Impedisce all'Unità di venire scottata.",
-            "ja": "やけど状態にならない",
-            "ko": "화상 상태가 되지 않는다",
-            "zh": "不會陷入灼傷狀態。"
-          }
-        },
-        "passive2": {
-          "id": 17010601,
-          "name": {
-            "de": "Brandschutz",
-            "en": "Flameproof",
-            "es": "Inmunidad Quemaduras",
-            "fr": "Immunité Brûlure",
-            "it": "Estintore",
-            "ja": "やけど無効",
-            "ko": "화상무효",
-            "zh": "灼傷無效"
-          },
-          "description": {
-            "de": "Schützt vor Schlaf.",
-            "en": "Prevents the Pokémon from falling asleep.",
-            "es": "Impide que el Pokémon se quede dormido.",
-            "fr": "Protège du sommeil.",
-            "it": "Impedisce all'Unità di venire addormentata.",
-            "ja": "ねむり状態にならない",
-            "ko": "잠듦 상태가 되지 않는다",
-            "zh": "不會陷入睡眠狀態。"
-          }
         }
       }
     },
@@ -3520,14 +3401,14 @@
       "passive2": {
         "id": 18020701,
         "name": {
-          "de": "Gegentreffer-Flucht↑ 9",
-          "en": "Look Alive 9",
-          "es": "Daño Evasivo +9",
-          "fr": "Réflexe Esquive ↑ 9",
-          "it": "Reazione agile 9",
-          "ja": "被攻撃時回避率アップ９",
-          "ko": "피격시회피율업9",
-          "zh": "被攻擊時閃避率提升９"
+          "de": "Fluchtw.↓-Schutz",
+          "en": "Fast Runner",
+          "es": "Inmunidad Evasión ↓",
+          "fr": "Immunité ↓Esquive",
+          "it": "Flessibilità",
+          "ja": "回避率ダウン無効",
+          "ko": "회피율다운무효",
+          "zh": "閃避率下降無效"
         },
         "description": {
           "de": "Schützt vor einer Senkung des Fluchtwerts.",
@@ -3736,14 +3617,14 @@
       "passive2": {
         "id": 18041801,
         "name": {
-          "de": "Schreckschutz",
-          "en": "Unflappable",
-          "es": "Inmunidad Retroceso",
-          "fr": "Immunité Peur",
-          "it": "Pilastro",
-          "ja": "ひるみ無効",
-          "ko": "풀죽음무효",
-          "zh": "畏縮無效"
+          "de": "Antritt-Initiative↑ 1",
+          "en": "Speedy Entry 1",
+          "es": "Entrada Veloz +1",
+          "fr": "Arrivée Vitesse ↑ 1",
+          "it": "Primoscatto 1",
+          "ja": "登場時素早さアップ１",
+          "ko": "등장시스피드업1",
+          "zh": "上場時速度提升１"
         },
         "description": {
           "de": "Erhöht bei Kampfantritt die Initiative des\nPokémon.",
@@ -3759,14 +3640,14 @@
       "passive3": {
         "id": 18020301,
         "name": {
-          "de": "Schreckschutz",
-          "en": "Unflappable",
-          "es": "Inmunidad Retroceso",
-          "fr": "Immunité Peur",
-          "it": "Pilastro",
-          "ja": "ひるみ無効",
-          "ko": "풀죽음무효",
-          "zh": "畏縮無效"
+          "de": "Sp.-Ang.↓-Schutz",
+          "en": "Dauntless",
+          "es": "Inmunidad Ataque Esp. ↓",
+          "fr": "Immunité ↓Atq. Spé.",
+          "it": "Ardimento",
+          "ja": "特攻ダウン無効",
+          "ko": "특수공격다운무효",
+          "zh": "特攻下降無效"
         },
         "description": {
           "de": "Schützt vor einer Senkung des Spezial-Angriffs.",
@@ -3814,77 +3695,6 @@
           "power": 99,
           "accuracy": 100,
           "maxUses": 0
-        }
-      },
-      "passives": {
-        "passive1": {
-          "id": 17010801,
-          "name": {
-            "de": "Schreckschutz",
-            "en": "Unflappable",
-            "es": "Inmunidad Retroceso",
-            "fr": "Immunité Peur",
-            "it": "Pilastro",
-            "ja": "ひるみ無効",
-            "ko": "풀죽음무효",
-            "zh": "畏縮無效"
-          },
-          "description": {
-            "de": "Schützt vor Zurückschrecken.",
-            "en": "Prevents the Pokémon from flinching.",
-            "es": "Impide que el Pokémon retroceda.",
-            "fr": "Protège de la peur.",
-            "it": "Impedisce all'Unità di tentennare.",
-            "ja": "ひるみ状態にならない",
-            "ko": "풀죽음 상태가 되지 않는다",
-            "zh": "不會陷入畏縮狀態。"
-          }
-        },
-        "passive2": {
-          "id": 18041801,
-          "name": {
-            "de": "Schreckschutz",
-            "en": "Unflappable",
-            "es": "Inmunidad Retroceso",
-            "fr": "Immunité Peur",
-            "it": "Pilastro",
-            "ja": "ひるみ無効",
-            "ko": "풀죽음무효",
-            "zh": "畏縮無效"
-          },
-          "description": {
-            "de": "Erhöht bei Kampfantritt die Initiative des\nPokémon.",
-            "en": "Raises the user’s Speed when the Pokémon enters a battle.",
-            "es": "Aumenta la Velocidad del usuario al entrar en\ncombate.",
-            "fr": "Augmente légèrement la Vitesse quand\nle Pokémon arrive au combat.",
-            "it": "Quando l'Unità entra in campo, la sua Velocità\naumenta.",
-            "ja": "登場したとき自分の素早さをあげる",
-            "ko": "등장했을 때 자신의 스피드가 오른다",
-            "zh": "上場時，會提高自己的速度。"
-          }
-        },
-        "passive3": {
-          "id": 18020301,
-          "name": {
-            "de": "Schreckschutz",
-            "en": "Unflappable",
-            "es": "Inmunidad Retroceso",
-            "fr": "Immunité Peur",
-            "it": "Pilastro",
-            "ja": "ひるみ無効",
-            "ko": "풀죽음무효",
-            "zh": "畏縮無效"
-          },
-          "description": {
-            "de": "Schützt vor einer Senkung des Spezial-Angriffs.",
-            "en": "Sp. Atk cannot be lowered.",
-            "es": "Impide que el Pokémon sufra reducciones en el\nAtaque Especial.",
-            "fr": "Protège des baisses d'Attaque Spéciale.",
-            "it": "Rende immuni alle riduzioni dell'Attacco Speciale.",
-            "ja": "特攻がさがらない",
-            "ko": "특수공격이 떨어지지 않는다",
-            "zh": "特攻不會降低。"
-          }
         }
       }
     },
@@ -4080,14 +3890,14 @@
       "passive2": {
         "id": 17010201,
         "name": {
-          "de": "Giftschutz",
-          "en": "Antitoxin",
-          "es": "Inmunidad Veneno",
-          "fr": "Immu. Empoisonnement",
-          "it": "Antitossine",
-          "ja": "どく無効",
-          "ko": "독무효",
-          "zh": "中毒無效"
+          "de": "Brandschutz",
+          "en": "Flameproof",
+          "es": "Inmunidad Quemaduras",
+          "fr": "Immunité Brûlure",
+          "it": "Estintore",
+          "ja": "やけど無効",
+          "ko": "화상무효",
+          "zh": "灼傷無效"
         },
         "description": {
           "de": "Schützt vor Verbrennungen.",
@@ -4103,14 +3913,14 @@
       "passive3": {
         "id": 17010901,
         "name": {
-          "de": "Giftschutz",
-          "en": "Antitoxin",
-          "es": "Inmunidad Veneno",
-          "fr": "Immu. Empoisonnement",
-          "it": "Antitossine",
-          "ja": "どく無効",
-          "ko": "독무효",
-          "zh": "中毒無效"
+          "de": "Umschlingschutz",
+          "en": "Escape Artist",
+          "es": "Inmunidad Ataduras",
+          "fr": "Immunité Ligotage",
+          "it": "Scioglicatene",
+          "ja": "バインド無効",
+          "ko": "바인드무효",
+          "zh": "束縛無效"
         },
         "description": {
           "de": "Schützt vor Umschlingung.",
@@ -4318,14 +4128,14 @@
       "passive2": {
         "id": 22010201,
         "name": {
-          "de": "Genauigk.↓-Schutz",
-          "en": "Acuity",
-          "es": "Inmunidad Precisión ↓",
-          "fr": "Immunité ↓Précision",
-          "it": "Destrezza",
-          "ja": "命中率ダウン無効",
-          "ko": "명중률다운무효",
-          "zh": "命中率下降無效"
+          "de": "Störungschance↑ 1",
+          "en": "Aggravation 1",
+          "es": "Incordio +1",
+          "fr": "Tourmenteur 1",
+          "it": "Tormento 1",
+          "ja": "妨害確率上昇１",
+          "ko": "방해확률상승1",
+          "zh": "妨害機率提升１"
         },
         "description": {
           "de": "Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte\nvon Attacken Zurückschrecken, Verwirrung oder\nUmschlingung auslösen.",
@@ -4725,14 +4535,14 @@
       "passive2": {
         "id": 17010101,
         "name": {
-          "de": "Effektivitätsstärke↑ 2",
-          "en": "Superduper Effective 2",
-          "es": "Ultraeficacia +2",
-          "fr": "Ultra-Efficace 2",
-          "it": "Iperefficace 2",
-          "ja": "抜群時威力上昇２",
-          "ko": "발군시위력상승2",
-          "zh": "效果絕佳時威力提升２"
+          "de": "Giftschutz",
+          "en": "Antitoxin",
+          "es": "Inmunidad Veneno",
+          "fr": "Immu. Empoisonnement",
+          "it": "Antitossine",
+          "ja": "どく無効",
+          "ko": "독무효",
+          "zh": "中毒無效"
         },
         "description": {
           "de": "Schützt vor Vergiftungen und schweren\nVergiftungen.",
@@ -4748,14 +4558,14 @@
       "passive3": {
         "id": 17010201,
         "name": {
-          "de": "Effektivitätsstärke↑ 2",
-          "en": "Superduper Effective 2",
-          "es": "Ultraeficacia +2",
-          "fr": "Ultra-Efficace 2",
-          "it": "Iperefficace 2",
-          "ja": "抜群時威力上昇２",
-          "ko": "발군시위력상승2",
-          "zh": "效果絕佳時威力提升２"
+          "de": "Brandschutz",
+          "en": "Flameproof",
+          "es": "Inmunidad Quemaduras",
+          "fr": "Immunité Brûlure",
+          "it": "Estintore",
+          "ja": "やけど無効",
+          "ko": "화상무효",
+          "zh": "灼傷無效"
         },
         "description": {
           "de": "Schützt vor Verbrennungen.",
@@ -5155,14 +4965,14 @@
       "passive2": {
         "id": 13011105,
         "name": {
-          "de": "Treffergarantie",
-          "en": "Piercing Gaze",
-          "es": "Vista Aguda",
-          "fr": "Œil Aiguisé",
-          "it": "Diecidecimi",
-          "ja": "必中化",
-          "ko": "필중화",
-          "zh": "必中化"
+          "de": "Sonnenstärke↑ 5",
+          "en": "Charging Sun 5",
+          "es": "Potencia Solar +5",
+          "fr": "Puissance Soleil 5",
+          "it": "Elioforza 5",
+          "ja": "晴れ時威力上昇５",
+          "ko": "맑을시위력상승5",
+          "zh": "晴天時威力提升５"
         },
         "description": {
           "de": "Erhöht bei starkem Sonnenlicht die Stärke von\nAttacken.",
@@ -5178,14 +4988,14 @@
       "passive3": {
         "id": 13011004,
         "name": {
-          "de": "Treffergarantie",
-          "en": "Piercing Gaze",
-          "es": "Vista Aguda",
-          "fr": "Œil Aiguisé",
-          "it": "Diecidecimi",
-          "ja": "必中化",
-          "ko": "필중화",
-          "zh": "必中化"
+          "de": "KP-Stärke↑ 4",
+          "en": "HP Advantage 4",
+          "es": "Potencia PS +4",
+          "fr": "Puissance PV 4",
+          "it": "Saluforza 4",
+          "ja": "ＨＰ分威力上昇４",
+          "ko": "HP비례위력상승4",
+          "zh": "威力隨ＨＰ提升４"
         },
         "description": {
           "de": "Erhöht die Stärke von Attacken abhängig davon,\nwie viele KP dem Pokémon verbleiben.",
@@ -5619,31 +5429,6 @@
           "accuracy": 100,
           "maxUses": 0
         }
-      },
-      "passives": {
-        "passive1": {
-          "id": 17010801,
-          "name": {
-            "de": "Schreckschutz",
-            "en": "Unflappable",
-            "es": "Inmunidad Retroceso",
-            "fr": "Immunité Peur",
-            "it": "Pilastro",
-            "ja": "ひるみ無効",
-            "ko": "풀죽음무효",
-            "zh": "畏縮無效"
-          },
-          "description": {
-            "de": "Schützt vor Zurückschrecken.",
-            "en": "Prevents the Pokémon from flinching.",
-            "es": "Impide que el Pokémon retroceda.",
-            "fr": "Protège de la peur.",
-            "it": "Impedisce all'Unità di tentennare.",
-            "ja": "ひるみ状態にならない",
-            "ko": "풀죽음 상태가 되지 않는다",
-            "zh": "不會陷入畏縮狀態。"
-          }
-        }
       }
     },
     "monsterEnglishName": "Lucario",
@@ -5839,14 +5624,14 @@
       "passive2": {
         "id": 13010205,
         "name": {
-          "de": "P-Attacken-Initiative↑ 2",
-          "en": "Fast-Track 2",
-          "es": "Acción Veloz +2",
-          "fr": "Célérité 2",
-          "it": "Marcia in più 2",
-          "ja": "Ｐ技後素早さアップ２",
-          "ko": "P기술후스피드업2",
-          "zh": "寶可夢出招後速度↑２"
+          "de": "Sandsturmstärke↑ 5",
+          "en": "Surging Sand 5",
+          "es": "Impulso Arena +5",
+          "fr": "Pouvoir Sable 5",
+          "it": "Sabbiaforza 5",
+          "ja": "砂嵐時威力上昇５",
+          "ko": "모래바람시위력상승5",
+          "zh": "沙暴時威力提升５"
         },
         "description": {
           "de": "Erhöht bei Sandstürmen die Stärke von Attacken.",
@@ -5954,14 +5739,14 @@
         "passive2": {
           "id": 13010205,
           "name": {
-            "de": "P-Attacken-Initiative↑ 2",
-            "en": "Fast-Track 2",
-            "es": "Acción Veloz +2",
-            "fr": "Célérité 2",
-            "it": "Marcia in più 2",
-            "ja": "Ｐ技後素早さアップ２",
-            "ko": "P기술후스피드업2",
-            "zh": "寶可夢出招後速度↑２"
+            "de": "Sandsturmstärke↑ 5",
+            "en": "Surging Sand 5",
+            "es": "Impulso Arena +5",
+            "fr": "Pouvoir Sable 5",
+            "it": "Sabbiaforza 5",
+            "ja": "砂嵐時威力上昇５",
+            "ko": "모래바람시위력상승5",
+            "zh": "沙暴時威力提升５"
           },
           "description": {
             "de": "Erhöht bei Sandstürmen die Stärke von Attacken.",
@@ -5972,6 +5757,29 @@
             "ja": "天気がすなあらしの場合は技の威力をあげる",
             "ko": "날씨가 모래바람일 때 기술의 위력이 오른다",
             "zh": "當天氣為沙暴時，會提高招式的威力。"
+          }
+        },
+        "passive3": {
+          "id": 0,
+          "name": {
+            "de": "Boden-Wechsel",
+            "en": "Ground Shift",
+            "es": "Cambio Tierra",
+            "fr": "Conversion Sol",
+            "it": "Mutaterra",
+            "ja": "じめんチェンジ",
+            "ko": "땅체인지",
+            "zh": "地面屬性替換"
+          },
+          "description": {
+            "de": "Attacken vom Typ Normal nehmen den Typ\nBoden an.",
+            "en": "Normal-type moves become Ground-type moves.",
+            "es": "Convierte los movimientos de tipo Normal en\ntipo Tierra.",
+            "fr": "Change les capacités de type Normal\nen type Sol.",
+            "it": "Le mosse di tipo Normale diventano\ndi tipo Terra.",
+            "ja": "ノーマルタイプの技がじめんタイプになる",
+            "ko": "노말타입 기술이 땅타입이 된다",
+            "zh": "一般屬性的招式會變成地面屬性。"
           }
         }
       }
@@ -6168,14 +5976,14 @@
       "passive2": {
         "id": 17050205,
         "name": {
-          "de": "Gegnerumschling-Stärke↑ 5",
-          "en": "Stationary Target 5",
-          "es": "Atadura Rival Impulsora +5",
-          "fr": "Puissance Ligotage 5",
-          "it": "Imprigionaforza 5",
-          "ja": "相手バインド時威力↑５",
-          "ko": "상대바인드시위력↑5",
-          "zh": "對手束縛時威力提升５"
+          "de": "Gegner-Umschlingschaden↑ 5",
+          "en": "Pokey Trap 5",
+          "es": "Ataduras Dañinas +5",
+          "fr": "Nœud Serré 5",
+          "it": "Imprigionapeggio 5",
+          "ja": "相手拘束ダメージ増加５",
+          "ko": "상대바인드데미지증가5",
+          "zh": "對手束縛傷害增加５"
         },
         "description": {
           "de": "Erhöht den Schaden, den Gegner durch\nUmschlingung erleiden.",
@@ -6191,14 +5999,14 @@
       "passive3": {
         "id": 11010602,
         "name": {
-          "de": "Gegnerumschling-Stärke↑ 5",
-          "en": "Stationary Target 5",
-          "es": "Atadura Rival Impulsora +5",
-          "fr": "Puissance Ligotage 5",
-          "it": "Imprigionaforza 5",
-          "ja": "相手バインド時威力↑５",
-          "ko": "상대바인드시위력↑5",
-          "zh": "對手束縛時威力提升５"
+          "de": "GA-Heilung 2",
+          "en": "Recuperation 2",
+          "es": "Movimiento Compi Curativo +2",
+          "fr": "Réconfort 2",
+          "it": "Unicura 2",
+          "ja": "Ｂわざ後ＨＰ回復２",
+          "ko": "B기술후HP회복2",
+          "zh": "拍組招式後ＨＰ回復２"
         },
         "description": {
           "de": "Stellt nach Einsatz einer Gefährtenattacke einige\nKP des Pokémon wieder her.",
@@ -6430,6 +6238,29 @@
             "ja": "ＨＰが満タンで登場した場合は\n自分をこらえる状態にする",
             "ko": "HP가 꽉 찬 상태로 등장한 경우 자신을 버티기 상태로 만든다",
             "zh": "在ＨＰ全滿的狀態登場時，會讓自己變成挺住狀態。"
+          }
+        },
+        "passive2": {
+          "id": 0,
+          "name": {
+            "de": "K.O.-Explosion",
+            "en": "Last Word",
+            "es": "Regalo Final",
+            "fr": "Cadeau d'Adieu",
+            "it": "Ultimodono",
+            "ja": "ひんし時ばくはつ",
+            "ko": "기절시폭발",
+            "zh": "瀕死時爆炸"
+          },
+          "description": {
+            "de": "Kurz bevor das Pokémon kampfunfähig wird,\nsetzt es Explosion ein.",
+            "en": "The Pokémon uses Explosion immediately before fainting.",
+            "es": "El Pokémon utiliza Explosión antes de debilitarse.",
+            "fr": "Le Pokémon utilise Explosion juste avant d'être\nmis K.O.",
+            "it": "Subito prima del KO, innesca automaticamente\nEsplosione.",
+            "ja": "ひんし状態になる直前にだいばくはつを使う",
+            "ko": "기절 상태가 되기 직전에 대폭발을 사용한다",
+            "zh": "陷入瀕死狀態前會使出大爆炸。"
           }
         }
       }
@@ -6683,6 +6514,52 @@
             "ja": "技で攻撃を受けたときに\n自分の素早さをぐーんとあげる",
             "ko": "기술로 공격받았을 때\n자신의 스피드가 크게 오른다",
             "zh": "受到招式攻擊時，\n會大幅提高自己的速度。"
+          }
+        },
+        "passive2": {
+          "id": 0,
+          "name": {
+            "de": "Volltrefferquote↑ 1",
+            "en": "Zero In 1",
+            "es": "Crítico Fácil +1",
+            "fr": "Capa. Crit. ↑ 1",
+            "it": "Attaccolpo 1",
+            "ja": "技急所狙い１",
+            "ko": "기술급소노림1",
+            "zh": "招式瞄準要害１"
+          },
+          "description": {
+            "de": "Erhöht die Volltrefferquote der Attacken des\nPokémon.",
+            "en": "Critical hits land more easily when an attack move is used.",
+            "es": "Los movimientos suelen ser críticos.",
+            "fr": "Les attaques du Pokémon ont un taux de critique\nplus élevé.",
+            "it": "Aumenta la probabilità di mandare a segno\nun brutto colpo con attacchi semplici.",
+            "ja": "技で攻撃すると急所に当たりやすい",
+            "ko": "기술로 공격하면 급소에 맞기 쉽다",
+            "zh": "使出招式攻擊時，容易擊中要害。"
+          }
+        },
+        "passive3": {
+          "id": 0,
+          "name": {
+            "de": "P-Attacken-Initiative↑ 2",
+            "en": "Fast-Track 2",
+            "es": "Acción Veloz +2",
+            "fr": "Célérité 2",
+            "it": "Marcia in più 2",
+            "ja": "Ｐ技後素早さアップ２",
+            "ko": "P기술후스피드업2",
+            "zh": "寶可夢出招後速度↑２"
+          },
+          "description": {
+            "de": "Erhöht nach Einsatz einer Attacke des Pokémon\neventuell die Initiative.",
+            "en": "Has a moderate chance of raising the Pokémon’s Speed after it uses a move.",
+            "es": "A veces aumenta la Velocidad tras usar un movimiento.",
+            "fr": "Augmente la Vitesse du Pokémon quand il utilise\nune capacité (assez rarement).",
+            "it": "Quando il Pokémon usa una mossa,\na volte la sua Velocità aumenta.",
+            "ja": "ポケモンが技をつかったときに\nたまに自分の素早さをあげる",
+            "ko": "포켓몬이 기술을 사용하면\n가끔 자신의 스피드가 오른다",
+            "zh": "在寶可夢使出招式時，\n偶爾會提高自己的速度。"
           }
         }
       }
@@ -7071,14 +6948,14 @@
       "passive2": {
         "id": 21010101,
         "name": {
-          "de": "Gegentr.-Ang.-Absorption 9",
-          "en": "Power Siphon 9",
-          "es": "Daño Absorbente +9",
-          "fr": "Réflexe Drain Attaque 9",
-          "it": "Reazione assorbiattacco 9",
-          "ja": "被攻撃時攻撃能力吸収９",
-          "ko": "피격시공격능력흡수9",
-          "zh": "被攻擊時攻擊能力吸收９"
+          "de": "Volltrefferschutz",
+          "en": "Vigilance",
+          "es": "Inmunidad Golpes Críticos",
+          "fr": "Immunité Critique",
+          "it": "Barriercolpo",
+          "ja": "急所無効",
+          "ko": "급소무효",
+          "zh": "擊中要害無效"
         },
         "description": {
           "de": "Schützt vor gegnerischen Volltreffern.",
@@ -7286,14 +7163,14 @@
       "passive2": {
         "id": 22010501,
         "name": {
-          "de": "Sonnen-Leiste↑ 2",
-          "en": "Speeding Sun 2",
-          "es": "Velocidad Solar +2",
-          "fr": "Turbo Soleil 2",
-          "it": "Colmasole 2",
-          "ja": "晴れ時わざゲージ加速２",
-          "ko": "맑을시기술게이지가속2",
-          "zh": "晴天時招式計量槽加速２"
+          "de": "↑-Wahrscheinlichkeit↑ 1",
+          "en": "Swag Bag 1",
+          "es": "Efectos Secundarios ↑ +1",
+          "fr": "Baraka 1",
+          "it": "Facileffetto 1",
+          "ja": "アップ確率上昇１",
+          "ko": "업확률상승1",
+          "zh": "提升機率↑１"
         },
         "description": {
           "de": "Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte\nvon Attacken Statuswerte erhöhen.",
@@ -7309,14 +7186,14 @@
       "passive3": {
         "id": 22010301,
         "name": {
-          "de": "Sonnen-Leiste↑ 2",
-          "en": "Speeding Sun 2",
-          "es": "Velocidad Solar +2",
-          "fr": "Turbo Soleil 2",
-          "it": "Colmasole 2",
-          "ja": "晴れ時わざゲージ加速２",
-          "ko": "맑을시기술게이지가속2",
-          "zh": "晴天時招式計量槽加速２"
+          "de": "Senkungschance↑ 1",
+          "en": "On a Roll 1",
+          "es": "Condena +1",
+          "fr": "Pleine Forme 1",
+          "it": "Maluspesso 1",
+          "ja": "ダウン確率上昇１",
+          "ko": "다운확률상승1",
+          "zh": "下降機率提升１"
         },
         "description": {
           "de": "Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte\nvon Attacken Statuswerte senken.",
@@ -7717,14 +7594,14 @@
       "passive2": {
         "id": 13010505,
         "name": {
-          "de": "P-Attacken-Initiative↑ 2",
-          "en": "Fast-Track 2",
-          "es": "Acción Veloz +2",
-          "fr": "Célérité 2",
-          "it": "Marcia in più 2",
-          "ja": "Ｐ技後素早さアップ２",
-          "ko": "P기술후스피드업2",
-          "zh": "寶可夢出招後速度↑２"
+          "de": "Leistenstärke↑ 5",
+          "en": "Power Flux 5",
+          "es": "Condensador +5",
+          "fr": "Condensateur 5",
+          "it": "Condensatore 5",
+          "ja": "わざゲージ分威力上昇５",
+          "ko": "기술게이지분위력상승5",
+          "zh": "威力隨招式計量槽提升５"
         },
         "description": {
           "de": "Erhöht die Stärke von Attacken abhängig davon,\nwie sehr die Attackenleiste aufgefüllt ist.",
@@ -7740,14 +7617,14 @@
       "passive3": {
         "id": 16010305,
         "name": {
-          "de": "P-Attacken-Initiative↑ 2",
-          "en": "Fast-Track 2",
-          "es": "Acción Veloz +2",
-          "fr": "Célérité 2",
-          "it": "Marcia in più 2",
-          "ja": "Ｐ技後素早さアップ２",
-          "ko": "P기술후스피드업2",
-          "zh": "寶可夢出招後速度↑２"
+          "de": "Effektiv-GA-GA-Stärke↑ 5",
+          "en": "Double Down 5",
+          "es": "Mov. Compi Superef. Imp. +5",
+          "fr": "Capa. Duo Ultra-Efficace 5",
+          "it": "Uniefficace 5",
+          "ja": "Ｂ技抜群時威力上昇５",
+          "ko": "B기술발군시위력상승5",
+          "zh": "拍組招式效果絕佳時威力↑５"
         },
         "description": {
           "de": "Erhöht die Stärke von sehr effektiven\nGefährtenattacken.",
@@ -7826,77 +7703,6 @@
           "power": 75,
           "accuracy": 100,
           "maxUses": 3
-        }
-      },
-      "passives": {
-        "passive1": {
-          "id": 18040502,
-          "name": {
-            "de": "P-Attacken-Initiative↑ 2",
-            "en": "Fast-Track 2",
-            "es": "Acción Veloz +2",
-            "fr": "Célérité 2",
-            "it": "Marcia in più 2",
-            "ja": "Ｐ技後素早さアップ２",
-            "ko": "P기술후스피드업2",
-            "zh": "寶可夢出招後速度↑２"
-          },
-          "description": {
-            "de": "Erhöht nach Einsatz einer Attacke des Pokémon\neventuell die Initiative.",
-            "en": "Has a moderate chance of raising the Pokémon’s Speed after it uses a move.",
-            "es": "A veces aumenta la Velocidad tras usar un movimiento.",
-            "fr": "Augmente la Vitesse du Pokémon quand il utilise\nune capacité (assez rarement).",
-            "it": "Quando il Pokémon usa una mossa,\na volte la sua Velocità aumenta.",
-            "ja": "ポケモンが技をつかったときに\nたまに自分の素早さをあげる",
-            "ko": "포켓몬이 기술을 사용하면\n가끔 자신의 스피드가 오른다",
-            "zh": "在寶可夢使出招式時，\n偶爾會提高自己的速度。"
-          }
-        },
-        "passive2": {
-          "id": 13010505,
-          "name": {
-            "de": "P-Attacken-Initiative↑ 2",
-            "en": "Fast-Track 2",
-            "es": "Acción Veloz +2",
-            "fr": "Célérité 2",
-            "it": "Marcia in più 2",
-            "ja": "Ｐ技後素早さアップ２",
-            "ko": "P기술후스피드업2",
-            "zh": "寶可夢出招後速度↑２"
-          },
-          "description": {
-            "de": "Erhöht die Stärke von Attacken abhängig davon,\nwie sehr die Attackenleiste aufgefüllt ist.",
-            "en": "The fuller the move gauge, the more this powers up moves.",
-            "es": "Aumenta la potencia de los movimientos cuanto\nmás llena esté la barra de movimientos.",
-            "fr": "Plus la Jauge Capacité est remplie, plus les\ncapacités du Pokémon sont puissantes.",
-            "it": "Aumenta la potenza delle mosse in proporzione\nalle barrette residue nella barra mosse.",
-            "ja": "わざゲージの残量が多いほど技の威力をあげる",
-            "ko": "남은 기술게이지가 많을수록 기술의 위력이 오른다",
-            "zh": "招式計量槽的剩餘量越多，招式的威力就提高得越多。"
-          }
-        },
-        "passive3": {
-          "id": 16010305,
-          "name": {
-            "de": "P-Attacken-Initiative↑ 2",
-            "en": "Fast-Track 2",
-            "es": "Acción Veloz +2",
-            "fr": "Célérité 2",
-            "it": "Marcia in più 2",
-            "ja": "Ｐ技後素早さアップ２",
-            "ko": "P기술후스피드업2",
-            "zh": "寶可夢出招後速度↑２"
-          },
-          "description": {
-            "de": "Erhöht die Stärke von sehr effektiven\nGefährtenattacken.",
-            "en": "Powers up sync moves that are super effective.",
-            "es": "Aumenta la potencia del movimiento compi\ncuando este resulta supereficaz.",
-            "fr": "Augmente la puissance des capacités Duo super\nefficaces.",
-            "it": "Quando un'Unimossa è superefficace, aumenta\nla potenza delle Unimosse superefficaci.",
-            "ja": "効果抜群のときにバディーズわざの威力をあげる",
-            "ko": "효과가 굉장한 버디즈기술의 위력이 오른다",
-            "zh": "當拍組招式的效果絕佳時，會提高該招式的威力。"
-          }
         }
       }
     },

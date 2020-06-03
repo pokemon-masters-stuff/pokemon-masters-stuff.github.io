@@ -429,6 +429,28 @@ const UI = {
     ko: '기술 이름 약어로 도와주세요',
     zh: '請幫助我提供技能名稱縮寫',
   },
+
+  'Sync Grid': {
+    de: 'Gefährtensteinbrett',
+    en: 'Sync Grid',
+    es: 'Tablero Piedra Compi',
+    fr: 'Plateau Duo-Gemme',
+    it: 'Teca Pietra Unità',
+    ja: 'バディストーンボード',
+    ko: '버디스톤보드',
+    zh: '拍檔石盤"',
+  },
+  // Moves & Skills
+  'Moves & Skills': {
+    de: 'Att./Fähigk. erlernen',
+    en: 'Moves & Skills',
+    es: 'Aprender mov./hab',
+    fr: 'Capacités et talents',
+    it: 'Mosse e abilità pass',
+    ja: 'わざ・スキル習得',
+    ko: '기술・스킬 습득',
+    zh: '招式／技能',
+  },
 };
 
 export default UI;

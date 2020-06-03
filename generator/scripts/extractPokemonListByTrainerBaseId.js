@@ -450,7 +450,7 @@ const extractPokemonListByTrainerBaseId = () => {
           ...passives,
           passive2: {
             id: passive2Id,
-            name: passive1NameByLanguage,
+            name: passive2NameByLanguage,
             description: passive2DescriptionByLanguage,
           },
         });
@@ -459,7 +459,7 @@ const extractPokemonListByTrainerBaseId = () => {
           ...passives,
           passive3: {
             id: passive3Id,
-            name: passive1NameByLanguage,
+            name: passive3NameByLanguage,
             description: passive3DescriptionByLanguage,
           },
         });
@@ -809,20 +809,20 @@ const extractPokemonListByTrainerBaseId = () => {
 
         languages.forEach((language) => {
           megaPassive1NameByLanguage[language] =
-            passiveNameDB[language][passive1Id];
+            passiveNameDB[language][monsterMegaFormEntry.passive1Id];
           megaPassive2NameByLanguage[language] =
-            passiveNameDB[language][passive2Id];
+            passiveNameDB[language][monsterMegaFormEntry.passive2Id];
           megaPassive3NameByLanguage[language] =
-            passiveNameDB[language][passive3Id];
+            passiveNameDB[language][monsterMegaFormEntry.passive3Id];
           megaPassive1DescriptionByLanguage[language] =
-            passiveDescriptionDB[language][passive1Id];
+            passiveDescriptionDB[language][monsterMegaFormEntry.passive1Id];
           megaPassive2DescriptionByLanguage[language] =
-            passiveDescriptionDB[language][passive2Id];
+            passiveDescriptionDB[language][monsterMegaFormEntry.passive2Id];
           megaPassive3DescriptionByLanguage[language] =
-            passiveDescriptionDB[language][passive3Id];
+            passiveDescriptionDB[language][monsterMegaFormEntry.passive3Id];
         });
 
-        passive1Id !== 0 &&
+        monsterMegaFormEntry.passive1Id !== 0 &&
           (megaPassives = {
             ...megaPassives,
             passive1: {
@@ -831,21 +831,21 @@ const extractPokemonListByTrainerBaseId = () => {
               description: megaPassive1DescriptionByLanguage,
             },
           });
-        passive2Id !== 0 &&
+        monsterMegaFormEntry.passive2Id !== 0 &&
           (megaPassives = {
             ...megaPassives,
             passive2: {
               id: passive2Id,
-              name: megaPassive1NameByLanguage,
+              name: megaPassive2NameByLanguage,
               description: megaPassive2DescriptionByLanguage,
             },
           });
-        passive3Id !== 0 &&
+        monsterMegaFormEntry.passive3Id !== 0 &&
           (megaPassives = {
             ...megaPassives,
             passive3: {
               id: passive3Id,
-              name: megaPassive1NameByLanguage,
+              name: megaPassive3NameByLanguage,
               description: megaPassive3DescriptionByLanguage,
             },
           });
