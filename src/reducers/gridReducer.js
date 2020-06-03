@@ -30,7 +30,7 @@ const initialState = {
     name: '',
   },
   url: '',
-  syncLevel: '3+',
+  syncLevel: '5',
 };
 
 export default function (state = initialState, action) {
@@ -95,6 +95,13 @@ export default function (state = initialState, action) {
         },
       };
     case LOAD_SELECTED_BUILD:
+      let syncLevelToLoad =
+        state.savedBuilds.byIds[action.payload.buildId].syncLevel;
+      if (!syncLevelToLoad) {
+        syncLevelToLoad = '5';
+      } else if (syncLevelToLoad === '3+') {
+        syncLevelToLoad = '3';
+      }
       return {
         ...state,
         selectedCellsById:
@@ -104,8 +111,7 @@ export default function (state = initialState, action) {
           state.savedBuilds.byIds[action.payload.buildId].remainingEnergy,
         orbSpent: state.savedBuilds.byIds[action.payload.buildId].orbSpent,
         url: state.savedBuilds.byIds[action.payload.buildId].url,
-        syncLevel:
-          state.savedBuilds.byIds[action.payload.buildId].syncLevel || '3+', // old saves don't have sync level
+        syncLevel: syncLevelToLoad, // old saves don't have sync level
       };
     case DELETE_SELECTED_BUILD:
       const updateSavedBuildsById = { ...state.savedBuilds.byIds };
@@ -167,13 +173,10 @@ export default function (state = initialState, action) {
         }
         b64GridUrlArray = '&grid=' + window.btoa(chArray.join(''));
       }
-      let syncLevelForUrl = state.syncLevel;
-      if (state.syncLevel === '3+') {
-        syncLevelForUrl = '3';
-      }
+
       return {
         ...state,
-        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}&s=${syncLevelForUrl}`,
+        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}&s=${state.syncLevel}`,
       };
     case SET_SYNC_LEVEL:
       return {

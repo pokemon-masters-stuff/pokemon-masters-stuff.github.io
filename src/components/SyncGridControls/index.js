@@ -68,6 +68,7 @@ function SyncGridControls(props) {
       justify="space-evenly"
       style={{ marginTop: 0 }}
     >
+      <LoginOrRegisterModal />
       <Grid item>
         <SelectPokemonDropdown
           selectedPokemon={selectedPokemon}
@@ -75,7 +76,6 @@ function SyncGridControls(props) {
         />
         <SyncLevelDropdown />
       </Grid>
-
       <Grid item>
         <Button
           variant="outlined"
@@ -86,7 +86,6 @@ function SyncGridControls(props) {
           {UI['Selected'][language]}
         </Button>
       </Grid>
-
       <Grid item>
         <div style={{ marginTop: 10, paddingBottom: 10 }}>
           <ShareButtonMobile
@@ -96,7 +95,6 @@ function SyncGridControls(props) {
           />
         </div>
       </Grid>
-
       <Grid item>
         <div style={{ marginTop: 10, paddingBottom: 10 }}>
           <SaveBuildButtonMobile
@@ -106,7 +104,6 @@ function SyncGridControls(props) {
           />
         </div>
       </Grid>
-
       <Grid item>
         <div>
           <LoadBuildDropdown
@@ -115,15 +112,13 @@ function SyncGridControls(props) {
           />
         </div>
       </Grid>
-
       <Grid item>
         <div style={{ marginTop: 10, paddingBottom: 10 }}>
           <PublishBuildButtonMobile />
         </div>
       </Grid>
-
-      <Grid item>
-        {isAuthenticated ? (
+      {/* <Grid item> */}
+      {/* {isAuthenticated ? (
           <Button variant="outlined" style={{ marginTop: 10 }}>
             <Link
               to="/builds/popular"
@@ -142,15 +137,12 @@ function SyncGridControls(props) {
             {UI['Popular Builds'][language]}
           </Button>
         )}
-        <LoginOrRegisterModal />
-      </Grid>
-
+      {/* </Grid> */}
       <Grid item>
         <div>
           <MovesAndSkillsButtonMobile />
         </div>
       </Grid>
-
       <Grid item>
         <div style={{ marginTop: 10 }}>
           <ResetGridButtonMobile />

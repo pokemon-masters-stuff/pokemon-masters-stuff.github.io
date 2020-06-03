@@ -442,12 +442,12 @@ const UI = {
   },
   // Moves & Skills
   'Moves & Skills': {
-    de: 'Att./Fähigk. erlernen',
+    de: 'Att./Fähigk.',
     en: 'Moves & Skills',
-    es: 'Aprender mov./hab',
+    es: 'Mov./Hab',
     fr: 'Capacités et talents',
     it: 'Mosse e abilità pass',
-    ja: 'わざ・スキル習得',
+    ja: 'わざ・スキル',
     ko: '기술・스킬 습득',
     zh: '招式／技能',
   },

@@ -30,7 +30,7 @@ function SimpleSelect(props) {
     onChangeHandler(event.target.value);
 
     dispatch(updateUrl(event.target.value));
-    dispatch(setSyncLevel('3+'));
+    dispatch(setSyncLevel('5'));
   };
 
   return (

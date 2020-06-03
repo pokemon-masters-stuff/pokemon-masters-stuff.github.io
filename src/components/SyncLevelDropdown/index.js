@@ -8,7 +8,7 @@ import styles from './styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSyncLevel, updateUrl } from '../../actions/actionCreators';
 
-const syncLevelList = ['3+', '2', '1'];
+const syncLevelList = ['5', '4', '3', '2', '1'];
 
 function SyncLevelDropdown(props) {
   const dispatch = useDispatch();

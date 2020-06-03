@@ -26,6 +26,15 @@ const moveDescriptionDBja = require('../rawdata/ja/move_description_ja.lsd.json'
 const moveDescriptionDBko = require('../rawdata/ko/move_description_ko.lsd.json');
 const moveDescriptionDBzh = require('../rawdata/zh/move_description_zh-TW.lsd.json');
 
+const moveTargetTypeDBde = require('../rawdata/de/move_target_type_de.lsd.json');
+const moveTargetTypeDBen = require('../rawdata/en/move_target_type_en.lsd.json');
+const moveTargetTypeDBes = require('../rawdata/es/move_target_type_es.lsd.json');
+const moveTargetTypeDBfr = require('../rawdata/fr/move_target_type_fr.lsd.json');
+const moveTargetTypeDBit = require('../rawdata/it/move_target_type_it.lsd.json');
+const moveTargetTypeDBja = require('../rawdata/ja/move_target_type_ja.lsd.json');
+const moveTargetTypeDBko = require('../rawdata/ko/move_target_type_ko.lsd.json');
+const moveTargetTypeDBzh = require('../rawdata/zh/move_target_type_zh-TW.lsd.json');
+
 const passiveNameDBde = require('../rawdata/de/passive_skill_name_de.lsd.json');
 const passiveNameDBen = require('../rawdata/en/passive_skill_name_en.lsd.json');
 const passiveNameDBes = require('../rawdata/es/passive_skill_name_es.lsd.json');
@@ -64,6 +73,17 @@ const moveDescriptionDB = {
   ja: moveDescriptionDBja,
   ko: moveDescriptionDBko,
   zh: moveDescriptionDBzh,
+};
+
+const moveTargetTypeDB = {
+  de: moveTargetTypeDBde,
+  en: moveTargetTypeDBen,
+  es: moveTargetTypeDBes,
+  fr: moveTargetTypeDBfr,
+  it: moveTargetTypeDBit,
+  ja: moveTargetTypeDBja,
+  ko: moveTargetTypeDBko,
+  zh: moveTargetTypeDBzh,
 };
 
 const passiveNameDB = {
@@ -147,6 +167,7 @@ const extractPokemonListByTrainerBaseId = () => {
   let trainerNameId = '';
   let moves = {};
   let passives = {};
+
   gridedTrainerList.forEach((trainerBaseIdFromList) => {
     // Find entry in Trainer.json
     let trainer = trainerDB.entries.find(
@@ -278,20 +299,46 @@ const extractPokemonListByTrainerBaseId = () => {
           zh: '',
         };
 
-      languages.forEach((language) => {
-        move1NameByLanguage[language] = moveNameDB[language][move1Id];
-        move2NameByLanguage[language] = moveNameDB[language][move2Id];
-        move3NameByLanguage[language] = moveNameDB[language][move3Id];
-        move4NameByLanguage[language] = moveNameDB[language][move4Id];
-        move1DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move1Id];
-        move2DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move2Id];
-        move3DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move3Id];
-        move4DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move4Id];
-      });
+      let move1TargetTypeByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
+        },
+        move2TargetTypeByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
+        },
+        move3TargetTypeByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
+        },
+        move4TargetTypeByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
+        };
 
       // Use moveId to find move data, eg. power, accuracy, etc. from Move.json
       let move1 = moveDB.entries.find(
@@ -307,6 +354,28 @@ const extractPokemonListByTrainerBaseId = () => {
         (move) => move.moveId.toString() === move4Id.toString()
       );
 
+      languages.forEach((language) => {
+        move1NameByLanguage[language] = moveNameDB[language][move1Id];
+        move2NameByLanguage[language] = moveNameDB[language][move2Id];
+        move3NameByLanguage[language] = moveNameDB[language][move3Id];
+        move4NameByLanguage[language] = moveNameDB[language][move4Id];
+        move1DescriptionByLanguage[language] =
+          moveDescriptionDB[language][move1Id];
+        move2DescriptionByLanguage[language] =
+          moveDescriptionDB[language][move2Id];
+        move3DescriptionByLanguage[language] =
+          moveDescriptionDB[language][move3Id];
+        move4DescriptionByLanguage[language] =
+          moveDescriptionDB[language][move4Id];
+        move1TargetTypeByLanguage[language] =
+          moveTargetTypeDB[language][move1.target];
+        move2TargetTypeByLanguage[language] =
+          moveTargetTypeDB[language][move2.target];
+        move3TargetTypeByLanguage[language] =
+          moveTargetTypeDB[language][move3.target];
+        move4TargetTypeByLanguage[language] =
+          moveTargetTypeDB[language][move4.target];
+      });
       moves = {
         move1: {
           id: move1Id,
@@ -316,6 +385,7 @@ const extractPokemonListByTrainerBaseId = () => {
           group: move1.group,
           type: move1.type,
           target: move1.target,
+          targetType: move1TargetTypeByLanguage,
           gaugeDrain: move1.gaugeDrain,
           power: move1.power,
           accuracy: move1.accuracy,
@@ -329,6 +399,7 @@ const extractPokemonListByTrainerBaseId = () => {
           group: move2.group,
           type: move2.type,
           target: move2.target,
+          targetType: move2TargetTypeByLanguage,
           gaugeDrain: move2.gaugeDrain,
           power: move2.power,
           accuracy: move2.accuracy,
@@ -342,6 +413,7 @@ const extractPokemonListByTrainerBaseId = () => {
           group: move3.group,
           type: move3.type,
           target: move3.target,
+          targetType: move3TargetTypeByLanguage,
           gaugeDrain: move3.gaugeDrain,
           power: move3.power,
           accuracy: move3.accuracy,
@@ -355,6 +427,7 @@ const extractPokemonListByTrainerBaseId = () => {
           group: move4.group,
           type: move4.type,
           target: move4.target,
+          targetType: move4TargetTypeByLanguage,
           gaugeDrain: move4.gaugeDrain,
           power: move4.power,
           accuracy: move4.accuracy,
@@ -625,24 +698,46 @@ const extractPokemonListByTrainerBaseId = () => {
             zh: '',
           };
 
-        languages.forEach((language) => {
-          megaMove1NameByLanguage[language] =
-            moveNameDB[language][monsterMegaFormEntry.move1Id];
-          megaMove2NameByLanguage[language] =
-            moveNameDB[language][monsterMegaFormEntry.move2Id];
-          megaMove3NameByLanguage[language] =
-            moveNameDB[language][monsterMegaFormEntry.move3Id];
-          megaMove4NameByLanguage[language] =
-            moveNameDB[language][monsterMegaFormEntry.move4Id];
-          megaMove1DescriptionByLanguage[language] =
-            moveDescriptionDB[language][monsterMegaFormEntry.move1Id];
-          megaMove2DescriptionByLanguage[language] =
-            moveDescriptionDB[language][monsterMegaFormEntry.move2Id];
-          megaMove3DescriptionByLanguage[language] =
-            moveDescriptionDB[language][monsterMegaFormEntry.move3Id];
-          megaMove4DescriptionByLanguage[language] =
-            moveDescriptionDB[language][monsterMegaFormEntry.move4Id];
-        });
+        let megaMove1TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove2TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove3TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          megaMove4TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          };
 
         // Use megaMoveId to find megaMove data, eg. power, accuracy, etc. from MegaMove.json
         let megaMove1, megaMove2, megaMove3, megaMove4;
@@ -675,6 +770,37 @@ const extractPokemonListByTrainerBaseId = () => {
             ))
           : null;
 
+        languages.forEach((language) => {
+          megaMove1NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move1Id];
+          megaMove2NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move2Id];
+          megaMove3NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move3Id];
+          megaMove4NameByLanguage[language] =
+            moveNameDB[language][monsterMegaFormEntry.move4Id];
+          megaMove1DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move1Id];
+          megaMove2DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move2Id];
+          megaMove3DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move3Id];
+          megaMove4DescriptionByLanguage[language] =
+            moveDescriptionDB[language][monsterMegaFormEntry.move4Id];
+          megaMove1 &&
+            (megaMove1TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][megaMove1.target]);
+          megaMove2 &&
+            (megaMove2TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][megaMove2.target]);
+          megaMove3 &&
+            (megaMove3TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][megaMove3.target]);
+          megaMove4 &&
+            (megaMove4TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][megaMove4.target]);
+        });
+
         megaMove1 &&
           (megaMoves = {
             ...megaMoves,
@@ -686,6 +812,7 @@ const extractPokemonListByTrainerBaseId = () => {
               group: megaMove1.group,
               type: megaMove1.type,
               target: megaMove1.target,
+              targetType: megaMove1TargetTypeByLanguage,
               gaugeDrain: megaMove1.gaugeDrain,
               power: megaMove1.power,
               accuracy: megaMove1.accuracy,
@@ -703,6 +830,7 @@ const extractPokemonListByTrainerBaseId = () => {
               group: megaMove2.group,
               type: megaMove2.type,
               target: megaMove2.target,
+              targetType: megaMove2TargetTypeByLanguage,
               gaugeDrain: megaMove2.gaugeDrain,
               power: megaMove2.power,
               accuracy: megaMove2.accuracy,
@@ -720,6 +848,7 @@ const extractPokemonListByTrainerBaseId = () => {
               group: megaMove3.group,
               type: megaMove3.type,
               target: megaMove3.target,
+              targetType: megaMove3TargetTypeByLanguage,
               gaugeDrain: megaMove3.gaugeDrain,
               power: megaMove3.power,
               accuracy: megaMove3.accuracy,
@@ -737,6 +866,7 @@ const extractPokemonListByTrainerBaseId = () => {
               group: megaMove4.group,
               type: megaMove4.type,
               target: megaMove4.target,
+              targetType: megaMove4TargetTypeByLanguage,
               gaugeDrain: megaMove4.gaugeDrain,
               power: megaMove4.power,
               accuracy: megaMove4.accuracy,

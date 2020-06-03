@@ -47,12 +47,9 @@ class GridMap extends Component {
     let syncLevelFromUrl;
     if (getQueryStringValue('s')) {
       syncLevelFromUrl = getQueryStringValue('s');
-      if (syncLevelFromUrl === '3') {
-        syncLevelFromUrl = '3+';
-      }
       this.props.setSyncLevel(syncLevelFromUrl);
     } else {
-      this.props.setSyncLevel('3+');
+      this.props.setSyncLevel('5');
     }
 
     // if user uses an url that includes grid data, generate gridmap based on url
@@ -208,6 +205,9 @@ class GridMap extends Component {
           name: moveName,
           description: cell.move.description,
           energy: cell.move.energyCost,
+          moveId: cell.ability.moveId,
+          value: cell.ability.value,
+          type: cell.ability.type,
         },
         onMouseEnter: this.mouseEnter,
         onMouseLeave: this.mouseLeave,
