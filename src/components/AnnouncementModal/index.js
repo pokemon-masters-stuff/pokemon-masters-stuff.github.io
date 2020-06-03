@@ -43,6 +43,12 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            6/3/2020:
+            <br />
+            Added Moves and Skills modal. Popular Builds button moved into
+            sidebar.
+            <br />
+            <br />
             5/25/2020:
             <br />
             Added grids for Starmie, Torterra, Empoleon, Sharpedo, and Leavanny.
