@@ -117,27 +117,6 @@ function SyncGridControls(props) {
           <PublishBuildButtonMobile />
         </div>
       </Grid>
-      {/* <Grid item> */}
-      {/* {isAuthenticated ? (
-          <Button variant="outlined" style={{ marginTop: 10 }}>
-            <Link
-              to="/builds/popular"
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              {UI['Popular Builds'][language]}
-            </Link>
-          </Button>
-        ) : (
-          <Button
-            variant="outlined"
-            style={{ marginTop: 10 }}
-            data-toggle="modal"
-            data-target="#loginOrRegisterModal"
-          >
-            {UI['Popular Builds'][language]}
-          </Button>
-        )}
-      {/* </Grid> */}
       <Grid item>
         <div>
           <MovesAndSkillsButtonMobile />

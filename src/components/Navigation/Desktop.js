@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,7 +16,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { DRAWER_WIDTH } from '../../utils/constants';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -28,60 +27,20 @@ import AnnouncementModal from '../AnnouncementModal';
 import ContributeModal from '../ContributeModal';
 import LanguageModal from '../LanguageModal';
 import UI from '../../utils/translations';
+import styles from './styles';
 
 import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
 import ViewColumnIcon from '@material-ui/icons/ViewColumn'; // for teams
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
-  appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${DRAWER_WIDTH}px)`,
-    marginLeft: DRAWER_WIDTH,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  hide: {
-    display: 'none',
-  },
-  drawer: {
-    width: DRAWER_WIDTH,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: DRAWER_WIDTH,
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-  },
-}));
-
-export default function PersistentDrawerLeft() {
+function PersistentDrawerLeft(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const language = useSelector((state) => state.language.currentLanguage);
   const dispatch = useDispatch();
   const handleOnClickLogout = () => {
     dispatch(logout());
   };
-  const classes = useStyles();
-  const theme = useTheme();
+
+  const { classes } = props;
 
   const [isOpened, setisOpened] = React.useState(false);
 
@@ -147,19 +106,15 @@ export default function PersistentDrawerLeft() {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
+            <ChevronLeftIcon />
           </IconButton>
         </div>
         <Divider />
 
-        <List>
+        <List className={classes.listRoot}>
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <ListItem button>
-              <ListItemIcon>
+              <ListItemIcon className={classes.listIcon}>
                 <HomeIcon />
               </ListItemIcon>
               <ListItemText primary={UI['Home'][language]} />
@@ -172,7 +127,7 @@ export default function PersistentDrawerLeft() {
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <ListItem button>
-                <ListItemIcon>
+                <ListItemIcon className={classes.listIcon}>
                   <WhatshotIcon />
                 </ListItemIcon>
                 <ListItemText primary={UI['Popular Builds'][language]} />
@@ -184,7 +139,7 @@ export default function PersistentDrawerLeft() {
               data-toggle="modal"
               data-target="#loginOrRegisterModal"
             >
-              <ListItemIcon>
+              <ListItemIcon className={classes.listIcon}>
                 <WhatshotIcon />
               </ListItemIcon>
               <ListItemText primary={UI['Popular Builds'][language]} />
@@ -235,3 +190,4 @@ export default function PersistentDrawerLeft() {
     </div>
   );
 }
+export default withStyles(styles)(PersistentDrawerLeft);

@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { allSyncGrids } from '../utils/constants';
 
 import {
   DISPLAY_GRID_DATA,
@@ -102,10 +103,44 @@ export default function (state = initialState, action) {
       } else if (syncLevelToLoad === '3+') {
         syncLevelToLoad = '3';
       }
+
+      let oldSelectedCellsById =
+        state.savedBuilds.byIds[action.payload.buildId].selectedCellsById;
+      let updatedSelectedCellsById;
+      // For old save files that don't contain moveId, value, and type, loop through grid to find them.
+      if (!Object.values(oldSelectedCellsById)[0]['type']) {
+        let selectedCellById = {};
+        Object.keys(oldSelectedCellsById).map((cellId) => {
+          allSyncGrids['en'][
+            `${state.savedBuilds.byIds[
+              action.payload.buildId
+            ].pokemon.toLowerCase()}GridDataEN`
+          ].forEach((cellData) => {
+            if (cellData.cellId === Number(cellId)) {
+              selectedCellById = {
+                cellId: cellData.cellId,
+                name: cellData.move.name,
+                description: cellData.move.description,
+                energy: cellData.move.energyCost,
+                moveId: cellData.ability.moveId,
+                value: cellData.ability.value,
+                type: cellData.ability.type,
+              };
+            }
+          });
+
+          updatedSelectedCellsById = {
+            ...updatedSelectedCellsById,
+            [cellId]: selectedCellById,
+          };
+
+          return updatedSelectedCellsById;
+        });
+      }
+
       return {
         ...state,
-        selectedCellsById:
-          state.savedBuilds.byIds[action.payload.buildId].selectedCellsById,
+        selectedCellsById: updatedSelectedCellsById || oldSelectedCellsById,
         selectedBuild: state.savedBuilds.byIds[action.payload.buildId],
         remainingEnergy:
           state.savedBuilds.byIds[action.payload.buildId].remainingEnergy,

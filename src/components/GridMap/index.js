@@ -72,6 +72,9 @@ class GridMap extends Component {
           name: cellData.move.name,
           description: cellData.move.description,
           energy: cellData.move.energyCost,
+          moveId: cellData.ability.moveId,
+          value: cellData.ability.value,
+          type: cellData.ability.type,
         };
 
         return this.props.loadGridFromUrl(
