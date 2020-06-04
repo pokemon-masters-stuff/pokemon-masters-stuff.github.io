@@ -57,6 +57,9 @@ function Moves(props) {
         <TableCell component="th" scope="row">
           {move.name[language]}
         </TableCell>
+        <TableCell align="right">
+          {move.gaugeDrain ? move.gaugeDrain : '-'}
+        </TableCell>
         <TableCell align="right">{move.maxUses ? move.maxUses : '-'}</TableCell>
         <TableCell align="right">
           {move.power
@@ -75,7 +78,7 @@ function Moves(props) {
       </TableRow>
 
       <TableRow className={classes.root}>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={7}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box margin={1}>
               <Table size="small" aria-label="details">
@@ -83,7 +86,6 @@ function Moves(props) {
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">Description</TableCell>
                     <TableCell align="left">Target</TableCell>
-
                     <TableCell align="right">Accuracy</TableCell>
                   </TableRow>
                 </TableHead>
@@ -95,7 +97,6 @@ function Moves(props) {
                     <TableCell align="left">
                       {move.targetType ? move.targetType[language] : '-'}
                     </TableCell>
-
                     <TableCell align="right">
                       {move.accuracy ? move.accuracy + accuracyUpFromGrid : '-'}
                     </TableCell>
@@ -344,11 +345,12 @@ export default function MovesAndSkillsModal(props) {
       </DialogTitle>
       <DialogContent dividers>
         <TableContainer component={Paper}>
-          <Table aria-label="collapsible table">
+          <Table aria-label="collapsible table" size="small">
             <TableHead>
               <TableRow>
                 <TableCell />
                 <TableCell>Moves</TableCell>
+                <TableCell align="right">Gauge</TableCell>
                 <TableCell align="right">MP</TableCell>
                 <TableCell align="right">Base Power</TableCell>
                 <TableCell align="right">Grid</TableCell>
@@ -380,7 +382,7 @@ export default function MovesAndSkillsModal(props) {
         </TableContainer>
 
         <TableContainer component={Paper} style={{ marginTop: 10 }}>
-          <Table aria-label="collapsible table">
+          <Table aria-label="collapsible table" size="small">
             <TableHead>
               <TableRow>
                 <TableCell />
@@ -402,7 +404,7 @@ export default function MovesAndSkillsModal(props) {
         </TableContainer>
 
         <TableContainer component={Paper} style={{ marginTop: 10 }}>
-          <Table aria-label="collapsible table">
+          <Table aria-label="collapsible table" size="small">
             <TableHead>
               <TableRow>
                 <TableCell />
