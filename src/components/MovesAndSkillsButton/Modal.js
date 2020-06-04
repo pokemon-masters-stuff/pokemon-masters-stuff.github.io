@@ -83,7 +83,7 @@ function Moves(props) {
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">Description</TableCell>
                     <TableCell align="left">Target</TableCell>
-
+                    <TableCell align="right">Gauge</TableCell>
                     <TableCell align="right">Accuracy</TableCell>
                   </TableRow>
                 </TableHead>
@@ -95,7 +95,9 @@ function Moves(props) {
                     <TableCell align="left">
                       {move.targetType ? move.targetType[language] : '-'}
                     </TableCell>
-
+                    <TableCell align="right">
+                      {move.gaugeDrain ? move.gaugeDrain : '-'}
+                    </TableCell>
                     <TableCell align="right">
                       {move.accuracy ? move.accuracy + accuracyUpFromGrid : '-'}
                     </TableCell>
