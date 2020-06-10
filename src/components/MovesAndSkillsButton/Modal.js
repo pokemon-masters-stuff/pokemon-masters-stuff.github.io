@@ -239,29 +239,45 @@ export default function MovesAndSkillsModal(props) {
   let hash = {};
 
   selectedCellsArray.forEach((cellData) => {
-    // type = 9 is attack move power up, type = 10 is accuracy up
+    // type = 9 is attack move power up
     if (cellData.type === 9) {
-      !hash.hasOwnProperty(cellData.moveId)
-        ? (hash[cellData.moveId] = {
-            ...hash[cellData.moveId],
-            power: cellData.value,
-          })
-        : (hash[cellData.moveId] = {
-            ...hash[cellData.moveId],
-            power: hash[cellData.moveId].power + cellData.value,
-          });
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          power: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['power']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          power: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          power: (hash[cellData.moveId].power || 0) + cellData.value,
+        };
+      }
     }
+    // type = 10 is accuracy up
     if (cellData.type === 10) {
-      !hash.hasOwnProperty(cellData.moveId)
-        ? (hash[cellData.moveId] = {
-            ...hash[cellData.moveId],
-            accuracy: cellData.value,
-          })
-        : (hash[cellData.moveId] = {
-            ...hash[cellData.moveId],
-            accuracy: hash[cellData.moveId].accuracy || 0 + cellData.value,
-          });
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          accuracy: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['accuracy']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          accuracy: (hash[cellData.moveId].accuracy || 0) + cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          accuracy: (hash[cellData.moveId].accuracy || 0) + cellData.value,
+        };
+      }
     }
+
     return hash;
   });
 
