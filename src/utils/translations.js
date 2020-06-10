@@ -446,7 +446,7 @@ const UI = {
     en: 'Moves & Skills',
     es: 'Mov./Hab',
     fr: 'Capacités et talents',
-    it: 'Mosse e abilità pass',
+    it: 'Mosse e Abilità',
     ja: 'わざ・スキル',
     ko: '기술・스킬 습득',
     zh: '招式／技能',
