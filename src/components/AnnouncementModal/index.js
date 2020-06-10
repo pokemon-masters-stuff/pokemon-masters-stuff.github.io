@@ -43,6 +43,12 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            6/9/2020:
+            <br />
+            Added Italian skill name abbreviations for the new sync grids.
+            Thanks to Jo from Discord!
+            <br />
+            <br />
             6/3/2020:
             <br />
             Added Moves and Skills modal. Popular Builds button moved into
