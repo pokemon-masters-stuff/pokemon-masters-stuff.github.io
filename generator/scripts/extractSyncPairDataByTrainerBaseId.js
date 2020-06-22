@@ -165,6 +165,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
   let monsterBaseId = '';
   let syncMoveId = '';
   let trainerNameId = '';
+  let stats = {};
   let moves = {};
   let passives = {};
 
@@ -539,14 +540,34 @@ const extractSyncPairDataByTrainerBaseId = () => {
           },
         });
 
-      // Use monsterId to find syncMoveId and monsterBaseId in Monster.json
+      // Use monsterId to find stats, syncMoveId and monsterBaseId in Monster.json
       let monster = monsterDB.entries.find(
         (monster) => monster.monsterId.toString() === monsterId.toString()
       );
 
-      syncMoveId = monster.syncMoveId;
+      const {
+        hpValues,
+        atkValues,
+        defValues,
+        spaValues,
+        spdValues,
+        speValues,
+        syncMoveId,
+        monsterBaseId,
+      } = monster;
 
-      monsterBaseId = monster.monsterBaseId;
+      stats = {
+        hpValues,
+        atkValues,
+        defValues,
+        spaValues,
+        spdValues,
+        speValues,
+      };
+
+      // syncMoveId = monster.syncMoveId;
+
+      // monsterBaseId = monster.monsterBaseId;
 
       // Use syncMoveId to find sync move data in Move.json
       let syncMoveNameByLanguage = {
@@ -615,6 +636,23 @@ const extractSyncPairDataByTrainerBaseId = () => {
         monsterMegaFormEntry = monsterVariationDB.entries.find(
           (monster) => monster.monsterId.toString() === monsterId.toString()
         );
+
+        const {
+          atkScale,
+          defScale,
+          spaScale,
+          spdScale,
+          speScale,
+        } = monsterMegaFormEntry;
+
+        stats = {
+          ...stats,
+          atkScale,
+          defScale,
+          spaScale,
+          spdScale,
+          speScale,
+        };
 
         // Use megaMoveId to find megaMove name in megaMove_name_xx.lsd.json
         // Use megaMoveId to find megaMove description in megaMove_description_xx.lsd.json
@@ -999,6 +1037,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterId: monsterId.toString(),
             trainerBaseId: trainerBaseIdFromList,
             trainerNameId,
+            stats,
             moves,
             passives,
             type,
@@ -1012,6 +1051,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterId: monsterId.toString(),
             trainerBaseId: trainerBaseIdFromList,
             trainerNameId,
+            stats,
             moves,
             passives,
             type,
@@ -1046,6 +1086,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId,
+              stats,
               moves,
               passives,
               type,
@@ -1059,6 +1100,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId,
+              stats,
               moves,
               passives,
               type,
@@ -1075,6 +1117,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId: 'No Trainer',
+              stats,
               moves,
               passives,
               type,
@@ -1088,6 +1131,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId: 'No Trainer',
+              stats,
               moves,
               passives,
               type,
