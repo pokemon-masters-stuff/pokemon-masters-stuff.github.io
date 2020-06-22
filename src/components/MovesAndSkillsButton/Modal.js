@@ -42,6 +42,16 @@ function Moves(props) {
     ? selectedMoves[move.id].accuracy || 0
     : 0;
 
+  let moveCategory = '-';
+
+  if (move.category === 1) {
+    moveCategory = 'Physical';
+  } else if (move.category === 2) {
+    moveCategory = 'Special';
+  } else if (move.category === 3) {
+    moveCategory = 'Status';
+  }
+
   return (
     <Fragment>
       <TableRow key={move.name[language]} className={classes.root}>
@@ -85,6 +95,7 @@ function Moves(props) {
                 <TableHead>
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">Description</TableCell>
+                    <TableCell align="right">Category</TableCell>
                     <TableCell align="left">Target</TableCell>
                     <TableCell align="right">Accuracy</TableCell>
                   </TableRow>
@@ -93,6 +104,9 @@ function Moves(props) {
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">
                       {move.description[language]}
+                    </TableCell>
+                    <TableCell align="left">
+                      {move.category ? moveCategory : '-'}
                     </TableCell>
                     <TableCell align="left">
                       {move.targetType ? move.targetType[language] : '-'}
@@ -121,6 +135,16 @@ function SyncMove(props) {
     ? selectedMoves[syncMove.id].power
     : 0;
 
+  let syncMoveCategory = '-';
+
+  if (syncMove.category === 1) {
+    syncMoveCategory = 'Physical';
+  } else if (syncMove.category === 2) {
+    syncMoveCategory = 'Special';
+  } else if (syncMove.category === 3) {
+    syncMoveCategory = 'Status';
+  }
+
   return (
     <Fragment>
       <TableRow key={syncMove.name[language]} className={classes.root}>
@@ -136,6 +160,9 @@ function SyncMove(props) {
 
         <TableCell component="th" scope="row">
           {syncMove.name[language]}
+        </TableCell>
+        <TableCell align="left">
+          {syncMove.category ? syncMoveCategory : '-'}
         </TableCell>
         <TableCell align="right">
           {syncMove.power
@@ -403,6 +430,7 @@ export default function MovesAndSkillsModal(props) {
               <TableRow>
                 <TableCell />
                 <TableCell>Sync Move</TableCell>
+                <TableCell align="right">Category</TableCell>
                 <TableCell align="right">Base Power</TableCell>
                 <TableCell align="right">Grid</TableCell>
                 <TableCell align="right">Total</TableCell>
