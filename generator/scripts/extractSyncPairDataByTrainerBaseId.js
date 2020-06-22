@@ -155,11 +155,11 @@ const gridedTrainerList = [
 // characterId->trainerId
 
 /*
- * Usage i.e: node extractPokemonListByTrainerBaseId.js
+ * Usage i.e: node extractSyncPairDataByTrainerBaseId.js
  * */
 
 const extractSyncPairDataByTrainerBaseId = () => {
-  const monsterAndTrainerList = [];
+  const gridedSyncPairDataArray = [];
   let monsterAndTrainerData = {};
   let monsterId = '';
   let monsterBaseId = '';
@@ -991,7 +991,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
 
       trainerNameId = trainerBase.trainerNameId;
 
-      // Push to monsterAndTrainerList
+      // Push to gridedSyncPairDataArray
       monsterMegaFormBaseId
         ? (monsterAndTrainerData = {
             monsterBaseId: monsterBaseId.toString(),
@@ -1019,7 +1019,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             rarity,
             role,
           });
-      monsterAndTrainerList.push(monsterAndTrainerData);
+      gridedSyncPairDataArray.push(monsterAndTrainerData);
     } else {
       let newMonsterId =
         monsterId.toString().substring(0, monsterId.toString().length - 1) +
@@ -1038,7 +1038,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         );
 
         trainerNameId = trainerBase.trainerNameId;
-        // Push to monsterAndTrainerList
+        // Push to gridedSyncPairDataArray
         monsterMegaFormBaseId
           ? (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
@@ -1066,7 +1066,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               rarity,
               role,
             });
-        monsterAndTrainerList.push(monsterAndTrainerData);
+        gridedSyncPairDataArray.push(monsterAndTrainerData);
       } else {
         monsterMegaFormBaseId
           ? (monsterAndTrainerData = {
@@ -1095,12 +1095,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
               rarity,
               role,
             });
-        monsterAndTrainerList.push(monsterAndTrainerData);
+        gridedSyncPairDataArray.push(monsterAndTrainerData);
       }
     }
   });
 
-  monsterAndTrainerList.forEach((entry) => {
+  gridedSyncPairDataArray.forEach((entry) => {
     if (entry.monsterBaseId) {
       entry.monsterEnglishName = pokemonNameDBen[entry.monsterBaseId];
     }
@@ -1113,14 +1113,14 @@ const extractSyncPairDataByTrainerBaseId = () => {
   });
   fs.writeFile(
     `${__dirname}/../../src/data/allGridedPokemon.json`,
-    JSON.stringify(monsterAndTrainerList),
+    JSON.stringify(gridedSyncPairDataArray),
     (err) => {
       if (err) throw err;
       console.log('Successfully written to file');
     }
   );
 
-  return monsterAndTrainerList;
+  return gridedSyncPairDataArray;
 };
 
 extractSyncPairDataByTrainerBaseId();
