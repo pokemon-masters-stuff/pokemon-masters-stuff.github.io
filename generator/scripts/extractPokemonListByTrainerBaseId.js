@@ -213,6 +213,8 @@ const extractPokemonListByTrainerBaseId = () => {
         passive3Id,
         type,
         weakType,
+        rarity,
+        role,
       } = trainer;
 
       // Use moveId to find move name in move_name_xx.lsd.json
@@ -1001,6 +1003,8 @@ const extractPokemonListByTrainerBaseId = () => {
             passives,
             type,
             weakType,
+            rarity,
+            role,
             megaForm: { moves: megaMoves, passives: megaPassives },
           })
         : (monsterAndTrainerData = {
@@ -1012,6 +1016,8 @@ const extractPokemonListByTrainerBaseId = () => {
             passives,
             type,
             weakType,
+            rarity,
+            role,
           });
       monsterAndTrainerList.push(monsterAndTrainerData);
     } else {
@@ -1044,6 +1050,8 @@ const extractPokemonListByTrainerBaseId = () => {
               passives,
               type,
               weakType,
+              rarity,
+              role,
               megaForm: { moves: megaMoves, passives: megaPassives },
             })
           : (monsterAndTrainerData = {
@@ -1055,6 +1063,8 @@ const extractPokemonListByTrainerBaseId = () => {
               passives,
               type,
               weakType,
+              rarity,
+              role,
             });
         monsterAndTrainerList.push(monsterAndTrainerData);
       } else {
@@ -1069,6 +1079,8 @@ const extractPokemonListByTrainerBaseId = () => {
               passives,
               type,
               weakType,
+              rarity,
+              role,
               megaForm: { moves: megaMoves, passives: megaPassives },
             })
           : (monsterAndTrainerData = {
@@ -1080,6 +1092,8 @@ const extractPokemonListByTrainerBaseId = () => {
               passives,
               type,
               weakType,
+              rarity,
+              role,
             });
         monsterAndTrainerList.push(monsterAndTrainerData);
       }

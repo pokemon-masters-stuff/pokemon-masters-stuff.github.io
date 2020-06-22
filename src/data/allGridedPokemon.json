@@ -228,6 +228,8 @@
     },
     "type": 4,
     "weakType": 9,
+    "rarity": 3,
+    "role": 1,
     "monsterEnglishName": "Pikachu",
     "trainerEnglishName": "Hero"
   },
@@ -460,6 +462,8 @@
     },
     "type": 2,
     "weakType": 3,
+    "rarity": 3,
+    "role": 3,
     "monsterEnglishName": "Torkoal",
     "trainerEnglishName": "Flannery"
   },
@@ -692,6 +696,8 @@
     },
     "type": 2,
     "weakType": 3,
+    "rarity": 4,
+    "role": 1,
     "monsterEnglishName": "Infernape",
     "trainerEnglishName": "Flint"
   },
@@ -924,6 +930,8 @@
     },
     "type": 6,
     "weakType": 4,
+    "rarity": 3,
+    "role": 1,
     "monsterEnglishName": "Dewgong",
     "trainerEnglishName": "Pryce"
   },
@@ -1156,6 +1164,8 @@
     },
     "type": 15,
     "weakType": 6,
+    "rarity": 3,
+    "role": 0,
     "monsterEnglishName": "Haxorus",
     "trainerEnglishName": "Iris"
   },
@@ -1388,6 +1398,8 @@
     },
     "type": 15,
     "weakType": 15,
+    "rarity": 4,
+    "role": 1,
     "monsterEnglishName": "Kingdra",
     "trainerEnglishName": "Clair"
   },
@@ -1620,6 +1632,8 @@
     },
     "type": 5,
     "weakType": 10,
+    "rarity": 5,
+    "role": 2,
     "monsterEnglishName": "Serperior",
     "trainerEnglishName": "Rosa"
   },
@@ -1852,6 +1866,8 @@
     },
     "type": 5,
     "weakType": 2,
+    "rarity": 3,
+    "role": 3,
     "monsterEnglishName": "Vileplume",
     "trainerEnglishName": "Erika"
   },
@@ -2107,6 +2123,8 @@
     },
     "type": 11,
     "weakType": 12,
+    "rarity": 3,
+    "role": 3,
     "monsterEnglishName": "Mew",
     "trainerEnglishName": "Professor Oak"
   },
@@ -2363,6 +2381,8 @@
     },
     "type": 17,
     "weakType": 14,
+    "rarity": 5,
+    "role": 0,
     "megaForm": {
       "moves": {
         "move1": {
@@ -2776,6 +2796,8 @@
     },
     "type": 2,
     "weakType": 13,
+    "rarity": 5,
+    "role": 1,
     "megaForm": {
       "moves": {
         "move2": {
@@ -3053,6 +3075,8 @@
     },
     "type": 14,
     "weakType": 6,
+    "rarity": 5,
+    "role": 3,
     "monsterEnglishName": "Palossand",
     "trainerEnglishName": "Acerola"
   },
@@ -3285,6 +3309,8 @@
     },
     "type": 16,
     "weakType": 12,
+    "rarity": 5,
+    "role": 3,
     "monsterEnglishName": "Liepard",
     "trainerEnglishName": "Grimsley"
   },
@@ -3541,6 +3567,8 @@
     },
     "type": 16,
     "weakType": 7,
+    "rarity": 5,
+    "role": 1,
     "megaForm": {
       "moves": {
         "move1": {
@@ -3859,6 +3887,8 @@
     },
     "type": 4,
     "weakType": 9,
+    "rarity": 4,
+    "role": 1,
     "monsterEnglishName": "Raichu",
     "trainerEnglishName": "Hau"
   },
@@ -4114,6 +4144,8 @@
     },
     "type": 4,
     "weakType": 16,
+    "rarity": 5,
+    "role": 2,
     "monsterEnglishName": "Rotom",
     "trainerEnglishName": "Elesa"
   },
@@ -4393,6 +4425,8 @@
     },
     "type": 11,
     "weakType": 16,
+    "rarity": 5,
+    "role": 2,
     "megaForm": {
       "moves": {
         "move1": {
@@ -4716,6 +4750,8 @@
     },
     "type": 11,
     "weakType": 14,
+    "rarity": 5,
+    "role": 1,
     "monsterEnglishName": "Reuniclus",
     "trainerEnglishName": "Caitlin"
   },
@@ -4971,6 +5007,8 @@
     },
     "type": 11,
     "weakType": 14,
+    "rarity": 5,
+    "role": 3,
     "monsterEnglishName": "Meowstic",
     "trainerEnglishName": "Calem"
   },
@@ -5203,6 +5241,8 @@
     },
     "type": 12,
     "weakType": 13,
+    "rarity": 4,
+    "role": 3,
     "monsterEnglishName": "Masquerain",
     "trainerEnglishName": "Viola"
   },
@@ -5481,6 +5521,8 @@
     },
     "type": 8,
     "weakType": 3,
+    "rarity": 5,
+    "role": 1,
     "monsterEnglishName": "Salazzle",
     "trainerEnglishName": "Plumeria"
   },
@@ -5713,6 +5755,8 @@
     },
     "type": 12,
     "weakType": 4,
+    "rarity": 5,
+    "role": 0,
     "monsterEnglishName": "Golisopod",
     "trainerEnglishName": "Guzma"
   },
@@ -5991,6 +6035,8 @@
     },
     "type": 4,
     "weakType": 7,
+    "rarity": 5,
+    "role": 3,
     "monsterEnglishName": "Heliolisk",
     "trainerEnglishName": "Clemont"
   },
@@ -6223,6 +6269,8 @@
     },
     "type": 10,
     "weakType": 13,
+    "rarity": 3,
+    "role": 2,
     "monsterEnglishName": "Swanna",
     "trainerEnglishName": "Skyla"
   },
@@ -6456,6 +6504,8 @@
     },
     "type": 7,
     "weakType": 2,
+    "rarity": 3,
+    "role": 0,
     "megaForm": {
       "moves": {
         "move1": {
@@ -6757,6 +6807,8 @@
     },
     "type": 9,
     "weakType": 6,
+    "rarity": 5,
+    "role": 0,
     "megaForm": {
       "moves": {
         "move1": {
@@ -7192,6 +7244,8 @@
     },
     "type": 3,
     "weakType": 4,
+    "rarity": 5,
+    "role": 3,
     "monsterEnglishName": "Milotic",
     "trainerEnglishName": "Wallace"
   },
@@ -7425,6 +7479,8 @@
     },
     "type": 17,
     "weakType": 3,
+    "rarity": 5,
+    "role": 2,
     "megaForm": {
       "passives": {
         "passive1": {
@@ -7708,6 +7764,8 @@
     },
     "type": 7,
     "weakType": 14,
+    "rarity": 5,
+    "role": 0,
     "megaForm": {
       "moves": {
         "move1": {
@@ -8056,6 +8114,8 @@
     },
     "type": 3,
     "weakType": 4,
+    "rarity": 3,
+    "role": 2,
     "monsterEnglishName": "Starmie",
     "trainerEnglishName": "Misty"
   },
@@ -8311,6 +8371,8 @@
     },
     "type": 5,
     "weakType": 12,
+    "rarity": 5,
+    "role": 2,
     "monsterEnglishName": "Torterra",
     "trainerEnglishName": "Dawn"
   },
@@ -8589,6 +8651,8 @@
     },
     "type": 12,
     "weakType": 2,
+    "rarity": 5,
+    "role": 1,
     "monsterEnglishName": "Leavanny",
     "trainerEnglishName": "Burgh"
   },
@@ -8821,6 +8885,8 @@
     },
     "type": 3,
     "weakType": 5,
+    "rarity": 3,
+    "role": 1,
     "monsterEnglishName": "Empoleon",
     "trainerEnglishName": "Barry"
   },
@@ -9100,6 +9166,8 @@
     },
     "type": 3,
     "weakType": 18,
+    "rarity": 5,
+    "role": 0,
     "megaForm": {
       "moves": {
         "move1": {
