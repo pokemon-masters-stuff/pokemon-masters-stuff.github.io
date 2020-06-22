@@ -158,7 +158,7 @@ const gridedTrainerList = [
  * Usage i.e: node extractPokemonListByTrainerBaseId.js
  * */
 
-const extractPokemonListByTrainerBaseId = () => {
+const extractSyncPairDataByTrainerBaseId = () => {
   const monsterAndTrainerList = [];
   let monsterAndTrainerData = {};
   let monsterId = '';
@@ -1123,4 +1123,4 @@ const extractPokemonListByTrainerBaseId = () => {
   return monsterAndTrainerList;
 };
 
-extractPokemonListByTrainerBaseId();
+extractSyncPairDataByTrainerBaseId();
