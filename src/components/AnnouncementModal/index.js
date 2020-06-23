@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            6/23/2020:
+            <br />
+            Added stats to the Moves&Skills modal.
+            <br />
+            <br />
             6/9/2020:
             <br />
             Added Italian skill name abbreviations for the new sync grids.
