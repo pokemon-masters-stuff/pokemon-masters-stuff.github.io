@@ -443,7 +443,7 @@ const UI = {
   // Moves & Skills
   'Moves & Skills': {
     de: 'Att./Fähigk.',
-    en: 'Moves & Skills',
+    en: 'Stats/Moves/Skills',
     es: 'Mov./Hab',
     fr: 'Capacités et talents',
     it: 'Mosse e Abilità',
