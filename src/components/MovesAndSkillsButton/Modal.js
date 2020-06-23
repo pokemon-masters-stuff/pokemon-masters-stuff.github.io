@@ -18,6 +18,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import UI from '../../utils/translations';
+import RarityDropdown from './RarityDropdown';
+import PotentialDropdown from './PotentialDropdown';
 import { getPokemonDataByName } from '../../utils/functions';
 
 const useRowStyles = makeStyles({
@@ -27,6 +29,193 @@ const useRowStyles = makeStyles({
     },
   },
 });
+
+function Stats(props) {
+  const {
+    statsPlusPotential,
+    selectedStatTiles,
+    rarity,
+    selectedRarity,
+    isMega,
+  } = props;
+
+  const {
+    hp,
+    atk,
+    def,
+    spa,
+    spd,
+    spe,
+    atkScale,
+    defScale,
+    spaScale,
+    spdScale,
+    speScale,
+  } = statsPlusPotential;
+
+  const classes = useRowStyles();
+
+  let hpUpFromGrid,
+    atkUpFromGrid,
+    defUpFromGrid,
+    spaUpFromGrid,
+    spdUpFromGrid,
+    speUpFromGrid;
+
+  if (selectedStatTiles) {
+    hpUpFromGrid = selectedStatTiles.hp || 0;
+    atkUpFromGrid = selectedStatTiles.atk || 0;
+    defUpFromGrid = selectedStatTiles.def || 0;
+    spaUpFromGrid = selectedStatTiles.spa || 0;
+    spdUpFromGrid = selectedStatTiles.spd || 0;
+    speUpFromGrid = selectedStatTiles.spe || 0;
+  }
+
+  let baseHp =
+    rarity === 3 && selectedRarity === 3
+      ? Math.floor(
+          hp[3] +
+            ((115 - 100) * (hp[4] - hp[3])) / (120 - 100) +
+            (selectedRarity - rarity) * 40
+        )
+      : hp[4] + (selectedRarity - rarity) * 40;
+
+  let baseAtk =
+    rarity === 3 && selectedRarity === 3
+      ? Math.floor(
+          (atk[3] +
+            ((115 - 100) * (atk[4] - atk[3])) / (120 - 100) +
+            (selectedRarity - rarity) * 20) *
+            (isMega ? atkScale / 100 : 1)
+        )
+      : Math.floor(
+          (atk[4] + (selectedRarity - rarity) * 20) *
+            (isMega ? atkScale / 100 : 1)
+        );
+
+  let baseDef =
+    rarity === 3 && selectedRarity === 3
+      ? Math.floor(
+          (def[3] +
+            ((115 - 100) * (def[4] - def[3])) / (120 - 100) +
+            (selectedRarity - rarity) * 20) *
+            (isMega ? defScale / 100 : 1)
+        )
+      : Math.floor(
+          (def[4] + (selectedRarity - rarity) * 20) *
+            (isMega ? defScale / 100 : 1)
+        );
+
+  let baseSpa =
+    rarity === 3 && selectedRarity === 3
+      ? Math.floor(
+          (spa[3] +
+            ((115 - 100) * (spa[4] - spa[3])) / (120 - 100) +
+            (selectedRarity - rarity) * 20 * (spaScale / 100)) *
+            (isMega ? spaScale / 100 : 1)
+        )
+      : Math.floor(
+          (spa[4] + (selectedRarity - rarity) * 20) *
+            (isMega ? spaScale / 100 : 1)
+        );
+
+  let baseSpd =
+    rarity === 3 && selectedRarity === 3
+      ? Math.floor(
+          (spd[3] +
+            ((115 - 100) * (spd[4] - spd[3])) / (120 - 100) +
+            (selectedRarity - rarity) * 20) *
+            (isMega ? spdScale / 100 : 1)
+        )
+      : Math.floor(
+          (spd[4] + (selectedRarity - rarity) * 20) *
+            (isMega ? spdScale / 100 : 1)
+        );
+
+  let baseSpe =
+    rarity === 3 && selectedRarity === 3
+      ? Math.floor(
+          (spe[3] +
+            ((115 - 100) * (spe[4] - spe[3])) / (120 - 100) +
+            (selectedRarity - rarity) * 20) *
+            (isMega ? speScale / 100 : 1)
+        )
+      : Math.floor(
+          (spe[4] + (selectedRarity - rarity) * 20) *
+            (isMega ? speScale / 100 : 1)
+        );
+
+  return (
+    <Fragment>
+      <TableRow key="hp" className={classes.root}>
+        <TableCell></TableCell>
+        <TableCell component="th" scope="row">
+          HP
+        </TableCell>
+        <TableCell align="right">{baseHp}</TableCell>
+        <TableCell align="right">{hpUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">
+          {hpUpFromGrid ? baseHp + hpUpFromGrid : baseHp}
+        </TableCell>
+      </TableRow>
+      <TableRow key="atk" className={classes.root}>
+        <TableCell></TableCell>
+        <TableCell component="th" scope="row">
+          Attack
+        </TableCell>
+        <TableCell align="right">{baseAtk}</TableCell>
+        <TableCell align="right">{atkUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">
+          {atkUpFromGrid ? baseAtk + atkUpFromGrid : baseAtk}
+        </TableCell>
+      </TableRow>
+      <TableRow key="def" className={classes.root}>
+        <TableCell></TableCell>
+        <TableCell component="th" scope="row">
+          Defense
+        </TableCell>
+        <TableCell align="right">{baseDef}</TableCell>
+        <TableCell align="right">{defUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">
+          {defUpFromGrid ? baseDef + defUpFromGrid : baseDef}
+        </TableCell>
+      </TableRow>
+      <TableRow key="spa" className={classes.root}>
+        <TableCell></TableCell>
+        <TableCell component="th" scope="row">
+          Sp.Atk
+        </TableCell>
+        <TableCell align="right">{baseSpa}</TableCell>
+        <TableCell align="right">{spaUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">
+          {spaUpFromGrid ? baseSpa + spaUpFromGrid : baseSpa}
+        </TableCell>
+      </TableRow>
+      <TableRow key="spd" className={classes.root}>
+        <TableCell></TableCell>
+        <TableCell component="th" scope="row">
+          Sp.Def
+        </TableCell>
+        <TableCell align="right">{baseSpd}</TableCell>
+        <TableCell align="right">{spdUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">
+          {spdUpFromGrid ? baseSpd + spdUpFromGrid : baseSpd}
+        </TableCell>
+      </TableRow>
+      <TableRow key="spe" className={classes.root}>
+        <TableCell></TableCell>
+        <TableCell component="th" scope="row">
+          Speed
+        </TableCell>
+        <TableCell align="right">{baseSpe}</TableCell>
+        <TableCell align="right">{speUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">
+          {speUpFromGrid ? baseSpe + speUpFromGrid : baseSpe}
+        </TableCell>
+      </TableRow>
+    </Fragment>
+  );
+}
 
 function Moves(props) {
   const { language, move, selectedMoves, syncLevel } = props;
@@ -266,6 +455,126 @@ export default function MovesAndSkillsModal(props) {
   let hash = {};
 
   selectedCellsArray.forEach((cellData) => {
+    // type = 1 is hp up
+    if (cellData.type === 1) {
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          hp: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['hp']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          hp: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          hp: (hash[cellData.moveId].hp || 0) + cellData.value,
+        };
+      }
+    }
+
+    // type = 2 is atk up
+    if (cellData.type === 2) {
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          atk: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['atk']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          atk: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          atk: (hash[cellData.moveId].atk || 0) + cellData.value,
+        };
+      }
+    }
+
+    // type = 3 is def up
+    if (cellData.type === 3) {
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          def: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['def']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          def: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          def: (hash[cellData.moveId].def || 0) + cellData.value,
+        };
+      }
+    }
+
+    // type = 4 is spa up
+    if (cellData.type === 4) {
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spa: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['spa']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spa: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spa: (hash[cellData.moveId].spa || 0) + cellData.value,
+        };
+      }
+    }
+
+    // type = 5 is spd up
+    if (cellData.type === 5) {
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spd: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['spd']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spd: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spd: (hash[cellData.moveId].spd || 0) + cellData.value,
+        };
+      }
+    }
+
+    // type = 6 is spe up
+    if (cellData.type === 6) {
+      if (!hash[cellData.moveId]) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spe: cellData.value,
+        };
+      } else if (!hash[cellData.moveId]['spe']) {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spe: cellData.value,
+        };
+      } else {
+        hash[cellData.moveId] = {
+          ...hash[cellData.moveId],
+          spe: (hash[cellData.moveId].spe || 0) + cellData.value,
+        };
+      }
+    }
+
     // type = 9 is attack move power up
     if (cellData.type === 9) {
       if (!hash[cellData.moveId]) {
@@ -314,9 +623,42 @@ export default function MovesAndSkillsModal(props) {
 
   const pokemonData = getPokemonDataByName(pokemon);
 
-  const { moves, passives, megaForm } = pokemonData;
+  const { stats, moves, passives, megaForm, rarity } = pokemonData;
 
   const [isMega, setIsMega] = useState(false);
+
+  const [selectedRarity, setSelectedRarity] = useState(rarity);
+
+  const [selectedPotential, setSelectedPotential] = useState(0);
+
+  let levelBasedOnRarity = selectedRarity === 3 ? '115' : '120';
+
+  let bonusHpFromPotential =
+    rarity === 5 ? selectedPotential * 5 || 0 : selectedPotential * 2 || 0;
+
+  let bonusStatFromPotentialExceptHp =
+    rarity === 5 ? selectedPotential * 2 || 0 : selectedPotential || 0;
+
+  React.useEffect(() => {
+    setSelectedRarity(rarity);
+    setSelectedPotential(0);
+  }, [pokemon]);
+
+  const handleOnChangeRarity = (value) => {
+    let selectedValue;
+    if (value === '★★★') {
+      selectedValue = 3;
+    } else if (value === '★★★★') {
+      selectedValue = 4;
+    } else {
+      selectedValue = 5;
+    }
+    setSelectedRarity(selectedValue);
+  };
+
+  const handleOnChangePotential = (value) => {
+    setSelectedPotential(value);
+  };
 
   const handleOnCloseMovesAndSkillsModal = () => {
     setIsMovesAndSkillsModalVisible(false);
@@ -327,8 +669,33 @@ export default function MovesAndSkillsModal(props) {
     setIsMega(!isMega);
   };
 
+  // let preMegaStats = {
+  //   hp: stats.hpValues.map((stat) => stat + bonusHpFromPotential),
+  //   atk: stats.atkValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+  //   def: stats.defValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+  //   spa: stats.spaValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+  //   spd: stats.spdValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+  //   spe: stats.speValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+  // };
+
+  let statsPlusPotential = {
+    hp: stats.hpValues.map((stat) => stat + bonusHpFromPotential),
+    atk: stats.atkValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+    def: stats.defValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+    spa: stats.spaValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+    spd: stats.spdValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+    spe: stats.speValues.map((stat) => stat + bonusStatFromPotentialExceptHp),
+    atkScale: stats.atkScale || 100,
+    defScale: stats.defScale || 100,
+    spaScale: stats.spaScale || 100,
+    spdScale: stats.spdScale || 100,
+    speScale: stats.speScale || 100,
+  };
+
   const preMegaMoves = [moves.move1, moves.move2, moves.move3, moves.move4];
+
   let preMegaPassives;
+  // let postMegaStats;
   let postMegaMoves;
   let postMegaPassives;
   if (passives.passive3) {
@@ -340,6 +707,26 @@ export default function MovesAndSkillsModal(props) {
   }
 
   if (megaForm) {
+    // postMegaStats = stats.atkScale
+    //   ? {
+    //       hp: preMegaStats.hp,
+    //       atk: preMegaStats.atk.map((stat) =>
+    //         Math.floor((stat * stats.atkScale) / 100)
+    //       ),
+    //       def: preMegaStats.def.map((stat) =>
+    //         Math.floor((stat * stats.defScale) / 100)
+    //       ),
+    //       spa: preMegaStats.spa.map((stat) =>
+    //         Math.floor((stat * stats.spaScale) / 100)
+    //       ),
+    //       spd: preMegaStats.spd.map((stat) =>
+    //         Math.floor((stat * stats.spdScale) / 100)
+    //       ),
+    //       spe: preMegaStats.spe.map((stat) =>
+    //         Math.floor((stat * stats.speScale) / 100)
+    //       ),
+    //     }
+    //   : preMegaStats;
     postMegaMoves = megaForm.moves
       ? [
           megaForm.moves.move1 ? megaForm.moves.move1 : moves.move1,
@@ -387,7 +774,50 @@ export default function MovesAndSkillsModal(props) {
         ) : null}
       </DialogTitle>
       <DialogContent dividers>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} style={{ marginTop: 10 }}>
+          <RarityDropdown
+            rarity={rarity}
+            selectedRarity={selectedRarity}
+            handleOnChangeRarity={handleOnChangeRarity}
+          />
+          <PotentialDropdown
+            selectedPotential={selectedPotential}
+            handleOnChangePotential={handleOnChangePotential}
+          />
+          <Table aria-label="table" size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell />
+                <TableCell>Lv{levelBasedOnRarity} Stats</TableCell>
+                <TableCell align="right">Base</TableCell>
+                <TableCell align="right">Grid</TableCell>
+                <TableCell align="right">Total</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {/* {!isMega ? (
+                <Stats
+                  stats={preMegaStats}
+                  selectedStatTiles={selectedMoves[0]}
+                  rarity={rarity}
+                  selectedRarity={selectedRarity}
+                  isMega={isMega}
+                />
+              ) : ( */}
+              <Stats
+                // stats={postMegaStats}
+                statsPlusPotential={statsPlusPotential}
+                selectedStatTiles={selectedMoves[0]}
+                rarity={rarity}
+                selectedRarity={selectedRarity}
+                isMega={isMega}
+              />
+              {/* )} */}
+            </TableBody>
+          </Table>
+        </TableContainer>
+
+        <TableContainer component={Paper} style={{ marginTop: 10 }}>
           <Table aria-label="collapsible table" size="small">
             <TableHead>
               <TableRow>

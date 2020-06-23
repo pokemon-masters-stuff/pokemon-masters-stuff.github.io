@@ -630,6 +630,11 @@ const extractSyncPairDataByTrainerBaseId = () => {
           .toString()
           .substring(0, monsterBaseId.toString().length - 2) + '51';
 
+      // do the same if pokemon is Mew
+      if (monsterBaseId.toString() === '20015111') {
+        potentialMegaBaseId = monsterBaseId.toString();
+      }
+
       if (pokemonNameDBen[potentialMegaBaseId]) {
         monsterMegaFormBaseId = potentialMegaBaseId;
 
@@ -654,8 +659,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
           speScale,
         };
 
-        // Use megaMoveId to find megaMove name in megaMove_name_xx.lsd.json
-        // Use megaMoveId to find megaMove description in megaMove_description_xx.lsd.json
+        // Use megaMoveId to find megaMove name in move_name_xx.lsd.json
+        // Use megaMoveId to find megaMove description in move_description_xx.lsd.json
         let megaMove1NameByLanguage = {
             de: '',
             en: '',
@@ -779,7 +784,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             zh: '',
           };
 
-        // Use megaMoveId to find megaMove data, eg. power, accuracy, etc. from MegaMove.json
+        // Use megaMoveId to find megaMove data, eg. power, accuracy, etc. from Move.json
         let megaMove1, megaMove2, megaMove3, megaMove4;
         monsterMegaFormEntry.move1Id !== -1
           ? (megaMove1 = moveDB.entries.find(

@@ -1937,6 +1937,7 @@
   },
   {
     "monsterBaseId": "20015111",
+    "monsterMegaFormBaseId": "20015111",
     "monsterId": "20137000000",
     "trainerBaseId": "10013700",
     "trainerNameId": "ch0137",
@@ -1946,7 +1947,12 @@
       "defValues": [10, 54, 81, 200, 240],
       "spaValues": [10, 54, 81, 200, 240],
       "spdValues": [10, 54, 81, 200, 240],
-      "speValues": [10, 54, 81, 200, 240]
+      "speValues": [10, 54, 81, 200, 240],
+      "atkScale": 100,
+      "defScale": 100,
+      "spaScale": 100,
+      "spdScale": 100,
+      "speScale": 100
     },
     "moves": {
       "move1": {
@@ -2197,6 +2203,133 @@
     "weakType": 12,
     "rarity": 3,
     "role": 3,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 126,
+          "name": {
+            "de": "Feuersturm",
+            "en": "Fire Blast",
+            "es": "Llamarada",
+            "fr": "Déflagration",
+            "it": "Fuocobomba",
+            "ja": "だいもんじ",
+            "ko": "불대문자",
+            "zh": "大字爆炎"
+          },
+          "description": {
+            "de": "Fügt dem Ziel in\nsehr seltenen Fällen\nVerbrennungen zu.",
+            "en": "Has a very small chance of leaving the target burned.",
+            "es": "Muy rara vez quema al\nobjetivo.",
+            "fr": "Brûle l'ennemi\n(très rarement).",
+            "it": "Molto raramente scotta\nil bersaglio.",
+            "ja": "すごくまれに相手をやけど状態にする",
+            "ko": "매우 드물게 상대를 화상 상태로 만든다",
+            "zh": "極少數情況下會讓對手陷入灼傷狀態。"
+          },
+          "category": 2,
+          "group": 2,
+          "type": 2,
+          "target": 2,
+          "targetType": {
+            "de": "1 Gegner",
+            "en": "An opponent",
+            "es": "Un rival",
+            "fr": "1 ennemi",
+            "it": "Un nemico",
+            "ja": "相手１体",
+            "ko": "상대 1마리",
+            "zh": "對手１對拍組"
+          },
+          "gaugeDrain": 3,
+          "power": 116,
+          "accuracy": 85,
+          "maxUses": 0
+        },
+        "move2": {
+          "id": 87,
+          "name": {
+            "de": "Donner",
+            "en": "Thunder",
+            "es": "Trueno",
+            "fr": "Fatal-Foudre",
+            "it": "Tuono",
+            "ja": "かみなり",
+            "ko": "번개",
+            "zh": "打雷"
+          },
+          "description": {
+            "de": "Trifft bei Regen\ngarantiert.\nParalysiert das Ziel\neventuell.",
+            "en": "Never misses when the weather is rainy. Has a moderate chance of leaving the target paralyzed.",
+            "es": "Acierta siempre cuando\nllueve.\nA veces paraliza al\nobjetivo.",
+            "fr": "N'échoue jamais quand\nil pleut. Paralyse l'ennemi\n(assez rarement).",
+            "it": "Se piove, va sempre\na segno. A volte\nparalizza il bersaglio.",
+            "ja": "天気があめの場合は攻撃が必ず命中する\nたまに相手をまひ状態にする",
+            "ko": "비가 오는 날씨일 때 공격이 반드시 명중한다\n가끔 상대를 마비 상태로 만든다",
+            "zh": "當天氣為下雨時，攻擊必定會命中。\n偶爾會讓對手陷入麻痺狀態。"
+          },
+          "category": 2,
+          "group": 2,
+          "type": 4,
+          "target": 2,
+          "targetType": {
+            "de": "1 Gegner",
+            "en": "An opponent",
+            "es": "Un rival",
+            "fr": "1 ennemi",
+            "it": "Un nemico",
+            "ja": "相手１体",
+            "ko": "상대 1마리",
+            "zh": "對手１對拍組"
+          },
+          "gaugeDrain": 3,
+          "power": 124,
+          "accuracy": 70,
+          "maxUses": 0
+        },
+        "move4": {
+          "id": 59,
+          "name": {
+            "de": "Blizzard",
+            "en": "Blizzard",
+            "es": "Ventisca",
+            "fr": "Blizzard",
+            "it": "Bora",
+            "ja": "ふぶき",
+            "ko": "눈보라",
+            "zh": "暴風雪"
+          },
+          "description": {
+            "de": "Trifft bei Hagel\ngarantiert.\nFriert das Ziel in sehr\nseltenen Fällen ein.",
+            "en": "Never misses during a hailstorm. Has a very small chance of leaving the target frozen.",
+            "es": "Acierta siempre cuando\ngraniza.\nMuy rara vez congela al\nobjetivo.",
+            "fr": "N'échoue jamais quand\nil grêle. Gèle l'ennemi\n(très rarement).",
+            "it": "Se grandina, va sempre\na segno. Molto raramente\ncongela il bersaglio.",
+            "ja": "天気があられの場合は攻撃が必ず命中する\nすごくまれに相手をこおり状態にする",
+            "ko": "날씨가 싸라기눈일 때 공격이 반드시 명중한다\n매우 드물게 상대를 얼음 상태로 만든다",
+            "zh": "當天氣為冰雹時，攻擊必定會命中。\n極少數情況下會讓對手陷入冰凍狀態。"
+          },
+          "category": 2,
+          "group": 2,
+          "type": 6,
+          "target": 3,
+          "targetType": {
+            "de": "Alle Gegner",
+            "en": "All opponents",
+            "es": "Todos los rivales",
+            "fr": "Tous les ennemis",
+            "it": "Tutti i nemici",
+            "ja": "相手全員",
+            "ko": "상대 전원",
+            "zh": "對手全體拍組"
+          },
+          "gaugeDrain": 3,
+          "power": 126,
+          "accuracy": 70,
+          "maxUses": 0
+        }
+      }
+    },
     "monsterEnglishName": "Mew",
     "trainerEnglishName": "Professor Oak"
   },
