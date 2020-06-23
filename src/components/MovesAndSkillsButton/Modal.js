@@ -84,17 +84,13 @@ function Stats(props) {
   let baseAtk =
     rarity === 3 && selectedRarity === 3
       ? Math.floor(
-          (atk[3] +
-            ((115 - 100) * (atk[4] - atk[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (atk[3] + ((115 - 100) * (atk[4] - atk[3])) / (120 - 100)) *
             (isMega ? atkScale / 100 : 1)
         ) +
         (isMega &&
         atkScale !== 100 &&
         Number.isInteger(
-          (atk[3] +
-            ((115 - 100) * (atk[4] - atk[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (atk[3] + ((115 - 100) * (atk[4] - atk[3])) / (120 - 100)) *
             (atkScale / 100)
         )
           ? -1
@@ -114,17 +110,13 @@ function Stats(props) {
   let baseDef =
     rarity === 3 && selectedRarity === 3
       ? Math.floor(
-          (def[3] +
-            ((115 - 100) * (def[4] - def[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (def[3] + ((115 - 100) * (def[4] - def[3])) / (120 - 100)) *
             (isMega ? defScale / 100 : 1)
         ) +
         (isMega &&
         defScale !== 100 &&
         Number.isInteger(
-          (def[3] +
-            ((115 - 100) * (def[4] - def[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (def[3] + ((115 - 100) * (def[4] - def[3])) / (120 - 100)) *
             (defScale / 100)
         )
           ? -1
@@ -144,17 +136,13 @@ function Stats(props) {
   let baseSpa =
     rarity === 3 && selectedRarity === 3
       ? Math.floor(
-          (spa[3] +
-            ((115 - 100) * (spa[4] - spa[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (spa[3] + ((115 - 100) * (spa[4] - spa[3])) / (120 - 100)) *
             (isMega ? spaScale / 100 : 1)
         ) +
         (isMega &&
         spaScale !== 100 &&
         Number.isInteger(
-          (spa[3] +
-            ((115 - 100) * (spa[4] - spa[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (spa[3] + ((115 - 100) * (spa[4] - spa[3])) / (120 - 100)) *
             (spaScale / 100)
         )
           ? -1
@@ -174,17 +162,13 @@ function Stats(props) {
   let baseSpd =
     rarity === 3 && selectedRarity === 3
       ? Math.floor(
-          (spd[3] +
-            ((115 - 100) * (spd[4] - spd[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (spd[3] + ((115 - 100) * (spd[4] - spd[3])) / (120 - 100)) *
             (isMega ? spdScale / 100 : 1)
         ) +
         (isMega &&
         spdScale !== 100 &&
         Number.isInteger(
-          (spd[3] +
-            ((115 - 100) * (spd[4] - spd[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (spd[3] + ((115 - 100) * (spd[4] - spd[3])) / (120 - 100)) *
             (spdScale / 100)
         )
           ? -1
@@ -204,17 +188,13 @@ function Stats(props) {
   let baseSpe =
     rarity === 3 && selectedRarity === 3
       ? Math.floor(
-          (spe[3] +
-            ((115 - 100) * (spe[4] - spe[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (spe[3] + ((115 - 100) * (spe[4] - spe[3])) / (120 - 100)) *
             (isMega ? speScale / 100 : 1)
         ) +
         (isMega &&
         speScale !== 100 &&
         Number.isInteger(
-          (spe[3] +
-            ((115 - 100) * (spe[4] - spe[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 20) *
+          (spe[3] + ((115 - 100) * (spe[4] - spe[3])) / (120 - 100)) *
             (speScale / 100)
         )
           ? -1
