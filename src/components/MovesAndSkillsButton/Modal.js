@@ -900,7 +900,7 @@ export default function MovesAndSkillsModal(props) {
               <TableRow>
                 <TableCell />
                 <TableCell>Lv{levelBasedOnRarity} Stats</TableCell>
-                <TableCell align="right">Base + Potential</TableCell>
+                <TableCell align="right">Stat (Displayed in-game)</TableCell>
                 <TableCell align="right">
                   {!isMega ? 'Grid' : 'Grid (xMega↑)'}
                 </TableCell>
