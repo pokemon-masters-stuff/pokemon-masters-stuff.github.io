@@ -860,7 +860,7 @@ export default function MovesAndSkillsModal(props) {
             variant="outlined"
             onClick={handleOnClickMegaButton}
           >
-            {isMega ? 'pre-Mega' : 'post-Mega'}
+            {isMega ? 'pre-Mega' : 'Mega'}
           </Button>
         ) : null}
       </DialogTitle>
