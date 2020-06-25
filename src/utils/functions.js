@@ -81,7 +81,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'lucario' ||
       pokemon === 'empoleon' ||
       pokemon === 'leavanny' ||
-      pokemon === 'sharpedo'
+      pokemon === 'sharpedo' ||
+      pokemon === 'emboar' ||
+      pokemon === 'drifblim'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -119,7 +121,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'heliolisk' ||
       pokemon === 'masquerain' ||
       pokemon === 'meowstic' ||
-      pokemon === 'milotic'
+      pokemon === 'milotic' ||
+      pokemon === 'delphox' ||
+      pokemon === 'crobat'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -231,7 +235,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'lucario' ||
       pokemon === 'empoleon' ||
       pokemon === 'leavanny' ||
-      pokemon === 'sharpedo'
+      pokemon === 'sharpedo' ||
+      pokemon === 'emboar' ||
+      pokemon === 'drifblim'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -257,7 +263,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'heliolisk' ||
       pokemon === 'masquerain' ||
       pokemon === 'meowstic' ||
-      pokemon === 'milotic'
+      pokemon === 'milotic' ||
+      pokemon === 'delphox' ||
+      pokemon === 'crobat'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||

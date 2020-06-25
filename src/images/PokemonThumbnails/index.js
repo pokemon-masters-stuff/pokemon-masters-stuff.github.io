@@ -34,12 +34,7 @@ export { default as empoleon } from './pm0395.png';
 export { default as leavanny } from './pm0542.png';
 
 // 6/25/2020
-// export { default as delphox } from './pm0719.png';
-// export { default as emboar } from './pm0500.png';
-// export { default as drifblim } from './pm0426.png';
-// export { default as crobat } from './pm0169.png';
-
-export { default as delphox } from './pm0319.png';
-export { default as emboar } from './pm0319.png';
-export { default as drifblim } from './pm0319.png';
-export { default as crobat } from './pm0319.png';
+export { default as delphox } from './pm0719.png';
+export { default as emboar } from './pm0500.png';
+export { default as drifblim } from './pm0426.png';
+export { default as crobat } from './pm0169.png';
