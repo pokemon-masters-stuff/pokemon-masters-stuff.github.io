@@ -5531,14 +5531,14 @@
       "passive1": {
         "id": 18040101,
         "name": {
-          "de": "Gegnerangriff↓ 1",
+          "de": "Gegnerangriff↓ T 1",
           "en": "Terrify 1",
-          "es": "Bravata +1",
-          "fr": "Dissuasion 1",
-          "it": "Imponenza 1",
-          "ja": "登場時攻撃ダウン１",
-          "ko": "등장시공격다운1",
-          "zh": "上場時攻擊下降１"
+          "es": "Entrada Ataque Riv. M ↓ +1",
+          "fr": "Arrivée Tyran Attaque 1",
+          "it": "Imponenza-G 1",
+          "ja": "登場時攻撃ダウンＧ１",
+          "ko": "등장시공격다운G1",
+          "zh": "上場時攻擊下降Ｇ１"
         },
         "description": {
           "de": "Senkt bei Kampfantritt den Angriff aller\ngegnerischen Gefährten.",
@@ -6071,14 +6071,14 @@
           "zh": "ＨＰ減半時閃避率提升２"
         },
         "description": {
-          "de": "Erhöht den Fluchtwert des Pokémon einmalig\nstark, wenn seine KP erstmals auf oder unter die\nHälfte fallen.",
+          "de": "Erhöht den Fluchtwert des Pokémon stark, wenn\nseine KP erstmals auf oder unter die Hälfte\nfallen.",
           "en": "Sharply raises the user’s evasiveness when the user’s HP drops to half or below for the first time in a battle.",
-          "es": "Aumenta bastante la Evasión del usuario la primera vez que sus PS se reducen a la mitad o menos.",
-          "fr": "La première fois que le Pokémon perd au moins \nla moitié de ses PV, son Esquive augmente\nmodérément (une fois seulement).",
+          "es": "Aumenta bastante la Evasión del usuario la primera vez que sus PS bajan de la mitad.",
+          "fr": "La première fois que le Pokémon perd au moins \nla moitié de ses PV, son Esquive augmente\nmodérément.",
           "it": "Una sola volta per lotta, se i PS dell'Unità\nscendono a metà o meno, la sua elusione\naumenta di molto.",
-          "ja": "初めて自分のＨＰが半分以下になったとき１回だけ\n自分の回避率をぐーんとあげる",
-          "ko": "처음 자신의 HP가 절반 이하가 되었을 때 1번만\n자신의 회피율이 크게 오른다",
-          "zh": "對戰中僅限１次，在自己的ＨＰ首次剩下一半以下時，\n會大幅提高自己的閃避率。"
+          "ja": "初めて自分のＨＰが半分以下になったときだけ\n自分の回避率をぐーんとあげる",
+          "ko": "처음 자신의 HP가 절반 이하가 되었을 때만\n자신의 회피율이 크게 오른다",
+          "zh": "對戰中在自己的ＨＰ首次剩下一半以下時，\n會大幅提高自己的閃避率。"
         }
       }
     },
@@ -8939,7 +8939,7 @@
         "name": {
           "de": "Schlagen wir\nkeine Wurzeln!",
           "en": "Scurry Ahead!",
-          "es": "Sin más dilación...",
+          "es": "Sin más\ndilación...",
           "fr": "Digne de mes\nchefs-d'œuvre !",
           "it": "Bene allora,\niniziamo subito!",
           "ja": "ではでは早速",
@@ -9475,7 +9475,7 @@
         "name": {
           "de": "Wie wär’s mit\neinem Spielchen?",
           "en": "Sink or Swim!",
-          "es": "¿Quieres combatir?",
+          "es": "¿Quieres\ncombatir?",
           "fr": "J'ai un défi à\nte proposer.",
           "it": "Vediamo se\navrete fortuna!",
           "ja": "勝負をしようか",
@@ -9706,5 +9706,1088 @@
     },
     "monsterEnglishName": "Sharpedo",
     "trainerEnglishName": "Grimsley"
+  },
+  {
+    "monsterBaseId": "20050001",
+    "monsterId": "20004000002",
+    "trainerBaseId": "10000400",
+    "trainerNameId": "ch0004",
+    "stats": {
+      "hpValues": [125, 235, 340, 758, 846],
+      "atkValues": [36, 85, 130, 317, 357],
+      "defValues": [21, 32, 41, 85, 93],
+      "spaValues": [24, 43, 61, 127, 143],
+      "spdValues": [23, 34, 43, 87, 95],
+      "speValues": [19, 40, 58, 135, 151]
+    },
+    "moves": {
+      "move1": {
+        "id": 488,
+        "name": {
+          "de": "Nitroladung",
+          "en": "Flame Charge",
+          "es": "Nitrocarga",
+          "fr": "Nitrocharge",
+          "it": "Nitrocarica",
+          "ja": "ニトロチャージ",
+          "ko": "니트로차지",
+          "zh": "蓄能焰襲"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders.",
+          "en": "Raises the user’s Speed.",
+          "es": "Aumenta la Velocidad\ndel usuario.",
+          "fr": "Augmente légèrement\nla Vitesse du lanceur.",
+          "it": "Aumenta la Velocità\ndi chi la usa.",
+          "ja": "自分の素早さをあげる",
+          "ko": "자신의 스피드가 오른다",
+          "zh": "提高自己的速度。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 2,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 30,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19000,
+        "name": {
+          "de": "Trank",
+          "en": "Potion",
+          "es": "Poción",
+          "fr": "Potion",
+          "it": "Pozione",
+          "ja": "キズぐすり",
+          "ko": "상처약",
+          "zh": "傷藥"
+        },
+        "description": {
+          "de": "Stellt einige KP eines\nGefährten wieder her.",
+          "en": "Restores a bit of an ally’s HP.",
+          "es": "Restaura algunos PS a un\naliado.",
+          "fr": "Rend beaucoup de PV\nà un allié.",
+          "it": "Fa recuperare un po'\ndi PS a un'Unità alleata.",
+          "ja": "味方のＨＰを少し回復する",
+          "ko": "같은 편의 HP를 조금 회복한다",
+          "zh": "少量回復我方的ＨＰ。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 0,
+        "targetType": {
+          "de": "1 Gefährte",
+          "en": "An ally",
+          "es": "Un aliado",
+          "fr": "1 allié",
+          "it": "Un alleato",
+          "ja": "味方１体",
+          "ko": "같은 편 1마리",
+          "zh": "我方１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 394,
+        "name": {
+          "de": "Flammenblitz",
+          "en": "Flare Blitz",
+          "es": "Envite Ígneo",
+          "fr": "Boutefeu",
+          "it": "Fuococarica",
+          "ja": "フレアドライブ",
+          "ko": "플레어드라이브",
+          "zh": "閃焰衝鋒"
+        },
+        "description": {
+          "de": "Ist der Anwender\ngefroren, wird er von\ndem Statusproblem\nbefreit.\nDer Anwender erleidet\nein Viertel des beim Ziel\nangerichteten Schadens.\nFügt dem Ziel in\nsehr seltenen Fällen\nVerbrennungen zu.",
+          "en": "Removes the frozen condition from the user. The user also takes 25% of the damage it dealt to the target. Has a very small chance of leaving the target burned.",
+          "es": "Descongela al usuario.\nEl usuario recibe un\ncuarto del daño infligido\nal objetivo.\nMuy rara vez quema al\nobjetivo.",
+          "fr": "Dégèle le lanceur.\nLe lanceur subit un quart\ndes dégâts infligés. Brûle\nl'ennemi (très rarement).",
+          "it": "Molto raramente\nscotta il bersaglio.\nChi la usa guarisce dal\ncongelamento e subisce\nuna quantità di danni\npari a 1/4 del danno\ninflitto.",
+          "ja": "自分のこおり状態を解除する\n相手に与えたダメージの１／４を自分も受ける\nすごくまれに相手をやけど状態にする",
+          "ko": "자신의 얼음 상태를 해제한다\n상대에게 준 데미지의 1/4을 자신도 받는다\n매우 드물게 상대를 화상 상태로 만든다",
+          "zh": "解除自己的冰凍狀態。\n給予對手傷害後自己也會受到１／４的傷害。\n極少數情況下會讓對手陷入灼傷狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 2,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 123,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 10040,
+        "name": {
+          "de": "Für uns ist kein\nGegner zu stark!",
+          "en": "Try and Stop Us!",
+          "es": "¡Suma y sigue!",
+          "fr": "On est là pour\ngagner !",
+          "it": "Siamo qui\nper vincere!",
+          "ja": "負けないわよ！",
+          "ko": "지지않아!",
+          "zh": "我不會輸喲！"
+        },
+        "description": {
+          "de": "Ist die Initiative des\nAnwenders erhöht, wird\nsein Angriff auf das\nDoppelte der Initiative\nerhöht.",
+          "en": "If the user’s Speed has been raised, raises the user’s Attack by double the amount its Speed has been raised.",
+          "es": "Si la Velocidad del\nusuario ha sido\nincrementada, aumenta\nsu Ataque el doble que\nesta.",
+          "fr": "Si la Vitesse du lanceur\na été augmentée,\naugmente son Attaque\ndu double de\nl'augmentation de\nVitesse.",
+          "it": "Se la Velocità di chi la\nusa è aumentata, applica\nall'Attacco il doppio\ndi tale aumento.",
+          "ja": "自分が素早さをあげていると素早さの２倍攻撃をあげる",
+          "ko": "자신의 스피드가 올라가 있으면 스피드의 2배만큼 공격이 오른다",
+          "zh": "當自己的速度處於提高狀態時，按速度提高幅度的２倍提高攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 70400,
+        "name": {
+          "de": "Brandstempel der\nKampfenthusiastin",
+          "en": "Battle Fanatic\nHeat Crash",
+          "es": "Golpe Calor\nCombativo",
+          "fr": "La passion du combat !\nTacle Feu !",
+          "it": "Marchiafuoco combattivo",
+          "ja": "バトル大好きガールの\nヒートスタンプ",
+          "ko": "배틀을 좋아하는 소녀의\n히트스탬프",
+          "zh": "最愛對戰少女之\n高溫重壓"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 2,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 17010101,
+        "name": {
+          "de": "Giftschutz",
+          "en": "Antitoxin",
+          "es": "Inmunidad Veneno",
+          "fr": "Immu. Empoisonnement",
+          "it": "Antitossine",
+          "ja": "どく無効",
+          "ko": "독무효",
+          "zh": "中毒無效"
+        },
+        "description": {
+          "de": "Schützt vor Vergiftungen und schweren\nVergiftungen.",
+          "en": "Prevents the Pokémon from getting poisoned or badly poisoned.",
+          "es": "Impide que el Pokémon sea envenenado o\ngravemente envenenado.",
+          "fr": "Protège de l'empoisonnement et\nl'empoisonnement grave.",
+          "it": "Impedisce all'Unità di venire avvelenata\no iperavvelenata.",
+          "ja": "どく状態やもうどく状態にならない",
+          "ko": "독 상태나 맹독 상태가 되지 않는다",
+          "zh": "不會陷入中毒狀態和劇毒狀態。"
+        }
+      },
+      "passive2": {
+        "id": 11010104,
+        "name": {
+          "de": "Notfallheilung 4",
+          "en": "First Aid 4",
+          "es": "Remedio +4",
+          "fr": "Premiers Soins 4",
+          "it": "Cerottino 4",
+          "ja": "ピンチ時ＨＰ回復４",
+          "ko": "위기시HP회복4",
+          "zh": "危機時ＨＰ回復４"
+        },
+        "description": {
+          "de": "Stellt ein Mal pro Kampf in einer Notsituation\neinige KP wieder her.",
+          "en": "Restores a bit of the Pokémon’s HP once during battle when the Pokémon is in a pinch.",
+          "es": "Una vez por combate, el Pokémon recupera\nalgunos PS en un apuro.",
+          "fr": "Une fois par combat, le Pokémon regagne\nbeaucoup de PV s'il est en mauvaise posture.",
+          "it": "Una volta sola per lotta, fa recuperare\nun po' di PS quando l'Unità è in difficoltà.",
+          "ja": "バトル中に１回だけ\nピンチのときに自分のＨＰを少し回復する",
+          "ko": "배틀 중 1번만 위급할 때 자신의 HP를 조금 회복한다",
+          "zh": "對戰中僅限１次，在陷入危機時會少量回復自己的ＨＰ。"
+        }
+      }
+    },
+    "type": 2,
+    "weakType": 3,
+    "rarity": 5,
+    "role": 0,
+    "monsterEnglishName": "Emboar",
+    "trainerEnglishName": "Hilda"
+  },
+  {
+    "monsterBaseId": "20042600",
+    "monsterId": "20148000000",
+    "trainerBaseId": "10014800",
+    "trainerNameId": "ch0148",
+    "stats": {
+      "hpValues": [104, 196, 283, 624, 700],
+      "atkValues": [18, 68, 116, 303, 343],
+      "defValues": [9, 23, 35, 90, 102],
+      "spaValues": [18, 58, 97, 251, 283],
+      "spdValues": [9, 23, 35, 90, 102],
+      "speValues": [17, 60, 99, 264, 300]
+    },
+    "moves": {
+      "move1": {
+        "id": 247,
+        "name": {
+          "de": "Spukball",
+          "en": "Shadow Ball",
+          "es": "Bola Sombra",
+          "fr": "Ball'Ombre",
+          "it": "Palla Ombra",
+          "ja": "シャドーボール",
+          "ko": "섀도볼",
+          "zh": "暗影球"
+        },
+        "description": {
+          "de": "Senkt in seltenen Fällen\ndie Spezial-Verteidigung\ndes Zieles.",
+          "en": "Has a small chance of lowering the target’s Sp. Def.",
+          "es": "Rara vez reduce la\nDefensa Especial del\nobjetivo.",
+          "fr": "Baisse légèrement\nla Défense Spéciale\nde l'ennemi (rarement).",
+          "it": "Raramente riduce\nla Difesa Speciale\ndel bersaglio.",
+          "ja": "まれに相手の特防をさげる",
+          "ko": "드물게 상대의 특수방어를 떨어뜨린다",
+          "zh": "少數情況下會降低對手的特防。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 14,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 99,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19082,
+        "name": {
+          "de": "Angriffplus+",
+          "en": "Dire Hit +",
+          "es": "Directo+",
+          "fr": "Muscle ++",
+          "it": "Supercolpo+",
+          "ja": "クリティカット＋",
+          "ko": "크리티컬커터+",
+          "zh": "要害攻擊＋"
+        },
+        "description": {
+          "de": "Erhöht die Volltrefferquote\ndes Anwenders stark.",
+          "en": "Sharply raises the user’s critical-hit rate.",
+          "es": "Aumenta bastante la\nprobabilidad del usuario\nde asestar golpes críticos.",
+          "fr": "Augmente modérément\nle taux de critiques du\nlanceur.",
+          "it": "Rende molto più probabili\ni brutti colpi per chi la\nusa.",
+          "ja": "自分の急所率をぐーんとあげる",
+          "ko": "자신의 급소율이 크게 오른다",
+          "zh": "大幅提高自己的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 566,
+        "name": {
+          "de": "Phantomkraft",
+          "en": "Phantom Force",
+          "es": "Golpe Fantasma",
+          "fr": "Hantise",
+          "it": "Spettrotuffo",
+          "ja": "ゴーストダイブ",
+          "ko": "고스트다이브",
+          "zh": "潛靈奇襲"
+        },
+        "description": {
+          "de": "Der Anwender geht in\nden Phantomkraft-\nZustand über. Nach\neiniger Zeit wird der\nZustand aufgehoben und\nder Anwender greift an.\nIm Phantomkraft-Zustand\nkann der Anwender keine\nweiteren Aktionen\ndurchführen. In diesem\nZustand treffen keine\nAngriffe des Gegners.\nWird der Anwender von\neiner Gefährtenattacke\ngetroffen, wird der\nPhantomkraft-Zustand\naufgehoben.",
+          "en": "The user takes on a phantom presence stance. After a set time, this presence fades and the user attacks. No other actions can be taken while in phantom presence. Opponents’ moves will not hit the user while it is in this presence. If the user is hit by a sync move while in phantom presence, the presence will fade.",
+          "es": "El usuario adopta un Estado Etéreo y, tras un período de tiempo, lanza Golpe Fantasma. Mientras tanto, no puede realizar ninguna otra acción y los movimientos de los rivales no le aciertan. Vuelve a la normalidad tras atacar o si sufre el ataque de un movimiento compi del rival.",
+          "fr": "Le lanceur charge\nl'attaque. Après un\ncertain temps, le lanceur\ncesse de la charger et\ninflige des dégâts à\nl'ennemi.\nLe lanceur ne peut rien\nfaire d'autre lorsqu'il\ncharge l'attaque.\nPendant la charge, les\ncapacités des ennemis ne\npeuvent pas toucher le\nlanceur, mais s'il subit\ndes dégâts d'une capacité\nDuo, la charge de\nl'attaque est annulée.",
+          "it": "Chi la usa entra in modalità Spettrotuffo. Mentre questa modalità è attiva, l'Unità non può fare altre azioni e le mosse avversarie che hanno come bersaglio l'Unità falliscono. Se l'Unità subisce un attacco con un'Unimossa, la modalità Spettrotuffo termina. Altrimenti, dopo un certo lasso di tempo, la modalità Spettrotuffo termina e l'Unità attacca.",
+          "ja": "ゴーストダイブ状態になる\nゴーストダイブ状態になって一定時間経つとゴーストダイブ状態を解除して攻撃する\nゴーストダイブ状態のあいだは他の行動ができない\nゴーストダイブ状態のあいだは相手の技が命中しない\nゴーストダイブ状態のあいだにバディーズわざで攻撃を受けるとゴーストダイブ状態を解除する",
+          "ko": "고스트다이브 상태가 된다\n고스트다이브 상태가 되고 일정 시간이 지나면 고스트다이브 상태를 해제하고 공격한다\n고스트다이브 상태인 동안에는 다른 행동을 할 수 없다\n고스트다이브 상태인 동안에는 상대의 기술이 명중하지 않는다\n고스트다이브 상태인 동안에 버디즈기술로 공격을 받으면 고스트다이브 상태를 해제한다\n",
+          "zh": "變成潛靈奇襲狀態。\n變成潛靈奇襲狀態一段時間後，將會解除潛靈奇襲狀態並且攻擊對手。\n在潛靈奇襲狀態時，無法做出其他行動。\n在潛靈奇襲狀態時，對手的攻擊不會命中。\n在潛靈奇襲狀態時，若受到拍組招式攻擊，將會解除潛靈奇襲狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 14,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 100,
+        "maxUses": 3
+      },
+      "move4": {
+        "id": 11480,
+        "name": {
+          "de": "Ein neues Ziel\ntut sich auf!",
+          "en": "Pierce the\nVeil!",
+          "es": "¡Lo puedo ver!",
+          "fr": "Présent, futur,\ncombat !",
+          "it": "Vedo un nuovo\navvenire...",
+          "ja": "ぼくにはみえる",
+          "ko": "내겐보여",
+          "zh": "我能看見"
+        },
+        "description": {
+          "de": "Erhöht den Angriff des\nAnwenders stark.\nErhöht den Angriff extrem\nstark, wenn der\nAnwender an einem\nStatusproblem leidet.\nErhöht den Spezial-\nAngriff und den\nFluchtwert des\nAnwenders.\nErhöht den Spezial-\nAngriff und den\nFluchtwert stark,\nwenn der Anwender an\neinem Statusproblem\nleidet.",
+          "en": "Sharply raises the user’s Attack. Substantially raises the user’s Attack if the user is affected by a status condition. Raises the user’s Sp. Atk and evasiveness. Sharply raises the user’s Sp. Atk and evasiveness if the user is affected by a status condition.",
+          "es": "Aumenta bastante el Ataque del usuario y, si sufre algún problema de estado, esta característica aumenta muchísimo. También aumenta su Ataque Especial y Evasión y, si sufre algún problema de estado, estas características aumentan bastante.",
+          "fr": "Augmente modérément\nl'Attaque du lanceur.\nSi le lanceur souffre\nd'une altération de\nstatut, augmente\nénormément cette stat.\nAugmente légèrement\nl'Attaque Spéciale et\nl'Esquive du lanceur.\nSi le lanceur souffre\nd'une altération de\nstatut, augmente\nmodérément ces stats.",
+          "it": "Aumenta l'Attacco Speciale e l'elusione di chi la usa e ne aumenta di molto l'Attacco. Se chi la usa è affetto da problemi di stato, l'Attacco Speciale e l'elusione aumentano di molto, mentre l'Attacco aumenta enormemente.",
+          "ja": "自分の攻撃をぐーんとあげる\n自分が状態異常だとぐぐぐーんとあげる\n自分の特攻と回避率をあげる\n自分が状態異常だとぐーんとあげる",
+          "ko": "자신의 공격이 크게 오른다\n자신이 상태 이상이라면 엄청 크게 오른다\n자신의 특수공격과 회피율이 오른다\n자신이 상태 이상이라면 크게 오른다",
+          "zh": "大幅提高自己的攻擊。\n當自己陷入異常狀態時，會極巨幅提高。\n提高自己的特攻和閃避率。\n當自己陷入異常狀態時，會大幅提高。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 79300,
+        "name": {
+          "de": "Phantomkraft des Hellsehers",
+          "en": "Mystic Seer\nPhantom Force",
+          "es": "Golpe Fantasma\ndel Místico Adivino",
+          "fr": "Je vois l'invisible ! Hantise !",
+          "it": "Spettrotuffo chiaroveggente",
+          "ja": "千里眼を持つ修験者の\nゴーストダイブ",
+          "ko": "천리안을 가진 수행자의\n고스트다이브",
+          "zh": "千里眼修驗者之\n潛靈奇襲"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 14,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18043502,
+        "name": {
+          "de": "Halb-KP-Initiative↑ 2",
+          "en": "Shook 2",
+          "es": "Fatiga Veloz +2",
+          "fr": "Fatigue Vitesse ↑ 2",
+          "it": "Faticaccelera 2",
+          "ja": "ＨＰ半減時素早さ↑２",
+          "ko": "HP반감시스피드↑2",
+          "zh": "ＨＰ減半時速度提升２"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des Pokémon stark, wenn\nseine KP erstmals auf oder unter die Hälfte\nfallen.",
+          "en": "Sharply raises the user’s Speed when the user’s HP drops to half or below for the first time in a battle.",
+          "es": "Aumenta bastante la Velocidad del usuario la\nprimera vez que sus PS se reducen a la mitad\no menos.",
+          "fr": "La première fois que le Pokémon perd au moins\nla moitié de ses PV, augmente modérément\nsa Vitesse.",
+          "it": "La prima volta che i PS dell'Unità scendono\na metà o meno, la sua Velocità aumenta\ndi molto.",
+          "ja": "初めて自分のＨＰが半分以下になったときだけ\n自分の素早さをぐーんとあげる",
+          "ko": "처음 자신의 HP가 절반 이하가 되었을 때만\n자신의 스피드가 크게 오른다",
+          "zh": "對戰中在自己的ＨＰ首次剩下一半以下時，\n會大幅提高自己的速度。"
+        }
+      },
+      "passive2": {
+        "id": 14010101,
+        "name": {
+          "de": "K.O.-Explosion",
+          "en": "Last Word",
+          "es": "Regalo Final",
+          "fr": "Cadeau d'Adieu",
+          "it": "Ultimodono",
+          "ja": "ひんし時ばくはつ",
+          "ko": "기절시폭발",
+          "zh": "瀕死時爆炸"
+        },
+        "description": {
+          "de": "Kurz bevor das Pokémon kampfunfähig wird,\nsetzt es Explosion ein.",
+          "en": "The Pokémon uses Explosion immediately before fainting.",
+          "es": "El Pokémon utiliza Explosión antes de debilitarse.",
+          "fr": "Le Pokémon utilise Explosion juste avant d'être\nmis K.O.",
+          "it": "Subito prima del KO, innesca automaticamente\nEsplosione.",
+          "ja": "ひんし状態になる直前にだいばくはつを使う",
+          "ko": "기절 상태가 되기 직전에 대폭발을 사용한다",
+          "zh": "陷入瀕死狀態前會使出大爆炸。"
+        }
+      },
+      "passive3": {
+        "id": 18030201,
+        "name": {
+          "de": "Wechselwerteübergabe",
+          "en": "Benefactor",
+          "es": "Mejora Relevo",
+          "fr": "Relais Stats",
+          "it": "Trasferibonus",
+          "ja": "交代時能力引継",
+          "ko": "교체시능력인계",
+          "zh": "替換時能力轉移"
+        },
+        "description": {
+          "de": "Wird das Pokémon ausgewechselt, werden seine\nerhöhten Statuswerte auf die eingewechselten\nGefährten übertragen.",
+          "en": "Transfers this sync pair’s stat increases to the sync pair that will switch in when this sync pair switches out.",
+          "es": "Cuando es relevado, el Pokémon pasa sus\nmejoras en las características al compi que lo\nsustituye.",
+          "fr": "Lorsque le Duo est remplacé par un autre,\nses augmentations de stats sont transmises\nau Duo qui le remplace.",
+          "it": "Dopo la sostituzione, gli aumenti delle statistiche\npassano all'Unità che entra in campo.",
+          "ja": "交代時にあがっていた能力変化を替わったバディーズが受けつぐ",
+          "ko": "교체할 때 올라간 능력 변화를 교체한 버디즈가 이어받는다",
+          "zh": "替換時，已提高的能力變化會由接替的拍組承接。"
+        }
+      }
+    },
+    "type": 14,
+    "weakType": 4,
+    "rarity": 5,
+    "role": 0,
+    "monsterEnglishName": "Drifblim",
+    "trainerEnglishName": "Morty"
+  },
+  {
+    "monsterBaseId": "20071900",
+    "monsterId": "20130000002",
+    "trainerBaseId": "10013000",
+    "trainerNameId": "ch0130",
+    "stats": {
+      "hpValues": [149, 221, 290, 565, 625],
+      "atkValues": [15, 33, 48, 114, 126],
+      "defValues": [20, 38, 56, 122, 134],
+      "spaValues": [25, 62, 98, 241, 269],
+      "spdValues": [22, 43, 61, 138, 154],
+      "speValues": [36, 83, 128, 304, 340]
+    },
+    "moves": {
+      "move1": {
+        "id": 83,
+        "name": {
+          "de": "Feuerwirbel",
+          "en": "Fire Spin",
+          "es": "Giro Fuego",
+          "fr": "Danse Flamme",
+          "it": "Turbofuoco",
+          "ja": "ほのおのうず",
+          "ko": "회오리불꽃",
+          "zh": "火焰旋渦"
+        },
+        "description": {
+          "de": "Das Ziel wird in einer\nUmschlingung gefangen.",
+          "en": "Leaves the target trapped.",
+          "es": "Atrapa al objetivo.",
+          "fr": "Ligote l'ennemi.",
+          "it": "Imprigiona il bersaglio.",
+          "ja": "相手をバインド状態にする",
+          "ko": "상대를 바인드 상태로 만든다",
+          "zh": "讓對手陷入束縛狀態。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 2,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 38,
+        "accuracy": 85,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 95,
+        "name": {
+          "de": "Hypnose",
+          "en": "Hypnosis",
+          "es": "Hipnosis",
+          "fr": "Hypnose",
+          "it": "Ipnosi",
+          "ja": "さいみんじゅつ",
+          "ko": "최면술",
+          "zh": "催眠術"
+        },
+        "description": {
+          "de": "Versetzt das Ziel in\nSchlaf.",
+          "en": "Puts the target to sleep.",
+          "es": "Duerme al objetivo.",
+          "fr": "Endort l'ennemi.",
+          "it": "Addormenta il bersaglio.",
+          "ja": "相手をねむり状態にする",
+          "ko": "상대를 잠듦 상태로 만든다",
+          "zh": "讓對手陷入睡眠狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 11,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 0,
+        "accuracy": 75,
+        "maxUses": 0
+      },
+      "move3": {
+        "id": 11300,
+        "name": {
+          "de": "Mich kriegt\nkeiner klein!",
+          "en": "Can’t\nStop Us!",
+          "es": "¡Te ganaré,\nya lo verás!",
+          "fr": "La victoire\nest mienne !",
+          "it": "Non credere di\npotermi battere!",
+          "ja": "アタシは負けない",
+          "ko": "나는지지않아",
+          "zh": "我才不會輸"
+        },
+        "description": {
+          "de": "Befreit den Anwender\nvon Statusproblemen.\nErhöht den Spezial-\nAngriff des Anwenders\nstark.\nErhöht die Genauigkeit\ndes Anwenders.",
+          "en": "Removes all status conditions from the user. Sharply raises the user’s Sp. Atk. Raises the user’s accuracy.",
+          "es": "Cura cualquier problema de estado que sufra el usuario y aumenta su Precisión. Además, aumenta bastante su Ataque Especial.",
+          "fr": "Soigne toutes les\naltérations de statut\ndu lanceur.\nAugmente modérément\nl'Attaque Spéciale du\nlanceur.\nAugmente légèrement\nla Précision du lanceur.",
+          "it": "Cura i problemi di stato di chi la usa e ne aumenta la precisione. Inoltre, ne aumenta di molto l'Attacco Speciale.",
+          "ja": "自分の状態異常を解除する\n自分の特攻をぐーんとあげる\n自分の命中率をあげる",
+          "ko": "자신의 상태 이상을 해제한다\n자신의 특수공격이 크게 오른다\n자신의 명중률이 오른다",
+          "zh": "解除自己的異常狀態。\n大幅提高自己的特攻。\n提高自己的命中率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 315,
+        "name": {
+          "de": "Hitzekoller",
+          "en": "Overheat",
+          "es": "Sofoco",
+          "fr": "Surchauffe",
+          "it": "Vampata",
+          "ja": "オーバーヒート",
+          "ko": "오버히트",
+          "zh": "過熱"
+        },
+        "description": {
+          "de": "Senkt den Spezial-Angriff\ndes Anwenders stark.",
+          "en": "Sharply lowers the user’s Sp. Atk.",
+          "es": "Reduce bastante el\nAtaque Especial del\nusuario.",
+          "fr": "Baisse modérément\nl'Attaque Spéciale\ndu lanceur.",
+          "it": "Riduce di molto\nl'Attacco Speciale\ndi chi la usa.",
+          "ja": "自分の特攻をがくっとさげる",
+          "ko": "자신의 특수공격을 크게 떨어뜨린다",
+          "zh": "大幅降低自己的特攻。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 2,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 136,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 79600,
+        "name": {
+          "de": "Magieflamme des Dazulernens",
+          "en": "Mystical Fire\nof Positivity",
+          "es": "Llama Embrujada\ndel Mañana",
+          "fr": "Pour notre avenir ! Feu Ensorcelé !",
+          "it": "Magifiamma riflessiva",
+          "ja": "明日につなげる\nマジカルフレイム",
+          "ko": "승리를 위한\n매지컬플레임",
+          "zh": "連繫明日之\n魔法火焰"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel\nschläft.",
+          "en": "Its power increases if the target is asleep.",
+          "es": "Causa más daño si el objetivo está dormido.",
+          "fr": "Augmente en puissance\nsi l'ennemi est endormi.",
+          "it": "Aumenta di potenza quando il bersaglio è addormentato.",
+          "ja": "相手がねむり状態のとき威力があがる",
+          "ko": "상대가 잠듦 상태일 때 위력이 오른다",
+          "zh": "當對手陷入睡眠狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 2,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18070204,
+        "name": {
+          "de": "Treffer-Wert-Absorption 4",
+          "en": "Stat Leech 4",
+          "es": "Ataque Absorbecaract. +4",
+          "fr": "Capacité Drain Stat 4",
+          "it": "Assorbirandom 4",
+          "ja": "攻撃時能力吸収４",
+          "ko": "공격시능력흡수4",
+          "zh": "攻擊時能力吸收４"
+        },
+        "description": {
+          "de": "Senkt nach einer erfolgreichen Attacke oftmals\nzufällig entweder den Angriff, die Verteidigung,\nden Spezial-Angriff, die Spezial-Verteidigung,\ndie Initiative, die Genauigkeit oder den\nFluchtwert des Gegners und erhöht diesen Wert\nbeim Anwender.",
+          "en": "Has a good chance of lowering the target’s Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness at random when an attack is successful. Raises the user’s stat by the same amount.",
+          "es": "Si uno de los ataques del usuario acierta, es muy\nprobable que reduzca una de estas características\ndel rival: Ataque, Defensa, Ataque Especial,\nDefensa Especial, Velocidad, Evasión o Precisión.\nDicha característica aumenta en igual medida\npara el usuario.",
+          "fr": "Quand une capacité offensive du lanceur touche\nl'ennemi, une des stats de ce dernier (Attaque,\nDéfense, Atq. Spé., Déf. Spé., Vitesse, Précision\nou Esquive) baisse légèrement, et cette portion\nrevient au lanceur (assez souvent).",
+          "it": "Dopo aver mandato a segno un attacco semplice,\nspesso riduce una statistica del bersaglio\ntra Attacco, Difesa, Attacco Speciale, Difesa\nSpeciale, Velocità, precisione ed elusione,\ne aumenta la stessa statistica dell'Unità\nin proporzione.",
+          "ja": "技での攻撃が成功したときにときどき\n相手の攻撃と防御と特攻と特防と素早さと\n命中率と回避率の中からどれかひとつをさげる\n同じ分だけ自分の能力をあげる",
+          "ko": "기술로 공격에 성공했을 때 종종\n상대의 공격과 방어, 특수공격, 특수방어, 스피드,\n명중률, 회피율 중 한 가지를 떨어뜨린다\n그와 같게 자신의 능력이 오른다",
+          "zh": "使出招式攻擊成功時，\n有時會降低對手的攻擊、防禦、\n特攻、特防、速度、命中率、閃避率中的一種，\n並讓自己的能力也同等提高。"
+        }
+      },
+      "passive2": {
+        "id": 13012605,
+        "name": {
+          "de": "Gegner-Schlaf-Stärke↑ 5",
+          "en": "Good Night-mare 5",
+          "es": "Sueño Rival Impulsor +5",
+          "fr": "Sommeil Enn. Puissance ↑ 5",
+          "it": "Addormentaforza 5",
+          "ja": "相手ねむり時威力上昇５",
+          "ko": "상대잠듦시위력상승5",
+          "zh": "對手睡眠時威力提升５"
+        },
+        "description": {
+          "de": "Erhöht die Stärke von Attacken, wenn das Ziel\nschläft.",
+          "en": "Powers up moves when the target is asleep.",
+          "es": "Aumenta la potencia de los movimientos del\nusuario cuando el objetivo está dormido.",
+          "fr": "Augmente légèrement la puissance des capacités\ndu Duo si l'ennemi est endormi.",
+          "it": "La potenza delle mosse aumenta quando\nil bersaglio è addormentato.",
+          "ja": "相手がねむり状態のときに技の威力をあげる",
+          "ko": "상대가 잠듦 상태일 때 기술의 위력이 오른다",
+          "zh": "當對手陷入睡眠狀態時，會提高招式的威力。"
+        }
+      },
+      "passive3": {
+        "id": 17041109,
+        "name": {
+          "de": "Status-Att.-Statusprob. T 9",
+          "en": "Go Viral 9",
+          "es": "Virulencia M +9",
+          "fr": "Propagation Statut 9",
+          "it": "Macchiadolio 9",
+          "ja": "変化技異常付与Ｇ９",
+          "ko": "변화기술상태이상부여G9",
+          "zh": "變化招式賦予異常狀態Ｇ９"
+        },
+        "description": {
+          "de": "Löst eine Status-Attacke beim Gegner ein\nStatusproblem aus, wird bei allen gegnerischen\nGefährten dasselbe Statusproblem verursacht.",
+          "en": "When a status move is used to inflict a status condition on an opponent, inflicts the same status condition on all opposing sync pairs.",
+          "es": "Cuando se inflige un problema de estado al rival\nmediante un movimiento de estado, siempre se\naplica a todo el bando rival.",
+          "fr": "Quand une capacité de statut du Duo altère le\nstatut de l'ennemi, applique la même altération\nde statut à tous les ennemis (à coup sûr).",
+          "it": "Quando l'Unità usa una mossa di stato e causa\nun problema di stato al bersaglio, lo stesso\nproblema di stato affligge tutte le Unità\navversarie.",
+          "ja": "相手を変化技で状態異常にしたときに\n相手のバディーズ全員に同じ状態異常を付与する",
+          "ko": "변화기술로 상대를 상태 이상으로 만들었을 때\n상대 버디즈 전원에게 같은 상태 이상을 부여한다",
+          "zh": "使出變化招式讓對手陷入異常狀態時，\n會讓對手全體拍組陷入相同的異常狀態。"
+        }
+      }
+    },
+    "type": 2,
+    "weakType": 9,
+    "rarity": 5,
+    "role": 3,
+    "monsterEnglishName": "Delphox",
+    "trainerEnglishName": "Serena"
+  },
+  {
+    "monsterBaseId": "20016900",
+    "monsterId": "20054000000",
+    "trainerBaseId": "10005400",
+    "trainerNameId": "ch0054",
+    "stats": {
+      "hpValues": [70, 150, 202, 422, 474],
+      "atkValues": [7, 61, 97, 251, 283],
+      "defValues": [7, 34, 52, 129, 145],
+      "spaValues": [7, 61, 97, 251, 283],
+      "spdValues": [8, 42, 63, 162, 182],
+      "speValues": [12, 84, 132, 341, 385]
+    },
+    "moves": {
+      "move1": {
+        "id": 305,
+        "name": {
+          "de": "Giftzahn",
+          "en": "Poison Fang",
+          "es": "Colmillo Veneno",
+          "fr": "Crochet Venin",
+          "it": "Velenodenti",
+          "ja": "どくどくのキバ",
+          "ko": "독엄니",
+          "zh": "劇毒牙"
+        },
+        "description": {
+          "de": "Vergiftet das Ziel\noftmals schwer.",
+          "en": "Has a good chance of leaving the target badly poisoned.",
+          "es": "Es muy probable que\nenvenene gravemente al\nobjetivo.",
+          "fr": "Empoisonne gravement\nl'ennemi (assez souvent).",
+          "it": "Spesso iperavvelena\nil bersaglio.",
+          "ja": "ときどき相手をもうどく状態にする",
+          "ko": "종종 상대를 맹독 상태로 만든다",
+          "zh": "有時會讓對手陷入劇毒狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 8,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 34,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19050,
+        "name": {
+          "de": "X-Tempo",
+          "en": "X Speed",
+          "es": "Velocidad X",
+          "fr": "Vitesse +",
+          "it": "Velocità X",
+          "ja": "スピーダー",
+          "ko": "스피드업",
+          "zh": "速度強化"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Speed.",
+          "es": "Aumenta bastante la\nVelocidad del usuario.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.",
+          "it": "Aumenta di molto\nla Velocità di chi la usa.",
+          "ja": "自分の素早さをぐーんとあげる",
+          "ko": "자신의 스피드가 크게 오른다",
+          "zh": "大幅提高自己的速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 474,
+        "name": {
+          "de": "Giftschock",
+          "en": "Venoshock",
+          "es": "Carga Tóxica",
+          "fr": "Choc Venin",
+          "it": "Velenoshock",
+          "ja": "ベノムショック",
+          "ko": "베놈쇼크",
+          "zh": "毒液衝擊"
+        },
+        "description": {
+          "de": "Ist das Ziel vergiftet\noder schwer vergiftet,\nverdoppelt sich die\nStärke dieser Attacke.",
+          "en": "Its power is doubled if the target is poisoned or badly poisoned.",
+          "es": "Causa el doble de daño\nsi el objetivo está\nenvenenado o\ngravemente envenenado.",
+          "fr": "Double en puissance si\nl'ennemi est empoisonné\nou gravement\nempoisonné.",
+          "it": "Raddoppia di potenza se\nil bersaglio è avvelenato\no iperavvelenato.",
+          "ja": "相手がどく状態かもうどく状態だと威力が２倍になる",
+          "ko": "상대가 독 상태나 맹독 상태면 위력이 2배가 된다",
+          "zh": "當對手陷入中毒或劇毒狀態時，威力會變成２倍。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 8,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 42,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 10540,
+        "name": {
+          "de": "Spürt die Macht\nder Ninja!",
+          "en": "Move Like a Shadow!",
+          "es": "¡Poder ninja!",
+          "fr": "Technique\nde ninja !",
+          "it": "Terrore ninja",
+          "ja": "忍びの極意！",
+          "ko": "시노비의정수!",
+          "zh": "忍術的極致！"
+        },
+        "description": {
+          "de": "Erhöht den Fluchtwert\ndes Anwenders stark.\nErhöht die Volltrefferquote\ndes Anwenders.",
+          "en": "Sharply raises the user’s evasiveness. Raises the user’s critical-hit rate.",
+          "es": "Aumenta bastante la\nEvasión del usuario.\nAumenta la probabilidad\nde asestar golpes críticos\ndel usuario.",
+          "fr": "Augmente modérément\nl'Esquive du lanceur et\naugmente légèrement\nson taux de critiques.",
+          "it": "Aumenta di molto\nl'elusione di chi la usa.\nInoltre, rende più\nprobabili i brutti colpi.",
+          "ja": "自分の回避率をぐーんとあげる\n自分の急所率をあげる",
+          "ko": "자신의 회피율이 크게 오른다\n자신의 급소율이 오른다",
+          "zh": "大幅提高自己的閃避率。\n提高自己的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 74200,
+        "name": {
+          "de": "Matschbombe des\nmodernen Ninjas",
+          "en": "Modern Ninja\nSludge Bomb",
+          "es": "Bomba Lodo\nNinja",
+          "fr": "Technique secrète de ninja !\nBomb-Beurk !",
+          "it": "Fangobomba ninja",
+          "ja": "現代忍び道の\nヘドロばくだん",
+          "ko": "현존하는 시노비 정신의\n오물폭탄",
+          "zh": "現代忍術之\n污泥炸彈"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nsteigt, wenn das Ziel\nvergiftet oder schwer\nvergiftet ist.",
+          "en": "Its power increases if the target is poisoned or badly poisoned.",
+          "es": "Causa más daño si el\nobjetivo está envenenado\no gravemente\nenvenenado.",
+          "fr": "Augmente en puissance\nsi l'ennemi est\nempoisonné ou\ngravement empoisonné.",
+          "it": "Aumenta di potenza\nquando il bersaglio\nè avvelenato\no iperavvelenato.",
+          "ja": "相手がどく状態かもうどく状態のとき威力があがる",
+          "ko": "상대가 독 상태나 맹독 상태일 때 위력이 오른다",
+          "zh": "當對手陷入中毒或劇毒狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 8,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18020501,
+        "name": {
+          "de": "Init.↓-Schutz",
+          "en": "Haste",
+          "es": "Inmunidad Velocidad ↓",
+          "fr": "Immunité ↓Vitesse",
+          "it": "Prontezza",
+          "ja": "素早さダウン無効",
+          "ko": "스피드다운무효",
+          "zh": "速度下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Initiative.",
+          "en": "Speed cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nVelocidad.",
+          "fr": "Protège des baisses de Vitesse.",
+          "it": "Rende immuni alle riduzioni della Velocità.",
+          "ja": "素早さがさがらない",
+          "ko": "스피드가 떨어지지 않는다",
+          "zh": "速度不會降低。"
+        }
+      }
+    },
+    "type": 8,
+    "weakType": 4,
+    "rarity": 4,
+    "role": 3,
+    "monsterEnglishName": "Crobat",
+    "trainerEnglishName": "Koga"
   }
 ]

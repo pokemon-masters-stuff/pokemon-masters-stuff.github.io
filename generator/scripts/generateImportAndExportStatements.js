@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const pokemonNameDBen = require('../rawdata/en/monster_name_en.lsd.json');
+const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
 
 // On 5/25/2020 the following changes have been made to the .proto files:
 // monsterId->monsterBaseId
@@ -13,42 +13,7 @@ const pokemonNameDBen = require('../rawdata/en/monster_name_en.lsd.json');
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
 // Change this list based on new datamine
-const newGridedPokemonList = [
-  '20002500',
-  '20032400',
-  '20039200',
-  '20008700',
-  '20061200',
-  '20023000',
-  '20049700',
-  '20004501',
-  '20015100',
-  '20037600',
-  '20000600',
-  '20082300',
-  '20051000',
-  '20022900',
-  '20002600',
-  '20047911',
-  '20006500',
-  '20057900',
-  '20073400',
-  '20028400',
-  '20080601',
-  '20086700',
-  '20073200',
-  '20058100',
-  '20044800',
-  '20044501',
-  '20035001',
-  '20020801',
-  '20047500',
-  '20012100',
-  '20038900',
-  '20054200',
-  '20039500',
-  '20031900',
-];
+const newGridedPokemonList = ['20071900', '20050001', '20042600', '20016900'];
 
 const generateImportAndExportStatements = () => {
   const importAndExportStatements = {
@@ -83,7 +48,9 @@ const generateImportAndExportStatements = () => {
       gridIndexExportArray.push(
         `export { default as ${pokemonNameDBen[
           monsterBaseId
-        ].toLowerCase()}GridData${language.toUpperCase()} } from './grids/de/leavanny.json';`
+        ].toLowerCase()}GridData${language.toUpperCase()} } from './grids/${language}/${pokemonNameDBen[
+          monsterBaseId
+        ].toLowerCase()}.json';`
       );
       gridIndexExportStatements = gridIndexExportArray.join('');
       importAndExportStatements['exports'][

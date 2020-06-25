@@ -4,54 +4,54 @@ const monsterDB = require('../rawdata/Monster.json');
 const moveDB = require('../rawdata/Move.json');
 const trainerDB = require('../rawdata/Trainer.json');
 const trainerBaseDB = require('../rawdata/TrainerBase.json');
-const trainerNameDBen = require('../rawdata/en/trainer_name_en.lsd.json');
-const pokemonNameDBen = require('../rawdata/en/monster_name_en.lsd.json');
+const trainerNameDBen = require('../rawdata/en/trainer_name_en.json');
+const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
 const monsterVariationDB = require('../rawdata/MonsterVariation.json');
 
-const moveNameDBde = require('../rawdata/de/move_name_de.lsd.json');
-const moveNameDBen = require('../rawdata/en/move_name_en.lsd.json');
-const moveNameDBes = require('../rawdata/es/move_name_es.lsd.json');
-const moveNameDBfr = require('../rawdata/fr/move_name_fr.lsd.json');
-const moveNameDBit = require('../rawdata/it/move_name_it.lsd.json');
-const moveNameDBja = require('../rawdata/ja/move_name_ja.lsd.json');
-const moveNameDBko = require('../rawdata/ko/move_name_ko.lsd.json');
-const moveNameDBzh = require('../rawdata/zh/move_name_zh-TW.lsd.json');
+const moveNameDBde = require('../rawdata/de/move_name_de.json');
+const moveNameDBen = require('../rawdata/en/move_name_en.json');
+const moveNameDBes = require('../rawdata/es/move_name_es.json');
+const moveNameDBfr = require('../rawdata/fr/move_name_fr.json');
+const moveNameDBit = require('../rawdata/it/move_name_it.json');
+const moveNameDBja = require('../rawdata/ja/move_name_ja.json');
+const moveNameDBko = require('../rawdata/ko/move_name_ko.json');
+const moveNameDBzh = require('../rawdata/zh/move_name_zh-TW.json');
 
-const moveDescriptionDBde = require('../rawdata/de/move_description_de.lsd.json');
-const moveDescriptionDBen = require('../rawdata/en/move_description_en.lsd.json');
-const moveDescriptionDBes = require('../rawdata/es/move_description_es.lsd.json');
-const moveDescriptionDBfr = require('../rawdata/fr/move_description_fr.lsd.json');
-const moveDescriptionDBit = require('../rawdata/it/move_description_it.lsd.json');
-const moveDescriptionDBja = require('../rawdata/ja/move_description_ja.lsd.json');
-const moveDescriptionDBko = require('../rawdata/ko/move_description_ko.lsd.json');
-const moveDescriptionDBzh = require('../rawdata/zh/move_description_zh-TW.lsd.json');
+const moveDescriptionDBde = require('../rawdata/de/move_description_de.json');
+const moveDescriptionDBen = require('../rawdata/en/move_description_en.json');
+const moveDescriptionDBes = require('../rawdata/es/move_description_es.json');
+const moveDescriptionDBfr = require('../rawdata/fr/move_description_fr.json');
+const moveDescriptionDBit = require('../rawdata/it/move_description_it.json');
+const moveDescriptionDBja = require('../rawdata/ja/move_description_ja.json');
+const moveDescriptionDBko = require('../rawdata/ko/move_description_ko.json');
+const moveDescriptionDBzh = require('../rawdata/zh/move_description_zh-TW.json');
 
-const moveTargetTypeDBde = require('../rawdata/de/move_target_type_de.lsd.json');
-const moveTargetTypeDBen = require('../rawdata/en/move_target_type_en.lsd.json');
-const moveTargetTypeDBes = require('../rawdata/es/move_target_type_es.lsd.json');
-const moveTargetTypeDBfr = require('../rawdata/fr/move_target_type_fr.lsd.json');
-const moveTargetTypeDBit = require('../rawdata/it/move_target_type_it.lsd.json');
-const moveTargetTypeDBja = require('../rawdata/ja/move_target_type_ja.lsd.json');
-const moveTargetTypeDBko = require('../rawdata/ko/move_target_type_ko.lsd.json');
-const moveTargetTypeDBzh = require('../rawdata/zh/move_target_type_zh-TW.lsd.json');
+const moveTargetTypeDBde = require('../rawdata/de/move_target_type_de.json');
+const moveTargetTypeDBen = require('../rawdata/en/move_target_type_en.json');
+const moveTargetTypeDBes = require('../rawdata/es/move_target_type_es.json');
+const moveTargetTypeDBfr = require('../rawdata/fr/move_target_type_fr.json');
+const moveTargetTypeDBit = require('../rawdata/it/move_target_type_it.json');
+const moveTargetTypeDBja = require('../rawdata/ja/move_target_type_ja.json');
+const moveTargetTypeDBko = require('../rawdata/ko/move_target_type_ko.json');
+const moveTargetTypeDBzh = require('../rawdata/zh/move_target_type_zh-TW.json');
 
-const passiveNameDBde = require('../rawdata/de/passive_skill_name_de.lsd.json');
-const passiveNameDBen = require('../rawdata/en/passive_skill_name_en.lsd.json');
-const passiveNameDBes = require('../rawdata/es/passive_skill_name_es.lsd.json');
-const passiveNameDBfr = require('../rawdata/fr/passive_skill_name_fr.lsd.json');
-const passiveNameDBit = require('../rawdata/it/passive_skill_name_it.lsd.json');
-const passiveNameDBja = require('../rawdata/ja/passive_skill_name_ja.lsd.json');
-const passiveNameDBko = require('../rawdata/ko/passive_skill_name_ko.lsd.json');
-const passiveNameDBzh = require('../rawdata/zh/passive_skill_name_zh-TW.lsd.json');
+const passiveNameDBde = require('../rawdata/de/passive_skill_name_de.json');
+const passiveNameDBen = require('../rawdata/en/passive_skill_name_en.json');
+const passiveNameDBes = require('../rawdata/es/passive_skill_name_es.json');
+const passiveNameDBfr = require('../rawdata/fr/passive_skill_name_fr.json');
+const passiveNameDBit = require('../rawdata/it/passive_skill_name_it.json');
+const passiveNameDBja = require('../rawdata/ja/passive_skill_name_ja.json');
+const passiveNameDBko = require('../rawdata/ko/passive_skill_name_ko.json');
+const passiveNameDBzh = require('../rawdata/zh/passive_skill_name_zh-TW.json');
 
-const passiveDescriptionDBde = require('../rawdata/de/passive_skill_description_de.lsd.json');
-const passiveDescriptionDBen = require('../rawdata/en/passive_skill_description_en.lsd.json');
-const passiveDescriptionDBes = require('../rawdata/es/passive_skill_description_es.lsd.json');
-const passiveDescriptionDBfr = require('../rawdata/fr/passive_skill_description_fr.lsd.json');
-const passiveDescriptionDBit = require('../rawdata/it/passive_skill_description_it.lsd.json');
-const passiveDescriptionDBja = require('../rawdata/ja/passive_skill_description_ja.lsd.json');
-const passiveDescriptionDBko = require('../rawdata/ko/passive_skill_description_ko.lsd.json');
-const passiveDescriptionDBzh = require('../rawdata/zh/passive_skill_description_zh-TW.lsd.json');
+const passiveDescriptionDBde = require('../rawdata/de/passive_skill_description_de.json');
+const passiveDescriptionDBen = require('../rawdata/en/passive_skill_description_en.json');
+const passiveDescriptionDBes = require('../rawdata/es/passive_skill_description_es.json');
+const passiveDescriptionDBfr = require('../rawdata/fr/passive_skill_description_fr.json');
+const passiveDescriptionDBit = require('../rawdata/it/passive_skill_description_it.json');
+const passiveDescriptionDBja = require('../rawdata/ja/passive_skill_description_ja.json');
+const passiveDescriptionDBko = require('../rawdata/ko/passive_skill_description_ko.json');
+const passiveDescriptionDBzh = require('../rawdata/zh/passive_skill_description_zh-TW.json');
 
 const moveNameDB = {
   de: moveNameDBde,
@@ -147,6 +147,11 @@ const gridedTrainerList = [
   '10017000',
   '10009900',
   '10004810',
+  // 6/25/2020
+  '10000400',
+  '10014800',
+  '10013000',
+  '10005400',
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -218,8 +223,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
         role,
       } = trainer;
 
-      // Use moveId to find move name in move_name_xx.lsd.json
-      // Use moveId to find move description in move_description_xx.lsd.json
+      // Use moveId to find move name in move_name_xx.json
+      // Use moveId to find move description in move_description_xx.json
       let move1NameByLanguage = {
           de: '',
           en: '',
@@ -438,7 +443,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         },
       };
 
-      // Use passiveId to find passive skill name and description in passive_skill_name_xx.lsd.json and passive_skill_description_xx.lsd.json
+      // Use passiveId to find passive skill name and description in passive_skill_name_xx.json and passive_skill_description_xx.json
       let passive1NameByLanguage = {
           de: '',
           en: '',
@@ -659,8 +664,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
           speScale,
         };
 
-        // Use megaMoveId to find megaMove name in move_name_xx.lsd.json
-        // Use megaMoveId to find megaMove description in move_description_xx.lsd.json
+        // Use megaMoveId to find megaMove name in move_name_xx.json
+        // Use megaMoveId to find megaMove description in move_description_xx.json
         let megaMove1NameByLanguage = {
             de: '',
             en: '',
@@ -919,7 +924,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             },
           });
 
-        // Use passiveId to find passive skill name and description in passive_skill_name_xx.lsd.json and passive_skill_description_xx.lsd.json
+        // Use passiveId to find passive skill name and description in passive_skill_name_xx.json and passive_skill_description_xx.json
         let megaPassive1NameByLanguage = {
             de: '',
             en: '',

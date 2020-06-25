@@ -1129,6 +1129,16 @@
     "ko": "피아나",
     "zh": "希嘉娜"
   },
+  "ch0130": {
+    "de": "Serena",
+    "en": "Serena",
+    "es": "Serena",
+    "fr": "Serena",
+    "it": "Serena",
+    "ja": "セレナ",
+    "ko": "세레나",
+    "zh": "莎莉娜"
+  },
   "ch0131": {
     "de": "Citro",
     "en": "Clemont",
@@ -1168,6 +1178,16 @@
     "ja": "サカキ",
     "ko": "비주기",
     "zh": "阪木"
+  },
+  "ch0148": {
+    "de": "Jens",
+    "en": "Morty",
+    "es": "Morti",
+    "fr": "Mortimer",
+    "it": "Angelo",
+    "ja": "マツバ",
+    "ko": "유빈",
+    "zh": "松葉"
   },
   "ch0151": {
     "de": "Lamina",
@@ -1228,5 +1248,35 @@
     "ja": "アーティ",
     "ko": "아티",
     "zh": "亞堤"
+  },
+  "ch0198": {
+    "de": "Lotte",
+    "en": "Lucy",
+    "es": "Fortunia",
+    "fr": "Charline",
+    "it": "Fortunata",
+    "ja": "アザミ",
+    "ko": "다슬",
+    "zh": "小薊"
+  },
+  "ch0240": {
+    "de": "Jessie",
+    "en": "Jessie",
+    "es": "Jessie",
+    "fr": "Jessie",
+    "it": "Jessie",
+    "ja": "ムサシ",
+    "ko": "로사",
+    "zh": "武藏"
+  },
+  "ch0241": {
+    "de": "James",
+    "en": "James",
+    "es": "James",
+    "fr": "James",
+    "it": "James",
+    "ja": "コジロウ",
+    "ko": "로이",
+    "zh": "小次郎"
   }
 }

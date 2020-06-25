@@ -1,0 +1,43 @@
+{
+  "imports": {
+    "names": ["delphox", "emboar", "drifblim", "crobat"],
+    "gridData": [
+      "delphoxGridDataDE",
+      "emboarGridDataDE",
+      "drifblimGridDataDE",
+      "crobatGridDataDE",
+      "delphoxGridDataEN",
+      "emboarGridDataEN",
+      "drifblimGridDataEN",
+      "crobatGridDataEN",
+      "delphoxGridDataES",
+      "emboarGridDataES",
+      "drifblimGridDataES",
+      "crobatGridDataES",
+      "delphoxGridDataFR",
+      "emboarGridDataFR",
+      "drifblimGridDataFR",
+      "crobatGridDataFR",
+      "delphoxGridDataIT",
+      "emboarGridDataIT",
+      "drifblimGridDataIT",
+      "crobatGridDataIT",
+      "delphoxGridDataJA",
+      "emboarGridDataJA",
+      "drifblimGridDataJA",
+      "crobatGridDataJA",
+      "delphoxGridDataKO",
+      "emboarGridDataKO",
+      "drifblimGridDataKO",
+      "crobatGridDataKO",
+      "delphoxGridDataZH",
+      "emboarGridDataZH",
+      "drifblimGridDataZH",
+      "crobatGridDataZH"
+    ]
+  },
+  "exports": {
+    "gridIndex": "export { default as delphoxGridDataDE } from './grids/de/delphox.json';export { default as emboarGridDataDE } from './grids/de/emboar.json';export { default as drifblimGridDataDE } from './grids/de/drifblim.json';export { default as crobatGridDataDE } from './grids/de/crobat.json';export { default as delphoxGridDataEN } from './grids/en/delphox.json';export { default as emboarGridDataEN } from './grids/en/emboar.json';export { default as drifblimGridDataEN } from './grids/en/drifblim.json';export { default as crobatGridDataEN } from './grids/en/crobat.json';export { default as delphoxGridDataES } from './grids/es/delphox.json';export { default as emboarGridDataES } from './grids/es/emboar.json';export { default as drifblimGridDataES } from './grids/es/drifblim.json';export { default as crobatGridDataES } from './grids/es/crobat.json';export { default as delphoxGridDataFR } from './grids/fr/delphox.json';export { default as emboarGridDataFR } from './grids/fr/emboar.json';export { default as drifblimGridDataFR } from './grids/fr/drifblim.json';export { default as crobatGridDataFR } from './grids/fr/crobat.json';export { default as delphoxGridDataIT } from './grids/it/delphox.json';export { default as emboarGridDataIT } from './grids/it/emboar.json';export { default as drifblimGridDataIT } from './grids/it/drifblim.json';export { default as crobatGridDataIT } from './grids/it/crobat.json';export { default as delphoxGridDataJA } from './grids/ja/delphox.json';export { default as emboarGridDataJA } from './grids/ja/emboar.json';export { default as drifblimGridDataJA } from './grids/ja/drifblim.json';export { default as crobatGridDataJA } from './grids/ja/crobat.json';export { default as delphoxGridDataKO } from './grids/ko/delphox.json';export { default as emboarGridDataKO } from './grids/ko/emboar.json';export { default as drifblimGridDataKO } from './grids/ko/drifblim.json';export { default as crobatGridDataKO } from './grids/ko/crobat.json';export { default as delphoxGridDataZH } from './grids/zh/delphox.json';export { default as emboarGridDataZH } from './grids/zh/emboar.json';export { default as drifblimGridDataZH } from './grids/zh/drifblim.json';export { default as crobatGridDataZH } from './grids/zh/crobat.json';",
+    "thumbnailIndex": "export { default as delphox } from './pm0719.png';export { default as emboar } from './pm0500.png';export { default as drifblim } from './pm0426.png';export { default as crobat } from './pm0169.png';"
+  }
+}

@@ -1,13 +1,13 @@
 const fs = require('fs');
 
-const trainerNameDBde = require('../rawdata/de/trainer_name_de.lsd.json');
-const trainerNameDBen = require('../rawdata/en/trainer_name_en.lsd.json');
-const trainerNameDBes = require('../rawdata/es/trainer_name_es.lsd.json');
-const trainerNameDBfr = require('../rawdata/fr/trainer_name_fr.lsd.json');
-const trainerNameDBit = require('../rawdata/it/trainer_name_it.lsd.json');
-const trainerNameDBja = require('../rawdata/ja/trainer_name_ja.lsd.json');
-const trainerNameDBko = require('../rawdata/ko/trainer_name_ko.lsd.json');
-const trainerNameDBzh = require('../rawdata/zh/trainer_name_zh-TW.lsd.json');
+const trainerNameDBde = require('../rawdata/de/trainer_name_de.json');
+const trainerNameDBen = require('../rawdata/en/trainer_name_en.json');
+const trainerNameDBes = require('../rawdata/es/trainer_name_es.json');
+const trainerNameDBfr = require('../rawdata/fr/trainer_name_fr.json');
+const trainerNameDBit = require('../rawdata/it/trainer_name_it.json');
+const trainerNameDBja = require('../rawdata/ja/trainer_name_ja.json');
+const trainerNameDBko = require('../rawdata/ko/trainer_name_ko.json');
+const trainerNameDBzh = require('../rawdata/zh/trainer_name_zh-TW.json');
 
 const trainerNameDB = {
   de: trainerNameDBde,

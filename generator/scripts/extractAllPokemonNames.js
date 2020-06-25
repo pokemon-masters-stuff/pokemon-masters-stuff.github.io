@@ -1,13 +1,13 @@
 const fs = require('fs');
 
-const pokemonNameDBde = require('../rawdata/de/monster_name_de.lsd.json');
-const pokemonNameDBen = require('../rawdata/en/monster_name_en.lsd.json');
-const pokemonNameDBes = require('../rawdata/es/monster_name_es.lsd.json');
-const pokemonNameDBfr = require('../rawdata/fr/monster_name_fr.lsd.json');
-const pokemonNameDBit = require('../rawdata/it/monster_name_it.lsd.json');
-const pokemonNameDBja = require('../rawdata/ja/monster_name_ja.lsd.json');
-const pokemonNameDBko = require('../rawdata/ko/monster_name_ko.lsd.json');
-const pokemonNameDBzh = require('../rawdata/zh/monster_name_zh-TW.lsd.json');
+const pokemonNameDBde = require('../rawdata/de/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/es/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/fr/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/it/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/ja/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/ko/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/zh/monster_name_zh-TW.json');
 
 const pokemonNameDB = {
   de: pokemonNameDBde,
