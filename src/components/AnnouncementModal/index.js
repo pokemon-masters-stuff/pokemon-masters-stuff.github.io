@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            6/25/2020:
+            <br />
+            Added sync grids for Hilda, Koga, Morty, and Serena.
+            <br />
+            <br />
             6/23/2020:
             <br />
             Added stats to the Moves&Skills modal.
