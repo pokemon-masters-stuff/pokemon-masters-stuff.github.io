@@ -1,14 +1,22 @@
-import pokemonNameListByMonsterBaseId from '../data/pokemonNameListByMonsterBaseId';
 import arrayOfAllGridedPokemon from '../data/allGridedPokemon.json';
 import { shortenedMoveNameByAbilityId } from './constants';
 
 export const getPokemonNameList = (language) =>
   arrayOfAllGridedPokemon
     .map((entry, index) => {
+      // if (entry.monsterBaseId === 'id of new duplicate pokemon') {
+      //  // for the new sync pair:
+      //   let valueOfNewSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
+      //   let name = entry.syncPairNameByLanguage['en']
+      // }
+      // if (entry.monsterBaseId === 'id of old duplicate pokemon') {
+      //  // for the old sync pair, change displayed value but not name so that old saves are still compatible
+      //  let valueOfOldSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
+      // }
       return {
         key: index,
-        name: pokemonNameListByMonsterBaseId[entry.monsterBaseId]['en'],
-        value: pokemonNameListByMonsterBaseId[entry.monsterBaseId][language], // value changes as language changes. name stays the same so old links and saves are compatible
+        name: entry.pokemonNameByLanguage['en'],
+        value: entry.pokemonNameByLanguage[language], // value changes as language changes. name stays the same so old links and saves are compatible
       };
     })
     .sort((a, b) => {
@@ -20,7 +28,7 @@ export const getPokemonNameList = (language) =>
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;
   arrayOfAllGridedPokemon.forEach((pokemon) => {
-    if (pokemon.monsterEnglishName === pokemonName) {
+    if (pokemon.pokemonNameByLanguage['en'] === pokemonName) {
       pokemonData = pokemon;
     }
   });

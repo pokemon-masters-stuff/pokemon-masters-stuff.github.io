@@ -4,9 +4,25 @@ const monsterDB = require('../rawdata/Monster.json');
 const moveDB = require('../rawdata/Move.json');
 const trainerDB = require('../rawdata/Trainer.json');
 const trainerBaseDB = require('../rawdata/TrainerBase.json');
-const trainerNameDBen = require('../rawdata/en/trainer_name_en.json');
-const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
 const monsterVariationDB = require('../rawdata/MonsterVariation.json');
+
+const pokemonNameDBde = require('../rawdata/de/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/es/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/fr/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/it/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/ja/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/ko/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/zh/monster_name_zh-TW.json');
+
+const trainerNameDBde = require('../rawdata/de/trainer_name_de.json');
+const trainerNameDBen = require('../rawdata/en/trainer_name_en.json');
+const trainerNameDBes = require('../rawdata/es/trainer_name_es.json');
+const trainerNameDBfr = require('../rawdata/fr/trainer_name_fr.json');
+const trainerNameDBit = require('../rawdata/it/trainer_name_it.json');
+const trainerNameDBja = require('../rawdata/ja/trainer_name_ja.json');
+const trainerNameDBko = require('../rawdata/ko/trainer_name_ko.json');
+const trainerNameDBzh = require('../rawdata/zh/trainer_name_zh-TW.json');
 
 const moveNameDBde = require('../rawdata/de/move_name_de.json');
 const moveNameDBen = require('../rawdata/en/move_name_en.json');
@@ -52,6 +68,28 @@ const passiveDescriptionDBit = require('../rawdata/it/passive_skill_description_
 const passiveDescriptionDBja = require('../rawdata/ja/passive_skill_description_ja.json');
 const passiveDescriptionDBko = require('../rawdata/ko/passive_skill_description_ko.json');
 const passiveDescriptionDBzh = require('../rawdata/zh/passive_skill_description_zh-TW.json');
+
+const pokemonNameDB = {
+  de: pokemonNameDBde,
+  en: pokemonNameDBen,
+  es: pokemonNameDBes,
+  fr: pokemonNameDBfr,
+  it: pokemonNameDBit,
+  ja: pokemonNameDBja,
+  ko: pokemonNameDBko,
+  zh: pokemonNameDBzh,
+};
+
+const trainerNameDB = {
+  de: trainerNameDBde,
+  en: trainerNameDBen,
+  es: trainerNameDBes,
+  fr: trainerNameDBfr,
+  it: trainerNameDBit,
+  ja: trainerNameDBja,
+  ko: trainerNameDBko,
+  zh: trainerNameDBzh,
+};
 
 const moveNameDB = {
   de: moveNameDBde,
@@ -168,11 +206,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
   let monsterAndTrainerData = {};
   let monsterId = '';
   let monsterBaseId = '';
-  let syncMoveId = '';
+  // let syncMoveId = '';
   let trainerNameId = '';
   let stats = {};
   let moves = {};
   let passives = {};
+  let syncPairNames = {};
 
   gridedTrainerList.forEach((trainerBaseIdFromList) => {
     // Find entry in Trainer.json
@@ -1155,15 +1194,70 @@ const extractSyncPairDataByTrainerBaseId = () => {
   });
 
   gridedSyncPairDataArray.forEach((entry) => {
-    if (entry.monsterBaseId) {
-      entry.monsterEnglishName = pokemonNameDBen[entry.monsterBaseId];
-    }
-    if (entry.trainerNameId) {
-      entry.trainerEnglishName = trainerNameDBen[entry.trainerNameId];
-    }
-    if (entry.trainerNameId === 'ch8000') {
-      entry.trainerEnglishName = 'Hero';
-    }
+    let pokemonNameByLanguage = {
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
+    };
+    let trainerNameByLanguage = {
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
+    };
+    let syncPairNameByLanguage = {
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
+    };
+    languages.forEach((language) => {
+      if (entry.monsterBaseId) {
+        pokemonNameByLanguage[language] =
+          pokemonNameDB[language][entry.monsterBaseId];
+      }
+      if (entry.trainerNameId) {
+        trainerNameByLanguage[language] =
+          trainerNameDB[language][entry.trainerNameId];
+      }
+      if (entry.trainerNameId === 'ch8000') {
+        trainerNameByLanguage[language] = 'Hero';
+      }
+      if (entry.monsterBaseId && entry.trainerNameId) {
+        syncPairNameByLanguage[
+          language
+        ] = `${trainerNameByLanguage[language]}_${pokemonNameByLanguage[language]}`;
+      }
+
+      // if (entry.monsterBaseId) {
+      //   entry.monsterEnglishName = pokemonNameDBen[entry.monsterBaseId];
+      // }
+      // if (entry.trainerNameId) {
+      //   entry.trainerEnglishName = trainerNameDBen[entry.trainerNameId];
+      // }
+      // if (entry.trainerNameId === 'ch8000') {
+      //   entry.trainerEnglishName = 'Hero';
+      // }
+      // if (entry.monsterBaseId && entry.trainerNameId) {
+      //   entry.syncPairEnglishName = `${entry.trainerEnglishName}&${entry.monsterEnglishName}`;
+      // }
+    });
+    entry.pokemonNameByLanguage = pokemonNameByLanguage;
+    entry.trainerNameByLanguage = trainerNameByLanguage;
+    entry.syncPairNameByLanguage = syncPairNameByLanguage;
   });
   fs.writeFile(
     `${__dirname}/../../src/data/allGridedPokemon.json`,

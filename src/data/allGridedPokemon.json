@@ -238,8 +238,36 @@
     "weakType": 9,
     "rarity": 3,
     "role": 1,
-    "monsterEnglishName": "Pikachu",
-    "trainerEnglishName": "Hero"
+    "pokemonNameByLanguage": {
+      "de": "Pikachu",
+      "en": "Pikachu",
+      "es": "Pikachu",
+      "fr": "Pikachu",
+      "it": "Pikachu",
+      "ja": "ピカチュウ",
+      "ko": "피카츄",
+      "zh": "皮卡丘"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Pikachu",
+      "en": "Hero_Pikachu",
+      "es": "Hero_Pikachu",
+      "fr": "Hero_Pikachu",
+      "it": "Hero_Pikachu",
+      "ja": "Hero_ピカチュウ",
+      "ko": "Hero_피카츄",
+      "zh": "Hero_皮卡丘"
+    }
   },
   {
     "monsterBaseId": "20032401",
@@ -480,8 +508,36 @@
     "weakType": 3,
     "rarity": 3,
     "role": 3,
-    "monsterEnglishName": "Torkoal",
-    "trainerEnglishName": "Flannery"
+    "pokemonNameByLanguage": {
+      "de": "Qurtel",
+      "en": "Torkoal",
+      "es": "Torkoal",
+      "fr": "Chartor",
+      "it": "Torkoal",
+      "ja": "コータス",
+      "ko": "코터스",
+      "zh": "煤炭龜"
+    },
+    "trainerNameByLanguage": {
+      "de": "Flavia",
+      "en": "Flannery",
+      "es": "Candela",
+      "fr": "Adriane",
+      "it": "Fiammetta",
+      "ja": "アスナ",
+      "ko": "민지",
+      "zh": "亞莎"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Flavia_Qurtel",
+      "en": "Flannery_Torkoal",
+      "es": "Candela_Torkoal",
+      "fr": "Adriane_Chartor",
+      "it": "Fiammetta_Torkoal",
+      "ja": "アスナ_コータス",
+      "ko": "민지_코터스",
+      "zh": "亞莎_煤炭龜"
+    }
   },
   {
     "monsterBaseId": "20039200",
@@ -722,8 +778,36 @@
     "weakType": 3,
     "rarity": 4,
     "role": 1,
-    "monsterEnglishName": "Infernape",
-    "trainerEnglishName": "Flint"
+    "pokemonNameByLanguage": {
+      "de": "Panferno",
+      "en": "Infernape",
+      "es": "Infernape",
+      "fr": "Simiabraz",
+      "it": "Infernape",
+      "ja": "ゴウカザル",
+      "ko": "초염몽",
+      "zh": "烈焰猴"
+    },
+    "trainerNameByLanguage": {
+      "de": "Ignaz",
+      "en": "Flint",
+      "es": "Fausto",
+      "fr": "Adrien",
+      "it": "Vulcano",
+      "ja": "オーバ",
+      "ko": "대엽",
+      "zh": "大葉"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Ignaz_Panferno",
+      "en": "Flint_Infernape",
+      "es": "Fausto_Infernape",
+      "fr": "Adrien_Simiabraz",
+      "it": "Vulcano_Infernape",
+      "ja": "オーバ_ゴウカザル",
+      "ko": "대엽_초염몽",
+      "zh": "大葉_烈焰猴"
+    }
   },
   {
     "monsterBaseId": "20008700",
@@ -964,8 +1048,36 @@
     "weakType": 4,
     "rarity": 3,
     "role": 1,
-    "monsterEnglishName": "Dewgong",
-    "trainerEnglishName": "Pryce"
+    "pokemonNameByLanguage": {
+      "de": "Jugong",
+      "en": "Dewgong",
+      "es": "Dewgong",
+      "fr": "Lamantine",
+      "it": "Dewgong",
+      "ja": "ジュゴン",
+      "ko": "쥬레곤",
+      "zh": "白海獅"
+    },
+    "trainerNameByLanguage": {
+      "de": "Norbert",
+      "en": "Pryce",
+      "es": "Fredo",
+      "fr": "Frédo",
+      "it": "Alfredo",
+      "ja": "ヤナギ",
+      "ko": "류옹",
+      "zh": "柳伯"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Norbert_Jugong",
+      "en": "Pryce_Dewgong",
+      "es": "Fredo_Dewgong",
+      "fr": "Frédo_Lamantine",
+      "it": "Alfredo_Dewgong",
+      "ja": "ヤナギ_ジュゴン",
+      "ko": "류옹_쥬레곤",
+      "zh": "柳伯_白海獅"
+    }
   },
   {
     "monsterBaseId": "20061201",
@@ -1206,8 +1318,36 @@
     "weakType": 6,
     "rarity": 3,
     "role": 0,
-    "monsterEnglishName": "Haxorus",
-    "trainerEnglishName": "Iris"
+    "pokemonNameByLanguage": {
+      "de": "Maxax",
+      "en": "Haxorus",
+      "es": "Haxorus",
+      "fr": "Tranchodon",
+      "it": "Haxorus",
+      "ja": "オノノクス",
+      "ko": "액스라이즈",
+      "zh": "雙斧戰龍"
+    },
+    "trainerNameByLanguage": {
+      "de": "Lilia",
+      "en": "Iris",
+      "es": "Iris",
+      "fr": "Iris",
+      "it": "Iris",
+      "ja": "アイリス",
+      "ko": "아이리스",
+      "zh": "艾莉絲"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Lilia_Maxax",
+      "en": "Iris_Haxorus",
+      "es": "Iris_Haxorus",
+      "fr": "Iris_Tranchodon",
+      "it": "Iris_Haxorus",
+      "ja": "アイリス_オノノクス",
+      "ko": "아이리스_액스라이즈",
+      "zh": "艾莉絲_雙斧戰龍"
+    }
   },
   {
     "monsterBaseId": "20023001",
@@ -1448,8 +1588,36 @@
     "weakType": 15,
     "rarity": 4,
     "role": 1,
-    "monsterEnglishName": "Kingdra",
-    "trainerEnglishName": "Clair"
+    "pokemonNameByLanguage": {
+      "de": "Seedraking",
+      "en": "Kingdra",
+      "es": "Kingdra",
+      "fr": "Hyporoi",
+      "it": "Kingdra",
+      "ja": "キングドラ",
+      "ko": "킹드라",
+      "zh": "刺龍王"
+    },
+    "trainerNameByLanguage": {
+      "de": "Sandra",
+      "en": "Clair",
+      "es": "Débora",
+      "fr": "Sandra",
+      "it": "Sandra",
+      "ja": "イブキ",
+      "ko": "이향",
+      "zh": "小椿"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Sandra_Seedraking",
+      "en": "Clair_Kingdra",
+      "es": "Débora_Kingdra",
+      "fr": "Sandra_Hyporoi",
+      "it": "Sandra_Kingdra",
+      "ja": "イブキ_キングドラ",
+      "ko": "이향_킹드라",
+      "zh": "小椿_刺龍王"
+    }
   },
   {
     "monsterBaseId": "20049701",
@@ -1690,8 +1858,36 @@
     "weakType": 10,
     "rarity": 5,
     "role": 2,
-    "monsterEnglishName": "Serperior",
-    "trainerEnglishName": "Rosa"
+    "pokemonNameByLanguage": {
+      "de": "Serpiroyal",
+      "en": "Serperior",
+      "es": "Serperior",
+      "fr": "Majaspic",
+      "it": "Serperior",
+      "ja": "ジャローダ",
+      "ko": "샤로다",
+      "zh": "君主蛇"
+    },
+    "trainerNameByLanguage": {
+      "de": "Rosy",
+      "en": "Rosa",
+      "es": "Nanci",
+      "fr": "Écho",
+      "it": "Rina",
+      "ja": "メイ",
+      "ko": "명희",
+      "zh": "鳴依"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Rosy_Serpiroyal",
+      "en": "Rosa_Serperior",
+      "es": "Nanci_Serperior",
+      "fr": "Écho_Majaspic",
+      "it": "Rina_Serperior",
+      "ja": "メイ_ジャローダ",
+      "ko": "명희_샤로다",
+      "zh": "鳴依_君主蛇"
+    }
   },
   {
     "monsterBaseId": "20004501",
@@ -1932,8 +2128,36 @@
     "weakType": 2,
     "rarity": 3,
     "role": 3,
-    "monsterEnglishName": "Vileplume",
-    "trainerEnglishName": "Erika"
+    "pokemonNameByLanguage": {
+      "de": "Giflor",
+      "en": "Vileplume",
+      "es": "Vileplume",
+      "fr": "Rafflesia",
+      "it": "Vileplume",
+      "ja": "ラフレシア",
+      "ko": "라플레시아",
+      "zh": "霸王花"
+    },
+    "trainerNameByLanguage": {
+      "de": "Erika",
+      "en": "Erika",
+      "es": "Erika",
+      "fr": "Erika",
+      "it": "Erika",
+      "ja": "エリカ",
+      "ko": "민화",
+      "zh": "莉佳"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Erika_Giflor",
+      "en": "Erika_Vileplume",
+      "es": "Erika_Vileplume",
+      "fr": "Erika_Rafflesia",
+      "it": "Erika_Vileplume",
+      "ja": "エリカ_ラフレシア",
+      "ko": "민화_라플레시아",
+      "zh": "莉佳_霸王花"
+    }
   },
   {
     "monsterBaseId": "20015111",
@@ -2330,8 +2554,36 @@
         }
       }
     },
-    "monsterEnglishName": "Mew",
-    "trainerEnglishName": "Professor Oak"
+    "pokemonNameByLanguage": {
+      "de": "Mew",
+      "en": "Mew",
+      "es": "Mew",
+      "fr": "Mew",
+      "it": "Mew",
+      "ja": "ミュウ",
+      "ko": "뮤",
+      "zh": "夢幻"
+    },
+    "trainerNameByLanguage": {
+      "de": "Eich",
+      "en": "Professor Oak",
+      "es": "Oak",
+      "fr": "Chen",
+      "it": "Professor Oak",
+      "ja": "オーキド",
+      "ko": "오박사",
+      "zh": "大木"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Eich_Mew",
+      "en": "Professor Oak_Mew",
+      "es": "Oak_Mew",
+      "fr": "Chen_Mew",
+      "it": "Professor Oak_Mew",
+      "ja": "オーキド_ミュウ",
+      "ko": "오박사_뮤",
+      "zh": "大木_夢幻"
+    }
   },
   {
     "monsterBaseId": "20037600",
@@ -2735,8 +2987,36 @@
         }
       }
     },
-    "monsterEnglishName": "Metagross",
-    "trainerEnglishName": "Steven"
+    "pokemonNameByLanguage": {
+      "de": "Metagross",
+      "en": "Metagross",
+      "es": "Metagross",
+      "fr": "Métalosse",
+      "it": "Metagross",
+      "ja": "メタグロス",
+      "ko": "메타그로스",
+      "zh": "巨金怪"
+    },
+    "trainerNameByLanguage": {
+      "de": "Troy",
+      "en": "Steven",
+      "es": "Máximo",
+      "fr": "Pierre Rochard",
+      "it": "Rocco",
+      "ja": "ダイゴ",
+      "ko": "성호",
+      "zh": "大吾"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Troy_Metagross",
+      "en": "Steven_Metagross",
+      "es": "Máximo_Metagross",
+      "fr": "Pierre Rochard_Métalosse",
+      "it": "Rocco_Metagross",
+      "ja": "ダイゴ_メタグロス",
+      "ko": "성호_메타그로스",
+      "zh": "大吾_巨金怪"
+    }
   },
   {
     "monsterBaseId": "20000600",
@@ -3074,8 +3354,36 @@
         }
       }
     },
-    "monsterEnglishName": "Charizard",
-    "trainerEnglishName": "Red"
+    "pokemonNameByLanguage": {
+      "de": "Glurak",
+      "en": "Charizard",
+      "es": "Charizard",
+      "fr": "Dracaufeu",
+      "it": "Charizard",
+      "ja": "リザードン",
+      "ko": "리자몽",
+      "zh": "噴火龍"
+    },
+    "trainerNameByLanguage": {
+      "de": "Rot",
+      "en": "Red",
+      "es": "Rojo",
+      "fr": "Red",
+      "it": "Rosso",
+      "ja": "レッド",
+      "ko": "레드",
+      "zh": "赤紅"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Rot_Glurak",
+      "en": "Red_Charizard",
+      "es": "Rojo_Charizard",
+      "fr": "Red_Dracaufeu",
+      "it": "Rosso_Charizard",
+      "ja": "レッド_リザードン",
+      "ko": "레드_리자몽",
+      "zh": "赤紅_噴火龍"
+    }
   },
   {
     "monsterBaseId": "20082301",
@@ -3316,8 +3624,36 @@
     "weakType": 6,
     "rarity": 5,
     "role": 3,
-    "monsterEnglishName": "Palossand",
-    "trainerEnglishName": "Acerola"
+    "pokemonNameByLanguage": {
+      "de": "Colossand",
+      "en": "Palossand",
+      "es": "Palossand",
+      "fr": "Trépassable",
+      "it": "Palossand",
+      "ja": "シロデスナ",
+      "ko": "모래성이당",
+      "zh": "噬沙堡爺"
+    },
+    "trainerNameByLanguage": {
+      "de": "Lola",
+      "en": "Acerola",
+      "es": "Zarala",
+      "fr": "Margie",
+      "it": "Malpi",
+      "ja": "アセロラ",
+      "ko": "아세로라",
+      "zh": "阿塞蘿拉"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Lola_Colossand",
+      "en": "Acerola_Palossand",
+      "es": "Zarala_Palossand",
+      "fr": "Margie_Trépassable",
+      "it": "Malpi_Palossand",
+      "ja": "アセロラ_シロデスナ",
+      "ko": "아세로라_모래성이당",
+      "zh": "阿塞蘿拉_噬沙堡爺"
+    }
   },
   {
     "monsterBaseId": "20051001",
@@ -3558,8 +3894,36 @@
     "weakType": 12,
     "rarity": 5,
     "role": 3,
-    "monsterEnglishName": "Liepard",
-    "trainerEnglishName": "Grimsley"
+    "pokemonNameByLanguage": {
+      "de": "Kleoparda",
+      "en": "Liepard",
+      "es": "Liepard",
+      "fr": "Léopardus",
+      "it": "Liepard",
+      "ja": "レパルダス",
+      "ko": "레파르다스",
+      "zh": "酷豹"
+    },
+    "trainerNameByLanguage": {
+      "de": "Astor",
+      "en": "Grimsley",
+      "es": "Aza",
+      "fr": "Pieris",
+      "it": "Mirton",
+      "ja": "ギーマ",
+      "ko": "블래리",
+      "zh": "越橘"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Astor_Kleoparda",
+      "en": "Grimsley_Liepard",
+      "es": "Aza_Liepard",
+      "fr": "Pieris_Léopardus",
+      "it": "Mirton_Liepard",
+      "ja": "ギーマ_レパルダス",
+      "ko": "블래리_레파르다스",
+      "zh": "越橘_酷豹"
+    }
   },
   {
     "monsterBaseId": "20022901",
@@ -3915,8 +4279,36 @@
         }
       }
     },
-    "monsterEnglishName": "Houndoom",
-    "trainerEnglishName": "Karen"
+    "pokemonNameByLanguage": {
+      "de": "Hundemon",
+      "en": "Houndoom",
+      "es": "Houndoom",
+      "fr": "Démolosse",
+      "it": "Houndoom",
+      "ja": "ヘルガー",
+      "ko": "헬가",
+      "zh": "黑魯加"
+    },
+    "trainerNameByLanguage": {
+      "de": "Melanie",
+      "en": "Karen",
+      "es": "Karen",
+      "fr": "Marion",
+      "it": "Karen",
+      "ja": "カリン",
+      "ko": "카렌",
+      "zh": "梨花"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Melanie_Hundemon",
+      "en": "Karen_Houndoom",
+      "es": "Karen_Houndoom",
+      "fr": "Marion_Démolosse",
+      "it": "Karen_Houndoom",
+      "ja": "カリン_ヘルガー",
+      "ko": "카렌_헬가",
+      "zh": "梨花_黑魯加"
+    }
   },
   {
     "monsterBaseId": "20002661",
@@ -4157,8 +4549,36 @@
     "weakType": 9,
     "rarity": 4,
     "role": 1,
-    "monsterEnglishName": "Raichu",
-    "trainerEnglishName": "Hau"
+    "pokemonNameByLanguage": {
+      "de": "Raichu",
+      "en": "Raichu",
+      "es": "Raichu",
+      "fr": "Raichu",
+      "it": "Raichu",
+      "ja": "ライチュウ",
+      "ko": "라이츄",
+      "zh": "雷丘"
+    },
+    "trainerNameByLanguage": {
+      "de": "Tali",
+      "en": "Hau",
+      "es": "Tilo",
+      "fr": "Tili",
+      "it": "Hau",
+      "ja": "ハウ",
+      "ko": "하우",
+      "zh": "哈烏"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Tali_Raichu",
+      "en": "Hau_Raichu",
+      "es": "Tilo_Raichu",
+      "fr": "Tili_Raichu",
+      "it": "Hau_Raichu",
+      "ja": "ハウ_ライチュウ",
+      "ko": "하우_라이츄",
+      "zh": "哈烏_雷丘"
+    }
   },
   {
     "monsterBaseId": "20047911",
@@ -4422,8 +4842,36 @@
     "weakType": 16,
     "rarity": 5,
     "role": 2,
-    "monsterEnglishName": "Rotom",
-    "trainerEnglishName": "Elesa"
+    "pokemonNameByLanguage": {
+      "de": "Rotom",
+      "en": "Rotom",
+      "es": "Rotom",
+      "fr": "Motisma",
+      "it": "Rotom",
+      "ja": "ロトム",
+      "ko": "로토무",
+      "zh": "洛托姆"
+    },
+    "trainerNameByLanguage": {
+      "de": "Kamilla",
+      "en": "Elesa",
+      "es": "Camila",
+      "fr": "Inezia",
+      "it": "Camelia",
+      "ja": "カミツレ",
+      "ko": "카밀레",
+      "zh": "小菊兒"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Kamilla_Rotom",
+      "en": "Elesa_Rotom",
+      "es": "Camila_Rotom",
+      "fr": "Inezia_Motisma",
+      "it": "Camelia_Rotom",
+      "ja": "カミツレ_ロトム",
+      "ko": "카밀레_로토무",
+      "zh": "小菊兒_洛托姆"
+    }
   },
   {
     "monsterBaseId": "20006500",
@@ -4761,8 +5209,36 @@
         }
       }
     },
-    "monsterEnglishName": "Alakazam",
-    "trainerEnglishName": "Sabrina"
+    "pokemonNameByLanguage": {
+      "de": "Simsala",
+      "en": "Alakazam",
+      "es": "Alakazam",
+      "fr": "Alakazam",
+      "it": "Alakazam",
+      "ja": "フーディン",
+      "ko": "후딘",
+      "zh": "胡地"
+    },
+    "trainerNameByLanguage": {
+      "de": "Sabrina",
+      "en": "Sabrina",
+      "es": "Sabrina",
+      "fr": "Morgane",
+      "it": "Sabrina",
+      "ja": "ナツメ",
+      "ko": "초련",
+      "zh": "娜姿"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Sabrina_Simsala",
+      "en": "Sabrina_Alakazam",
+      "es": "Sabrina_Alakazam",
+      "fr": "Morgane_Alakazam",
+      "it": "Sabrina_Alakazam",
+      "ja": "ナツメ_フーディン",
+      "ko": "초련_후딘",
+      "zh": "娜姿_胡地"
+    }
   },
   {
     "monsterBaseId": "20057901",
@@ -5049,8 +5525,36 @@
     "weakType": 14,
     "rarity": 5,
     "role": 1,
-    "monsterEnglishName": "Reuniclus",
-    "trainerEnglishName": "Caitlin"
+    "pokemonNameByLanguage": {
+      "de": "Zytomega",
+      "en": "Reuniclus",
+      "es": "Reuniclus",
+      "fr": "Symbios",
+      "it": "Reuniclus",
+      "ja": "ランクルス",
+      "ko": "란쿨루스",
+      "zh": "人造細胞卵"
+    },
+    "trainerNameByLanguage": {
+      "de": "Kattlea",
+      "en": "Caitlin",
+      "es": "Catleya",
+      "fr": "Percila",
+      "it": "Catlina",
+      "ja": "カトレア",
+      "ko": "카틀레야",
+      "zh": "嘉德麗雅"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Kattlea_Zytomega",
+      "en": "Caitlin_Reuniclus",
+      "es": "Catleya_Reuniclus",
+      "fr": "Percila_Symbios",
+      "it": "Catlina_Reuniclus",
+      "ja": "カトレア_ランクルス",
+      "ko": "카틀레야_란쿨루스",
+      "zh": "嘉德麗雅_人造細胞卵"
+    }
   },
   {
     "monsterBaseId": "20073400",
@@ -5314,8 +5818,36 @@
     "weakType": 14,
     "rarity": 5,
     "role": 3,
-    "monsterEnglishName": "Meowstic",
-    "trainerEnglishName": "Calem"
+    "pokemonNameByLanguage": {
+      "de": "Psiaugon",
+      "en": "Meowstic",
+      "es": "Meowstic",
+      "fr": "Mistigrix",
+      "it": "Meowstic",
+      "ja": "ニャオニクス",
+      "ko": "냐오닉스",
+      "zh": "超能妙喵"
+    },
+    "trainerNameByLanguage": {
+      "de": "Kalem",
+      "en": "Calem",
+      "es": "Kalm",
+      "fr": "Kalem",
+      "it": "Calem",
+      "ja": "カルム",
+      "ko": "칼름",
+      "zh": "卡魯穆"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Kalem_Psiaugon",
+      "en": "Calem_Meowstic",
+      "es": "Kalm_Meowstic",
+      "fr": "Kalem_Mistigrix",
+      "it": "Calem_Meowstic",
+      "ja": "カルム_ニャオニクス",
+      "ko": "칼름_냐오닉스",
+      "zh": "卡魯穆_超能妙喵"
+    }
   },
   {
     "monsterBaseId": "20028401",
@@ -5556,8 +6088,36 @@
     "weakType": 13,
     "rarity": 4,
     "role": 3,
-    "monsterEnglishName": "Masquerain",
-    "trainerEnglishName": "Viola"
+    "pokemonNameByLanguage": {
+      "de": "Maskeregen",
+      "en": "Masquerain",
+      "es": "Masquerain",
+      "fr": "Maskadra",
+      "it": "Masquerain",
+      "ja": "アメモース",
+      "ko": "비나방",
+      "zh": "雨翅蛾"
+    },
+    "trainerNameByLanguage": {
+      "de": "Viola",
+      "en": "Viola",
+      "es": "Violeta",
+      "fr": "Violette",
+      "it": "Violetta",
+      "ja": "ビオラ",
+      "ko": "비올라",
+      "zh": "紫羅蘭"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Viola_Maskeregen",
+      "en": "Viola_Masquerain",
+      "es": "Violeta_Masquerain",
+      "fr": "Violette_Maskadra",
+      "it": "Violetta_Masquerain",
+      "ja": "ビオラ_アメモース",
+      "ko": "비올라_비나방",
+      "zh": "紫羅蘭_雨翅蛾"
+    }
   },
   {
     "monsterBaseId": "20080601",
@@ -5844,8 +6404,36 @@
     "weakType": 3,
     "rarity": 5,
     "role": 1,
-    "monsterEnglishName": "Salazzle",
-    "trainerEnglishName": "Plumeria"
+    "pokemonNameByLanguage": {
+      "de": "Amfira",
+      "en": "Salazzle",
+      "es": "Salazzle",
+      "fr": "Malamandre",
+      "it": "Salazzle",
+      "ja": "エンニュート",
+      "ko": "염뉴트",
+      "zh": "焰后蜥"
+    },
+    "trainerNameByLanguage": {
+      "de": "Fran",
+      "en": "Plumeria",
+      "es": "Francine",
+      "fr": "Apocyne",
+      "it": "Plumeria",
+      "ja": "プルメリ",
+      "ko": "플루메리",
+      "zh": "布爾美麗"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Fran_Amfira",
+      "en": "Plumeria_Salazzle",
+      "es": "Francine_Salazzle",
+      "fr": "Apocyne_Malamandre",
+      "it": "Plumeria_Salazzle",
+      "ja": "プルメリ_エンニュート",
+      "ko": "플루메리_염뉴트",
+      "zh": "布爾美麗_焰后蜥"
+    }
   },
   {
     "monsterBaseId": "20086700",
@@ -6086,8 +6674,36 @@
     "weakType": 4,
     "rarity": 5,
     "role": 0,
-    "monsterEnglishName": "Golisopod",
-    "trainerEnglishName": "Guzma"
+    "pokemonNameByLanguage": {
+      "de": "Tectass",
+      "en": "Golisopod",
+      "es": "Golisopod",
+      "fr": "Sarmuraï",
+      "it": "Golisopod",
+      "ja": "グソクムシャ",
+      "ko": "갑주무사",
+      "zh": "具甲武者"
+    },
+    "trainerNameByLanguage": {
+      "de": "Bromley",
+      "en": "Guzma",
+      "es": "Guzmán",
+      "fr": "Guzma",
+      "it": "Guzman",
+      "ja": "グズマ",
+      "ko": "구즈마",
+      "zh": "古茲馬"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Bromley_Tectass",
+      "en": "Guzma_Golisopod",
+      "es": "Guzmán_Golisopod",
+      "fr": "Guzma_Sarmuraï",
+      "it": "Guzman_Golisopod",
+      "ja": "グズマ_グソクムシャ",
+      "ko": "구즈마_갑주무사",
+      "zh": "古茲馬_具甲武者"
+    }
   },
   {
     "monsterBaseId": "20073200",
@@ -6374,8 +6990,36 @@
     "weakType": 7,
     "rarity": 5,
     "role": 3,
-    "monsterEnglishName": "Heliolisk",
-    "trainerEnglishName": "Clemont"
+    "pokemonNameByLanguage": {
+      "de": "Elezard",
+      "en": "Heliolisk",
+      "es": "Heliolisk",
+      "fr": "Iguolta",
+      "it": "Heliolisk",
+      "ja": "エレザード",
+      "ko": "일레도리자드",
+      "zh": "光電傘蜥"
+    },
+    "trainerNameByLanguage": {
+      "de": "Citro",
+      "en": "Clemont",
+      "es": "Lem",
+      "fr": "Lem",
+      "it": "Lem",
+      "ja": "シトロン",
+      "ko": "시트론",
+      "zh": "希特隆"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Citro_Elezard",
+      "en": "Clemont_Heliolisk",
+      "es": "Lem_Heliolisk",
+      "fr": "Lem_Iguolta",
+      "it": "Lem_Heliolisk",
+      "ja": "シトロン_エレザード",
+      "ko": "시트론_일레도리자드",
+      "zh": "希特隆_光電傘蜥"
+    }
   },
   {
     "monsterBaseId": "20058101",
@@ -6616,8 +7260,36 @@
     "weakType": 13,
     "rarity": 3,
     "role": 2,
-    "monsterEnglishName": "Swanna",
-    "trainerEnglishName": "Skyla"
+    "pokemonNameByLanguage": {
+      "de": "Swaroness",
+      "en": "Swanna",
+      "es": "Swanna",
+      "fr": "Lakmécygne",
+      "it": "Swanna",
+      "ja": "スワンナ",
+      "ko": "스완나",
+      "zh": "舞天鵝"
+    },
+    "trainerNameByLanguage": {
+      "de": "Géraldine",
+      "en": "Skyla",
+      "es": "Gerania",
+      "fr": "Carolina",
+      "it": "Anemone",
+      "ja": "フウロ",
+      "ko": "풍란",
+      "zh": "風露"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Géraldine_Swaroness",
+      "en": "Skyla_Swanna",
+      "es": "Gerania_Swanna",
+      "fr": "Carolina_Lakmécygne",
+      "it": "Anemone_Swanna",
+      "ja": "フウロ_スワンナ",
+      "ko": "풍란_스완나",
+      "zh": "風露_舞天鵝"
+    }
   },
   {
     "monsterBaseId": "20044800",
@@ -6909,8 +7581,36 @@
         }
       }
     },
-    "monsterEnglishName": "Lucario",
-    "trainerEnglishName": "Korrina"
+    "pokemonNameByLanguage": {
+      "de": "Lucario",
+      "en": "Lucario",
+      "es": "Lucario",
+      "fr": "Lucario",
+      "it": "Lucario",
+      "ja": "ルカリオ",
+      "ko": "루카리오",
+      "zh": "路卡利歐"
+    },
+    "trainerNameByLanguage": {
+      "de": "Connie",
+      "en": "Korrina",
+      "es": "Corelia",
+      "fr": "Cornélia",
+      "it": "Ornella",
+      "ja": "コルニ",
+      "ko": "코르니",
+      "zh": "可爾妮"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Connie_Lucario",
+      "en": "Korrina_Lucario",
+      "es": "Corelia_Lucario",
+      "fr": "Cornélia_Lucario",
+      "it": "Ornella_Lucario",
+      "ja": "コルニ_ルカリオ",
+      "ko": "코르니_루카리오",
+      "zh": "可爾妮_路卡利歐"
+    }
   },
   {
     "monsterBaseId": "20044501",
@@ -7337,8 +8037,36 @@
         }
       }
     },
-    "monsterEnglishName": "Garchomp",
-    "trainerEnglishName": "Cynthia"
+    "pokemonNameByLanguage": {
+      "de": "Knakrack",
+      "en": "Garchomp",
+      "es": "Garchomp",
+      "fr": "Carchacrok",
+      "it": "Garchomp",
+      "ja": "ガブリアス",
+      "ko": "한카리아스",
+      "zh": "烈咬陸鯊"
+    },
+    "trainerNameByLanguage": {
+      "de": "Cynthia",
+      "en": "Cynthia",
+      "es": "Cintia",
+      "fr": "Cynthia",
+      "it": "Camilla",
+      "ja": "シロナ",
+      "ko": "난천",
+      "zh": "竹蘭"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Cynthia_Knakrack",
+      "en": "Cynthia_Garchomp",
+      "es": "Cintia_Garchomp",
+      "fr": "Cynthia_Carchacrok",
+      "it": "Camilla_Garchomp",
+      "ja": "シロナ_ガブリアス",
+      "ko": "난천_한카리아스",
+      "zh": "竹蘭_烈咬陸鯊"
+    }
   },
   {
     "monsterBaseId": "20035001",
@@ -7625,8 +8353,36 @@
     "weakType": 4,
     "rarity": 5,
     "role": 3,
-    "monsterEnglishName": "Milotic",
-    "trainerEnglishName": "Wallace"
+    "pokemonNameByLanguage": {
+      "de": "Milotic",
+      "en": "Milotic",
+      "es": "Milotic",
+      "fr": "Milobellus",
+      "it": "Milotic",
+      "ja": "ミロカロス",
+      "ko": "밀로틱",
+      "zh": "美納斯"
+    },
+    "trainerNameByLanguage": {
+      "de": "Wassili",
+      "en": "Wallace",
+      "es": "Plubio",
+      "fr": "Marc",
+      "it": "Adriano",
+      "ja": "ミクリ",
+      "ko": "윤진",
+      "zh": "米可利"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Wassili_Milotic",
+      "en": "Wallace_Milotic",
+      "es": "Plubio_Milotic",
+      "fr": "Marc_Milobellus",
+      "it": "Adriano_Milotic",
+      "ja": "ミクリ_ミロカロス",
+      "ko": "윤진_밀로틱",
+      "zh": "米可利_美納斯"
+    }
   },
   {
     "monsterBaseId": "20020801",
@@ -7923,8 +8679,36 @@
         }
       }
     },
-    "monsterEnglishName": "Steelix",
-    "trainerEnglishName": "Jasmine"
+    "pokemonNameByLanguage": {
+      "de": "Stahlos",
+      "en": "Steelix",
+      "es": "Steelix",
+      "fr": "Steelix",
+      "it": "Steelix",
+      "ja": "ハガネール",
+      "ko": "강철톤",
+      "zh": "大鋼蛇"
+    },
+    "trainerNameByLanguage": {
+      "de": "Jasmin",
+      "en": "Jasmine",
+      "es": "Yasmina",
+      "fr": "Jasmine",
+      "it": "Jasmine",
+      "ja": "ミカン",
+      "ko": "규리",
+      "zh": "阿蜜"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Jasmin_Stahlos",
+      "en": "Jasmine_Steelix",
+      "es": "Yasmina_Steelix",
+      "fr": "Jasmine_Steelix",
+      "it": "Jasmine_Steelix",
+      "ja": "ミカン_ハガネール",
+      "ko": "규리_강철톤",
+      "zh": "阿蜜_大鋼蛇"
+    }
   },
   {
     "monsterBaseId": "20047500",
@@ -8287,8 +9071,36 @@
         }
       }
     },
-    "monsterEnglishName": "Gallade",
-    "trainerEnglishName": "Wally"
+    "pokemonNameByLanguage": {
+      "de": "Galagladi",
+      "en": "Gallade",
+      "es": "Gallade",
+      "fr": "Gallame",
+      "it": "Gallade",
+      "ja": "エルレイド",
+      "ko": "엘레이드",
+      "zh": "艾路雷朵"
+    },
+    "trainerNameByLanguage": {
+      "de": "Heiko",
+      "en": "Wally",
+      "es": "Blasco",
+      "fr": "Timmy",
+      "it": "Lino",
+      "ja": "ミツル",
+      "ko": "민진",
+      "zh": "滿充"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Heiko_Galagladi",
+      "en": "Wally_Gallade",
+      "es": "Blasco_Gallade",
+      "fr": "Timmy_Gallame",
+      "it": "Lino_Gallade",
+      "ja": "ミツル_エルレイド",
+      "ko": "민진_엘레이드",
+      "zh": "滿充_艾路雷朵"
+    }
   },
   {
     "monsterBaseId": "20012100",
@@ -8529,8 +9341,36 @@
     "weakType": 4,
     "rarity": 3,
     "role": 2,
-    "monsterEnglishName": "Starmie",
-    "trainerEnglishName": "Misty"
+    "pokemonNameByLanguage": {
+      "de": "Starmie",
+      "en": "Starmie",
+      "es": "Starmie",
+      "fr": "Staross",
+      "it": "Starmie",
+      "ja": "スターミー",
+      "ko": "아쿠스타",
+      "zh": "寶石海星"
+    },
+    "trainerNameByLanguage": {
+      "de": "Misty",
+      "en": "Misty",
+      "es": "Misty",
+      "fr": "Ondine",
+      "it": "Misty",
+      "ja": "カスミ",
+      "ko": "이슬",
+      "zh": "小霞"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Misty_Starmie",
+      "en": "Misty_Starmie",
+      "es": "Misty_Starmie",
+      "fr": "Ondine_Staross",
+      "it": "Misty_Starmie",
+      "ja": "カスミ_スターミー",
+      "ko": "이슬_아쿠스타",
+      "zh": "小霞_寶石海星"
+    }
   },
   {
     "monsterBaseId": "20038901",
@@ -8794,8 +9634,36 @@
     "weakType": 12,
     "rarity": 5,
     "role": 2,
-    "monsterEnglishName": "Torterra",
-    "trainerEnglishName": "Dawn"
+    "pokemonNameByLanguage": {
+      "de": "Chelterrar",
+      "en": "Torterra",
+      "es": "Torterra",
+      "fr": "Torterra",
+      "it": "Torterra",
+      "ja": "ドダイトス",
+      "ko": "토대부기",
+      "zh": "土台龜"
+    },
+    "trainerNameByLanguage": {
+      "de": "Lucia",
+      "en": "Dawn",
+      "es": "Maya",
+      "fr": "Aurore",
+      "it": "Lucinda",
+      "ja": "ヒカリ",
+      "ko": "빛나",
+      "zh": "小光"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Lucia_Chelterrar",
+      "en": "Dawn_Torterra",
+      "es": "Maya_Torterra",
+      "fr": "Aurore_Torterra",
+      "it": "Lucinda_Torterra",
+      "ja": "ヒカリ_ドダイトス",
+      "ko": "빛나_토대부기",
+      "zh": "小光_土台龜"
+    }
   },
   {
     "monsterBaseId": "20054200",
@@ -9082,8 +9950,36 @@
     "weakType": 2,
     "rarity": 5,
     "role": 1,
-    "monsterEnglishName": "Leavanny",
-    "trainerEnglishName": "Burgh"
+    "pokemonNameByLanguage": {
+      "de": "Matrifol",
+      "en": "Leavanny",
+      "es": "Leavanny",
+      "fr": "Manternel",
+      "it": "Leavanny",
+      "ja": "ハハコモリ",
+      "ko": "모아머",
+      "zh": "保母蟲"
+    },
+    "trainerNameByLanguage": {
+      "de": "Artie",
+      "en": "Burgh",
+      "es": "Camus",
+      "fr": "Artie",
+      "it": "Artemisio",
+      "ja": "アーティ",
+      "ko": "아티",
+      "zh": "亞堤"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Artie_Matrifol",
+      "en": "Burgh_Leavanny",
+      "es": "Camus_Leavanny",
+      "fr": "Artie_Manternel",
+      "it": "Artemisio_Leavanny",
+      "ja": "アーティ_ハハコモリ",
+      "ko": "아티_모아머",
+      "zh": "亞堤_保母蟲"
+    }
   },
   {
     "monsterBaseId": "20039500",
@@ -9324,8 +10220,36 @@
     "weakType": 5,
     "rarity": 3,
     "role": 1,
-    "monsterEnglishName": "Empoleon",
-    "trainerEnglishName": "Barry"
+    "pokemonNameByLanguage": {
+      "de": "Impoleon",
+      "en": "Empoleon",
+      "es": "Empoleon",
+      "fr": "Pingoléon",
+      "it": "Empoleon",
+      "ja": "エンペルト",
+      "ko": "엠페르트",
+      "zh": "帝王拿波"
+    },
+    "trainerNameByLanguage": {
+      "de": "Barry",
+      "en": "Barry",
+      "es": "Israel",
+      "fr": "René",
+      "it": "Barry",
+      "ja": "ジュン",
+      "ko": "용식",
+      "zh": "阿馴"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Barry_Impoleon",
+      "en": "Barry_Empoleon",
+      "es": "Israel_Empoleon",
+      "fr": "René_Pingoléon",
+      "it": "Barry_Empoleon",
+      "ja": "ジュン_エンペルト",
+      "ko": "용식_엠페르트",
+      "zh": "阿馴_帝王拿波"
+    }
   },
   {
     "monsterBaseId": "20031900",
@@ -9704,8 +10628,36 @@
         }
       }
     },
-    "monsterEnglishName": "Sharpedo",
-    "trainerEnglishName": "Grimsley"
+    "pokemonNameByLanguage": {
+      "de": "Tohaido",
+      "en": "Sharpedo",
+      "es": "Sharpedo",
+      "fr": "Sharpedo",
+      "it": "Sharpedo",
+      "ja": "サメハダー",
+      "ko": "샤크니아",
+      "zh": "巨牙鯊"
+    },
+    "trainerNameByLanguage": {
+      "de": "Astor",
+      "en": "Grimsley",
+      "es": "Aza",
+      "fr": "Pieris",
+      "it": "Mirton",
+      "ja": "ギーマ",
+      "ko": "블래리",
+      "zh": "越橘"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Astor_Tohaido",
+      "en": "Grimsley_Sharpedo",
+      "es": "Aza_Sharpedo",
+      "fr": "Pieris_Sharpedo",
+      "it": "Mirton_Sharpedo",
+      "ja": "ギーマ_サメハダー",
+      "ko": "블래리_샤크니아",
+      "zh": "越橘_巨牙鯊"
+    }
   },
   {
     "monsterBaseId": "20050001",
@@ -9969,8 +10921,36 @@
     "weakType": 3,
     "rarity": 5,
     "role": 0,
-    "monsterEnglishName": "Emboar",
-    "trainerEnglishName": "Hilda"
+    "pokemonNameByLanguage": {
+      "de": "Flambirex",
+      "en": "Emboar",
+      "es": "Emboar",
+      "fr": "Roitiflam",
+      "it": "Emboar",
+      "ja": "エンブオー",
+      "ko": "염무왕",
+      "zh": "炎武王"
+    },
+    "trainerNameByLanguage": {
+      "de": "Lotta",
+      "en": "Hilda",
+      "es": "Liza",
+      "fr": "Ludvina",
+      "it": "Anita",
+      "ja": "トウコ",
+      "ko": "투희",
+      "zh": "鬥子"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Lotta_Flambirex",
+      "en": "Hilda_Emboar",
+      "es": "Liza_Emboar",
+      "fr": "Ludvina_Roitiflam",
+      "it": "Anita_Emboar",
+      "ja": "トウコ_エンブオー",
+      "ko": "투희_염무왕",
+      "zh": "鬥子_炎武王"
+    }
   },
   {
     "monsterBaseId": "20042600",
@@ -10257,8 +11237,36 @@
     "weakType": 4,
     "rarity": 5,
     "role": 0,
-    "monsterEnglishName": "Drifblim",
-    "trainerEnglishName": "Morty"
+    "pokemonNameByLanguage": {
+      "de": "Drifzepeli",
+      "en": "Drifblim",
+      "es": "Drifblim",
+      "fr": "Grodrive",
+      "it": "Drifblim",
+      "ja": "フワライド",
+      "ko": "둥실라이드",
+      "zh": "隨風球"
+    },
+    "trainerNameByLanguage": {
+      "de": "Jens",
+      "en": "Morty",
+      "es": "Morti",
+      "fr": "Mortimer",
+      "it": "Angelo",
+      "ja": "マツバ",
+      "ko": "유빈",
+      "zh": "松葉"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Jens_Drifzepeli",
+      "en": "Morty_Drifblim",
+      "es": "Morti_Drifblim",
+      "fr": "Mortimer_Grodrive",
+      "it": "Angelo_Drifblim",
+      "ja": "マツバ_フワライド",
+      "ko": "유빈_둥실라이드",
+      "zh": "松葉_隨風球"
+    }
   },
   {
     "monsterBaseId": "20071900",
@@ -10545,8 +11553,36 @@
     "weakType": 9,
     "rarity": 5,
     "role": 3,
-    "monsterEnglishName": "Delphox",
-    "trainerEnglishName": "Serena"
+    "pokemonNameByLanguage": {
+      "de": "Fennexis",
+      "en": "Delphox",
+      "es": "Delphox",
+      "fr": "Goupelin",
+      "it": "Delphox",
+      "ja": "マフォクシー",
+      "ko": "마폭시",
+      "zh": "妖火紅狐"
+    },
+    "trainerNameByLanguage": {
+      "de": "Serena",
+      "en": "Serena",
+      "es": "Serena",
+      "fr": "Serena",
+      "it": "Serena",
+      "ja": "セレナ",
+      "ko": "세레나",
+      "zh": "莎莉娜"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Serena_Fennexis",
+      "en": "Serena_Delphox",
+      "es": "Serena_Delphox",
+      "fr": "Serena_Goupelin",
+      "it": "Serena_Delphox",
+      "ja": "セレナ_マフォクシー",
+      "ko": "세레나_마폭시",
+      "zh": "莎莉娜_妖火紅狐"
+    }
   },
   {
     "monsterBaseId": "20016900",
@@ -10787,7 +11823,35 @@
     "weakType": 4,
     "rarity": 4,
     "role": 3,
-    "monsterEnglishName": "Crobat",
-    "trainerEnglishName": "Koga"
+    "pokemonNameByLanguage": {
+      "de": "Iksbat",
+      "en": "Crobat",
+      "es": "Crobat",
+      "fr": "Nostenfer",
+      "it": "Crobat",
+      "ja": "クロバット",
+      "ko": "크로뱃",
+      "zh": "叉字蝠"
+    },
+    "trainerNameByLanguage": {
+      "de": "Koga",
+      "en": "Koga",
+      "es": "Koga",
+      "fr": "Koga",
+      "it": "Koga",
+      "ja": "キョウ",
+      "ko": "독수",
+      "zh": "阿桔"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Koga_Iksbat",
+      "en": "Koga_Crobat",
+      "es": "Koga_Crobat",
+      "fr": "Koga_Nostenfer",
+      "it": "Koga_Crobat",
+      "ja": "キョウ_クロバット",
+      "ko": "독수_크로뱃",
+      "zh": "阿桔_叉字蝠"
+    }
   }
 ]
