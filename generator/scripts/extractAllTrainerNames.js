@@ -1,3 +1,4 @@
+// To be used when need all trainer names to form teams.
 const fs = require('fs');
 
 const trainerNameDBde = require('../rawdata/de/trainer_name_de.json');

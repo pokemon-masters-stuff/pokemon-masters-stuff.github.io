@@ -1,3 +1,4 @@
+// To be used when need all pokemon names to form teams.
 const fs = require('fs');
 
 const pokemonNameDBde = require('../rawdata/de/monster_name_de.json');
