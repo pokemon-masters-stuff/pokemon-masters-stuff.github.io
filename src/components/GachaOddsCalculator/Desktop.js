@@ -18,9 +18,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function binomial(n, k, p) {
-  if (typeof n !== 'number' || typeof k !== 'number' || typeof p !== 'number') {
-    return false;
+  if (isNaN(n)) {
+    n = 0;
   }
+  if (isNaN(p)) {
+    p = 0;
+  }
+
   let coeff = 1;
   let x = n - k + 1;
   for (x; x <= n; x++) coeff *= x;
@@ -34,11 +38,11 @@ const GachaOddsCalculator = () => {
   const darkMode = useSelector((state) => state.darkMode.mode);
   const [paidScouts, setPaidScouts] = useState(0);
   const [nonPaidScouts, setNonPaidScouts] = useState(0);
-  const [focusRate, setFocusRate] = useState(2);
+  const [targetRate, setTargetRate] = useState(2);
   const [fiveStarRate, setFiveStarRate] = useState(7);
 
   const handleChangeFocusRate = (event) => {
-    setFocusRate(parseFloat(event.target.value));
+    setTargetRate(parseFloat(event.target.value));
   };
 
   const handleChangeFiveStarRate = (event) => {
@@ -52,7 +56,19 @@ const GachaOddsCalculator = () => {
     setNonPaidScouts(parseFloat(event.target.value));
   };
 
-  let totalScouts = parseFloat(paidScouts + nonPaidScouts);
+  let totalScouts = 0;
+  if (!isNaN(paidScouts) && !isNaN(nonPaidScouts)) {
+    totalScouts = parseFloat(paidScouts + nonPaidScouts);
+  } else if (!isNaN(paidScouts)) {
+    totalScouts = parseFloat(paidScouts);
+  } else if (!isNaN(nonPaidScouts)) {
+    totalScouts = parseFloat(nonPaidScouts);
+  } else {
+    totalScouts = 0;
+  }
+
+  let paidGems = !isNaN(paidScouts) ? paidScouts * 100 : 0;
+  let nonPaidGems = !isNaN(nonPaidScouts) ? nonPaidScouts * 300 : 0;
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
@@ -72,8 +88,9 @@ const GachaOddsCalculator = () => {
                   id="outlined-number"
                   label="Rate of Target Unit"
                   type="number"
-                  value={focusRate}
+                  value={targetRate}
                   onChange={handleChangeFocusRate}
+                  inputProps={{ min: 0 }}
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">%</InputAdornment>
@@ -103,6 +120,7 @@ const GachaOddsCalculator = () => {
                   type="number"
                   value={fiveStarRate}
                   onChange={handleChangeFiveStarRate}
+                  inputProps={{ min: 0 }}
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">%</InputAdornment>
@@ -128,6 +146,7 @@ const GachaOddsCalculator = () => {
                   type="number"
                   value={paidScouts}
                   onChange={handleChangePaidScouts}
+                  inputProps={{ min: 0 }}
                   InputLabelProps={{
                     shrink: true,
                   }}
@@ -142,6 +161,7 @@ const GachaOddsCalculator = () => {
                   type="number"
                   value={nonPaidScouts}
                   onChange={handleChangeNonPaidScouts}
+                  inputProps={{ min: 0 }}
                   InputLabelProps={{
                     shrink: true,
                   }}
@@ -158,56 +178,88 @@ const GachaOddsCalculator = () => {
               <br />
               Total gems spent:{' '}
               <span style={{ color: 'red' }}>
-                {paidScouts * 100 + nonPaidScouts * 300}{' '}
+                {paidGems + nonPaidGems}{' '}
               </span>{' '}
-              (Paid: <span style={{ color: 'red' }}> {paidScouts * 100}</span>;
-              Non-Paid:{' '}
-              <span style={{ color: 'red' }}>{nonPaidScouts * 300}</span> )
+              (Paid: <span style={{ color: 'red' }}> {paidGems}</span>;
+              Non-Paid: <span style={{ color: 'red' }}>{nonPaidGems}</span> )
               <br />
               <br />
-              Probability of summoning at least 1 focus unit:&nbsp; &nbsp;
+              Probability of summoning at least 1 target unit:&nbsp; &nbsp;
               <span style={{ color: 'red' }}>
-                {1 - binomial(totalScouts, 0, focusRate / 100)}
+                {totalScouts === 0
+                  ? 0
+                  : (
+                      (1 - binomial(totalScouts, 0, targetRate / 100)) *
+                      100
+                    ).toFixed(4)}
+                %
               </span>
               <br />
-              Probability of summoning at least 2 focus units:{' '}
+              Probability of summoning at least 2 target units:{' '}
               <span style={{ color: 'red' }}>
-                {1 -
-                  binomial(totalScouts, 0, focusRate / 100) -
-                  binomial(totalScouts, 1, focusRate / 100)}
+                {totalScouts === 0
+                  ? 0
+                  : (
+                      (1 -
+                        binomial(totalScouts, 0, targetRate / 100) -
+                        binomial(totalScouts, 1, targetRate / 100)) *
+                      100
+                    ).toFixed(4)}
+                %
               </span>
               <br />
-              Probability of summoning at least 3 focus units:{' '}
+              Probability of summoning at least 3 target units:{' '}
               <span style={{ color: 'red' }}>
-                {1 -
-                  binomial(totalScouts, 0, focusRate / 100) -
-                  binomial(totalScouts, 1, focusRate / 100) -
-                  binomial(totalScouts, 2, focusRate / 100)}
+                {totalScouts === 0
+                  ? 0
+                  : (
+                      (1 -
+                        binomial(totalScouts, 0, targetRate / 100) -
+                        binomial(totalScouts, 1, targetRate / 100) -
+                        binomial(totalScouts, 2, targetRate / 100)) *
+                      100
+                    ).toFixed(4)}
+                %
               </span>
               <br />
-              Probability of summoning at least 4 focus units:{' '}
+              Probability of summoning at least 4 target units:{' '}
               <span style={{ color: 'red' }}>
-                {1 -
-                  binomial(totalScouts, 0, focusRate / 100) -
-                  binomial(totalScouts, 1, focusRate / 100) -
-                  binomial(totalScouts, 2, focusRate / 100) -
-                  binomial(totalScouts, 3, focusRate / 100)}
+                {totalScouts === 0
+                  ? 0
+                  : (
+                      (1 -
+                        binomial(totalScouts, 0, targetRate / 100) -
+                        binomial(totalScouts, 1, targetRate / 100) -
+                        binomial(totalScouts, 2, targetRate / 100) -
+                        binomial(totalScouts, 3, targetRate / 100)) *
+                      100
+                    ).toFixed(4)}
+                %
               </span>
               <br />
-              Probability of summoning at least 5 focus units:{' '}
+              Probability of summoning at least 5 target units:{' '}
               <span style={{ color: 'red' }}>
-                {1 -
-                  binomial(totalScouts, 0, focusRate / 100) -
-                  binomial(totalScouts, 1, focusRate / 100) -
-                  binomial(totalScouts, 2, focusRate / 100) -
-                  binomial(totalScouts, 3, focusRate / 100) -
-                  binomial(totalScouts, 4, focusRate / 100)}
+                {totalScouts === 0
+                  ? 0
+                  : (
+                      (1 -
+                        binomial(totalScouts, 0, targetRate / 100) -
+                        binomial(totalScouts, 1, targetRate / 100) -
+                        binomial(totalScouts, 2, targetRate / 100) -
+                        binomial(totalScouts, 3, targetRate / 100) -
+                        binomial(totalScouts, 4, targetRate / 100)) *
+                      100
+                    ).toFixed(4)}
+                %
               </span>
               <br />
               <br />
               You can expect a total of{' '}
               <span style={{ color: 'red' }}>
-                {Math.floor((totalScouts * fiveStarRate) / 100)}{' '}
+                {Math.floor(
+                  (totalScouts * (!isNaN(fiveStarRate) ? fiveStarRate : 0)) /
+                    100
+                )}{' '}
               </span>{' '}
               5-Star units (focus and non-focus).
               <br />
