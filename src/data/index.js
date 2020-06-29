@@ -1,6 +1,10 @@
 export { default as shortenedMoveNameByAbilityIdEN } from './shortenedMoveNameByAbilityId/en';
 export { default as shortenedMoveNameByAbilityIdIT } from './shortenedMoveNameByAbilityId/it';
 export { default as shortenedMoveNameByAbilityIdES } from './shortenedMoveNameByAbilityId/es';
+export { default as shortenedMoveNameByAbilityIdFR } from './shortenedMoveNameByAbilityId/fr';
+export { default as shortenedMoveNameByAbilityIdJA } from './shortenedMoveNameByAbilityId/ja';
+export { default as shortenedMoveNameByAbilityIdKO } from './shortenedMoveNameByAbilityId/ko';
+export { default as shortenedMoveNameByAbilityIdZH } from './shortenedMoveNameByAbilityId/zh';
 
 export { default as pikachuGridDataDE } from './grids/de/pikachu.json';
 export { default as torkoalGridDataDE } from './grids/de/torkoal.json';

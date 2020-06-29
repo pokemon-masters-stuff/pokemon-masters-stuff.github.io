@@ -2,6 +2,10 @@ import {
   shortenedMoveNameByAbilityIdEN,
   shortenedMoveNameByAbilityIdIT,
   shortenedMoveNameByAbilityIdES,
+  shortenedMoveNameByAbilityIdFR,
+  shortenedMoveNameByAbilityIdKO,
+  shortenedMoveNameByAbilityIdJA,
+  shortenedMoveNameByAbilityIdZH,
   pikachuGridDataDE,
   torkoalGridDataDE,
   infernapeGridDataDE,
@@ -394,6 +398,10 @@ export const shortenedMoveNameByAbilityId = {
   en: shortenedMoveNameByAbilityIdEN,
   it: shortenedMoveNameByAbilityIdIT,
   es: shortenedMoveNameByAbilityIdES,
+  fr: shortenedMoveNameByAbilityIdFR,
+  ko: shortenedMoveNameByAbilityIdKO,
+  ja: shortenedMoveNameByAbilityIdJA,
+  zh: shortenedMoveNameByAbilityIdZH,
 };
 
 export const allSyncGrids = {

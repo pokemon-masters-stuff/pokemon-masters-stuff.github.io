@@ -344,11 +344,15 @@ export const renderMoveName = (moveName, abilityId, language) => {
     if (shortenedMoveNameByAbilityId[language]) {
       if (shortenedMoveNameByAbilityId[language][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
+      } else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
       }
       // else {
       //   // to generate list of skills to be abbreviated
-      //   names[abilityId] = moveName; // to generate list of skills to be abbreviated
-      //   console.log(names); // to generate list of skills to be abbreviated
+      //   if ((language = 'es')) {
+      //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
+      //     console.log(names); // to generate list of skills to be abbreviated
+      //   }
       // }
     } else {
       if (shortenedMoveNameByAbilityId['en'][abilityId]) {

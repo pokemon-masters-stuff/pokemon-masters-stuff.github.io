@@ -43,6 +43,13 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            6/29/2020:
+            <br />
+            Added more skill name abbreviations. Thanks to props777 for the
+            Japanese version, Azonite for the Chinese version, Rheia for the
+            Korean version, and Palpal and Tijklify for the French version!
+            <br />
+            <br />
             6/28/2020:
             <br />
             Added Gacha Odds Calculator. Added Spanish skill name abbreviations
