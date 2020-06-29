@@ -18,6 +18,10 @@ import withTracker from './utils/withTracker';
 import Box from '@material-ui/core/Box';
 import { NavigationDesktop } from './components/Navigation';
 import { DarkModeToggleDesktop } from './components/DarkModeToggle';
+import {
+  GachaOddsCalculatorDesktop,
+  GachaOddsCalculatorMobile,
+} from './components/GachaOddsCalculator';
 
 export default function App({ store }) {
   const darkMode = useSelector((state) => state.darkMode.mode);
@@ -37,6 +41,11 @@ export default function App({ store }) {
           <DarkModeToggleDesktop />
           <div style={{ marginTop: 64 }}>
             <Route exact path="/" component={withTracker(DesktopLayout)} />
+            <Route
+              exact
+              path="/gacha-odds-calculator"
+              component={withTracker(GachaOddsCalculatorDesktop)}
+            />
             <PrivateRoute
               path="/builds"
               screenSize={'large'}
@@ -69,6 +78,11 @@ export default function App({ store }) {
         <Hidden mdUp>
           <Box>
             <Route exact path="/" component={withTracker(MobileLayout)} />
+            <Route
+              exact
+              path="/gacha-odds-calculator"
+              component={withTracker(GachaOddsCalculatorMobile)}
+            />
             <PrivateRoute
               path="/builds"
               component={withTracker(BuildsMobile)}

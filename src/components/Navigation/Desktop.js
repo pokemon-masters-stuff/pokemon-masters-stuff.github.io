@@ -28,7 +28,7 @@ import ContributeModal from '../ContributeModal';
 import LanguageModal from '../LanguageModal';
 import UI from '../../utils/translations';
 import styles from './styles';
-
+import ExposureIcon from '@material-ui/icons/Exposure';
 import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
 import ViewColumnIcon from '@material-ui/icons/ViewColumn'; // for teams
 
@@ -42,7 +42,7 @@ function PersistentDrawerLeft(props) {
 
   const { classes } = props;
 
-  const [isOpened, setisOpened] = React.useState(false);
+  const [isOpened, setisOpened] = useState(false);
 
   const onOpenHandler = () => {
     setisOpened(true);
@@ -145,6 +145,18 @@ function PersistentDrawerLeft(props) {
               <ListItemText primary={UI['Popular Builds'][language]} />
             </ListItem>
           )}
+
+          <Link
+            to="/gacha-odds-calculator"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ListItem button>
+              <ListItemIcon className={classes.listIcon}>
+                <ExposureIcon />
+              </ListItemIcon>
+              <ListItemText primary="Gacha Odds Calculator" />
+            </ListItem>
+          </Link>
         </List>
 
         <Divider />

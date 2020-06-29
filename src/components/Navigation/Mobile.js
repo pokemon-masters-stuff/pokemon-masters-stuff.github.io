@@ -21,6 +21,7 @@ import UI from '../../utils/translations';
 import Divider from '@material-ui/core/Divider';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
+import ExposureIcon from '@material-ui/icons/Exposure';
 
 function Navigation(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -29,6 +30,7 @@ function Navigation(props) {
   const handleOnClickLogout = () => {
     dispatch(logout());
   };
+
   const [open, setOpen] = useState(false);
 
   const { classes, isOpened, onCloseHandler } = props;
@@ -80,6 +82,17 @@ function Navigation(props) {
             <ListItemText primary={UI['Popular Builds'][language]} />
           </ListItem>
         )}
+        <Link
+          to="/gacha-odds-calculator"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ListItem button>
+            <ListItemIcon className={classes.listIcon}>
+              <ExposureIcon />
+            </ListItemIcon>
+            <ListItemText primary="Gacha Odds Calculator" />
+          </ListItem>
+        </Link>
       </List>
 
       <Divider />
