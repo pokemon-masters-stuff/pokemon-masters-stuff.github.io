@@ -1,5 +1,3 @@
-// For egg mons
-
 const fs = require("fs");
 
 const monsterDB = require("../rawdata/Monster.json");
@@ -197,7 +195,7 @@ const trainerList = [
 // characterId->trainerId
 
 /*
- * Usage i.e: node extractSyncPairDataByTrainerId.js
+ * Usage i.e: node extractEggPokemonDataByTrainerId.js
  * */
 
 const extractSyncPairDataByTrainerBaseId = () => {
