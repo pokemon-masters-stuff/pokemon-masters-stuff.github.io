@@ -1,16 +1,16 @@
-import React, { Fragment, useState } from 'react';
-import { useSelector } from 'react-redux';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InfoIcon from '@material-ui/icons/Info';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
-import Button from '@material-ui/core/Button';
-import UI from '../../utils/translations';
+import React, { Fragment, useState } from "react";
+import { useSelector } from "react-redux";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import InfoIcon from "@material-ui/icons/Info";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions";
+import Button from "@material-ui/core/Button";
+import UI from "../../utils/translations";
 
 const AnnouncementModal = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
@@ -33,16 +33,22 @@ const AnnouncementModal = (props) => {
         <ListItemIcon className={props.classes.listIcon}>
           <InfoIcon />
         </ListItemIcon>
-        <ListItemText primary={UI['Announcements'][language]} />
+        <ListItemText primary={UI["Announcements"][language]} />
       </ListItem>
 
       <Dialog
         open={isAnnouncementModalVisible}
         onClose={handleOnCloseAnnouncementModal}
       >
-        <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
+        <DialogTitle>{UI["Announcements"][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            7/21/2020:
+            <br />
+            Added Italian skill name abbreviations for the new sync grids.
+            Thanks to Jo from Discord!
+            <br />
+            <br />
             6/29/2020:
             <br />
             Added more skill name abbreviations. Thanks to props777 for the
