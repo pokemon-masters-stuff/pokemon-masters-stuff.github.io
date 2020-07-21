@@ -222,34 +222,55 @@ const extractSyncPairDataByTrainerBaseId = () => {
     if (trainer) {
       // Use trainerBaseId to find monsterId and trainerBaseId in Trainer.json
       monsterId = trainer.monsterId;
+
       trainerBaseId = trainer.trainerBaseId;
 
-      // Check if there is an evolved form. If so use the final evolved form's monsterId
-      let secondEvolvedFormMonsterId =
-        monsterId.toString().substring(0, monsterId.toString().length - 1) +
-        "2";
-      let firstEvolvedFormMonsterId =
-        monsterId.toString().substring(0, monsterId.toString().length - 1) +
-        "1";
+      // If  the three starters, find the final evolution form
+      if (monsterId === 28000040001) {
+        monsterId = 28000040003;
+      } else if (monsterId === 28000040004) {
+        monsterId = 28000040006;
+      } else if (monsterId === 28000040007) {
+        monsterId = 28000040009;
+      } else {
+        // else check if there is an evolved form. If so use the final evolved form's monsterId
+        let thirdEvolvedFormMonsterId =
+          monsterId.toString().substring(0, monsterId.toString().length - 1) +
+          "3"; // some pokemon eg. Beedrill's last digit is 3
 
-      if (
-        monsterDB.entries.find(
-          (monster) =>
-            monster.monsterId.toString() === secondEvolvedFormMonsterId
-        )
-      ) {
-        monsterId = secondEvolvedFormMonsterId;
-      } else if (
-        monsterDB.entries.find(
-          (monster) =>
-            monster.monsterId.toString() === firstEvolvedFormMonsterId
-        )
-      ) {
-        monsterId = firstEvolvedFormMonsterId;
+        let secondEvolvedFormMonsterId =
+          monsterId.toString().substring(0, monsterId.toString().length - 1) +
+          "2";
+        let firstEvolvedFormMonsterId =
+          monsterId.toString().substring(0, monsterId.toString().length - 1) +
+          "1";
+
+        if (
+          monsterDB.entries.find(
+            (monster) =>
+              monster.monsterId.toString() === thirdEvolvedFormMonsterId
+          )
+        ) {
+          monsterId = thirdEvolvedFormMonsterId;
+        } else if (
+          monsterDB.entries.find(
+            (monster) =>
+              monster.monsterId.toString() === secondEvolvedFormMonsterId
+          )
+        ) {
+          monsterId = secondEvolvedFormMonsterId;
+        } else if (
+          monsterDB.entries.find(
+            (monster) =>
+              monster.monsterId.toString() === firstEvolvedFormMonsterId
+          )
+        ) {
+          monsterId = firstEvolvedFormMonsterId;
+        }
       }
 
       // Use monsterId to find type, weakType, moveId and passiveId in Trainer.json
-      const {
+      let {
         move1Id,
         move2Id,
         move3Id,
@@ -389,6 +410,15 @@ const extractSyncPairDataByTrainerBaseId = () => {
         };
 
       // Use moveId to find move data, eg. power, accuracy, etc. from Move.json
+      if (monsterId === "28000020053") {
+        // Weedle changes its moveset when evolving into Beedrill
+        move1Id = 42;
+        if (role === 0) {
+          move4Id = 398;
+        } else {
+          move4Id = 41;
+        }
+      }
       let move1 = moveDB.entries.find(
         (move) => move.moveId.toString() === move1Id.toString()
       );

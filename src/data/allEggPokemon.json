@@ -951,45 +951,45 @@
     }
   },
   {
-    "monsterBaseId": "20001400",
-    "monsterId": "28000020052",
+    "monsterBaseId": "20001500",
+    "monsterId": "28000020053",
     "trainerId": "18000020051",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [61, 95, 128, 260, 288],
-      "atkValues": [14, 28, 40, 95, 107],
-      "defValues": [7, 14, 20, 42, 46],
-      "spaValues": [14, 28, 40, 95, 107],
-      "spdValues": [7, 14, 20, 42, 46],
-      "speValues": [8, 18, 27, 60, 68]
+      "hpValues": [73, 107, 140, 272, 300],
+      "atkValues": [18, 32, 44, 99, 111],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [18, 32, 44, 99, 111],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
     },
     "moves": {
       "move1": {
-        "id": 40,
+        "id": 42,
         "name": {
-          "de": "Giftstachel",
-          "en": "Poison Sting",
-          "es": "Picotazo Ven",
-          "fr": "Dard-Venin",
-          "it": "Velenospina",
-          "ja": "どくばり",
-          "ko": "독침",
-          "zh": "毒針"
+          "de": "Nadelrakete",
+          "en": "Pin Missile",
+          "es": "Pin Misil",
+          "fr": "Dard-Nuée",
+          "it": "Missilspillo",
+          "ja": "ミサイルばり",
+          "ko": "바늘미사일",
+          "zh": "飛彈針"
         },
         "description": {
-          "de": "Vergiftet das Ziel\neventuell.",
-          "en": "Has a moderate chance of leaving the target poisoned.",
-          "es": "A veces envenena al\nobjetivo.",
-          "fr": "Empoisonne l'ennemi\n(assez rarement).",
-          "it": "A volte avvelena\nil bersaglio.",
-          "ja": "たまに相手をどく状態にする",
-          "ko": "가끔 상대를 독 상태로 만든다",
-          "zh": "偶爾會讓對手陷入中毒狀態。"
+          "de": "Der Anwender greift das\nZiel zwei- bis fünfmal\nhintereinander an.",
+          "en": "Attacks the target two to five times in a row.",
+          "es": "Ataca al objetivo de dos a cinco veces seguidas.",
+          "fr": "Attaque deux à cinq fois \nd'affilée.",
+          "it": "Attacca il bersaglio da due a cinque volte di fila.",
+          "ja": "２～５回のあいだ相手に連続で攻撃する",
+          "ko": "2~5회 동안 상대를 연속으로 공격한다",
+          "zh": "連續攻擊對手２～５次。"
         },
         "category": 1,
         "group": 2,
-        "type": 8,
+        "type": 12,
         "target": 2,
         "targetType": {
           "de": "1 Gegner",
@@ -1001,9 +1001,9 @@
           "ko": "상대 1마리",
           "zh": "對手１對拍組"
         },
-        "gaugeDrain": 1,
-        "power": 12,
-        "accuracy": 100,
+        "gaugeDrain": 2,
+        "power": 16,
+        "accuracy": 95,
         "maxUses": 0
       },
       "move2": {
@@ -1089,27 +1089,45 @@
         "maxUses": 2
       },
       "move4": {
-        "id": -1,
+        "id": 41,
         "name": {
-          "de": "",
-          "en": "",
-          "es": "",
-          "fr": "",
-          "it": "",
-          "ja": "",
-          "ko": "",
-          "zh": ""
+          "de": "Duonadel",
+          "en": "Twineedle",
+          "es": "Doble Ataque",
+          "fr": "Double-Dard",
+          "it": "Doppio Ago",
+          "ja": "ダブルニードル",
+          "ko": "더블니들",
+          "zh": "雙針"
         },
-        "description": {},
-        "category": "",
-        "group": "",
-        "type": "",
-        "target": "",
-        "targetType": "",
-        "gaugeDrain": "",
-        "power": "",
-        "accuracy": "",
-        "maxUses": ""
+        "description": {
+          "de": "Der Anwender schlägt\nzweimal hintereinander\nzu.\nVergiftet das Ziel in\nseltenen Fällen.",
+          "en": "Attacks twice in a row. Has a small chance of leaving the target poisoned.",
+          "es": "Ataca dos veces\nseguidas.\nRara vez envenena al\nobjetivo.",
+          "fr": "Attaque deux fois\nd'affilée. Empoisonne\nl'ennemi (rarement).",
+          "it": "Colpisce due volte\ndi seguito. Raramente\navvelena il bersaglio.",
+          "ja": "２回連続で攻撃する\nまれに相手をどく状態にする",
+          "ko": "2회 연속으로 공격한다\n드물게 상대를 독 상태로 만든다",
+          "zh": "連續攻擊２次。\n少數情況下會讓對手陷入中毒狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 12,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 20,
+        "accuracy": 100,
+        "maxUses": 0
       },
       "syncMove": {
         "id": 31200,
@@ -1219,14 +1237,14 @@
     "rarity": 1,
     "role": 2,
     "pokemonNameByLanguage": {
-      "de": "Kokuna",
-      "en": "Kakuna",
-      "es": "Kakuna",
-      "fr": "Coconfort",
-      "it": "Kakuna",
-      "ja": "コクーン",
-      "ko": "딱충이",
-      "zh": "鐵殼蛹"
+      "de": "Bibor",
+      "en": "Beedrill",
+      "es": "Beedrill",
+      "fr": "Dardargnan",
+      "it": "Beedrill",
+      "ja": "スピアー",
+      "ko": "독침붕",
+      "zh": "大針蜂"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -1239,14 +1257,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Kokuna",
-      "en": "Hero_Kakuna",
-      "es": "Hero_Kakuna",
-      "fr": "Hero_Coconfort",
-      "it": "Hero_Kakuna",
-      "ja": "Hero_コクーン",
-      "ko": "Hero_딱충이",
-      "zh": "Hero_鐵殼蛹"
+      "de": "Hero_Bibor",
+      "en": "Hero_Beedrill",
+      "es": "Hero_Beedrill",
+      "fr": "Hero_Dardargnan",
+      "it": "Hero_Beedrill",
+      "ja": "Hero_スピアー",
+      "ko": "Hero_독침붕",
+      "zh": "Hero_大針蜂"
     }
   },
   {
@@ -2518,18 +2536,18 @@
     }
   },
   {
-    "monsterBaseId": "20007001",
-    "monsterId": "28000020112",
+    "monsterBaseId": "20007101",
+    "monsterId": "28000020113",
     "trainerId": "18000020111",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [61, 95, 128, 260, 288],
-      "atkValues": [14, 28, 40, 95, 107],
-      "defValues": [7, 14, 20, 42, 46],
-      "spaValues": [14, 28, 40, 95, 107],
-      "spdValues": [7, 14, 20, 42, 46],
-      "speValues": [8, 18, 27, 60, 68]
+      "hpValues": [73, 107, 140, 272, 300],
+      "atkValues": [18, 32, 44, 99, 111],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [18, 32, 44, 99, 111],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
     },
     "moves": {
       "move1": {
@@ -2804,14 +2822,14 @@
     "rarity": 1,
     "role": 2,
     "pokemonNameByLanguage": {
-      "de": "Ultrigaria",
-      "en": "Weepinbell",
-      "es": "Weepinbell",
-      "fr": "Boustiflor",
-      "it": "Weepinbell",
-      "ja": "ウツドン",
-      "ko": "우츠동",
-      "zh": "口呆花"
+      "de": "Sarzenia",
+      "en": "Victreebel",
+      "es": "Victreebel",
+      "fr": "Empiflor",
+      "it": "Victreebel",
+      "ja": "ウツボット",
+      "ko": "우츠보트",
+      "zh": "大食花"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -2824,29 +2842,29 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Ultrigaria",
-      "en": "Hero_Weepinbell",
-      "es": "Hero_Weepinbell",
-      "fr": "Hero_Boustiflor",
-      "it": "Hero_Weepinbell",
-      "ja": "Hero_ウツドン",
-      "ko": "Hero_우츠동",
-      "zh": "Hero_口呆花"
+      "de": "Hero_Sarzenia",
+      "en": "Hero_Victreebel",
+      "es": "Hero_Victreebel",
+      "fr": "Hero_Empiflor",
+      "it": "Hero_Victreebel",
+      "ja": "Hero_ウツボット",
+      "ko": "Hero_우츠보트",
+      "zh": "Hero_大食花"
     }
   },
   {
-    "monsterBaseId": "20003000",
-    "monsterId": "28000020122",
+    "monsterBaseId": "20003100",
+    "monsterId": "28000020123",
     "trainerId": "18000020121",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [61, 95, 128, 260, 288],
-      "atkValues": [14, 28, 40, 95, 107],
-      "defValues": [7, 14, 20, 42, 46],
-      "spaValues": [14, 28, 40, 95, 107],
-      "spdValues": [7, 14, 20, 42, 46],
-      "speValues": [8, 18, 27, 60, 68]
+      "hpValues": [73, 107, 140, 272, 300],
+      "atkValues": [18, 32, 44, 99, 111],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [18, 32, 44, 99, 111],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
     },
     "moves": {
       "move1": {
@@ -3121,14 +3139,14 @@
     "rarity": 1,
     "role": 2,
     "pokemonNameByLanguage": {
-      "de": "Nidorina",
-      "en": "Nidorina",
-      "es": "Nidorina",
-      "fr": "Nidorina",
-      "it": "Nidorina",
-      "ja": "ニドリーナ",
-      "ko": "니드리나",
-      "zh": "尼多娜"
+      "de": "Nidoqueen",
+      "en": "Nidoqueen",
+      "es": "Nidoqueen",
+      "fr": "Nidoqueen",
+      "it": "Nidoqueen",
+      "ja": "ニドクイン",
+      "ko": "니드퀸",
+      "zh": "尼多后"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -3141,14 +3159,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Nidorina",
-      "en": "Hero_Nidorina",
-      "es": "Hero_Nidorina",
-      "fr": "Hero_Nidorina",
-      "it": "Hero_Nidorina",
-      "ja": "Hero_ニドリーナ",
-      "ko": "Hero_니드리나",
-      "zh": "Hero_尼多娜"
+      "de": "Hero_Nidoqueen",
+      "en": "Hero_Nidoqueen",
+      "es": "Hero_Nidoqueen",
+      "fr": "Hero_Nidoqueen",
+      "it": "Hero_Nidoqueen",
+      "ja": "Hero_ニドクイン",
+      "ko": "Hero_니드퀸",
+      "zh": "Hero_尼多后"
     }
   },
   {
@@ -4103,18 +4121,18 @@
     }
   },
   {
-    "monsterBaseId": "20001400",
-    "monsterId": "28000030052",
+    "monsterBaseId": "20001500",
+    "monsterId": "28000030053",
     "trainerId": "18000030051",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [60, 107, 152, 328, 364],
-      "atkValues": [10, 23, 35, 79, 87],
-      "defValues": [6, 11, 14, 36, 40],
-      "spaValues": [10, 23, 35, 79, 87],
-      "spdValues": [6, 11, 14, 36, 40],
-      "speValues": [21, 50, 77, 187, 211]
+      "hpValues": [75, 125, 173, 360, 400],
+      "atkValues": [13, 26, 38, 82, 90],
+      "defValues": [7, 12, 15, 37, 41],
+      "spaValues": [13, 26, 38, 82, 90],
+      "spdValues": [7, 12, 15, 37, 41],
+      "speValues": [28, 59, 86, 196, 220]
     },
     "moves": {
       "move1": {
@@ -4371,14 +4389,14 @@
     "rarity": 1,
     "role": 3,
     "pokemonNameByLanguage": {
-      "de": "Kokuna",
-      "en": "Kakuna",
-      "es": "Kakuna",
-      "fr": "Coconfort",
-      "it": "Kakuna",
-      "ja": "コクーン",
-      "ko": "딱충이",
-      "zh": "鐵殼蛹"
+      "de": "Bibor",
+      "en": "Beedrill",
+      "es": "Beedrill",
+      "fr": "Dardargnan",
+      "it": "Beedrill",
+      "ja": "スピアー",
+      "ko": "독침붕",
+      "zh": "大針蜂"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -4391,14 +4409,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Kokuna",
-      "en": "Hero_Kakuna",
-      "es": "Hero_Kakuna",
-      "fr": "Hero_Coconfort",
-      "it": "Hero_Kakuna",
-      "ja": "Hero_コクーン",
-      "ko": "Hero_딱충이",
-      "zh": "Hero_鐵殼蛹"
+      "de": "Hero_Bibor",
+      "en": "Hero_Beedrill",
+      "es": "Hero_Beedrill",
+      "fr": "Hero_Dardargnan",
+      "it": "Hero_Beedrill",
+      "ja": "Hero_スピアー",
+      "ko": "Hero_독침붕",
+      "zh": "Hero_大針蜂"
     }
   },
   {
@@ -5670,18 +5688,18 @@
     }
   },
   {
-    "monsterBaseId": "20007001",
-    "monsterId": "28000030112",
+    "monsterBaseId": "20007101",
+    "monsterId": "28000030113",
     "trainerId": "18000030111",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [60, 107, 152, 328, 364],
-      "atkValues": [10, 23, 35, 79, 87],
-      "defValues": [6, 11, 14, 36, 40],
-      "spaValues": [10, 23, 35, 79, 87],
-      "spdValues": [6, 11, 14, 36, 40],
-      "speValues": [21, 50, 77, 187, 211]
+      "hpValues": [75, 125, 173, 360, 400],
+      "atkValues": [13, 26, 38, 82, 90],
+      "defValues": [7, 12, 15, 37, 41],
+      "spaValues": [13, 26, 38, 82, 90],
+      "spdValues": [7, 12, 15, 37, 41],
+      "speValues": [28, 59, 86, 196, 220]
     },
     "moves": {
       "move1": {
@@ -5956,14 +5974,14 @@
     "rarity": 1,
     "role": 3,
     "pokemonNameByLanguage": {
-      "de": "Ultrigaria",
-      "en": "Weepinbell",
-      "es": "Weepinbell",
-      "fr": "Boustiflor",
-      "it": "Weepinbell",
-      "ja": "ウツドン",
-      "ko": "우츠동",
-      "zh": "口呆花"
+      "de": "Sarzenia",
+      "en": "Victreebel",
+      "es": "Victreebel",
+      "fr": "Empiflor",
+      "it": "Victreebel",
+      "ja": "ウツボット",
+      "ko": "우츠보트",
+      "zh": "大食花"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -5976,29 +5994,29 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Ultrigaria",
-      "en": "Hero_Weepinbell",
-      "es": "Hero_Weepinbell",
-      "fr": "Hero_Boustiflor",
-      "it": "Hero_Weepinbell",
-      "ja": "Hero_ウツドン",
-      "ko": "Hero_우츠동",
-      "zh": "Hero_口呆花"
+      "de": "Hero_Sarzenia",
+      "en": "Hero_Victreebel",
+      "es": "Hero_Victreebel",
+      "fr": "Hero_Empiflor",
+      "it": "Hero_Victreebel",
+      "ja": "Hero_ウツボット",
+      "ko": "Hero_우츠보트",
+      "zh": "Hero_大食花"
     }
   },
   {
-    "monsterBaseId": "20003000",
-    "monsterId": "28000030122",
+    "monsterBaseId": "20003100",
+    "monsterId": "28000030123",
     "trainerId": "18000030121",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [60, 107, 152, 328, 364],
-      "atkValues": [10, 23, 35, 79, 87],
-      "defValues": [6, 11, 14, 36, 40],
-      "spaValues": [10, 23, 35, 79, 87],
-      "spdValues": [6, 11, 14, 36, 40],
-      "speValues": [21, 50, 77, 187, 211]
+      "hpValues": [75, 125, 173, 360, 400],
+      "atkValues": [13, 26, 38, 82, 90],
+      "defValues": [7, 12, 15, 37, 41],
+      "spaValues": [13, 26, 38, 82, 90],
+      "spdValues": [7, 12, 15, 37, 41],
+      "speValues": [28, 59, 86, 196, 220]
     },
     "moves": {
       "move1": {
@@ -6273,14 +6291,14 @@
     "rarity": 1,
     "role": 3,
     "pokemonNameByLanguage": {
-      "de": "Nidorina",
-      "en": "Nidorina",
-      "es": "Nidorina",
-      "fr": "Nidorina",
-      "it": "Nidorina",
-      "ja": "ニドリーナ",
-      "ko": "니드리나",
-      "zh": "尼多娜"
+      "de": "Nidoqueen",
+      "en": "Nidoqueen",
+      "es": "Nidoqueen",
+      "fr": "Nidoqueen",
+      "it": "Nidoqueen",
+      "ja": "ニドクイン",
+      "ko": "니드퀸",
+      "zh": "尼多后"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -6293,29 +6311,29 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Nidorina",
-      "en": "Hero_Nidorina",
-      "es": "Hero_Nidorina",
-      "fr": "Hero_Nidorina",
-      "it": "Hero_Nidorina",
-      "ja": "Hero_ニドリーナ",
-      "ko": "Hero_니드리나",
-      "zh": "Hero_尼多娜"
+      "de": "Hero_Nidoqueen",
+      "en": "Hero_Nidoqueen",
+      "es": "Hero_Nidoqueen",
+      "fr": "Hero_Nidoqueen",
+      "it": "Hero_Nidoqueen",
+      "ja": "Hero_ニドクイン",
+      "ko": "Hero_니드퀸",
+      "zh": "Hero_尼多后"
     }
   },
   {
-    "monsterBaseId": "20000200",
-    "monsterId": "28000040002",
+    "monsterBaseId": "20000300",
+    "monsterId": "28000040003",
     "trainerId": "18000040001",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [63, 106, 145, 310, 346],
-      "atkValues": [17, 47, 74, 184, 208],
-      "defValues": [4, 18, 30, 85, 97],
-      "spaValues": [17, 47, 74, 184, 208],
-      "spdValues": [4, 18, 30, 85, 97],
-      "speValues": [17, 42, 66, 154, 174]
+      "hpValues": [77, 120, 159, 324, 360],
+      "atkValues": [24, 55, 85, 206, 230],
+      "defValues": [7, 21, 33, 88, 100],
+      "spaValues": [24, 55, 85, 206, 230],
+      "spdValues": [7, 21, 33, 88, 100],
+      "speValues": [23, 48, 72, 160, 180]
     },
     "moves": {
       "move1": {
@@ -6544,14 +6562,14 @@
     "rarity": 3,
     "role": 0,
     "pokemonNameByLanguage": {
-      "de": "Bisaknosp",
-      "en": "Ivysaur",
-      "es": "Ivysaur",
-      "fr": "Herbizarre",
-      "it": "Ivysaur",
-      "ja": "フシギソウ",
-      "ko": "이상해풀",
-      "zh": "妙蛙草"
+      "de": "Bisaflor",
+      "en": "Venusaur",
+      "es": "Venusaur",
+      "fr": "Florizarre",
+      "it": "Venusaur",
+      "ja": "フシギバナ",
+      "ko": "이상해꽃",
+      "zh": "妙蛙花"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -6564,29 +6582,29 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Bisaknosp",
-      "en": "Hero_Ivysaur",
-      "es": "Hero_Ivysaur",
-      "fr": "Hero_Herbizarre",
-      "it": "Hero_Ivysaur",
-      "ja": "Hero_フシギソウ",
-      "ko": "Hero_이상해풀",
-      "zh": "Hero_妙蛙草"
+      "de": "Hero_Bisaflor",
+      "en": "Hero_Venusaur",
+      "es": "Hero_Venusaur",
+      "fr": "Hero_Florizarre",
+      "it": "Hero_Venusaur",
+      "ja": "Hero_フシギバナ",
+      "ko": "Hero_이상해꽃",
+      "zh": "Hero_妙蛙花"
     }
   },
   {
-    "monsterBaseId": "20000200",
-    "monsterId": "28000040002",
+    "monsterBaseId": "20000600",
+    "monsterId": "28000040006",
     "trainerId": "18000040004",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [63, 106, 145, 310, 346],
-      "atkValues": [17, 47, 74, 184, 208],
-      "defValues": [4, 18, 30, 85, 97],
-      "spaValues": [17, 47, 74, 184, 208],
-      "spdValues": [4, 18, 30, 85, 97],
-      "speValues": [17, 42, 66, 154, 174]
+      "hpValues": [77, 120, 159, 324, 360],
+      "atkValues": [24, 55, 85, 206, 230],
+      "defValues": [7, 21, 33, 88, 100],
+      "spaValues": [24, 55, 85, 206, 230],
+      "spdValues": [7, 21, 33, 88, 100],
+      "speValues": [23, 48, 72, 160, 180]
     },
     "moves": {
       "move1": {
@@ -6754,16 +6772,16 @@
         "maxUses": 2
       },
       "syncMove": {
-        "id": 30500,
+        "id": 40200,
         "name": {
-          "de": "Pflanzen-\nGefährtenstoß",
-          "en": "Grass\nSync Impact",
-          "es": "Compi-Impacto\nPlanta",
-          "fr": "Duo-Impact\nPlante",
-          "it": "Impatto Unità Erba",
-          "ja": "バディーズ\nグラスインパクト",
-          "ko": "버디즈\n그래스임팩트",
-          "zh": "拍組\n草之衝擊"
+          "de": "Feuer-\nGefährtenstrahl",
+          "en": "Fire\nSync Beam",
+          "es": "Compi-Rayo\nFuego",
+          "fr": "Duo-Laser\nFeu",
+          "it": "Raggio Unità Fuoco",
+          "ja": "バディーズ\nファイアーレイ",
+          "ko": "버디즈\n파이어레이",
+          "zh": "拍組\n火之光線"
         },
         "description": {
           "de": "Hat keinen Zusatzeffekt.",
@@ -6775,9 +6793,9 @@
           "ko": "추가 효과 없음",
           "zh": "沒有追加效果。"
         },
-        "category": 1,
+        "category": 2,
         "group": 3,
-        "type": 5,
+        "type": 2,
         "target": 2,
         "gaugeDrain": 0,
         "power": 200,
@@ -6815,14 +6833,14 @@
     "rarity": 3,
     "role": 1,
     "pokemonNameByLanguage": {
-      "de": "Bisaknosp",
-      "en": "Ivysaur",
-      "es": "Ivysaur",
-      "fr": "Herbizarre",
-      "it": "Ivysaur",
-      "ja": "フシギソウ",
-      "ko": "이상해풀",
-      "zh": "妙蛙草"
+      "de": "Glurak",
+      "en": "Charizard",
+      "es": "Charizard",
+      "fr": "Dracaufeu",
+      "it": "Charizard",
+      "ja": "リザードン",
+      "ko": "리자몽",
+      "zh": "噴火龍"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -6835,29 +6853,29 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Bisaknosp",
-      "en": "Hero_Ivysaur",
-      "es": "Hero_Ivysaur",
-      "fr": "Hero_Herbizarre",
-      "it": "Hero_Ivysaur",
-      "ja": "Hero_フシギソウ",
-      "ko": "Hero_이상해풀",
-      "zh": "Hero_妙蛙草"
+      "de": "Hero_Glurak",
+      "en": "Hero_Charizard",
+      "es": "Hero_Charizard",
+      "fr": "Hero_Dracaufeu",
+      "it": "Hero_Charizard",
+      "ja": "Hero_リザードン",
+      "ko": "Hero_리자몽",
+      "zh": "Hero_噴火龍"
     }
   },
   {
-    "monsterBaseId": "20000200",
-    "monsterId": "28000040002",
+    "monsterBaseId": "20000900",
+    "monsterId": "28000040009",
     "trainerId": "18000040007",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [63, 106, 145, 310, 346],
-      "atkValues": [17, 47, 74, 184, 208],
-      "defValues": [4, 18, 30, 85, 97],
-      "spaValues": [17, 47, 74, 184, 208],
-      "spdValues": [4, 18, 30, 85, 97],
-      "speValues": [17, 42, 66, 154, 174]
+      "hpValues": [77, 120, 159, 324, 360],
+      "atkValues": [24, 55, 85, 206, 230],
+      "defValues": [7, 21, 33, 88, 100],
+      "spaValues": [24, 55, 85, 206, 230],
+      "spdValues": [7, 21, 33, 88, 100],
+      "speValues": [23, 48, 72, 160, 180]
     },
     "moves": {
       "move1": {
@@ -7025,16 +7043,16 @@
         "maxUses": 2
       },
       "syncMove": {
-        "id": 30500,
+        "id": 40300,
         "name": {
-          "de": "Pflanzen-\nGefährtenstoß",
-          "en": "Grass\nSync Impact",
-          "es": "Compi-Impacto\nPlanta",
-          "fr": "Duo-Impact\nPlante",
-          "it": "Impatto Unità Erba",
-          "ja": "バディーズ\nグラスインパクト",
-          "ko": "버디즈\n그래스임팩트",
-          "zh": "拍組\n草之衝擊"
+          "de": "Wasser-\nGefährtenstrahl",
+          "en": "Water\nSync Beam",
+          "es": "Compi-Rayo\nAgua",
+          "fr": "Duo-Laser\nEau",
+          "it": "Raggio Unità Acqua",
+          "ja": "バディーズ\nウォーターレイ",
+          "ko": "버디즈\n워터레이",
+          "zh": "拍組\n水之光線"
         },
         "description": {
           "de": "Hat keinen Zusatzeffekt.",
@@ -7046,9 +7064,9 @@
           "ko": "추가 효과 없음",
           "zh": "沒有追加效果。"
         },
-        "category": 1,
+        "category": 2,
         "group": 3,
-        "type": 5,
+        "type": 3,
         "target": 2,
         "gaugeDrain": 0,
         "power": 200,
@@ -7086,14 +7104,14 @@
     "rarity": 3,
     "role": 1,
     "pokemonNameByLanguage": {
-      "de": "Bisaknosp",
-      "en": "Ivysaur",
-      "es": "Ivysaur",
-      "fr": "Herbizarre",
-      "it": "Ivysaur",
-      "ja": "フシギソウ",
-      "ko": "이상해풀",
-      "zh": "妙蛙草"
+      "de": "Turtok",
+      "en": "Blastoise",
+      "es": "Blastoise",
+      "fr": "Tortank",
+      "it": "Blastoise",
+      "ja": "カメックス",
+      "ko": "거북왕",
+      "zh": "水箭龜"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -7106,14 +7124,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Bisaknosp",
-      "en": "Hero_Ivysaur",
-      "es": "Hero_Ivysaur",
-      "fr": "Hero_Herbizarre",
-      "it": "Hero_Ivysaur",
-      "ja": "Hero_フシギソウ",
-      "ko": "Hero_이상해풀",
-      "zh": "Hero_妙蛙草"
+      "de": "Hero_Turtok",
+      "en": "Hero_Blastoise",
+      "es": "Hero_Blastoise",
+      "fr": "Hero_Tortank",
+      "it": "Hero_Blastoise",
+      "ja": "Hero_カメックス",
+      "ko": "Hero_거북왕",
+      "zh": "Hero_水箭龜"
     }
   },
   {
@@ -8068,18 +8086,18 @@
     }
   },
   {
-    "monsterBaseId": "20001400",
-    "monsterId": "28000040052",
+    "monsterBaseId": "20001500",
+    "monsterId": "28000040053",
     "trainerId": "18000040051",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [61, 93, 123, 244, 268],
-      "atkValues": [15, 39, 60, 148, 168],
-      "defValues": [6, 15, 21, 54, 58],
-      "spaValues": [15, 39, 60, 148, 168],
-      "spdValues": [6, 15, 21, 54, 58],
-      "speValues": [16, 35, 53, 119, 135]
+      "hpValues": [73, 105, 135, 256, 280],
+      "atkValues": [21, 47, 71, 170, 190],
+      "defValues": [8, 17, 23, 56, 60],
+      "spaValues": [21, 47, 71, 170, 190],
+      "spdValues": [8, 17, 23, 56, 60],
+      "speValues": [21, 40, 58, 124, 140]
     },
     "moves": {
       "move1": {
@@ -8336,14 +8354,14 @@
     "rarity": 1,
     "role": 0,
     "pokemonNameByLanguage": {
-      "de": "Kokuna",
-      "en": "Kakuna",
-      "es": "Kakuna",
-      "fr": "Coconfort",
-      "it": "Kakuna",
-      "ja": "コクーン",
-      "ko": "딱충이",
-      "zh": "鐵殼蛹"
+      "de": "Bibor",
+      "en": "Beedrill",
+      "es": "Beedrill",
+      "fr": "Dardargnan",
+      "it": "Beedrill",
+      "ja": "スピアー",
+      "ko": "독침붕",
+      "zh": "大針蜂"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -8356,14 +8374,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Kokuna",
-      "en": "Hero_Kakuna",
-      "es": "Hero_Kakuna",
-      "fr": "Hero_Coconfort",
-      "it": "Hero_Kakuna",
-      "ja": "Hero_コクーン",
-      "ko": "Hero_딱충이",
-      "zh": "Hero_鐵殼蛹"
+      "de": "Hero_Bibor",
+      "en": "Hero_Beedrill",
+      "es": "Hero_Beedrill",
+      "fr": "Hero_Dardargnan",
+      "it": "Hero_Beedrill",
+      "ja": "Hero_スピアー",
+      "ko": "Hero_독침붕",
+      "zh": "Hero_大針蜂"
     }
   },
   {
@@ -9635,18 +9653,18 @@
     }
   },
   {
-    "monsterBaseId": "20007001",
-    "monsterId": "28000040112",
+    "monsterBaseId": "20007101",
+    "monsterId": "28000040113",
     "trainerId": "18000040111",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [61, 93, 123, 244, 268],
-      "atkValues": [15, 39, 60, 148, 168],
-      "defValues": [6, 15, 21, 54, 58],
-      "spaValues": [15, 39, 60, 148, 168],
-      "spdValues": [6, 15, 21, 54, 58],
-      "speValues": [16, 35, 53, 119, 135]
+      "hpValues": [73, 105, 135, 256, 280],
+      "atkValues": [21, 47, 71, 170, 190],
+      "defValues": [8, 17, 23, 56, 60],
+      "spaValues": [21, 47, 71, 170, 190],
+      "spdValues": [8, 17, 23, 56, 60],
+      "speValues": [21, 40, 58, 124, 140]
     },
     "moves": {
       "move1": {
@@ -9921,14 +9939,14 @@
     "rarity": 1,
     "role": 0,
     "pokemonNameByLanguage": {
-      "de": "Ultrigaria",
-      "en": "Weepinbell",
-      "es": "Weepinbell",
-      "fr": "Boustiflor",
-      "it": "Weepinbell",
-      "ja": "ウツドン",
-      "ko": "우츠동",
-      "zh": "口呆花"
+      "de": "Sarzenia",
+      "en": "Victreebel",
+      "es": "Victreebel",
+      "fr": "Empiflor",
+      "it": "Victreebel",
+      "ja": "ウツボット",
+      "ko": "우츠보트",
+      "zh": "大食花"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -9941,29 +9959,29 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Ultrigaria",
-      "en": "Hero_Weepinbell",
-      "es": "Hero_Weepinbell",
-      "fr": "Hero_Boustiflor",
-      "it": "Hero_Weepinbell",
-      "ja": "Hero_ウツドン",
-      "ko": "Hero_우츠동",
-      "zh": "Hero_口呆花"
+      "de": "Hero_Sarzenia",
+      "en": "Hero_Victreebel",
+      "es": "Hero_Victreebel",
+      "fr": "Hero_Empiflor",
+      "it": "Hero_Victreebel",
+      "ja": "Hero_ウツボット",
+      "ko": "Hero_우츠보트",
+      "zh": "Hero_大食花"
     }
   },
   {
-    "monsterBaseId": "20003000",
-    "monsterId": "28000040122",
+    "monsterBaseId": "20003100",
+    "monsterId": "28000040123",
     "trainerId": "18000040121",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [61, 93, 123, 244, 268],
-      "atkValues": [15, 39, 60, 148, 168],
-      "defValues": [6, 15, 21, 54, 58],
-      "spaValues": [15, 39, 60, 148, 168],
-      "spdValues": [6, 15, 21, 54, 58],
-      "speValues": [16, 35, 53, 119, 135]
+      "hpValues": [73, 105, 135, 256, 280],
+      "atkValues": [21, 47, 71, 170, 190],
+      "defValues": [8, 17, 23, 56, 60],
+      "spaValues": [21, 47, 71, 170, 190],
+      "spdValues": [8, 17, 23, 56, 60],
+      "speValues": [21, 40, 58, 124, 140]
     },
     "moves": {
       "move1": {
@@ -10238,14 +10256,14 @@
     "rarity": 1,
     "role": 0,
     "pokemonNameByLanguage": {
-      "de": "Nidorina",
-      "en": "Nidorina",
-      "es": "Nidorina",
-      "fr": "Nidorina",
-      "it": "Nidorina",
-      "ja": "ニドリーナ",
-      "ko": "니드리나",
-      "zh": "尼多娜"
+      "de": "Nidoqueen",
+      "en": "Nidoqueen",
+      "es": "Nidoqueen",
+      "fr": "Nidoqueen",
+      "it": "Nidoqueen",
+      "ja": "ニドクイン",
+      "ko": "니드퀸",
+      "zh": "尼多后"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -10258,14 +10276,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Nidorina",
-      "en": "Hero_Nidorina",
-      "es": "Hero_Nidorina",
-      "fr": "Hero_Nidorina",
-      "it": "Hero_Nidorina",
-      "ja": "Hero_ニドリーナ",
-      "ko": "Hero_니드리나",
-      "zh": "Hero_尼多娜"
+      "de": "Hero_Nidoqueen",
+      "en": "Hero_Nidoqueen",
+      "es": "Hero_Nidoqueen",
+      "fr": "Hero_Nidoqueen",
+      "it": "Hero_Nidoqueen",
+      "ja": "Hero_ニドクイン",
+      "ko": "Hero_니드퀸",
+      "zh": "Hero_尼多后"
     }
   }
 ]
