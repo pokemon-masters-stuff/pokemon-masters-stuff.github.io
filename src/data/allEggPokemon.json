@@ -4136,30 +4136,30 @@
     },
     "moves": {
       "move1": {
-        "id": 40,
+        "id": 42,
         "name": {
-          "de": "Giftstachel",
-          "en": "Poison Sting",
-          "es": "Picotazo Ven",
-          "fr": "Dard-Venin",
-          "it": "Velenospina",
-          "ja": "どくばり",
-          "ko": "독침",
-          "zh": "毒針"
+          "de": "Nadelrakete",
+          "en": "Pin Missile",
+          "es": "Pin Misil",
+          "fr": "Dard-Nuée",
+          "it": "Missilspillo",
+          "ja": "ミサイルばり",
+          "ko": "바늘미사일",
+          "zh": "飛彈針"
         },
         "description": {
-          "de": "Vergiftet das Ziel\neventuell.",
-          "en": "Has a moderate chance of leaving the target poisoned.",
-          "es": "A veces envenena al\nobjetivo.",
-          "fr": "Empoisonne l'ennemi\n(assez rarement).",
-          "it": "A volte avvelena\nil bersaglio.",
-          "ja": "たまに相手をどく状態にする",
-          "ko": "가끔 상대를 독 상태로 만든다",
-          "zh": "偶爾會讓對手陷入中毒狀態。"
+          "de": "Der Anwender greift das\nZiel zwei- bis fünfmal\nhintereinander an.",
+          "en": "Attacks the target two to five times in a row.",
+          "es": "Ataca al objetivo de dos a cinco veces seguidas.",
+          "fr": "Attaque deux à cinq fois \nd'affilée.",
+          "it": "Attacca il bersaglio da due a cinque volte di fila.",
+          "ja": "２～５回のあいだ相手に連続で攻撃する",
+          "ko": "2~5회 동안 상대를 연속으로 공격한다",
+          "zh": "連續攻擊對手２～５次。"
         },
         "category": 1,
         "group": 2,
-        "type": 8,
+        "type": 12,
         "target": 2,
         "targetType": {
           "de": "1 Gegner",
@@ -4171,9 +4171,9 @@
           "ko": "상대 1마리",
           "zh": "對手１對拍組"
         },
-        "gaugeDrain": 1,
-        "power": 12,
-        "accuracy": 100,
+        "gaugeDrain": 2,
+        "power": 16,
+        "accuracy": 95,
         "maxUses": 0
       },
       "move2": {
@@ -4259,27 +4259,45 @@
         "maxUses": 2
       },
       "move4": {
-        "id": -1,
+        "id": 41,
         "name": {
-          "de": "",
-          "en": "",
-          "es": "",
-          "fr": "",
-          "it": "",
-          "ja": "",
-          "ko": "",
-          "zh": ""
+          "de": "Duonadel",
+          "en": "Twineedle",
+          "es": "Doble Ataque",
+          "fr": "Double-Dard",
+          "it": "Doppio Ago",
+          "ja": "ダブルニードル",
+          "ko": "더블니들",
+          "zh": "雙針"
         },
-        "description": {},
-        "category": "",
-        "group": "",
-        "type": "",
-        "target": "",
-        "targetType": "",
-        "gaugeDrain": "",
-        "power": "",
-        "accuracy": "",
-        "maxUses": ""
+        "description": {
+          "de": "Der Anwender schlägt\nzweimal hintereinander\nzu.\nVergiftet das Ziel in\nseltenen Fällen.",
+          "en": "Attacks twice in a row. Has a small chance of leaving the target poisoned.",
+          "es": "Ataca dos veces\nseguidas.\nRara vez envenena al\nobjetivo.",
+          "fr": "Attaque deux fois\nd'affilée. Empoisonne\nl'ennemi (rarement).",
+          "it": "Colpisce due volte\ndi seguito. Raramente\navvelena il bersaglio.",
+          "ja": "２回連続で攻撃する\nまれに相手をどく状態にする",
+          "ko": "2회 연속으로 공격한다\n드물게 상대를 독 상태로 만든다",
+          "zh": "連續攻擊２次。\n少數情況下會讓對手陷入中毒狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 12,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 20,
+        "accuracy": 100,
+        "maxUses": 0
       },
       "syncMove": {
         "id": 31200,
@@ -8101,30 +8119,30 @@
     },
     "moves": {
       "move1": {
-        "id": 40,
+        "id": 42,
         "name": {
-          "de": "Giftstachel",
-          "en": "Poison Sting",
-          "es": "Picotazo Ven",
-          "fr": "Dard-Venin",
-          "it": "Velenospina",
-          "ja": "どくばり",
-          "ko": "독침",
-          "zh": "毒針"
+          "de": "Nadelrakete",
+          "en": "Pin Missile",
+          "es": "Pin Misil",
+          "fr": "Dard-Nuée",
+          "it": "Missilspillo",
+          "ja": "ミサイルばり",
+          "ko": "바늘미사일",
+          "zh": "飛彈針"
         },
         "description": {
-          "de": "Vergiftet das Ziel\neventuell.",
-          "en": "Has a moderate chance of leaving the target poisoned.",
-          "es": "A veces envenena al\nobjetivo.",
-          "fr": "Empoisonne l'ennemi\n(assez rarement).",
-          "it": "A volte avvelena\nil bersaglio.",
-          "ja": "たまに相手をどく状態にする",
-          "ko": "가끔 상대를 독 상태로 만든다",
-          "zh": "偶爾會讓對手陷入中毒狀態。"
+          "de": "Der Anwender greift das\nZiel zwei- bis fünfmal\nhintereinander an.",
+          "en": "Attacks the target two to five times in a row.",
+          "es": "Ataca al objetivo de dos a cinco veces seguidas.",
+          "fr": "Attaque deux à cinq fois \nd'affilée.",
+          "it": "Attacca il bersaglio da due a cinque volte di fila.",
+          "ja": "２～５回のあいだ相手に連続で攻撃する",
+          "ko": "2~5회 동안 상대를 연속으로 공격한다",
+          "zh": "連續攻擊對手２～５次。"
         },
         "category": 1,
         "group": 2,
-        "type": 8,
+        "type": 12,
         "target": 2,
         "targetType": {
           "de": "1 Gegner",
@@ -8136,9 +8154,9 @@
           "ko": "상대 1마리",
           "zh": "對手１對拍組"
         },
-        "gaugeDrain": 1,
-        "power": 12,
-        "accuracy": 100,
+        "gaugeDrain": 2,
+        "power": 16,
+        "accuracy": 95,
         "maxUses": 0
       },
       "move2": {
@@ -8224,27 +8242,45 @@
         "maxUses": 2
       },
       "move4": {
-        "id": -1,
+        "id": 398,
         "name": {
-          "de": "",
-          "en": "",
-          "es": "",
-          "fr": "",
-          "it": "",
-          "ja": "",
-          "ko": "",
-          "zh": ""
+          "de": "Gifthieb",
+          "en": "Poison Jab",
+          "es": "Puya Nociva",
+          "fr": "Direct Toxik",
+          "it": "Velenpuntura",
+          "ja": "どくづき",
+          "ko": "독찌르기",
+          "zh": "毒擊"
         },
-        "description": {},
-        "category": "",
-        "group": "",
-        "type": "",
-        "target": "",
-        "targetType": "",
-        "gaugeDrain": "",
-        "power": "",
-        "accuracy": "",
-        "maxUses": ""
+        "description": {
+          "de": "Vergiftet das Ziel\neventuell.",
+          "en": "Has a moderate chance of leaving the target poisoned.",
+          "es": "A veces envenena al\nobjetivo.",
+          "fr": "Empoisonne l'ennemi\n(assez rarement).",
+          "it": "A volte avvelena\nil bersaglio.",
+          "ja": "たまに相手をどく状態にする",
+          "ko": "가끔 상대를 독 상태로 만든다",
+          "zh": "偶爾會讓對手陷入中毒狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 8,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 92,
+        "accuracy": 100,
+        "maxUses": 0
       },
       "syncMove": {
         "id": 31200,

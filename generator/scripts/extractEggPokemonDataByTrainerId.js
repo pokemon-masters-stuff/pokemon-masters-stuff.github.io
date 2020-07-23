@@ -408,7 +408,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
         };
 
       // Use moveId to find move data, eg. power, accuracy, etc. from Move.json
-      if (monsterId === "28000020053") {
+      if (
+        monsterId === "28000020053" ||
+        monsterId === "28000030053" ||
+        monsterId === "28000040053"
+      ) {
+        console.log("beedrill");
         // Weedle changes its moveset when evolving into Beedrill
         move1Id = 42;
         if (role === 0) {
