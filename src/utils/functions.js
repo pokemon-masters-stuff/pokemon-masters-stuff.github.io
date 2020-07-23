@@ -1,5 +1,6 @@
-import arrayOfAllGridedPokemon from '../data/allGridedPokemon.json';
-import { shortenedMoveNameByAbilityId } from './constants';
+import arrayOfAllGridedPokemon from "../data/allGridedPokemon.json";
+import arrayOfAllEggPokemon from "../data/allEggPokemon.json";
+import { shortenedMoveNameByAbilityId } from "./constants";
 
 export const getPokemonNameList = (language) =>
   arrayOfAllGridedPokemon
@@ -15,7 +16,7 @@ export const getPokemonNameList = (language) =>
       // }
       return {
         key: index,
-        name: entry.pokemonNameByLanguage['en'],
+        name: entry.pokemonNameByLanguage["en"],
         value: entry.pokemonNameByLanguage[language], // value changes as language changes. name stays the same so old links and saves are compatible
       };
     })
@@ -28,7 +29,46 @@ export const getPokemonNameList = (language) =>
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;
   arrayOfAllGridedPokemon.forEach((pokemon) => {
-    if (pokemon.pokemonNameByLanguage['en'] === pokemonName) {
+    if (pokemon.pokemonNameByLanguage["en"] === pokemonName) {
+      pokemonData = pokemon;
+    }
+  });
+  return pokemonData;
+};
+
+const role = { 0: "P.Strike", 1: "S.Strike", 2: "Support", 3: "Tech" };
+export const getEggPokemonNameList = (language) =>
+  arrayOfAllEggPokemon
+    .map((entry, index) => {
+      // if (entry.monsterBaseId === 'id of new duplicate pokemon') {
+      //  // for the new sync pair:
+      //   let valueOfNewSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
+      //   let name = entry.syncPairNameByLanguage['en']
+      // }
+      // if (entry.monsterBaseId === 'id of old duplicate pokemon') {
+      //  // for the old sync pair, change displayed value but not name so that old saves are still compatible
+      //  let valueOfOldSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
+      // }
+      return {
+        key: index,
+        name: entry.pokemonNameByLanguage["en"] + ` (${role[entry.role]})`,
+        role: entry.role,
+        value: entry.pokemonNameByLanguage[language] + ` (${role[entry.role]})`, // value changes as language changes. name stays the same so old links and saves are compatible
+      };
+    })
+    .sort((a, b) => {
+      let x = a.value;
+      let y = b.value;
+      return x < y ? -1 : x > y ? 1 : 0;
+    });
+
+export const getEggPokemonDataByNameAndRole = (pokemonName, role) => {
+  let pokemonData;
+  arrayOfAllEggPokemon.forEach((pokemon) => {
+    if (
+      pokemon.pokemonNameByLanguage["en"] === pokemonName &&
+      pokemon.role === role
+    ) {
       pokemonData = pokemon;
     }
   });
@@ -38,12 +78,12 @@ export const getPokemonDataByName = (pokemonName) => {
 // TO DO: REFACTOR
 export const getFillColorByMoveType = ({ type, group }) => {
   let colorsByTypeDef = {
-    statsBoost: '#66b6ec', // blue
-    passive: '#fff04d', // yellow
-    moveEffect: '#f24646', // red
-    movePowerBoost: '#73d958', // green
-    moveAccuracyBoost: '#73d958', // green
-    syncBoost: '#d12deb', // purple
+    statsBoost: "#66b6ec", // blue
+    passive: "#fff04d", // yellow
+    moveEffect: "#f24646", // red
+    movePowerBoost: "#73d958", // green
+    moveAccuracyBoost: "#73d958", // green
+    syncBoost: "#d12deb", // purple
     // locked: '#dedbd3', // gray
   };
   let colorsByTypeId = {
@@ -70,28 +110,28 @@ export const getFillColorByMoveType = ({ type, group }) => {
 export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   let selectable = true;
 
-  if (syncLevel === '1') {
+  if (syncLevel === "1") {
     if (
-      pokemon === 'pikachu' ||
-      pokemon === 'charizard' ||
-      pokemon === 'dewgong' ||
-      pokemon === 'infernape' ||
-      pokemon === 'haxorus' ||
-      pokemon === 'kingdra' ||
-      pokemon === 'metagross' ||
-      pokemon === 'houndoom' ||
-      pokemon === 'raichu' ||
-      pokemon === 'reuniclus' ||
-      pokemon === 'golisopod' ||
-      pokemon === 'salazzle' ||
-      pokemon === 'gallade' ||
-      pokemon === 'garchomp' ||
-      pokemon === 'lucario' ||
-      pokemon === 'empoleon' ||
-      pokemon === 'leavanny' ||
-      pokemon === 'sharpedo' ||
-      pokemon === 'emboar' ||
-      pokemon === 'drifblim'
+      pokemon === "pikachu" ||
+      pokemon === "charizard" ||
+      pokemon === "dewgong" ||
+      pokemon === "infernape" ||
+      pokemon === "haxorus" ||
+      pokemon === "kingdra" ||
+      pokemon === "metagross" ||
+      pokemon === "houndoom" ||
+      pokemon === "raichu" ||
+      pokemon === "reuniclus" ||
+      pokemon === "golisopod" ||
+      pokemon === "salazzle" ||
+      pokemon === "gallade" ||
+      pokemon === "garchomp" ||
+      pokemon === "lucario" ||
+      pokemon === "empoleon" ||
+      pokemon === "leavanny" ||
+      pokemon === "sharpedo" ||
+      pokemon === "emboar" ||
+      pokemon === "drifblim"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -122,16 +162,16 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
     }
 
     if (
-      pokemon === 'torkoal' ||
-      pokemon === 'vileplume' ||
-      pokemon === 'palossand' ||
-      pokemon === 'liepard' ||
-      pokemon === 'heliolisk' ||
-      pokemon === 'masquerain' ||
-      pokemon === 'meowstic' ||
-      pokemon === 'milotic' ||
-      pokemon === 'delphox' ||
-      pokemon === 'crobat'
+      pokemon === "torkoal" ||
+      pokemon === "vileplume" ||
+      pokemon === "palossand" ||
+      pokemon === "liepard" ||
+      pokemon === "heliolisk" ||
+      pokemon === "masquerain" ||
+      pokemon === "meowstic" ||
+      pokemon === "milotic" ||
+      pokemon === "delphox" ||
+      pokemon === "crobat"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -162,13 +202,13 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
     }
 
     if (
-      pokemon === 'serperior' ||
-      pokemon === 'alakazam' ||
-      pokemon === 'rotom' ||
-      pokemon === 'steelix' ||
-      pokemon === 'swanna' ||
-      pokemon === 'starmie' ||
-      pokemon === 'torterra'
+      pokemon === "serperior" ||
+      pokemon === "alakazam" ||
+      pokemon === "rotom" ||
+      pokemon === "steelix" ||
+      pokemon === "swanna" ||
+      pokemon === "starmie" ||
+      pokemon === "torterra"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -198,7 +238,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (pokemon === 'mew') {
+    if (pokemon === "mew") {
       if (
         (cell.coords.q === 3 && cell.coords.r === -4) ||
         (cell.coords.q === 4 && cell.coords.r === -4) ||
@@ -224,28 +264,28 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
     }
   }
 
-  if (syncLevel === '2') {
+  if (syncLevel === "2") {
     if (
-      pokemon === 'pikachu' ||
-      pokemon === 'charizard' ||
-      pokemon === 'dewgong' ||
-      pokemon === 'infernape' ||
-      pokemon === 'haxorus' ||
-      pokemon === 'kingdra' ||
-      pokemon === 'metagross' ||
-      pokemon === 'houndoom' ||
-      pokemon === 'raichu' ||
-      pokemon === 'reuniclus' ||
-      pokemon === 'golisopod' ||
-      pokemon === 'salazzle' ||
-      pokemon === 'gallade' ||
-      pokemon === 'garchomp' ||
-      pokemon === 'lucario' ||
-      pokemon === 'empoleon' ||
-      pokemon === 'leavanny' ||
-      pokemon === 'sharpedo' ||
-      pokemon === 'emboar' ||
-      pokemon === 'drifblim'
+      pokemon === "pikachu" ||
+      pokemon === "charizard" ||
+      pokemon === "dewgong" ||
+      pokemon === "infernape" ||
+      pokemon === "haxorus" ||
+      pokemon === "kingdra" ||
+      pokemon === "metagross" ||
+      pokemon === "houndoom" ||
+      pokemon === "raichu" ||
+      pokemon === "reuniclus" ||
+      pokemon === "golisopod" ||
+      pokemon === "salazzle" ||
+      pokemon === "gallade" ||
+      pokemon === "garchomp" ||
+      pokemon === "lucario" ||
+      pokemon === "empoleon" ||
+      pokemon === "leavanny" ||
+      pokemon === "sharpedo" ||
+      pokemon === "emboar" ||
+      pokemon === "drifblim"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -264,16 +304,16 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
     }
 
     if (
-      pokemon === 'torkoal' ||
-      pokemon === 'vileplume' ||
-      pokemon === 'palossand' ||
-      pokemon === 'liepard' ||
-      pokemon === 'heliolisk' ||
-      pokemon === 'masquerain' ||
-      pokemon === 'meowstic' ||
-      pokemon === 'milotic' ||
-      pokemon === 'delphox' ||
-      pokemon === 'crobat'
+      pokemon === "torkoal" ||
+      pokemon === "vileplume" ||
+      pokemon === "palossand" ||
+      pokemon === "liepard" ||
+      pokemon === "heliolisk" ||
+      pokemon === "masquerain" ||
+      pokemon === "meowstic" ||
+      pokemon === "milotic" ||
+      pokemon === "delphox" ||
+      pokemon === "crobat"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -292,13 +332,13 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
     }
 
     if (
-      pokemon === 'serperior' ||
-      pokemon === 'alakazam' ||
-      pokemon === 'rotom' ||
-      pokemon === 'steelix' ||
-      pokemon === 'swanna' ||
-      pokemon === 'starmie' ||
-      pokemon === 'torterra'
+      pokemon === "serperior" ||
+      pokemon === "alakazam" ||
+      pokemon === "rotom" ||
+      pokemon === "steelix" ||
+      pokemon === "swanna" ||
+      pokemon === "starmie" ||
+      pokemon === "torterra"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -316,7 +356,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (pokemon === 'mew') {
+    if (pokemon === "mew") {
       if (
         (cell.coords.q === 3 && cell.coords.r === -4) ||
         (cell.coords.q === 4 && cell.coords.r === -4) ||
@@ -344,8 +384,8 @@ export const renderMoveName = (moveName, abilityId, language) => {
     if (shortenedMoveNameByAbilityId[language]) {
       if (shortenedMoveNameByAbilityId[language][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
-      } else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
+      } else if (shortenedMoveNameByAbilityId["en"][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId["en"][abilityId];
       }
       // else {
       //   // to generate list of skills to be abbreviated
@@ -355,8 +395,8 @@ export const renderMoveName = (moveName, abilityId, language) => {
       //   }
       // }
     } else {
-      if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
+      if (shortenedMoveNameByAbilityId["en"][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId["en"][abilityId];
       }
     }
   }
