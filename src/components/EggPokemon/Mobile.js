@@ -7,6 +7,8 @@ import Container from "@material-ui/core/Container";
 import Nav from "../MainAppbar/Nav";
 import { NavigationMobile } from "../Navigation";
 import AppBar from "@material-ui/core/AppBar";
+import Grid from "@material-ui/core/Grid";
+import { allPictures } from "../../utils/constants";
 
 const regExp = /\(([^)]+)\)/;
 
@@ -57,6 +59,12 @@ const EggPokemon = () => {
               syncLevel={syncLevel}
               onChangeSyncLevel={selectSyncLevel}
             />
+            <Grid container justify="center">
+              <img
+                alt="pokemon picture"
+                src={allPictures[`${pokemonName.toLowerCase()}Pic`]}
+              />
+            </Grid>
             <DataTable
               language={language}
               pokemonName={pokemonName}

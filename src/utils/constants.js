@@ -311,7 +311,7 @@ import {
   emboarGridDataZH,
   drifblimGridDataZH,
   crobatGridDataZH,
-} from '../data';
+} from "../data";
 import {
   charizard,
   pikachu,
@@ -351,7 +351,39 @@ import {
   emboar,
   drifblim,
   crobat,
-} from '../images/PokemonThumbnails';
+} from "../images/PokemonThumbnails";
+
+import {
+  venusaurPic,
+  charizardPic,
+  blastoisePic,
+  beedrillPic,
+  raticatePic,
+  nidoqueenPic,
+  golbatPic,
+  venomothPic,
+  persianPic,
+  victreebelPic,
+  scytherPic,
+  pinsirPic,
+  taurosPic,
+} from "../images/PokemonPictures";
+
+export const allPictures = {
+  venusaurPic,
+  charizardPic,
+  blastoisePic,
+  beedrillPic,
+  raticatePic,
+  nidoqueenPic,
+  golbatPic,
+  venomothPic,
+  persianPic,
+  victreebelPic,
+  scytherPic,
+  pinsirPic,
+  taurosPic,
+};
 
 export const allThumbnails = {
   charizard,
@@ -727,6 +759,6 @@ export const allSyncGrids = {
   },
 };
 
-export const UA_ID = 'UA-157426792-1';
+export const UA_ID = "UA-157426792-1";
 
 export const DRAWER_WIDTH = 240;

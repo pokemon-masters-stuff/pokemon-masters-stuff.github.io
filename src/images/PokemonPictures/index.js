@@ -1,0 +1,13 @@
+export { default as venusaurPic } from "./pm0003.png";
+export { default as charizardPic } from "./pm0006.png";
+export { default as blastoisePic } from "./pm0009.png";
+export { default as beedrillPic } from "./pm0015.png";
+export { default as raticatePic } from "./pm0020.png";
+export { default as nidoqueenPic } from "./pm0031.png";
+export { default as golbatPic } from "./pm0042.png";
+export { default as venomothPic } from "./pm0049.png";
+export { default as persianPic } from "./pm0053.png";
+export { default as victreebelPic } from "./pm0071.png";
+export { default as scytherPic } from "./pm0123.png";
+export { default as pinsirPic } from "./pm0127.png";
+export { default as taurosPic } from "./pm0128.png";
