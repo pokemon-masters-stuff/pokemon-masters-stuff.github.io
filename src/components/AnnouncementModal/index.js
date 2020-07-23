@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI["Announcements"][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            7/22/2020:
+            <br />
+            Added Egg Pokemon page.
+            <br />
+            <br />
             7/21/2020:
             <br />
             Added Italian skill name abbreviations for the new sync grids.
