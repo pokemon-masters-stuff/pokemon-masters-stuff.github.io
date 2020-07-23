@@ -23,6 +23,10 @@ const EggPokemon = () => {
   let pokemonName = pokemon.slice(0, pokemon.indexOf(" "));
   let pokemonRole = regExp.exec(pokemon)[1];
 
+  React.useEffect(() => {
+    setSyncLevel("1");
+  }, [pokemon]);
+
   return (
     <Container maxWidth="sm" style={{ paddingTop: 20, marginBottom: 30 }}>
       <SelectEggPokemonDropdown

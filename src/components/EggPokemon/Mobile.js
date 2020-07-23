@@ -32,6 +32,10 @@ const EggPokemon = () => {
   let pokemonName = pokemon.slice(0, pokemon.indexOf(" "));
   let pokemonRole = regExp.exec(pokemon)[1];
 
+  React.useEffect(() => {
+    setSyncLevel("1");
+  }, [pokemon]);
+
   return (
     <div className={`App ${darkMode ? "dark-mode" : null}`}>
       <div className="content">
