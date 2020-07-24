@@ -31,7 +31,7 @@ import styles from "./styles";
 import ExposureIcon from "@material-ui/icons/Exposure";
 import Brightness1Icon from "@material-ui/icons/Brightness1";
 import HomeIcon from "@material-ui/icons/Home"; // for Sync Grid Helper home page
-import ViewColumnIcon from "@material-ui/icons/ViewColumn"; // for teams
+// import ViewColumnIcon from "@material-ui/icons/ViewColumn"; // for teams
 
 function PersistentDrawerLeft(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);

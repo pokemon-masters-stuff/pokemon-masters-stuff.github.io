@@ -104,7 +104,7 @@ const GachaOddsCalculator = () => {
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <TextField
-                  id="outlined-number"
+                  id="target-unit-rate"
                   label="Rate of Target Unit"
                   type="number"
                   value={targetRate}
@@ -134,7 +134,7 @@ const GachaOddsCalculator = () => {
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <TextField
-                  id="outlined-number"
+                  id="five-star-unit-rate"
                   label="Rate of 5-Star Unit"
                   type="number"
                   value={fiveStarRate}
@@ -160,7 +160,7 @@ const GachaOddsCalculator = () => {
               </div>
               <div className="row">
                 <TextField
-                  id="outlined-number"
+                  id="paid-scouts"
                   label="Paid Scouts"
                   type="number"
                   value={paidScouts}
@@ -175,7 +175,7 @@ const GachaOddsCalculator = () => {
               </div>
               <div className="row">
                 <TextField
-                  id="outlined-number"
+                  id="non-paid-scouts"
                   label="Non-Paid Scouts"
                   type="number"
                   value={nonPaidScouts}

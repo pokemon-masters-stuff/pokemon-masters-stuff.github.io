@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { changeFilter, changeSort } from '../../../actions/actionCreators';
-import { getPokemonNameList } from '../../../utils/functions';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import { makeStyles } from '@material-ui/core/styles';
-import UI from '../../../utils/translations';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { changeFilter, changeSort } from "../../../actions/actionCreators";
+import { getPokemonNameList } from "../../../utils/functions";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import MenuItem from "@material-ui/core/MenuItem";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import { makeStyles } from "@material-ui/core/styles";
+// import UI from '../../../utils/translations';
 
 const useStyles = makeStyles({
   root: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
@@ -32,9 +32,9 @@ const Builds = (props) => {
 
   useEffect(() => {
     if (props.history) {
-      if (props.history.location.pathname === '/builds/liked') {
+      if (props.history.location.pathname === "/builds/liked") {
         setValue(1);
-      } else if (props.history.location.pathname === '/builds/users') {
+      } else if (props.history.location.pathname === "/builds/users") {
         setValue(2);
       } else {
         setValue(0);
@@ -45,11 +45,11 @@ const Builds = (props) => {
   const handleChangeTab = (event, newValue) => {
     let val;
     if (newValue === 0) {
-      val = 'popular';
+      val = "popular";
     } else if (newValue === 1) {
-      val = 'liked';
+      val = "liked";
     } else {
-      val = 'users';
+      val = "users";
     }
     props.history.push(`/builds/${val}`);
     setValue(newValue);
@@ -64,7 +64,7 @@ const Builds = (props) => {
   };
 
   return (
-    <div className={`App ${darkMode ? 'dark-mode' : null}`}>
+    <div className={`App ${darkMode ? "dark-mode" : null}`}>
       <div className="container container-s">
         <br />
         <Paper width={1} className={classes.root}>
@@ -72,7 +72,7 @@ const Builds = (props) => {
             value={value}
             indicatorColor="primary"
             onChange={handleChangeTab}
-            style={{ margin: 'auto' }}
+            style={{ margin: "auto" }}
             centered
           >
             <Tab label="Popular Builds" />
@@ -83,11 +83,11 @@ const Builds = (props) => {
         <Paper width={1} className={classes.root} style={{ marginBottom: 20 }}>
           <Typography
             style={{
-              borderLeft: '15px solid transparent',
-              borderRight: '10px solid transparent',
+              borderLeft: "15px solid transparent",
+              borderRight: "10px solid transparent",
             }}
           >
-            Sort by:{' '}
+            Sort by:{" "}
           </Typography>
           <FormControl className={classes.formControl}>
             <Select value={sort} labelId="sort" onChange={handleChangeSort}>
@@ -98,11 +98,11 @@ const Builds = (props) => {
           </FormControl>
           <Typography
             style={{
-              borderLeft: '35px solid transparent',
-              borderRight: '10px solid transparent',
+              borderLeft: "35px solid transparent",
+              borderRight: "10px solid transparent",
             }}
           >
-            Filter by:{' '}
+            Filter by:{" "}
           </Typography>
           <FormControl className={classes.formControl}>
             <Select
