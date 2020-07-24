@@ -239,7 +239,9 @@ function Moves(props) {
                     <TableCell align="left">
                       {move.targetType ? move.targetType[language] : "-"}
                     </TableCell>
-                    <TableCell align="right">{move.accuracy}</TableCell>
+                    <TableCell align="right">
+                      {move.accuracy ? move.accuracy : "-"}
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
