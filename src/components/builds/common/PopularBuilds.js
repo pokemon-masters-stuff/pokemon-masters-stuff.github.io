@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import { getBuilds, clearBuilds } from '../../../actions/actionCreators';
-import BuildItemMobile from '../mobile/BuildItem';
-import BuildItemDesktop from '../desktop/BuildItem';
-import Pagination from '@material-ui/lab/Pagination';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { getBuilds, clearBuilds } from "../../../actions/actionCreators";
+import BuildItemMobile from "../mobile/BuildItem";
+import BuildItemDesktop from "../desktop/BuildItem";
+import Pagination from "@material-ui/lab/Pagination";
 
 class PopularBuilds extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class PopularBuilds extends Component {
     this.state = {
       page: 1,
       rowsPerPage: 5,
-      totalPageCount: null
+      totalPageCount: null,
     };
     this.handleChangePage = this.handleChangePage.bind(this);
   }
@@ -33,12 +33,13 @@ class PopularBuilds extends Component {
       this.props.filter !== prevProps.filter
     ) {
       this.props.getBuilds(this.props.filter, this.props.sort, 0, 5);
+      this.setState({ page: 1 });
     }
     if (this.props.totalBuildCount !== prevProps.totalBuildCount) {
       this.setState({
         totalPageCount: Math.ceil(
           this.props.totalBuildCount / this.state.rowsPerPage
-        )
+        ),
       });
     }
   }
@@ -59,7 +60,7 @@ class PopularBuilds extends Component {
     this.props.getBuilds(filter, sort, skip, limit);
   };
 
-  handleChangeRowsPerPage = event => {
+  handleChangeRowsPerPage = (event) => {
     this.setState({ rowsPerPage: event.target.value });
     this.setState({ page: 1 });
   };
@@ -69,11 +70,11 @@ class PopularBuilds extends Component {
     const { screenSize } = this.props;
     return (
       <Fragment>
-        {screenSize === 'small'
-          ? this.props.builds.map(build => (
+        {screenSize === "small"
+          ? this.props.builds.map((build) => (
               <BuildItemMobile key={build._id} build={build} />
             ))
-          : this.props.builds.map(build => (
+          : this.props.builds.map((build) => (
               <BuildItemDesktop key={build._id} build={build} />
             ))}
 
@@ -82,10 +83,10 @@ class PopularBuilds extends Component {
             page={page}
             onChange={this.handleChangePage}
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginTop: 15
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: 15,
             }}
             count={totalPageCount}
             color="primary"
@@ -95,20 +96,20 @@ class PopularBuilds extends Component {
             No record found.
           </div>
         )}
-        <div style={{ height: '70px' }}></div>
+        <div style={{ height: "70px" }}></div>
       </Fragment>
     );
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   builds: state.build.builds,
   sort: state.build.sort,
   filter: state.build.filter,
-  totalBuildCount: state.build.totalBuildCount
+  totalBuildCount: state.build.totalBuildCount,
 });
 
 export default connect(mapStateToProps, {
   getBuilds,
-  clearBuilds
+  clearBuilds,
 })(PopularBuilds);
