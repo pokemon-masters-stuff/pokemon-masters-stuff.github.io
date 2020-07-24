@@ -22,6 +22,7 @@ function SyncLevelDropdown(props) {
   //   const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (event) => {

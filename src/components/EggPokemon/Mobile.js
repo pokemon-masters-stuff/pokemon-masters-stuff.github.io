@@ -37,6 +37,7 @@ const EggPokemon = () => {
 
   React.useEffect(() => {
     setSyncLevel("1");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pokemon]);
 
   return (
@@ -64,7 +65,7 @@ const EggPokemon = () => {
             />
             <Grid container justify="center">
               <img
-                alt="pokemon picture"
+                alt=""
                 src={allPictures[`${pokemonName.toLowerCase()}Pic`]}
               />
             </Grid>

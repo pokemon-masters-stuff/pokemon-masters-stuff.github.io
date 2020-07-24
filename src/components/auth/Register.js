@@ -1,10 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setAlert, register } from '../../actions/actionCreators';
-import Alert from '../Alert';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { setLoading } from '../../actions/actionCreators';
-import UI from '../../utils/translations';
+import React, { Fragment, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setAlert, register } from "../../actions/actionCreators";
+import Alert from "../Alert";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { setLoading } from "../../actions/actionCreators";
+import UI from "../../utils/translations";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -13,12 +13,13 @@ const Register = () => {
 
   useEffect(() => {
     dispatch(setLoading(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    password2: '',
+    username: "",
+    password: "",
+    password2: "",
   });
 
   const { username, password, password2 } = formData;
@@ -29,7 +30,7 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (password !== password2) {
-      dispatch(setAlert('Passwords do not match', 'danger'));
+      dispatch(setAlert("Passwords do not match", "danger"));
     } else {
       dispatch(register({ username, password }));
     }
@@ -41,7 +42,7 @@ const Register = () => {
         <div className="modal-dialog modal-dialog-centered modal-login">
           <div className="modal-content">
             <div className="modal-header">
-              <h4 className="modal-title">{UI['Register'][language]}</h4>
+              <h4 className="modal-title">{UI["Register"][language]}</h4>
               <button
                 type="button"
                 className="close"
@@ -56,7 +57,7 @@ const Register = () => {
                 <div className="form-group">
                   <input
                     type="text"
-                    placeholder={UI['Username'][language]}
+                    placeholder={UI["Username"][language]}
                     name="username"
                     value={username}
                     onChange={(e) => onChange(e)}
@@ -66,7 +67,7 @@ const Register = () => {
                 <div className="form-group">
                   <input
                     type="password"
-                    placeholder={UI['Password'][language]}
+                    placeholder={UI["Password"][language]}
                     name="password"
                     value={password}
                     onChange={(e) => onChange(e)}
@@ -76,7 +77,7 @@ const Register = () => {
                 <div className="form-group">
                   <input
                     type="password"
-                    placeholder={UI['Confirm Password'][language]}
+                    placeholder={UI["Confirm Password"][language]}
                     name="password2"
                     value={password2}
                     onChange={(e) => onChange(e)}
@@ -87,9 +88,9 @@ const Register = () => {
                   <div>
                     <CircularProgress
                       style={{
-                        display: 'block',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
+                        display: "block",
+                        marginLeft: "auto",
+                        marginRight: "auto",
                       }}
                       color="secondary"
                     />
@@ -100,13 +101,13 @@ const Register = () => {
                       style={{ margin: 3 }}
                       type="submit"
                       className="btn btn-primary"
-                      value={UI['Register'][language]}
+                      value={UI["Register"][language]}
                     />
                     <input
                       style={{ margin: 3 }}
                       type="submit"
                       className="btn btn-dark"
-                      value={UI['Close'][language]}
+                      value={UI["Close"][language]}
                       data-dismiss="modal"
                     />
                   </div>

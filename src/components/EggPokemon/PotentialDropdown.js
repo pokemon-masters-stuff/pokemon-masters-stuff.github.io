@@ -1,10 +1,10 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import styles from './styles';
+import React from "react";
+import { withStyles } from "@material-ui/core";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import styles from "./styles";
 
 const potentialLevelList = [
   0,
@@ -38,6 +38,7 @@ function PotentialDropdown(props) {
 
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (event) => {

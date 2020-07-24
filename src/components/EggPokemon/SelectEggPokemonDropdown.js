@@ -15,12 +15,15 @@ function SimpleSelect(props) {
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
   const language = useSelector((state) => state.language.currentLanguage);
+
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
     setPokemon(selectedPokemon);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedPokemon]);
 
   const handleChange = (event) => {

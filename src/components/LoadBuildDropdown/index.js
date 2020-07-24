@@ -1,15 +1,15 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { withStyles } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import styles from './styles';
-import { updateUrl } from '../../actions/actionCreators';
-import UI from '../../utils/translations';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { withStyles } from "@material-ui/core";
+import IconButton from "@material-ui/core/IconButton";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import styles from "./styles";
+import { updateUrl } from "../../actions/actionCreators";
+import UI from "../../utils/translations";
 
 function LoadBuildDropdown(props) {
   const { classes, onChangeHandler, onDeleteHandler } = props;
@@ -28,6 +28,7 @@ function LoadBuildDropdown(props) {
 
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (event) => {
@@ -45,7 +46,7 @@ function LoadBuildDropdown(props) {
 
   const handleDelete = (buildId, event) => {
     event.stopPropagation();
-    window.confirm('Are you sure you wish to delete this save?') &&
+    window.confirm("Are you sure you wish to delete this save?") &&
       onDeleteHandler(buildId);
   };
 
@@ -56,7 +57,7 @@ function LoadBuildDropdown(props) {
       className={classes.formControl}
     >
       <InputLabel ref={inputLabel} id="select-build">
-        {UI['Load Builds'][language]}
+        {UI["Load Builds"][language]}
       </InputLabel>
       <Select
         labelId="select-build"
@@ -75,7 +76,7 @@ function LoadBuildDropdown(props) {
                   {showClearIcon ? (
                     <IconButton
                       onClick={handleDelete.bind(this, build.id)}
-                      style={{ marginLeft: 'auto', padding: 0 }}
+                      style={{ marginLeft: "auto", padding: 0 }}
                     >
                       <HighlightOffIcon />
                     </IconButton>

@@ -1,17 +1,17 @@
-import React, { Fragment, useState } from 'react';
-import { useSelector } from 'react-redux';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InfoIcon from '@material-ui/icons/Info';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
-import Button from '@material-ui/core/Button';
-import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
-import UI from '../../utils/translations';
+import React, { Fragment, useState } from "react";
+import { useSelector } from "react-redux";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+// import InfoIcon from '@material-ui/icons/Info';
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+// import DialogActions from '@material-ui/core/DialogActions';
+// import Button from '@material-ui/core/Button';
+import AccessibilityNewIcon from "@material-ui/icons/AccessibilityNew";
+import UI from "../../utils/translations";
 
 const ContributeModal = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
@@ -34,20 +34,20 @@ const ContributeModal = (props) => {
         <ListItemIcon className={props.classes.listIcon}>
           <AccessibilityNewIcon />
         </ListItemIcon>
-        <ListItemText primary={UI['Contribute'][language]} />
+        <ListItemText primary={UI["Contribute"][language]} />
       </ListItem>
 
       <Dialog
         open={isContributeModalVisible}
         onClose={handleOnCloseContributeModal}
       >
-        <DialogTitle>{UI['Contribute Title'][language]}</DialogTitle>
+        <DialogTitle>{UI["Contribute Title"][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText
             style={{
-              display: 'inline-block',
-              wordBreak: 'break-word',
-              whiteSpace: 'pre-line',
+              display: "inline-block",
+              wordBreak: "break-word",
+              whiteSpace: "pre-line",
               paddingRight: 10,
             }}
           >
@@ -66,6 +66,7 @@ const ContributeModal = (props) => {
                 <a
                   href="https://docs.google.com/document/d/1cbqSZfYxr-xEoC39mBWl3JD81Cgztq2OVVtQs0zSjpw/edit?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   German
                 </a>
@@ -74,6 +75,7 @@ const ContributeModal = (props) => {
                 <a
                   href="https://docs.google.com/document/d/1gWGFU8T31Tca1KRYe7VP8AnSbPf30z9nujMGSJfWdZ8/edit?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Spanish
                 </a>
@@ -82,6 +84,7 @@ const ContributeModal = (props) => {
                 <a
                   href="https://docs.google.com/document/d/19Vkn5ZVHSdwQmTiZTUs2W2cQTX3SbCjBmcmkKhBguoM/edit?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   French
                 </a>
@@ -90,6 +93,7 @@ const ContributeModal = (props) => {
                 <a
                   href="https://docs.google.com/document/d/1MORNFg9_ILZxQGNOtvuiQHeBQ1bZWiGasjDgU_Emefc/edit?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Japanese
                 </a>
@@ -98,6 +102,7 @@ const ContributeModal = (props) => {
                 <a
                   href="https://docs.google.com/document/d/1foljTMI6yFMaYx4PuJSPoaEpgTImAzr2eFg9W5W3Ktw/edit?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Korean
                 </a>
@@ -106,6 +111,7 @@ const ContributeModal = (props) => {
                 <a
                   href="https://docs.google.com/document/d/1MLDIZ16iI9CxP2_U4J4blzJHkiFySCs3nptAY4JthcI/edit?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Traditional Chinese
                 </a>

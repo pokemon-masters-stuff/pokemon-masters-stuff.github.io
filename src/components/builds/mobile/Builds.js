@@ -1,35 +1,35 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { changeFilter, changeSort } from '../../../actions/actionCreators';
-import { getPokemonNameList } from '../../../utils/functions';
-import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
-import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import { makeStyles } from '@material-ui/core/styles';
-import Nav from '../../MainAppbar/Nav';
-import { NavigationMobile } from '../../Navigation';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonIcon from '@material-ui/icons/Person';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { changeFilter, changeSort } from "../../../actions/actionCreators";
+import { getPokemonNameList } from "../../../utils/functions";
+import AppBar from "@material-ui/core/AppBar";
+import Box from "@material-ui/core/Box";
+import MenuItem from "@material-ui/core/MenuItem";
+import InputLabel from "@material-ui/core/InputLabel";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import { makeStyles } from "@material-ui/core/styles";
+import Nav from "../../MainAppbar/Nav";
+import { NavigationMobile } from "../../Navigation";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import WhatshotIcon from "@material-ui/icons/Whatshot";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import PersonIcon from "@material-ui/icons/Person";
 
 const useStyles = makeStyles({
   root: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 30,
   },
   bottomNav: {
-    width: '100%',
-    position: 'fixed',
+    width: "100%",
+    position: "fixed",
     bottom: 0,
     zIndex: 2000,
   },
@@ -47,14 +47,15 @@ const Builds = (props) => {
 
   useEffect(() => {
     if (props.history) {
-      if (props.history.location.pathname === '/builds/liked') {
+      if (props.history.location.pathname === "/builds/liked") {
         setValue(1);
-      } else if (props.history.location.pathname === '/builds/users') {
+      } else if (props.history.location.pathname === "/builds/users") {
         setValue(2);
       } else {
         setValue(0);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOnCloseNav = () => setIsNavOpened(false);
@@ -64,11 +65,11 @@ const Builds = (props) => {
   const handleChangeTab = (event, newValue) => {
     let val;
     if (newValue === 0) {
-      val = 'popular';
+      val = "popular";
     } else if (newValue === 1) {
-      val = 'liked';
+      val = "liked";
     } else {
-      val = 'users';
+      val = "users";
     }
     props.history.push(`/builds/${val}`);
     setValue(newValue);
@@ -83,19 +84,19 @@ const Builds = (props) => {
   };
 
   return (
-    <div className={`App ${darkMode ? 'dark-mode' : null}`}>
+    <div className={`App ${darkMode ? "dark-mode" : null}`}>
       <AppBar position="fixed">
         <Nav onOpenNavHandler={handleOnOpenNav} />
         <NavigationMobile
           isOpened={isNavOpened}
           onCloseHandler={handleOnCloseNav}
-        />{' '}
+        />{" "}
       </AppBar>
       <Tabs
         value={value}
         indicatorColor="primary"
         onChange={handleChangeTab}
-        style={{ margin: 'auto' }}
+        style={{ margin: "auto" }}
         centered
       >
         <Tab label="Popular" />

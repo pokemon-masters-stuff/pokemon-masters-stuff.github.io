@@ -13,6 +13,7 @@ const Login = () => {
 
   useEffect(() => {
     dispatch(setLoading(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [formData, setFormData] = useState({

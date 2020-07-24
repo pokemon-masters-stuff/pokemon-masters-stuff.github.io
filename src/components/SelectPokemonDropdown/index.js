@@ -1,13 +1,13 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import { getPokemonNameList } from '../../utils/functions';
-import styles from './styles';
-import { updateUrl, setSyncLevel } from '../../actions/actionCreators';
-import { useSelector, useDispatch } from 'react-redux';
+import React from "react";
+import { withStyles } from "@material-ui/core";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import { getPokemonNameList } from "../../utils/functions";
+import styles from "./styles";
+import { updateUrl, setSyncLevel } from "../../actions/actionCreators";
+import { useSelector, useDispatch } from "react-redux";
 
 function SimpleSelect(props) {
   const dispatch = useDispatch();
@@ -19,10 +19,12 @@ function SimpleSelect(props) {
   const language = useSelector((state) => state.language.currentLanguage);
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
     setPokemon(selectedPokemon);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedPokemon]);
 
   const handleChange = (event) => {
@@ -30,7 +32,7 @@ function SimpleSelect(props) {
     onChangeHandler(event.target.value);
 
     dispatch(updateUrl(event.target.value));
-    dispatch(setSyncLevel('5'));
+    dispatch(setSyncLevel("5"));
   };
 
   return (

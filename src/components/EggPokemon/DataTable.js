@@ -415,6 +415,7 @@ export default function MovesAndSkillsModal(props) {
     setSelectedPotential(0);
     setSelectedAffinityLevel("1/3");
     setSelectedAffinityProgress(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pokemonName, pokemonRole]);
 
   const handleOnChangeRarity = (value) => {

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/core';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import ReactTooltip from 'react-tooltip';
-import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
-import styles from './styles';
-import { getQueryStringValue, clearQueryStringValue } from '../../queryString';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { withStyles } from "@material-ui/core";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import ReactTooltip from "react-tooltip";
+import { HexGrid, Layout, Hexagon, Text, Pattern } from "../Hexagon";
+import styles from "./styles";
+import { getQueryStringValue } from "../../queryString";
 import {
   selectPokemon,
   addToGridList,
@@ -16,52 +16,52 @@ import {
   loadGridFromUrl,
   updateUrl,
   setSyncLevel,
-} from '../../actions/actionCreators';
+} from "../../actions/actionCreators";
 import {
   getFillColorByMoveType,
   renderMoveName,
   // addSyncLvReq,
   checkSelectabilityBasedOnSyncLv,
-} from '../../utils/functions';
-import { allThumbnails, allSyncGrids } from '../../utils/constants';
-import UI from '../../utils/translations';
+} from "../../utils/functions";
+import { allThumbnails, allSyncGrids } from "../../utils/constants";
+import UI from "../../utils/translations";
 
 class GridMap extends Component {
   state = {
     initialRender: true,
     mapSizeBoundaries: {
-      width: '100vw',
+      width: "100vw",
       height: 440,
-      viewbox: '-35 -35 70 70',
+      viewbox: "-35 -35 70 70",
     },
     screenWidth: document.body.clientWidth,
   };
 
   loadUrlGridData() {
     let pokemonFromUrl;
-    if (getQueryStringValue('p')) {
-      pokemonFromUrl = getQueryStringValue('p');
+    if (getQueryStringValue("p")) {
+      pokemonFromUrl = getQueryStringValue("p");
       this.props.selectPokemon(pokemonFromUrl);
     }
 
     let syncLevelFromUrl;
-    if (getQueryStringValue('s')) {
-      syncLevelFromUrl = getQueryStringValue('s');
+    if (getQueryStringValue("s")) {
+      syncLevelFromUrl = getQueryStringValue("s");
       this.props.setSyncLevel(syncLevelFromUrl);
     } else {
-      this.props.setSyncLevel('5');
+      this.props.setSyncLevel("5");
     }
 
     // if user uses an url that includes grid data, generate gridmap based on url
-    if (getQueryStringValue('grid')) {
+    if (getQueryStringValue("grid")) {
       this.props.resetGrids();
-      let remainingEnergy = Number(getQueryStringValue('e'));
-      let orbSpent = Number(getQueryStringValue('o'));
+      let remainingEnergy = Number(getQueryStringValue("e"));
+      let orbSpent = Number(getQueryStringValue("o"));
 
       let cellData = {};
       let selectedCellByIdFromUrl = {};
 
-      getQueryStringValue('grid').map((id) => {
+      getQueryStringValue("grid").map((id) => {
         cellData =
           allSyncGrids[this.props.language][
             `${pokemonFromUrl.toLowerCase()}GridData${this.props.language.toUpperCase()}`
@@ -88,10 +88,10 @@ class GridMap extends Component {
 
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
-    window.addEventListener('resize', this.fitMapToScreen);
+    window.addEventListener("resize", this.fitMapToScreen);
     this.loadUrlGridData();
 
-    getQueryStringValue('p') && this.props.updateUrl(getQueryStringValue('p'));
+    getQueryStringValue("p") && this.props.updateUrl(getQueryStringValue("p"));
   }
 
   componentDidUpdate() {
@@ -99,7 +99,7 @@ class GridMap extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.fitMapToScreen);
+    window.removeEventListener("resize", this.fitMapToScreen);
     // clearQueryStringValue();
   }
 
@@ -116,7 +116,7 @@ class GridMap extends Component {
       updatedMapSizeBoundaries = {
         width: 800,
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: "-50 -50 100 100",
       };
     }
 
@@ -125,28 +125,28 @@ class GridMap extends Component {
       clientWrappingBoundaries.width < 1200
     ) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: "100vw",
         height: 768,
-        viewbox: '-15 -50 100 100',
+        viewbox: "-15 -50 100 100",
       };
     }
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: "100vw",
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: "-50 -50 100 100",
       };
     }
 
     if (clientWrappingBoundaries.width < 768) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: "100vw",
         height: (
           ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
           clientWrappingBoundaries.width
         ).toFixed(),
-        viewbox: '-35 -35 70 70',
+        viewbox: "-35 -35 70 70",
       };
     }
 
@@ -184,7 +184,7 @@ class GridMap extends Component {
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
-        cell.move.name.substring(0, 5) === 'Move:'
+        cell.move.name.substring(0, 5) === "Move:"
           ? cell.move.name.substring(6)
           : cell.move.name;
 
@@ -232,10 +232,10 @@ class GridMap extends Component {
             : null,
         className: this.props.darkMode
           ? this.props.grid.selectedCellsById[cell.cellId]
-            ? 'selected dark-mode'
-            : 'dark-mode'
+            ? "selected dark-mode"
+            : "dark-mode"
           : this.props.grid.selectedCellsById[cell.cellId]
-          ? 'selected'
+          ? "selected"
           : null,
       };
 
@@ -251,7 +251,7 @@ class GridMap extends Component {
       return (
         <Hexagon {...hexagonProps}>
           <Text className={this.props.darkMode ? classes.darkMode : null}>
-            {isSeletableBasedOnSyncLv ? renderedMoveName : ''}
+            {isSeletableBasedOnSyncLv ? renderedMoveName : ""}
           </Text>
           {this.state.screenWidth < 960 &&
           cell.move.energyCost !== undefined &&
@@ -261,7 +261,7 @@ class GridMap extends Component {
               textAnchor="middle"
               x="0"
               y="1.6em"
-              style={this.props.darkMode ? { fill: 'white' } : null}
+              style={this.props.darkMode ? { fill: "white" } : null}
             >
               ({cell.move.energyCost})
             </text>
@@ -304,7 +304,7 @@ class GridMap extends Component {
               s={0}
               fill={`url(#${this.props.pokemon})`}
               data={{ cellId: 0 }}
-              className={'center-grid'}
+              className={"center-grid"}
             >
               {this.renderCenterGridText(classes)}
             </Hexagon>
@@ -322,7 +322,7 @@ class GridMap extends Component {
             <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
               <li>{this.props.grid.gridData.name}</li>
               <li>
-                {UI['Energy'][language]}: {this.props.grid.gridData.energy}
+                {UI["Energy"][language]}: {this.props.grid.gridData.energy}
               </li>
               {this.props.grid.gridData.description ? (
                 <li style={{ marginTop: 1 }}>

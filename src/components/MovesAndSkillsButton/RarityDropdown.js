@@ -1,10 +1,10 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import styles from './styles';
+import React from "react";
+import { withStyles } from "@material-ui/core";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import styles from "./styles";
 
 function RarityDropdown(props) {
   const { classes, rarity, selectedRarity, handleOnChangeRarity } = props;
@@ -14,24 +14,25 @@ function RarityDropdown(props) {
 
   let rarityLevelList;
   if (rarity === 3) {
-    rarityLevelList = ['★★★', '★★★★', '★★★★★'];
+    rarityLevelList = ["★★★", "★★★★", "★★★★★"];
   } else if (rarity === 4) {
-    rarityLevelList = ['★★★★', '★★★★★'];
+    rarityLevelList = ["★★★★", "★★★★★"];
   } else {
-    rarityLevelList = ['★★★★★'];
+    rarityLevelList = ["★★★★★"];
   }
 
   let selectedRarityStars;
   if (selectedRarity === 3) {
-    selectedRarityStars = '★★★';
+    selectedRarityStars = "★★★";
   } else if (selectedRarity === 4) {
-    selectedRarityStars = '★★★★';
+    selectedRarityStars = "★★★★";
   } else {
-    selectedRarityStars = '★★★★★';
+    selectedRarityStars = "★★★★★";
   }
 
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (event) => {
