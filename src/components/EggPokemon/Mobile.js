@@ -9,6 +9,7 @@ import { NavigationMobile } from "../Navigation";
 import AppBar from "@material-ui/core/AppBar";
 import Grid from "@material-ui/core/Grid";
 import { allPictures } from "../../utils/constants";
+import LoginOrRegisterModal from "../auth/LoginOrRegisterModal";
 
 const regExp = /\(([^)]+)\)/;
 
@@ -49,6 +50,8 @@ const EggPokemon = () => {
               onCloseHandler={handleOnCloseNav}
             />{" "}
           </AppBar>
+
+          <LoginOrRegisterModal />
 
           <Container maxWidth="sm" style={{ paddingTop: 80, marginBottom: 30 }}>
             <SelectEggPokemonDropdown

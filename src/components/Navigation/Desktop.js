@@ -25,6 +25,7 @@ import { logout } from "../../actions/actionCreators";
 import AnnouncementModal from "../AnnouncementModal";
 import ContributeModal from "../ContributeModal";
 import LanguageModal from "../LanguageModal";
+import LoginOrRegisterModal from "../auth/LoginOrRegisterModal";
 import UI from "../../utils/translations";
 import styles from "./styles";
 import ExposureIcon from "@material-ui/icons/Exposure";
@@ -145,7 +146,7 @@ function PersistentDrawerLeft(props) {
               <ListItemText primary={UI["Popular Builds"][language]} />
             </ListItem>
           )}
-
+          <LoginOrRegisterModal />
           <Link
             to="/gacha-odds-calculator"
             style={{ textDecoration: "none", color: "inherit" }}

@@ -1,10 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../actions/actionCreators';
-import Alert from '../Alert';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { setLoading } from '../../actions/actionCreators';
-import UI from '../../utils/translations';
+import React, { Fragment, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../actions/actionCreators";
+import Alert from "../Alert";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { setLoading } from "../../actions/actionCreators";
+import UI from "../../utils/translations";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -16,8 +16,8 @@ const Login = () => {
   }, []);
 
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const { username, password } = formData;
@@ -41,7 +41,7 @@ const Login = () => {
         <div className="modal-dialog modal-dialog-centered modal-login">
           <div className="modal-content">
             <div className="modal-header">
-              <h4 className="modal-title">{UI['Login'][language]}</h4>
+              <h4 className="modal-title">{UI["Login"][language]}</h4>
               <button
                 type="button"
                 className="close"
@@ -56,7 +56,7 @@ const Login = () => {
                 <div className="form-group">
                   <input
                     type="text"
-                    placeholder={UI['Username'][language]}
+                    placeholder={UI["Username"][language]}
                     name="username"
                     value={username}
                     onChange={(e) => onChange(e)}
@@ -67,7 +67,7 @@ const Login = () => {
                 <div className="form-group">
                   <input
                     type="password"
-                    placeholder={UI['Password'][language]}
+                    placeholder={UI["Password"][language]}
                     name="password"
                     value={password}
                     onChange={(e) => onChange(e)}
@@ -79,9 +79,9 @@ const Login = () => {
                   <div>
                     <CircularProgress
                       style={{
-                        display: 'block',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
+                        display: "block",
+                        marginLeft: "auto",
+                        marginRight: "auto",
                       }}
                       color="secondary"
                     />
@@ -92,13 +92,13 @@ const Login = () => {
                       style={{ margin: 3 }}
                       type="submit"
                       className="btn btn-primary"
-                      value={UI['Login'][language]}
+                      value={UI["Login"][language]}
                     />
                     <input
                       style={{ margin: 3 }}
                       type="submit"
                       className="btn btn-dark"
-                      value={UI['Close'][language]}
+                      value={UI["Close"][language]}
                       data-dismiss="modal"
                     />
                   </div>
