@@ -11,3 +11,7 @@ export { default as victreebelPic } from "./pm0071.png";
 export { default as scytherPic } from "./pm0123.png";
 export { default as pinsirPic } from "./pm0127.png";
 export { default as taurosPic } from "./pm0128.png";
+export { default as kabutopsPic } from "./pm0141.png";
+export { default as golemPic } from "./pm0076.png";
+export { default as aerodactylPic } from "./pm0142.png";
+export { default as onixPic } from "./pm0095.png";

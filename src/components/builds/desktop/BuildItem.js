@@ -1,35 +1,36 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/core';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { fade } from '@material-ui/core/styles/colorManipulator';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import ShareBuildModal from '../common/ShareBuildModal';
-import EditBuildModal from '../common/EditBuildModal';
-import ReactTooltip from 'react-tooltip';
-import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
-import Comments from '../common/Comments';
-import styles from './styles';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { withStyles } from "@material-ui/core";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { fade } from "@material-ui/core/styles/colorManipulator";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import IconButton from "@material-ui/core/IconButton";
+import Button from "@material-ui/core/Button";
+import ShareBuildModal from "../common/ShareBuildModal";
+import EditBuildModal from "../common/EditBuildModal";
+import ReactTooltip from "react-tooltip";
+import { HexGrid, Layout, Hexagon, Text, Pattern } from "../../Hexagon";
+import Comments from "../common/Comments";
+import styles from "./styles";
 import {
   addLike,
   removeLike,
   deleteBuild,
-} from '../../../actions/actionCreators';
+} from "../../../actions/actionCreators";
 import {
   getFillColorByMoveType,
   renderMoveName,
   // addSyncLvReq,
-} from '../../../utils/functions';
-import { allThumbnails, allSyncGrids } from '../../../utils/constants';
-import UI from '../../../utils/translations';
+  removeHyphens,
+} from "../../../utils/functions";
+import { allThumbnails, allSyncGrids } from "../../../utils/constants";
+import UI from "../../../utils/translations";
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -40,9 +41,9 @@ class BuildItem extends Component {
     this.state = {
       initialRender: true,
       mapSizeBoundaries: {
-        width: '100vw',
+        width: "100vw",
         height: 440,
-        viewbox: '-35 -35 70 70',
+        viewbox: "-35 -35 70 70",
       },
       screenWidth: document.body.clientWidth,
       mouseEntered: false,
@@ -54,7 +55,7 @@ class BuildItem extends Component {
   componentDidMount() {
     this._isMounted = true;
     setTimeout(() => this.fitMapToScreen(), 1000);
-    window.addEventListener('resize', this.fitMapToScreen);
+    window.addEventListener("resize", this.fitMapToScreen);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -75,7 +76,7 @@ class BuildItem extends Component {
 
   componentWillUnmount() {
     this._isMounted = false;
-    window.removeEventListener('resize', this.fitMapToScreen);
+    window.removeEventListener("resize", this.fitMapToScreen);
   }
 
   fitMapToScreen = () => {
@@ -91,7 +92,7 @@ class BuildItem extends Component {
       updatedMapSizeBoundaries = {
         width: 800,
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: "-50 -50 100 100",
       };
     }
 
@@ -102,26 +103,26 @@ class BuildItem extends Component {
       updatedMapSizeBoundaries = {
         width: 800,
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: "-50 -50 100 100",
       };
     }
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: "100vw",
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: "-50 -50 100 100",
       };
     }
 
     if (clientWrappingBoundaries.width < 768) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: "100vw",
         height: (
           ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
           clientWrappingBoundaries.width
         ).toFixed(),
-        viewbox: '-35 -35 70 70',
+        viewbox: "-35 -35 70 70",
       };
     }
 
@@ -152,17 +153,17 @@ class BuildItem extends Component {
   };
 
   handleClickDelete = (build, e) => {
-    window.confirm('Are you sure you wish to delete this build?') &&
+    window.confirm("Are you sure you wish to delete this build?") &&
       this.props.deleteBuild(build._id);
   };
 
   renderHexagonCells = (classes, pokemon, build) =>
     allSyncGrids[this.props.language][
-      `${pokemon}GridData${this.props.language.toUpperCase()}`
+      `${removeHyphens(pokemon)}GridData${this.props.language.toUpperCase()}`
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
-        cell.move.name.substring(0, 5) === 'Move:'
+        cell.move.name.substring(0, 5) === "Move:"
           ? cell.move.name.substring(6)
           : cell.move.name;
 
@@ -189,11 +190,11 @@ class BuildItem extends Component {
         }),
         className: this.props.darkMode
           ? build.selectedCellsById[cell.cellId]
-            ? 'selected dark-mode build'
-            : 'dark-mode build'
+            ? "selected dark-mode build"
+            : "dark-mode build"
           : build.selectedCellsById[cell.cellId]
-          ? 'selected build'
-          : 'build',
+          ? "selected build"
+          : "build",
       };
       return (
         <Hexagon {...hexagonProps}>
@@ -213,7 +214,7 @@ class BuildItem extends Component {
               textAnchor="middle"
               x="0"
               y="1.6em"
-              style={this.props.darkMode ? { fill: 'white' } : null}
+              style={this.props.darkMode ? { fill: "white" } : null}
             >
               ({cell.move.energyCost})
             </text>
@@ -224,8 +225,10 @@ class BuildItem extends Component {
 
   renderCenterGridText = (classes, pokemon) => {
     // Only renders text when no picture available
-    return allThumbnails[`${pokemon}`] === undefined ? (
-      <Text className={classes.selectedPokemonCell}>{pokemon}</Text>
+    return allThumbnails[`${removeHyphens(pokemon)}`] === undefined ? (
+      <Text className={classes.selectedPokemonCell}>
+        {removeHyphens(pokemon)}
+      </Text>
     ) : null;
   };
 
@@ -303,7 +306,7 @@ class BuildItem extends Component {
   };
 
   render() {
-    const currentUser = this.props.auth.user || '';
+    const currentUser = this.props.auth.user || "";
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build, darkMode, language } = this.props;
     const pokemon = build.pokemon.toLowerCase();
@@ -326,17 +329,17 @@ class BuildItem extends Component {
             <div className="col-sm-8">
               <span
                 style={{
-                  fontWeight: 'bold',
-                  color: '#bdbdbd',
+                  fontWeight: "bold",
+                  color: "#bdbdbd",
                 }}
               >
-                {UI['Build name'][language]}:{' '}
+                {UI["Build name"][language]}:{" "}
               </span>
               <span>
                 {build.buildName}
-                <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                  {' '}
-                  by{' '}
+                <span style={{ fontWeight: "bold", color: "#bdbdbd" }}>
+                  {" "}
+                  by{" "}
                 </span>
                 {build.username}
               </span>
@@ -346,15 +349,15 @@ class BuildItem extends Component {
         </Paper>
         <Divider />
         <Paper
-          style={!darkMode ? { backgroundColor: fade('#fafafa', 0.4) } : null}
+          style={!darkMode ? { backgroundColor: fade("#fafafa", 0.4) } : null}
         >
           <div className="row">
             <div
               className="col-sm mt-2"
               style={{
-                display: 'flex',
-                flexFlow: 'row wrap',
-                alignItems: 'center',
+                display: "flex",
+                flexFlow: "row wrap",
+                alignItems: "center",
                 marginLeft: -120,
               }}
             >
@@ -375,7 +378,7 @@ class BuildItem extends Component {
                     s={0}
                     fill={`url(#${pokemon})`}
                     data={{ cellId: 0 }}
-                    className={'center-grid'}
+                    className={"center-grid"}
                   >
                     {this.renderCenterGridText(classes, pokemon)}
                   </Hexagon>
@@ -383,7 +386,7 @@ class BuildItem extends Component {
                 </Layout>
                 <Pattern
                   id={pokemon}
-                  link={allThumbnails[`${pokemon}`]}
+                  link={allThumbnails[`${removeHyphens(pokemon)}`]}
                   size={{ x: 10, y: 10 }}
                 />
               </HexGrid>
@@ -410,43 +413,43 @@ class BuildItem extends Component {
               className="col-sm"
               style={{
                 paddingLeft: 0,
-                display: 'flex',
-                flexFlow: 'row wrap',
-                alignItems: 'center',
+                display: "flex",
+                flexFlow: "row wrap",
+                alignItems: "center",
                 marginLeft: -110,
               }}
             >
               <div>
                 <p>
-                  <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                    {UI['Remaining Energy'][language]}:{' '}
+                  <span style={{ fontWeight: "bold", color: "#bdbdbd" }}>
+                    {UI["Remaining Energy"][language]}:{" "}
                   </span>
-                  <span style={{ fontWeight: 'bold' }}>
+                  <span style={{ fontWeight: "bold" }}>
                     {build.remainingEnergy}
                   </span>
                 </p>
                 <p>
-                  <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                    {UI['Orbs Spent'][language]}:{' '}
+                  <span style={{ fontWeight: "bold", color: "#bdbdbd" }}>
+                    {UI["Orbs Spent"][language]}:{" "}
                   </span>
-                  <span style={{ fontWeight: 'bold' }}>{build.orbSpent}</span>
+                  <span style={{ fontWeight: "bold" }}>{build.orbSpent}</span>
                 </p>
-                <Typography style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                  {UI['Description'][language]}:
+                <Typography style={{ color: "#bdbdbd", fontWeight: "bold" }}>
+                  {UI["Description"][language]}:
                 </Typography>
                 <p
                   style={{
-                    display: 'inline-block',
-                    wordBreak: 'break-word',
-                    whiteSpace: 'pre-line',
+                    display: "inline-block",
+                    wordBreak: "break-word",
+                    whiteSpace: "pre-line",
                     paddingRight: 10,
                   }}
                 >
-                  {build.description || 'None'}
+                  {build.description || "None"}
                 </p>
                 <p>
-                  <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
-                    {UI['Date'][language]}:{' '}
+                  <span style={{ color: "#bdbdbd", fontWeight: "bold" }}>
+                    {UI["Date"][language]}:{" "}
                   </span>
                   <span>{build.date.substring(0, 10)}</span>
                 </p>

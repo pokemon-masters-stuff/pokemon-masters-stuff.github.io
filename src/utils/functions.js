@@ -2,6 +2,10 @@ import arrayOfAllGridedPokemon from "../data/allGridedPokemon.json";
 import arrayOfAllEggPokemon from "../data/allEggPokemon.json";
 import { shortenedMoveNameByAbilityId } from "./constants";
 
+export const removeHyphens = (str) => {
+  return str.replace(/-/g, "");
+};
+
 export const getPokemonNameList = (language) =>
   arrayOfAllGridedPokemon
     .map((entry, index) => {
@@ -131,7 +135,11 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "leavanny" ||
       pokemon === "sharpedo" ||
       pokemon === "emboar" ||
-      pokemon === "drifblim"
+      pokemon === "drifblim" ||
+      pokemon === "dragonite" ||
+      pokemon === "jigglypuff" ||
+      pokemon === "alolan_sandslash" ||
+      pokemon === "kommo-o"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -171,7 +179,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "meowstic" ||
       pokemon === "milotic" ||
       pokemon === "delphox" ||
-      pokemon === "crobat"
+      pokemon === "crobat" ||
+      pokemon === "onix" ||
+      pokemon === "lycanroc_midday"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -285,7 +295,11 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "leavanny" ||
       pokemon === "sharpedo" ||
       pokemon === "emboar" ||
-      pokemon === "drifblim"
+      pokemon === "drifblim" ||
+      pokemon === "dragonite" ||
+      pokemon === "jigglypuff" ||
+      pokemon === "alolan_sandslash" ||
+      pokemon === "kommo-o"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -313,7 +327,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "meowstic" ||
       pokemon === "milotic" ||
       pokemon === "delphox" ||
-      pokemon === "crobat"
+      pokemon === "crobat" ||
+      pokemon === "onix" ||
+      pokemon === "lycanroc_midday"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -375,7 +391,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-// let names = {}; // to generate list of skills to be abbreviated
+let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
@@ -389,7 +405,7 @@ export const renderMoveName = (moveName, abilityId, language) => {
       }
       // else {
       //   // to generate list of skills to be abbreviated
-      //   if ((language = 'es')) {
+      //   if ((language = "es")) {
       //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
       //     console.log(names); // to generate list of skills to be abbreviated
       //   }

@@ -2645,7 +2645,7 @@
           "zh": "振奮氣勢！"
         },
         "description": {
-          "de": "Erhöht die Spezial-\nVerteidigung und\ndie Initiative aller\nGefährten im Team.",
+          "de": "Erhöht die Spezial-Verteidigung und die Initiative aller Gefährten im Team.\n",
           "en": "Raises the Sp. Def and Speed of all allied sync pairs.",
           "es": "Aumenta la Defensa Especial y la Velocidad del bando del usuario.",
           "fr": "Augmente légèrement\nla Défense Spéciale et la\nVitesse de tous les alliés.",
@@ -3170,6 +3170,1274 @@
     }
   },
   {
+    "monsterBaseId": "20014200",
+    "monsterId": "28000020131",
+    "trainerId": "18000020131",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [56, 93, 129, 272, 300],
+      "atkValues": [13, 28, 43, 98, 110],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [13, 28, 43, 98, 110],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
+    },
+    "moves": {
+      "move1": {
+        "id": 479,
+        "name": {
+          "de": "Katapult",
+          "en": "Smack Down",
+          "es": "Antiaéreo",
+          "fr": "Anti-Air",
+          "it": "Abbattimento",
+          "ja": "うちおとす",
+          "ko": "떨어뜨리기",
+          "zh": "擊落"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 20,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19021,
+        "name": {
+          "de": "X-Abwehr\n(Team)",
+          "en": "X Defense All",
+          "es": "Defensa X\nMúltiple",
+          "fr": "Omni-Défense +",
+          "it": "Difesa X-G",
+          "ja": "ディフェンダーＧ",
+          "ko": "디펜드업G",
+          "zh": "防禦強化Ｇ"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\naller Gefährten im Team\nstark.",
+          "en": "Sharply raises the Defense of all allied sync pairs.",
+          "es": "Aumenta bastante la\nDefensa del bando del\nusuario.",
+          "fr": "Augmente modérément\nla Défense de tous les\nalliés.",
+          "it": "Aumenta di molto\nla Difesa di tutte le Unità\nalleate.",
+          "ja": "味方のバディーズ全員の防御をぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 방어가 크게 오른다",
+          "zh": "大幅提高我方全體拍組的防禦。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17104,
+        "name": {
+          "de": "Verlieren wir\nkeine Zeit!",
+          "en": "Strike\nTogether!",
+          "es": "¡Al ataque!",
+          "fr": "Donnons-nous\nà fond !",
+          "it": "Andiamo\nall'attacco!",
+          "ja": "一気にいくよ！",
+          "ko": "단숨에간다!",
+          "zh": "一舉進攻！"
+        },
+        "description": {
+          "de": "Erhöht den Angriff und\ndie Initiative aller\nGefährten im Team.",
+          "en": "Raises the Attack and Speed of all allied sync pairs.",
+          "es": "Aumenta el Ataque y la Velocidad del bando del usuario.",
+          "fr": "Augmente légèrement\nl'Attaque et la Vitesse de\ntous les alliés.",
+          "it": "Aumenta l'Attacco e la Velocità di tutte le Unità alleate.",
+          "ja": "味方のバディーズ全員の攻撃と素早さをあげる",
+          "ko": "같은 편 버디즈 전원의 공격과 스피드가 오른다",
+          "zh": "提高我方全體拍組的攻擊和速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 444,
+        "name": {
+          "de": "Steinkante",
+          "en": "Stone Edge",
+          "es": "Roca Afilada",
+          "fr": "Lame de Roc",
+          "it": "Pietrataglio",
+          "ja": "ストーンエッジ",
+          "ko": "스톤에지",
+          "zh": "尖石攻擊"
+        },
+        "description": {
+          "de": "Hat eine hohe\nVolltrefferquote.",
+          "en": "Critical hits land more easily.",
+          "es": "Suele ser crítico.",
+          "fr": "Taux de critiques élevé.",
+          "it": "Probabile brutto colpo.",
+          "ja": "急所に当たりやすい",
+          "ko": "급소에 맞기 쉽다",
+          "zh": "容易擊中要害。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 100,
+        "accuracy": 80,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18043802,
+        "name": {
+          "de": "P-Attacken-Fluchtwert↑ 2",
+          "en": "Shifty Striker 2",
+          "es": "Acción Evasión ↑ +2",
+          "fr": "Action Esquive 2",
+          "it": "Migliorelusione 2",
+          "ja": "Ｐ技後回避率アップ２",
+          "ko": "P기술후회피율업2",
+          "zh": "寶可夢出招後閃避率↑２"
+        },
+        "description": {
+          "de": "Erhöht nach Einsatz einer Attacke des Pokémon\neventuell den Fluchtwert.",
+          "en": "Has a moderate chance of raising the user’s evasiveness when the user’s Pokémon uses a move.",
+          "es": "A veces aumenta la Evasión del usuario después\nde que el Pokémon use un movimiento.",
+          "fr": "Augmente légèrement l'Esquive du Pokémon\nquand il utilise une capacité (assez rarement).",
+          "it": "Quando il Pokémon usa una mossa, a volte\naumenta l'elusione dell'Unità.",
+          "ja": "ポケモンが技をつかったときにたまに\n自分の回避率をあげる",
+          "ko": "포켓몬이 기술을 사용하면 가끔\n자신의 회피율이 오른다",
+          "zh": "在寶可夢使出招式時，\n偶爾會提高自己的閃避率。"
+        }
+      },
+      "passive2": {
+        "id": 11010102,
+        "name": {
+          "de": "Notfallheilung 2",
+          "en": "First Aid 2",
+          "es": "Remedio +2",
+          "fr": "Premiers Soins 2",
+          "it": "Cerottino 2",
+          "ja": "ピンチ時ＨＰ回復２",
+          "ko": "위기시HP회복2",
+          "zh": "危機時ＨＰ回復２"
+        },
+        "description": {
+          "de": "Stellt ein Mal pro Kampf in einer Notsituation\neinige KP wieder her.",
+          "en": "Restores a bit of the Pokémon’s HP once during battle when the Pokémon is in a pinch.",
+          "es": "Una vez por combate, el Pokémon recupera\nalgunos PS en un apuro.",
+          "fr": "Une fois par combat, le Pokémon regagne\nbeaucoup de PV s'il est en mauvaise posture.",
+          "it": "Una volta sola per lotta, fa recuperare\nun po' di PS quando l'Unità è in difficoltà.",
+          "ja": "バトル中に１回だけ\nピンチのときに自分のＨＰを少し回復する",
+          "ko": "배틀 중 1번만 위급할 때 자신의 HP를 조금 회복한다",
+          "zh": "對戰中僅限１次，在陷入危機時會少量回復自己的ＨＰ。"
+        }
+      },
+      "passive3": {
+        "id": 12020401,
+        "name": {
+          "de": "Gegentreffer-Leiste↑ 1",
+          "en": "Revenge Boost 1",
+          "es": "Daño Llenabarras +1",
+          "fr": "Réflexe Jauge ↑ 1",
+          "it": "Reazione riempibarra 1",
+          "ja": "被攻撃時わざゲージ↑１",
+          "ko": "피격시기술게이지↑1",
+          "zh": "被攻擊時招式計量槽↑１"
+        },
+        "description": {
+          "de": "Füllt in seltenen Fällen die Attackenleiste des\nPokémon um 1 Segment auf, wenn es von einer\nAttacke getroffen wird.",
+          "en": "Has a small chance of charging the user’s move gauge by one when the user is hit by an attack move.",
+          "es": "Rara vez llena 1 punto de la barra de\nmovimientos del usuario si es atacado.",
+          "fr": "Quand le Duo subit une attaque, restaure un\nsegment de la Jauge Capacité (rarement).",
+          "it": "Quando l'Unità subisce un attacco semplice,\nraramente viene aggiunta una barretta\nalla sua barra mosse.",
+          "ja": "技で攻撃を受けたときにまれに\n自分のわざゲージを１増やす",
+          "ko": "기술로 공격받았을 때 드물게\n자신의 기술게이지를 1 추가한다",
+          "zh": "受到招式攻擊時，少數情況下會\n幫自己增加１條招式計量槽。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 4,
+    "rarity": 1,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Aerodactyl",
+      "en": "Aerodactyl",
+      "es": "Aerodactyl",
+      "fr": "Ptéra",
+      "it": "Aerodactyl",
+      "ja": "プテラ",
+      "ko": "프테라",
+      "zh": "化石翼龍"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Aerodactyl",
+      "en": "Hero_Aerodactyl",
+      "es": "Hero_Aerodactyl",
+      "fr": "Hero_Ptéra",
+      "it": "Hero_Aerodactyl",
+      "ja": "Hero_プテラ",
+      "ko": "Hero_프테라",
+      "zh": "Hero_化石翼龍"
+    }
+  },
+  {
+    "monsterBaseId": "20014100",
+    "monsterId": "28000020142",
+    "trainerId": "18000020141",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [71, 107, 140, 272, 300],
+      "atkValues": [17, 31, 43, 98, 110],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [17, 31, 43, 98, 110],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
+    },
+    "moves": {
+      "move1": {
+        "id": 246,
+        "name": {
+          "de": "Antik-Kraft",
+          "en": "Ancient Power",
+          "es": "Poder Pasado",
+          "fr": "Pouvoir Antique",
+          "it": "Forzantica",
+          "ja": "げんしのちから",
+          "ko": "원시의힘",
+          "zh": "原始之力"
+        },
+        "description": {
+          "de": "Erhöht in sehr seltenen\nFällen den Angriff, die\nVerteidigung, den\nSpezial-Angriff, die\nSpezial-Verteidigung und\ndie Initiative des\nAnwenders.",
+          "en": "Has a very small chance of raising the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed.",
+          "es": "Muy rara vez aumenta\nel Ataque, la Defensa,\nel Ataque Especial, la\nDefensa Especial y la\nVelocidad del usuario.",
+          "fr": "Augmente légèrement\nl'Attaque, la Défense,\nl'Attaque Spéciale, la\nDéfense Spéciale et la\nVitesse du lanceur (très\nrarement).",
+          "it": "Molto raramente aumenta\nl'Attacco, la Difesa,\nl'Attacco Speciale,\nla Difesa Speciale e\nla Velocità di chi la usa.",
+          "ja": "すごくまれに自分の攻撃と防御と特攻と特防と素早さをあげる",
+          "ko": "매우 드물게 자신의 공격과 방어와 특수공격과 특수방어와 스피드가 오른다",
+          "zh": "極少數情況下會提高自己的攻擊、防禦、特攻、特防和速度。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 47,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19000,
+        "name": {
+          "de": "Trank",
+          "en": "Potion",
+          "es": "Poción",
+          "fr": "Potion",
+          "it": "Pozione",
+          "ja": "キズぐすり",
+          "ko": "상처약",
+          "zh": "傷藥"
+        },
+        "description": {
+          "de": "Stellt einige KP eines\nGefährten wieder her.",
+          "en": "Restores a bit of an ally’s HP.",
+          "es": "Restaura algunos PS a un\naliado.",
+          "fr": "Rend beaucoup de PV\nà un allié.",
+          "it": "Fa recuperare un po'\ndi PS a un'Unità alleata.",
+          "ja": "味方のＨＰを少し回復する",
+          "ko": "같은 편의 HP를 조금 회복한다",
+          "zh": "少量回復我方的ＨＰ。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 0,
+        "targetType": {
+          "de": "1 Gefährte",
+          "en": "An ally",
+          "es": "Un aliado",
+          "fr": "1 allié",
+          "it": "Un alleato",
+          "ja": "味方１体",
+          "ko": "같은 편 1마리",
+          "zh": "我方１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17104,
+        "name": {
+          "de": "Verlieren wir\nkeine Zeit!",
+          "en": "Strike\nTogether!",
+          "es": "¡Al ataque!",
+          "fr": "Donnons-nous\nà fond !",
+          "it": "Andiamo\nall'attacco!",
+          "ja": "一気にいくよ！",
+          "ko": "단숨에간다!",
+          "zh": "一舉進攻！"
+        },
+        "description": {
+          "de": "Erhöht den Angriff und\ndie Initiative aller\nGefährten im Team.",
+          "en": "Raises the Attack and Speed of all allied sync pairs.",
+          "es": "Aumenta el Ataque y la Velocidad del bando del usuario.",
+          "fr": "Augmente légèrement\nl'Attaque et la Vitesse de\ntous les alliés.",
+          "it": "Aumenta l'Attacco e la Velocità di tutte le Unità alleate.",
+          "ja": "味方のバディーズ全員の攻撃と素早さをあげる",
+          "ko": "같은 편 버디즈 전원의 공격과 스피드가 오른다",
+          "zh": "提高我方全體拍組的攻擊和速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 317,
+        "name": {
+          "de": "Felsgrab",
+          "en": "Rock Tomb",
+          "es": "Tumba Rocas",
+          "fr": "Tomberoche",
+          "it": "Rocciotomba",
+          "ja": "がんせきふうじ",
+          "ko": "암석봉인",
+          "zh": "岩石封鎖"
+        },
+        "description": {
+          "de": "Senkt die Initiative des\nZieles.",
+          "en": "Lowers the target’s Speed.",
+          "es": "Reduce la Velocidad del\nobjetivo.",
+          "fr": "Baisse légèrement la\nVitesse de l'ennemi.",
+          "it": "Riduce la Velocità\ndel bersaglio.",
+          "ja": "相手の素早さをさげる",
+          "ko": "상대의 스피드를 떨어뜨린다",
+          "zh": "降低對手的速度。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 39,
+        "accuracy": 95,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 41300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstrahl",
+          "en": "Rock\nSync Beam",
+          "es": "Compi-Rayo\nRoca",
+          "fr": "Duo-Laser\nRoche",
+          "it": "Raggio Unità Roccia",
+          "ja": "バディーズ\nロックレイ",
+          "ko": "버디즈\n록레이",
+          "zh": "拍組\n岩石光線"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 20010101,
+        "name": {
+          "de": "Sandsturmschutz",
+          "en": "Sand Shelter",
+          "es": "Inmunidad Arena",
+          "fr": "Immunité Sable",
+          "it": "Schivasabbia",
+          "ja": "砂嵐無効",
+          "ko": "모래바람무효",
+          "zh": "沙暴無效"
+        },
+        "description": {
+          "de": "Schützt vor Schaden durch Sandstürme.",
+          "en": "Protects the Pokémon from damage from a sandstorm.",
+          "es": "Impide que el Pokémon sufra daño por tormentas\nde arena.",
+          "fr": "Protège des dégâts infligés par les tempêtes\nde sable.",
+          "it": "Rende immuni ai danni da tempesta di sabbia.",
+          "ja": "すなあらしによるダメージを受けない",
+          "ko": "모래바람에 의한 데미지를 입지 않는다",
+          "zh": "不會受到沙暴所造成的傷害。"
+        }
+      },
+      "passive2": {
+        "id": 11010102,
+        "name": {
+          "de": "Notfallheilung 2",
+          "en": "First Aid 2",
+          "es": "Remedio +2",
+          "fr": "Premiers Soins 2",
+          "it": "Cerottino 2",
+          "ja": "ピンチ時ＨＰ回復２",
+          "ko": "위기시HP회복2",
+          "zh": "危機時ＨＰ回復２"
+        },
+        "description": {
+          "de": "Stellt ein Mal pro Kampf in einer Notsituation\neinige KP wieder her.",
+          "en": "Restores a bit of the Pokémon’s HP once during battle when the Pokémon is in a pinch.",
+          "es": "Una vez por combate, el Pokémon recupera\nalgunos PS en un apuro.",
+          "fr": "Une fois par combat, le Pokémon regagne\nbeaucoup de PV s'il est en mauvaise posture.",
+          "it": "Una volta sola per lotta, fa recuperare\nun po' di PS quando l'Unità è in difficoltà.",
+          "ja": "バトル中に１回だけ\nピンチのときに自分のＨＰを少し回復する",
+          "ko": "배틀 중 1번만 위급할 때 자신의 HP를 조금 회복한다",
+          "zh": "對戰中僅限１次，在陷入危機時會少量回復自己的ＨＰ。"
+        }
+      },
+      "passive3": {
+        "id": 12020401,
+        "name": {
+          "de": "Gegentreffer-Leiste↑ 1",
+          "en": "Revenge Boost 1",
+          "es": "Daño Llenabarras +1",
+          "fr": "Réflexe Jauge ↑ 1",
+          "it": "Reazione riempibarra 1",
+          "ja": "被攻撃時わざゲージ↑１",
+          "ko": "피격시기술게이지↑1",
+          "zh": "被攻擊時招式計量槽↑１"
+        },
+        "description": {
+          "de": "Füllt in seltenen Fällen die Attackenleiste des\nPokémon um 1 Segment auf, wenn es von einer\nAttacke getroffen wird.",
+          "en": "Has a small chance of charging the user’s move gauge by one when the user is hit by an attack move.",
+          "es": "Rara vez llena 1 punto de la barra de\nmovimientos del usuario si es atacado.",
+          "fr": "Quand le Duo subit une attaque, restaure un\nsegment de la Jauge Capacité (rarement).",
+          "it": "Quando l'Unità subisce un attacco semplice,\nraramente viene aggiunta una barretta\nalla sua barra mosse.",
+          "ja": "技で攻撃を受けたときにまれに\n自分のわざゲージを１増やす",
+          "ko": "기술로 공격받았을 때 드물게\n자신의 기술게이지를 1 추가한다",
+          "zh": "受到招式攻擊時，少數情況下會\n幫自己增加１條招式計量槽。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 5,
+    "rarity": 1,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Kabutops",
+      "en": "Kabutops",
+      "es": "Kabutops",
+      "fr": "Kabutops",
+      "it": "Kabutops",
+      "ja": "カブトプス",
+      "ko": "투구푸스",
+      "zh": "鐮刀盔"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Kabutops",
+      "en": "Hero_Kabutops",
+      "es": "Hero_Kabutops",
+      "fr": "Hero_Kabutops",
+      "it": "Hero_Kabutops",
+      "ja": "Hero_カブトプス",
+      "ko": "Hero_투구푸스",
+      "zh": "Hero_鐮刀盔"
+    }
+  },
+  {
+    "monsterBaseId": "20009501",
+    "monsterId": "28000020151",
+    "trainerId": "18000020151",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [56, 93, 129, 272, 300],
+      "atkValues": [13, 28, 43, 98, 110],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [13, 28, 43, 98, 110],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
+    },
+    "moves": {
+      "move1": {
+        "id": 88,
+        "name": {
+          "de": "Steinwurf",
+          "en": "Rock Throw",
+          "es": "Lanzarrocas",
+          "fr": "Jet-Pierres",
+          "it": "Sassata",
+          "ja": "いわおとし",
+          "ko": "돌떨구기",
+          "zh": "落石"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 23,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19020,
+        "name": {
+          "de": "X-Abwehr",
+          "en": "X Defense",
+          "es": "Defensa X",
+          "fr": "Défense +",
+          "it": "Difesa X",
+          "ja": "ディフェンダー",
+          "ko": "디펜드업",
+          "zh": "防禦強化"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\ndes Anwenders stark.",
+          "en": "Sharply raises the user’s Defense.",
+          "es": "Aumenta bastante la\nDefensa del usuario.",
+          "fr": "Augmente modérément\nla Défense du lanceur.",
+          "it": "Aumenta di molto\nla Difesa di chi la usa.",
+          "ja": "自分の防御をぐーんとあげる",
+          "ko": "자신의 방어가 크게 오른다",
+          "zh": "大幅提高自己的防禦。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17105,
+        "name": {
+          "de": "Haltet durch,\nFreunde!",
+          "en": "Stand\nTogether!",
+          "es": "¡Aguantemos!",
+          "fr": "Tenons bon,\nles amis !",
+          "it": "Resistiamo\ntutti insieme!",
+          "ja": "みんな堪えて！",
+          "ko": "다들버텨줘!",
+          "zh": "大家撐住！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\nund die Initiative aller\nGefährten im Team.",
+          "en": "Raises the Defense and Speed of all allied sync pairs.",
+          "es": "Aumenta la Defensa y la Velocidad del bando del usuario.",
+          "fr": "Augmente légèrement\nla Défense et la Vitesse\nde tous les alliés.",
+          "it": "Aumenta la Difesa e la Velocità di tutte le Unità alleate.",
+          "ja": "味方のバディーズ全員の防御と素早さをあげる",
+          "ko": "같은 편 버디즈 전원의 방어와 스피드가 오른다",
+          "zh": "提高我方全體拍組的防禦和速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 317,
+        "name": {
+          "de": "Felsgrab",
+          "en": "Rock Tomb",
+          "es": "Tumba Rocas",
+          "fr": "Tomberoche",
+          "it": "Rocciotomba",
+          "ja": "がんせきふうじ",
+          "ko": "암석봉인",
+          "zh": "岩石封鎖"
+        },
+        "description": {
+          "de": "Senkt die Initiative des\nZieles.",
+          "en": "Lowers the target’s Speed.",
+          "es": "Reduce la Velocidad del\nobjetivo.",
+          "fr": "Baisse légèrement la\nVitesse de l'ennemi.",
+          "it": "Riduce la Velocità\ndel bersaglio.",
+          "ja": "相手の素早さをさげる",
+          "ko": "상대의 스피드를 떨어뜨린다",
+          "zh": "降低對手的速度。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 39,
+        "accuracy": 95,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 21010101,
+        "name": {
+          "de": "Volltrefferschutz",
+          "en": "Vigilance",
+          "es": "Inmunidad Golpes Críticos",
+          "fr": "Immunité Critique",
+          "it": "Barriercolpo",
+          "ja": "急所無効",
+          "ko": "급소무효",
+          "zh": "擊中要害無效"
+        },
+        "description": {
+          "de": "Schützt vor gegnerischen Volltreffern.",
+          "en": "The Pokémon is protected against critical hits.",
+          "es": "Impide que el Pokémon reciba golpes críticos.",
+          "fr": "Protège des coups critiques.",
+          "it": "Gli attacchi delle Unità avversarie\nnon sono mai brutti colpi.",
+          "ja": "相手の攻撃が急所に当たらない",
+          "ko": "상대의 공격이 급소에 맞지 않는다",
+          "zh": "對手的攻擊不會擊中要害。"
+        }
+      },
+      "passive2": {
+        "id": 17030501,
+        "name": {
+          "de": "Problemaufhebung",
+          "en": "Natural Remedy",
+          "es": "Curaproblemas",
+          "fr": "Réaction Traitement",
+          "it": "Panacea",
+          "ja": "異常解除",
+          "ko": "상태이상해제",
+          "zh": "解除異常狀態"
+        },
+        "description": {
+          "de": "Befreit das Pokémon ein Mal pro Kampf von\nallen Statusproblemen, wenn es von einem\nStatusproblem betroffen wird.",
+          "en": "Once per battle, removes all status conditions from the user when the user is inflicted by any status condition.",
+          "es": "Una vez por combate, cura todos los problemas\nde estado del Pokémon al sufrir este uno.",
+          "fr": "Une fois par combat, soigne toutes les altérations\nde statut dont souffre le Pokémon.",
+          "it": "Una volta sola per lotta, l'Unità guarisce\ndai problemi di stato.",
+          "ja": "バトル中に１回だけ自分が状態異常になったときに\n自分の状態異常を解除する",
+          "ko": "배틀 중 1번만 자신이 상태 이상이 되었을 때\n자신의 상태 이상을 해제한다",
+          "zh": "對戰中僅限１次，當自己陷入異常狀態時\n會解除自己的異常狀態。"
+        }
+      },
+      "passive3": {
+        "id": 17030301,
+        "name": {
+          "de": "Störungsaufhebung",
+          "en": "Quick Cure",
+          "es": "Antisabotaje",
+          "fr": "Tourment Restaur.",
+          "it": "Toglimpaccio",
+          "ja": "妨害解除",
+          "ko": "방해해제",
+          "zh": "解除妨害"
+        },
+        "description": {
+          "de": "Befreit das Pokémon ein Mal pro Kampf von\nZurückschrecken, Verwirrung oder Umschlingung.",
+          "en": "Removes the confused, flinching, and trapped conditions from the user once during battle.",
+          "es": "Una vez por combate, el Pokémon se cura de\nretroceso, confusión o ataduras.",
+          "fr": "Une fois par combat, soigne le Pokémon de la\npeur, de la confusion ou du ligotage.",
+          "it": "Una volta sola per lotta, l'Unità guarisce\ndalla confusione, dal tentennamento\no dall'imprigionamento.",
+          "ja": "バトル中に１回だけ自分がひるみ状態やこんらん状態や\nバインド状態になったときにその状態を解除する",
+          "ko": "배틀 중 1번만 자신이 풀죽음 상태나 혼란 상태,\n바인드 상태가 되었을 때 그 상태를 해제한다",
+          "zh": "對戰中僅限１次，當自己陷入\n畏縮、混亂或束縛狀態時會解除該狀態。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 3,
+    "rarity": 1,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Onix",
+      "en": "Onix",
+      "es": "Onix",
+      "fr": "Onix",
+      "it": "Onix",
+      "ja": "イワーク",
+      "ko": "롱스톤",
+      "zh": "大岩蛇"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Onix",
+      "en": "Hero_Onix",
+      "es": "Hero_Onix",
+      "fr": "Hero_Onix",
+      "it": "Hero_Onix",
+      "ja": "Hero_イワーク",
+      "ko": "Hero_롱스톤",
+      "zh": "Hero_大岩蛇"
+    }
+  },
+  {
+    "monsterBaseId": "20007601",
+    "monsterId": "28000020163",
+    "trainerId": "18000020161",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [73, 107, 140, 272, 300],
+      "atkValues": [18, 32, 44, 99, 111],
+      "defValues": [9, 17, 23, 56, 60],
+      "spaValues": [18, 32, 44, 99, 111],
+      "spdValues": [9, 17, 23, 56, 60],
+      "speValues": [10, 20, 29, 62, 70]
+    },
+    "moves": {
+      "move1": {
+        "id": 88,
+        "name": {
+          "de": "Steinwurf",
+          "en": "Rock Throw",
+          "es": "Lanzarrocas",
+          "fr": "Jet-Pierres",
+          "it": "Sassata",
+          "ja": "いわおとし",
+          "ko": "돌떨구기",
+          "zh": "落石"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 23,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19020,
+        "name": {
+          "de": "X-Abwehr",
+          "en": "X Defense",
+          "es": "Defensa X",
+          "fr": "Défense +",
+          "it": "Difesa X",
+          "ja": "ディフェンダー",
+          "ko": "디펜드업",
+          "zh": "防禦強化"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\ndes Anwenders stark.",
+          "en": "Sharply raises the user’s Defense.",
+          "es": "Aumenta bastante la\nDefensa del usuario.",
+          "fr": "Augmente modérément\nla Défense du lanceur.",
+          "it": "Aumenta di molto\nla Difesa di chi la usa.",
+          "ja": "自分の防御をぐーんとあげる",
+          "ko": "자신의 방어가 크게 오른다",
+          "zh": "大幅提高自己的防禦。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17105,
+        "name": {
+          "de": "Haltet durch,\nFreunde!",
+          "en": "Stand\nTogether!",
+          "es": "¡Aguantemos!",
+          "fr": "Tenons bon,\nles amis !",
+          "it": "Resistiamo\ntutti insieme!",
+          "ja": "みんな堪えて！",
+          "ko": "다들버텨줘!",
+          "zh": "大家撐住！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\nund die Initiative aller\nGefährten im Team.",
+          "en": "Raises the Defense and Speed of all allied sync pairs.",
+          "es": "Aumenta la Defensa y la Velocidad del bando del usuario.",
+          "fr": "Augmente légèrement\nla Défense et la Vitesse\nde tous les alliés.",
+          "it": "Aumenta la Difesa e la Velocità di tutte le Unità alleate.",
+          "ja": "味方のバディーズ全員の防御と素早さをあげる",
+          "ko": "같은 편 버디즈 전원의 방어와 스피드가 오른다",
+          "zh": "提高我方全體拍組的防禦和速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 246,
+        "name": {
+          "de": "Antik-Kraft",
+          "en": "Ancient Power",
+          "es": "Poder Pasado",
+          "fr": "Pouvoir Antique",
+          "it": "Forzantica",
+          "ja": "げんしのちから",
+          "ko": "원시의힘",
+          "zh": "原始之力"
+        },
+        "description": {
+          "de": "Erhöht in sehr seltenen\nFällen den Angriff, die\nVerteidigung, den\nSpezial-Angriff, die\nSpezial-Verteidigung und\ndie Initiative des\nAnwenders.",
+          "en": "Has a very small chance of raising the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed.",
+          "es": "Muy rara vez aumenta\nel Ataque, la Defensa,\nel Ataque Especial, la\nDefensa Especial y la\nVelocidad del usuario.",
+          "fr": "Augmente légèrement\nl'Attaque, la Défense,\nl'Attaque Spéciale, la\nDéfense Spéciale et la\nVitesse du lanceur (très\nrarement).",
+          "it": "Molto raramente aumenta\nl'Attacco, la Difesa,\nl'Attacco Speciale,\nla Difesa Speciale e\nla Velocità di chi la usa.",
+          "ja": "すごくまれに自分の攻撃と防御と特攻と特防と素早さをあげる",
+          "ko": "매우 드물게 자신의 공격과 방어와 특수공격과 특수방어와 스피드가 오른다",
+          "zh": "極少數情況下會提高自己的攻擊、防禦、特攻、特防和速度。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 47,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18020201,
+        "name": {
+          "de": "Vert.↓-Schutz",
+          "en": "Unbending",
+          "es": "Inmunidad Defensa ↓",
+          "fr": "Immunité ↓Défense",
+          "it": "Resilienza",
+          "ja": "防御ダウン無効",
+          "ko": "방어다운무효",
+          "zh": "防禦下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Verteidigung.",
+          "en": "Defense cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nDefensa.",
+          "fr": "Protège des baisses de Défense.",
+          "it": "Rende immuni alle riduzioni della Difesa.",
+          "ja": "防御がさがらない",
+          "ko": "방어가 떨어지지 않는다",
+          "zh": "防禦不會降低。"
+        }
+      },
+      "passive2": {
+        "id": 18020401,
+        "name": {
+          "de": "Sp.-Vert.↓-Schutz",
+          "en": "Stalwart",
+          "es": "Inmunidad Defensa Esp. ↓",
+          "fr": "Immunité ↓Déf. Spé.",
+          "it": "Ostinazione",
+          "ja": "特防ダウン無効",
+          "ko": "특수방어다운무효",
+          "zh": "特防下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Spezial-\nVerteidigung.",
+          "en": "Sp. Def cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nDefensa Especial.",
+          "fr": "Protège des baisses de Défense Spéciale.",
+          "it": "Rende immuni alle riduzioni\ndella Difesa Speciale.",
+          "ja": "特防がさがらない",
+          "ko": "특수방어가 떨어지지 않는다",
+          "zh": "特防不會降低。"
+        }
+      },
+      "passive3": {
+        "id": 12020401,
+        "name": {
+          "de": "Gegentreffer-Leiste↑ 1",
+          "en": "Revenge Boost 1",
+          "es": "Daño Llenabarras +1",
+          "fr": "Réflexe Jauge ↑ 1",
+          "it": "Reazione riempibarra 1",
+          "ja": "被攻撃時わざゲージ↑１",
+          "ko": "피격시기술게이지↑1",
+          "zh": "被攻擊時招式計量槽↑１"
+        },
+        "description": {
+          "de": "Füllt in seltenen Fällen die Attackenleiste des\nPokémon um 1 Segment auf, wenn es von einer\nAttacke getroffen wird.",
+          "en": "Has a small chance of charging the user’s move gauge by one when the user is hit by an attack move.",
+          "es": "Rara vez llena 1 punto de la barra de\nmovimientos del usuario si es atacado.",
+          "fr": "Quand le Duo subit une attaque, restaure un\nsegment de la Jauge Capacité (rarement).",
+          "it": "Quando l'Unità subisce un attacco semplice,\nraramente viene aggiunta una barretta\nalla sua barra mosse.",
+          "ja": "技で攻撃を受けたときにまれに\n自分のわざゲージを１増やす",
+          "ko": "기술로 공격받았을 때 드물게\n자신의 기술게이지를 1 추가한다",
+          "zh": "受到招式攻擊時，少數情況下會\n幫自己增加１條招式計量槽。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 9,
+    "rarity": 1,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Geowaz",
+      "en": "Golem",
+      "es": "Golem",
+      "fr": "Grolem",
+      "it": "Golem",
+      "ja": "ゴローニャ",
+      "ko": "딱구리",
+      "zh": "隆隆岩"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Geowaz",
+      "en": "Hero_Golem",
+      "es": "Hero_Golem",
+      "fr": "Hero_Grolem",
+      "it": "Hero_Golem",
+      "ja": "Hero_ゴローニャ",
+      "ko": "Hero_딱구리",
+      "zh": "Hero_隆隆岩"
+    }
+  },
+  {
     "monsterBaseId": "20012300",
     "monsterId": "28000030011",
     "trainerId": "18000030011",
@@ -3279,7 +4547,7 @@
           "zh": "有機可乘！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung,\ndie Spezial-Verteidigung\nund die Volltrefferquote\ndes Anwenders.",
+          "de": "Erhöht die Verteidigung, die Spezial-Verteidigung und die Volltrefferquote des Anwenders.",
           "en": "Raises the user’s Defense, Sp. Def, and critical-hit rate.",
           "es": "Aumenta la Defensa, la Defensa Especial y la probabilidad de asestar golpes críticos del usuario.",
           "fr": "Augmente légèrement\nla Défense, la Défense\nSpéciale et le taux de\ncritiques du lanceur.",
@@ -3596,7 +4864,7 @@
           "zh": "忍耐到底！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
           "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
           "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
           "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
@@ -3913,7 +5181,7 @@
           "zh": "忍耐到底！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
           "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
           "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
           "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
@@ -4230,7 +5498,7 @@
           "zh": "有機可乘！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung,\ndie Spezial-Verteidigung\nund die Volltrefferquote\ndes Anwenders.",
+          "de": "Erhöht die Verteidigung, die Spezial-Verteidigung und die Volltrefferquote des Anwenders.",
           "en": "Raises the user’s Defense, Sp. Def, and critical-hit rate.",
           "es": "Aumenta la Defensa, la Defensa Especial y la probabilidad de asestar golpes críticos del usuario.",
           "fr": "Augmente légèrement\nla Défense, la Défense\nSpéciale et le taux de\ncritiques du lanceur.",
@@ -4547,7 +5815,7 @@
           "zh": "有機可乘！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung,\ndie Spezial-Verteidigung\nund die Volltrefferquote\ndes Anwenders.",
+          "de": "Erhöht die Verteidigung, die Spezial-Verteidigung und die Volltrefferquote des Anwenders.",
           "en": "Raises the user’s Defense, Sp. Def, and critical-hit rate.",
           "es": "Aumenta la Defensa, la Defensa Especial y la probabilidad de asestar golpes críticos del usuario.",
           "fr": "Augmente légèrement\nla Défense, la Défense\nSpéciale et le taux de\ncritiques du lanceur.",
@@ -4864,7 +6132,7 @@
           "zh": "有機可乘！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung,\ndie Spezial-Verteidigung\nund die Volltrefferquote\ndes Anwenders.",
+          "de": "Erhöht die Verteidigung, die Spezial-Verteidigung und die Volltrefferquote des Anwenders.",
           "en": "Raises the user’s Defense, Sp. Def, and critical-hit rate.",
           "es": "Aumenta la Defensa, la Defensa Especial y la probabilidad de asestar golpes críticos del usuario.",
           "fr": "Augmente légèrement\nla Défense, la Défense\nSpéciale et le taux de\ncritiques du lanceur.",
@@ -5181,7 +6449,7 @@
           "zh": "忍耐到底！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
           "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
           "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
           "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
@@ -5815,7 +7083,7 @@
           "zh": "忍耐到底！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
           "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
           "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
           "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
@@ -6132,7 +7400,7 @@
           "zh": "有機可乘！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung,\ndie Spezial-Verteidigung\nund die Volltrefferquote\ndes Anwenders.",
+          "de": "Erhöht die Verteidigung, die Spezial-Verteidigung und die Volltrefferquote des Anwenders.",
           "en": "Raises the user’s Defense, Sp. Def, and critical-hit rate.",
           "es": "Aumenta la Defensa, la Defensa Especial y la probabilidad de asestar golpes críticos del usuario.",
           "fr": "Augmente légèrement\nla Défense, la Défense\nSpéciale et le taux de\ncritiques du lanceur.",
@@ -6337,6 +7605,1274 @@
       "ja": "Hero_ニドクイン",
       "ko": "Hero_니드퀸",
       "zh": "Hero_尼多后"
+    }
+  },
+  {
+    "monsterBaseId": "20014200",
+    "monsterId": "28000030131",
+    "trainerId": "18000030131",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [54, 107, 158, 356, 400],
+      "atkValues": [12, 26, 38, 82, 90],
+      "defValues": [6, 11, 14, 36, 40],
+      "spaValues": [12, 26, 38, 82, 90],
+      "spdValues": [6, 11, 14, 36, 40],
+      "speValues": [12, 45, 75, 196, 220]
+    },
+    "moves": {
+      "move1": {
+        "id": 479,
+        "name": {
+          "de": "Katapult",
+          "en": "Smack Down",
+          "es": "Antiaéreo",
+          "fr": "Anti-Air",
+          "it": "Abbattimento",
+          "ja": "うちおとす",
+          "ko": "떨어뜨리기",
+          "zh": "擊落"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 20,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19050,
+        "name": {
+          "de": "X-Tempo",
+          "en": "X Speed",
+          "es": "Velocidad X",
+          "fr": "Vitesse +",
+          "it": "Velocità X",
+          "ja": "スピーダー",
+          "ko": "스피드업",
+          "zh": "速度強化"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Speed.",
+          "es": "Aumenta bastante la\nVelocidad del usuario.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.",
+          "it": "Aumenta di molto\nla Velocità di chi la usa.",
+          "ja": "自分の素早さをぐーんとあげる",
+          "ko": "자신의 스피드가 크게 오른다",
+          "zh": "大幅提高自己的速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17101,
+        "name": {
+          "de": "Das ist die\nGelegenheit!",
+          "en": "Keep it Up!",
+          "es": "¡Con ímpetu!",
+          "fr": "Fonçons !",
+          "it": "Sull'onda\ndell'entusiasmo!",
+          "ja": "勢いにのって！",
+          "ko": "기세를몰아서!",
+          "zh": "趁勢追擊！"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "en": "Sharply raises the user’s Speed. Makes the user gradually heal itself.",
+          "es": "Aumenta bastante la Velocidad del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta di molto la Velocità di chi la usa e gli fa recuperare PS costantemente.",
+          "ja": "自分の素早さをぐーんとあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 스피드가 크게 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "大幅提高自己的速度。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 157,
+        "name": {
+          "de": "Steinhagel",
+          "en": "Rock Slide",
+          "es": "Avalancha",
+          "fr": "Éboulement",
+          "it": "Frana",
+          "ja": "いわなだれ",
+          "ko": "스톤샤워",
+          "zh": "岩崩"
+        },
+        "description": {
+          "de": "Lässt das Ziel eventuell\nzurückschrecken.",
+          "en": "Has a moderate chance of making the target flinch.",
+          "es": "A veces hace retroceder\nal objetivo.",
+          "fr": "Apeure l'ennemi\n(assez rarement).",
+          "it": "A volte fa tentennare\nil bersaglio.",
+          "ja": "たまに相手をひるみ状態にする",
+          "ko": "가끔 상대를 풀죽음 상태로 만든다",
+          "zh": "偶爾會讓對手陷入畏縮狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 3,
+        "targetType": {
+          "de": "Alle Gegner",
+          "en": "All opponents",
+          "es": "Todos los rivales",
+          "fr": "Tous les ennemis",
+          "it": "Tutti i nemici",
+          "ja": "相手全員",
+          "ko": "상대 전원",
+          "zh": "對手全體拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 105,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18020101,
+        "name": {
+          "de": "Angriff↓-Schutz",
+          "en": "Headstrong",
+          "es": "Inmunidad Ataque ↓",
+          "fr": "Immunité ↓Attaque",
+          "it": "Fermezza",
+          "ja": "攻撃ダウン無効",
+          "ko": "공격다운무효",
+          "zh": "攻擊下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung des Angriffs.",
+          "en": "Attack cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en el\nAtaque.",
+          "fr": "Protège des baisses d'Attaque.",
+          "it": "Rende immuni alle riduzioni dell'Attacco.",
+          "ja": "攻撃がさがらない",
+          "ko": "공격이 떨어지지 않는다",
+          "zh": "攻擊不會降低。"
+        }
+      },
+      "passive2": {
+        "id": 12020302,
+        "name": {
+          "de": "Notfall-Leiste↑ 2",
+          "en": "Stamina Reserves 2",
+          "es": "Llenabarras en Apuro +2",
+          "fr": "Désespoir Jauge ↑ 2",
+          "it": "Emercarica 2",
+          "ja": "ピンチ時わざゲージ↑２",
+          "ko": "위기시기술게이지↑2",
+          "zh": "危機時招式計量槽增加２"
+        },
+        "description": {
+          "de": "Füllt ein Mal pro Kampf in einer Notsituation die\nAttackenleiste um 2  Segmente auf.",
+          "en": "Once per battle, charges the user’s move gauge by two when the user is in a pinch.",
+          "es": "Una vez por combate, llena 2 puntos de la barra\nde movimientos del usuario en un apuro.",
+          "fr": "Une fois par combat, restaure 2 segments de la\nJauge Capacité si le Pokémon est en mauvaise\nposture.",
+          "it": "Una volta sola per lotta, aggiunge due barrette\nalla barra mosse dell'Unità quando questa è\nin difficoltà.",
+          "ja": "バトル中に１回だけピンチのときに\n自分のわざゲージを２増やす",
+          "ko": "배틀 중 1번만 위급할 때\n자신의 기술게이지를 2 추가한다",
+          "zh": "對戰中僅限１次，在陷入危機時\n會幫自己增加２條招式計量槽。"
+        }
+      },
+      "passive3": {
+        "id": 22010201,
+        "name": {
+          "de": "Störungschance↑ 1",
+          "en": "Aggravation 1",
+          "es": "Incordio +1",
+          "fr": "Tourmenteur 1",
+          "it": "Tormento 1",
+          "ja": "妨害確率上昇１",
+          "ko": "방해확률상승1",
+          "zh": "妨害機率提升１"
+        },
+        "description": {
+          "de": "Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte\nvon Attacken Zurückschrecken, Verwirrung oder\nUmschlingung auslösen.",
+          "en": "Raises the chance of inflicting the flinching, confused, or trapped condition with the additional effects of moves.",
+          "es": "Aumenta la probabilidad de hacer que el rival\nretroceda, se confunda o sufra ataduras como\nefecto secundario de los movimientos usados.",
+          "fr": "Augmente les chances d'apeurer l'ennemi,\nde le rendre confus, ou de le ligoter.",
+          "it": "Aumenta la probabilità di causare tentennamento,\nconfusione o imprigionamento come eventuale\neffetto aggiuntivo delle mosse.",
+          "ja": "技の追加効果でひるみ状態やこんらん状態や\nバインド状態にするときの成功率をあげる",
+          "ko": "기술의 추가 효과로 풀죽음 상태나 혼란 상태, 바인드 상태로 만들 확률이 오른다",
+          "zh": "當招式的追加效果可使對手陷入畏縮、混亂或束縛狀態時，會提高該追加效果的成功率。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 4,
+    "rarity": 1,
+    "role": 3,
+    "pokemonNameByLanguage": {
+      "de": "Aerodactyl",
+      "en": "Aerodactyl",
+      "es": "Aerodactyl",
+      "fr": "Ptéra",
+      "it": "Aerodactyl",
+      "ja": "プテラ",
+      "ko": "프테라",
+      "zh": "化石翼龍"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Aerodactyl",
+      "en": "Hero_Aerodactyl",
+      "es": "Hero_Aerodactyl",
+      "fr": "Hero_Ptéra",
+      "it": "Hero_Aerodactyl",
+      "ja": "Hero_プテラ",
+      "ko": "Hero_프테라",
+      "zh": "Hero_化石翼龍"
+    }
+  },
+  {
+    "monsterBaseId": "20014100",
+    "monsterId": "28000030142",
+    "trainerId": "18000030141",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [62, 114, 162, 360, 400],
+      "atkValues": [12, 26, 38, 82, 90],
+      "defValues": [6, 11, 14, 36, 40],
+      "spaValues": [12, 26, 38, 82, 90],
+      "spdValues": [6, 11, 14, 36, 40],
+      "speValues": [14, 45, 75, 196, 220]
+    },
+    "moves": {
+      "move1": {
+        "id": 246,
+        "name": {
+          "de": "Antik-Kraft",
+          "en": "Ancient Power",
+          "es": "Poder Pasado",
+          "fr": "Pouvoir Antique",
+          "it": "Forzantica",
+          "ja": "げんしのちから",
+          "ko": "원시의힘",
+          "zh": "原始之力"
+        },
+        "description": {
+          "de": "Erhöht in sehr seltenen\nFällen den Angriff, die\nVerteidigung, den\nSpezial-Angriff, die\nSpezial-Verteidigung und\ndie Initiative des\nAnwenders.",
+          "en": "Has a very small chance of raising the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed.",
+          "es": "Muy rara vez aumenta\nel Ataque, la Defensa,\nel Ataque Especial, la\nDefensa Especial y la\nVelocidad del usuario.",
+          "fr": "Augmente légèrement\nl'Attaque, la Défense,\nl'Attaque Spéciale, la\nDéfense Spéciale et la\nVitesse du lanceur (très\nrarement).",
+          "it": "Molto raramente aumenta\nl'Attacco, la Difesa,\nl'Attacco Speciale,\nla Difesa Speciale e\nla Velocità di chi la usa.",
+          "ja": "すごくまれに自分の攻撃と防御と特攻と特防と素早さをあげる",
+          "ko": "매우 드물게 자신의 공격과 방어와 특수공격과 특수방어와 스피드가 오른다",
+          "zh": "極少數情況下會提高自己的攻擊、防禦、特攻、特防和速度。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 47,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 201,
+        "name": {
+          "de": "Sandsturm",
+          "en": "Sandstorm",
+          "es": "Tormenta Arena",
+          "fr": "Tempête de Sable",
+          "it": "Terrempesta",
+          "ja": "すなあらし",
+          "ko": "모래바람",
+          "zh": "沙暴"
+        },
+        "description": {
+          "de": "Erzeugt einen Sandsturm.",
+          "en": "Causes a sandstorm.",
+          "es": "Desata una tormenta de\narena.",
+          "fr": "Provoque une tempête\nde sable.",
+          "it": "Causa una tempesta\ndi sabbia.",
+          "ja": "天気をすなあらしにする",
+          "ko": "날씨를 모래바람으로 만든다",
+          "zh": "會將天氣變成沙暴。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 13,
+        "target": 9,
+        "targetType": {
+          "de": "Alle Seiten",
+          "en": "Entire field",
+          "es": "Ambos bandos",
+          "fr": "Tous les côtés",
+          "it": "Campo all./nem.",
+          "ja": "全体の場",
+          "ko": "전원의 필드",
+          "zh": "全場地"
+        },
+        "gaugeDrain": 2,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17103,
+        "name": {
+          "de": "Wir überstehen\ndas!",
+          "en": "Hang in\nThere!",
+          "es": "¡No me rendiré!",
+          "fr": "Tenons\nle choc !",
+          "it": "Stringiamo\ni denti!",
+          "ja": "耐えていこう！",
+          "ko": "버티자!",
+          "zh": "忍耐到底！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
+          "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
+          "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta la Difesa e la Difesa Speciale di chi la usa. Inoltre, gli fa recuperare PS costantemente.",
+          "ja": "自分の防御と特防をあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 방어와 특수방어가 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "提高自己的防禦和特防。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 317,
+        "name": {
+          "de": "Felsgrab",
+          "en": "Rock Tomb",
+          "es": "Tumba Rocas",
+          "fr": "Tomberoche",
+          "it": "Rocciotomba",
+          "ja": "がんせきふうじ",
+          "ko": "암석봉인",
+          "zh": "岩石封鎖"
+        },
+        "description": {
+          "de": "Senkt die Initiative des\nZieles.",
+          "en": "Lowers the target’s Speed.",
+          "es": "Reduce la Velocidad del\nobjetivo.",
+          "fr": "Baisse légèrement la\nVitesse de l'ennemi.",
+          "it": "Riduce la Velocità\ndel bersaglio.",
+          "ja": "相手の素早さをさげる",
+          "ko": "상대의 스피드를 떨어뜨린다",
+          "zh": "降低對手的速度。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 39,
+        "accuracy": 95,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 41300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstrahl",
+          "en": "Rock\nSync Beam",
+          "es": "Compi-Rayo\nRoca",
+          "fr": "Duo-Laser\nRoche",
+          "it": "Raggio Unità Roccia",
+          "ja": "バディーズ\nロックレイ",
+          "ko": "버디즈\n록레이",
+          "zh": "拍組\n岩石光線"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 20010101,
+        "name": {
+          "de": "Sandsturmschutz",
+          "en": "Sand Shelter",
+          "es": "Inmunidad Arena",
+          "fr": "Immunité Sable",
+          "it": "Schivasabbia",
+          "ja": "砂嵐無効",
+          "ko": "모래바람무효",
+          "zh": "沙暴無效"
+        },
+        "description": {
+          "de": "Schützt vor Schaden durch Sandstürme.",
+          "en": "Protects the Pokémon from damage from a sandstorm.",
+          "es": "Impide que el Pokémon sufra daño por tormentas\nde arena.",
+          "fr": "Protège des dégâts infligés par les tempêtes\nde sable.",
+          "it": "Rende immuni ai danni da tempesta di sabbia.",
+          "ja": "すなあらしによるダメージを受けない",
+          "ko": "모래바람에 의한 데미지를 입지 않는다",
+          "zh": "不會受到沙暴所造成的傷害。"
+        }
+      },
+      "passive2": {
+        "id": 12020302,
+        "name": {
+          "de": "Notfall-Leiste↑ 2",
+          "en": "Stamina Reserves 2",
+          "es": "Llenabarras en Apuro +2",
+          "fr": "Désespoir Jauge ↑ 2",
+          "it": "Emercarica 2",
+          "ja": "ピンチ時わざゲージ↑２",
+          "ko": "위기시기술게이지↑2",
+          "zh": "危機時招式計量槽增加２"
+        },
+        "description": {
+          "de": "Füllt ein Mal pro Kampf in einer Notsituation die\nAttackenleiste um 2  Segmente auf.",
+          "en": "Once per battle, charges the user’s move gauge by two when the user is in a pinch.",
+          "es": "Una vez por combate, llena 2 puntos de la barra\nde movimientos del usuario en un apuro.",
+          "fr": "Une fois par combat, restaure 2 segments de la\nJauge Capacité si le Pokémon est en mauvaise\nposture.",
+          "it": "Una volta sola per lotta, aggiunge due barrette\nalla barra mosse dell'Unità quando questa è\nin difficoltà.",
+          "ja": "バトル中に１回だけピンチのときに\n自分のわざゲージを２増やす",
+          "ko": "배틀 중 1번만 위급할 때\n자신의 기술게이지를 2 추가한다",
+          "zh": "對戰中僅限１次，在陷入危機時\n會幫自己增加２條招式計量槽。"
+        }
+      },
+      "passive3": {
+        "id": 12010401,
+        "name": {
+          "de": "Sandsturm-Leiste↑ 1",
+          "en": "Sands of Time 1",
+          "es": "Velocidad Arena +1",
+          "fr": "Turbo Sable 1",
+          "it": "Colmasabbia 1",
+          "ja": "砂嵐時わざゲージ加速１",
+          "ko": "모래바람시기술게이지가속1",
+          "zh": "沙暴時招式計量槽加速１"
+        },
+        "description": {
+          "de": "Beschleunigt bei Sandstürmen das Auffüllen der\nAttackenleiste.",
+          "en": "Quickly charges the move gauge in a sandstorm.",
+          "es": "Aumenta la velocidad a la que se llena la barra\nde movimientos cuando hay una tormenta de\narena.",
+          "fr": "En cas de tempête de sable, la Jauge Capacité\ndu Duo se remplit plus vite.",
+          "it": "Durante le tempeste di sabbia, la barra mosse\nsi riempie più velocemente.",
+          "ja": "天気がすなあらしの場合は\nわざゲージが早くたまるようになる",
+          "ko": "날씨가 모래바람일 때\n기술게이지가 빨리 채워진다",
+          "zh": "當天氣為沙暴時，\n招式計量槽會累積得較快。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 5,
+    "rarity": 1,
+    "role": 3,
+    "pokemonNameByLanguage": {
+      "de": "Kabutops",
+      "en": "Kabutops",
+      "es": "Kabutops",
+      "fr": "Kabutops",
+      "it": "Kabutops",
+      "ja": "カブトプス",
+      "ko": "투구푸스",
+      "zh": "鐮刀盔"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Kabutops",
+      "en": "Hero_Kabutops",
+      "es": "Hero_Kabutops",
+      "fr": "Hero_Kabutops",
+      "it": "Hero_Kabutops",
+      "ja": "Hero_カブトプス",
+      "ko": "Hero_투구푸스",
+      "zh": "Hero_鐮刀盔"
+    }
+  },
+  {
+    "monsterBaseId": "20009501",
+    "monsterId": "28000030151",
+    "trainerId": "18000030151",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [54, 107, 158, 356, 400],
+      "atkValues": [12, 26, 38, 82, 90],
+      "defValues": [6, 11, 14, 36, 40],
+      "spaValues": [12, 26, 38, 82, 90],
+      "spdValues": [6, 11, 14, 36, 40],
+      "speValues": [12, 45, 75, 196, 220]
+    },
+    "moves": {
+      "move1": {
+        "id": 88,
+        "name": {
+          "de": "Steinwurf",
+          "en": "Rock Throw",
+          "es": "Lanzarrocas",
+          "fr": "Jet-Pierres",
+          "it": "Sassata",
+          "ja": "いわおとし",
+          "ko": "돌떨구기",
+          "zh": "落石"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 23,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19050,
+        "name": {
+          "de": "X-Tempo",
+          "en": "X Speed",
+          "es": "Velocidad X",
+          "fr": "Vitesse +",
+          "it": "Velocità X",
+          "ja": "スピーダー",
+          "ko": "스피드업",
+          "zh": "速度強化"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Speed.",
+          "es": "Aumenta bastante la\nVelocidad del usuario.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.",
+          "it": "Aumenta di molto\nla Velocità di chi la usa.",
+          "ja": "自分の素早さをぐーんとあげる",
+          "ko": "자신의 스피드가 크게 오른다",
+          "zh": "大幅提高自己的速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17103,
+        "name": {
+          "de": "Wir überstehen\ndas!",
+          "en": "Hang in\nThere!",
+          "es": "¡No me rendiré!",
+          "fr": "Tenons\nle choc !",
+          "it": "Stringiamo\ni denti!",
+          "ja": "耐えていこう！",
+          "ko": "버티자!",
+          "zh": "忍耐到底！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
+          "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
+          "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta la Difesa e la Difesa Speciale di chi la usa. Inoltre, gli fa recuperare PS costantemente.",
+          "ja": "自分の防御と特防をあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 방어와 특수방어가 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "提高自己的防禦和特防。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 103,
+        "name": {
+          "de": "Kreideschrei",
+          "en": "Screech",
+          "es": "Chirrido",
+          "fr": "Grincement",
+          "it": "Stridio",
+          "ja": "いやなおと",
+          "ko": "싫은소리",
+          "zh": "刺耳聲"
+        },
+        "description": {
+          "de": "Senkt die Verteidigung\ndes Zieles stark.",
+          "en": "Sharply lowers the target’s Defense.",
+          "es": "Reduce bastante la\nDefensa del objetivo.",
+          "fr": "Baisse modérément\nla Défense de l'ennemi.",
+          "it": "Riduce di molto la Difesa\ndel bersaglio.",
+          "ja": "相手の防御をがくっとさげる",
+          "ko": "상대의 방어를 크게 떨어뜨린다",
+          "zh": "大幅降低對手的防禦。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 0,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 21010101,
+        "name": {
+          "de": "Volltrefferschutz",
+          "en": "Vigilance",
+          "es": "Inmunidad Golpes Críticos",
+          "fr": "Immunité Critique",
+          "it": "Barriercolpo",
+          "ja": "急所無効",
+          "ko": "급소무효",
+          "zh": "擊中要害無效"
+        },
+        "description": {
+          "de": "Schützt vor gegnerischen Volltreffern.",
+          "en": "The Pokémon is protected against critical hits.",
+          "es": "Impide que el Pokémon reciba golpes críticos.",
+          "fr": "Protège des coups critiques.",
+          "it": "Gli attacchi delle Unità avversarie\nnon sono mai brutti colpi.",
+          "ja": "相手の攻撃が急所に当たらない",
+          "ko": "상대의 공격이 급소에 맞지 않는다",
+          "zh": "對手的攻擊不會擊中要害。"
+        }
+      },
+      "passive2": {
+        "id": 18020201,
+        "name": {
+          "de": "Vert.↓-Schutz",
+          "en": "Unbending",
+          "es": "Inmunidad Defensa ↓",
+          "fr": "Immunité ↓Défense",
+          "it": "Resilienza",
+          "ja": "防御ダウン無効",
+          "ko": "방어다운무효",
+          "zh": "防禦下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Verteidigung.",
+          "en": "Defense cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nDefensa.",
+          "fr": "Protège des baisses de Défense.",
+          "it": "Rende immuni alle riduzioni della Difesa.",
+          "ja": "防御がさがらない",
+          "ko": "방어가 떨어지지 않는다",
+          "zh": "防禦不會降低。"
+        }
+      },
+      "passive3": {
+        "id": 12020302,
+        "name": {
+          "de": "Notfall-Leiste↑ 2",
+          "en": "Stamina Reserves 2",
+          "es": "Llenabarras en Apuro +2",
+          "fr": "Désespoir Jauge ↑ 2",
+          "it": "Emercarica 2",
+          "ja": "ピンチ時わざゲージ↑２",
+          "ko": "위기시기술게이지↑2",
+          "zh": "危機時招式計量槽增加２"
+        },
+        "description": {
+          "de": "Füllt ein Mal pro Kampf in einer Notsituation die\nAttackenleiste um 2  Segmente auf.",
+          "en": "Once per battle, charges the user’s move gauge by two when the user is in a pinch.",
+          "es": "Una vez por combate, llena 2 puntos de la barra\nde movimientos del usuario en un apuro.",
+          "fr": "Une fois par combat, restaure 2 segments de la\nJauge Capacité si le Pokémon est en mauvaise\nposture.",
+          "it": "Una volta sola per lotta, aggiunge due barrette\nalla barra mosse dell'Unità quando questa è\nin difficoltà.",
+          "ja": "バトル中に１回だけピンチのときに\n自分のわざゲージを２増やす",
+          "ko": "배틀 중 1번만 위급할 때\n자신의 기술게이지를 2 추가한다",
+          "zh": "對戰中僅限１次，在陷入危機時\n會幫自己增加２條招式計量槽。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 3,
+    "rarity": 1,
+    "role": 3,
+    "pokemonNameByLanguage": {
+      "de": "Onix",
+      "en": "Onix",
+      "es": "Onix",
+      "fr": "Onix",
+      "it": "Onix",
+      "ja": "イワーク",
+      "ko": "롱스톤",
+      "zh": "大岩蛇"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Onix",
+      "en": "Hero_Onix",
+      "es": "Hero_Onix",
+      "fr": "Hero_Onix",
+      "it": "Hero_Onix",
+      "ja": "Hero_イワーク",
+      "ko": "Hero_롱스톤",
+      "zh": "Hero_大岩蛇"
+    }
+  },
+  {
+    "monsterBaseId": "20007601",
+    "monsterId": "28000030163",
+    "trainerId": "18000030161",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [75, 125, 173, 360, 400],
+      "atkValues": [13, 26, 38, 82, 90],
+      "defValues": [7, 12, 15, 37, 41],
+      "spaValues": [13, 26, 38, 82, 90],
+      "spdValues": [7, 12, 15, 37, 41],
+      "speValues": [28, 59, 86, 196, 220]
+    },
+    "moves": {
+      "move1": {
+        "id": 88,
+        "name": {
+          "de": "Steinwurf",
+          "en": "Rock Throw",
+          "es": "Lanzarrocas",
+          "fr": "Jet-Pierres",
+          "it": "Sassata",
+          "ja": "いわおとし",
+          "ko": "돌떨구기",
+          "zh": "落石"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 23,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19050,
+        "name": {
+          "de": "X-Tempo",
+          "en": "X Speed",
+          "es": "Velocidad X",
+          "fr": "Vitesse +",
+          "it": "Velocità X",
+          "ja": "スピーダー",
+          "ko": "스피드업",
+          "zh": "速度強化"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Speed.",
+          "es": "Aumenta bastante la\nVelocidad del usuario.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.",
+          "it": "Aumenta di molto\nla Velocità di chi la usa.",
+          "ja": "自分の素早さをぐーんとあげる",
+          "ko": "자신의 스피드가 크게 오른다",
+          "zh": "大幅提高自己的速度。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17103,
+        "name": {
+          "de": "Wir überstehen\ndas!",
+          "en": "Hang in\nThere!",
+          "es": "¡No me rendiré!",
+          "fr": "Tenons\nle choc !",
+          "it": "Stringiamo\ni denti!",
+          "ja": "耐えていこう！",
+          "ko": "버티자!",
+          "zh": "忍耐到底！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
+          "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
+          "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta la Difesa e la Difesa Speciale di chi la usa. Inoltre, gli fa recuperare PS costantemente.",
+          "ja": "自分の防御と特防をあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 방어와 특수방어가 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "提高自己的防禦和特防。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 317,
+        "name": {
+          "de": "Felsgrab",
+          "en": "Rock Tomb",
+          "es": "Tumba Rocas",
+          "fr": "Tomberoche",
+          "it": "Rocciotomba",
+          "ja": "がんせきふうじ",
+          "ko": "암석봉인",
+          "zh": "岩石封鎖"
+        },
+        "description": {
+          "de": "Senkt die Initiative des\nZieles.",
+          "en": "Lowers the target’s Speed.",
+          "es": "Reduce la Velocidad del\nobjetivo.",
+          "fr": "Baisse légèrement la\nVitesse de l'ennemi.",
+          "it": "Riduce la Velocità\ndel bersaglio.",
+          "ja": "相手の素早さをさげる",
+          "ko": "상대의 스피드를 떨어뜨린다",
+          "zh": "降低對手的速度。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 39,
+        "accuracy": 95,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18020201,
+        "name": {
+          "de": "Vert.↓-Schutz",
+          "en": "Unbending",
+          "es": "Inmunidad Defensa ↓",
+          "fr": "Immunité ↓Défense",
+          "it": "Resilienza",
+          "ja": "防御ダウン無効",
+          "ko": "방어다운무효",
+          "zh": "防禦下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Verteidigung.",
+          "en": "Defense cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nDefensa.",
+          "fr": "Protège des baisses de Défense.",
+          "it": "Rende immuni alle riduzioni della Difesa.",
+          "ja": "防御がさがらない",
+          "ko": "방어가 떨어지지 않는다",
+          "zh": "防禦不會降低。"
+        }
+      },
+      "passive2": {
+        "id": 18020401,
+        "name": {
+          "de": "Sp.-Vert.↓-Schutz",
+          "en": "Stalwart",
+          "es": "Inmunidad Defensa Esp. ↓",
+          "fr": "Immunité ↓Déf. Spé.",
+          "it": "Ostinazione",
+          "ja": "特防ダウン無効",
+          "ko": "특수방어다운무효",
+          "zh": "特防下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Spezial-\nVerteidigung.",
+          "en": "Sp. Def cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nDefensa Especial.",
+          "fr": "Protège des baisses de Défense Spéciale.",
+          "it": "Rende immuni alle riduzioni\ndella Difesa Speciale.",
+          "ja": "特防がさがらない",
+          "ko": "특수방어가 떨어지지 않는다",
+          "zh": "特防不會降低。"
+        }
+      },
+      "passive3": {
+        "id": 12020302,
+        "name": {
+          "de": "Notfall-Leiste↑ 2",
+          "en": "Stamina Reserves 2",
+          "es": "Llenabarras en Apuro +2",
+          "fr": "Désespoir Jauge ↑ 2",
+          "it": "Emercarica 2",
+          "ja": "ピンチ時わざゲージ↑２",
+          "ko": "위기시기술게이지↑2",
+          "zh": "危機時招式計量槽增加２"
+        },
+        "description": {
+          "de": "Füllt ein Mal pro Kampf in einer Notsituation die\nAttackenleiste um 2  Segmente auf.",
+          "en": "Once per battle, charges the user’s move gauge by two when the user is in a pinch.",
+          "es": "Una vez por combate, llena 2 puntos de la barra\nde movimientos del usuario en un apuro.",
+          "fr": "Une fois par combat, restaure 2 segments de la\nJauge Capacité si le Pokémon est en mauvaise\nposture.",
+          "it": "Una volta sola per lotta, aggiunge due barrette\nalla barra mosse dell'Unità quando questa è\nin difficoltà.",
+          "ja": "バトル中に１回だけピンチのときに\n自分のわざゲージを２増やす",
+          "ko": "배틀 중 1번만 위급할 때\n자신의 기술게이지를 2 추가한다",
+          "zh": "對戰中僅限１次，在陷入危機時\n會幫自己增加２條招式計量槽。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 9,
+    "rarity": 1,
+    "role": 3,
+    "pokemonNameByLanguage": {
+      "de": "Geowaz",
+      "en": "Golem",
+      "es": "Golem",
+      "fr": "Grolem",
+      "it": "Golem",
+      "ja": "ゴローニャ",
+      "ko": "딱구리",
+      "zh": "隆隆岩"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Geowaz",
+      "en": "Hero_Golem",
+      "es": "Hero_Golem",
+      "fr": "Hero_Grolem",
+      "it": "Hero_Golem",
+      "ja": "Hero_ゴローニャ",
+      "ko": "Hero_딱구리",
+      "zh": "Hero_隆隆岩"
     }
   },
   {
@@ -6611,8 +9147,8 @@
     }
   },
   {
-    "monsterBaseId": "20000600",
-    "monsterId": "28000040006",
+    "monsterBaseId": "20000300",
+    "monsterId": "28000040003",
     "trainerId": "18000040004",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
@@ -6790,16 +9326,16 @@
         "maxUses": 2
       },
       "syncMove": {
-        "id": 40200,
+        "id": 30500,
         "name": {
-          "de": "Feuer-\nGefährtenstrahl",
-          "en": "Fire\nSync Beam",
-          "es": "Compi-Rayo\nFuego",
-          "fr": "Duo-Laser\nFeu",
-          "it": "Raggio Unità Fuoco",
-          "ja": "バディーズ\nファイアーレイ",
-          "ko": "버디즈\n파이어레이",
-          "zh": "拍組\n火之光線"
+          "de": "Pflanzen-\nGefährtenstoß",
+          "en": "Grass\nSync Impact",
+          "es": "Compi-Impacto\nPlanta",
+          "fr": "Duo-Impact\nPlante",
+          "it": "Impatto Unità Erba",
+          "ja": "バディーズ\nグラスインパクト",
+          "ko": "버디즈\n그래스임팩트",
+          "zh": "拍組\n草之衝擊"
         },
         "description": {
           "de": "Hat keinen Zusatzeffekt.",
@@ -6811,9 +9347,9 @@
           "ko": "추가 효과 없음",
           "zh": "沒有追加效果。"
         },
-        "category": 2,
+        "category": 1,
         "group": 3,
-        "type": 2,
+        "type": 5,
         "target": 2,
         "gaugeDrain": 0,
         "power": 200,
@@ -6851,14 +9387,14 @@
     "rarity": 3,
     "role": 1,
     "pokemonNameByLanguage": {
-      "de": "Glurak",
-      "en": "Charizard",
-      "es": "Charizard",
-      "fr": "Dracaufeu",
-      "it": "Charizard",
-      "ja": "リザードン",
-      "ko": "리자몽",
-      "zh": "噴火龍"
+      "de": "Bisaflor",
+      "en": "Venusaur",
+      "es": "Venusaur",
+      "fr": "Florizarre",
+      "it": "Venusaur",
+      "ja": "フシギバナ",
+      "ko": "이상해꽃",
+      "zh": "妙蛙花"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -6871,19 +9407,19 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Glurak",
-      "en": "Hero_Charizard",
-      "es": "Hero_Charizard",
-      "fr": "Hero_Dracaufeu",
-      "it": "Hero_Charizard",
-      "ja": "Hero_リザードン",
-      "ko": "Hero_리자몽",
-      "zh": "Hero_噴火龍"
+      "de": "Hero_Bisaflor",
+      "en": "Hero_Venusaur",
+      "es": "Hero_Venusaur",
+      "fr": "Hero_Florizarre",
+      "it": "Hero_Venusaur",
+      "ja": "Hero_フシギバナ",
+      "ko": "Hero_이상해꽃",
+      "zh": "Hero_妙蛙花"
     }
   },
   {
-    "monsterBaseId": "20000900",
-    "monsterId": "28000040009",
+    "monsterBaseId": "20000300",
+    "monsterId": "28000040003",
     "trainerId": "18000040007",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
@@ -7061,16 +9597,16 @@
         "maxUses": 2
       },
       "syncMove": {
-        "id": 40300,
+        "id": 30500,
         "name": {
-          "de": "Wasser-\nGefährtenstrahl",
-          "en": "Water\nSync Beam",
-          "es": "Compi-Rayo\nAgua",
-          "fr": "Duo-Laser\nEau",
-          "it": "Raggio Unità Acqua",
-          "ja": "バディーズ\nウォーターレイ",
-          "ko": "버디즈\n워터레이",
-          "zh": "拍組\n水之光線"
+          "de": "Pflanzen-\nGefährtenstoß",
+          "en": "Grass\nSync Impact",
+          "es": "Compi-Impacto\nPlanta",
+          "fr": "Duo-Impact\nPlante",
+          "it": "Impatto Unità Erba",
+          "ja": "バディーズ\nグラスインパクト",
+          "ko": "버디즈\n그래스임팩트",
+          "zh": "拍組\n草之衝擊"
         },
         "description": {
           "de": "Hat keinen Zusatzeffekt.",
@@ -7082,9 +9618,9 @@
           "ko": "추가 효과 없음",
           "zh": "沒有追加效果。"
         },
-        "category": 2,
+        "category": 1,
         "group": 3,
-        "type": 3,
+        "type": 5,
         "target": 2,
         "gaugeDrain": 0,
         "power": 200,
@@ -7122,14 +9658,14 @@
     "rarity": 3,
     "role": 1,
     "pokemonNameByLanguage": {
-      "de": "Turtok",
-      "en": "Blastoise",
-      "es": "Blastoise",
-      "fr": "Tortank",
-      "it": "Blastoise",
-      "ja": "カメックス",
-      "ko": "거북왕",
-      "zh": "水箭龜"
+      "de": "Bisaflor",
+      "en": "Venusaur",
+      "es": "Venusaur",
+      "fr": "Florizarre",
+      "it": "Venusaur",
+      "ja": "フシギバナ",
+      "ko": "이상해꽃",
+      "zh": "妙蛙花"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -7142,14 +9678,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero_Turtok",
-      "en": "Hero_Blastoise",
-      "es": "Hero_Blastoise",
-      "fr": "Hero_Tortank",
-      "it": "Hero_Blastoise",
-      "ja": "Hero_カメックス",
-      "ko": "Hero_거북왕",
-      "zh": "Hero_水箭龜"
+      "de": "Hero_Bisaflor",
+      "en": "Hero_Venusaur",
+      "es": "Hero_Venusaur",
+      "fr": "Hero_Florizarre",
+      "it": "Hero_Venusaur",
+      "ja": "Hero_フシギバナ",
+      "ko": "Hero_이상해꽃",
+      "zh": "Hero_妙蛙花"
     }
   },
   {
@@ -7579,7 +10115,7 @@
           "zh": "忍耐到底！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
           "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
           "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
           "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
@@ -7896,7 +10432,7 @@
           "zh": "忍耐到底！"
         },
         "description": {
-          "de": "Erhöht die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
           "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
           "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
           "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
@@ -10320,6 +12856,1274 @@
       "ja": "Hero_ニドクイン",
       "ko": "Hero_니드퀸",
       "zh": "Hero_尼多后"
+    }
+  },
+  {
+    "monsterBaseId": "20014200",
+    "monsterId": "28000040131",
+    "trainerId": "18000040131",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [53, 87, 120, 252, 280],
+      "atkValues": [16, 44, 71, 170, 190],
+      "defValues": [5, 14, 23, 56, 60],
+      "spaValues": [16, 44, 71, 170, 190],
+      "spdValues": [5, 14, 23, 56, 60],
+      "speValues": [9, 29, 47, 124, 140]
+    },
+    "moves": {
+      "move1": {
+        "id": 479,
+        "name": {
+          "de": "Katapult",
+          "en": "Smack Down",
+          "es": "Antiaéreo",
+          "fr": "Anti-Air",
+          "it": "Abbattimento",
+          "ja": "うちおとす",
+          "ko": "떨어뜨리기",
+          "zh": "擊落"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 20,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19010,
+        "name": {
+          "de": "X-Angriff",
+          "en": "X Attack",
+          "es": "Ataque X",
+          "fr": "Attaque +",
+          "it": "Attacco X",
+          "ja": "プラスパワー",
+          "ko": "플러스파워",
+          "zh": "力量強化"
+        },
+        "description": {
+          "de": "Erhöht den Angriff des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Attack.",
+          "es": "Aumenta bastante el\nAtaque del usuario.",
+          "fr": "Augmente modérément\nl'Attaque du lanceur.",
+          "it": "Aumenta di molto\nl'Attacco di chi la usa.",
+          "ja": "自分の攻撃をぐーんとあげる",
+          "ko": "자신의 공격이 크게 오른다",
+          "zh": "大幅提高自己的攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17100,
+        "name": {
+          "de": "Ziehen wir an\neinem Strang!",
+          "en": "Race You!",
+          "es": "¡En perfecta\nsintonía!",
+          "fr": "Union\nparfaite !",
+          "it": "Restiamo\nuniti!",
+          "ja": "息をあわせて！",
+          "ko": "호흡을맞춰서!",
+          "zh": "一二三上！"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.\nErhöht die Volltrefferquote\ndes Anwenders.",
+          "en": "Sharply raises the user’s Speed. Raises the user’s critical-hit rate.",
+          "es": "Aumenta bastante la\nVelocidad del usuario.\nAumenta la probabilidad\nde asestar golpes críticos\ndel usuario.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur et\naugmente légèrement\nson taux de critiques.",
+          "it": "Aumenta di molto la Velocità di chi la usa. Inoltre, rende più probabili i brutti colpi.",
+          "ja": "自分の素早さをぐーんとあげる\n自分の急所率をあげる",
+          "ko": "자신의 스피드가 크게 오른다\n자신의 급소율이 오른다",
+          "zh": "大幅提高自己的速度。\n提高自己的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 444,
+        "name": {
+          "de": "Steinkante",
+          "en": "Stone Edge",
+          "es": "Roca Afilada",
+          "fr": "Lame de Roc",
+          "it": "Pietrataglio",
+          "ja": "ストーンエッジ",
+          "ko": "스톤에지",
+          "zh": "尖石攻擊"
+        },
+        "description": {
+          "de": "Hat eine hohe\nVolltrefferquote.",
+          "en": "Critical hits land more easily.",
+          "es": "Suele ser crítico.",
+          "fr": "Taux de critiques élevé.",
+          "it": "Probabile brutto colpo.",
+          "ja": "急所に当たりやすい",
+          "ko": "급소에 맞기 쉽다",
+          "zh": "容易擊中要害。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 100,
+        "accuracy": 80,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18020101,
+        "name": {
+          "de": "Angriff↓-Schutz",
+          "en": "Headstrong",
+          "es": "Inmunidad Ataque ↓",
+          "fr": "Immunité ↓Attaque",
+          "it": "Fermezza",
+          "ja": "攻撃ダウン無効",
+          "ko": "공격다운무효",
+          "zh": "攻擊下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung des Angriffs.",
+          "en": "Attack cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en el\nAtaque.",
+          "fr": "Protège des baisses d'Attaque.",
+          "it": "Rende immuni alle riduzioni dell'Attacco.",
+          "ja": "攻撃がさがらない",
+          "ko": "공격이 떨어지지 않는다",
+          "zh": "攻擊不會降低。"
+        }
+      },
+      "passive2": {
+        "id": 13010102,
+        "name": {
+          "de": "Notfallstärke↑ 2",
+          "en": "Power Reserves 2",
+          "es": "Ultravínculo +2",
+          "fr": "Liens Profonds 2",
+          "it": "Emergrinta 2",
+          "ja": "ピンチ時威力上昇２",
+          "ko": "위기시위력상승2",
+          "zh": "危機時威力提升２"
+        },
+        "description": {
+          "de": "Erhöht in Notsituationen die Stärke von Attacken.",
+          "en": "Powers up moves in a pinch.",
+          "es": "Aumenta la potencia de los movimientos en un\napuro.",
+          "fr": "Augmente la puissance des capacités du Pokémon\ns'il est en mauvaise posture.",
+          "it": "Quando l'Unità è in difficoltà,\nla potenza delle mosse aumenta.",
+          "ja": "ピンチのときに技の威力をあげる",
+          "ko": "위급할 때 기술의 위력이 오른다",
+          "zh": "在陷入危機時，會提高招式的威力。"
+        }
+      },
+      "passive3": {
+        "id": 13010601,
+        "name": {
+          "de": "Volltrefferstärke↑ 1",
+          "en": "Critical Strike 1",
+          "es": "Crítico Potente +1",
+          "fr": "Puissance Critique 1",
+          "it": "Peggiorcolpo 1",
+          "ja": "急所時威力上昇１",
+          "ko": "급소시위력상승1",
+          "zh": "擊中要害時威力提升１"
+        },
+        "description": {
+          "de": "Erhöht bei gelandeten Volltreffern die Stärke des\nAngriffs.",
+          "en": "Powers up attacks if they become critical hits.",
+          "es": "Aumenta la potencia de los movimientos tras\nasestar un golpe crítico.",
+          "fr": "Augmente la puissance des coups critiques.",
+          "it": "Aumenta la potenza dei brutti colpi.",
+          "ja": "相手の急所に当たるときだけ攻撃の威力があがる",
+          "ko": "상대의 급소를 맞혔을 때 공격의 위력이 오른다",
+          "zh": "擊中對手要害時，會提高當下該攻擊的威力。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 4,
+    "rarity": 1,
+    "role": 0,
+    "pokemonNameByLanguage": {
+      "de": "Aerodactyl",
+      "en": "Aerodactyl",
+      "es": "Aerodactyl",
+      "fr": "Ptéra",
+      "it": "Aerodactyl",
+      "ja": "プテラ",
+      "ko": "프테라",
+      "zh": "化石翼龍"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Aerodactyl",
+      "en": "Hero_Aerodactyl",
+      "es": "Hero_Aerodactyl",
+      "fr": "Hero_Ptéra",
+      "it": "Hero_Aerodactyl",
+      "ja": "Hero_プテラ",
+      "ko": "Hero_프테라",
+      "zh": "Hero_化石翼龍"
+    }
+  },
+  {
+    "monsterBaseId": "20014100",
+    "monsterId": "28000040142",
+    "trainerId": "18000040141",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [67, 101, 131, 252, 280],
+      "atkValues": [16, 44, 71, 170, 190],
+      "defValues": [5, 14, 23, 56, 60],
+      "spaValues": [16, 44, 71, 170, 190],
+      "spdValues": [5, 14, 23, 56, 60],
+      "speValues": [9, 29, 47, 124, 140]
+    },
+    "moves": {
+      "move1": {
+        "id": 246,
+        "name": {
+          "de": "Antik-Kraft",
+          "en": "Ancient Power",
+          "es": "Poder Pasado",
+          "fr": "Pouvoir Antique",
+          "it": "Forzantica",
+          "ja": "げんしのちから",
+          "ko": "원시의힘",
+          "zh": "原始之力"
+        },
+        "description": {
+          "de": "Erhöht in sehr seltenen\nFällen den Angriff, die\nVerteidigung, den\nSpezial-Angriff, die\nSpezial-Verteidigung und\ndie Initiative des\nAnwenders.",
+          "en": "Has a very small chance of raising the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed.",
+          "es": "Muy rara vez aumenta\nel Ataque, la Defensa,\nel Ataque Especial, la\nDefensa Especial y la\nVelocidad del usuario.",
+          "fr": "Augmente légèrement\nl'Attaque, la Défense,\nl'Attaque Spéciale, la\nDéfense Spéciale et la\nVitesse du lanceur (très\nrarement).",
+          "it": "Molto raramente aumenta\nl'Attacco, la Difesa,\nl'Attacco Speciale,\nla Difesa Speciale e\nla Velocità di chi la usa.",
+          "ja": "すごくまれに自分の攻撃と防御と特攻と特防と素早さをあげる",
+          "ko": "매우 드물게 자신의 공격과 방어와 특수공격과 특수방어와 스피드가 오른다",
+          "zh": "極少數情況下會提高自己的攻擊、防禦、特攻、特防和速度。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 47,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19080,
+        "name": {
+          "de": "Angriffplus",
+          "en": "Dire Hit",
+          "es": "Directo",
+          "fr": "Muscle +",
+          "it": "Supercolpo",
+          "ja": "クリティカット",
+          "ko": "크리티컬커터",
+          "zh": "要害攻擊"
+        },
+        "description": {
+          "de": "Erhöht die Volltrefferquote\ndes Anwenders.",
+          "en": "Raises the user’s critical-hit rate.",
+          "es": "Aumenta la probabilidad\ndel usuario de asestar\ngolpes críticos.",
+          "fr": "Augmente légèrement\nle taux de critiques du\nlanceur.",
+          "it": "Rende più probabili\ni brutti colpi per chi la\nusa.",
+          "ja": "自分の急所率をあげる",
+          "ko": "자신의 급소율이 오른다",
+          "zh": "提高自己的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17101,
+        "name": {
+          "de": "Das ist die\nGelegenheit!",
+          "en": "Keep it Up!",
+          "es": "¡Con ímpetu!",
+          "fr": "Fonçons !",
+          "it": "Sull'onda\ndell'entusiasmo!",
+          "ja": "勢いにのって！",
+          "ko": "기세를몰아서!",
+          "zh": "趁勢追擊！"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "en": "Sharply raises the user’s Speed. Makes the user gradually heal itself.",
+          "es": "Aumenta bastante la Velocidad del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta di molto la Velocità di chi la usa e gli fa recuperare PS costantemente.",
+          "ja": "自分の素早さをぐーんとあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 스피드가 크게 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "大幅提高自己的速度。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 157,
+        "name": {
+          "de": "Steinhagel",
+          "en": "Rock Slide",
+          "es": "Avalancha",
+          "fr": "Éboulement",
+          "it": "Frana",
+          "ja": "いわなだれ",
+          "ko": "스톤샤워",
+          "zh": "岩崩"
+        },
+        "description": {
+          "de": "Lässt das Ziel eventuell\nzurückschrecken.",
+          "en": "Has a moderate chance of making the target flinch.",
+          "es": "A veces hace retroceder\nal objetivo.",
+          "fr": "Apeure l'ennemi\n(assez rarement).",
+          "it": "A volte fa tentennare\nil bersaglio.",
+          "ja": "たまに相手をひるみ状態にする",
+          "ko": "가끔 상대를 풀죽음 상태로 만든다",
+          "zh": "偶爾會讓對手陷入畏縮狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 3,
+        "targetType": {
+          "de": "Alle Gegner",
+          "en": "All opponents",
+          "es": "Todos los rivales",
+          "fr": "Tous les ennemis",
+          "it": "Tutti i nemici",
+          "ja": "相手全員",
+          "ko": "상대 전원",
+          "zh": "對手全體拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 105,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 41300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstrahl",
+          "en": "Rock\nSync Beam",
+          "es": "Compi-Rayo\nRoca",
+          "fr": "Duo-Laser\nRoche",
+          "it": "Raggio Unità Roccia",
+          "ja": "バディーズ\nロックレイ",
+          "ko": "버디즈\n록레이",
+          "zh": "拍組\n岩石光線"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 20010101,
+        "name": {
+          "de": "Sandsturmschutz",
+          "en": "Sand Shelter",
+          "es": "Inmunidad Arena",
+          "fr": "Immunité Sable",
+          "it": "Schivasabbia",
+          "ja": "砂嵐無効",
+          "ko": "모래바람무효",
+          "zh": "沙暴無效"
+        },
+        "description": {
+          "de": "Schützt vor Schaden durch Sandstürme.",
+          "en": "Protects the Pokémon from damage from a sandstorm.",
+          "es": "Impide que el Pokémon sufra daño por tormentas\nde arena.",
+          "fr": "Protège des dégâts infligés par les tempêtes\nde sable.",
+          "it": "Rende immuni ai danni da tempesta di sabbia.",
+          "ja": "すなあらしによるダメージを受けない",
+          "ko": "모래바람에 의한 데미지를 입지 않는다",
+          "zh": "不會受到沙暴所造成的傷害。"
+        }
+      },
+      "passive2": {
+        "id": 13010102,
+        "name": {
+          "de": "Notfallstärke↑ 2",
+          "en": "Power Reserves 2",
+          "es": "Ultravínculo +2",
+          "fr": "Liens Profonds 2",
+          "it": "Emergrinta 2",
+          "ja": "ピンチ時威力上昇２",
+          "ko": "위기시위력상승2",
+          "zh": "危機時威力提升２"
+        },
+        "description": {
+          "de": "Erhöht in Notsituationen die Stärke von Attacken.",
+          "en": "Powers up moves in a pinch.",
+          "es": "Aumenta la potencia de los movimientos en un\napuro.",
+          "fr": "Augmente la puissance des capacités du Pokémon\ns'il est en mauvaise posture.",
+          "it": "Quando l'Unità è in difficoltà,\nla potenza delle mosse aumenta.",
+          "ja": "ピンチのときに技の威力をあげる",
+          "ko": "위급할 때 기술의 위력이 오른다",
+          "zh": "在陷入危機時，會提高招式的威力。"
+        }
+      },
+      "passive3": {
+        "id": 13010401,
+        "name": {
+          "de": "Effektivitätsstärke↑ 1",
+          "en": "Superduper Effective 1",
+          "es": "Ultraeficacia +1",
+          "fr": "Ultra-Efficace 1",
+          "it": "Iperefficace 1",
+          "ja": "抜群時威力上昇１",
+          "ko": "발군시위력상승1",
+          "zh": "效果絕佳時威力提升１"
+        },
+        "description": {
+          "de": "Erhöht die Stärke von sehr effektiven Attacken.",
+          "en": "Powers up moves that are super effective.",
+          "es": "Aumenta la potencia de los movimientos cuando\nson supereficaces.",
+          "fr": "Augmente la puissance des capacités\nsuper efficaces.",
+          "it": "Aumenta la potenza delle mosse superefficaci.",
+          "ja": "効果抜群のときに技の威力をあげる",
+          "ko": "효과가 굉장한 기술의 위력이 오른다",
+          "zh": "當招式的效果絕佳時，會提高該招式的威力。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 5,
+    "rarity": 1,
+    "role": 1,
+    "pokemonNameByLanguage": {
+      "de": "Kabutops",
+      "en": "Kabutops",
+      "es": "Kabutops",
+      "fr": "Kabutops",
+      "it": "Kabutops",
+      "ja": "カブトプス",
+      "ko": "투구푸스",
+      "zh": "鐮刀盔"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Kabutops",
+      "en": "Hero_Kabutops",
+      "es": "Hero_Kabutops",
+      "fr": "Hero_Kabutops",
+      "it": "Hero_Kabutops",
+      "ja": "Hero_カブトプス",
+      "ko": "Hero_투구푸스",
+      "zh": "Hero_鐮刀盔"
+    }
+  },
+  {
+    "monsterBaseId": "20009501",
+    "monsterId": "28000040151",
+    "trainerId": "18000040151",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [53, 87, 120, 252, 280],
+      "atkValues": [16, 44, 71, 170, 190],
+      "defValues": [5, 14, 23, 56, 60],
+      "spaValues": [16, 44, 71, 170, 190],
+      "spdValues": [5, 14, 23, 56, 60],
+      "speValues": [9, 29, 47, 124, 140]
+    },
+    "moves": {
+      "move1": {
+        "id": 88,
+        "name": {
+          "de": "Steinwurf",
+          "en": "Rock Throw",
+          "es": "Lanzarrocas",
+          "fr": "Jet-Pierres",
+          "it": "Sassata",
+          "ja": "いわおとし",
+          "ko": "돌떨구기",
+          "zh": "落石"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 23,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19010,
+        "name": {
+          "de": "X-Angriff",
+          "en": "X Attack",
+          "es": "Ataque X",
+          "fr": "Attaque +",
+          "it": "Attacco X",
+          "ja": "プラスパワー",
+          "ko": "플러스파워",
+          "zh": "力量強化"
+        },
+        "description": {
+          "de": "Erhöht den Angriff des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Attack.",
+          "es": "Aumenta bastante el\nAtaque del usuario.",
+          "fr": "Augmente modérément\nl'Attaque du lanceur.",
+          "it": "Aumenta di molto\nl'Attacco di chi la usa.",
+          "ja": "自分の攻撃をぐーんとあげる",
+          "ko": "자신의 공격이 크게 오른다",
+          "zh": "大幅提高自己的攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17101,
+        "name": {
+          "de": "Das ist die\nGelegenheit!",
+          "en": "Keep it Up!",
+          "es": "¡Con ímpetu!",
+          "fr": "Fonçons !",
+          "it": "Sull'onda\ndell'entusiasmo!",
+          "ja": "勢いにのって！",
+          "ko": "기세를몰아서!",
+          "zh": "趁勢追擊！"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.\nDie KP des Anwenders\nwerden kontinuierlich\nregeneriert.",
+          "en": "Sharply raises the user’s Speed. Makes the user gradually heal itself.",
+          "es": "Aumenta bastante la Velocidad del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta di molto la Velocità di chi la usa e gli fa recuperare PS costantemente.",
+          "ja": "自分の素早さをぐーんとあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 스피드가 크게 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "大幅提高自己的速度。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 457,
+        "name": {
+          "de": "Kopfstoß",
+          "en": "Head Smash",
+          "es": "Testarazo",
+          "fr": "Fracass'Tête",
+          "it": "Zuccata",
+          "ja": "もろはのずつき",
+          "ko": "양날박치기",
+          "zh": "雙刃頭錘"
+        },
+        "description": {
+          "de": "Der Anwender erleidet\nein Drittel des beim Ziel\nangerichteten Schadens.",
+          "en": "The user also takes 33% of the damage it dealt to the target.",
+          "es": "El usuario recibe un\ntercio del daño infligido\nal objetivo.",
+          "fr": "Le lanceur subit un tiers\ndes dégâts infligés.",
+          "it": "Chi la usa subisce\nuna quantità di danni\npari a 1/3 del danno\ninflitto.",
+          "ja": "相手に与えたダメージの１／３を自分も受ける",
+          "ko": "상대에게 준 데미지의 1/3을 자신도 받는다",
+          "zh": "給予對手傷害後自己也會受到１／３的傷害。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 188,
+        "accuracy": 80,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 21010101,
+        "name": {
+          "de": "Volltrefferschutz",
+          "en": "Vigilance",
+          "es": "Inmunidad Golpes Críticos",
+          "fr": "Immunité Critique",
+          "it": "Barriercolpo",
+          "ja": "急所無効",
+          "ko": "급소무효",
+          "zh": "擊中要害無效"
+        },
+        "description": {
+          "de": "Schützt vor gegnerischen Volltreffern.",
+          "en": "The Pokémon is protected against critical hits.",
+          "es": "Impide que el Pokémon reciba golpes críticos.",
+          "fr": "Protège des coups critiques.",
+          "it": "Gli attacchi delle Unità avversarie\nnon sono mai brutti colpi.",
+          "ja": "相手の攻撃が急所に当たらない",
+          "ko": "상대의 공격이 급소에 맞지 않는다",
+          "zh": "對手的攻擊不會擊中要害。"
+        }
+      },
+      "passive2": {
+        "id": 13020403,
+        "name": {
+          "de": "Rückstoßschaden↓ 3",
+          "en": "Standfast 3",
+          "es": "Secuela Leve +3",
+          "fr": "Atténuation 3",
+          "it": "Contraccolpoco 3",
+          "ja": "反動ダメージ軽減３",
+          "ko": "반동데미지경감3",
+          "zh": "減輕反衝傷害３"
+        },
+        "description": {
+          "de": "Reduziert nach Einsatz einer Attacke mit\ndem Zusatzeffekt „Rückstoß“ die Menge des\nRückstoßschadens.",
+          "en": "Reduces recoil damage received from using moves that have recoil in the effect tag.",
+          "es": "Reduce el daño recibido por el usuario al\nemplear movimientos con secuela.",
+          "fr": "Quand le Duo utilise une capacité qui a l'effet\nContrecoup, réduit les dégâts du contrecoup.",
+          "it": "Quando l'Unità usa una mossa che ha\n\"Contraccolpo\" alla voce \"Effetti\", riduce il danno\nsubito per il contraccolpo.",
+          "ja": "効果タグに反動を持つ技をつかったときの\n自分の反動ダメージを軽減する",
+          "ko": "효과태그에 반동이 있는 기술을 사용할 때\n자신의 반동 데미지를 약하게 한다",
+          "zh": "當使出的招式有反衝效果時，\n會減輕反衝對自己所造成的傷害。"
+        }
+      },
+      "passive3": {
+        "id": 13010102,
+        "name": {
+          "de": "Notfallstärke↑ 2",
+          "en": "Power Reserves 2",
+          "es": "Ultravínculo +2",
+          "fr": "Liens Profonds 2",
+          "it": "Emergrinta 2",
+          "ja": "ピンチ時威力上昇２",
+          "ko": "위기시위력상승2",
+          "zh": "危機時威力提升２"
+        },
+        "description": {
+          "de": "Erhöht in Notsituationen die Stärke von Attacken.",
+          "en": "Powers up moves in a pinch.",
+          "es": "Aumenta la potencia de los movimientos en un\napuro.",
+          "fr": "Augmente la puissance des capacités du Pokémon\ns'il est en mauvaise posture.",
+          "it": "Quando l'Unità è in difficoltà,\nla potenza delle mosse aumenta.",
+          "ja": "ピンチのときに技の威力をあげる",
+          "ko": "위급할 때 기술의 위력이 오른다",
+          "zh": "在陷入危機時，會提高招式的威力。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 3,
+    "rarity": 1,
+    "role": 0,
+    "pokemonNameByLanguage": {
+      "de": "Onix",
+      "en": "Onix",
+      "es": "Onix",
+      "fr": "Onix",
+      "it": "Onix",
+      "ja": "イワーク",
+      "ko": "롱스톤",
+      "zh": "大岩蛇"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Onix",
+      "en": "Hero_Onix",
+      "es": "Hero_Onix",
+      "fr": "Hero_Onix",
+      "it": "Hero_Onix",
+      "ja": "Hero_イワーク",
+      "ko": "Hero_롱스톤",
+      "zh": "Hero_大岩蛇"
+    }
+  },
+  {
+    "monsterBaseId": "20007601",
+    "monsterId": "28000040163",
+    "trainerId": "18000040161",
+    "trainerBaseId": "10700000",
+    "trainerNameId": "ch8000",
+    "stats": {
+      "hpValues": [73, 105, 135, 256, 280],
+      "atkValues": [21, 47, 71, 170, 190],
+      "defValues": [8, 17, 23, 56, 60],
+      "spaValues": [21, 47, 71, 170, 190],
+      "spdValues": [8, 17, 23, 56, 60],
+      "speValues": [21, 40, 58, 124, 140]
+    },
+    "moves": {
+      "move1": {
+        "id": 88,
+        "name": {
+          "de": "Steinwurf",
+          "en": "Rock Throw",
+          "es": "Lanzarrocas",
+          "fr": "Jet-Pierres",
+          "it": "Sassata",
+          "ja": "いわおとし",
+          "ko": "돌떨구기",
+          "zh": "落石"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 23,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19010,
+        "name": {
+          "de": "X-Angriff",
+          "en": "X Attack",
+          "es": "Ataque X",
+          "fr": "Attaque +",
+          "it": "Attacco X",
+          "ja": "プラスパワー",
+          "ko": "플러스파워",
+          "zh": "力量強化"
+        },
+        "description": {
+          "de": "Erhöht den Angriff des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Attack.",
+          "es": "Aumenta bastante el\nAtaque del usuario.",
+          "fr": "Augmente modérément\nl'Attaque du lanceur.",
+          "it": "Aumenta di molto\nl'Attacco di chi la usa.",
+          "ja": "自分の攻撃をぐーんとあげる",
+          "ko": "자신의 공격이 크게 오른다",
+          "zh": "大幅提高自己的攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 17103,
+        "name": {
+          "de": "Wir überstehen\ndas!",
+          "en": "Hang in\nThere!",
+          "es": "¡No me rendiré!",
+          "fr": "Tenons\nle choc !",
+          "it": "Stringiamo\ni denti!",
+          "ja": "耐えていこう！",
+          "ko": "버티자!",
+          "zh": "忍耐到底！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders. Die KP des Anwenders werden kontinuierlich regeneriert.\n",
+          "en": "Raises the user’s Defense and Sp. Def. Makes the user gradually heal itself.",
+          "es": "Aumenta la Defensa y la Defensa Especial del usuario. Después de usar este movimiento, el usuario recuperará PS de forma gradual.",
+          "fr": "Augmente légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nLe lanceur regagne\nlentement ses PV.",
+          "it": "Aumenta la Difesa e la Difesa Speciale di chi la usa. Inoltre, gli fa recuperare PS costantemente.",
+          "ja": "自分の防御と特防をあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 방어와 특수방어가 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "提高自己的防禦和特防。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 157,
+        "name": {
+          "de": "Steinhagel",
+          "en": "Rock Slide",
+          "es": "Avalancha",
+          "fr": "Éboulement",
+          "it": "Frana",
+          "ja": "いわなだれ",
+          "ko": "스톤샤워",
+          "zh": "岩崩"
+        },
+        "description": {
+          "de": "Lässt das Ziel eventuell\nzurückschrecken.",
+          "en": "Has a moderate chance of making the target flinch.",
+          "es": "A veces hace retroceder\nal objetivo.",
+          "fr": "Apeure l'ennemi\n(assez rarement).",
+          "it": "A volte fa tentennare\nil bersaglio.",
+          "ja": "たまに相手をひるみ状態にする",
+          "ko": "가끔 상대를 풀죽음 상태로 만든다",
+          "zh": "偶爾會讓對手陷入畏縮狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 13,
+        "target": 3,
+        "targetType": {
+          "de": "Alle Gegner",
+          "en": "All opponents",
+          "es": "Todos los rivales",
+          "fr": "Tous les ennemis",
+          "it": "Tutti i nemici",
+          "ja": "相手全員",
+          "ko": "상대 전원",
+          "zh": "對手全體拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 105,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 31300,
+        "name": {
+          "de": "Gesteins-\nGefährtenstoß",
+          "en": "Rock\nSync Impact",
+          "es": "Compi-Impacto\nRoca",
+          "fr": "Duo-Impact\nRoche",
+          "it": "Impatto Unità Roccia",
+          "ja": "バディーズ\nロックインパクト",
+          "ko": "버디즈\n록임팩트",
+          "zh": "拍組\n岩石衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 13,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18020201,
+        "name": {
+          "de": "Vert.↓-Schutz",
+          "en": "Unbending",
+          "es": "Inmunidad Defensa ↓",
+          "fr": "Immunité ↓Défense",
+          "it": "Resilienza",
+          "ja": "防御ダウン無効",
+          "ko": "방어다운무효",
+          "zh": "防禦下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung der Verteidigung.",
+          "en": "Defense cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en la\nDefensa.",
+          "fr": "Protège des baisses de Défense.",
+          "it": "Rende immuni alle riduzioni della Difesa.",
+          "ja": "防御がさがらない",
+          "ko": "방어가 떨어지지 않는다",
+          "zh": "防禦不會降低。"
+        }
+      },
+      "passive2": {
+        "id": 13010102,
+        "name": {
+          "de": "Notfallstärke↑ 2",
+          "en": "Power Reserves 2",
+          "es": "Ultravínculo +2",
+          "fr": "Liens Profonds 2",
+          "it": "Emergrinta 2",
+          "ja": "ピンチ時威力上昇２",
+          "ko": "위기시위력상승2",
+          "zh": "危機時威力提升２"
+        },
+        "description": {
+          "de": "Erhöht in Notsituationen die Stärke von Attacken.",
+          "en": "Powers up moves in a pinch.",
+          "es": "Aumenta la potencia de los movimientos en un\napuro.",
+          "fr": "Augmente la puissance des capacités du Pokémon\ns'il est en mauvaise posture.",
+          "it": "Quando l'Unità è in difficoltà,\nla potenza delle mosse aumenta.",
+          "ja": "ピンチのときに技の威力をあげる",
+          "ko": "위급할 때 기술의 위력이 오른다",
+          "zh": "在陷入危機時，會提高招式的威力。"
+        }
+      },
+      "passive3": {
+        "id": 13010401,
+        "name": {
+          "de": "Effektivitätsstärke↑ 1",
+          "en": "Superduper Effective 1",
+          "es": "Ultraeficacia +1",
+          "fr": "Ultra-Efficace 1",
+          "it": "Iperefficace 1",
+          "ja": "抜群時威力上昇１",
+          "ko": "발군시위력상승1",
+          "zh": "效果絕佳時威力提升１"
+        },
+        "description": {
+          "de": "Erhöht die Stärke von sehr effektiven Attacken.",
+          "en": "Powers up moves that are super effective.",
+          "es": "Aumenta la potencia de los movimientos cuando\nson supereficaces.",
+          "fr": "Augmente la puissance des capacités\nsuper efficaces.",
+          "it": "Aumenta la potenza delle mosse superefficaci.",
+          "ja": "効果抜群のときに技の威力をあげる",
+          "ko": "효과가 굉장한 기술의 위력이 오른다",
+          "zh": "當招式的效果絕佳時，會提高該招式的威力。"
+        }
+      }
+    },
+    "type": 13,
+    "weakType": 9,
+    "rarity": 1,
+    "role": 0,
+    "pokemonNameByLanguage": {
+      "de": "Geowaz",
+      "en": "Golem",
+      "es": "Golem",
+      "fr": "Grolem",
+      "it": "Golem",
+      "ja": "ゴローニャ",
+      "ko": "딱구리",
+      "zh": "隆隆岩"
+    },
+    "trainerNameByLanguage": {
+      "de": "Hero",
+      "en": "Hero",
+      "es": "Hero",
+      "fr": "Hero",
+      "it": "Hero",
+      "ja": "Hero",
+      "ko": "Hero",
+      "zh": "Hero"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Hero_Geowaz",
+      "en": "Hero_Golem",
+      "es": "Hero_Golem",
+      "fr": "Hero_Grolem",
+      "it": "Hero_Golem",
+      "ja": "Hero_ゴローニャ",
+      "ko": "Hero_딱구리",
+      "zh": "Hero_隆隆岩"
     }
   }
 ]

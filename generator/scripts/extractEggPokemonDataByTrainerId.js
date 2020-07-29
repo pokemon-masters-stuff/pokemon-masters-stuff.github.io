@@ -163,6 +163,10 @@ const trainerList = [
   "18000020101",
   "18000020111",
   "18000020121",
+  "18000020131",
+  "18000020141",
+  "18000020151",
+  "18000020161",
   "18000030011",
   "18000030021",
   "18000030031",
@@ -173,6 +177,10 @@ const trainerList = [
   "18000030101",
   "18000030111",
   "18000030121",
+  "18000030131",
+  "18000030141",
+  "18000030151",
+  "18000030161",
   "18000040001",
   "18000040004",
   "18000040007",
@@ -186,6 +194,10 @@ const trainerList = [
   "18000040101",
   "18000040111",
   "18000040121",
+  "18000040131",
+  "18000040141",
+  "18000040151",
+  "18000040161",
   // "18000120000", Solgaleo
 ];
 
@@ -212,6 +224,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
   let syncPairNames = {};
 
   trainerList.forEach((trainerIdFromList) => {
+    console.log("trainerIdFromList", trainerIdFromList);
     // Find entry in Trainer.json
     let trainer = trainerDB.entries.find(
       (trainer) => trainer.trainerId.toString() === trainerIdFromList
@@ -1166,11 +1179,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
       //   }
 
       // Use trainerBaseId to find trainerNameId in TrainerBase.json
-      trainerBase = trainerBaseDB.entries.find(
-        (trainerBase) => trainerBase.trainerBaseId === trainerBaseId
-      );
+      // console.log(trainerBaseId);
+      // trainerBase = trainerBaseDB.entries.find(
+      //   (trainerBase) => trainerBase.trainerBaseId === trainerBaseId
+      // );
 
-      trainerNameId = trainerBase.trainerNameId;
+      // trainerNameId = trainerBase.trainerNameId;
 
       // Push to syncPairDataArray
       monsterMegaFormBaseId
@@ -1180,7 +1194,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterId: monsterId.toString(),
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
-            trainerNameId,
+            trainerNameId: "ch8000",
             stats,
             moves,
             passives,
@@ -1195,7 +1209,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterId: monsterId.toString(),
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
-            trainerNameId,
+            trainerNameId: "ch8000",
             stats,
             moves,
             passives,
@@ -1218,11 +1232,11 @@ const extractSyncPairDataByTrainerBaseId = () => {
         trainerBaseId = trainer.trainerBaseId;
 
         // Use trainerBaseId to find trainerNameId
-        trainerBase = trainerBaseDB.entries.find(
-          (trainerBase) => trainerBase.trainerBaseId === trainerBaseId
-        );
+        // trainerBase = trainerBaseDB.entries.find(
+        //   (trainerBase) => trainerBase.trainerBaseId === trainerBaseId
+        // );
 
-        trainerNameId = trainerBase.trainerNameId;
+        // trainerNameId = trainerBase.trainerNameId;
         // Push to syncPairDataArray
         monsterMegaFormBaseId
           ? (monsterAndTrainerData = {
@@ -1231,7 +1245,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
-              trainerNameId,
+              trainerNameId: "ch8000",
               stats,
               moves,
               passives,
@@ -1246,7 +1260,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
-              trainerNameId,
+              trainerNameId: "ch8000",
               stats,
               moves,
               passives,

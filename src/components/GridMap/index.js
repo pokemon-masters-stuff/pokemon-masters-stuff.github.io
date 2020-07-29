@@ -22,6 +22,7 @@ import {
   renderMoveName,
   // addSyncLvReq,
   checkSelectabilityBasedOnSyncLv,
+  removeHyphens,
 } from "../../utils/functions";
 import { allThumbnails, allSyncGrids } from "../../utils/constants";
 import UI from "../../utils/translations";
@@ -64,7 +65,9 @@ class GridMap extends Component {
       getQueryStringValue("grid").map((id) => {
         cellData =
           allSyncGrids[this.props.language][
-            `${pokemonFromUrl.toLowerCase()}GridData${this.props.language.toUpperCase()}`
+            `${removeHyphens(
+              pokemonFromUrl
+            ).toLowerCase()}GridData${this.props.language.toUpperCase()}`
           ][Number(id)];
 
         selectedCellByIdFromUrl = {
@@ -180,7 +183,9 @@ class GridMap extends Component {
 
   renderHexagonCells = (classes) =>
     allSyncGrids[this.props.language][
-      `${this.props.pokemon}GridData${this.props.language.toUpperCase()}`
+      `${removeHyphens(
+        this.props.pokemon
+      )}GridData${this.props.language.toUpperCase()}`
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
@@ -272,8 +277,11 @@ class GridMap extends Component {
 
   renderCenterGridText = (classes) => {
     // Only renders text when no picture available
-    return allThumbnails[`${this.props.pokemon}`] === undefined ? (
-      <Text className={classes.selectedPokemonCell}>{this.props.pokemon}</Text>
+    return allThumbnails[`${removeHyphens(this.props.pokemon)}`] ===
+      undefined ? (
+      <Text className={classes.selectedPokemonCell}>
+        {removeHyphens(this.props.pokemon)}
+      </Text>
     ) : null;
   };
 
@@ -312,7 +320,7 @@ class GridMap extends Component {
           </Layout>
           <Pattern
             id={this.props.pokemon}
-            link={allThumbnails[`${this.props.pokemon}`]}
+            link={allThumbnails[`${removeHyphens(this.props.pokemon)}`]}
             size={{ x: 10, y: 10 }}
           />
         </HexGrid>

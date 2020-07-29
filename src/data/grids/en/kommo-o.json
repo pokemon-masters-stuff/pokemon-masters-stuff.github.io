@@ -10,7 +10,7 @@
       "value": 10,
       "u6": 999998990
     },
-    "move": { "name": "HP +10" }
+    "move": { "name": "HP +10", "energyCost": 0 }
   },
   {
     "cellId": 1009101001,
@@ -23,7 +23,7 @@
       "value": 5,
       "u6": 999995995
     },
-    "move": { "name": "Sp. Atk +5" }
+    "move": { "name": "Sp. Atk +5", "energyCost": 0 }
   },
   {
     "cellId": 1009101002,
@@ -36,7 +36,7 @@
       "value": 5,
       "u6": 999996995
     },
-    "move": { "name": "Defense +5" }
+    "move": { "name": "Defense +5", "energyCost": 0 }
   },
   {
     "cellId": 1009101003,
@@ -49,7 +49,7 @@
       "value": 5,
       "u6": 999995995
     },
-    "move": { "name": "Sp. Atk +5" }
+    "move": { "name": "Sp. Atk +5", "energyCost": 0 }
   },
   {
     "cellId": 1009101004,
@@ -62,7 +62,7 @@
       "value": 5,
       "u6": 999994995
     },
-    "move": { "name": "Sp. Def +5" }
+    "move": { "name": "Sp. Def +5", "energyCost": 0 }
   },
   {
     "cellId": 1009101005,
@@ -75,7 +75,7 @@
       "value": 5,
       "u6": 999993995
     },
-    "move": { "name": "Speed +5" }
+    "move": { "name": "Speed +5", "energyCost": 0 }
   },
   {
     "cellId": 1009101006,
@@ -88,7 +88,7 @@
       "value": 5,
       "u6": 999995995
     },
-    "move": { "name": "Sp. Atk +5" }
+    "move": { "name": "Sp. Atk +5", "energyCost": 2 }
   },
   {
     "cellId": 1009101007,
@@ -104,18 +104,19 @@
     "move": {
       "name": "Clanging Scales: Power ↑ +2",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4
     }
   },
   {
@@ -129,7 +130,7 @@
       "value": 10,
       "u6": 999996990
     },
-    "move": { "name": "Defense +10" }
+    "move": { "name": "Defense +10", "energyCost": 4 }
   },
   {
     "cellId": 1009101009,
@@ -142,7 +143,7 @@
       "value": 5,
       "u6": 999996995
     },
-    "move": { "name": "Defense +5" }
+    "move": { "name": "Defense +5", "energyCost": 2 }
   },
   {
     "cellId": 1009101010,
@@ -158,18 +159,19 @@
     "move": {
       "name": "Clanging Scales: Power ↑ +2",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4
     }
   },
   {
@@ -183,7 +185,7 @@
       "value": 20,
       "u6": 999998980
     },
-    "move": { "name": "HP +20" }
+    "move": { "name": "HP +20", "energyCost": 4 }
   },
   {
     "cellId": 1009101012,
@@ -199,18 +201,19 @@
     "move": {
       "name": "Clanging Scales: Power ↑ +2",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4
     }
   },
   {
@@ -227,19 +230,20 @@
     "move": {
       "name": "Move: Clanging Scales\nMove Gauge Refresh 3",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful.",
+      "energyCost": 6
     }
   },
   {
@@ -253,7 +257,7 @@
       "value": 20,
       "u6": 999993980
     },
-    "move": { "name": "Speed +20" }
+    "move": { "name": "Speed +20", "energyCost": 7 }
   },
   {
     "cellId": 1009101015,
@@ -269,19 +273,20 @@
     "move": {
       "name": "Move: Clanging Scales\nMove Gauge Refresh 3",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful.",
+      "energyCost": 6
     }
   },
   {
@@ -298,19 +303,20 @@
     "move": {
       "name": "Move: Clanging Scales\nUnhindered",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "When the Pokémon attacks, ignores damage-reducing effects on the opponent’s field of play."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "When the Pokémon attacks, ignores damage-reducing effects on the opponent’s field of play.",
+      "energyCost": 7
     }
   },
   {
@@ -324,7 +330,7 @@
       "value": 5,
       "u6": 999994995
     },
-    "move": { "name": "Sp. Def +5" }
+    "move": { "name": "Sp. Def +5", "energyCost": 2 }
   },
   {
     "cellId": 1009101018,
@@ -340,18 +346,19 @@
     "move": {
       "name": "Dragon Breath: Power ↑ +4",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3
     }
   },
   {
@@ -365,7 +372,7 @@
       "value": 10,
       "u6": 999998990
     },
-    "move": { "name": "HP +10" }
+    "move": { "name": "HP +10", "energyCost": 2 }
   },
   {
     "cellId": 1009101020,
@@ -378,7 +385,7 @@
       "value": 10,
       "u6": 999998990
     },
-    "move": { "name": "HP +10" }
+    "move": { "name": "HP +10", "energyCost": 2 }
   },
   {
     "cellId": 1009101021,
@@ -393,7 +400,8 @@
     },
     "move": {
       "name": "Sand Shelter",
-      "description": "Protects the Pokémon from damage from a sandstorm."
+      "description": "Protects the Pokémon from damage from a sandstorm.",
+      "energyCost": 3
     }
   },
   {
@@ -407,7 +415,7 @@
       "value": 10,
       "u6": 999995990
     },
-    "move": { "name": "Sp. Atk +10" }
+    "move": { "name": "Sp. Atk +10", "energyCost": 4 }
   },
   {
     "cellId": 1009101023,
@@ -423,18 +431,19 @@
     "move": {
       "name": "Dragon Breath: Power ↑ +4",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3
     }
   },
   {
@@ -451,19 +460,20 @@
     "move": {
       "name": "Move: Dragon Breath\nMove Gauge Refresh 3",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful.",
+      "energyCost": 6
     }
   },
   {
@@ -480,19 +490,20 @@
     "move": {
       "name": "Move: Dragon Breath\nMove Gauge Refresh 3",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Has a moderately good chance of charging the user’s move gauge by one when a move is successful.",
+      "energyCost": 6
     }
   },
   {
@@ -509,19 +520,20 @@
     "move": {
       "name": "Move: Dragon Breath\nFurious Brawn",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "The more the user’s Attack has been raised, the more it powers up moves."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "The more the user’s Attack has been raised, the more it powers up moves.",
+      "energyCost": 10
     }
   },
   {
@@ -537,7 +549,8 @@
     },
     "move": {
       "name": "High Five 1",
-      "description": "Raises the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed after a sync move."
+      "description": "Raises the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed after a sync move.",
+      "energyCost": 10
     }
   },
   {
@@ -551,7 +564,7 @@
       "value": 5,
       "u6": 999996995
     },
-    "move": { "name": "Defense +5" }
+    "move": { "name": "Defense +5", "energyCost": 2 }
   },
   {
     "cellId": 1009101029,
@@ -567,18 +580,19 @@
     "move": {
       "name": "Clanging Scales: Power ↑ +2",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4
     }
   },
   {
@@ -594,7 +608,8 @@
     },
     "move": {
       "name": "Snow Shelter",
-      "description": "Protects the Pokémon from damage from a hailstorm."
+      "description": "Protects the Pokémon from damage from a hailstorm.",
+      "energyCost": 3
     }
   },
   {
@@ -611,18 +626,19 @@
     "move": {
       "name": "Clanging Scales: Power ↑ +2",
       "moveId": 653,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentAll",
+      "target": 3,
       "u8": 1,
       "gaugeDrain": 4,
       "power": 176,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 4
     }
   },
   {
@@ -636,7 +652,7 @@
       "value": 5,
       "u6": 999994995
     },
-    "move": { "name": "Sp. Def +5" }
+    "move": { "name": "Sp. Def +5", "energyCost": 2 }
   },
   {
     "cellId": 1009101033,
@@ -651,7 +667,8 @@
     },
     "move": {
       "name": "Static Shock 5",
-      "description": "Powers up sync moves when the target is paralyzed."
+      "description": "Powers up sync moves when the target is paralyzed.",
+      "energyCost": 8
     }
   },
   {
@@ -667,7 +684,8 @@
     },
     "move": {
       "name": "Last Dash 4",
-      "description": "Once per battle, substantially raises the user’s Speed when in a pinch."
+      "description": "Once per battle, substantially raises the user’s Speed when in a pinch.",
+      "energyCost": 8
     }
   },
   {
@@ -683,7 +701,8 @@
     },
     "move": {
       "name": "On the Ropes 5",
-      "description": "Reduces damage when the Pokémon is in a pinch and is hit by a physical attack move."
+      "description": "Reduces damage when the Pokémon is in a pinch and is hit by a physical attack move.",
+      "energyCost": 10
     }
   },
   {
@@ -700,19 +719,20 @@
     "move": {
       "name": "Move: Eyes on\nthe Prize!\nMP Refresh 4",
       "moveId": 10911,
-      "category": "Status",
+      "category": 3,
       "u3": 2,
-      "user": "Trainer",
-      "group": "Regular",
+      "user": 1,
+      "group": 2,
       "type": 0,
-      "target": "Self",
+      "target": 4,
       "u8": 1,
       "gaugeDrain": 0,
       "power": 0,
       "accuracy": 0,
-      "uses": 1,
-      "tags": "none",
-      "description": "Has a good chance of restoring one MP of the move used if the move is successful."
+      "maxUses": 1,
+      "tags": 0,
+      "description": "Has a good chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 12
     }
   },
   {
@@ -726,7 +746,7 @@
       "value": 10,
       "u6": 999998990
     },
-    "move": { "name": "HP +10" }
+    "move": { "name": "HP +10", "energyCost": 2 }
   },
   {
     "cellId": 1009101038,
@@ -742,18 +762,19 @@
     "move": {
       "name": "Dragon Breath: Power ↑ +4",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3
     }
   },
   {
@@ -770,19 +791,20 @@
     "move": {
       "name": "Move: X Sp. Atk\nMP Refresh 2",
       "moveId": 19030,
-      "category": "Status",
+      "category": 3,
       "u3": 2,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 0,
-      "target": "Self",
+      "target": 4,
       "u8": 1,
       "gaugeDrain": 0,
       "power": 0,
       "accuracy": 0,
-      "uses": 2,
-      "tags": "none",
-      "description": "Has a moderate chance of restoring one MP of the move used if the move is successful."
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderate chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7
     }
   },
   {
@@ -796,7 +818,7 @@
       "value": 10,
       "u6": 999998990
     },
-    "move": { "name": "HP +10" }
+    "move": { "name": "HP +10", "energyCost": 2 }
   },
   {
     "cellId": 1009101041,
@@ -812,18 +834,19 @@
     "move": {
       "name": "Dragon Breath: Power ↑ +4",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 3
     }
   },
   {
@@ -840,19 +863,20 @@
     "move": {
       "name": "Move: X Sp. Atk\nMP Refresh 2",
       "moveId": 19030,
-      "category": "Status",
+      "category": 3,
       "u3": 2,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 0,
-      "target": "Self",
+      "target": 4,
       "u8": 1,
       "gaugeDrain": 0,
       "power": 0,
       "accuracy": 0,
-      "uses": 2,
-      "tags": "none",
-      "description": "Has a moderate chance of restoring one MP of the move used if the move is successful."
+      "maxUses": 2,
+      "tags": 0,
+      "description": "Has a moderate chance of restoring one MP of the move used if the move is successful.",
+      "energyCost": 7
     }
   },
   {
@@ -869,19 +893,20 @@
     "move": {
       "name": "Move: Dragon Breath\nHostile Environment 1",
       "moveId": 225,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Regular",
+      "user": 0,
+      "group": 2,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 2,
       "power": 42,
       "accuracy": 100,
-      "uses": 0,
-      "tags": "none",
-      "description": "Raises the chance of inflicting status conditions with the additional effects of moves."
+      "maxUses": 0,
+      "tags": 0,
+      "description": "Raises the chance of inflicting status conditions with the additional effects of moves.",
+      "energyCost": 8
     }
   },
   {
@@ -897,7 +922,8 @@
     },
     "move": {
       "name": "Adrenaline 1",
-      "description": "Reduces the sync move countdown by one when a sync move is used for the first time."
+      "description": "Reduces the sync move countdown by one when a sync move is used for the first time.",
+      "energyCost": 10
     }
   },
   {
@@ -913,7 +939,8 @@
     },
     "move": {
       "name": "Paralysis Synergy 2",
-      "description": "Powers up moves when the target is paralyzed."
+      "description": "Powers up moves when the target is paralyzed.",
+      "energyCost": 10
     }
   },
   {
@@ -930,18 +957,19 @@
     "move": {
       "name": "Historymaker\nClanging Scales: Power ↑ +25",
       "moveId": 78700,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Sync",
+      "user": 0,
+      "group": 3,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 0,
       "power": 250,
       "accuracy": 0,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5
     }
   },
   {
@@ -958,18 +986,19 @@
     "move": {
       "name": "Historymaker\nClanging Scales: Power ↑ +25",
       "moveId": 78700,
-      "category": "Special",
+      "category": 2,
       "u3": 1,
-      "user": "Pokemon",
-      "group": "Sync",
+      "user": 0,
+      "group": 3,
       "type": 15,
-      "target": "OpponentSingle",
+      "target": 2,
       "u8": 1,
       "gaugeDrain": 0,
       "power": 250,
       "accuracy": 0,
-      "uses": 0,
-      "tags": "none"
+      "maxUses": 0,
+      "tags": 0,
+      "energyCost": 5
     }
   }
 ]

@@ -121,9 +121,9 @@ const extractGridByTrainerBaseId = () => {
 
     abilityPanelDB.entries.forEach((entry) => {
       if (entry.trainerId === trainerId) {
-        const { cellId, energy, orbs, x, y, z, abilityId } = entry;
-        // let cellId = cellId;
-        let energyCost = energy;
+        const { cellId, energyCost, orbs, x, y, z, abilityId } = entry;
+        // let cellId = bilityPanelId;
+        // let energyCost = energy;
         let orbCost = orbs;
         const coords = triangularCoordsToCollumns({ x, y, z });
         let move = {};
