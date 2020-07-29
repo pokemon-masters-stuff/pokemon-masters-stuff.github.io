@@ -503,5 +503,19 @@
     "17104": "Aumenta el Ataque y la Velocidad del bando del usuario.",
     "17105": "Aumenta la Defensa y la Velocidad del bando del usuario.",
     "17106": "Aumenta el Ataque Especial y la Velocidad del bando del usuario.",
-    "17107": "Aumenta la Defensa Especial y la Velocidad del bando del usuario."
+    "17107": "Aumenta la Defensa Especial y la Velocidad del bando del usuario.",
+    "124": "A veces envenena al objetivo.",
+    "139": "Envenena al bando rival.",
+    "333": "Ataca al objetivo de dos a cinco veces seguidas.",
+    "460": "Suele ser crítico.",
+    "556": "A veces hace retroceder al objetivo.",
+    "653": "Reduce la Defensa del usuario.",
+    "10024": "Llena 2 puntos de la barra de movimientos y aumenta el Ataque y el Ataque Especial del usuario. Si el usuario está dormido, llena 4 puntos de su barra de movimientos, aumenta bastante su Ataque y Ataque Especial, le restablece algunos PS y lo despierta.",
+    "10904": "Aumenta la Precisión del usuario. Aumenta la probabilidad de asestar golpes críticos del usuario, y la aumenta bastante si graniza.",
+    "10911": "Cuantos menos PS tenga el usuario, más se reduce el contador de movimientos compi de este, hasta un máximo de 3, y más aumenta su probabilidad de asestar golpes críticos, hasta un máximo de tres niveles.",
+    "11940": "Aumenta mucho el Ataque Especial y la Velocidad del usuario. Reduce en un 25 % los PS restantes del usuario.",
+    "78700": "Sin efectos secundarios.",
+    "79100": "Suele ser crítico.",
+    "79800": "Sin efectos secundarios.",
+    "79900": "Sin efectos secundarios."
 }

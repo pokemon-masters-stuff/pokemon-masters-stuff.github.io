@@ -1253,5 +1253,22 @@
     "18048206": "Quand le Duo subit une attaque, augmente\nlégèrement son Attaque (très souvent).",
     "18048207": "Quand le Duo subit une attaque, augmente\nlégèrement son Attaque (très très souvent).",
     "18048208": "Quand le Duo subit une attaque, augmente\nlégèrement son Attaque (presque toujours).",
-    "18048209": "Quand le Duo subit une attaque, augmente\nlégèrement son Attaque (à coup sûr)."
+    "18048209": "Quand le Duo subit une attaque, augmente\nlégèrement son Attaque (à coup sûr).",
+    "11010206": "Augmente légèrement le nombre de PV restaurés\npar les capacités soin du Duo.",
+    "12010502": "Quand il grêle, la Jauge Capacité du Duo\nse remplit plus vite.",
+    "13013401": "Plus l'Attaque du Pokémon a été augmentée, plus\nles capacités du Duo sont puissantes.",
+    "16011401": "Après l'utilisation d'une capacité Duo, invoque\nla grêle.",
+    "16011805": "En cas de tempête de sable, augmente\nlégèrement la puissance des capacités Duo.",
+    "16012005": "Augmente légèrement la puissance des capacités\nDuo si l'ennemi est gelé.",
+    "16012105": "Augmente légèrement la puissance des capacités\nDuo si l'ennemi est apeuré.",
+    "17030701": "Quand le Duo utilise avec succès une capacité,\nsoigne les altérations de statut de tous les alliés.",
+    "17041701": "Après avoir utilisé avec succès une capacité Duo\nqui vise un ennemi, endort ce dernier.",
+    "18045501": "Après l'utilisation d'une capacité Duo, augmente\nlégèrement l'Attaque, la Défense, l'Attaque\nSpéciale, la Défense Spéciale et la Vitesse du\nlanceur.",
+    "18048302": "Quand une capacité offensive du lanceur touche\nl'ennemi, baisse légèrement l'Attaque de ce\ndernier (assez rarement).",
+    "18050701": "Les attaques du Pokémon ont un taux de critiques\nplus élevé tant que ses PV sont au moins\ninférieurs à 50 %.",
+    "18050702": "Les attaques du Pokémon ont un taux de critiques\nplus élevé tant que ses PV sont au moins\ninférieurs à 50 %.",
+    "18048401": "Augmente l'Attaque du Pokémon quand il inflige\nun coup critique.",
+    "18048501": "Augmente l'Attaque Spéciale du Pokémon quand\nil inflige un coup critique.",
+    "18048601": "Quand le Duo utilise avec succès une capacité,\naugmente légèrement l'Attaque Spéciale de tous\nles alliés.",
+    "18048701": "Quand le Duo utilise avec succès une capacité,\naugmente légèrement la Défense Spéciale de\ntous les alliés."
 }

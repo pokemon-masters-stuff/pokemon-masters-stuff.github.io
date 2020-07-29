@@ -1253,5 +1253,22 @@
     "18048206": "Quando l'Unità subisce un attacco semplice,\nmolto spesso l'Attacco aumenta.",
     "18048207": "Quando l'Unità subisce un attacco semplice,\nspessissimo l'Attacco aumenta.",
     "18048208": "Quando l'Unità subisce un attacco semplice,\nquasi sempre l'Attacco aumenta.",
-    "18048209": "Quando l'Unità subisce un attacco semplice,\nl'Attacco aumenta."
+    "18048209": "Quando l'Unità subisce un attacco semplice,\nl'Attacco aumenta.",
+    "11010206": "Aumenta la quantità di PS recuperati dall'Unità\ngrazie a una sua mossa.",
+    "12010502": "Quando grandina, la barra mosse si riempie più\nvelocemente.",
+    "13013401": "Aumenta la potenza delle mosse in proporzione\nall'aumento dell'Attacco dell'Unità.",
+    "16011401": "Quando l'Unità usa un'Unimossa, causa\nuna grandinata.",
+    "16011805": "Durante le tempeste di sabbia, la potenza\ndell'Unimossa aumenta.",
+    "16012005": "La potenza dell'Unimossa aumenta quando\nil bersaglio è congelato.",
+    "16012105": "La potenza dell'Unimossa aumenta quando\nil bersaglio tentenna.",
+    "17030701": "Quando una mossa va a segno, tutte le Unità\nalleate guariscono dai problemi di stato.",
+    "17041701": "Quando un'Unimossa va a segno, addormenta\nil bersaglio.",
+    "18045501": "Quando l'Unità usa un'Unimossa, l'Attacco,\nla Difesa, l'Attacco Speciale, la Difesa Speciale\ne la Velocità aumentano.",
+    "18048302": "Quando un attacco semplice va a segno,\na volte riduce l'Attacco del bersaglio.",
+    "18050701": "Quando i PS dell'Unità scendono a metà o meno,\nla probabilità di mandare a segno un brutto\ncolpo con attacchi semplici aumenta.",
+    "18050702": "Quando i PS dell'Unità scendono a metà o meno,\nla probabilità di mandare a segno un brutto\ncolpo con attacchi semplici aumenta.",
+    "18048401": "Quando l'Unità manda a segno un brutto colpo,\nl'Attacco aumenta.",
+    "18048501": "Quando l'Unità manda a segno un brutto colpo,\nl'Attacco Speciale aumenta.",
+    "18048601": "Quando una mossa va a segno, l'Attacco Speciale\ndi tutte le Unità alleate aumenta.",
+    "18048701": "Quando una mossa va a segno, la Difesa\nSpeciale di tutte le Unità alleate aumenta."
 }

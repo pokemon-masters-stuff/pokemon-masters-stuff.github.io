@@ -503,5 +503,19 @@
     "17104": "Raises the Attack and Speed of all allied sync pairs.",
     "17105": "Raises the Defense and Speed of all allied sync pairs.",
     "17106": "Raises the Sp. Atk and Speed of all allied sync pairs.",
-    "17107": "Raises the Sp. Def and Speed of all allied sync pairs."
+    "17107": "Raises the Sp. Def and Speed of all allied sync pairs.",
+    "124": "Has a moderate chance of leaving the target poisoned.",
+    "139": "Leaves all opposing sync pairs poisoned.",
+    "333": "Attacks the target two to five times in a row.",
+    "460": "Critical hits land more easily.",
+    "556": "Has a moderate chance of making the target flinch.",
+    "653": "Lowers the user’s Defense.",
+    "10024": "Charges the user’s move gauge by two. Charges the user’s move gauge by four if they are asleep. Raises the user’s Attack and Sp. Atk. Sharply raises the user’s Attack and Sp. Atk if they are asleep. If the user is asleep, restores a bit of the user’s HP and removes the asleep condition from the user.",
+    "10904": "Raises the user’s accuracy and critical-hit rate. In addition, sharply raises the user’s critical-hit rate in a hailstorm.",
+    "10911": "Reduces the user’s sync move countdown by up to three based on how low their HP is. Raises the user’s critical-hit rate by up to three stat ranks based on how low their HP is.",
+    "11940": "Drastically raises the user’s Sp. Atk and Speed. The user takes damage equal to 25% of its remaining HP.",
+    "78700": "No additional effect.",
+    "79100": "Critical hits land more easily.",
+    "79800": "No additional effect.",
+    "79900": "No additional effect."
 }

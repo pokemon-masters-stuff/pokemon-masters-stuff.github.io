@@ -1253,5 +1253,22 @@
     "18048206": "Erhöht in vielen Fällen den Angriff des Pokémon,\nwenn es von einer Attacke getroffen wird.",
     "18048207": "Erhöht in sehr vielen Fällen den Angriff des\nPokémon, wenn es von einer Attacke getroffen\nwird.",
     "18048208": "Erhöht in fast allen Fällen den Angriff des\nPokémon, wenn es von einer Attacke getroffen\nwird.",
-    "18048209": "Erhöht den Angriff des Pokémon, wenn es von\neiner Attacke getroffen wird."
+    "18048209": "Erhöht den Angriff des Pokémon, wenn es von\neiner Attacke getroffen wird.",
+    "11010206": "Erhöht die Menge der wiederhergestellten KP,\nwenn das Pokémon eine KP wiederherstellende\nAttacke einsetzt.",
+    "12010502": "Beschleunigt bei Hagel das Auffüllen der\nAttackenleiste.",
+    "13013401": "Erhöht die Stärke von Attacken abhängig davon,\nwie stark der Angriff des Pokémon erhöht wurde.",
+    "16011401": "Erzeugt nach Einsatz der Gefährtenattacke Hagel.",
+    "16011805": "Erhöht bei Sandstürmen die Stärke der\nGefährtenattacke.",
+    "16012005": "Erhöht die Stärke der Gefährtenattacke, wenn der\nGegner gefroren ist.",
+    "16012105": "Erhöht die Stärke der Gefährtenattacke, wenn der\nGegner zurückgeschreckt ist.",
+    "17030701": "Befreit nach Erfolg einer Attacke alle Gefährten\nim Team von Statusproblemen.",
+    "17041701": "Versetzt nach Erfolg der Gefährtenattacke auf\neinen Gegner den Gegner in Schlaf.",
+    "18045501": "Erhöht nach Einsatz der Gefährtenattacke den\nAngriff, die Verteidigung, den Spezial-Angriff,\ndie Spezial-Verteidigung und die Initiative des\nPokémon.",
+    "18048302": "Senkt nach Erfolg einer Attacke eventuell den\nAngriff des Gegners.",
+    "18050701": "Erhöht die Volltrefferquote der Attacken des\nPokémon, wenn seine KP auf oder unter die\nHälfte fallen.",
+    "18050702": "Erhöht die Volltrefferquote der Attacken des\nPokémon, wenn seine KP auf oder unter die\nHälfte fallen.",
+    "18048401": "Erhöht nach gelandeten Volltreffern den Angriff\ndes Pokémon.",
+    "18048501": "Erhöht nach gelandeten Volltreffern den\nSpezial-Angriff des Pokémon.",
+    "18048601": "Erhöht nach Erfolg einer Attacke des Pokémon\nden Spezial-Angriff aller Gefährten im Team.",
+    "18048701": "Erhöht nach Erfolg einer Attacke des Pokémon die\nSpezial-Verteidigung aller Gefährten im Team."
 }

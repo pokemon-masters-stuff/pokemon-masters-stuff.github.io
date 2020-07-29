@@ -503,5 +503,19 @@
     "17104": "Augmente légèrement\nl'Attaque et la Vitesse de\ntous les alliés.",
     "17105": "Augmente légèrement\nla Défense et la Vitesse\nde tous les alliés.",
     "17106": "Augmente légèrement\nl'Attaque Spéciale et la\nVitesse de tous les alliés.",
-    "17107": "Augmente légèrement\nla Défense Spéciale et la\nVitesse de tous les alliés."
+    "17107": "Augmente légèrement\nla Défense Spéciale et la\nVitesse de tous les alliés.",
+    "124": "Empoisonne l'ennemi\n(assez rarement).",
+    "139": "Empoisonne tous les\nennemis.",
+    "333": "Attaque deux à cinq fois\nd'affilée.",
+    "460": "Taux de critiques élevé.",
+    "556": "Apeure l'ennemi\n(assez rarement).",
+    "653": "Baisse légèrement la\nDéfense du lanceur.",
+    "10024": "Remplit 2 segments\nde la Jauge Capacité\ndu lanceur.\nSi ce dernier est endormi,\nremplit 4 segments à la\nplace.\nAugmente légèrement\nl'Attaque et l'Attaque\nSpéciale du lanceur.\nSi ce dernier est endormi,\naugmente modérément\nces stats à la place. De\nplus, il regagne beaucoup\nde PV et se réveille.",
+    "10904": "Augmente légèrement\nla Précision et le taux de\ncritiques du lanceur.\nQuand il grêle, augmente\nmodérément le taux de\ncritiques du lanceur.",
+    "10911": "Plus les PV du lanceur\nsont bas, plus le nombre\nd'actions nécessaires pour\nlancer une capacité Duo\ndiminue (maximum 3), et\nplus son taux de critiques\naugmente (maximum 3\nrangs).",
+    "11940": "Augmente beaucoup\nl'Attaque Spéciale et la\nVitesse du lanceur.\nLe lanceur subit des\ndégâts équivalents à\n25 % de ses PV restants.",
+    "78700": "Aucun effet additionnel.",
+    "79100": "Taux de critiques élevé.",
+    "79800": "Aucun effet additionnel.",
+    "79900": "Aucun effet additionnel."
 }

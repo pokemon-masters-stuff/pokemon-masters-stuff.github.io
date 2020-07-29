@@ -503,5 +503,19 @@
     "17104": "Aumenta l'Attacco e la Velocità di tutte le Unità alleate.",
     "17105": "Aumenta la Difesa e la Velocità di tutte le Unità alleate.",
     "17106": "Aumenta l'Attacco Speciale e la Velocità di tutte le Unità alleate.",
-    "17107": "Aumenta la Difesa Speciale e la Velocità di tutte le Unità alleate."
+    "17107": "Aumenta la Difesa Speciale e la Velocità di tutte le Unità alleate.",
+    "124": "A volte avvelena il bersaglio.",
+    "139": "Avvelena tutte le Unità avversarie.",
+    "333": "Attacca il bersaglio da due a cinque volte di fila.",
+    "460": "Probabile brutto colpo.",
+    "556": "A volte fa tentennare il bersaglio.",
+    "653": "Riduce la Difesa di chi la usa.",
+    "10024": "Aggiunge due barrette alla barra mosse e aumenta l'Attacco e l'Attacco Speciale di chi la usa. Se chi la usa è addormentato, vengono invece aggiunte quattro barrette alla barra mosse, l'Attacco e l'Attacco Speciale aumentano di molto e chi la usa si risveglia dal sonno e recupera un po' di PS.",
+    "10904": "Aumenta la precisione di chi la usa e rende più probabili i brutti colpi. Se grandina, la probabilità di mandare a segno brutti colpi aumenta di molto.",
+    "10911": "Meno sono i PS di chi la usa, più si abbassa il numero di azioni necessarie per sferrare un'Unimossa (fino a un massimo di 3), e più aumenta la probabilità di chi la usa di mandare a segno brutti colpi (fino a un massimo di 3 gradi).",
+    "11940": "Aumenta moltissimo l'Attacco Speciale e la Velocità di chi la usa, che però subisce un danno pari al 25% dei suoi PS residui.",
+    "78700": "Non ha effetti aggiuntivi.",
+    "79100": "Probabile brutto colpo.",
+    "79800": "Non ha effetti aggiuntivi.",
+    "79900": "Non ha effetti aggiuntivi."
 }

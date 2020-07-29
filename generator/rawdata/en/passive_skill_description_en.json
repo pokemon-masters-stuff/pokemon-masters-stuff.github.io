@@ -1253,5 +1253,22 @@
     "18048206": "Has a great chance of raising the user’s Attack when the user is hit by an attack move.",
     "18048207": "Has a very great chance of raising the user’s Attack when the user is hit by an attack move.",
     "18048208": "Almost always raises the user’s Attack when the user is hit by an attack move.",
-    "18048209": "Raises the user’s Attack when the user is hit by an attack move."
+    "18048209": "Raises the user’s Attack when the user is hit by an attack move.",
+    "11010206": "Increases the amount of HP restored by the user’s healing moves.",
+    "12010502": "Quickly charges the move gauge in a hailstorm.",
+    "13013401": "The more the user’s Attack has been raised, the more it powers up moves.",
+    "16011401": "Causes a hailstorm after a sync move.",
+    "16011805": "Powers up sync moves in a sandstorm.",
+    "16012005": "Powers up sync moves when the target is frozen.",
+    "16012105": "Powers up sync moves when the target is flinching.",
+    "17030701": "Removes all status conditions from all allied sync pairs when a move is successful.",
+    "17041701": "Puts the target to sleep when a sync move targeting an opponent is successful.",
+    "18045501": "Raises the user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed after a sync move.",
+    "18048302": "Has a moderate chance of lowering the target’s Attack when an attack is successful.",
+    "18050701": "Critical hits land more easily when the user attacks with a move while their HP is at half or below.",
+    "18050702": "Critical hits land more easily when the user attacks with a move while their HP is at half or below.",
+    "18048401": "Raises the user’s Attack when they land a critical hit.",
+    "18048501": "Raises the user’s Sp. Atk when they land a critical hit.",
+    "18048601": "Raises the Sp. Atk of all allied sync pairs when a move is successful.",
+    "18048701": "Raises the Sp. Def of all allied sync pairs when a move is successful."
 }
