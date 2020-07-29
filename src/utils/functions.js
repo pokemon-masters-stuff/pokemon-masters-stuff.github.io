@@ -138,7 +138,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "drifblim" ||
       pokemon === "dragonite" ||
       pokemon === "jigglypuff" ||
-      pokemon === "alolan_sandslash" ||
+      pokemon === "sandslash" ||
       pokemon === "kommo-o"
     ) {
       if (
@@ -181,7 +181,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "delphox" ||
       pokemon === "crobat" ||
       pokemon === "onix" ||
-      pokemon === "lycanroc_midday"
+      pokemon === "lycanroc"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -298,7 +298,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "drifblim" ||
       pokemon === "dragonite" ||
       pokemon === "jigglypuff" ||
-      pokemon === "alolan_sandslash" ||
+      pokemon === "sandslash" ||
       pokemon === "kommo-o"
     ) {
       if (
@@ -329,7 +329,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === "delphox" ||
       pokemon === "crobat" ||
       pokemon === "onix" ||
-      pokemon === "lycanroc_midday"
+      pokemon === "lycanroc"
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
