@@ -224,7 +224,6 @@ const extractSyncPairDataByTrainerBaseId = () => {
   let syncPairNames = {};
 
   trainerList.forEach((trainerIdFromList) => {
-    console.log("trainerIdFromList", trainerIdFromList);
     // Find entry in Trainer.json
     let trainer = trainerDB.entries.find(
       (trainer) => trainer.trainerId.toString() === trainerIdFromList
@@ -233,16 +232,24 @@ const extractSyncPairDataByTrainerBaseId = () => {
     if (trainer) {
       // Use trainerBaseId to find monsterId and trainerBaseId in Trainer.json
       monsterId = trainer.monsterId;
+      console.log("monsterId", monsterId);
 
       trainerBaseId = trainer.trainerBaseId;
 
       // If  the three starters, find the final evolution form
-      if (monsterId === 28000040001) {
-        monsterId = 28000040003;
-      } else if (monsterId === 28000040004) {
-        monsterId = 28000040006;
-      } else if (monsterId === 28000040007) {
-        monsterId = 28000040009;
+      // if (monsterId === 28000040001) {
+      //   monsterId = 28000040003;
+      // } else if (monsterId === 28000040004) {
+      //   monsterId = 28000040006;
+      // } else if (monsterId === 28000040007) {
+      //   monsterId = 28000040009;
+      // }
+      if (monsterId === "28000040001") {
+        monsterId = "28000040003";
+      } else if (monsterId === "28000040004") {
+        monsterId = "28000040006";
+      } else if (monsterId === "28000040007") {
+        monsterId = "28000040009";
       } else {
         // else check if there is an evolved form. If so use the final evolved form's monsterId
         let thirdEvolvedFormMonsterId =
