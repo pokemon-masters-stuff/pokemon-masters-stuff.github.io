@@ -18,11 +18,26 @@ export const getPokemonNameList = (language) =>
       //  // for the old sync pair, change displayed value but not name so that old saves are still compatible
       //  let valueOfOldSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
       // }
-      return {
-        key: index,
-        name: entry.pokemonNameByLanguage["en"],
-        value: entry.pokemonNameByLanguage[language], // value changes as language changes. name stays the same so old links and saves are compatible
-      };
+      if (
+        entry.monsterBaseId === "20082911" ||
+        entry.monsterBaseId === "20002861" ||
+        entry.monsterBaseId === "20081800" ||
+        entry.monsterBaseId === "20003901" ||
+        entry.monsterBaseId === "20009500" ||
+        entry.monsterBaseId === "20014900"
+      ) {
+        return {
+          key: index,
+          name: entry.pokemonNameByLanguage["en"],
+          value: entry.pokemonNameByLanguage[language] + "*", // value changes as language changes. name stays the same so old links and saves are compatible
+        };
+      } else {
+        return {
+          key: index,
+          name: entry.pokemonNameByLanguage["en"],
+          value: entry.pokemonNameByLanguage[language], // value changes as language changes. name stays the same so old links and saves are compatible
+        };
+      }
     })
     .sort((a, b) => {
       let x = a.value;
