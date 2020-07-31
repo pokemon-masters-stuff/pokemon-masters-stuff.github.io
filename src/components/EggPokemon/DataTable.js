@@ -35,54 +35,18 @@ function Stats(props) {
     statBonusFromAffinity,
     hpBonusFromPotential,
     statBonusFromPotentialExceptHp,
-    levelBasedOnRarity,
   } = props;
 
   const { hp, atk, def, spa, spd, spe } = baseStats;
 
   const classes = useRowStyles();
 
-  let baseHp;
-  let baseAtk;
-  let baseDef;
-  let baseSpa;
-  let baseSpd;
-  let baseSpe;
-
-  if (rarity < 4) {
-    baseHp =
-      hp[3] +
-      ((levelBasedOnRarity - 100) * (hp[4] - hp[3])) / (120 - 100) +
-      (selectedRarity - rarity) * 40;
-    baseAtk =
-      atk[3] +
-      ((levelBasedOnRarity - 100) * (atk[4] - atk[3])) / (120 - 100) +
-      (selectedRarity - rarity) * 20;
-    baseDef =
-      def[3] +
-      ((levelBasedOnRarity - 100) * (def[4] - def[3])) / (120 - 100) +
-      (selectedRarity - rarity) * 20;
-    baseSpa =
-      spa[3] +
-      ((levelBasedOnRarity - 100) * (spa[4] - spa[3])) / (120 - 100) +
-      (selectedRarity - rarity) * 20;
-    baseSpd =
-      spd[3] +
-      ((levelBasedOnRarity - 100) * (spd[4] - spd[3])) / (120 - 100) +
-      (selectedRarity - rarity) * 20;
-    baseSpe =
-      spe[3] +
-      ((levelBasedOnRarity - 100) * (spe[4] - spe[3])) / (120 - 100) +
-      (selectedRarity - rarity) * 20;
-  } else {
-    // rarity 4 or 5, level 120
-    baseHp = hp[4] + (selectedRarity - rarity) * 40;
-    baseAtk = atk[4] + (selectedRarity - rarity) * 20;
-    baseDef = def[4] + (selectedRarity - rarity) * 20;
-    baseSpa = spa[4] + (selectedRarity - rarity) * 20;
-    baseSpd = spd[4] + (selectedRarity - rarity) * 20;
-    baseSpe = spe[4] + (selectedRarity - rarity) * 20;
-  }
+  let baseHp = hp[4] + (selectedRarity - rarity) * 40;
+  let baseAtk = atk[4] + (selectedRarity - rarity) * 20;
+  let baseDef = def[4] + (selectedRarity - rarity) * 20;
+  let baseSpa = spa[4] + (selectedRarity - rarity) * 20;
+  let baseSpd = spd[4] + (selectedRarity - rarity) * 20;
+  let baseSpe = spe[4] + (selectedRarity - rarity) * 20;
 
   return (
     <Fragment>
@@ -384,18 +348,6 @@ export default function MovesAndSkillsModal(props) {
   const [selectedAffinityLevel, setSelectedAffinityLevel] = useState("1/3");
   const [selectedAffinityProgress, setSelectedAffinityProgress] = useState(0);
 
-  let levelBasedOnRarity;
-
-  if (selectedRarity === 1) {
-    levelBasedOnRarity = 105;
-  } else if (selectedRarity === 2) {
-    levelBasedOnRarity = 110;
-  } else if (selectedRarity === 3) {
-    levelBasedOnRarity = 115;
-  } else {
-    levelBasedOnRarity = 120;
-  }
-
   let hpBonusFromPotential =
     rarity === 5 ? selectedPotential * 5 || 0 : selectedPotential * 2 || 0;
 
@@ -596,7 +548,7 @@ export default function MovesAndSkillsModal(props) {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell>Lv{levelBasedOnRarity} Stats</TableCell>
+              <TableCell>Lv120 Stats</TableCell>
               <TableCell align="right">Base</TableCell>
               <TableCell align="right">Potential</TableCell>
               <TableCell align="right">Affinity</TableCell>
@@ -613,7 +565,6 @@ export default function MovesAndSkillsModal(props) {
               hpBonusFromPotential={hpBonusFromPotential}
               statBonusFromPotentialExceptHp={statBonusFromPotentialExceptHp}
               statBonusFromAffinity={statBonusFromAffinity}
-              levelBasedOnRarity={levelBasedOnRarity}
               // isMega={isMega}
             />
           </TableBody>

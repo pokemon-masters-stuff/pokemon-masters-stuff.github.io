@@ -72,144 +72,67 @@ function Stats(props) {
     speUpFromGrid = selectedStatTiles.spe || 0;
   }
 
-  let baseHp =
-    rarity === 3 && selectedRarity === 3
-      ? Math.floor(
-          hp[3] +
-            ((115 - 100) * (hp[4] - hp[3])) / (120 - 100) +
-            (selectedRarity - rarity) * 40
-        )
-      : hp[4] + (selectedRarity - rarity) * 40;
+  let baseHp = hp[4] + (selectedRarity - rarity) * 40;
 
   let baseAtk =
-    rarity === 3 && selectedRarity === 3
-      ? Math.floor(
-          (atk[3] + ((115 - 100) * (atk[4] - atk[3])) / (120 - 100)) *
-            (isMega ? atkScale / 100 : 1)
-        ) +
-        (isMega &&
-        atkScale !== 100 &&
-        Number.isInteger(
-          (atk[3] + ((115 - 100) * (atk[4] - atk[3])) / (120 - 100)) *
-            (atkScale / 100)
-        )
-          ? -1
-          : 0)
-      : Math.floor(
-          (atk[4] + (selectedRarity - rarity) * 20) *
-            (isMega ? atkScale / 100 : 1)
-        ) +
-        (isMega &&
-        atkScale !== 100 &&
-        Number.isInteger(
-          (atk[4] + (selectedRarity - rarity) * 20) * (atkScale / 100)
-        )
-          ? -1
-          : 0);
+    Math.floor(
+      (atk[4] + (selectedRarity - rarity) * 20) * (isMega ? atkScale / 100 : 1)
+    ) +
+    (isMega &&
+    atkScale !== 100 &&
+    Number.isInteger(
+      (atk[4] + (selectedRarity - rarity) * 20) * (atkScale / 100)
+    )
+      ? -1
+      : 0);
 
   let baseDef =
-    rarity === 3 && selectedRarity === 3
-      ? Math.floor(
-          (def[3] + ((115 - 100) * (def[4] - def[3])) / (120 - 100)) *
-            (isMega ? defScale / 100 : 1)
-        ) +
-        (isMega &&
-        defScale !== 100 &&
-        Number.isInteger(
-          (def[3] + ((115 - 100) * (def[4] - def[3])) / (120 - 100)) *
-            (defScale / 100)
-        )
-          ? -1
-          : 0)
-      : Math.floor(
-          (def[4] + (selectedRarity - rarity) * 20) *
-            (isMega ? defScale / 100 : 1)
-        ) +
-        (isMega &&
-        defScale !== 100 &&
-        Number.isInteger(
-          (def[4] + (selectedRarity - rarity) * 20) * (defScale / 100)
-        )
-          ? -1
-          : 0);
+    Math.floor(
+      (def[4] + (selectedRarity - rarity) * 20) * (isMega ? defScale / 100 : 1)
+    ) +
+    (isMega &&
+    defScale !== 100 &&
+    Number.isInteger(
+      (def[4] + (selectedRarity - rarity) * 20) * (defScale / 100)
+    )
+      ? -1
+      : 0);
 
   let baseSpa =
-    rarity === 3 && selectedRarity === 3
-      ? Math.floor(
-          (spa[3] + ((115 - 100) * (spa[4] - spa[3])) / (120 - 100)) *
-            (isMega ? spaScale / 100 : 1)
-        ) +
-        (isMega &&
-        spaScale !== 100 &&
-        Number.isInteger(
-          (spa[3] + ((115 - 100) * (spa[4] - spa[3])) / (120 - 100)) *
-            (spaScale / 100)
-        )
-          ? -1
-          : 0)
-      : Math.floor(
-          (spa[4] + (selectedRarity - rarity) * 20) *
-            (isMega ? spaScale / 100 : 1)
-        ) +
-        (isMega &&
-        spaScale !== 100 &&
-        Number.isInteger(
-          (spa[4] + (selectedRarity - rarity) * 20) * (spaScale / 100)
-        )
-          ? -1
-          : 0);
+    Math.floor(
+      (spa[4] + (selectedRarity - rarity) * 20) * (isMega ? spaScale / 100 : 1)
+    ) +
+    (isMega &&
+    spaScale !== 100 &&
+    Number.isInteger(
+      (spa[4] + (selectedRarity - rarity) * 20) * (spaScale / 100)
+    )
+      ? -1
+      : 0);
 
   let baseSpd =
-    rarity === 3 && selectedRarity === 3
-      ? Math.floor(
-          (spd[3] + ((115 - 100) * (spd[4] - spd[3])) / (120 - 100)) *
-            (isMega ? spdScale / 100 : 1)
-        ) +
-        (isMega &&
-        spdScale !== 100 &&
-        Number.isInteger(
-          (spd[3] + ((115 - 100) * (spd[4] - spd[3])) / (120 - 100)) *
-            (spdScale / 100)
-        )
-          ? -1
-          : 0)
-      : Math.floor(
-          (spd[4] + (selectedRarity - rarity) * 20) *
-            (isMega ? spdScale / 100 : 1)
-        ) +
-        (isMega &&
-        spdScale !== 100 &&
-        Number.isInteger(
-          (spd[4] + (selectedRarity - rarity) * 20) * (spdScale / 100)
-        )
-          ? -1
-          : 0);
+    Math.floor(
+      (spd[4] + (selectedRarity - rarity) * 20) * (isMega ? spdScale / 100 : 1)
+    ) +
+    (isMega &&
+    spdScale !== 100 &&
+    Number.isInteger(
+      (spd[4] + (selectedRarity - rarity) * 20) * (spdScale / 100)
+    )
+      ? -1
+      : 0);
 
   let baseSpe =
-    rarity === 3 && selectedRarity === 3
-      ? Math.floor(
-          (spe[3] + ((115 - 100) * (spe[4] - spe[3])) / (120 - 100)) *
-            (isMega ? speScale / 100 : 1)
-        ) +
-        (isMega &&
-        speScale !== 100 &&
-        Number.isInteger(
-          (spe[3] + ((115 - 100) * (spe[4] - spe[3])) / (120 - 100)) *
-            (speScale / 100)
-        )
-          ? -1
-          : 0)
-      : Math.floor(
-          (spe[4] + (selectedRarity - rarity) * 20) *
-            (isMega ? speScale / 100 : 1)
-        ) +
-        (isMega &&
-        speScale !== 100 &&
-        Number.isInteger(
-          (spe[4] + (selectedRarity - rarity) * 20) * (speScale / 100)
-        )
-          ? -1
-          : 0);
+    Math.floor(
+      (spe[4] + (selectedRarity - rarity) * 20) * (isMega ? speScale / 100 : 1)
+    ) +
+    (isMega &&
+    speScale !== 100 &&
+    Number.isInteger(
+      (spe[4] + (selectedRarity - rarity) * 20) * (speScale / 100)
+    )
+      ? -1
+      : 0);
 
   return (
     <Fragment>
@@ -753,8 +676,6 @@ export default function MovesAndSkillsModal(props) {
 
   const [selectedPotential, setSelectedPotential] = useState(0);
 
-  let levelBasedOnRarity = selectedRarity === 3 ? "115" : "120";
-
   let bonusHpFromPotential =
     rarity === 5 ? selectedPotential * 5 || 0 : selectedPotential * 2 || 0;
 
@@ -880,8 +801,8 @@ export default function MovesAndSkillsModal(props) {
             <TableHead>
               <TableRow>
                 <TableCell />
-                <TableCell>Lv{levelBasedOnRarity} Stats</TableCell>
-                <TableCell align="right">Stat (Displayed in-game)</TableCell>
+                <TableCell>Lv120 Stats</TableCell>
+                <TableCell align="right">Stat</TableCell>
                 <TableCell align="right">
                   {!isMega ? "Grid" : "Grid (xMega↑)"}
                 </TableCell>
