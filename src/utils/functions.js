@@ -411,16 +411,18 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
 
-  if (moveName.length > 13) {
+  if (moveName.length > 12) {
     if (shortenedMoveNameByAbilityId[language]) {
       if (shortenedMoveNameByAbilityId[language][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
-      } else if (shortenedMoveNameByAbilityId["en"][abilityId]) {
+      }
+      // comment out this else-if when generating lists of skill names to be abbreviated
+      else if (shortenedMoveNameByAbilityId["en"][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId["en"][abilityId];
       }
       // else {
       //   // to generate list of skills to be abbreviated
-      //   if ((language = "es")) {
+      //   if (language === "it") {
       //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
       //     console.log(names); // to generate list of skills to be abbreviated
       //   }

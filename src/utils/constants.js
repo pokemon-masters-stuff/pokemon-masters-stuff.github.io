@@ -1,4 +1,5 @@
 import {
+  shortenedMoveNameByAbilityIdDE,
   shortenedMoveNameByAbilityIdEN,
   shortenedMoveNameByAbilityIdIT,
   shortenedMoveNameByAbilityIdES,
@@ -496,6 +497,7 @@ export const allThumbnails = {
 };
 
 export const shortenedMoveNameByAbilityId = {
+  de: shortenedMoveNameByAbilityIdDE,
   en: shortenedMoveNameByAbilityIdEN,
   it: shortenedMoveNameByAbilityIdIT,
   es: shortenedMoveNameByAbilityIdES,
