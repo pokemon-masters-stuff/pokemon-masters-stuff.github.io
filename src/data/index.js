@@ -1,3 +1,4 @@
+export { default as shortenedMoveNameByAbilityIdDE } from "./shortenedMoveNameByAbilityId/de";
 export { default as shortenedMoveNameByAbilityIdEN } from "./shortenedMoveNameByAbilityId/en";
 export { default as shortenedMoveNameByAbilityIdIT } from "./shortenedMoveNameByAbilityId/it";
 export { default as shortenedMoveNameByAbilityIdES } from "./shortenedMoveNameByAbilityId/es";
