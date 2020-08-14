@@ -4,7 +4,7 @@ const fs = require("fs");
 const trainerDB = require("../rawdata/Trainer.json");
 const abilityPanelDB = require("../rawdata/AbilityPanel.json");
 const abilityDB = require("../rawdata/Ability.json");
-const moveDB = require("../rawdata/Move.json");
+const moveDB = require("../rawdata/ModifiedMove.json");
 const triangularCoordsToCollumns = require("../utils/triangularCoordsToCollumns");
 
 const abilityDescriptionDBde = require("../rawdata/de/ability_description_de.json");

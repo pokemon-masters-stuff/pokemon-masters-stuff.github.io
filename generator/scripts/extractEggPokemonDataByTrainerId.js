@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const monsterDB = require("../rawdata/Monster.json");
-const moveDB = require("../rawdata/Move.json");
+const moveDB = require("../rawdata/ModifiedMove.json");
 const trainerDB = require("../rawdata/Trainer.json");
 const trainerBaseDB = require("../rawdata/TrainerBase.json");
 const monsterVariationDB = require("../rawdata/MonsterVariation.json");
