@@ -199,6 +199,17 @@ const gridedTrainerList = [
   "10000100", // lycanroc midday
 ];
 
+const newTrainerBaseIdArray = [
+  // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
+  // 7/29/2020
+  "10009101", // kommo-o
+  "10009040", // alolan sandslash
+  "10000240", // jigglypuff
+  "10011100", // dragonite
+  "10001500", // onix
+  "10000100", // lycanroc midday
+];
+
 // On 5/25/2020 the following changes have been made to the .proto files:
 // monsterId->monsterBaseId
 // trainerId->monsterId
@@ -1270,6 +1281,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
     entry.pokemonNameByLanguage = pokemonNameByLanguage;
     entry.trainerNameByLanguage = trainerNameByLanguage;
     entry.syncPairNameByLanguage = syncPairNameByLanguage;
+
+    if (newTrainerBaseIdArray.includes(entry.trainerBaseId)) {
+      console.log(
+        `"${entry.monsterBaseId}", // ${entry.pokemonNameByLanguage["en"]}`
+      );
+    }
   });
   fs.writeFile(
     `${__dirname}/../../src/data/allGridedPokemon.json`,
