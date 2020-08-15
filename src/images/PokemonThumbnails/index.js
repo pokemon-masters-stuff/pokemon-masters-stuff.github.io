@@ -46,3 +46,6 @@ export { default as sandslash } from "./pm0028_61.png";
 export { default as kommoo } from "./pm0818.png";
 export { default as jigglypuff } from "./pm0039.png";
 export { default as dragonite } from "./pm0149.png";
+
+// test
+// export { default as olivia_lycanroc } from "./pm0818.png";

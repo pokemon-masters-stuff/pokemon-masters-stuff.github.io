@@ -23,6 +23,7 @@ import {
   // addSyncLvReq,
   checkSelectabilityBasedOnSyncLv,
   removeHyphens,
+  capitalizeSyncPairNameForUrl,
 } from "../../utils/functions";
 import { allThumbnails, allSyncGrids } from "../../utils/constants";
 import UI from "../../utils/translations";
@@ -169,15 +170,27 @@ class GridMap extends Component {
     if (!this.props.grid.selectedCellsById[data.cellId]) {
       this.props.addToGridList(data);
       this.props.subtractFromRemainingEnergy(data);
-      this.props.updateUrl(
-        this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
-      );
+      if (this.props.pokemon.indexOf("_") !== -1) {
+        // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
+        this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
+      } else {
+        this.props.updateUrl(
+          this.props.pokemon.charAt(0).toUpperCase() +
+            this.props.pokemon.slice(1)
+        );
+      }
     } else {
       this.props.removeFromGridList(data);
       this.props.addBackToRemainingEnergy(data);
-      this.props.updateUrl(
-        this.props.pokemon.charAt(0).toUpperCase() + this.props.pokemon.slice(1)
-      );
+      if (this.props.pokemon.indexOf("_") !== -1) {
+        // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
+        this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
+      } else {
+        this.props.updateUrl(
+          this.props.pokemon.charAt(0).toUpperCase() +
+            this.props.pokemon.slice(1)
+        );
+      }
     }
   }
 
@@ -288,7 +301,7 @@ class GridMap extends Component {
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, language } = this.props;
-
+    console.log("this.props.pokemon", this.props.pokemon);
     return initialRender ? (
       <div className={classes.progressWrapper}>
         <CircularProgress color="secondary" />

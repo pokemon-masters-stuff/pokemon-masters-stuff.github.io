@@ -197,6 +197,8 @@ const gridedTrainerList = [
   "10011100", // dragonite
   "10001500", // onix
   "10000100", // lycanroc midday
+  // 8/14/2020 test
+  // "10005100", // lycanroc midnight
 ];
 
 const newTrainerBaseIdArray = [
@@ -208,6 +210,8 @@ const newTrainerBaseIdArray = [
   "10011100", // dragonite
   "10001500", // onix
   "10000100", // lycanroc midday
+  // 8/14/2020 test
+  // "10005100", // lycanroc midnight
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -1284,7 +1288,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
 
     if (newTrainerBaseIdArray.includes(entry.trainerBaseId)) {
       console.log(
-        `"${entry.monsterBaseId}", // ${entry.pokemonNameByLanguage["en"]}`
+        `"${entry.monsterBaseId}", // ${entry.pokemonNameByLanguage["en"]} (${entry.trainerNameByLanguage["en"]})`
       );
     }
   });
