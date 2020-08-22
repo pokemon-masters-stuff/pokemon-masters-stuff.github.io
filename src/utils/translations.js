@@ -61,7 +61,7 @@ const UI = {
     zh: '公告',
   },
   'Popular Builds': {
-    de: 'Beliebte Gebäude',
+    de: 'Beliebte Builds',
     en: 'Popular Builds',
     es: 'Construcciones Populares',
     fr: 'Builds Populaires',
@@ -81,7 +81,7 @@ const UI = {
     zh: '提交反饋',
   },
   Submit: {
-    de: 'einreichen',
+    de: 'Einreichen',
     en: 'Submit',
     es: 'Enviar',
     fr: 'Poster',
@@ -271,7 +271,7 @@ const UI = {
     zh: '發布',
   },
   'Publish this build': {
-    de: 'Veröffentlichen',
+    de: 'Veröffentlichen Sie diesen Build',
     en: 'Publish this build',
     es: 'Publicar',
     fr: 'Publier la version actuelle',
@@ -339,7 +339,7 @@ const UI = {
 
   // Builds Page
   'Liked Builds': {
-    de: 'Gefallen Builds',
+    de: 'Beliebte Builds',
     en: 'Liked Builds',
     es: 'Construcciones que me gustaron',
     fr: 'Builds aimés',
