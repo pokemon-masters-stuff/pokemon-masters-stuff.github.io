@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const monsterDB = require("../rawdata/Monster.json");
-const moveDB = require("../rawdata/Move.json");
+const moveDB = require("../rawdata/ModifiedMove.json");
 const trainerDB = require("../rawdata/Trainer.json");
 const trainerBaseDB = require("../rawdata/TrainerBase.json");
 const monsterVariationDB = require("../rawdata/MonsterVariation.json");
@@ -197,6 +197,21 @@ const gridedTrainerList = [
   "10011100", // dragonite
   "10001500", // onix
   "10000100", // lycanroc midday
+  // 8/14/2020 test
+  // "10005100", // lycanroc midnight
+];
+
+const newTrainerBaseIdArray = [
+  // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
+  // 7/29/2020
+  "10009101", // kommo-o
+  "10009040", // alolan sandslash
+  "10000240", // jigglypuff
+  "10011100", // dragonite
+  "10001500", // onix
+  "10000100", // lycanroc midday
+  // 8/14/2020 test
+  // "10005100", // lycanroc midnight
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -1270,6 +1285,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
     entry.pokemonNameByLanguage = pokemonNameByLanguage;
     entry.trainerNameByLanguage = trainerNameByLanguage;
     entry.syncPairNameByLanguage = syncPairNameByLanguage;
+
+    if (newTrainerBaseIdArray.includes(entry.trainerBaseId)) {
+      console.log(
+        `"${entry.monsterBaseId}", // ${entry.pokemonNameByLanguage["en"]} (${entry.trainerNameByLanguage["en"]})`
+      );
+    }
   });
   fs.writeFile(
     `${__dirname}/../../src/data/allGridedPokemon.json`,

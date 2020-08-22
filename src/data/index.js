@@ -374,3 +374,13 @@ export { default as sandslashGridDataZH } from "./grids/zh/alolan_sandslash.json
 export { default as kommooGridDataZH } from "./grids/zh/kommo-o.json";
 export { default as jigglypuffGridDataZH } from "./grids/zh/jigglypuff.json";
 export { default as dragoniteGridDataZH } from "./grids/zh/dragonite.json";
+
+// Test
+// export { default as olivia_lycanrocGridDataDE } from "./grids/de/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataEN } from "./grids/en/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataES } from "./grids/es/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataFR } from "./grids/fr/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataIT } from "./grids/it/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataJA } from "./grids/ja/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataKO } from "./grids/ko/lycanroc_midnight.json";
+// export { default as olivia_lycanrocGridDataZH } from "./grids/zh/lycanroc_midnight.json";

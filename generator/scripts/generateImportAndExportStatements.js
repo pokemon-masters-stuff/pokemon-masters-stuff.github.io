@@ -21,6 +21,9 @@ const newGridedPokemonList = [
   // "20003901", // jigglypuff
   "20003900", // jigglypuff
   "20014900", // dragonite
+
+  // test
+  // "20082912", // Lycanroc midnight
 ];
 
 const generateImportAndExportStatements = () => {
@@ -52,7 +55,7 @@ const generateImportAndExportStatements = () => {
       );
       importAndExportStatements["imports"]["gridData"] = gridDataImportArray;
 
-      // Export statements for data\index.js
+      // Export statements for data/index.js
       gridIndexExportArray.push(
         `export { default as ${pokemonNameDBen[
           monsterBaseId

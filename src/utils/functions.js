@@ -6,18 +6,48 @@ export const removeHyphens = (str) => {
   return str.replace(/-/g, "");
 };
 
+export const capitalizeSyncPairNameForUrl = (syncPairName) => {
+  let firstPart = syncPairName.substr(0, syncPairName.indexOf("_"));
+  let secondPart = syncPairName.substr(syncPairName.indexOf("_") + 1);
+
+  let capitalizedFirstPart =
+    firstPart.charAt(0).toUpperCase() + firstPart.slice(1);
+  let capitalizedSecondPart =
+    secondPart.charAt(0).toUpperCase() + secondPart.slice(1);
+
+  let newString = capitalizedFirstPart + "_" + capitalizedSecondPart;
+  return newString;
+};
+
 export const getPokemonNameList = (language) =>
   arrayOfAllGridedPokemon
     .map((entry, index) => {
-      // if (entry.monsterBaseId === 'id of new duplicate pokemon') {
-      //  // for the new sync pair:
-      //   let valueOfNewSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
-      //   let name = entry.syncPairNameByLanguage['en']
+      let name = entry.pokemonNameByLanguage["en"]; // name stays the same so old links and saves are compatible
+      let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
+
+      // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
+      // if (entry.monsterBaseId === "20082912") {
+      //   // for the new sync pair:
+      //   value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+      //   name = entry.syncPairNameByLanguage["en"];
+
+      //   return {
+      //     key: index,
+      //     name: name,
+      //     value: value + "*", // value changes as language changes. name stays the same so old links and saves are compatible
+      //   };
+      // } else if (entry.monsterBaseId === "20082911") {
+      //   // for the old sync pair, change displayed value but not name so that old saves are still compatible
+      //   value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+
+      //   return {
+      //     key: index,
+      //     name: name,
+      //     // value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+      //     value: value + "*", // value changes as language changes. name stays the same so old links and saves are compatible
+      //   };
       // }
-      // if (entry.monsterBaseId === 'id of old duplicate pokemon') {
-      //  // for the old sync pair, change displayed value but not name so that old saves are still compatible
-      //  let valueOfOldSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
-      // }
+
       if (
         entry.monsterBaseId === "20082911" ||
         entry.monsterBaseId === "20002861" ||
@@ -28,14 +58,14 @@ export const getPokemonNameList = (language) =>
       ) {
         return {
           key: index,
-          name: entry.pokemonNameByLanguage["en"],
-          value: entry.pokemonNameByLanguage[language] + "*", // value changes as language changes. name stays the same so old links and saves are compatible
+          name: name,
+          value: value + "*", // value changes as language changes. name stays the same so old links and saves are compatible
         };
       } else {
         return {
           key: index,
-          name: entry.pokemonNameByLanguage["en"],
-          value: entry.pokemonNameByLanguage[language], // value changes as language changes. name stays the same so old links and saves are compatible
+          name: name,
+          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
         };
       }
     })
@@ -48,7 +78,12 @@ export const getPokemonNameList = (language) =>
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;
   arrayOfAllGridedPokemon.forEach((pokemon) => {
-    if (pokemon.pokemonNameByLanguage["en"] === pokemonName) {
+    if (
+      pokemon.pokemonNameByLanguage["en"] === pokemonName ||
+      pokemon.pokemonNameByLanguage["en"].toLowerCase() === pokemonName ||
+      pokemon.syncPairNameByLanguage["en"] === pokemonName ||
+      pokemon.syncPairNameByLanguage["en"].toLowerCase() === pokemonName
+    ) {
       pokemonData = pokemon;
     }
   });
