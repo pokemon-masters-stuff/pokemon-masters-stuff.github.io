@@ -1,28 +1,29 @@
-import React, { useEffect } from "react";
-import { HashRouter, Route } from "react-router-dom";
-import { ThemeProvider } from "@material-ui/core/styles";
-import Hidden from "@material-ui/core/Hidden";
-import MobileLayout from "./containers/MobileLayout";
-import DesktopLayout from "./containers/DesktopLayout";
-import PrivateRoute from "./components/routing/PrivateRoute";
-import BuildsDesktop from "./components/builds/desktop/Builds";
-import PopularBuilds from "./components/builds/common/PopularBuilds";
-import LikedBuilds from "./components/builds/common/LikedBuilds";
-import UsersBuilds from "./components/builds/common/UsersBuilds";
-import BuildsMobile from "./components/builds/mobile/Builds";
-import { theme, darkTheme } from "./theme";
-import { useSelector } from "react-redux";
-import setAuthToken from "./utils/setAuthToken";
-import { loadUser } from "./actions/actionCreators";
-import withTracker from "./utils/withTracker";
-import Box from "@material-ui/core/Box";
-import { NavigationDesktop } from "./components/Navigation";
-import { DarkModeToggleDesktop } from "./components/DarkModeToggle";
+import React, { useEffect } from 'react';
+import { HashRouter, Route } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
+import MobileLayout from './containers/MobileLayout';
+import DesktopLayout from './containers/DesktopLayout';
+import PrivateRoute from './components/routing/PrivateRoute';
+import BuildsDesktop from './components/builds/desktop/Builds';
+import PopularBuilds from './components/builds/common/PopularBuilds';
+import LikedBuilds from './components/builds/common/LikedBuilds';
+import UsersBuilds from './components/builds/common/UsersBuilds';
+import BuildsMobile from './components/builds/mobile/Builds';
+import { theme, darkTheme } from './theme';
+import { useSelector } from 'react-redux';
+import setAuthToken from './utils/setAuthToken';
+import { loadUser } from './actions/actionCreators';
+import withTracker from './utils/withTracker';
+import Box from '@material-ui/core/Box';
+import { NavigationDesktop } from './components/Navigation';
+import { DarkModeToggleDesktop } from './components/DarkModeToggle';
 import {
   GachaOddsCalculatorDesktop,
   GachaOddsCalculatorMobile,
-} from "./components/GachaOddsCalculator";
-import { EggPokemonDesktop, EggPokemonMobile } from "./components/EggPokemon";
+} from './components/GachaOddsCalculator';
+import { EggPokemonDesktop, EggPokemonMobile } from './components/EggPokemon';
+import { TeamBuilderDesktop } from './components/TeamBuilder';
 
 export default function App({ store }) {
   const darkMode = useSelector((state) => state.darkMode.mode);
@@ -53,9 +54,14 @@ export default function App({ store }) {
               path="/egg-pokemon"
               component={withTracker(EggPokemonDesktop)}
             />
+            <Route
+              exact
+              path="/team-builder"
+              component={withTracker(TeamBuilderDesktop)}
+            />
             <PrivateRoute
               path="/builds"
-              screenSize={"large"}
+              screenSize={'large'}
               component={withTracker(BuildsDesktop)}
             />
             <div className="container container-s">
@@ -63,19 +69,19 @@ export default function App({ store }) {
                 <PrivateRoute
                   exact
                   path="/builds/popular"
-                  screenSize={"large"}
+                  screenSize={'large'}
                   component={PopularBuilds}
                 />
                 <PrivateRoute
                   exact
                   path="/builds/liked"
-                  screenSize={"large"}
+                  screenSize={'large'}
                   component={LikedBuilds}
                 />
                 <PrivateRoute
                   exact
                   path="/builds/users"
-                  screenSize={"large"}
+                  screenSize={'large'}
                   component={UsersBuilds}
                 />
               </Box>
@@ -102,19 +108,19 @@ export default function App({ store }) {
             <PrivateRoute
               exact
               path="/builds/popular"
-              screenSize={"small"}
+              screenSize={'small'}
               component={PopularBuilds}
             />
             <PrivateRoute
               exact
               path="/builds/liked"
-              screenSize={"small"}
+              screenSize={'small'}
               component={LikedBuilds}
             />
             <PrivateRoute
               exact
               path="/builds/users"
-              screenSize={"small"}
+              screenSize={'small'}
               component={UsersBuilds}
             />
           </Box>

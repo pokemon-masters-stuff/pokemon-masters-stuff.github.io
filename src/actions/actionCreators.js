@@ -39,6 +39,16 @@ import {
   CHANGE_SORT,
   SET_LANGUAGE,
   SET_SYNC_LEVEL,
+  // for team building
+  SET_TEAM,
+  SET_TEAM_SYNC_LEVELS,
+  RESET_TEAM_GRIDS,
+  RESET_INDIVIDUAL_GRID,
+  SAVE_CURRENT_TEAM_BUILD,
+  LOAD_SELECTED_TEAM_BUILD,
+  DELETE_SELECTED_TEAM_BUILD,
+  LOAD_TEAM_GRID_FROM_URL,
+  UPDATE_TEAM_URL,
 } from './types';
 
 export const selectPokemon = (selectedPokemon) => ({
@@ -511,5 +521,81 @@ export const setLanguage = (payload) => ({
 
 export const setSyncLevel = (payload) => ({
   type: SET_SYNC_LEVEL,
+  payload,
+});
+
+// For team building
+export const setTeam = (payload) => ({
+  type: SET_TEAM,
+  payload,
+});
+
+export const setTeamSyncLevels = (payload) => ({
+  type: SET_TEAM_SYNC_LEVELS,
+  payload,
+});
+
+export const addToTeamGridList = (gridData) => ({
+  type: ADD_TO_GRID_LIST,
+  gridData,
+});
+
+export const subtractFromTeamRemainingEnergy = (gridData) => ({
+  type: SUBTRACT_FROM_REMAINING_ENERGY,
+  gridData,
+});
+
+export const removeFromTeamGridList = (gridData) => ({
+  type: REMOVE_FROM_GRID_LIST,
+  gridData,
+});
+
+export const addBackToTeamRemainingEnergy = (gridData) => ({
+  type: ADD_BACK_TO_REMAINING_ENERGY,
+  gridData,
+});
+
+export const displayTeamGridData = (gridData) => ({
+  type: DISPLAY_GRID_DATA,
+  gridData,
+});
+
+export const hideTeamGridData = () => ({
+  type: HIDE_GRID_DATA,
+});
+
+export const resetTeamGrids = () => ({
+  type: RESET_TEAM_GRIDS,
+});
+
+export const resetIndividualGrid = (payload) => ({
+  type: RESET_INDIVIDUAL_GRID,
+  payload,
+});
+
+export const saveCurrentTeamBuild = (payload) => ({
+  type: SAVE_CURRENT_TEAM_BUILD,
+  payload,
+});
+
+export const loadSelectedTeamBuild = (payload) => ({
+  type: LOAD_SELECTED_TEAM_BUILD,
+  payload,
+});
+
+export const deleteSelectedTeamBuild = (payload) => ({
+  type: DELETE_SELECTED_TEAM_BUILD,
+  payload,
+});
+
+export const loadTeamGridFromUrl = (gridData, remainingEnergy, orbSpent) => ({
+  type: LOAD_TEAM_GRID_FROM_URL,
+  gridData,
+  remainingEnergy,
+  orbSpent,
+});
+
+export const updateTeamUrl = (payload) => ({
+  type: UPDATE_TEAM_URL,
   payload,
 });

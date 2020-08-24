@@ -6,6 +6,7 @@ import alertReducer from './alertReducer';
 import authReducer from './authReducer';
 import publishedBuildReducer from './publishedBuildReducer';
 import languageReducer from './languageReducer';
+import teamReducer from './teamReducer';
 
 export default combineReducers({
   pokemon: pokemonReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   alert: alertReducer,
   auth: authReducer,
   build: publishedBuildReducer,
-  language: languageReducer
+  language: languageReducer,
+  team: teamReducer,
 });

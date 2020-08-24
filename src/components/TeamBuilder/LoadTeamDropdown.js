@@ -10,13 +10,18 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
 import { updateUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
+import {
+  loadSelectedBuild,
+  deleteSelectedBuild,
+} from '../../actions/actionCreators';
 
-function LoadBuildDropdown(props) {
-  const { classes, onChangeHandler, onDeleteHandler } = props;
+// To update for team
+function LoadTeamDropdown(props) {
+  const { classes } = props;
 
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
+  const selectedPokemon = props.pokemon;
   const selectedBuild = useSelector((state) => state.grid.selectedBuild);
   const savedBuilds = useSelector((state) =>
     state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
@@ -32,7 +37,7 @@ function LoadBuildDropdown(props) {
   }, []);
 
   const handleChange = (event) => {
-    onChangeHandler(event.target.value);
+    dispatch(loadSelectedBuild(event.target.value));
     dispatch(updateUrl(selectedPokemon));
   };
 
@@ -47,7 +52,7 @@ function LoadBuildDropdown(props) {
   const handleDelete = (buildId, event) => {
     event.stopPropagation();
     window.confirm('Are you sure you wish to delete this save?') &&
-      onDeleteHandler(buildId);
+      dispatch(deleteSelectedBuild(buildId));
   };
 
   return (
@@ -56,11 +61,12 @@ function LoadBuildDropdown(props) {
       size="small"
       className={classes.formControl}
     >
-      <InputLabel ref={inputLabel} id="select-build">
-        {UI['Load Builds'][language]}
+      <InputLabel ref={inputLabel} id="select-team-build">
+        {/* {UI['Load Builds'][language]} */}
+        Load Team Build
       </InputLabel>
       <Select
-        labelId="select-build"
+        labelId="select-team-build"
         labelWidth={labelWidth}
         value={selectedBuild.id}
         onChange={handleChange}
@@ -89,4 +95,4 @@ function LoadBuildDropdown(props) {
   );
 }
 
-export default withStyles(styles)(LoadBuildDropdown);
+export default withStyles(styles)(LoadTeamDropdown);
