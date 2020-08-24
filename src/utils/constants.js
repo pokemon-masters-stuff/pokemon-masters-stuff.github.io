@@ -361,7 +361,7 @@ import {
   kommooGridDataZH,
   jigglypuffGridDataZH,
   dragoniteGridDataZH,
-} from "../data";
+} from '../data';
 import {
   charizard,
   pikachu,
@@ -407,7 +407,7 @@ import {
   kommoo,
   jigglypuff,
   dragonite,
-} from "../images/PokemonThumbnails";
+} from '../images/PokemonThumbnails';
 
 import {
   venusaurPic,
@@ -427,7 +427,15 @@ import {
   golemPic,
   aerodactylPic,
   onixPic,
-} from "../images/PokemonPictures";
+} from '../images/PokemonPictures';
+
+import { sabrina, red, oak } from '../images/TrainerPictures';
+
+export const allTrainerPictures = {
+  sabrina,
+  red,
+  oak,
+};
 
 export const allPictures = {
   venusaurPic,
@@ -878,6 +886,6 @@ export const allSyncGrids = {
   },
 };
 
-export const UA_ID = "UA-157426792-1";
+export const UA_ID = 'UA-157426792-1';
 
 export const DRAWER_WIDTH = 240;

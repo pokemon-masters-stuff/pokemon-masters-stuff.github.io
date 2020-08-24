@@ -33,7 +33,7 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case SET_TEAM_SYNC_LEVELS:
       let slot = action.payload.slot;
-      let syncLevels = state.teamSyncLevel;
+      let syncLevels = state.teamSyncLevels;
       syncLevels[slot] = action.payload.syncLevel;
       return {
         ...state,

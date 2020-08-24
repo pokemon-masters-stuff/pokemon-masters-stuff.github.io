@@ -28,6 +28,7 @@ import {
 import { allThumbnails, allSyncGrids } from '../../utils/constants';
 import UI from '../../utils/translations';
 
+// To combine with GridMap. Need to pass pokemon, grid, viewbox, and actions as props
 class GridMap extends Component {
   state = {
     initialRender: true,
