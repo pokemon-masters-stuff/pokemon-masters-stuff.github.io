@@ -1,25 +1,26 @@
-import React from "react";
+import React from 'react';
 // import { useSelector } from "react-redux";
-import { withStyles } from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import ListIcon from "@material-ui/icons/List";
+import { withStyles } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import ListIcon from '@material-ui/icons/List';
 // import { Link } from 'react-router-dom';
-import SelectPokemonDropdown from "../SelectPokemonDropdown";
-import { ResetGridButtonMobile } from "../ResetGridButton";
-import { SaveBuildButtonMobile } from "../SaveBuildButton";
-import { ShareButtonMobile } from "../ShareButton";
-import { PublishBuildButtonMobile } from "../PublishBuildButton";
-import LoginOrRegisterModal from "../auth/LoginOrRegisterModal";
-import LoadBuildDropdown from "../LoadBuildDropdown";
-import SyncLevelDropdown from "../../components/SyncLevelDropdown";
-import { MovesAndSkillsButtonMobile } from "../MovesAndSkillsButton";
-import styles from "./styles";
+import SelectPokemonDropdown from '../SelectPokemonDropdown';
+import { ResetGridButtonMobile } from '../ResetGridButton';
+import { SaveBuildButtonMobile } from '../SaveBuildButton';
+import { ShareButtonMobile } from '../ShareButton';
+import { PublishBuildButtonMobile } from '../PublishBuildButton';
+import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
+import LoadBuildDropdown from '../LoadBuildDropdown';
+import SyncLevelDropdown from '../../components/SyncLevelDropdown';
+import { MovesAndSkillsButtonMobile } from '../MovesAndSkills';
+import styles from './styles';
 
 function SyncGridControls(props) {
   const {
     classes,
     selectedPokemon,
+    grid,
     onChangePokemonHandler,
     onOpenSkillListHandler,
     onChangeSavedBuildHandler,
@@ -33,32 +34,32 @@ function SyncGridControls(props) {
   // const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   const handleOnOpenSkillList = () =>
-    typeof onOpenSkillListHandler === "function"
+    typeof onOpenSkillListHandler === 'function'
       ? onOpenSkillListHandler()
       : null;
 
   const handleOnChangePokemonHandler = (pokemon) =>
-    typeof onChangePokemonHandler === "function"
+    typeof onChangePokemonHandler === 'function'
       ? onChangePokemonHandler(pokemon)
       : null;
 
   const handleOnChangeSavedBuild = (value) =>
-    typeof onChangeSavedBuildHandler === "function"
+    typeof onChangeSavedBuildHandler === 'function'
       ? onChangeSavedBuildHandler(value)
       : null;
 
   const handleOnDeleteSavedBuild = (value) =>
-    typeof onDeleteSavedBuildHandler === "function"
+    typeof onDeleteSavedBuildHandler === 'function'
       ? onDeleteSavedBuildHandler(value)
       : null;
 
   const handleOnSaveBuildClick = () =>
-    typeof onSaveBuildClickHandler === "function"
+    typeof onSaveBuildClickHandler === 'function'
       ? onSaveBuildClickHandler()
       : null;
 
   const handleOnShareClick = () =>
-    typeof onShareClickHandler === "function" ? onShareClickHandler() : null;
+    typeof onShareClickHandler === 'function' ? onShareClickHandler() : null;
 
   return (
     <Grid
@@ -83,7 +84,7 @@ function SyncGridControls(props) {
           startIcon={<ListIcon />}
           style={{ marginTop: 10 }}
         >
-          {UI["Selected"][language]}
+          {UI['Selected'][language]}
         </Button>
       </Grid>
       <Grid item>
@@ -119,7 +120,11 @@ function SyncGridControls(props) {
       </Grid>
       <Grid item>
         <div>
-          <MovesAndSkillsButtonMobile />
+          <MovesAndSkillsButtonMobile
+            pokemon={selectedPokemon}
+            grid={grid}
+            syncLevel={grid.syncLevel}
+          />
         </div>
       </Grid>
       <Grid item>

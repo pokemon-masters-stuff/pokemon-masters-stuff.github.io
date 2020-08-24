@@ -1,31 +1,30 @@
-import React, { Fragment, useState } from "react";
-import { useSelector } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Collapse from "@material-ui/core/Collapse";
-import IconButton from "@material-ui/core/IconButton";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
-import UI from "../../utils/translations";
-import RarityDropdown from "./RarityDropdown";
-import PotentialDropdown from "./PotentialDropdown";
-import { getPokemonDataByName } from "../../utils/functions";
+import React, { Fragment, useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import UI from '../../utils/translations';
+import RarityDropdown from './RarityDropdown';
+import PotentialDropdown from './PotentialDropdown';
+import { getPokemonDataByName } from '../../utils/functions';
 
 const useRowStyles = makeStyles({
   root: {
-    "& > *": {
-      borderBottom: "unset",
+    '& > *': {
+      borderBottom: 'unset',
     },
   },
 });
@@ -144,10 +143,10 @@ function Stats(props) {
         <TableCell align="right">{baseHp}</TableCell>
         <TableCell align="right">
           {!isMega
-            ? hpUpFromGrid || "-"
+            ? hpUpFromGrid || '-'
             : hpUpFromGrid
-            ? hpUpFromGrid + " x1.0"
-            : "-"}
+            ? hpUpFromGrid + ' x1.0'
+            : '-'}
         </TableCell>
         <TableCell align="right">
           {hpUpFromGrid ? baseHp + hpUpFromGrid : baseHp}
@@ -161,10 +160,10 @@ function Stats(props) {
         <TableCell align="right">{baseAtk}</TableCell>
         <TableCell align="right">
           {!isMega
-            ? atkUpFromGrid || "-"
+            ? atkUpFromGrid || '-'
             : atkUpFromGrid
-            ? atkUpFromGrid + " x" + (atkScale / 100).toFixed(1)
-            : "-"}
+            ? atkUpFromGrid + ' x' + (atkScale / 100).toFixed(1)
+            : '-'}
         </TableCell>
         <TableCell align="right">
           {atkUpFromGrid
@@ -182,10 +181,10 @@ function Stats(props) {
         <TableCell align="right">{baseDef}</TableCell>
         <TableCell align="right">
           {!isMega
-            ? defUpFromGrid || "-"
+            ? defUpFromGrid || '-'
             : defUpFromGrid
-            ? defUpFromGrid + " x" + (defScale / 100).toFixed(1)
-            : "-"}
+            ? defUpFromGrid + ' x' + (defScale / 100).toFixed(1)
+            : '-'}
         </TableCell>
         <TableCell align="right">
           {defUpFromGrid
@@ -203,10 +202,10 @@ function Stats(props) {
         <TableCell align="right">{baseSpa}</TableCell>
         <TableCell align="right">
           {!isMega
-            ? spaUpFromGrid || "-"
+            ? spaUpFromGrid || '-'
             : spaUpFromGrid
-            ? spaUpFromGrid + " x" + (spaScale / 100).toFixed(1)
-            : "-"}
+            ? spaUpFromGrid + ' x' + (spaScale / 100).toFixed(1)
+            : '-'}
         </TableCell>
         <TableCell align="right">
           {spaUpFromGrid
@@ -224,10 +223,10 @@ function Stats(props) {
         <TableCell align="right">{baseSpd}</TableCell>
         <TableCell align="right">
           {!isMega
-            ? spdUpFromGrid || "-"
+            ? spdUpFromGrid || '-'
             : spdUpFromGrid
-            ? spdUpFromGrid + " x" + (spdScale / 100).toFixed(1)
-            : "-"}
+            ? spdUpFromGrid + ' x' + (spdScale / 100).toFixed(1)
+            : '-'}
         </TableCell>
         <TableCell align="right">
           {spdUpFromGrid
@@ -245,10 +244,10 @@ function Stats(props) {
         <TableCell align="right">{baseSpe}</TableCell>
         <TableCell align="right">
           {!isMega
-            ? speUpFromGrid || "-"
+            ? speUpFromGrid || '-'
             : speUpFromGrid
-            ? speUpFromGrid + " x" + (speScale / 100).toFixed(1)
-            : "-"}
+            ? speUpFromGrid + ' x' + (speScale / 100).toFixed(1)
+            : '-'}
         </TableCell>
         <TableCell align="right">
           {speUpFromGrid
@@ -276,14 +275,14 @@ function Moves(props) {
     ? selectedMoves[move.id].accuracy || 0
     : 0;
 
-  let moveCategory = "-";
+  let moveCategory = '-';
 
   if (move.category === 1) {
-    moveCategory = "Physical";
+    moveCategory = 'Physical';
   } else if (move.category === 2) {
-    moveCategory = "Special";
+    moveCategory = 'Special';
   } else if (move.category === 3) {
-    moveCategory = "Status";
+    moveCategory = 'Status';
   }
 
   return (
@@ -302,22 +301,22 @@ function Moves(props) {
           {move.name[language]}
         </TableCell>
         <TableCell align="right">
-          {move.gaugeDrain ? move.gaugeDrain : "-"}
+          {move.gaugeDrain ? move.gaugeDrain : '-'}
         </TableCell>
-        <TableCell align="right">{move.maxUses ? move.maxUses : "-"}</TableCell>
+        <TableCell align="right">{move.maxUses ? move.maxUses : '-'}</TableCell>
         <TableCell align="right">
           {move.power
             ? move.power +
               Math.floor(move.power * ((Number(syncLevel) - 1) * 0.05))
-            : "-"}
+            : '-'}
         </TableCell>
-        <TableCell align="right">{powerUpFromGrid || "-"}</TableCell>
+        <TableCell align="right">{powerUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
           {move.power
             ? move.power +
               Math.floor(move.power * ((Number(syncLevel) - 1) * 0.05)) +
               powerUpFromGrid
-            : "-"}
+            : '-'}
         </TableCell>
       </TableRow>
 
@@ -340,13 +339,13 @@ function Moves(props) {
                       {move.description[language]}
                     </TableCell>
                     <TableCell align="left">
-                      {move.category ? moveCategory : "-"}
+                      {move.category ? moveCategory : '-'}
                     </TableCell>
                     <TableCell align="left">
-                      {move.targetType ? move.targetType[language] : "-"}
+                      {move.targetType ? move.targetType[language] : '-'}
                     </TableCell>
                     <TableCell align="right">
-                      {move.accuracy ? move.accuracy + accuracyUpFromGrid : "-"}
+                      {move.accuracy ? move.accuracy + accuracyUpFromGrid : '-'}
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -369,14 +368,14 @@ function SyncMove(props) {
     ? selectedMoves[syncMove.id].power
     : 0;
 
-  let syncMoveCategory = "-";
+  let syncMoveCategory = '-';
 
   if (syncMove.category === 1) {
-    syncMoveCategory = "Physical";
+    syncMoveCategory = 'Physical';
   } else if (syncMove.category === 2) {
-    syncMoveCategory = "Special";
+    syncMoveCategory = 'Special';
   } else if (syncMove.category === 3) {
-    syncMoveCategory = "Status";
+    syncMoveCategory = 'Status';
   }
 
   return (
@@ -396,21 +395,21 @@ function SyncMove(props) {
           {syncMove.name[language]}
         </TableCell>
         <TableCell align="left">
-          {syncMove.category ? syncMoveCategory : "-"}
+          {syncMove.category ? syncMoveCategory : '-'}
         </TableCell>
         <TableCell align="right">
           {syncMove.power
             ? syncMove.power +
               Math.floor(syncMove.power * ((Number(syncLevel) - 1) * 0.05))
-            : "-"}
+            : '-'}
         </TableCell>
-        <TableCell align="right">{powerUpFromGrid || "-"}</TableCell>
+        <TableCell align="right">{powerUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
           {syncMove.power
             ? syncMove.power +
               Math.floor(syncMove.power * ((Number(syncLevel) - 1) * 0.05)) +
               powerUpFromGrid
-            : "-"}
+            : '-'}
         </TableCell>
       </TableRow>
 
@@ -484,16 +483,17 @@ function Passives(props) {
 
 export default function MovesAndSkillsModal(props) {
   const {
+    pokemon,
+    grid,
+    syncLevel,
     language,
     isMovesAndSkillsModalVisible,
     setIsMovesAndSkillsModalVisible,
   } = props;
 
-  const selectedCellsById = useSelector(
-    (state) => state.grid.selectedCellsById
-  );
+  const selectedCellsById = grid.selectedCellsById;
 
-  const syncLevel = useSelector((state) => state.grid.syncLevel);
+  // const syncLevel = useSelector((state) => state.grid.syncLevel);
 
   const selectedCellsArray = Object.values(selectedCellsById);
 
@@ -507,7 +507,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           hp: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["hp"]) {
+      } else if (!hash[cellData.moveId]['hp']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           hp: cellData.value,
@@ -527,7 +527,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           atk: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["atk"]) {
+      } else if (!hash[cellData.moveId]['atk']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           atk: cellData.value,
@@ -547,7 +547,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           def: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["def"]) {
+      } else if (!hash[cellData.moveId]['def']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           def: cellData.value,
@@ -567,7 +567,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           spa: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["spa"]) {
+      } else if (!hash[cellData.moveId]['spa']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           spa: cellData.value,
@@ -587,7 +587,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           spd: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["spd"]) {
+      } else if (!hash[cellData.moveId]['spd']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           spd: cellData.value,
@@ -607,7 +607,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           spe: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["spe"]) {
+      } else if (!hash[cellData.moveId]['spe']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           spe: cellData.value,
@@ -627,7 +627,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           power: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["power"]) {
+      } else if (!hash[cellData.moveId]['power']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           power: cellData.value,
@@ -646,7 +646,7 @@ export default function MovesAndSkillsModal(props) {
           ...hash[cellData.moveId],
           accuracy: cellData.value,
         };
-      } else if (!hash[cellData.moveId]["accuracy"]) {
+      } else if (!hash[cellData.moveId]['accuracy']) {
         hash[cellData.moveId] = {
           ...hash[cellData.moveId],
           accuracy: (hash[cellData.moveId].accuracy || 0) + cellData.value,
@@ -664,7 +664,7 @@ export default function MovesAndSkillsModal(props) {
 
   let selectedMoves = hash;
 
-  const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
+  // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
   const pokemonData = getPokemonDataByName(pokemon);
 
@@ -690,9 +690,9 @@ export default function MovesAndSkillsModal(props) {
 
   const handleOnChangeRarity = (value) => {
     let selectedValue;
-    if (value === "★★★") {
+    if (value === '★★★') {
       selectedValue = 3;
-    } else if (value === "★★★★") {
+    } else if (value === '★★★★') {
       selectedValue = 4;
     } else {
       selectedValue = 5;
@@ -775,14 +775,14 @@ export default function MovesAndSkillsModal(props) {
       onClose={handleOnCloseMovesAndSkillsModal}
     >
       <DialogTitle>
-        {UI["Moves & Skills"][language]}
+        {UI['Moves & Skills'][language]}
         {megaForm ? (
           <Button
-            style={{ float: "right" }}
+            style={{ float: 'right' }}
             variant="outlined"
             onClick={handleOnClickMegaButton}
           >
-            {isMega ? "pre-Mega" : "Mega"}
+            {isMega ? 'pre-Mega' : 'Mega'}
           </Button>
         ) : null}
       </DialogTitle>
@@ -804,7 +804,7 @@ export default function MovesAndSkillsModal(props) {
                 <TableCell>Lv120 Stats</TableCell>
                 <TableCell align="right">Stat</TableCell>
                 <TableCell align="right">
-                  {!isMega ? "Grid" : "Grid (xMega↑)"}
+                  {!isMega ? 'Grid' : 'Grid (xMega↑)'}
                 </TableCell>
                 <TableCell align="right">Total</TableCell>
               </TableRow>

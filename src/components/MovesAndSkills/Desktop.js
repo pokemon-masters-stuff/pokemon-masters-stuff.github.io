@@ -3,8 +3,9 @@ import { useSelector } from 'react-redux';
 import MovesAndSkillsModal from './Modal';
 import UI from '../../utils/translations';
 
-const MovesAndSkillsButton = () => {
+const MovesAndSkillsButton = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
+  const { pokemon, grid, syncLevel } = props;
 
   const [
     isMovesAndSkillsModalVisible,
@@ -25,6 +26,9 @@ const MovesAndSkillsButton = () => {
         {UI['Moves & Skills'][language]}
       </button>
       <MovesAndSkillsModal
+        pokemon={pokemon}
+        grid={grid}
+        syncLevel={syncLevel}
         language={language}
         isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
         setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}

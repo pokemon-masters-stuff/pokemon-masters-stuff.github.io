@@ -4,8 +4,9 @@ import Button from '@material-ui/core/Button';
 import MovesAndSkillsModal from './Modal';
 import UI from '../../utils/translations';
 
-const MovesAndSkillsButton = () => {
+const MovesAndSkillsButton = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
+  const { pokemon, grid, syncLevel } = props;
 
   const [
     isMovesAndSkillsModalVisible,
@@ -26,6 +27,9 @@ const MovesAndSkillsButton = () => {
       </Button>
 
       <MovesAndSkillsModal
+        pokemon={pokemon}
+        grid={grid}
+        syncLevel={syncLevel}
         language={language}
         isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
         setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}

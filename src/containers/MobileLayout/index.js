@@ -166,6 +166,7 @@ class MobileApp extends Component {
         <div className={classes.mainContainer}>
           <SyncGridControls
             selectedPokemon={pokemon.selectedPokemon}
+            grid={grid}
             language={language}
             UI={UI}
             onChangePokemonHandler={this.handleOnChangePokemon}
