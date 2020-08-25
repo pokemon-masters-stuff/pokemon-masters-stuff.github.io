@@ -5,12 +5,12 @@
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "stats": {
-      "hpValues": [62, 145, 197, 445, 497],
-      "atkValues": [10, 56, 86, 218, 246],
-      "defValues": [5, 26, 38, 93, 105],
-      "spaValues": [11, 72, 111, 287, 323],
-      "spdValues": [6, 32, 47, 124, 140],
-      "speValues": [9, 60, 93, 236, 268]
+      "hpValues": [62, 145, 197, 445, 497, 549],
+      "atkValues": [10, 56, 86, 218, 246, 274],
+      "defValues": [5, 26, 38, 93, 105, 117],
+      "spaValues": [11, 72, 111, 287, 323, 359],
+      "spdValues": [6, 32, 47, 124, 140, 156],
+      "speValues": [9, 60, 93, 236, 268, 300]
     },
     "moves": {
       "move1": {
@@ -275,12 +275,12 @@
     "trainerBaseId": "10002900",
     "trainerNameId": "ch0029",
     "stats": {
-      "hpValues": [70, 150, 202, 422, 474],
-      "atkValues": [7, 22, 31, 75, 83],
-      "defValues": [8, 48, 72, 182, 206],
-      "spaValues": [7, 47, 74, 195, 219],
-      "spdValues": [8, 42, 63, 162, 182],
-      "speValues": [9, 46, 70, 180, 200]
+      "hpValues": [70, 150, 202, 422, 474, 526],
+      "atkValues": [7, 22, 31, 75, 83, 91],
+      "defValues": [8, 48, 72, 182, 206, 230],
+      "spaValues": [7, 47, 74, 195, 219, 243],
+      "spdValues": [8, 42, 63, 162, 182, 202],
+      "speValues": [9, 46, 70, 180, 200, 220]
     },
     "moves": {
       "move1": {
@@ -485,7 +485,7 @@
         "name": {
           "de": "Werte↓-Schutz",
           "en": "Impervious",
-          "es": "Inmunidad Caract. ↓",
+          "es": "Inmunidad Características ↓",
           "fr": "Immunité ↓Stats",
           "it": "Status quo",
           "ja": "全ダウン無効",
@@ -545,12 +545,12 @@
     "trainerBaseId": "10000600",
     "trainerNameId": "ch0006",
     "stats": {
-      "hpValues": [62, 150, 202, 450, 506],
-      "atkValues": [15, 76, 115, 291, 327],
-      "defValues": [5, 29, 44, 110, 122],
-      "spaValues": [15, 76, 115, 291, 327],
-      "spdValues": [5, 29, 44, 110, 122],
-      "speValues": [13, 58, 88, 220, 248]
+      "hpValues": [62, 150, 202, 450, 506, 562],
+      "atkValues": [15, 76, 115, 291, 327, 363],
+      "defValues": [5, 29, 44, 110, 122, 134],
+      "spaValues": [15, 76, 115, 291, 327, 363],
+      "spdValues": [5, 29, 44, 110, 122, 134],
+      "speValues": [13, 58, 88, 220, 248, 276]
     },
     "moves": {
       "move1": {
@@ -815,12 +815,12 @@
     "trainerBaseId": "10003200",
     "trainerNameId": "ch0032",
     "stats": {
-      "hpValues": [85, 190, 257, 560, 624],
-      "atkValues": [15, 61, 91, 223, 251],
-      "defValues": [11, 25, 34, 67, 75],
-      "spaValues": [15, 63, 93, 236, 264],
-      "spdValues": [11, 39, 57, 134, 150],
-      "speValues": [11, 42, 60, 148, 164]
+      "hpValues": [85, 190, 257, 560, 624, 688],
+      "atkValues": [15, 61, 91, 223, 251, 279],
+      "defValues": [11, 25, 34, 67, 75, 83],
+      "spaValues": [15, 63, 93, 236, 264, 292],
+      "spdValues": [11, 39, 57, 134, 150, 166],
+      "speValues": [11, 42, 60, 148, 164, 180]
     },
     "moves": {
       "move1": {
@@ -1085,12 +1085,12 @@
     "trainerBaseId": "10009200",
     "trainerNameId": "ch0092",
     "stats": {
-      "hpValues": [55, 130, 175, 395, 443],
-      "atkValues": [18, 66, 96, 239, 267],
-      "defValues": [6, 32, 47, 124, 140],
-      "spaValues": [3, 17, 26, 59, 67],
-      "spdValues": [5, 26, 38, 93, 105],
-      "speValues": [9, 41, 62, 150, 170]
+      "hpValues": [55, 130, 175, 395, 443, 491],
+      "atkValues": [18, 66, 96, 239, 267, 295],
+      "defValues": [6, 32, 47, 124, 140, 156],
+      "spaValues": [3, 17, 26, 59, 67, 75],
+      "spdValues": [5, 26, 38, 93, 105, 117],
+      "speValues": [9, 41, 62, 150, 170, 190]
     },
     "moves": {
       "move1": {
@@ -1355,12 +1355,12 @@
     "trainerBaseId": "10002800",
     "trainerNameId": "ch0028",
     "stats": {
-      "hpValues": [70, 165, 225, 500, 560],
-      "atkValues": [8, 54, 84, 216, 244],
-      "defValues": [5, 33, 51, 128, 144],
-      "spaValues": [11, 69, 108, 273, 309],
-      "spdValues": [6, 34, 52, 129, 145],
-      "speValues": [10, 55, 82, 214, 242]
+      "hpValues": [70, 165, 225, 500, 560, 620],
+      "atkValues": [8, 54, 84, 216, 244, 272],
+      "defValues": [5, 33, 51, 128, 144, 160],
+      "spaValues": [11, 69, 108, 273, 309, 345],
+      "spdValues": [6, 34, 52, 129, 145, 161],
+      "speValues": [10, 55, 82, 214, 242, 270]
     },
     "moves": {
       "move1": {
@@ -1625,12 +1625,12 @@
     "trainerBaseId": "10010100",
     "trainerNameId": "ch0101",
     "stats": {
-      "hpValues": [120, 225, 292, 595, 659],
-      "atkValues": [10, 26, 35, 79, 87],
-      "defValues": [19, 52, 73, 172, 192],
-      "spaValues": [14, 42, 60, 104, 112],
-      "spdValues": [21, 65, 92, 224, 252],
-      "speValues": [17, 49, 70, 158, 178]
+      "hpValues": [120, 225, 292, 595, 659, 723],
+      "atkValues": [10, 26, 35, 79, 87, 95],
+      "defValues": [19, 52, 73, 172, 192, 212],
+      "spaValues": [14, 42, 60, 104, 112, 120],
+      "spdValues": [21, 65, 92, 224, 252, 280],
+      "speValues": [17, 49, 70, 158, 178, 198]
     },
     "moves": {
       "move1": {
@@ -1835,7 +1835,7 @@
         "name": {
           "de": "Sp.-Vert.↓-Schutz",
           "en": "Stalwart",
-          "es": "Inmunidad Defensa Esp. ↓",
+          "es": "Inmunidad Defensa Especial ↓",
           "fr": "Immunité ↓Déf. Spé.",
           "it": "Ostinazione",
           "ja": "特防ダウン無効",
@@ -1895,12 +1895,12 @@
     "trainerBaseId": "10000800",
     "trainerNameId": "ch0008",
     "stats": {
-      "hpValues": [85, 192, 260, 562, 630],
-      "atkValues": [7, 17, 23, 45, 49],
-      "defValues": [7, 34, 52, 129, 145],
-      "spaValues": [7, 45, 69, 179, 203],
-      "spdValues": [8, 54, 84, 216, 244],
-      "speValues": [9, 46, 70, 180, 200]
+      "hpValues": [85, 192, 260, 562, 630, 698],
+      "atkValues": [7, 17, 23, 45, 49, 53],
+      "defValues": [7, 34, 52, 129, 145, 161],
+      "spaValues": [7, 45, 69, 179, 203, 227],
+      "spdValues": [8, 54, 84, 216, 244, 272],
+      "speValues": [9, 46, 70, 180, 200, 220]
     },
     "moves": {
       "move1": {
@@ -2166,12 +2166,12 @@
     "trainerBaseId": "10013700",
     "trainerNameId": "ch0137",
     "stats": {
-      "hpValues": [100, 144, 171, 302, 340],
-      "atkValues": [10, 54, 81, 200, 240],
-      "defValues": [10, 54, 81, 200, 240],
-      "spaValues": [10, 54, 81, 200, 240],
-      "spdValues": [10, 54, 81, 200, 240],
-      "speValues": [10, 54, 81, 200, 240],
+      "hpValues": [100, 144, 171, 302, 340, 368],
+      "atkValues": [10, 54, 81, 200, 240, 268],
+      "defValues": [10, 54, 81, 200, 240, 268],
+      "spaValues": [10, 54, 81, 200, 240, 268],
+      "spdValues": [10, 54, 81, 200, 240, 268],
+      "speValues": [10, 54, 81, 200, 240, 268],
       "atkScale": 100,
       "defScale": 100,
       "spaScale": 100,
@@ -2592,12 +2592,12 @@
     "trainerBaseId": "10009000",
     "trainerNameId": "ch0090",
     "stats": {
-      "hpValues": [80, 136, 190, 399, 443],
-      "atkValues": [25, 80, 131, 340, 384],
-      "defValues": [17, 41, 62, 150, 170],
-      "spaValues": [10, 29, 47, 113, 125],
-      "spdValues": [13, 37, 58, 146, 166],
-      "speValues": [14, 47, 77, 198, 222],
+      "hpValues": [80, 136, 190, 399, 443, 487],
+      "atkValues": [25, 80, 131, 340, 384, 428],
+      "defValues": [17, 41, 62, 150, 170, 190],
+      "spaValues": [10, 29, 47, 113, 125, 137],
+      "spdValues": [13, 37, 58, 146, 166, 186],
+      "speValues": [14, 47, 77, 198, 222, 246],
       "atkScale": 120,
       "defScale": 110,
       "spaScale": 100,
@@ -2747,7 +2747,7 @@
           "fr": "Augmente légèrement\nla Défense du lanceur.\nSa prochaine capacité\ninfligera un coup critique\nà coup sûr.\nSi le lanceur est\nméga-évolué, il se\nprépare à encaisser\nla prochaine attaque.",
           "it": "Aumenta la Difesa di chi\nla usa e fa sì che la sua\nprossima mossa sia\nun brutto colpo.\nSe MegaMetagross\nla usa, si prepara\na resistere a un colpo\nmicidiale.",
           "ja": "自分の防御をあげる\n自分を次回急所状態にする\n自分がメガメタグロスになっている場合は自分をこらえる状態にする",
-          "ko": "자신의 방어가 오른다\n자신을 차회급소 상태로 만든다\n자신이 메가메타그로스가 되어있을 때 버티기 상태로 만든다",
+          "ko": "자신의 방어가 오른다\n자신을 차회급소 상태로 만든다\n자신이 메가메타그로스가 되어있을 때는 버티기 상태로도 만든다",
           "zh": "提高自己的防禦。\n讓自己變成下次必中要害狀態。\n當巨金怪已經變成超級巨金怪時，會讓自己變成挺住狀態。"
         },
         "category": 3,
@@ -2830,7 +2830,7 @@
         "name": {
           "de": "Werte↓-Schutz",
           "en": "Impervious",
-          "es": "Inmunidad Caract. ↓",
+          "es": "Inmunidad Características ↓",
           "fr": "Immunité ↓Stats",
           "it": "Status quo",
           "ja": "全ダウン無効",
@@ -2967,7 +2967,7 @@
           "name": {
             "de": "Werte↓-Schutz",
             "en": "Impervious",
-            "es": "Inmunidad Caract. ↓",
+            "es": "Inmunidad Características ↓",
             "fr": "Immunité ↓Stats",
             "it": "Status quo",
             "ja": "全ダウン無効",
@@ -3025,12 +3025,12 @@
     "trainerBaseId": "10000000",
     "trainerNameId": "ch0000",
     "stats": {
-      "hpValues": [90, 177, 258, 588, 660],
-      "atkValues": [21, 76, 127, 336, 380],
-      "defValues": [10, 29, 47, 113, 129],
-      "spaValues": [21, 76, 127, 336, 380],
-      "spdValues": [10, 29, 47, 113, 129],
-      "speValues": [15, 54, 90, 233, 265],
+      "hpValues": [90, 177, 258, 588, 660, 732],
+      "atkValues": [21, 76, 127, 336, 380, 424],
+      "defValues": [10, 29, 47, 113, 129, 145],
+      "spaValues": [21, 76, 127, 336, 380, 424],
+      "spdValues": [10, 29, 47, 113, 129, 145],
+      "speValues": [15, 54, 90, 233, 265, 297],
       "atkScale": 120,
       "defScale": 100,
       "spaScale": 120,
@@ -3180,7 +3180,7 @@
           "fr": "Augmente beaucoup \nl’Attaque Spéciale et la\nVitesse du lanceur.\nBaisse légèrement la\nDéfense et la Défense\nSpéciale du lanceur.\nSi le lanceur a\nméga-évolué, son\nAttaque augmente\nbeaucoup.",
           "it": "Riduce la Difesa e\nla Difesa Speciale di chi\nla usa, ma in cambio ne\naumenta moltissimo\nl'Attacco Speciale e\nla Velocità.\nSe Charizard si è evoluto\nin MegaCharizard X,\naumenta moltissimo\nl'Attacco di chi la usa.",
           "ja": "自分の特攻と素早さをぐぐーんとあげる\n自分の防御と特防をさげる\n自分がメガリザードンＸになっている場合はさらに自分の攻撃をぐぐーんとあげる",
-          "ko": "자신의 특수공격과 스피드가 매우 크게 오른다\n자신의 방어와 특수방어를 떨어뜨린다\n추가로 자신이 메가리자몽X가 되어있을 때 자신의 공격이 매우 크게 오른다",
+          "ko": "자신의 특수공격과 스피드가 매우 크게 오른다\n자신의 방어와 특수방어를 떨어뜨린다\n추가로 자신이 메가리자몽X가 되어있을 때는 자신의 공격이 매우 크게 오른다",
           "zh": "極大幅提高自己的特攻和速度。\n降低自己的防禦和特防。\n當噴火龍已經變成超級噴火龍Ｘ時，還會極大幅提高自己的攻擊。"
         },
         "category": 3,
@@ -3391,12 +3391,12 @@
     "trainerBaseId": "10000700",
     "trainerNameId": "ch0007",
     "stats": {
-      "hpValues": [85, 165, 217, 437, 489],
-      "atkValues": [7, 37, 55, 143, 159],
-      "defValues": [8, 40, 61, 149, 169],
-      "spaValues": [6, 30, 45, 111, 123],
-      "spdValues": [8, 38, 56, 144, 160],
-      "speValues": [8, 46, 70, 180, 204]
+      "hpValues": [85, 165, 217, 437, 489, 541],
+      "atkValues": [7, 37, 55, 143, 159, 175],
+      "defValues": [8, 40, 61, 149, 169, 189],
+      "spaValues": [6, 30, 45, 111, 123, 135],
+      "spdValues": [8, 38, 56, 144, 160, 176],
+      "speValues": [8, 46, 70, 180, 204, 228]
     },
     "moves": {
       "move1": {
@@ -3661,12 +3661,12 @@
     "trainerBaseId": "10004800",
     "trainerNameId": "ch0048",
     "stats": {
-      "hpValues": [88, 147, 204, 424, 472],
-      "atkValues": [15, 47, 77, 198, 222],
-      "defValues": [12, 39, 63, 162, 182],
-      "spaValues": [12, 32, 50, 116, 132],
-      "spdValues": [12, 39, 63, 162, 182],
-      "speValues": [24, 83, 140, 360, 408]
+      "hpValues": [88, 147, 204, 424, 472, 520],
+      "atkValues": [15, 47, 77, 198, 222, 246],
+      "defValues": [12, 39, 63, 162, 182, 202],
+      "spaValues": [12, 32, 50, 116, 132, 148],
+      "spdValues": [12, 39, 63, 162, 182, 202],
+      "speValues": [24, 83, 140, 360, 408, 456]
     },
     "moves": {
       "move1": {
@@ -3932,12 +3932,12 @@
     "trainerBaseId": "10006200",
     "trainerNameId": "ch0062",
     "stats": {
-      "hpValues": [85, 152, 212, 460, 516],
-      "atkValues": [18, 61, 103, 268, 304],
-      "defValues": [9, 32, 53, 141, 157],
-      "spaValues": [20, 71, 119, 306, 346],
-      "spdValues": [9, 32, 53, 141, 157],
-      "speValues": [19, 67, 112, 288, 328],
+      "hpValues": [85, 152, 212, 460, 516, 572],
+      "atkValues": [18, 61, 103, 268, 304, 340],
+      "defValues": [9, 32, 53, 141, 157, 173],
+      "spaValues": [20, 71, 119, 306, 346, 386],
+      "spdValues": [9, 32, 53, 141, 157, 173],
+      "speValues": [19, 67, 112, 288, 328, 368],
       "atkScale": 100,
       "defScale": 110,
       "spaScale": 110,
@@ -4316,12 +4316,12 @@
     "trainerBaseId": "10009800",
     "trainerNameId": "ch0098",
     "stats": {
-      "hpValues": [62, 132, 177, 370, 414],
-      "atkValues": [10, 25, 34, 78, 86],
-      "defValues": [5, 32, 50, 127, 143],
-      "spaValues": [13, 72, 111, 287, 323],
-      "spdValues": [8, 39, 60, 148, 168],
-      "speValues": [11, 58, 88, 220, 248]
+      "hpValues": [62, 132, 177, 370, 414, 458],
+      "atkValues": [10, 25, 34, 78, 86, 94],
+      "defValues": [5, 32, 50, 127, 143, 159],
+      "spaValues": [13, 72, 111, 287, 323, 359],
+      "spdValues": [8, 39, 60, 148, 168, 188],
+      "speValues": [11, 58, 88, 220, 248, 276]
     },
     "moves": {
       "move1": {
@@ -4586,12 +4586,12 @@
     "trainerBaseId": "10010610",
     "trainerNameId": "ch0106",
     "stats": {
-      "hpValues": [99, 157, 211, 431, 479],
-      "atkValues": [6, 20, 32, 87, 99],
-      "defValues": [17, 54, 90, 233, 261],
-      "spaValues": [13, 43, 70, 180, 204],
-      "spdValues": [17, 54, 90, 233, 261],
-      "speValues": [14, 55, 94, 248, 280]
+      "hpValues": [99, 157, 211, 431, 479, 527],
+      "atkValues": [6, 20, 32, 87, 99, 111],
+      "defValues": [17, 54, 90, 233, 261, 289],
+      "spaValues": [13, 43, 70, 180, 204, 228],
+      "spdValues": [17, 54, 90, 233, 261, 289],
+      "speValues": [14, 55, 94, 248, 280, 312]
     },
     "moves": {
       "move1": {
@@ -4880,12 +4880,12 @@
     "trainerBaseId": "10011400",
     "trainerNameId": "ch0114",
     "stats": {
-      "hpValues": [91, 153, 213, 444, 492],
-      "atkValues": [4, 13, 22, 55, 63],
-      "defValues": [7, 31, 52, 140, 160],
-      "spaValues": [16, 49, 79, 200, 224],
-      "spdValues": [18, 53, 86, 218, 246],
-      "speValues": [17, 65, 110, 286, 326],
+      "hpValues": [91, 153, 213, 444, 492, 540],
+      "atkValues": [4, 13, 22, 55, 63, 71],
+      "defValues": [7, 31, 52, 140, 160, 180],
+      "spaValues": [16, 49, 79, 200, 224, 248],
+      "spdValues": [18, 53, 86, 218, 246, 274],
+      "speValues": [17, 65, 110, 286, 326, 366],
       "atkScale": 100,
       "defScale": 100,
       "spaScale": 120,
@@ -5141,7 +5141,7 @@
         "name": {
           "de": "Sp.-Ang.↓-Schutz",
           "en": "Dauntless",
-          "es": "Inmunidad Ataque Esp. ↓",
+          "es": "Inmunidad Ataque Especial ↓",
           "fr": "Immunité ↓Atq. Spé.",
           "it": "Ardimento",
           "ja": "特攻ダウン無効",
@@ -5246,12 +5246,12 @@
     "trainerBaseId": "10009500",
     "trainerNameId": "ch0095",
     "stats": {
-      "hpValues": [99, 162, 222, 453, 505],
-      "atkValues": [9, 30, 48, 125, 141],
-      "defValues": [10, 33, 54, 131, 147],
-      "spaValues": [18, 73, 124, 333, 377],
-      "spdValues": [11, 34, 55, 132, 148],
-      "speValues": [9, 38, 65, 175, 199]
+      "hpValues": [99, 162, 222, 453, 505, 557],
+      "atkValues": [9, 30, 48, 125, 141, 157],
+      "defValues": [10, 33, 54, 131, 147, 163],
+      "spaValues": [18, 73, 124, 333, 377, 421],
+      "spdValues": [11, 34, 55, 132, 148, 164],
+      "speValues": [9, 38, 65, 175, 199, 223]
     },
     "moves": {
       "move1": {
@@ -5562,12 +5562,12 @@
     "trainerBaseId": "10000300",
     "trainerNameId": "ch0003",
     "stats": {
-      "hpValues": [98, 187, 244, 508, 564],
-      "atkValues": [12, 36, 51, 117, 129],
-      "defValues": [13, 37, 52, 118, 130],
-      "spaValues": [20, 64, 91, 223, 251],
-      "spdValues": [14, 40, 55, 132, 148],
-      "speValues": [32, 105, 153, 362, 406]
+      "hpValues": [98, 187, 244, 508, 564, 620],
+      "atkValues": [12, 36, 51, 117, 129, 141],
+      "defValues": [13, 37, 52, 118, 130, 142],
+      "spaValues": [20, 64, 91, 223, 251, 279],
+      "spdValues": [14, 40, 55, 132, 148, 164],
+      "speValues": [32, 105, 153, 362, 406, 450]
     },
     "moves": {
       "move1": {
@@ -5855,12 +5855,12 @@
     "trainerBaseId": "10003900",
     "trainerNameId": "ch0039",
     "stats": {
-      "hpValues": [95, 177, 230, 477, 529],
-      "atkValues": [9, 33, 48, 114, 126],
-      "defValues": [13, 49, 73, 172, 192],
-      "spaValues": [14, 54, 81, 202, 226],
-      "spdValues": [12, 50, 74, 184, 208],
-      "speValues": [15, 63, 93, 236, 264]
+      "hpValues": [95, 177, 230, 477, 529, 581],
+      "atkValues": [9, 33, 48, 114, 126, 138],
+      "defValues": [13, 49, 73, 172, 192, 212],
+      "spaValues": [14, 54, 81, 202, 226, 250],
+      "spdValues": [12, 50, 74, 184, 208, 232],
+      "speValues": [15, 63, 93, 236, 264, 292]
     },
     "moves": {
       "move1": {
@@ -6065,7 +6065,7 @@
         "name": {
           "de": "Gegnerangriff↓ T 1",
           "en": "Terrify 1",
-          "es": "Entrada Ataque Riv. M ↓ +1",
+          "es": "Entrada Ataque Rival M ↓ +1",
           "fr": "Arrivée Tyran Attaque 1",
           "it": "Imponenza-G 1",
           "ja": "登場時攻撃ダウンＧ１",
@@ -6125,12 +6125,12 @@
     "trainerBaseId": "10012100",
     "trainerNameId": "ch0121",
     "stats": {
-      "hpValues": [80, 140, 197, 428, 476],
-      "atkValues": [7, 21, 33, 88, 100],
-      "defValues": [9, 30, 48, 125, 141],
-      "spaValues": [22, 61, 97, 240, 272],
-      "spdValues": [9, 30, 48, 125, 141],
-      "speValues": [20, 79, 136, 356, 404]
+      "hpValues": [80, 140, 197, 428, 476, 524],
+      "atkValues": [7, 21, 33, 88, 100, 112],
+      "defValues": [9, 30, 48, 125, 141, 157],
+      "spaValues": [22, 61, 97, 240, 272, 304],
+      "spdValues": [9, 30, 48, 125, 141, 157],
+      "speValues": [20, 79, 136, 356, 404, 452]
     },
     "moves": {
       "move1": {
@@ -6441,12 +6441,12 @@
     "trainerBaseId": "10012500",
     "trainerNameId": "ch0125",
     "stats": {
-      "hpValues": [83, 139, 193, 402, 446],
-      "atkValues": [21, 79, 133, 353, 401],
-      "defValues": [15, 43, 70, 169, 189],
-      "spaValues": [7, 30, 51, 139, 155],
-      "spdValues": [12, 29, 44, 99, 111],
-      "speValues": [8, 37, 64, 174, 198]
+      "hpValues": [83, 139, 193, 402, 446, 490],
+      "atkValues": [21, 79, 133, 353, 401, 449],
+      "defValues": [15, 43, 70, 169, 189, 209],
+      "spaValues": [7, 30, 51, 139, 155, 171],
+      "spdValues": [12, 29, 44, 99, 111, 123],
+      "speValues": [8, 37, 64, 174, 198, 222]
     },
     "moves": {
       "move1": {
@@ -6711,12 +6711,12 @@
     "trainerBaseId": "10013100",
     "trainerNameId": "ch0131",
     "stats": {
-      "hpValues": [99, 164, 224, 466, 518],
-      "atkValues": [10, 24, 36, 91, 103],
-      "defValues": [14, 41, 65, 164, 184],
-      "spaValues": [16, 54, 90, 233, 261],
-      "spdValues": [14, 41, 65, 164, 184],
-      "speValues": [19, 76, 130, 339, 383]
+      "hpValues": [99, 164, 224, 466, 518, 570],
+      "atkValues": [10, 24, 36, 91, 103, 115],
+      "defValues": [14, 41, 65, 164, 184, 204],
+      "spaValues": [16, 54, 90, 233, 261, 289],
+      "spdValues": [14, 41, 65, 164, 184, 204],
+      "speValues": [19, 76, 130, 339, 383, 427]
     },
     "moves": {
       "move1": {
@@ -7027,12 +7027,12 @@
     "trainerBaseId": "10001600",
     "trainerNameId": "ch0016",
     "stats": {
-      "hpValues": [82, 187, 255, 557, 625],
-      "atkValues": [6, 44, 68, 178, 202],
-      "defValues": [9, 41, 62, 150, 170],
-      "spaValues": [6, 48, 75, 196, 220],
-      "spdValues": [9, 41, 62, 150, 170],
-      "speValues": [8, 51, 78, 199, 223]
+      "hpValues": [82, 187, 255, 557, 625, 693],
+      "atkValues": [6, 44, 68, 178, 202, 226],
+      "defValues": [9, 41, 62, 150, 170, 190],
+      "spaValues": [6, 48, 75, 196, 220, 244],
+      "spdValues": [9, 41, 62, 150, 170, 190],
+      "speValues": [8, 51, 78, 199, 223, 247]
     },
     "moves": {
       "move1": {
@@ -7298,12 +7298,12 @@
     "trainerBaseId": "10001200",
     "trainerNameId": "ch0012",
     "stats": {
-      "hpValues": [62, 137, 182, 402, 450],
-      "atkValues": [11, 76, 118, 305, 345],
-      "defValues": [5, 30, 45, 111, 127],
-      "spaValues": [11, 72, 111, 287, 323],
-      "spdValues": [5, 26, 38, 93, 105],
-      "speValues": [13, 45, 66, 154, 174],
+      "hpValues": [62, 137, 182, 402, 450, 498],
+      "atkValues": [11, 76, 118, 305, 345, 385],
+      "defValues": [5, 30, 45, 111, 127, 143],
+      "spaValues": [11, 72, 111, 287, 323, 359],
+      "spdValues": [5, 26, 38, 93, 105, 117],
+      "speValues": [13, 45, 66, 154, 174, 194],
       "atkScale": 120,
       "defScale": 100,
       "spaScale": 100,
@@ -7619,12 +7619,12 @@
     "trainerBaseId": "10009100",
     "trainerNameId": "ch0091",
     "stats": {
-      "hpValues": [108, 175, 238, 491, 547],
-      "atkValues": [22, 70, 115, 291, 331],
-      "defValues": [12, 33, 51, 128, 144],
-      "spaValues": [13, 32, 50, 116, 128],
-      "spdValues": [10, 30, 48, 125, 141],
-      "speValues": [21, 68, 113, 289, 325],
+      "hpValues": [108, 175, 238, 491, 547, 603],
+      "atkValues": [22, 70, 115, 291, 331, 371],
+      "defValues": [12, 33, 51, 128, 144, 160],
+      "spaValues": [13, 32, 50, 116, 128, 140],
+      "spdValues": [10, 30, 48, 125, 141, 157],
+      "speValues": [21, 68, 113, 289, 325, 361],
       "atkScale": 120,
       "defScale": 120,
       "spaScale": 100,
@@ -8074,12 +8074,12 @@
     "trainerBaseId": "10012700",
     "trainerNameId": "ch0127",
     "stats": {
-      "hpValues": [128, 222, 312, 664, 740],
-      "atkValues": [9, 23, 35, 90, 102],
-      "defValues": [14, 34, 52, 118, 134],
-      "spaValues": [12, 57, 99, 264, 300],
-      "spdValues": [16, 39, 60, 148, 164],
-      "speValues": [16, 49, 79, 200, 224]
+      "hpValues": [128, 222, 312, 664, 740, 816],
+      "atkValues": [9, 23, 35, 90, 102, 114],
+      "defValues": [14, 34, 52, 118, 134, 150],
+      "spaValues": [12, 57, 99, 264, 300, 336],
+      "spdValues": [16, 39, 60, 148, 164, 180],
+      "speValues": [16, 49, 79, 200, 224, 248]
     },
     "moves": {
       "move1": {
@@ -8391,12 +8391,12 @@
     "trainerBaseId": "10011300",
     "trainerNameId": "ch0113",
     "stats": {
-      "hpValues": [140, 198, 252, 472, 520],
-      "atkValues": [8, 29, 47, 124, 140],
-      "defValues": [17, 60, 99, 264, 300],
-      "spaValues": [10, 27, 42, 108, 120],
-      "spdValues": [16, 42, 66, 165, 185],
-      "speValues": [9, 29, 47, 124, 140],
+      "hpValues": [140, 198, 252, 472, 520, 568],
+      "atkValues": [8, 29, 47, 124, 140, 156],
+      "defValues": [17, 60, 99, 264, 300, 336],
+      "spaValues": [10, 27, 42, 108, 120, 132],
+      "spdValues": [16, 42, 66, 165, 185, 205],
+      "speValues": [9, 29, 47, 124, 140, 156],
       "atkScale": 120,
       "defScale": 120,
       "spaScale": 100,
@@ -8717,12 +8717,12 @@
     "trainerBaseId": "10012800",
     "trainerNameId": "ch0128",
     "stats": {
-      "hpValues": [81, 140, 197, 417, 465],
-      "atkValues": [18, 68, 116, 303, 343],
-      "defValues": [9, 27, 45, 111, 123],
-      "spaValues": [17, 63, 105, 270, 306],
-      "spdValues": [16, 37, 55, 132, 148],
-      "speValues": [12, 45, 75, 196, 220],
+      "hpValues": [81, 140, 197, 417, 465, 513],
+      "atkValues": [18, 68, 116, 303, 343, 383],
+      "defValues": [9, 27, 45, 111, 123, 135],
+      "spaValues": [17, 63, 105, 270, 306, 342],
+      "spdValues": [16, 37, 55, 132, 148, 164],
+      "speValues": [12, 45, 75, 196, 220, 244],
       "atkScale": 120,
       "defScale": 100,
       "spaScale": 120,
@@ -9108,12 +9108,12 @@
     "trainerBaseId": "10011001",
     "trainerNameId": "ch0110",
     "stats": {
-      "hpValues": [82, 177, 237, 512, 572],
-      "atkValues": [5, 28, 43, 109, 121],
-      "defValues": [10, 46, 70, 169, 189],
-      "spaValues": [7, 45, 69, 179, 203],
-      "spdValues": [9, 47, 71, 181, 205],
-      "speValues": [8, 51, 78, 199, 223]
+      "hpValues": [82, 177, 237, 512, 572, 632],
+      "atkValues": [5, 28, 43, 109, 121, 133],
+      "defValues": [10, 46, 70, 169, 189, 209],
+      "spaValues": [7, 45, 69, 179, 203, 227],
+      "spdValues": [9, 47, 71, 181, 205, 229],
+      "speValues": [8, 51, 78, 199, 223, 247]
     },
     "moves": {
       "move1": {
@@ -9319,7 +9319,7 @@
           "de": "P-Att.-Problemaufhebung T 2",
           "en": "Healing Hand 2",
           "es": "Acción Curaproblemas M +2",
-          "fr": "Traitement Alliés 2",
+          "fr": "Coach Traitement 2",
           "it": "Guarigruppo 2",
           "ja": "Ｐ技後異常解除Ｇ２",
           "ko": "P기술후상태이상해제G2",
@@ -9378,12 +9378,12 @@
     "trainerBaseId": "10011600",
     "trainerNameId": "ch0116",
     "stats": {
-      "hpValues": [146, 214, 277, 530, 586],
-      "atkValues": [26, 60, 93, 225, 253],
-      "defValues": [34, 70, 103, 235, 263],
-      "spaValues": [20, 47, 71, 170, 190],
-      "spdValues": [27, 56, 83, 193, 217],
-      "speValues": [17, 40, 61, 149, 165]
+      "hpValues": [146, 214, 277, 530, 586, 642],
+      "atkValues": [26, 60, 93, 225, 253, 281],
+      "defValues": [34, 70, 103, 235, 263, 291],
+      "spaValues": [20, 47, 71, 170, 190, 210],
+      "spdValues": [27, 56, 83, 193, 217, 241],
+      "speValues": [17, 40, 61, 149, 165, 181]
     },
     "moves": {
       "move1": {
@@ -9671,12 +9671,12 @@
     "trainerBaseId": "10017000",
     "trainerNameId": "ch0170",
     "stats": {
-      "hpValues": [81, 141, 198, 429, 477],
-      "atkValues": [18, 47, 74, 184, 208],
-      "defValues": [9, 31, 52, 129, 145],
-      "spaValues": [22, 71, 116, 303, 343],
-      "spdValues": [9, 31, 52, 129, 145],
-      "speValues": [16, 64, 109, 285, 325]
+      "hpValues": [81, 141, 198, 429, 477, 525],
+      "atkValues": [18, 47, 74, 184, 208, 232],
+      "defValues": [9, 31, 52, 129, 145, 161],
+      "spaValues": [22, 71, 116, 303, 343, 383],
+      "spdValues": [9, 31, 52, 129, 145, 161],
+      "speValues": [16, 64, 109, 285, 325, 365]
     },
     "moves": {
       "move1": {
@@ -9987,12 +9987,12 @@
     "trainerBaseId": "10009900",
     "trainerNameId": "ch0099",
     "stats": {
-      "hpValues": [92, 175, 227, 475, 527],
-      "atkValues": [19, 56, 80, 190, 210],
-      "defValues": [13, 39, 54, 131, 147],
-      "spaValues": [26, 91, 133, 320, 360],
-      "spdValues": [13, 39, 54, 131, 147],
-      "speValues": [22, 64, 91, 212, 236]
+      "hpValues": [92, 175, 227, 475, 527, 579],
+      "atkValues": [19, 56, 80, 190, 210, 230],
+      "defValues": [13, 39, 54, 131, 147, 163],
+      "spaValues": [26, 91, 133, 320, 360, 400],
+      "spdValues": [13, 39, 54, 131, 147, 163],
+      "speValues": [22, 64, 91, 212, 236, 260]
     },
     "moves": {
       "move1": {
@@ -10258,12 +10258,12 @@
     "trainerBaseId": "10004810",
     "trainerNameId": "ch0048",
     "stats": {
-      "hpValues": [82, 161, 236, 533, 597],
-      "atkValues": [22, 68, 110, 286, 322],
-      "defValues": [9, 29, 47, 124, 140],
-      "spaValues": [18, 65, 110, 286, 322],
-      "spdValues": [9, 29, 47, 124, 140],
-      "speValues": [18, 70, 118, 316, 356],
+      "hpValues": [82, 161, 236, 533, 597, 661],
+      "atkValues": [22, 68, 110, 286, 322, 358],
+      "defValues": [9, 29, 47, 124, 140, 156],
+      "spaValues": [18, 65, 110, 286, 322, 358],
+      "spdValues": [9, 29, 47, 124, 140, 156],
+      "speValues": [18, 70, 118, 316, 356, 396],
       "atkScale": 110,
       "defScale": 100,
       "spaScale": 100,
@@ -10413,7 +10413,7 @@
           "fr": "Soigne toutes les\naltérations de statut\ndu lanceur.\nAugmente beaucoup\nl'Esquive et le taux de\ncritiques du lanceur.\nLe lanceur perd 90 %\nde ses PV restants.\nSi le lanceur a\nméga-évolué, son\nAttaque augmente\nvertigineusement.",
           "it": "Causa danni pari al 90% dei suoi PS residui a chi la usa, ma lo cura dai problemi di stato e ne aumenta moltissimo l'elusione e la probabilità di mandare a segno brutti colpi. Se MegaSharpedo usa questa mossa, aumenta al massimo il suo Attacco.",
           "ja": "自分の状態異常を解除する\n自分の回避率と急所率をぐぐーんとあげる\n自分の残りＨＰの９０％のダメージを受ける\n自分がメガサメハダーになっている場合はさらに自分の攻撃をどっかーんとあげる",
-          "ko": "자신의 상태 이상을 해제한다\n자신의 회피율과 급소율이 매우 크게 오른다\n자신의 남은 HP의 90%만큼 데미지를 입는다\n추가로 자신이 메가샤크니아가 되어있을 때 자신의 공격이 폭발적으로 오른다",
+          "ko": "자신의 상태 이상을 해제한다\n자신의 회피율과 급소율이 매우 크게 오른다\n자신의 남은 HP의 90%만큼 데미지를 입는다\n추가로 자신이 메가샤크니아가 되어있을 때는 자신의 공격이 폭발적으로 오른다",
           "zh": "解除自己的異常狀態。\n極大幅提高自己的閃避率和擊中要害率。\n會受到自己所剩ＨＰ的９０％的傷害。\n當巨牙鯊已經變成超級巨牙鯊時，還會爆發式提高自己的攻擊。"
         },
         "category": 3,
@@ -10519,7 +10519,7 @@
         "name": {
           "de": "Effektiv-GA-GA-Stärke↑ 5",
           "en": "Double Down 5",
-          "es": "Mov. Compi Superef. Imp. +5",
+          "es": "Mov. Compi Superef. Impulsor +5",
           "fr": "Capa. Duo Ultra-Efficace 5",
           "it": "Uniefficace 5",
           "ja": "Ｂ技抜群時威力上昇５",
@@ -10665,12 +10665,12 @@
     "trainerBaseId": "10000400",
     "trainerNameId": "ch0004",
     "stats": {
-      "hpValues": [125, 235, 340, 758, 846],
-      "atkValues": [36, 85, 130, 317, 357],
-      "defValues": [21, 32, 41, 85, 93],
-      "spaValues": [24, 43, 61, 127, 143],
-      "spdValues": [23, 34, 43, 87, 95],
-      "speValues": [19, 40, 58, 135, 151]
+      "hpValues": [125, 235, 340, 758, 846, 934],
+      "atkValues": [36, 85, 130, 317, 357, 397],
+      "defValues": [21, 32, 41, 85, 93, 101],
+      "spaValues": [24, 43, 61, 127, 143, 159],
+      "spdValues": [23, 34, 43, 87, 95, 103],
+      "speValues": [19, 40, 58, 135, 151, 167]
     },
     "moves": {
       "move1": {
@@ -10958,12 +10958,12 @@
     "trainerBaseId": "10014800",
     "trainerNameId": "ch0148",
     "stats": {
-      "hpValues": [104, 196, 283, 624, 700],
-      "atkValues": [18, 68, 116, 303, 343],
-      "defValues": [9, 23, 35, 90, 102],
-      "spaValues": [18, 58, 97, 251, 283],
-      "spdValues": [9, 23, 35, 90, 102],
-      "speValues": [17, 60, 99, 264, 300]
+      "hpValues": [104, 196, 283, 624, 700, 776],
+      "atkValues": [18, 68, 116, 303, 343, 383],
+      "defValues": [9, 23, 35, 90, 102, 114],
+      "spaValues": [18, 58, 97, 251, 283, 315],
+      "spdValues": [9, 23, 35, 90, 102, 114],
+      "speValues": [17, 60, 99, 264, 300, 336]
     },
     "moves": {
       "move1": {
@@ -11062,7 +11062,7 @@
         },
         "description": {
           "de": "Der Anwender geht in den Phantomkraft-Zustand über. Nach einiger Zeit wird der Zustand aufgehoben und der Anwender greift an. Im Phantomkraft-Zustand kann der Anwender keine weiteren Aktionen durchführen. In diesem Zustand treffen keine Angriffe des Gegners. Wird der Anwender von einer Gefährtenattacke getroffen, wird der Phantomkraft-Zustand aufgehoben.",
-          "en": "The user takes on a phantom presence stance. After a set time, this presence fades and the user attacks. No other actions can be taken while in phantom presence. Opponents’ moves will not hit the user while it is in this presence. If the user is hit by a sync move while in phantom presence, the presence will fade.",
+          "en": "The user takes on a phantom presence. After a set time, this presence fades and the user attacks. No other actions can be taken while in phantom presence. Opponents’ moves will not hit the user while it is in this presence. If the user is hit by a sync move while in phantom presence, the presence will fade.",
           "es": "El usuario adopta un Estado Etéreo y, tras un período de tiempo, lanza Golpe Fantasma. Mientras tanto, no puede realizar ninguna otra acción y los movimientos de los rivales no le aciertan. Vuelve a la normalidad tras atacar o si sufre el ataque de un movimiento compi del rival.",
           "fr": "Le lanceur charge\nl'attaque. Après un\ncertain temps, le lanceur\ncesse de la charger et\ninflige des dégâts à\nl'ennemi.\nLe lanceur ne peut rien\nfaire d'autre lorsqu'il\ncharge l'attaque.\nPendant la charge, les\ncapacités des ennemis ne\npeuvent pas toucher le\nlanceur, mais s'il subit\ndes dégâts d'une capacité\nDuo, la charge de\nl'attaque est annulée.",
           "it": "Chi la usa entra in modalità Spettrotuffo. Mentre questa modalità è attiva, l'Unità non può fare altre azioni e le mosse avversarie che hanno come bersaglio l'Unità falliscono. Se l'Unità subisce un attacco con un'Unimossa, la modalità Spettrotuffo termina. Altrimenti, dopo un certo lasso di tempo, la modalità Spettrotuffo termina e l'Unità attacca.",
@@ -11274,12 +11274,12 @@
     "trainerBaseId": "10013000",
     "trainerNameId": "ch0130",
     "stats": {
-      "hpValues": [149, 221, 290, 565, 625],
-      "atkValues": [15, 33, 48, 114, 126],
-      "defValues": [20, 38, 56, 122, 134],
-      "spaValues": [25, 62, 98, 241, 269],
-      "spdValues": [22, 43, 61, 138, 154],
-      "speValues": [36, 83, 128, 304, 340]
+      "hpValues": [149, 221, 290, 565, 625, 685],
+      "atkValues": [15, 33, 48, 114, 126, 138],
+      "defValues": [20, 38, 56, 122, 134, 146],
+      "spaValues": [25, 62, 98, 241, 269, 297],
+      "spdValues": [22, 43, 61, 138, 154, 170],
+      "speValues": [36, 83, 128, 304, 340, 376]
     },
     "moves": {
       "move1": {
@@ -11484,7 +11484,7 @@
         "name": {
           "de": "Treffer-Wert-Absorption 4",
           "en": "Stat Leech 4",
-          "es": "Ataque Absorbecaract. +4",
+          "es": "Ataque Absorbecaracterísticas +4",
           "fr": "Capacité Drain Stat 4",
           "it": "Assorbirandom 4",
           "ja": "攻撃時能力吸収４",
@@ -11590,12 +11590,12 @@
     "trainerBaseId": "10005400",
     "trainerNameId": "ch0054",
     "stats": {
-      "hpValues": [70, 150, 202, 422, 474],
-      "atkValues": [7, 61, 97, 251, 283],
-      "defValues": [7, 34, 52, 129, 145],
-      "spaValues": [7, 61, 97, 251, 283],
-      "spdValues": [8, 42, 63, 162, 182],
-      "speValues": [12, 84, 132, 341, 385]
+      "hpValues": [70, 150, 202, 422, 474, 526],
+      "atkValues": [7, 61, 97, 251, 283, 315],
+      "defValues": [7, 34, 52, 129, 145, 161],
+      "spaValues": [7, 61, 97, 251, 283, 315],
+      "spdValues": [8, 42, 63, 162, 182, 202],
+      "speValues": [12, 84, 132, 341, 385, 429]
     },
     "moves": {
       "move1": {
@@ -11860,12 +11860,12 @@
     "trainerBaseId": "10009101",
     "trainerNameId": "ch0091",
     "stats": {
-      "hpValues": [84, 144, 201, 432, 480],
-      "atkValues": [22, 74, 122, 320, 360],
-      "defValues": [12, 34, 55, 132, 148],
-      "spaValues": [24, 77, 128, 326, 370],
-      "spdValues": [12, 34, 55, 132, 148],
-      "speValues": [16, 42, 66, 165, 185]
+      "hpValues": [84, 144, 201, 432, 480, 528],
+      "atkValues": [22, 74, 122, 320, 360, 400],
+      "defValues": [12, 34, 55, 132, 148, 164],
+      "spaValues": [24, 77, 128, 326, 370, 414],
+      "spdValues": [12, 34, 55, 132, 148, 164],
+      "speValues": [16, 42, 66, 165, 185, 205]
     },
     "moves": {
       "move1": {
@@ -12070,7 +12070,7 @@
         "name": {
           "de": "GA-5 Werte↑ 1",
           "en": "High Five 1",
-          "es": "Mov. Compi 5 Caract. ↑ +1",
+          "es": "Mov. Compi 5 Características ↑ +1",
           "fr": "Capacité Duo 5 Stats ↑ 1",
           "it": "Unimossa pentaumento 1",
           "ja": "Ｂ技後能力５種アップ１",
@@ -12176,12 +12176,12 @@
     "trainerBaseId": "10009040",
     "trainerNameId": "ch0090",
     "stats": {
-      "hpValues": [94, 166, 235, 510, 570],
-      "atkValues": [21, 76, 127, 336, 380],
-      "defValues": [12, 35, 56, 144, 160],
-      "spaValues": [10, 24, 36, 91, 103],
-      "spdValues": [12, 31, 49, 115, 131],
-      "speValues": [10, 39, 66, 176, 200]
+      "hpValues": [94, 166, 235, 510, 570, 630],
+      "atkValues": [21, 76, 127, 336, 380, 424],
+      "defValues": [12, 35, 56, 144, 160, 176],
+      "spaValues": [10, 24, 36, 91, 103, 115],
+      "spdValues": [12, 31, 49, 115, 131, 147],
+      "speValues": [10, 39, 66, 176, 200, 224]
     },
     "moves": {
       "move1": {
@@ -12386,7 +12386,7 @@
         "name": {
           "de": "GA-Hagel",
           "en": "Hail Bringer",
-          "es": "Mov. Compi Granizo",
+          "es": "Movimiento Compi Granizo",
           "fr": "Capacité Duo Grêle",
           "it": "Unigrandine",
           "ja": "Ｂ技後あられ化",
@@ -12492,12 +12492,12 @@
     "trainerBaseId": "10000240",
     "trainerNameId": "ch0002",
     "stats": {
-      "hpValues": [99, 188, 272, 613, 685],
-      "atkValues": [18, 73, 124, 333, 377],
-      "defValues": [10, 27, 42, 108, 120],
-      "spaValues": [19, 68, 113, 300, 340],
-      "spdValues": [10, 27, 42, 108, 120],
-      "speValues": [13, 37, 58, 146, 166]
+      "hpValues": [99, 188, 272, 613, 685, 757],
+      "atkValues": [18, 73, 124, 333, 377, 421],
+      "defValues": [10, 27, 42, 108, 120, 132],
+      "spaValues": [19, 68, 113, 300, 340, 380],
+      "spdValues": [10, 27, 42, 108, 120, 132],
+      "speValues": [13, 37, 58, 146, 166, 186]
     },
     "moves": {
       "move1": {
@@ -12702,7 +12702,7 @@
         "name": {
           "de": "Gegn.-GA-Schlaf",
           "en": "Clock Out",
-          "es": "Mov. Compi Soporífero",
+          "es": "Movimiento Compi Soporífero",
           "fr": "C. D. Offensive Sommeil",
           "it": "Addormentimpatto Unimossa",
           "ja": "相手にＢ技後眠り付与",
@@ -12808,12 +12808,12 @@
     "trainerBaseId": "10011100",
     "trainerNameId": "ch0111",
     "stats": {
-      "hpValues": [98, 162, 222, 464, 516],
-      "atkValues": [23, 81, 135, 355, 403],
-      "defValues": [11, 34, 55, 143, 159],
-      "spaValues": [22, 80, 134, 354, 402],
-      "spdValues": [12, 35, 56, 144, 160],
-      "speValues": [12, 48, 81, 213, 241]
+      "hpValues": [98, 162, 222, 464, 516, 568],
+      "atkValues": [23, 81, 135, 355, 403, 451],
+      "defValues": [11, 34, 55, 143, 159, 175],
+      "spaValues": [22, 80, 134, 354, 402, 450],
+      "spdValues": [12, 35, 56, 144, 160, 176],
+      "speValues": [12, 48, 81, 213, 241, 269]
     },
     "moves": {
       "move1": {
@@ -13124,12 +13124,12 @@
     "trainerBaseId": "10001500",
     "trainerNameId": "ch0015",
     "stats": {
-      "hpValues": [80, 180, 240, 515, 579],
-      "atkValues": [7, 47, 71, 181, 205],
-      "defValues": [8, 42, 63, 162, 182],
-      "spaValues": [6, 19, 25, 58, 66],
-      "spdValues": [7, 34, 52, 129, 145],
-      "speValues": [10, 56, 86, 218, 246]
+      "hpValues": [80, 180, 240, 515, 579, 643],
+      "atkValues": [7, 47, 71, 181, 205, 229],
+      "defValues": [8, 42, 63, 162, 182, 202],
+      "spaValues": [6, 19, 25, 58, 66, 74],
+      "spdValues": [7, 34, 52, 129, 145, 161],
+      "speValues": [10, 56, 86, 218, 246, 274]
     },
     "moves": {
       "move1": {
@@ -13394,12 +13394,12 @@
     "trainerBaseId": "10000100",
     "trainerNameId": "ch0001",
     "stats": {
-      "hpValues": [94, 161, 224, 477, 533],
-      "atkValues": [15, 51, 84, 216, 244],
-      "defValues": [12, 36, 57, 145, 165],
-      "spaValues": [8, 19, 28, 72, 80],
-      "spdValues": [10, 34, 55, 143, 159],
-      "speValues": [23, 82, 139, 359, 407]
+      "hpValues": [94, 161, 224, 477, 533, 589],
+      "atkValues": [15, 51, 84, 216, 244, 272],
+      "defValues": [12, 36, 57, 145, 165, 185],
+      "spaValues": [8, 19, 28, 72, 80, 88],
+      "spdValues": [10, 34, 55, 143, 159, 175],
+      "speValues": [23, 82, 139, 359, 407, 455]
     },
     "moves": {
       "move1": {
@@ -13679,6 +13679,1557 @@
       "ja": "ククイ_ルガルガン",
       "ko": "쿠쿠이_루가루암",
       "zh": "庫庫伊_鬃岩狼人"
+    }
+  },
+  {
+    "monsterBaseId": "20015401",
+    "monsterId": "20002000002",
+    "trainerBaseId": "10000200",
+    "trainerNameId": "ch0002",
+    "stats": {
+      "hpValues": [177, 275, 365, 722, 802, 882],
+      "atkValues": [17, 35, 53, 119, 131, 143],
+      "defValues": [26, 42, 57, 112, 124, 136],
+      "spaValues": [22, 53, 83, 193, 217, 241],
+      "spdValues": [27, 50, 71, 159, 175, 191],
+      "speValues": [20, 45, 69, 157, 177, 197]
+    },
+    "moves": {
+      "move1": {
+        "id": 412,
+        "name": {
+          "de": "Energieball",
+          "en": "Energy Ball",
+          "es": "Energibola",
+          "fr": "Éco-Sphère",
+          "it": "Energipalla",
+          "ja": "エナジーボール",
+          "ko": "에너지볼",
+          "zh": "能量球"
+        },
+        "description": {
+          "de": "Senkt in sehr\nseltenen Fällen die\nSpezial-Verteidigung\ndes Zieles.",
+          "en": "Has a very small chance of lowering the target’s Sp. Def.",
+          "es": "Muy rara vez reduce la\nDefensa Especial del\nobjetivo.",
+          "fr": "Baisse légèrement la\nDéfense Spéciale de\nl'ennemi (très rarement).",
+          "it": "Molto raramente riduce\nla Difesa Speciale\ndel bersaglio.",
+          "ja": "すごくまれに相手の特防をさげる",
+          "ko": "매우 드물게 상대의 특수방어를 떨어뜨린다",
+          "zh": "極少數情況下會降低對手的特防。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 5,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 49,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19081,
+        "name": {
+          "de": "Angriffplus\n(Team)",
+          "en": "Dire Hit All",
+          "es": "Directo\nMúltiple",
+          "fr": "Omni-Muscle +",
+          "it": "Supercolpo-G",
+          "ja": "クリティカットＧ",
+          "ko": "크리티컬커터G",
+          "zh": "要害攻擊Ｇ"
+        },
+        "description": {
+          "de": "Erhöht die Volltrefferquote\naller Gefährten im Team.",
+          "en": "Raises the critical-hit rate of all allied sync pairs.",
+          "es": "Aumenta la probabilidad\nde asestar golpes críticos\ndel bando del usuario.",
+          "fr": "Augmente légèrement\nle taux de critiques de\ntous les alliés.",
+          "it": "Rende più probabili\ni brutti colpi per tutte\nle Unità alleate.",
+          "ja": "味方のバディーズ全員の急所率をあげる",
+          "ko": "같은 편 버디즈 전원의 급소율이 오른다",
+          "zh": "提高我方全體拍組的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 10020,
+        "name": {
+          "de": "Da geht noch\nwas!",
+          "en": "Sunny Side Up!",
+          "es": "¡Espíritu positivo!",
+          "fr": "Après la pluie,\nle beau temps !",
+          "it": "Più in alto!",
+          "ja": "あがってくよ！",
+          "ko": "올라간다!",
+          "zh": "要嗨起來囉！"
+        },
+        "description": {
+          "de": "Erhöht den Angriff, den\nSpezial-Angriff und die\nInitiative aller Gefährten\nim Team. Bei starkem\nSonnenlicht werden diese\nWerte stark erhöht.",
+          "en": "Raises the Attack, Sp. Atk, and Speed of all allied sync pairs. Sharply raises them if the weather is sunny.",
+          "es": "Aumenta el Ataque, el\nAtaque Especial y la\nVelocidad del bando del\nusuario.\nCuando está soleado,\nestas características\naumentan bastante.",
+          "fr": "Augmente légèrement\nl'Attaque, l'Attaque\nSpéciale et la Vitesse de\ntous les alliés. Augmente\nmodérément ces stats\nquand le soleil brille.",
+          "it": "Aumenta l'Attacco,\nl'Attacco Speciale e la\nVelocità di tutte le Unità\nalleate. Se la luce solare\nè intensa, le aumenta di\nmolto.",
+          "ja": "味方のバディーズ全員の攻撃と特攻と素早さをあげる\n天気がひざしがつよい状態の場合はぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 공격과 특수공격, 스피드가 오른다\n햇살이 강한 날씨일 때는 크게 오른다",
+          "zh": "提高我方全體拍組的攻擊、特攻和速度。\n天氣為日照強烈狀態時，效果會大幅提高。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 113,
+        "name": {
+          "de": "Lichtschild",
+          "en": "Light Screen",
+          "es": "Pantalla de Luz",
+          "fr": "Mur Lumière",
+          "it": "Schermoluce",
+          "ja": "ひかりのかべ",
+          "ko": "빛의장막",
+          "zh": "光牆"
+        },
+        "description": {
+          "de": "Verringert den Schaden,\nden die Anwender-Seite\ndurch Spezial-Attacken\nerleidet.",
+          "en": "Reduces special damage done to the allied field of play.",
+          "es": "Mitiga el daño que el\nbando del usuario recibe\nde ataques especiales.",
+          "fr": "Réduit les dégâts\ninfligés aux alliés par\nles attaques spéciales.",
+          "it": "Protegge il campo alleato\nriducendo i danni\nspeciali.",
+          "ja": "味方全体の場を特殊ダメージ軽減状態にする",
+          "ko": "같은 편 전원의 필드를 특수데미지경감 상태로 만든다",
+          "zh": "讓我方場地變成特殊傷害減輕狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 11,
+        "target": 7,
+        "targetType": {
+          "de": "Gefährten-Seite",
+          "en": "Allied side",
+          "es": "Bando aliado",
+          "fr": "Côté allié",
+          "it": "Campo alleato",
+          "ja": "味方全体の場",
+          "ko": "같은 편 전원의 필드",
+          "zh": "我方場地"
+        },
+        "gaugeDrain": 3,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 71000,
+        "name": {
+          "de": "Blättersturm des\ngoldenen Herzens",
+          "en": "Heart of Gold \nLeaf Storm",
+          "es": "Lluevehojas\nde Corazón Áureo",
+          "fr": "Fais battre mon cœur d'or !\nTempête Verte !",
+          "it": "Verdebufera cuordorato",
+          "ja": "きらめくハートの\nリーフストーム",
+          "ko": "반짝이는 하트\n리프스톰",
+          "zh": "心光閃閃之\n飛葉風暴"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nist umso höher, je stärker\ndie Statuswerte des\nAnwenders erhöht\nwurden.",
+          "en": "The more the user’s stats are raised, the greater the power of this move.",
+          "es": "Causa más daño cuanto\nmás hayan aumentado\nlas características del\nusuario.",
+          "fr": "Plus les stats du lanceur\nont été augmentées,\nplus cette capacité est\npuissante.",
+          "it": "Più sono state aumentate\nle statistiche di chi la usa,\npiù questa mossa è\npotente.",
+          "ja": "自分の能力があがっているほど威力があがる",
+          "ko": "자신의 능력이 올라가 있는 만큼 위력이 오른다",
+          "zh": "自己的能力提高得越多，威力就越大。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 5,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 17011001,
+        "name": {
+          "de": "Sonnen-Problemschutz",
+          "en": "Solar Shield",
+          "es": "Inmunidad Solar",
+          "fr": "Protection Solaire",
+          "it": "Vitamina D",
+          "ja": "晴れ時異常無効",
+          "ko": "맑을시상태이상무효",
+          "zh": "晴天時異常狀態無效"
+        },
+        "description": {
+          "de": "Schützt bei starkem Sonnenlicht vor\nStatusproblemen.",
+          "en": "The Pokémon is not affected by status conditions when the weather is sunny.",
+          "es": "Otorga inmunidad a problemas de estado cuando\nestá soleado.",
+          "fr": "Protège des altérations de statut quand\nle soleil brille.",
+          "it": "Quando la luce del sole è intensa,\nl'Unità è immune ai problemi di stato.",
+          "ja": "天気がひざしがつよい状態の場合は状態異常にならない",
+          "ko": "햇살이 강한 날씨일 때 상태 이상이 되지 않는다",
+          "zh": "當天氣為日照強烈時，不會陷入異常狀態。"
+        }
+      }
+    },
+    "type": 5,
+    "weakType": 2,
+    "rarity": 5,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Meganie",
+      "en": "Meganium",
+      "es": "Meganium",
+      "fr": "Méganium",
+      "it": "Meganium",
+      "ja": "メガニウム",
+      "ko": "메가니움",
+      "zh": "大竺葵"
+    },
+    "trainerNameByLanguage": {
+      "de": "Lyra",
+      "en": "Lyra",
+      "es": "Lira",
+      "fr": "Célesta",
+      "it": "Cetra",
+      "ja": "コトネ",
+      "ko": "금선",
+      "zh": "琴音"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Lyra_Meganie",
+      "en": "Lyra_Meganium",
+      "es": "Lira_Meganium",
+      "fr": "Célesta_Méganium",
+      "it": "Cetra_Meganium",
+      "ja": "コトネ_メガニウム",
+      "ko": "금선_메가니움",
+      "zh": "琴音_大竺葵"
+    }
+  },
+  {
+    "monsterBaseId": "20015700",
+    "monsterId": "20112000002",
+    "trainerBaseId": "10011200",
+    "trainerNameId": "ch0112",
+    "stats": {
+      "hpValues": [125, 193, 256, 509, 565, 621],
+      "atkValues": [21, 38, 53, 119, 131, 143],
+      "defValues": [15, 34, 52, 118, 134, 150],
+      "spaValues": [29, 67, 103, 246, 274, 302],
+      "spdValues": [16, 36, 54, 120, 136, 152],
+      "speValues": [31, 82, 130, 317, 357, 397]
+    },
+    "moves": {
+      "move1": {
+        "id": 53,
+        "name": {
+          "de": "Flammenwurf",
+          "en": "Flamethrower",
+          "es": "Lanzallamas",
+          "fr": "Lance-Flammes",
+          "it": "Lanciafiamme",
+          "ja": "かえんほうしゃ",
+          "ko": "화염방사",
+          "zh": "噴射火焰"
+        },
+        "description": {
+          "de": "Fügt dem Ziel in\nsehr seltenen Fällen\nVerbrennungen zu.",
+          "en": "Has a very small chance of leaving the target burned.",
+          "es": "Muy rara vez quema al\nobjetivo.",
+          "fr": "Brûle l'ennemi\n(très rarement).",
+          "it": "Molto raramente scotta\nil bersaglio.",
+          "ja": "すごくまれに相手をやけど状態にする",
+          "ko": "매우 드물게 상대를 화상 상태로 만든다",
+          "zh": "極少數情況下會讓對手陷入灼傷狀態。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 2,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 47,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19030,
+        "name": {
+          "de": "X-Spezial",
+          "en": "X Sp. Atk",
+          "es": "Especial X",
+          "fr": "Atq. Spé. +",
+          "it": "Att. Speciale X",
+          "ja": "スペシャルアップ",
+          "ko": "스페셜업",
+          "zh": "特攻強化"
+        },
+        "description": {
+          "de": "Erhöht den\nSpezial-Angriff des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Sp. Atk.",
+          "es": "Aumenta bastante el\nAtaque Especial del\nusuario.",
+          "fr": "Augmente modérément\nl'Attaque Spéciale du\nlanceur.",
+          "it": "Aumenta di molto\nl'Attacco Speciale\ndi chi la usa.",
+          "ja": "自分の特攻をぐーんとあげる",
+          "ko": "자신의 특수공격이 크게 오른다",
+          "zh": "大幅提高自己的特攻。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 284,
+        "name": {
+          "de": "Eruption",
+          "en": "Eruption",
+          "es": "Estallido",
+          "fr": "Éruption",
+          "it": "Eruzione",
+          "ja": "ふんか",
+          "ko": "분화",
+          "zh": "噴火"
+        },
+        "description": {
+          "de": "Die Stärke dieser Attacke\nist umso niedriger,\nje niedriger die KP des\nAnwenders sind.",
+          "en": "The lower the user’s HP is, the lower the power of this move becomes.",
+          "es": "Cuantos menos PS tenga\nel usuario, menos daño\ncausa.",
+          "fr": "Plus les PV du lanceur\nsont bas, plus la\npuissance de cette\ncapacité baisse.",
+          "it": "Meno sono i PS di chi\nla usa, meno questa\nmossa è potente.",
+          "ja": "自分のＨＰが低いほど威力がさがる",
+          "ko": "자신의 HP가 낮을수록 위력이 떨어진다",
+          "zh": "自己的ＨＰ越低，威力就越小。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 2,
+        "target": 3,
+        "targetType": {
+          "de": "Alle Gegner",
+          "en": "All opponents",
+          "es": "Todos los rivales",
+          "fr": "Tous les ennemis",
+          "it": "Tutti i nemici",
+          "ja": "相手全員",
+          "ko": "상대 전원",
+          "zh": "對手全體拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 135,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 11120,
+        "name": {
+          "de": "Ich gebe nicht\nklein bei!",
+          "en": "Stoke the Fire!",
+          "es": "¡No nos damos\npor vencidos!",
+          "fr": "N'abandonne\npas !",
+          "it": "Non mi arrendo!",
+          "ja": "あきらめないよ！",
+          "ko": "포기하지않아!",
+          "zh": "我不會放棄！"
+        },
+        "description": {
+          "de": "Stellt einige KP des\nAnwenders wieder her.\nErhöht die Initiative und\nden Fluchtwert des\nAnwenders.",
+          "en": "Restores a bit of the user’s HP. Raises the user’s Speed and evasiveness.",
+          "es": "El usuario recupera\nalgunos PS.\nAumenta la Velocidad y\nla Evasión del usuario.",
+          "fr": "Le lanceur regagne\nbeaucoup de PV.\nAugmente légèrement\nsa Vitesse et son Esquive.",
+          "it": "Aumenta la Velocità\ne l'elusione di chi la usa\ne gli fa recuperare\nun po' di PS.",
+          "ja": "自分のＨＰを少し回復する\n自分の素早さと回避率をあげる",
+          "ko": "자신의 HP를 조금 회복한다\n자신의 스피드와 회피율이 오른다",
+          "zh": "少量回復自己的ＨＰ。\n提高自己的速度和閃避率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 77600,
+        "name": {
+          "de": "Eruption des\nEnthusiasmus",
+          "en": "Fierce Flames\nEruption",
+          "es": "Estallido de Pasión Aventurera",
+          "fr": "Une passion\ndébordante ! Éruption !",
+          "it": "Eruzione affamata d'avventura",
+          "ja": "駆け抜ける情熱の\nふんか",
+          "ko": "달려나가는 열정의\n분화",
+          "zh": "熱情奔放之\n噴火"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 2,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 12010202,
+        "name": {
+          "de": "Sonnen-Leiste↑ 2",
+          "en": "Speeding Sun 2",
+          "es": "Velocidad Solar +2",
+          "fr": "Turbo Soleil 2",
+          "it": "Colmasole 2",
+          "ja": "晴れ時わざゲージ加速２",
+          "ko": "맑을시기술게이지가속2",
+          "zh": "晴天時招式計量槽加速２"
+        },
+        "description": {
+          "de": "Beschleunigt bei starkem Sonnenlicht das\nAuffüllen der Attackenleiste.",
+          "en": "Quickly charges the move gauge when the weather is sunny.",
+          "es": "Aumenta la velocidad a la que se llena la barra\nde movimientos cuando está soleado.",
+          "fr": "La Jauge Capacité se remplit plus vite\nquand le soleil brille.",
+          "it": "Quando la luce del sole è intensa,\nla barra mosse si riempie più velocemente.",
+          "ja": "天気がひざしがつよい状態の場合は\nわざゲージが早くたまるようになる",
+          "ko": "햇살이 강한 날씨일 때 기술게이지가 빨리 채워진다",
+          "zh": "當天氣為日照強烈時，招式計量槽會累積得較快。"
+        }
+      }
+    },
+    "type": 2,
+    "weakType": 13,
+    "rarity": 5,
+    "role": 1,
+    "pokemonNameByLanguage": {
+      "de": "Tornupto",
+      "en": "Typhlosion",
+      "es": "Typhlosion",
+      "fr": "Typhlosion",
+      "it": "Typhlosion",
+      "ja": "バクフーン",
+      "ko": "블레이범",
+      "zh": "火爆獸"
+    },
+    "trainerNameByLanguage": {
+      "de": "Klarin",
+      "en": "Ethan",
+      "es": "Eco",
+      "fr": "Luth",
+      "it": "Armonio",
+      "ja": "ヒビキ",
+      "ko": "심향",
+      "zh": "阿響"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Klarin_Tornupto",
+      "en": "Ethan_Typhlosion",
+      "es": "Eco_Typhlosion",
+      "fr": "Luth_Typhlosion",
+      "it": "Armonio_Typhlosion",
+      "ja": "ヒビキ_バクフーン",
+      "ko": "심향_블레이범",
+      "zh": "阿響_火爆獸"
+    }
+  },
+  {
+    "monsterBaseId": "20016001",
+    "monsterId": "20018000002",
+    "trainerBaseId": "10001800",
+    "trainerNameId": "ch0018",
+    "stats": {
+      "hpValues": [132, 210, 285, 560, 624, 688],
+      "atkValues": [28, 64, 97, 229, 257, 285],
+      "defValues": [18, 35, 50, 116, 128, 140],
+      "spaValues": [19, 34, 49, 104, 116, 128],
+      "spdValues": [17, 33, 48, 103, 115, 127],
+      "speValues": [30, 72, 111, 265, 297, 329]
+    },
+    "moves": {
+      "move1": {
+        "id": 127,
+        "name": {
+          "de": "Kaskade",
+          "en": "Waterfall",
+          "es": "Cascada",
+          "fr": "Cascade",
+          "it": "Cascata",
+          "ja": "たきのぼり",
+          "ko": "폭포오르기",
+          "zh": "攀瀑"
+        },
+        "description": {
+          "de": "Lässt das Ziel in seltenen\nFällen zurückschrecken.",
+          "en": "Has a small chance of making the target flinch.",
+          "es": "Rara vez hace retroceder\nal objetivo.",
+          "fr": "Apeure l'ennemi\n(rarement).",
+          "it": "Raramente fa tentennare\nil bersaglio.",
+          "ja": "まれに相手をひるみ状態にする",
+          "ko": "드물게 상대를 풀죽음 상태로 만든다",
+          "zh": "少數情況下會讓對手陷入畏縮狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 3,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 45,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19010,
+        "name": {
+          "de": "X-Angriff",
+          "en": "X Attack",
+          "es": "Ataque X",
+          "fr": "Attaque +",
+          "it": "Attacco X",
+          "ja": "プラスパワー",
+          "ko": "플러스파워",
+          "zh": "力量強化"
+        },
+        "description": {
+          "de": "Erhöht den Angriff des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Attack.",
+          "es": "Aumenta bastante el\nAtaque del usuario.",
+          "fr": "Augmente modérément\nl'Attaque du lanceur.",
+          "it": "Aumenta di molto\nl'Attacco di chi la usa.",
+          "ja": "自分の攻撃をぐーんとあげる",
+          "ko": "자신의 공격이 크게 오른다",
+          "zh": "大幅提高自己的攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 25,
+        "name": {
+          "de": "Megakick",
+          "en": "Mega Kick",
+          "es": "Megapatada",
+          "fr": "Ultimawashi",
+          "it": "Megacalcio",
+          "ja": "メガトンキック",
+          "ko": "메가톤킥",
+          "zh": "百萬噸重踢"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 167,
+        "accuracy": 75,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 10180,
+        "name": {
+          "de": "Geben wir noch\nmehr Gas!",
+          "en": "Pick Up the Pace!",
+          "es": "¡Rauda y directa!",
+          "fr": "Le coup de\ngrâce !",
+          "it": "Più veloce!",
+          "ja": "もっと飛ばすわよ",
+          "ko": "더빨리간다",
+          "zh": "我要衝了喲！"
+        },
+        "description": {
+          "de": "Erhöht die Initiative des\nAnwenders stark.\nDie nächste Attacke\ndes Anwenders trifft\ngarantiert und wird\nein Volltreffer.",
+          "en": "Sharply raises the user’s Speed. Makes the user’s next attack a sure hit and a critical hit.",
+          "es": "Aumenta bastante la\nVelocidad del usuario.\nHace que su siguiente\nmovimiento no falle y\nsea crítico.",
+          "fr": "Augmente modérément\nla Vitesse du lanceur.\nSa prochaine capacité\ntouchera à coup sûr et\ninfligera un coup critique.",
+          "it": "Aumenta di molto\nla Velocità di chi la usa.\nInoltre, fa sì che\nla sua prossima mossa\nvada sicuramente\na segno e che sia\nun brutto colpo.",
+          "ja": "自分の素早さをぐーんとあげる\n自分を次回必中状態にする\n自分を次回急所状態にする",
+          "ko": "자신의 스피드가 크게 오른다\n자신을 차회필중 상태로 만든다\n자신을 차회급소 상태로 만든다",
+          "zh": "大幅提高自己的速度。\n讓自己變成下次必中狀態。\n讓自己變成下次必中要害狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 71400,
+        "name": {
+          "de": "Nassschweif des\nkristallklaren Herzens",
+          "en": "Crystalline\nAqua Tail",
+          "es": "Acua Cola\nCristalina",
+          "fr": "Guide-moi, ô cœur\npur ! Hydroqueue !",
+          "it": "Idrondata cristallina",
+          "ja": "清き心に導かれし\nアクアテール",
+          "ko": "맑은 마음에 이끌리는\n아쿠아테일",
+          "zh": "純淨心靈之\n水流尾"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 17040201,
+        "name": {
+          "de": "Topform-K.O.-Schutz",
+          "en": "Endurance",
+          "es": "Cuerpo Robusto",
+          "fr": "Coriacité",
+          "it": "Salututela",
+          "ja": "無傷時こらえる",
+          "ko": "HP최대시버티기",
+          "zh": "無傷時挺住"
+        },
+        "description": {
+          "de": "Bei Kampfantritt mit vollen KP kann das Pokémon\nden nächsten Angriff garantiert überstehen.",
+          "en": "If the Pokémon enters battle with full HP, allows it to endure a single overwhelming attack with 1 HP left.",
+          "es": "Si entra al combate con los PS al máximo, el\nPokémon resistirá el siguiente ataque y se\nquedará con, al menos, 1 PS.",
+          "fr": "Le Pokémon est prêt à encaisser les coups\ns'il arrive au combat avec tous ses PV.",
+          "it": "Se l'Unità entra in campo con tutti i PS,\nsi prepara a resistere a un colpo micidiale.",
+          "ja": "ＨＰが満タンで登場した場合は\n自分をこらえる状態にする",
+          "ko": "HP가 꽉 찬 상태로 등장한 경우 자신을 버티기 상태로 만든다",
+          "zh": "在ＨＰ全滿的狀態登場時，會讓自己變成挺住狀態。"
+        }
+      },
+      "passive2": {
+        "id": 13050301,
+        "name": {
+          "de": "Wasser-Wechsel",
+          "en": "Water Shift",
+          "es": "Cambio Agua",
+          "fr": "Conversion Eau",
+          "it": "Mutacqua",
+          "ja": "みずチェンジ",
+          "ko": "물체인지",
+          "zh": "水屬性替換"
+        },
+        "description": {
+          "de": "Attacken vom Typ Normal nehmen den Typ\nWasser an.",
+          "en": "Normal-type moves become Water-type moves.",
+          "es": "Convierte los movimientos de tipo Normal en\ntipo Agua.",
+          "fr": "Change les capacités de type Normal\nen type Eau.",
+          "it": "Le mosse di tipo Normale diventano\ndi tipo Acqua.",
+          "ja": "ノーマルタイプの技がみずタイプになる",
+          "ko": "노말타입 기술이 물타입이 된다",
+          "zh": "一般屬性的招式會變成水屬性。"
+        }
+      }
+    },
+    "type": 3,
+    "weakType": 5,
+    "rarity": 5,
+    "role": 0,
+    "pokemonNameByLanguage": {
+      "de": "Impergator",
+      "en": "Feraligatr",
+      "es": "Feraligatr",
+      "fr": "Aligatueur",
+      "it": "Feraligatr",
+      "ja": "オーダイル",
+      "ko": "장크로다일",
+      "zh": "大力鱷"
+    },
+    "trainerNameByLanguage": {
+      "de": "Krista",
+      "en": "Kris",
+      "es": "Cristi",
+      "fr": "Christy",
+      "it": "Kristy",
+      "ja": "クリス",
+      "ko": "크리스",
+      "zh": "克麗絲"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Krista_Impergator",
+      "en": "Kris_Feraligatr",
+      "es": "Cristi_Feraligatr",
+      "fr": "Christy_Aligatueur",
+      "it": "Kristy_Feraligatr",
+      "ja": "クリス_オーダイル",
+      "ko": "크리스_장크로다일",
+      "zh": "克麗絲_大力鱷"
+    }
+  },
+  {
+    "monsterBaseId": "20000301",
+    "monsterMegaFormBaseId": "20000351",
+    "monsterId": "20017100000",
+    "trainerBaseId": "10001710",
+    "trainerNameId": "ch0017",
+    "stats": {
+      "hpValues": [111, 195, 273, 592, 660, 728],
+      "atkValues": [11, 47, 80, 212, 240, 268],
+      "defValues": [14, 45, 75, 196, 220, 244],
+      "spaValues": [11, 47, 80, 212, 240, 268],
+      "spdValues": [14, 45, 75, 196, 220, 244],
+      "speValues": [14, 36, 57, 134, 150, 166],
+      "atkScale": 100,
+      "defScale": 100,
+      "spaScale": 120,
+      "spdScale": 120,
+      "speScale": 100
+    },
+    "moves": {
+      "move1": {
+        "id": 75,
+        "name": {
+          "de": "Rasierblatt",
+          "en": "Razor Leaf",
+          "es": "Hoja Afilada",
+          "fr": "Tranch'Herbe",
+          "it": "Foglielama",
+          "ja": "はっぱカッター",
+          "ko": "잎날가르기",
+          "zh": "飛葉快刀"
+        },
+        "description": {
+          "de": "Hat eine hohe\nVolltrefferquote.",
+          "en": "Critical hits land more easily.",
+          "es": "Suele ser crítico.",
+          "fr": "Taux de critiques élevé.",
+          "it": "Probabile brutto colpo.",
+          "ja": "急所に当たりやすい",
+          "ko": "급소에 맞기 쉽다",
+          "zh": "容易擊中要害。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 5,
+        "target": 3,
+        "targetType": {
+          "de": "Alle Gegner",
+          "en": "All opponents",
+          "es": "Todos los rivales",
+          "fr": "Tous les ennemis",
+          "it": "Tutti i nemici",
+          "ja": "相手全員",
+          "ko": "상대 전원",
+          "zh": "對手全體拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 43,
+        "accuracy": 95,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19000,
+        "name": {
+          "de": "Trank",
+          "en": "Potion",
+          "es": "Poción",
+          "fr": "Potion",
+          "it": "Pozione",
+          "ja": "キズぐすり",
+          "ko": "상처약",
+          "zh": "傷藥"
+        },
+        "description": {
+          "de": "Stellt einige KP eines\nGefährten wieder her.",
+          "en": "Restores a bit of an ally’s HP.",
+          "es": "Restaura algunos PS a un\naliado.",
+          "fr": "Rend beaucoup de PV\nà un allié.",
+          "it": "Fa recuperare un po'\ndi PS a un'Unità alleata.",
+          "ja": "味方のＨＰを少し回復する",
+          "ko": "같은 편의 HP를 조금 회복한다",
+          "zh": "少量回復我方的ＨＰ。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 0,
+        "targetType": {
+          "de": "1 Gefährte",
+          "en": "An ally",
+          "es": "Un aliado",
+          "fr": "1 allié",
+          "it": "Un alleato",
+          "ja": "味方１体",
+          "ko": "같은 편 1마리",
+          "zh": "我方１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 10171,
+        "name": {
+          "de": "Ich beschütze\neuch!",
+          "en": "Mega Healing!",
+          "es": "¡Os protegeré!",
+          "fr": "Je vous\nprotègerai !",
+          "it": "Vi proteggerò!",
+          "ja": "わたしが守る！",
+          "ko": "내가지킬거야!",
+          "zh": "我來保護大家！"
+        },
+        "description": {
+          "de": "Reduziert den Wert des\nGefährtenattacken-\nCountdowns um 1 bzw.\num 2, wenn der\nAnwender zu\nMega-Bisaflor geworden\nist. (Im Multimodus wirkt\nsich der Effekt auf alle\nMitstreiter aus.) Die KP\naller Gefährten im Team\nwerden kontinuierlich\nregeneriert.",
+          "en": "Reduces the user’s sync move countdown by one. If used by Mega Venusaur, reduces the user’s sync move countdown by two. (If used in a co-op battle, reduces the sync move countdown of all allied sync pairs.) Makes all allied sync pairs gradually heal themselves.",
+          "es": "Se reduce en 1 el contador de movimientos compi del usuario.\nSi ha evolucionado a Mega-Venusaur, se reduce en 2.\nEn combates cooperativos, afecta al contador de movimientos compi de su bando.\nDespués de usarlo, hace que todos los miembros del bando del usuario recuperen PS de forma gradual.",
+          "fr": "Réduit de 1 le nombre\nd'actions nécessaires pour\nlancer la capacité Duo.\nSi le lanceur a\nméga-évolué, réduit\nce nombre de 2.\n(En coop, la réduction\nconcerne tous les alliés.)\nRégénère lentement les\nPV de tous les alliés.",
+          "it": "Fa recuperare PS costantemente a tutte le Unità alleate e abbassa di 1 il numero di azioni necessarie per sferrare un'Unimossa. Se MegaVenusaur la usa, abbassa invece di 2 il numero di azioni necessarie per sferrare un'Unimossa. In modalità multigiocatore, abbassa il numero di azioni necessarie per sferrare un'Unimossa per tutti gli alleati.",
+          "ja": "自分のバディーズわざ発動可能状態までのカウントを１減らす\n自分がメガフシギバナになっている場合は２減らす\n（マルチプレイの場合は味方のプレイヤー全員のバディーズわざ発動可能状態までのカウントを減らす）\n味方のバディーズ全員を回復付帯状態にする",
+          "ko": "자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 1 줄인다\n자신이 메가이상해꽃이 되어 있을 때는 2 줄인다\n(멀티플레이일 때는 같은 편 플레이어 전원의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 줄인다)\n같은 편 버디즈 전원을 지속회복 상태로 만든다",
+          "zh": "自己發動拍組招式所需的行動數會減少１次。\n當妙蛙花已經變成超級妙蛙花時會減少２次。\n（多隊模式時，會讓我方全體玩家發動拍組招式所需的行動數減少。）\n讓我方全體拍組變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 1
+      },
+      "move4": {
+        "id": 338,
+        "name": {
+          "de": "Flora-Statue",
+          "en": "Frenzy Plant",
+          "es": "Planta Feroz",
+          "fr": "Végé-Attaque",
+          "it": "Radicalbero",
+          "ja": "ハードプラント",
+          "ko": "하드플랜트",
+          "zh": "瘋狂植物"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 5,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 4,
+        "power": 178,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 61700,
+        "name": {
+          "de": "Flora-Statue der\nRuhe und Kraft",
+          "en": "Tenacious\nFrenzy Plant",
+          "es": "Planta Feroz\nPeleona y Sanadora",
+          "fr": "L'esprit de la nature !\nVégé-Attak !",
+          "it": "Radicalbero di gioia e ardimento",
+          "ja": "癒しとファイトの\nハードプラント",
+          "ko": "치유와 투지의\n하드플랜트",
+          "zh": "治癒與戰鬥之\n瘋狂植物"
+        },
+        "description": {
+          "de": "Löst bei Bisaflor bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Bisaflor aus. Die\nStärke dieser Attacke\nsteigt, wenn das Ziel\nvergiftet oder schwer\nvergiftet ist.",
+          "en": "Become Mega Venusaur until the end of battle. Its power increases if the target is poisoned or badly poisoned.",
+          "es": "Evoluciona a Mega-Venusaur.\nVuelve a la normalidad tras terminar el combate.\nCausa más daño si el objetivo está envenenado o gravemente envenenado.",
+          "fr": "Permet à Florizarre de\ndevenir Méga-Florizarre\njusqu'à la fin du combat.\nAugmente en puissance\nsi l'ennemi est\nempoisonné ou\ngravement empoisonné.",
+          "it": "Permette a Venusaur di megaevolversi. L'effetto svanisce al termine della lotta. Questa mossa aumenta di potenza quando il bersaglio è avvelenato o iperavvelenato.",
+          "ja": "バトル終了までメガフシギバナになる\n相手がどく状態かもうどく状態のとき威力があがる",
+          "ko": "배틀이 끝날 때까지 메가이상해꽃이 된다\n상대가 독 상태나 맹독 상태일 때 위력이 오른다",
+          "zh": "變成超級妙蛙花直到對戰結束。\n當對手陷入中毒或劇毒狀態時，威力會提高。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 5,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 17042204,
+        "name": {
+          "de": "Gegn.-Att.-Schwere Verg. 4",
+          "en": "Venomous 4",
+          "es": "Movimiento Envenenador Grave +4",
+          "fr": "Capacité Empoisonn. Grave 4",
+          "it": "Iperavvelenimpatto 4",
+          "ja": "相手に技後猛毒付与４",
+          "ko": "상대에게기술후맹독부여4",
+          "zh": "對手中招後賦予劇毒４"
+        },
+        "description": {
+          "de": "Nach Erfolg einer Attacke auf einen Gegner wird\ndieser oftmals schwer vergiftet.",
+          "en": "Has a good chance of leaving the target badly poisoned when a move targeting an opponent is successful.",
+          "es": "Es muy probable que envenene gravemente al\nobjetivo si este recibe uno de los movimientos\ndel usuario.",
+          "fr": "Quand le Duo utilise avec succès une capacité\nqui vise un ennemi, empoisonne gravement\nce dernier (assez souvent).",
+          "it": "Quando una mossa va a segno, spesso\niperavvelena il bersaglio.",
+          "ja": "相手を対象にした技が成功したときにときどき\n相手をもうどく状態にする",
+          "ko": "상대를 대상으로 하는 기술이 성공했을 때 종종\n상대를 맹독 상태로 만든다",
+          "zh": "當以對手為對象的招式成功時，\n有時會讓對手陷入劇毒狀態。"
+        }
+      },
+      "passive2": {
+        "id": 18047809,
+        "name": {
+          "de": "Geg.-Att.-Ver.-Sp.-Ver.↓ 9",
+          "en": "Sundering 9",
+          "es": "Reducedefensas +9",
+          "fr": "Capacité Déf. Déf. Spé. ↓ 9",
+          "it": "Impatto rompidifesa 9",
+          "ja": "相手に技後防御特防↓９",
+          "ko": "상대에게기술후방어특수방어↓9",
+          "zh": "對手中招後防禦特防↓９"
+        },
+        "description": {
+          "de": "Nach Erfolg einer Attacke auf einen Gegner\nwerden die Verteidigung, die\nSpezial-Verteidigung oder sogar beide Werte\ndes Gegners gesenkt.",
+          "en": "Lowers the target’s Defense or Sp. Def—or both—when a move targeting an opponent is successful.",
+          "es": "Siempre reduce la Defensa, la Defensa Especial\no ambas del objetivo si uno de los movimientos\ndel usuario acierta.",
+          "fr": "Quand le Duo utilise avec succès une capacité\nqui vise un ennemi, baisse légèrement la Défense\nou la Défense Spéciale, ou les deux, de ce\ndernier (à coup sûr).",
+          "it": "Quando una mossa va a segno, riduce la Difesa\no la Difesa Speciale del bersaglio, oppure\nle riduce entrambe.",
+          "ja": "相手を対象にした技が成功したときに\n相手の防御か特防またはその両方をさげる",
+          "ko": "상대를 대상으로 하는 기술이 성공했을 때\n상대의 방어나 특수방어\n혹은 방어와 특수방어를 모두 떨어뜨린다",
+          "zh": "當以對手為對象的招式成功時，\n會降低對手的防禦或特防，或是兩種皆會降低。"
+        }
+      },
+      "passive3": {
+        "id": 15010302,
+        "name": {
+          "de": "GA-GA-Countdown↓ 2",
+          "en": "Adrenaline 2",
+          "es": "Vínculo Furor +2",
+          "fr": "C. D. Compteur ↓ 2",
+          "it": "Uniaccelerazione 2",
+          "ja": "Ｂわざ後ＢＣ加速２",
+          "ko": "B기술후BC가속2",
+          "zh": "拍組招式後計數加速２"
+        },
+        "description": {
+          "de": "Reduziert nach dem ersten Einsatz der\nGefährtenattacke den Wert des\nGefährtenattacken-Countdowns um  2.",
+          "en": "Reduces the sync move countdown by two when a sync move is used for the first time.",
+          "es": "Se reduce en 2 el contador de movimientos compi la primera vez que usa un movimiento compi.",
+          "fr": "Réduit de 2 le nombre d'actions nécessaires pour\nlancer une capacité Duo la première fois que le\nDuo utilise une capacité Duo.",
+          "it": "Una sola volta per lotta, quando l'Unità usa\nun'Unimossa, abbassa di 2 il numero di azioni\nnecessarie per sferrare l'Unimossa successiva.",
+          "ja": "初めてバディーズわざを使ったときだけ\nバディーズわざ発動可能状態までのカウントを２減らす",
+          "ko": "처음 버디즈기술을 사용했을 때만\n버디즈기술 발동 가능 상태가 되기까지의 카운트를 2 줄인다",
+          "zh": "首次使出拍組招式時，\n會讓發動拍組招式所需的行動數減少２次。"
+        }
+      }
+    },
+    "type": 5,
+    "weakType": 11,
+    "rarity": 5,
+    "role": 3,
+    "megaForm": {
+      "passives": {
+        "passive1": {
+          "id": 17042204,
+          "name": {
+            "de": "Gegn.-Vergiftungsschaden↑ 2",
+            "en": "Potent Toxin 2",
+            "es": "Veneno Dañino +2",
+            "fr": "Empoisonnement Virulent 2",
+            "it": "Avvelenapeggio 2",
+            "ja": "相手どくダメージ増加２",
+            "ko": "상대독데미지증가2",
+            "zh": "對手中毒傷害增加２"
+          },
+          "description": {
+            "de": "Erhöht den Schaden, den der Gegner durch\nVergiftungen oder schwere Vergiftungen erleidet.",
+            "en": "Increases the amount of damage the target takes from being poisoned or badly poisoned.",
+            "es": "Aumenta el daño que el objetivo sufre por\nenvenenamiento o envenenamiento grave.",
+            "fr": "Augmente les dégâts de poison et de poison\ngrave subis par les ennemis.",
+            "it": "Aumenta i danni subiti dai nemici a causa\ndell'avvelenamento e dell'iperavvelenamento.",
+            "ja": "相手にかかっている\nどくともうどくのダメージを増加させる",
+            "ko": "상대에게 걸려 있는\n독과 맹독의 데미지가 증가한다",
+            "zh": "增加對手受到的\n中毒及劇毒傷害。"
+          }
+        },
+        "passive2": {
+          "id": 18047809,
+          "name": {
+            "de": "Geg.-Att.-Ver.-Sp.-Ver.↓ 9",
+            "en": "Sundering 9",
+            "es": "Reducedefensas +9",
+            "fr": "Capacité Déf. Déf. Spé. ↓ 9",
+            "it": "Impatto rompidifesa 9",
+            "ja": "相手に技後防御特防↓９",
+            "ko": "상대에게기술후방어특수방어↓9",
+            "zh": "對手中招後防禦特防↓９"
+          },
+          "description": {
+            "de": "Nach Erfolg einer Attacke auf einen Gegner\nwerden die Verteidigung, die\nSpezial-Verteidigung oder sogar beide Werte\ndes Gegners gesenkt.",
+            "en": "Lowers the target’s Defense or Sp. Def—or both—when a move targeting an opponent is successful.",
+            "es": "Siempre reduce la Defensa, la Defensa Especial\no ambas del objetivo si uno de los movimientos\ndel usuario acierta.",
+            "fr": "Quand le Duo utilise avec succès une capacité\nqui vise un ennemi, baisse légèrement la Défense\nou la Défense Spéciale, ou les deux, de ce\ndernier (à coup sûr).",
+            "it": "Quando una mossa va a segno, riduce la Difesa\no la Difesa Speciale del bersaglio, oppure\nle riduce entrambe.",
+            "ja": "相手を対象にした技が成功したときに\n相手の防御か特防またはその両方をさげる",
+            "ko": "상대를 대상으로 하는 기술이 성공했을 때\n상대의 방어나 특수방어\n혹은 방어와 특수방어를 모두 떨어뜨린다",
+            "zh": "當以對手為對象的招式成功時，\n會降低對手的防禦或特防，或是兩種皆會降低。"
+          }
+        },
+        "passive3": {
+          "id": 15010302,
+          "name": {
+            "de": "GA-GA-Countdown↓ 2",
+            "en": "Adrenaline 2",
+            "es": "Vínculo Furor +2",
+            "fr": "C. D. Compteur ↓ 2",
+            "it": "Uniaccelerazione 2",
+            "ja": "Ｂわざ後ＢＣ加速２",
+            "ko": "B기술후BC가속2",
+            "zh": "拍組招式後計數加速２"
+          },
+          "description": {
+            "de": "Reduziert nach dem ersten Einsatz der\nGefährtenattacke den Wert des\nGefährtenattacken-Countdowns um  2.",
+            "en": "Reduces the sync move countdown by two when a sync move is used for the first time.",
+            "es": "Se reduce en 2 el contador de movimientos compi la primera vez que usa un movimiento compi.",
+            "fr": "Réduit de 2 le nombre d'actions nécessaires pour\nlancer une capacité Duo la première fois que le\nDuo utilise une capacité Duo.",
+            "it": "Una sola volta per lotta, quando l'Unità usa\nun'Unimossa, abbassa di 2 il numero di azioni\nnecessarie per sferrare l'Unimossa successiva.",
+            "ja": "初めてバディーズわざを使ったときだけ\nバディーズわざ発動可能状態までのカウントを２減らす",
+            "ko": "처음 버디즈기술을 사용했을 때만\n버디즈기술 발동 가능 상태가 되기까지의 카운트를 2 줄인다",
+            "zh": "首次使出拍組招式時，\n會讓發動拍組招式所需的行動數減少２次。"
+          }
+        }
+      }
+    },
+    "pokemonNameByLanguage": {
+      "de": "Bisaflor",
+      "en": "Venusaur",
+      "es": "Venusaur",
+      "fr": "Florizarre",
+      "it": "Venusaur",
+      "ja": "フシギバナ",
+      "ko": "이상해꽃",
+      "zh": "妙蛙花"
+    },
+    "trainerNameByLanguage": {
+      "de": "Leaf",
+      "en": "Leaf",
+      "es": "Hoja",
+      "fr": "Leaf",
+      "it": "Leaf",
+      "ja": "リーフ",
+      "ko": "리프",
+      "zh": "葉子"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Leaf_Bisaflor",
+      "en": "Leaf_Venusaur",
+      "es": "Hoja_Venusaur",
+      "fr": "Leaf_Florizarre",
+      "it": "Leaf_Venusaur",
+      "ja": "リーフ_フシギバナ",
+      "ko": "리프_이상해꽃",
+      "zh": "葉子_妙蛙花"
+    }
+  },
+  {
+    "monsterBaseId": "20000900",
+    "monsterMegaFormBaseId": "20000951",
+    "monsterId": "20021010000",
+    "trainerBaseId": "10002101",
+    "trainerNameId": "ch0021",
+    "stats": {
+      "hpValues": [89, 170, 248, 556, 620, 684],
+      "atkValues": [14, 36, 57, 134, 150, 166],
+      "defValues": [25, 63, 99, 242, 270, 298],
+      "spaValues": [13, 38, 62, 150, 170, 190],
+      "spdValues": [25, 63, 99, 242, 270, 298],
+      "speValues": [14, 36, 57, 134, 150, 166],
+      "atkScale": 100,
+      "defScale": 120,
+      "spaScale": 100,
+      "spdScale": 120,
+      "speScale": 100
+    },
+    "moves": {
+      "move1": {
+        "id": 352,
+        "name": {
+          "de": "Aquawelle",
+          "en": "Water Pulse",
+          "es": "Hidropulso",
+          "fr": "Vibraqua",
+          "it": "Idropulsar",
+          "ja": "みずのはどう",
+          "ko": "물의파동",
+          "zh": "水之波動"
+        },
+        "description": {
+          "de": "Verwirrt das Ziel in\nseltenen Fällen.",
+          "en": "Has a small chance of leaving the target confused.",
+          "es": "Rara vez confunde al\nobjetivo.",
+          "fr": "Rend l'ennemi confus\n(rarement).",
+          "it": "Raramente confonde\nil bersaglio.",
+          "ja": "まれに相手をこんらん状態にする",
+          "ko": "드물게 상대를 혼란 상태로 만든다",
+          "zh": "少數情況下會讓對手陷入混亂狀態。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 3,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 47,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19021,
+        "name": {
+          "de": "X-Abwehr\n(Team)",
+          "en": "X Defense All",
+          "es": "Defensa X\nMúltiple",
+          "fr": "Omni-Défense +",
+          "it": "Difesa X-G",
+          "ja": "ディフェンダーＧ",
+          "ko": "디펜드업G",
+          "zh": "防禦強化Ｇ"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\naller Gefährten im Team\nstark.",
+          "en": "Sharply raises the Defense of all allied sync pairs.",
+          "es": "Aumenta bastante la\nDefensa del bando del\nusuario.",
+          "fr": "Augmente modérément\nla Défense de tous les\nalliés.",
+          "it": "Aumenta di molto\nla Difesa di tutte le Unità\nalleate.",
+          "ja": "味方のバディーズ全員の防御をぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 방어가 크게 오른다",
+          "zh": "大幅提高我方全體拍組的防禦。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 10211,
+        "name": {
+          "de": "Ich bin der\nGrößte!",
+          "en": "To the Top!",
+          "es": "¡Hasta lo\nmás alto!",
+          "fr": "Je serai le\nmeilleur !",
+          "it": "Sarò io\na trionfare!",
+          "ja": "頂点に立つ！",
+          "ko": "정점에설거야!",
+          "zh": "站上頂點！"
+        },
+        "description": {
+          "de": "Beschleunigt das Auffüllen\nder Attackenleiste auf der\nAnwender-Seite. Erhöht\ndie Volltrefferquote aller\nGefährten im Team.",
+          "en": "Makes move gauges accelerate on the allied field of play. Raises the critical-hit rate of all allied sync pairs.",
+          "es": "Aumenta la velocidad a la que se llenan las barras de movimientos del bando del usuario.\nAumenta la probabilidad de asestar golpes críticos del bando del usuario.",
+          "fr": "Augmente la vitesse\nà laquelle la Jauge\nCapacité du côté allié\nse remplit.\nAugmente légèrement\nle taux de critiques de\ntous les alliés.",
+          "it": "Accelera la barra mosse nel campo alleato e rende più probabili i brutti colpi per tutte le Unità alleate.",
+          "ja": "味方全体の場をわざゲージ加速状態にする\n味方のバディーズ全員の急所率をあげる",
+          "ko": "같은 편 전원의 필드를 기술게이지 가속 상태로 만든다\n같은 편 버디즈 전원의 급소율이 오른다",
+          "zh": "讓我方場地變成招式計量槽加速狀態。\n提高我方全體拍組的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 7,
+        "targetType": {
+          "de": "Gefährten-Seite",
+          "en": "Allied side",
+          "es": "Bando aliado",
+          "fr": "Côté allié",
+          "it": "Campo alleato",
+          "ja": "味方全体の場",
+          "ko": "같은 편 전원의 필드",
+          "zh": "我方場地"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 308,
+        "name": {
+          "de": "Aquahaubitze",
+          "en": "Hydro Cannon",
+          "es": "Hidrocañón",
+          "fr": "Hydroblast",
+          "it": "Idrocannone",
+          "ja": "ハイドロカノン",
+          "ko": "하이드로캐논",
+          "zh": "加農水炮"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 3,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 4,
+        "power": 178,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 61600,
+        "name": {
+          "de": "Aquahaubitze des\nUnübertrefflichen",
+          "en": "Triumphant\nHydro Cannon",
+          "es": "Hidrocañón\nSuperalímites",
+          "fr": "Le top du top !\nHydroblast !",
+          "it": "Idrocannone oltre ogni limite",
+          "ja": "頂点を飛びこえる\nハイドロカノン",
+          "ko": "정점을 넘어서는\n하이드로캐논",
+          "zh": "飛越巔峰之\n加農水炮"
+        },
+        "description": {
+          "de": "Löst bei Turtok bis zum\nEnde des Kampfes die\nMega-Entwicklung zu\nMega-Turtok aus. Die\nStärke dieser Attacke ist\numso höher, je höher die\nVerteidigung des\nAnwenders erhöht\nwurde.",
+          "en": "Become Mega Blastoise until the end of battle. The more the user’s Defense has been raised, the greater the power of this move.",
+          "es": "Evoluciona a Mega-Blastoise.\nVuelve a la normalidad tras terminar el combate.\nCausa más daño cuanto más haya aumentado la Defensa del usuario.",
+          "fr": "Permet à Tortank de\ndevenir Méga-Tortank\njusqu'à la fin du combat.\nPlus la Défense du\nlanceur a été augmentée,\nplus cette capacité est\npuissante.",
+          "it": "Permette a Blastoise di megaevolversi. L'effetto svanisce al termine della lotta. Più è stata aumentata la Difesa di chi la usa, più questa mossa è potente.",
+          "ja": "バトル終了までメガカメックスになる\n自分の防御があがっているほど威力があがる",
+          "ko": "배틀이 끝날 때까지 메가거북왕이 된다\n자신의 방어가 올라가 있는 만큼 위력이 오른다",
+          "zh": "變成超級水箭龜直到對戰結束。\n自己的防禦提高得越多，威力就越大。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 160,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18043704,
+        "name": {
+          "de": "P-Attacken-Sp.-Vert.↑ T 4",
+          "en": "Force Field 4",
+          "es": "Acción Defensa Especial ↑ M +4",
+          "fr": "Coach Déf. Spé. 4",
+          "it": "Migliortenacia-G 4",
+          "ja": "Ｐ技後特防アップＧ４",
+          "ko": "P기술후특수방어업G4",
+          "zh": "寶可夢出招後特防↑Ｇ４"
+        },
+        "description": {
+          "de": "Erhöht nach Einsatz einer Attacke des Pokémon\noftmals die Spezial-Verteidigung aller Gefährten\nim Team.",
+          "en": "Has a good chance of raising the Sp. Def of all allied sync pairs when the user’s Pokémon uses a move.",
+          "es": "Es muy probable que aumente la Defensa\nEspecial del bando del usuario después de que\nel Pokémon use un movimiento.",
+          "fr": "Augmente légèrement la Défense Spéciale de\ntous les alliés quand le Pokémon utilise une\ncapacité (assez souvent).",
+          "it": "Quando il Pokémon usa una mossa, spesso\naumenta la Difesa Speciale di tutte le Unità\nalleate.",
+          "ja": "ポケモンが技をつかったときにときどき\n味方のバディーズ全員の特防をあげる",
+          "ko": "포켓몬이 기술을 사용하면 종종\n같은 편 버디즈 전원의 특수방어가 오른다",
+          "zh": "在寶可夢使出招式時，有時會\n提高我方全體拍組的特防。"
+        }
+      },
+      "passive2": {
+        "id": 18091009,
+        "name": {
+          "de": "Gegentr.-Ang.-Sp.-Ang.↑ T 9",
+          "en": "Team Shout 9",
+          "es": "Daño Aumentataques M +9",
+          "fr": "Réflexe Coach Atq. Atq. Spé. 9",
+          "it": "Reazione iperoffensiva-G 9",
+          "ja": "被攻撃時攻撃特攻↑Ｇ９",
+          "ko": "피격시공격특수공격↑G9",
+          "zh": "被攻擊時攻擊特攻提升Ｇ９"
+        },
+        "description": {
+          "de": "Erhöht den Angriff, den Spezial-Angriff oder\nsogar beide Werte aller Gefährten im Team,\nwenn das Pokémon von einer Attacke getroffen\nwird.",
+          "en": "Raises the Attack or Sp. Atk—or both—of all allied sync pairs when the user is hit by an attack move.",
+          "es": "Siempre aumenta el Ataque, el Ataque Especial\no ambos del bando del usuario si el usuario es\natacado.",
+          "fr": "Quand le Duo subit une attaque, augmente\nlégèrement l'Attaque ou l'Attaque Spéciale, ou\nles deux, de tous les alliés (à coup sûr).",
+          "it": "Quando l'Unità subisce un attacco semplice,\nl'Attacco o l'Attacco Speciale di tutte le Unità\nalleate aumenta, oppure aumentano entrambi.",
+          "ja": "技で攻撃を受けたときに\n味方のバディーズ全員の攻撃か特攻\nまたはその両方をあげる",
+          "ko": "기술로 공격받았을 때\n같은 편 버디즈 전원의 공격이나 특수공격\n혹은 공격과 특수공격이 모두 오른다",
+          "zh": "受到招式攻擊時，\n會提高我方全體拍組的攻擊或特攻，\n或是兩種皆會提高。"
+        }
+      },
+      "passive3": {
+        "id": 17042101,
+        "name": {
+          "de": "GA-Ausdauer T",
+          "en": "Safety Net",
+          "es": "Movimiento Compi Protector M",
+          "fr": "Duo Coach Encaissement",
+          "it": "Uniresistenza-G",
+          "ja": "Ｂ技後こらえるＧ",
+          "ko": "B기술후버티기G",
+          "zh": "拍組招式後挺住Ｇ"
+        },
+        "description": {
+          "de": "Nach dem ersten Einsatz der Gefährtenattacke\nüberstehen alle Gefährten im Team den nächsten\nAngriff.",
+          "en": "Makes all allied sync pairs able to endure the next hit they take when a sync move is used for the first time.",
+          "es": "Hace que el bando del usuario resista el\nsiguiente ataque y se quede con, al menos,\n1 PS la primera vez que usa un movimiento\ncompi.",
+          "fr": "La première fois que le Duo utilise sa capacité\nDuo, tous les alliés se préparent à encaisser la\nprochaine attaque.",
+          "it": "Una sola volta per lotta, quando l'Unità usa\nun'Unimossa, tutte le Unità alleate si preparano\na resistere a un colpo micidiale.",
+          "ja": "初めてバディーズわざを使ったときだけ\n味方のバディーズ全員をこらえる状態にする",
+          "ko": "처음 버디즈기술을 사용했을 때만\n같은 편 버디즈 전원을 버티기 상태로 만든다",
+          "zh": "首次使出拍組招式時，\n會讓我方全體拍組變成挺住狀態。"
+        }
+      }
+    },
+    "type": 3,
+    "weakType": 4,
+    "rarity": 5,
+    "role": 2,
+    "megaForm": {},
+    "pokemonNameByLanguage": {
+      "de": "Turtok",
+      "en": "Blastoise",
+      "es": "Blastoise",
+      "fr": "Tortank",
+      "it": "Blastoise",
+      "ja": "カメックス",
+      "ko": "거북왕",
+      "zh": "水箭龜"
+    },
+    "trainerNameByLanguage": {
+      "de": "Blau",
+      "en": "Blue",
+      "es": "Azul",
+      "fr": "Blue",
+      "it": "Blu",
+      "ja": "グリーン",
+      "ko": "그린",
+      "zh": "青綠"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Blau_Turtok",
+      "en": "Blue_Blastoise",
+      "es": "Azul_Blastoise",
+      "fr": "Blue_Tortank",
+      "it": "Blu_Blastoise",
+      "ja": "グリーン_カメックス",
+      "ko": "그린_거북왕",
+      "zh": "青綠_水箭龜"
     }
   }
 ]

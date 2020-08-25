@@ -361,6 +361,47 @@ import {
   kommooGridDataZH,
   jigglypuffGridDataZH,
   dragoniteGridDataZH,
+  // 8/25/2020
+  blastoiseGridDataDE,
+  venusaurGridDataDE,
+  feraligatrGridDataDE,
+  typhlosionGridDataDE,
+  meganiumGridDataDE,
+  blastoiseGridDataEN,
+  venusaurGridDataEN,
+  feraligatrGridDataEN,
+  typhlosionGridDataEN,
+  meganiumGridDataEN,
+  blastoiseGridDataES,
+  venusaurGridDataES,
+  feraligatrGridDataES,
+  typhlosionGridDataES,
+  meganiumGridDataES,
+  blastoiseGridDataFR,
+  venusaurGridDataFR,
+  feraligatrGridDataFR,
+  typhlosionGridDataFR,
+  meganiumGridDataFR,
+  blastoiseGridDataIT,
+  venusaurGridDataIT,
+  feraligatrGridDataIT,
+  typhlosionGridDataIT,
+  meganiumGridDataIT,
+  blastoiseGridDataJA,
+  venusaurGridDataJA,
+  feraligatrGridDataJA,
+  typhlosionGridDataJA,
+  meganiumGridDataJA,
+  blastoiseGridDataKO,
+  venusaurGridDataKO,
+  feraligatrGridDataKO,
+  typhlosionGridDataKO,
+  meganiumGridDataKO,
+  blastoiseGridDataZH,
+  venusaurGridDataZH,
+  feraligatrGridDataZH,
+  typhlosionGridDataZH,
+  meganiumGridDataZH,
 } from '../data';
 import {
   charizard,
@@ -407,6 +448,11 @@ import {
   kommoo,
   jigglypuff,
   dragonite,
+  blastoise,
+  venusaur,
+  feraligatr,
+  typhlosion,
+  meganium,
 } from '../images/PokemonThumbnails';
 
 import {
@@ -427,15 +473,12 @@ import {
   golemPic,
   aerodactylPic,
   onixPic,
+  arcaninePic,
+  seakingPic,
+  og_venusaurPic,
+  og_charizardPic,
+  og_blastoisePic,
 } from '../images/PokemonPictures';
-
-import { sabrina, red, oak } from '../images/TrainerPictures';
-
-export const allTrainerPictures = {
-  sabrina,
-  red,
-  oak,
-};
 
 export const allPictures = {
   venusaurPic,
@@ -455,6 +498,11 @@ export const allPictures = {
   golemPic,
   aerodactylPic,
   onixPic,
+  arcaninePic,
+  seakingPic,
+  og_venusaurPic,
+  og_charizardPic,
+  og_blastoisePic,
 };
 
 export const allThumbnails = {
@@ -502,6 +550,11 @@ export const allThumbnails = {
   kommoo,
   jigglypuff,
   dragonite,
+  blastoise,
+  venusaur,
+  feraligatr,
+  typhlosion,
+  meganium,
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -561,6 +614,11 @@ export const allSyncGrids = {
     kommooGridDataDE,
     jigglypuffGridDataDE,
     dragoniteGridDataDE,
+    blastoiseGridDataDE,
+    venusaurGridDataDE,
+    feraligatrGridDataDE,
+    typhlosionGridDataDE,
+    meganiumGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -607,6 +665,11 @@ export const allSyncGrids = {
     kommooGridDataEN,
     jigglypuffGridDataEN,
     dragoniteGridDataEN,
+    blastoiseGridDataEN,
+    venusaurGridDataEN,
+    feraligatrGridDataEN,
+    typhlosionGridDataEN,
+    meganiumGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -653,6 +716,11 @@ export const allSyncGrids = {
     kommooGridDataES,
     jigglypuffGridDataES,
     dragoniteGridDataES,
+    blastoiseGridDataES,
+    venusaurGridDataES,
+    feraligatrGridDataES,
+    typhlosionGridDataES,
+    meganiumGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -699,6 +767,11 @@ export const allSyncGrids = {
     kommooGridDataFR,
     jigglypuffGridDataFR,
     dragoniteGridDataFR,
+    blastoiseGridDataFR,
+    venusaurGridDataFR,
+    feraligatrGridDataFR,
+    typhlosionGridDataFR,
+    meganiumGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -745,6 +818,11 @@ export const allSyncGrids = {
     kommooGridDataIT,
     jigglypuffGridDataIT,
     dragoniteGridDataIT,
+    blastoiseGridDataIT,
+    venusaurGridDataIT,
+    feraligatrGridDataIT,
+    typhlosionGridDataIT,
+    meganiumGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -791,6 +869,11 @@ export const allSyncGrids = {
     kommooGridDataJA,
     jigglypuffGridDataJA,
     dragoniteGridDataJA,
+    blastoiseGridDataJA,
+    venusaurGridDataJA,
+    feraligatrGridDataJA,
+    typhlosionGridDataJA,
+    meganiumGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -837,6 +920,11 @@ export const allSyncGrids = {
     kommooGridDataKO,
     jigglypuffGridDataKO,
     dragoniteGridDataKO,
+    blastoiseGridDataKO,
+    venusaurGridDataKO,
+    feraligatrGridDataKO,
+    typhlosionGridDataKO,
+    meganiumGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -883,6 +971,11 @@ export const allSyncGrids = {
     kommooGridDataZH,
     jigglypuffGridDataZH,
     dragoniteGridDataZH,
+    blastoiseGridDataZH,
+    venusaurGridDataZH,
+    feraligatrGridDataZH,
+    typhlosionGridDataZH,
+    meganiumGridDataZH,
   },
 };
 

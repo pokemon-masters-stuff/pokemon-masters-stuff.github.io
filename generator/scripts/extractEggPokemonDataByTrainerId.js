@@ -1,73 +1,73 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const monsterDB = require("../rawdata/Monster.json");
-const moveDB = require("../rawdata/ModifiedMove.json");
-const trainerDB = require("../rawdata/Trainer.json");
-const trainerBaseDB = require("../rawdata/TrainerBase.json");
-const monsterVariationDB = require("../rawdata/MonsterVariation.json");
+const monsterDB = require('../rawdata/Monster.json');
+const moveDB = require('../rawdata/ModifiedMove.json');
+const trainerDB = require('../rawdata/Trainer.json');
+const trainerBaseDB = require('../rawdata/TrainerBase.json');
+const monsterVariationDB = require('../rawdata/MonsterVariation.json');
 
-const pokemonNameDBde = require("../rawdata/de/monster_name_de.json");
-const pokemonNameDBen = require("../rawdata/en/monster_name_en.json");
-const pokemonNameDBes = require("../rawdata/es/monster_name_es.json");
-const pokemonNameDBfr = require("../rawdata/fr/monster_name_fr.json");
-const pokemonNameDBit = require("../rawdata/it/monster_name_it.json");
-const pokemonNameDBja = require("../rawdata/ja/monster_name_ja.json");
-const pokemonNameDBko = require("../rawdata/ko/monster_name_ko.json");
-const pokemonNameDBzh = require("../rawdata/zh/monster_name_zh-TW.json");
+const pokemonNameDBde = require('../rawdata/de/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/es/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/fr/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/it/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/ja/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/ko/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/zh/monster_name_zh-TW.json');
 
-const trainerNameDBde = require("../rawdata/de/trainer_name_de.json");
-const trainerNameDBen = require("../rawdata/en/trainer_name_en.json");
-const trainerNameDBes = require("../rawdata/es/trainer_name_es.json");
-const trainerNameDBfr = require("../rawdata/fr/trainer_name_fr.json");
-const trainerNameDBit = require("../rawdata/it/trainer_name_it.json");
-const trainerNameDBja = require("../rawdata/ja/trainer_name_ja.json");
-const trainerNameDBko = require("../rawdata/ko/trainer_name_ko.json");
-const trainerNameDBzh = require("../rawdata/zh/trainer_name_zh-TW.json");
+const trainerNameDBde = require('../rawdata/de/trainer_name_de.json');
+const trainerNameDBen = require('../rawdata/en/trainer_name_en.json');
+const trainerNameDBes = require('../rawdata/es/trainer_name_es.json');
+const trainerNameDBfr = require('../rawdata/fr/trainer_name_fr.json');
+const trainerNameDBit = require('../rawdata/it/trainer_name_it.json');
+const trainerNameDBja = require('../rawdata/ja/trainer_name_ja.json');
+const trainerNameDBko = require('../rawdata/ko/trainer_name_ko.json');
+const trainerNameDBzh = require('../rawdata/zh/trainer_name_zh-TW.json');
 
-const moveNameDBde = require("../rawdata/de/move_name_de.json");
-const moveNameDBen = require("../rawdata/en/move_name_en.json");
-const moveNameDBes = require("../rawdata/es/move_name_es.json");
-const moveNameDBfr = require("../rawdata/fr/move_name_fr.json");
-const moveNameDBit = require("../rawdata/it/move_name_it.json");
-const moveNameDBja = require("../rawdata/ja/move_name_ja.json");
-const moveNameDBko = require("../rawdata/ko/move_name_ko.json");
-const moveNameDBzh = require("../rawdata/zh/move_name_zh-TW.json");
+const moveNameDBde = require('../rawdata/de/move_name_de.json');
+const moveNameDBen = require('../rawdata/en/move_name_en.json');
+const moveNameDBes = require('../rawdata/es/move_name_es.json');
+const moveNameDBfr = require('../rawdata/fr/move_name_fr.json');
+const moveNameDBit = require('../rawdata/it/move_name_it.json');
+const moveNameDBja = require('../rawdata/ja/move_name_ja.json');
+const moveNameDBko = require('../rawdata/ko/move_name_ko.json');
+const moveNameDBzh = require('../rawdata/zh/move_name_zh-TW.json');
 
-const moveDescriptionDBde = require("../rawdata/de/move_description_de.json");
-const moveDescriptionDBen = require("../rawdata/en/move_description_en.json");
-const moveDescriptionDBes = require("../rawdata/es/move_description_es.json");
-const moveDescriptionDBfr = require("../rawdata/fr/move_description_fr.json");
-const moveDescriptionDBit = require("../rawdata/it/move_description_it.json");
-const moveDescriptionDBja = require("../rawdata/ja/move_description_ja.json");
-const moveDescriptionDBko = require("../rawdata/ko/move_description_ko.json");
-const moveDescriptionDBzh = require("../rawdata/zh/move_description_zh-TW.json");
+const moveDescriptionDBde = require('../rawdata/de/move_description_de.json');
+const moveDescriptionDBen = require('../rawdata/en/move_description_en.json');
+const moveDescriptionDBes = require('../rawdata/es/move_description_es.json');
+const moveDescriptionDBfr = require('../rawdata/fr/move_description_fr.json');
+const moveDescriptionDBit = require('../rawdata/it/move_description_it.json');
+const moveDescriptionDBja = require('../rawdata/ja/move_description_ja.json');
+const moveDescriptionDBko = require('../rawdata/ko/move_description_ko.json');
+const moveDescriptionDBzh = require('../rawdata/zh/move_description_zh-TW.json');
 
-const moveTargetTypeDBde = require("../rawdata/de/move_target_type_de.json");
-const moveTargetTypeDBen = require("../rawdata/en/move_target_type_en.json");
-const moveTargetTypeDBes = require("../rawdata/es/move_target_type_es.json");
-const moveTargetTypeDBfr = require("../rawdata/fr/move_target_type_fr.json");
-const moveTargetTypeDBit = require("../rawdata/it/move_target_type_it.json");
-const moveTargetTypeDBja = require("../rawdata/ja/move_target_type_ja.json");
-const moveTargetTypeDBko = require("../rawdata/ko/move_target_type_ko.json");
-const moveTargetTypeDBzh = require("../rawdata/zh/move_target_type_zh-TW.json");
+const moveTargetTypeDBde = require('../rawdata/de/move_target_type_de.json');
+const moveTargetTypeDBen = require('../rawdata/en/move_target_type_en.json');
+const moveTargetTypeDBes = require('../rawdata/es/move_target_type_es.json');
+const moveTargetTypeDBfr = require('../rawdata/fr/move_target_type_fr.json');
+const moveTargetTypeDBit = require('../rawdata/it/move_target_type_it.json');
+const moveTargetTypeDBja = require('../rawdata/ja/move_target_type_ja.json');
+const moveTargetTypeDBko = require('../rawdata/ko/move_target_type_ko.json');
+const moveTargetTypeDBzh = require('../rawdata/zh/move_target_type_zh-TW.json');
 
-const passiveNameDBde = require("../rawdata/de/passive_skill_name_de.json");
-const passiveNameDBen = require("../rawdata/en/passive_skill_name_en.json");
-const passiveNameDBes = require("../rawdata/es/passive_skill_name_es.json");
-const passiveNameDBfr = require("../rawdata/fr/passive_skill_name_fr.json");
-const passiveNameDBit = require("../rawdata/it/passive_skill_name_it.json");
-const passiveNameDBja = require("../rawdata/ja/passive_skill_name_ja.json");
-const passiveNameDBko = require("../rawdata/ko/passive_skill_name_ko.json");
-const passiveNameDBzh = require("../rawdata/zh/passive_skill_name_zh-TW.json");
+const passiveNameDBde = require('../rawdata/de/passive_skill_name_de.json');
+const passiveNameDBen = require('../rawdata/en/passive_skill_name_en.json');
+const passiveNameDBes = require('../rawdata/es/passive_skill_name_es.json');
+const passiveNameDBfr = require('../rawdata/fr/passive_skill_name_fr.json');
+const passiveNameDBit = require('../rawdata/it/passive_skill_name_it.json');
+const passiveNameDBja = require('../rawdata/ja/passive_skill_name_ja.json');
+const passiveNameDBko = require('../rawdata/ko/passive_skill_name_ko.json');
+const passiveNameDBzh = require('../rawdata/zh/passive_skill_name_zh-TW.json');
 
-const passiveDescriptionDBde = require("../rawdata/de/passive_skill_description_de.json");
-const passiveDescriptionDBen = require("../rawdata/en/passive_skill_description_en.json");
-const passiveDescriptionDBes = require("../rawdata/es/passive_skill_description_es.json");
-const passiveDescriptionDBfr = require("../rawdata/fr/passive_skill_description_fr.json");
-const passiveDescriptionDBit = require("../rawdata/it/passive_skill_description_it.json");
-const passiveDescriptionDBja = require("../rawdata/ja/passive_skill_description_ja.json");
-const passiveDescriptionDBko = require("../rawdata/ko/passive_skill_description_ko.json");
-const passiveDescriptionDBzh = require("../rawdata/zh/passive_skill_description_zh-TW.json");
+const passiveDescriptionDBde = require('../rawdata/de/passive_skill_description_de.json');
+const passiveDescriptionDBen = require('../rawdata/en/passive_skill_description_en.json');
+const passiveDescriptionDBes = require('../rawdata/es/passive_skill_description_es.json');
+const passiveDescriptionDBfr = require('../rawdata/fr/passive_skill_description_fr.json');
+const passiveDescriptionDBit = require('../rawdata/it/passive_skill_description_it.json');
+const passiveDescriptionDBja = require('../rawdata/ja/passive_skill_description_ja.json');
+const passiveDescriptionDBko = require('../rawdata/ko/passive_skill_description_ko.json');
+const passiveDescriptionDBzh = require('../rawdata/zh/passive_skill_description_zh-TW.json');
 
 const pokemonNameDB = {
   de: pokemonNameDBde,
@@ -146,58 +146,73 @@ const passiveDescriptionDB = {
   zh: passiveDescriptionDBzh,
 };
 
-const languages = ["de", "en", "es", "fr", "it", "ja", "ko", "zh"];
+const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
 // Update this list (of trainerId) based on new datamine
 const trainerList = [
-  // Egg mons trainerId
+  // Egg mons trainerId from Trainer.json
+  '18000020011',
+  '18000020021',
+  '18000020031',
+  '18000020051',
+  '18000020061',
+  '18000020071',
+  '18000020081',
+  '18000020101',
+  '18000020111',
+  '18000020121',
+  '18000020131',
+  '18000020141',
+  '18000020151',
+  '18000020161',
+  '18000020171',
+  '18000020181',
+  '18000020191',
+  '18000020201',
+  '18000020211',
+  '18000030011',
+  '18000030021',
+  '18000030031',
+  '18000030051',
+  '18000030061',
+  '18000030071',
+  '18000030081',
+  '18000030101',
+  '18000030111',
+  '18000030121',
+  '18000030131',
+  '18000030141',
+  '18000030151',
+  '18000030161',
+  '18000030171',
+  '18000030181',
+  '18000030191',
+  '18000030201',
+  '18000030211',
+  '18000040001',
+  '18000040004',
+  '18000040007',
+  '18000040011',
+  '18000040021',
+  '18000040031',
+  '18000040051',
+  '18000040061',
+  '18000040071',
+  '18000040081',
+  '18000040101',
+  '18000040111',
+  '18000040121',
+  '18000040131',
+  '18000040141',
+  '18000040151',
+  '18000040161',
+  '18000040171',
+  '18000040181',
+  '18000040191',
+  '18000040201',
+  '18000040211',
   // "18000000000", Pikachu
   // "18000020000", Torchic
-  "18000020011",
-  "18000020021",
-  "18000020031",
-  "18000020051",
-  "18000020061",
-  "18000020071",
-  "18000020081",
-  "18000020101",
-  "18000020111",
-  "18000020121",
-  "18000020131",
-  "18000020141",
-  "18000020151",
-  "18000020161",
-  "18000030011",
-  "18000030021",
-  "18000030031",
-  "18000030051",
-  "18000030061",
-  "18000030071",
-  "18000030081",
-  "18000030101",
-  "18000030111",
-  "18000030121",
-  "18000030131",
-  "18000030141",
-  "18000030151",
-  "18000030161",
-  "18000040001",
-  "18000040004",
-  "18000040007",
-  "18000040011",
-  "18000040021",
-  "18000040031",
-  "18000040051",
-  "18000040061",
-  "18000040071",
-  "18000040081",
-  "18000040101",
-  "18000040111",
-  "18000040121",
-  "18000040131",
-  "18000040141",
-  "18000040151",
-  "18000040161",
   // "18000120000", Solgaleo
 ];
 
@@ -213,11 +228,11 @@ const trainerList = [
 const extractSyncPairDataByTrainerBaseId = () => {
   const syncPairDataArray = [];
   let monsterAndTrainerData = {};
-  let monsterId = "";
-  let monsterBaseId = "";
+  let monsterId = '';
+  let monsterBaseId = '';
   // let syncMoveId = '';
-  let trainerNameId = "";
-  let trainerBaseId = "";
+  let trainerNameId = '';
+  let trainerBaseId = '';
   let stats = {};
   let moves = {};
   let passives = {};
@@ -232,7 +247,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     if (trainer) {
       // Use trainerBaseId to find monsterId and trainerBaseId in Trainer.json
       monsterId = trainer.monsterId;
-      console.log("monsterId", monsterId);
+      console.log('monsterId', monsterId);
 
       trainerBaseId = trainer.trainerBaseId;
 
@@ -244,24 +259,24 @@ const extractSyncPairDataByTrainerBaseId = () => {
       // } else if (monsterId === 28000040007) {
       //   monsterId = 28000040009;
       // }
-      if (monsterId === "28000040001") {
-        monsterId = "28000040003";
-      } else if (monsterId === "28000040004") {
-        monsterId = "28000040006";
-      } else if (monsterId === "28000040007") {
-        monsterId = "28000040009";
+      if (monsterId === '28000040001') {
+        monsterId = '28000040003';
+      } else if (monsterId === '28000040004') {
+        monsterId = '28000040006';
+      } else if (monsterId === '28000040007') {
+        monsterId = '28000040009';
       } else {
         // else check if there is an evolved form. If so use the final evolved form's monsterId
         let thirdEvolvedFormMonsterId =
           monsterId.toString().substring(0, monsterId.toString().length - 1) +
-          "3"; // some pokemon eg. Beedrill's last digit is 3
+          '3'; // some pokemon eg. Beedrill's last digit is 3
 
         let secondEvolvedFormMonsterId =
           monsterId.toString().substring(0, monsterId.toString().length - 1) +
-          "2";
+          '2';
         let firstEvolvedFormMonsterId =
           monsterId.toString().substring(0, monsterId.toString().length - 1) +
-          "1";
+          '1';
 
         if (
           monsterDB.entries.find(
@@ -305,135 +320,135 @@ const extractSyncPairDataByTrainerBaseId = () => {
       // Use moveId to find move name in move_name_xx.json
       // Use moveId to find move description in move_description_xx.json
       let move1NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move2NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move3NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move4NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
 
       let move1DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move2DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move3DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move4DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
 
       let move1TargetTypeByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move2TargetTypeByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move3TargetTypeByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         move4TargetTypeByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
 
       // Use moveId to find move data, eg. power, accuracy, etc. from Move.json
       if (
-        monsterId === "28000020053" ||
-        monsterId === "28000030053" ||
-        monsterId === "28000040053"
+        monsterId === '28000020053' ||
+        monsterId === '28000030053' ||
+        monsterId === '28000040053'
       ) {
-        console.log("beedrill");
+        console.log('beedrill');
         // Weedle changes its moveset when evolving into Beedrill
         move1Id = 42;
         if (role === 0) {
@@ -460,7 +475,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         move2NameByLanguage[language] = moveNameDB[language][move2Id];
         move3NameByLanguage[language] = moveNameDB[language][move3Id];
         move4NameByLanguage[language] =
-          move4Id !== -1 ? moveNameDB[language][move4Id] : "";
+          move4Id !== -1 ? moveNameDB[language][move4Id] : '';
         move1DescriptionByLanguage[language] =
           moveDescriptionDB[language][move1Id];
         move2DescriptionByLanguage[language] =
@@ -476,7 +491,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         move3TargetTypeByLanguage[language] =
           moveTargetTypeDB[language][move3.target];
         move4TargetTypeByLanguage[language] =
-          move4Id !== -1 ? moveTargetTypeDB[language][move4.target] : "";
+          move4Id !== -1 ? moveTargetTypeDB[language][move4.target] : '';
       });
       moves =
         move4Id !== -1
@@ -585,79 +600,79 @@ const extractSyncPairDataByTrainerBaseId = () => {
                 id: move4Id,
                 name: move4NameByLanguage,
                 description: move4DescriptionByLanguage,
-                category: "",
-                group: "",
-                type: "",
-                target: "",
-                targetType: "",
-                gaugeDrain: "",
-                power: "",
-                accuracy: "",
-                maxUses: "",
+                category: '',
+                group: '',
+                type: '',
+                target: '',
+                targetType: '',
+                gaugeDrain: '',
+                power: '',
+                accuracy: '',
+                maxUses: '',
               },
             };
 
       // Use passiveId to find passive skill name and description in passive_skill_name_xx.json and passive_skill_description_xx.json
       let passive1NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         passive2NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         passive3NameByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
 
       let passive1DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         passive2DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         },
         passive3DescriptionByLanguage = {
-          de: "",
-          en: "",
-          es: "",
-          fr: "",
-          it: "",
-          ja: "",
-          ko: "",
-          zh: "",
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
 
       languages.forEach((language) => {
@@ -730,25 +745,25 @@ const extractSyncPairDataByTrainerBaseId = () => {
 
       // Use syncMoveId to find sync move data in Move.json
       let syncMoveNameByLanguage = {
-        de: "",
-        en: "",
-        es: "",
-        fr: "",
-        it: "",
-        ja: "",
-        ko: "",
-        zh: "",
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
       };
 
       let syncMoveDescriptionByLanguage = {
-        de: "",
-        en: "",
-        es: "",
-        fr: "",
-        it: "",
-        ja: "",
-        ko: "",
-        zh: "",
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
       };
 
       languages.forEach((language) => {
@@ -1201,7 +1216,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterId: monsterId.toString(),
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
-            trainerNameId: "ch8000",
+            trainerNameId: 'ch8000',
             stats,
             moves,
             passives,
@@ -1216,7 +1231,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterId: monsterId.toString(),
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
-            trainerNameId: "ch8000",
+            trainerNameId: 'ch8000',
             stats,
             moves,
             passives,
@@ -1229,7 +1244,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     } else {
       let newMonsterId =
         monsterId.toString().substring(0, monsterId.toString().length - 1) +
-        "0";
+        '0';
 
       let trainer = trainerDB.entries.find(
         (trainer) => trainer.monsterId.toString() === newMonsterId
@@ -1252,7 +1267,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
-              trainerNameId: "ch8000",
+              trainerNameId: 'ch8000',
               stats,
               moves,
               passives,
@@ -1267,7 +1282,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
-              trainerNameId: "ch8000",
+              trainerNameId: 'ch8000',
               stats,
               moves,
               passives,
@@ -1285,7 +1300,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
-              trainerNameId: "No Trainer",
+              trainerNameId: 'No Trainer',
               stats,
               moves,
               passives,
@@ -1300,7 +1315,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterId: monsterId.toString(),
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
-              trainerNameId: "No Trainer",
+              trainerNameId: 'No Trainer',
               stats,
               moves,
               passives,
@@ -1316,34 +1331,34 @@ const extractSyncPairDataByTrainerBaseId = () => {
 
   syncPairDataArray.forEach((entry) => {
     let pokemonNameByLanguage = {
-      de: "",
-      en: "",
-      es: "",
-      fr: "",
-      it: "",
-      ja: "",
-      ko: "",
-      zh: "",
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
     };
     let trainerNameByLanguage = {
-      de: "",
-      en: "",
-      es: "",
-      fr: "",
-      it: "",
-      ja: "",
-      ko: "",
-      zh: "",
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
     };
     let syncPairNameByLanguage = {
-      de: "",
-      en: "",
-      es: "",
-      fr: "",
-      it: "",
-      ja: "",
-      ko: "",
-      zh: "",
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
     };
     languages.forEach((language) => {
       if (entry.monsterBaseId) {
@@ -1354,15 +1369,15 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : pokemonNameDB[language][
               entry.monsterBaseId
                 .toString()
-                .substring(0, entry.monsterBaseId.toString().length - 1) + "0"
+                .substring(0, entry.monsterBaseId.toString().length - 1) + '0'
             ];
       }
       if (entry.trainerNameId) {
         trainerNameByLanguage[language] =
           trainerNameDB[language][entry.trainerNameId];
       }
-      if (entry.trainerNameId === "ch8000") {
-        trainerNameByLanguage[language] = "Hero";
+      if (entry.trainerNameId === 'ch8000') {
+        trainerNameByLanguage[language] = 'Hero';
       }
       if (entry.monsterBaseId && entry.trainerNameId) {
         syncPairNameByLanguage[
@@ -1382,6 +1397,18 @@ const extractSyncPairDataByTrainerBaseId = () => {
       // if (entry.monsterBaseId && entry.trainerNameId) {
       //   entry.syncPairEnglishName = `${entry.trainerEnglishName}&${entry.monsterEnglishName}`;
       // }
+
+      if (
+        // OG starters
+        entry.monsterId === '28000040003' ||
+        entry.monsterId === '28000040006' ||
+        entry.monsterId === '28000040009'
+      ) {
+        pokemonNameByLanguage[language] =
+          'OG_' + pokemonNameByLanguage[language];
+        syncPairNameByLanguage[language] =
+          'OG_' + syncPairNameByLanguage[language];
+      }
     });
     entry.pokemonNameByLanguage = pokemonNameByLanguage;
     entry.trainerNameByLanguage = trainerNameByLanguage;
@@ -1392,7 +1419,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     JSON.stringify(syncPairDataArray),
     (err) => {
       if (err) throw err;
-      console.log("Successfully written to file");
+      console.log('Successfully written to file');
     }
   );
 
