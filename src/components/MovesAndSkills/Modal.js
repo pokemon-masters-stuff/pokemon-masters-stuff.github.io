@@ -263,7 +263,7 @@ function Stats(props) {
 
 function Moves(props) {
   const { language, move, selectedMoves, syncLevel } = props;
-
+  console.log('syncLevel', syncLevel);
   const [open, setOpen] = React.useState(false);
   const classes = useRowStyles();
 
@@ -484,14 +484,14 @@ function Passives(props) {
 export default function MovesAndSkillsModal(props) {
   const {
     pokemon,
-    grid,
+    selectedCellsById,
     syncLevel,
     language,
     isMovesAndSkillsModalVisible,
     setIsMovesAndSkillsModalVisible,
   } = props;
 
-  const selectedCellsById = grid.selectedCellsById;
+  // const selectedCellsById = grid.selectedCellsById;
 
   // const syncLevel = useSelector((state) => state.grid.syncLevel);
 
@@ -667,6 +667,7 @@ export default function MovesAndSkillsModal(props) {
   // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
   const pokemonData = getPokemonDataByName(pokemon);
+  console.log('pokemonData', pokemonData);
 
   const { stats, moves, passives, megaForm, rarity } = pokemonData;
 

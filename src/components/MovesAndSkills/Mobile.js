@@ -6,7 +6,7 @@ import UI from '../../utils/translations';
 
 const MovesAndSkillsButton = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
-  const { pokemon, grid, syncLevel } = props;
+  const { pokemon, selectedCellsById, syncLevel } = props;
 
   const [
     isMovesAndSkillsModalVisible,
@@ -28,7 +28,7 @@ const MovesAndSkillsButton = (props) => {
 
       <MovesAndSkillsModal
         pokemon={pokemon}
-        grid={grid}
+        selectedCellsById={selectedCellsById}
         syncLevel={syncLevel}
         language={language}
         isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}

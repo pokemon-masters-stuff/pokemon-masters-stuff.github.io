@@ -122,7 +122,7 @@ function SyncGridControls(props) {
         <div>
           <MovesAndSkillsButtonMobile
             pokemon={selectedPokemon}
-            grid={grid}
+            selectedCellsById={grid.selectedCellsById}
             syncLevel={grid.syncLevel}
           />
         </div>

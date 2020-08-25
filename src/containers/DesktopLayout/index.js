@@ -60,7 +60,7 @@ class DesktopLayout extends Component {
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
                     <MovesAndSkillsButtonDesktop
                       pokemon={pokemon.selectedPokemon}
-                      grid={grid}
+                      selectedCellsById={grid.selectedCellsById}
                       syncLevel={grid.syncLevel}
                     />
                   </div>

@@ -110,7 +110,12 @@ function TeamBuilder() {
               }}
             >
               <svg style={{ width: 150 }}>
-                <polygon points="0 150 150 70 150 150" fill="grey" />
+                <polygon
+                  points="0 153 153 70 153 153"
+                  stroke="white"
+                  strokeWidth="6"
+                  fill="grey"
+                />
                 <circle
                   cx="105"
                   cy="105"
@@ -171,7 +176,12 @@ function TeamBuilder() {
               }}
             >
               <svg style={{ width: 150 }}>
-                <polygon points="0 150 150 70 150 150" fill="grey" />
+                <polygon
+                  points="0 153 153 70 153 153"
+                  stroke="white"
+                  strokeWidth="6"
+                  fill="grey"
+                />
                 <circle
                   cx="105"
                   cy="105"
@@ -232,7 +242,12 @@ function TeamBuilder() {
               }}
             >
               <svg style={{ width: 150 }}>
-                <polygon points="0 150 150 70 150 150" fill="grey" />
+                <polygon
+                  points="0 153 153 70 153 153"
+                  stroke="white"
+                  strokeWidth="6"
+                  fill="grey"
+                />
                 <circle
                   cx="105"
                   cy="105"

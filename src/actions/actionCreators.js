@@ -42,6 +42,10 @@ import {
   // for team building
   SET_TEAM,
   SET_TEAM_SYNC_LEVELS,
+  ADD_TO_TEAM_GRID_LIST,
+  REMOVE_FROM_TEAM_GRID_LIST,
+  SUBTRACT_FROM_TEAM_REMAINING_ENERGY,
+  ADD_BACK_TO_TEAM_REMAINING_ENERGY,
   RESET_TEAM_GRIDS,
   RESET_INDIVIDUAL_GRID,
   SAVE_CURRENT_TEAM_BUILD,
@@ -535,34 +539,34 @@ export const setTeamSyncLevels = (payload) => ({
   payload,
 });
 
-export const addToTeamGridList = (gridData) => ({
-  type: ADD_TO_GRID_LIST,
-  gridData,
+export const addToTeamGridList = (payload) => ({
+  type: ADD_TO_TEAM_GRID_LIST,
+  payload,
 });
 
-export const subtractFromTeamRemainingEnergy = (gridData) => ({
-  type: SUBTRACT_FROM_REMAINING_ENERGY,
-  gridData,
+export const subtractFromTeamRemainingEnergy = (payload) => ({
+  type: SUBTRACT_FROM_TEAM_REMAINING_ENERGY,
+  payload,
 });
 
-export const removeFromTeamGridList = (gridData) => ({
-  type: REMOVE_FROM_GRID_LIST,
-  gridData,
+export const removeFromTeamGridList = (payload) => ({
+  type: REMOVE_FROM_TEAM_GRID_LIST,
+  payload,
 });
 
-export const addBackToTeamRemainingEnergy = (gridData) => ({
-  type: ADD_BACK_TO_REMAINING_ENERGY,
-  gridData,
+export const addBackToTeamRemainingEnergy = (payload) => ({
+  type: ADD_BACK_TO_TEAM_REMAINING_ENERGY,
+  payload,
 });
 
-export const displayTeamGridData = (gridData) => ({
-  type: DISPLAY_GRID_DATA,
-  gridData,
-});
+// export const displayTeamGridData = (gridData) => ({
+//   type: DISPLAY_GRID_DATA,
+//   gridData,
+// });
 
-export const hideTeamGridData = () => ({
-  type: HIDE_GRID_DATA,
-});
+// export const hideTeamGridData = () => ({
+//   type: HIDE_GRID_DATA,
+// });
 
 export const resetTeamGrids = () => ({
   type: RESET_TEAM_GRIDS,

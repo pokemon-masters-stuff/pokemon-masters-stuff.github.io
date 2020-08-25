@@ -8,10 +8,10 @@ import styles from './styles';
 import { getQueryStringValue } from '../../queryString';
 import {
   selectPokemon,
-  addToGridList,
-  removeFromGridList,
-  subtractFromRemainingEnergy,
-  addBackToRemainingEnergy,
+  addToTeamGridList,
+  removeFromTeamGridList,
+  subtractFromTeamRemainingEnergy,
+  addBackToTeamRemainingEnergy,
   resetGrids,
   loadGridFromUrl,
   updateUrl,
@@ -40,7 +40,7 @@ class GridMap extends Component {
     screenWidth: document.body.clientWidth,
   };
 
-  // to change to loadUrlTeamGridData
+  // to change to loadUrlgridData
   //   loadUrlGridData() {
   //     let pokemonFromUrl;
   //     if (getQueryStringValue("p")) {
@@ -197,10 +197,14 @@ class GridMap extends Component {
 
   handleClick(e, index, data) {
     e.stopPropagation();
+    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    if (!this.props.grid.selectedCellsById[data.cellId]) {
-      this.props.addToGridList(data);
-      this.props.subtractFromRemainingEnergy(data);
+    if (!this.props.team.selectedCellsById[this.props.slot][data.cellId]) {
+      this.props.addToTeamGridList({ gridData: data, slot: this.props.slot });
+      this.props.subtractFromTeamRemainingEnergy({
+        gridData: data,
+        slot: this.props.slot,
+      });
       if (this.props.pokemon.indexOf('_') !== -1) {
         // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
         this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
@@ -211,8 +215,14 @@ class GridMap extends Component {
         );
       }
     } else {
-      this.props.removeFromGridList(data);
-      this.props.addBackToRemainingEnergy(data);
+      this.props.removeFromTeamGridList({
+        gridData: data,
+        slot: this.props.slot,
+      });
+      this.props.addBackToTeamRemainingEnergy({
+        gridData: data,
+        slot: this.props.slot,
+      });
       if (this.props.pokemon.indexOf('_') !== -1) {
         // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
         this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
@@ -237,17 +247,10 @@ class GridMap extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      // const nameWithSyncLvRequirement = addSyncLvReq(
-      //   this.props.pokemon,
-      //   cell,
-      //   moveName,
-      //   this.props.grid.syncLevel
-      // );
-
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         this.props.pokemon,
         cell,
-        // this.props.grid.syncLevel
+        // this.props.team.syncLevel
         this.props.syncLevel
       );
 
@@ -271,20 +274,17 @@ class GridMap extends Component {
         fill: getFillColorByMoveType({
           type: cell.ability.type,
           group: cell.move.group,
-          // pokemon: this.props.pokemon, // will need this and the two lines below if want to add a Lock pattern
-          // cell: cell,
-          // syncLevel: this.props.grid.syncLevel,
         }),
         onClickHandler:
           isSeletableBasedOnSyncLv ||
-          this.props.grid.selectedCellsById[cell.cellId]
+          this.props.team.selectedCellsById[this.props.slot][cell.cellId]
             ? (e, data) => this.handleClick(e, index, data)
             : null,
         className: this.props.darkMode
-          ? this.props.grid.selectedCellsById[cell.cellId]
+          ? this.props.team.selectedCellsById[this.props.slot][cell.cellId]
             ? 'selected dark-mode'
             : 'dark-mode'
-          : this.props.grid.selectedCellsById[cell.cellId]
+          : this.props.team.selectedCellsById[this.props.slot][cell.cellId]
           ? 'selected'
           : null,
       };
@@ -293,9 +293,6 @@ class GridMap extends Component {
         cell.move.name,
         cell.ability.abilityId,
         this.props.language
-        // cell,
-        // this.props.pokemon,
-        // this.props.grid.syncLevel
       );
 
       return (
@@ -333,6 +330,10 @@ class GridMap extends Component {
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, language } = this.props;
+    console.log(
+      'this.props.team.selectedCellsById',
+      this.props.team.selectedCellsById
+    );
     return initialRender ? (
       <div className={classes.progressWrapper}>
         <CircularProgress color="secondary" />
@@ -369,16 +370,16 @@ class GridMap extends Component {
           />
         </HexGrid>
         {this.state.screenWidth >= 960 &&
-        this.props.grid.gridData.energy !== undefined ? (
+        this.props.team.gridData.energy !== undefined ? (
           <ReactTooltip className="tooltip" effect="solid" id="skillTooltip">
             <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
-              <li>{this.props.grid.gridData.name}</li>
+              <li>{this.props.team.gridData.name}</li>
               <li>
-                {UI['Energy'][language]}: {this.props.grid.gridData.energy}
+                {UI['Energy'][language]}: {this.props.team.gridData.energy}
               </li>
-              {this.props.grid.gridData.description ? (
+              {this.props.team.gridData.description ? (
                 <li style={{ marginTop: 1 }}>
-                  {this.props.grid.gridData.description}
+                  {this.props.team.gridData.description}
                 </li>
               ) : null}
             </ul>
@@ -391,17 +392,17 @@ class GridMap extends Component {
 
 const mapStateToProps = (state) => ({
   // pokemon: state.pokemon.selectedPokemon.toLowerCase(),
-  grid: state.grid,
+  team: state.team,
   darkMode: state.darkMode.mode,
   language: state.language.currentLanguage,
 });
 
 export default connect(mapStateToProps, {
   selectPokemon,
-  addToGridList,
-  removeFromGridList,
-  subtractFromRemainingEnergy,
-  addBackToRemainingEnergy,
+  addToTeamGridList,
+  removeFromTeamGridList,
+  subtractFromTeamRemainingEnergy,
+  addBackToTeamRemainingEnergy,
   resetGrids,
   loadGridFromUrl,
   updateUrl,
