@@ -90,14 +90,14 @@ function TeamBuilder() {
                 zIndex: 30,
               }}
             >
-              <svg viewbox="0 0 100 100" style={{ width: 150 }}>
+              <svg style={{ width: 150 }}>
                 <circle
                   cx="105"
                   cy="105"
                   r="40"
                   stroke="white"
-                  stroke-width="6"
-                  fill-opacity="0"
+                  strokeWidth="6"
+                  fillOpacity="0"
                 />
               </svg>
             </div>
@@ -109,14 +109,14 @@ function TeamBuilder() {
                 zIndex: 10,
               }}
             >
-              <svg viewbox="0 0 100 100" style={{ width: 150 }}>
+              <svg style={{ width: 150 }}>
                 <polygon points="0 150 150 70 150 150" fill="grey" />
                 <circle
                   cx="105"
                   cy="105"
                   r="40"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                   fill="grey"
                 />
               </svg>
@@ -151,14 +151,14 @@ function TeamBuilder() {
                 zIndex: 30,
               }}
             >
-              <svg viewbox="0 0 100 100" style={{ width: 150 }}>
+              <svg style={{ width: 150 }}>
                 <circle
                   cx="105"
                   cy="105"
                   r="40"
                   stroke="white"
-                  stroke-width="6"
-                  fill-opacity="0"
+                  strokeWidth="6"
+                  fillOpacity="0"
                 />
               </svg>
             </div>
@@ -170,14 +170,14 @@ function TeamBuilder() {
                 zIndex: 10,
               }}
             >
-              <svg viewbox="0 0 100 100" style={{ width: 150 }}>
+              <svg style={{ width: 150 }}>
                 <polygon points="0 150 150 70 150 150" fill="grey" />
                 <circle
                   cx="105"
                   cy="105"
                   r="40"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                   fill="grey"
                 />
               </svg>
@@ -212,14 +212,14 @@ function TeamBuilder() {
                 zIndex: 30,
               }}
             >
-              <svg viewbox="0 0 100 100" style={{ width: 150 }}>
+              <svg style={{ width: 150 }}>
                 <circle
                   cx="105"
                   cy="105"
                   r="40"
                   stroke="white"
-                  stroke-width="6"
-                  fill-opacity="0"
+                  strokeWidth="6"
+                  fillOpacity="0"
                 />
               </svg>
             </div>
@@ -231,14 +231,14 @@ function TeamBuilder() {
                 zIndex: 10,
               }}
             >
-              <svg viewbox="0 0 100 100" style={{ width: 150 }}>
+              <svg style={{ width: 150 }}>
                 <polygon points="0 150 150 70 150 150" fill="grey" />
                 <circle
                   cx="105"
                   cy="105"
                   r="40"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                   fill="grey"
                 />
               </svg>
