@@ -1,27 +1,27 @@
-import React, { Fragment, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Collapse from "@material-ui/core/Collapse";
-import IconButton from "@material-ui/core/IconButton";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import Paper from "@material-ui/core/Paper";
-import RarityDropdown from "./RarityDropdown";
-import PotentialDropdown from "./PotentialDropdown";
-import AffinityLevelDropdown from "./AffinityLevelDropdown";
-import AffinityProgressDropdown from "./AffinityProgressDropdown";
-import { getEggPokemonDataByNameAndRole } from "../../utils/functions";
+import React, { Fragment, useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Paper from '@material-ui/core/Paper';
+import RarityDropdown from './RarityDropdown';
+import PotentialDropdown from './PotentialDropdown';
+import AffinityLevelDropdown from './AffinityLevelDropdown';
+import AffinityProgressDropdown from './AffinityProgressDropdown';
+import { getEggPokemonDataByNameAndRole } from '../../utils/functions';
 
 const useRowStyles = makeStyles({
   root: {
-    "& > *": {
-      borderBottom: "unset",
+    '& > *': {
+      borderBottom: 'unset',
     },
   },
 });
@@ -57,9 +57,9 @@ function Stats(props) {
         </TableCell>
         <TableCell align="right">{baseHp}</TableCell>
         <TableCell align="right">{hpBonusFromPotential}</TableCell>
-        <TableCell align="right">{statBonusFromAffinity["hp"]}</TableCell>
+        <TableCell align="right">{statBonusFromAffinity['hp']}</TableCell>
         <TableCell align="right">
-          {baseHp + hpBonusFromPotential + statBonusFromAffinity["hp"]}
+          {baseHp + hpBonusFromPotential + statBonusFromAffinity['hp']}
         </TableCell>
       </TableRow>
       <TableRow key="atk" className={classes.root}>
@@ -69,11 +69,11 @@ function Stats(props) {
         </TableCell>
         <TableCell align="right">{baseAtk}</TableCell>
         <TableCell align="right">{statBonusFromPotentialExceptHp}</TableCell>
-        <TableCell align="right">{statBonusFromAffinity["atk"]}</TableCell>
+        <TableCell align="right">{statBonusFromAffinity['atk']}</TableCell>
         <TableCell align="right">
           {baseAtk +
             statBonusFromPotentialExceptHp +
-            statBonusFromAffinity["atk"]}
+            statBonusFromAffinity['atk']}
         </TableCell>
       </TableRow>
       <TableRow key="def" className={classes.root}>
@@ -83,11 +83,11 @@ function Stats(props) {
         </TableCell>
         <TableCell align="right">{baseDef}</TableCell>
         <TableCell align="right">{statBonusFromPotentialExceptHp}</TableCell>
-        <TableCell align="right">{statBonusFromAffinity["def"]}</TableCell>
+        <TableCell align="right">{statBonusFromAffinity['def']}</TableCell>
         <TableCell align="right">
           {baseDef +
             statBonusFromPotentialExceptHp +
-            statBonusFromAffinity["def"]}
+            statBonusFromAffinity['def']}
         </TableCell>
       </TableRow>
       <TableRow key="spa" className={classes.root}>
@@ -97,11 +97,11 @@ function Stats(props) {
         </TableCell>
         <TableCell align="right">{baseSpa}</TableCell>
         <TableCell align="right">{statBonusFromPotentialExceptHp}</TableCell>
-        <TableCell align="right">{statBonusFromAffinity["spa"]}</TableCell>
+        <TableCell align="right">{statBonusFromAffinity['spa']}</TableCell>
         <TableCell align="right">
           {baseSpa +
             statBonusFromPotentialExceptHp +
-            statBonusFromAffinity["spa"]}
+            statBonusFromAffinity['spa']}
         </TableCell>
       </TableRow>
       <TableRow key="spd" className={classes.root}>
@@ -111,11 +111,11 @@ function Stats(props) {
         </TableCell>
         <TableCell align="right">{baseSpd}</TableCell>
         <TableCell align="right">{statBonusFromPotentialExceptHp}</TableCell>
-        <TableCell align="right">{statBonusFromAffinity["spd"]}</TableCell>
+        <TableCell align="right">{statBonusFromAffinity['spd']}</TableCell>
         <TableCell align="right">
           {baseSpd +
             statBonusFromPotentialExceptHp +
-            statBonusFromAffinity["spd"]}
+            statBonusFromAffinity['spd']}
         </TableCell>
       </TableRow>
       <TableRow key="spe" className={classes.root}>
@@ -125,11 +125,11 @@ function Stats(props) {
         </TableCell>
         <TableCell align="right">{baseSpe}</TableCell>
         <TableCell align="right">{statBonusFromPotentialExceptHp}</TableCell>
-        <TableCell align="right">{statBonusFromAffinity["spe"]}</TableCell>
+        <TableCell align="right">{statBonusFromAffinity['spe']}</TableCell>
         <TableCell align="right">
           {baseSpe +
             statBonusFromPotentialExceptHp +
-            statBonusFromAffinity["spe"]}
+            statBonusFromAffinity['spe']}
         </TableCell>
       </TableRow>
     </Fragment>
@@ -142,14 +142,14 @@ function Moves(props) {
   const [open, setOpen] = React.useState(false);
   const classes = useRowStyles();
 
-  let moveCategory = "-";
+  let moveCategory = '-';
 
   if (move.category === 1) {
-    moveCategory = "Physical";
+    moveCategory = 'Physical';
   } else if (move.category === 2) {
-    moveCategory = "Special";
+    moveCategory = 'Special';
   } else if (move.category === 3) {
-    moveCategory = "Status";
+    moveCategory = 'Status';
   }
 
   return (
@@ -168,14 +168,14 @@ function Moves(props) {
           {move.name[language]}
         </TableCell>
         <TableCell align="right">
-          {move.gaugeDrain ? move.gaugeDrain : "-"}
+          {move.gaugeDrain ? move.gaugeDrain : '-'}
         </TableCell>
-        <TableCell align="right">{move.maxUses ? move.maxUses : "-"}</TableCell>
+        <TableCell align="right">{move.maxUses ? move.maxUses : '-'}</TableCell>
         <TableCell align="right">
           {move.power
             ? move.power +
               Math.floor(move.power * ((Number(syncLevel) - 1) * 0.05))
-            : "-"}
+            : '-'}
         </TableCell>
       </TableRow>
 
@@ -198,13 +198,13 @@ function Moves(props) {
                       {move.description[language]}
                     </TableCell>
                     <TableCell align="left">
-                      {move.category ? moveCategory : "-"}
+                      {move.category ? moveCategory : '-'}
                     </TableCell>
                     <TableCell align="left">
-                      {move.targetType ? move.targetType[language] : "-"}
+                      {move.targetType ? move.targetType[language] : '-'}
                     </TableCell>
                     <TableCell align="right">
-                      {move.accuracy ? move.accuracy : "-"}
+                      {move.accuracy ? move.accuracy : '-'}
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -223,14 +223,14 @@ function SyncMove(props) {
   const [open, setOpen] = React.useState(false);
   const classes = useRowStyles();
 
-  let syncMoveCategory = "-";
+  let syncMoveCategory = '-';
 
   if (syncMove.category === 1) {
-    syncMoveCategory = "Physical";
+    syncMoveCategory = 'Physical';
   } else if (syncMove.category === 2) {
-    syncMoveCategory = "Special";
+    syncMoveCategory = 'Special';
   } else if (syncMove.category === 3) {
-    syncMoveCategory = "Status";
+    syncMoveCategory = 'Status';
   }
 
   return (
@@ -250,13 +250,13 @@ function SyncMove(props) {
           {syncMove.name[language]}
         </TableCell>
         <TableCell align="left">
-          {syncMove.category ? syncMoveCategory : "-"}
+          {syncMove.category ? syncMoveCategory : '-'}
         </TableCell>
         <TableCell align="right">
           {syncMove.power
             ? syncMove.power +
               Math.floor(syncMove.power * ((Number(syncLevel) - 1) * 0.05))
-            : "-"}
+            : '-'}
         </TableCell>
       </TableRow>
 
@@ -334,7 +334,7 @@ export default function MovesAndSkillsModal(props) {
 
   // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
-  const roles = { "P.Strike": 0, "S.Strike": 1, Support: 2, Tech: 3 };
+  const roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
   const pokemonData = getEggPokemonDataByNameAndRole(
     pokemonName,
     roles[pokemonRole]
@@ -345,7 +345,7 @@ export default function MovesAndSkillsModal(props) {
 
   const [selectedRarity, setSelectedRarity] = useState(rarity);
   const [selectedPotential, setSelectedPotential] = useState(0);
-  const [selectedAffinityLevel, setSelectedAffinityLevel] = useState("1/3");
+  const [selectedAffinityLevel, setSelectedAffinityLevel] = useState('1/3');
   const [selectedAffinityProgress, setSelectedAffinityProgress] = useState(0);
 
   let hpBonusFromPotential =
@@ -356,9 +356,9 @@ export default function MovesAndSkillsModal(props) {
 
   let selectedAffinityLevelNum;
 
-  if (selectedAffinityLevel === "1/3") {
+  if (selectedAffinityLevel === '1/3') {
     selectedAffinityLevelNum = 1;
-  } else if (selectedAffinityLevel === "2/3") {
+  } else if (selectedAffinityLevel === '2/3') {
     selectedAffinityLevelNum = 2;
   } else {
     selectedAffinityLevelNum = 3;
@@ -367,20 +367,20 @@ export default function MovesAndSkillsModal(props) {
   React.useEffect(() => {
     setSelectedRarity(rarity);
     setSelectedPotential(0);
-    setSelectedAffinityLevel("1/3");
+    setSelectedAffinityLevel('1/3');
     setSelectedAffinityProgress(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pokemonName, pokemonRole]);
 
   const handleOnChangeRarity = (value) => {
     let selectedValue;
-    if (value === "★") {
+    if (value === '★') {
       selectedValue = 1;
-    } else if (value === "★★") {
+    } else if (value === '★★') {
       selectedValue = 2;
-    } else if (value === "★★★") {
+    } else if (value === '★★★') {
       selectedValue = 3;
-    } else if (value === "★★★★") {
+    } else if (value === '★★★★') {
       selectedValue = 4;
     } else {
       selectedValue = 5;
@@ -436,32 +436,32 @@ export default function MovesAndSkillsModal(props) {
     spe: 0,
   };
 
-  if (pokemonRole === "P.Strike" || pokemonRole === "S.Strike") {
-    statBonusFromAffinity["hp"] =
+  if (pokemonRole === 'P.Strike' || pokemonRole === 'S.Strike') {
+    statBonusFromAffinity['hp'] =
       selectedAffinityProgress * 2 + (selectedAffinityLevelNum - 1) * 40;
-    statBonusFromAffinity["atk"] =
+    statBonusFromAffinity['atk'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["spa"] =
+    statBonusFromAffinity['spa'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["spe"] =
+    statBonusFromAffinity['spe'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-  } else if (pokemonRole === "Support") {
-    statBonusFromAffinity["hp"] =
+  } else if (pokemonRole === 'Support') {
+    statBonusFromAffinity['hp'] =
       selectedAffinityProgress * 2 + (selectedAffinityLevelNum - 1) * 40;
-    statBonusFromAffinity["def"] =
+    statBonusFromAffinity['def'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["spd"] =
+    statBonusFromAffinity['spd'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["spe"] =
+    statBonusFromAffinity['spe'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
   } else {
-    statBonusFromAffinity["atk"] =
+    statBonusFromAffinity['atk'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["spa"] =
+    statBonusFromAffinity['spa'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["def"] =
+    statBonusFromAffinity['def'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
-    statBonusFromAffinity["spd"] =
+    statBonusFromAffinity['spd'] =
       selectedAffinityProgress * 1 + (selectedAffinityLevelNum - 1) * 20;
   }
 
