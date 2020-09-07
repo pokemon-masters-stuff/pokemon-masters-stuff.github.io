@@ -56,3 +56,8 @@ export { default as venusaur } from './pm0003.png';
 export { default as feraligatr } from './pm0160.png';
 export { default as typhlosion } from './pm0157.png';
 export { default as meganium } from './pm0154.png';
+
+// 9/7/2020
+export { default as clefairy } from './pm0035.png';
+export { default as pheromosa } from './pm0879.png';
+export { default as silvally } from './pm0862_11.png';

@@ -49,11 +49,9 @@ export const getPokemonNameList = (language) =>
       // }
 
       if (
-        entry.monsterBaseId === '20015401' ||
-        entry.monsterBaseId === '20000900' ||
-        entry.monsterBaseId === '20000301' ||
-        entry.monsterBaseId === '20016001' ||
-        entry.monsterBaseId === '20015700'
+        entry.monsterBaseId === '20003501' ||
+        entry.monsterBaseId === '20087900' ||
+        entry.monsterBaseId === '20086211'
       ) {
         return {
           key: index,
@@ -190,7 +188,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'sandslash' ||
       pokemon === 'kommo-o' ||
       pokemon === 'typhlosion' ||
-      pokemon === 'feraligatr'
+      pokemon === 'feraligatr' ||
+      pokemon === 'pheromosa'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -233,7 +232,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'crobat' ||
       pokemon === 'onix' ||
       pokemon === 'lycanroc' ||
-      pokemon === 'venusaur'
+      pokemon === 'venusaur' ||
+      pokemon === 'silvally'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -272,7 +272,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'starmie' ||
       pokemon === 'torterra' ||
       pokemon === 'blastoise' ||
-      pokemon === 'meganium'
+      pokemon === 'meganium' ||
+      pokemon === 'clefairy'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -355,7 +356,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'sandslash' ||
       pokemon === 'kommo-o' ||
       pokemon === 'typhlosion' ||
-      pokemon === 'feraligatr'
+      pokemon === 'feraligatr' ||
+      pokemon === 'pheromosa'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -386,7 +388,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'crobat' ||
       pokemon === 'onix' ||
       pokemon === 'lycanroc' ||
-      pokemon === 'venusaur'
+      pokemon === 'venusaur' ||
+      pokemon === 'silvally'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -413,7 +416,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'starmie' ||
       pokemon === 'torterra' ||
       pokemon === 'blastoise' ||
-      pokemon === 'meganium'
+      pokemon === 'meganium' ||
+      pokemon === 'clefairy'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -450,7 +454,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-// let names = {}; // to generate list of skills to be abbreviated
+let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
@@ -461,16 +465,16 @@ export const renderMoveName = (moveName, abilityId, language) => {
         renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
       }
       // comment out this else-if when generating lists of skill names to be abbreviated
-      else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
-      }
-      // else {
-      //   // to generate list of skills to be abbreviated
-      //   if (language === 'en') {
-      //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
-      //     console.log(names); // to generate list of skills to be abbreviated
-      //   }
+      // else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
+      //   renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
       // }
+      else {
+        // to generate list of skills to be abbreviated
+        if (language === 'en') {
+          names[abilityId] = moveName; // to generate list of skills to be abbreviated
+          console.log(names); // to generate list of skills to be abbreviated
+        }
+      }
     } else {
       if (shortenedMoveNameByAbilityId['en'][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
