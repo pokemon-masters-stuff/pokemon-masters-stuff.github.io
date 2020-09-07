@@ -454,7 +454,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-let names = {}; // to generate list of skills to be abbreviated
+// let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
@@ -465,16 +465,16 @@ export const renderMoveName = (moveName, abilityId, language) => {
         renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
       }
       // comment out this else-if when generating lists of skill names to be abbreviated
-      // else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-      //   renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
-      // }
-      else {
-        // to generate list of skills to be abbreviated
-        if (language === 'en') {
-          names[abilityId] = moveName; // to generate list of skills to be abbreviated
-          console.log(names); // to generate list of skills to be abbreviated
-        }
+      else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
+        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
       }
+      // else {
+      //   // to generate list of skills to be abbreviated
+      //   if (language === 'en') {
+      //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
+      //     console.log(names); // to generate list of skills to be abbreviated
+      //   }
+      // }
     } else {
       if (shortenedMoveNameByAbilityId['en'][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
