@@ -205,15 +205,17 @@ const gridedTrainerList = [
   '10001800', // Feraligatr
   '10001710', // Venusaur
   '10002101', // Blastoise
+  // 9/7/2020
+  '10011800', // clefairy
+  '10011900', // silvally
+  '10012000', // pheromosa
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  '10000200', // Meganium
-  '10011200', // Typhlosion
-  '10001800', // Feraligatr
-  '10001710', // Venusaur
-  '10002101', // Blastoise
+  '10011800', // clefairy
+  '10011900', // silvally
+  '10012000', // pheromosa
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -243,8 +245,6 @@ const extractSyncPairDataByTrainerBaseId = () => {
     let trainer = trainerDB.entries.find(
       (trainer) => trainer.trainerBaseId.toString() === trainerBaseIdFromList
     );
-
-    console.log('trainer on top', trainer);
 
     if (trainer) {
       console.log('trainer exists');
@@ -1256,9 +1256,12 @@ const extractSyncPairDataByTrainerBaseId = () => {
     };
     languages.forEach((language) => {
       // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason.
+      // 20003501 is Clefairy, but same as above its id is off by 1
       if (entry.monsterBaseId) {
         if (entry.monsterBaseId === '20003901') {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20003900'];
+        } else if (entry.monsterBaseId === '20003501') {
+          pokemonNameByLanguage[language] = pokemonNameDB[language]['20003500'];
         } else {
           pokemonNameByLanguage[language] =
             pokemonNameDB[language][entry.monsterBaseId];
@@ -1297,6 +1300,11 @@ const extractSyncPairDataByTrainerBaseId = () => {
     if (newTrainerBaseIdArray.includes(entry.trainerBaseId)) {
       console.log(
         `"${entry.monsterBaseId}", // ${entry.pokemonNameByLanguage['en']} (${entry.trainerNameByLanguage['en']})`
+      );
+      console.log(
+        `node extractGridByTrainerBaseId.js --trainerBaseId=${
+          entry.trainerBaseId
+        } --filename=${entry.pokemonNameByLanguage['en'].toLowerCase()}`
       );
     }
   });

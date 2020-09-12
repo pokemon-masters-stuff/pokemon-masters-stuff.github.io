@@ -402,6 +402,31 @@ import {
   feraligatrGridDataZH,
   typhlosionGridDataZH,
   meganiumGridDataZH,
+  // 9/7/2020
+  clefairyGridDataDE,
+  pheromosaGridDataDE,
+  silvallyGridDataDE,
+  clefairyGridDataEN,
+  pheromosaGridDataEN,
+  silvallyGridDataEN,
+  clefairyGridDataES,
+  pheromosaGridDataES,
+  silvallyGridDataES,
+  clefairyGridDataFR,
+  pheromosaGridDataFR,
+  silvallyGridDataFR,
+  clefairyGridDataIT,
+  pheromosaGridDataIT,
+  silvallyGridDataIT,
+  clefairyGridDataJA,
+  pheromosaGridDataJA,
+  silvallyGridDataJA,
+  clefairyGridDataKO,
+  pheromosaGridDataKO,
+  silvallyGridDataKO,
+  clefairyGridDataZH,
+  pheromosaGridDataZH,
+  silvallyGridDataZH,
 } from '../data';
 import {
   charizard,
@@ -453,6 +478,9 @@ import {
   feraligatr,
   typhlosion,
   meganium,
+  clefairy,
+  silvally,
+  pheromosa,
 } from '../images/PokemonThumbnails';
 
 import {
@@ -479,6 +507,10 @@ import {
   og_charizardPic,
   og_blastoisePic,
 } from '../images/PokemonPictures';
+
+import { sabrina, red, oak } from '../images/TrainerPictures';
+
+export const allTrainerPictures = { sabrina, red, oak };
 
 export const allPictures = {
   venusaurPic,
@@ -555,6 +587,9 @@ export const allThumbnails = {
   feraligatr,
   typhlosion,
   meganium,
+  clefairy,
+  silvally,
+  pheromosa,
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -619,6 +654,9 @@ export const allSyncGrids = {
     feraligatrGridDataDE,
     typhlosionGridDataDE,
     meganiumGridDataDE,
+    clefairyGridDataDE,
+    pheromosaGridDataDE,
+    silvallyGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -670,6 +708,9 @@ export const allSyncGrids = {
     feraligatrGridDataEN,
     typhlosionGridDataEN,
     meganiumGridDataEN,
+    clefairyGridDataEN,
+    pheromosaGridDataEN,
+    silvallyGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -721,6 +762,9 @@ export const allSyncGrids = {
     feraligatrGridDataES,
     typhlosionGridDataES,
     meganiumGridDataES,
+    clefairyGridDataES,
+    pheromosaGridDataES,
+    silvallyGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -772,6 +816,9 @@ export const allSyncGrids = {
     feraligatrGridDataFR,
     typhlosionGridDataFR,
     meganiumGridDataFR,
+    clefairyGridDataFR,
+    pheromosaGridDataFR,
+    silvallyGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -823,6 +870,9 @@ export const allSyncGrids = {
     feraligatrGridDataIT,
     typhlosionGridDataIT,
     meganiumGridDataIT,
+    clefairyGridDataIT,
+    pheromosaGridDataIT,
+    silvallyGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -874,6 +924,9 @@ export const allSyncGrids = {
     feraligatrGridDataJA,
     typhlosionGridDataJA,
     meganiumGridDataJA,
+    clefairyGridDataJA,
+    pheromosaGridDataJA,
+    silvallyGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -925,6 +978,9 @@ export const allSyncGrids = {
     feraligatrGridDataKO,
     typhlosionGridDataKO,
     meganiumGridDataKO,
+    clefairyGridDataKO,
+    pheromosaGridDataKO,
+    silvallyGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -976,6 +1032,9 @@ export const allSyncGrids = {
     feraligatrGridDataZH,
     typhlosionGridDataZH,
     meganiumGridDataZH,
+    clefairyGridDataZH,
+    pheromosaGridDataZH,
+    silvallyGridDataZH,
   },
 };
 
