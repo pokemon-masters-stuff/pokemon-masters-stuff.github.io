@@ -1,5 +1,5 @@
-const fs = require("fs");
-const moveDB = require("../rawdata/Move.json");
+const fs = require('fs');
+const moveDB = require('../rawdata/protodump/Move.json');
 
 // convert certain strings to number codes to accomodate old scripts
 const category = {
@@ -60,21 +60,21 @@ const convertMoveJson = () => {
   let modifiedMoveData = moveDB;
 
   modifiedMoveData.entries.forEach((entry) => {
-    entry["category"] = category[entry["category"]];
-    entry["user"] = user[entry["user"]];
-    entry["group"] = group[entry["group"]];
-    entry["target"] = target[entry["target"]];
-    entry["maxUses"] = entry["uses"];
-    entry["tags"] = tags[entry["tags"]];
+    entry['category'] = category[entry['category']];
+    entry['user'] = user[entry['user']];
+    entry['group'] = group[entry['group']];
+    entry['target'] = target[entry['target']];
+    entry['maxUses'] = entry['uses'];
+    entry['tags'] = tags[entry['tags']];
     delete entry.uses;
   });
 
   fs.writeFile(
-    `${__dirname}/../rawdata/ModifiedMove.json`,
+    `${__dirname}/../rawdata/protodump/ModifiedMove.json`,
     JSON.stringify(modifiedMoveData),
     (err) => {
       if (err) throw err;
-      console.log("Successfully written to file");
+      console.log('Successfully written to file');
     }
   );
 
