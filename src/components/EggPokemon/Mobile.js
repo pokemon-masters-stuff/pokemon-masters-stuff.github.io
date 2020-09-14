@@ -8,11 +8,11 @@ import Nav from '../MainAppbar/Nav';
 import { NavigationMobile } from '../Navigation';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
+import { pokemonPictures } from '../../utils/constants';
 import {
-  pokemonPictures,
-  pokemonNameToImageLookUp,
-} from '../../utils/constants';
-import { removeHyphens } from '../../utils/functions';
+  removeHyphens,
+  getEggPokemonDataByNameAndRole,
+} from '../../utils/functions';
 import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 
 const regExp = /\(([^)]+)\)/;
@@ -44,6 +44,12 @@ const EggPokemon = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pokemon]);
 
+  const roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
+  const pokemonData = getEggPokemonDataByNameAndRole(
+    pokemonName,
+    roles[pokemonRole]
+  );
+
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
       <div className="content">
@@ -70,17 +76,12 @@ const EggPokemon = () => {
             <Grid container justify="center">
               <img
                 alt=""
-                src={
-                  pokemonPictures[
-                    pokemonNameToImageLookUp[
-                      `${removeHyphens(this.props.pokemon)}`
-                    ] + '_256'
-                  ]
-                }
+                src={pokemonPictures[pokemonData.monsterActorId + '_256']}
               />
             </Grid>
             <DataTable
               language={language}
+              pokemonData={pokemonData}
               pokemonName={pokemonName}
               pokemonRole={pokemonRole}
               syncLevel={syncLevel}

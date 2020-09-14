@@ -24,12 +24,9 @@ import {
   checkSelectabilityBasedOnSyncLv,
   removeHyphens,
   capitalizeSyncPairNameForUrl,
+  getPokemonDataByName,
 } from '../../utils/functions';
-import {
-  pokemonPictures,
-  allSyncGrids,
-  pokemonNameToImageLookUp,
-} from '../../utils/constants';
+import { pokemonPictures, allSyncGrids } from '../../utils/constants';
 import UI from '../../utils/translations';
 
 class GridMap extends Component {
@@ -294,8 +291,8 @@ class GridMap extends Component {
 
   renderCenterGridText = (classes) => {
     // Only renders text when no picture available
-    return pokemonNameToImageLookUp[`${removeHyphens(this.props.pokemon)}`] ===
-      undefined ? (
+    return getPokemonDataByName(removeHyphens(this.props.pokemon))
+      .monsterActorId === undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(this.props.pokemon)}
       </Text>
@@ -339,9 +336,8 @@ class GridMap extends Component {
             id={this.props.pokemon}
             link={
               pokemonPictures[
-                pokemonNameToImageLookUp[
-                  `${removeHyphens(this.props.pokemon)}`
-                ] + '_128'
+                getPokemonDataByName(removeHyphens(this.props.pokemon))
+                  .monsterActorId + '_128'
               ]
             }
             size={{ x: 10, y: 10 }}

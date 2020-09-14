@@ -1,5 +1,5 @@
-import arrayOfAllGridedPokemon from '../data/allGridedPokemon.json';
-import arrayOfAllEggPokemon from '../data/allEggPokemon.json';
+import gridedSyncPairDataArray from '../data/gridedSyncPairData.json';
+import eggPokemonDataArray from '../data/eggPokemonData.json';
 import { shortenedMoveNameByAbilityId } from './constants';
 
 export const removeHyphens = (str) => {
@@ -20,7 +20,7 @@ export const capitalizeSyncPairNameForUrl = (syncPairName) => {
 };
 
 export const getPokemonNameList = (language) =>
-  arrayOfAllGridedPokemon
+  gridedSyncPairDataArray
     .map((entry, index) => {
       let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
       let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
@@ -74,7 +74,7 @@ export const getPokemonNameList = (language) =>
 
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;
-  arrayOfAllGridedPokemon.forEach((pokemon) => {
+  gridedSyncPairDataArray.forEach((pokemon) => {
     if (
       pokemon.pokemonNameByLanguage['en'] === pokemonName ||
       pokemon.pokemonNameByLanguage['en'].toLowerCase() === pokemonName ||
@@ -89,7 +89,7 @@ export const getPokemonDataByName = (pokemonName) => {
 
 const role = { 0: 'P.Strike', 1: 'S.Strike', 2: 'Support', 3: 'Tech' };
 export const getEggPokemonNameList = (language) =>
-  arrayOfAllEggPokemon
+  eggPokemonDataArray
     .map((entry, index) => {
       // if (entry.monsterBaseId === 'id of new duplicate pokemon') {
       //  // for the new sync pair:
@@ -115,7 +115,7 @@ export const getEggPokemonNameList = (language) =>
 
 export const getEggPokemonDataByNameAndRole = (pokemonName, role) => {
   let pokemonData;
-  arrayOfAllEggPokemon.forEach((pokemon) => {
+  eggPokemonDataArray.forEach((pokemon) => {
     if (
       pokemon.pokemonNameByLanguage['en'] === pokemonName &&
       pokemon.role === role

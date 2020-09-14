@@ -1,10 +1,11 @@
 const fs = require('fs');
 
 const monsterDB = require('../rawdata/protodump/Monster.json');
-const moveDB = require('../rawdata/protodump/ModifiedMove.json');
+const monsterBaseDB = require('../rawdata/protodump/MonsterBase.json');
+const monsterVariationDB = require('../rawdata/protodump/MonsterVariation.json');
 const trainerDB = require('../rawdata/protodump/Trainer.json');
 const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
-const monsterVariationDB = require('../rawdata/protodump/MonsterVariation.json');
+const moveDB = require('../rawdata/protodump/ModifiedMove.json');
 
 const pokemonNameDBde = require('../rawdata/lsddump/monster_name_de.json');
 const pokemonNameDBen = require('../rawdata/lsddump/monster_name_en.json');
@@ -247,7 +248,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     );
 
     if (trainer) {
-      console.log('trainer exists');
+      console.log('Trainer exists');
       // Use trainerBaseId to find monsterId in Trainer.json
       monsterId = trainer.monsterId;
 
@@ -627,6 +628,13 @@ const extractSyncPairDataByTrainerBaseId = () => {
         syncMoveId,
         monsterBaseId,
       } = monster;
+
+      // Use monsterBaseId to find actorId in MonsterBase.json
+      let monsterBase = monsterBaseDB.entries.find(
+        (monsterBase) =>
+          monsterBase.monsterBaseId.toString() === monsterBaseId.toString()
+      );
+      let monsterActorId = monsterBase.actorId;
 
       stats = {
         hpValues,
@@ -1106,14 +1114,18 @@ const extractSyncPairDataByTrainerBaseId = () => {
 
       trainerNameId = trainerBase.trainerNameId;
 
+      let trainerActorId = trainerBase.actorId;
+
       // Push to gridedSyncPairDataArray
       monsterMegaFormBaseId
         ? (monsterAndTrainerData = {
             monsterBaseId: monsterBaseId.toString(),
             monsterMegaFormBaseId,
             monsterId: monsterId.toString(),
+            monsterActorId: monsterActorId,
             trainerBaseId: trainerBaseIdFromList,
             trainerNameId,
+            trainerActorId: trainerActorId,
             stats,
             moves,
             passives,
@@ -1126,8 +1138,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
         : (monsterAndTrainerData = {
             monsterBaseId: monsterBaseId.toString(),
             monsterId: monsterId.toString(),
+            monsterActorId: monsterActorId,
             trainerBaseId: trainerBaseIdFromList,
             trainerNameId,
+            trainerActorId: trainerActorId,
             stats,
             moves,
             passives,
@@ -1138,6 +1152,9 @@ const extractSyncPairDataByTrainerBaseId = () => {
           });
       gridedSyncPairDataArray.push(monsterAndTrainerData);
     } else {
+      console.log(
+        'Trainer doesn not exists. Modifying monsterId to find trainer'
+      );
       let newMonsterId =
         monsterId.toString().substring(0, monsterId.toString().length - 1) +
         '0';
@@ -1145,7 +1162,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
       let trainer = trainerDB.entries.find(
         (trainer) => trainer.monsterId.toString() === newMonsterId.toString()
       );
-      console.log('trainer', trainer);
+      console.log('Found trainer', trainer);
 
       if (trainer) {
         trainerBaseId = trainer.trainerBaseId;
@@ -1163,8 +1180,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterBaseId: monsterBaseId.toString(),
               monsterMegaFormBaseId,
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId,
+              trainerActorId: trainerActorId,
               stats,
               moves,
               passives,
@@ -1177,8 +1196,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId,
+              trainerActorId: trainerActorId,
               stats,
               moves,
               passives,
@@ -1194,8 +1215,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterBaseId: monsterBaseId.toString(),
               monsterMegaFormBaseId,
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId: 'No Trainer',
+              trainerActorId: trainerActorId,
               stats,
               moves,
               passives,
@@ -1208,8 +1231,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerBaseId: trainerBaseIdFromList,
               trainerNameId: 'No Trainer',
+              trainerActorId: trainerActorId,
               stats,
               moves,
               passives,
@@ -1309,7 +1334,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     }
   });
   fs.writeFile(
-    `${__dirname}/../../src/data/allGridedPokemon.json`,
+    `${__dirname}/../../src/data/gridedSyncPairData.json`,
     JSON.stringify(gridedSyncPairDataArray),
     (err) => {
       if (err) throw err;

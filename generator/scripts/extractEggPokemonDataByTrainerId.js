@@ -1440,7 +1440,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     entry.syncPairNameByLanguage = syncPairNameByLanguage;
   });
   fs.writeFile(
-    `${__dirname}/../../src/data/allEggPokemon.json`,
+    `${__dirname}/../../src/data/eggPokemonData.json`,
     JSON.stringify(syncPairDataArray),
     (err) => {
       if (err) throw err;

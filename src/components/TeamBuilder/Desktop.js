@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -6,12 +7,8 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import TextField from '@material-ui/core/TextField';
 import TeamMember from './TeamMember';
-import {
-  trainerPictures,
-  pokemonPictures,
-  pokemonNameToImageLookUp,
-} from '../../utils/constants';
-import { removeHyphens } from '../../utils/functions';
+import { trainerPictures, pokemonPictures } from '../../utils/constants';
+import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,11 +35,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function TeamBuilder() {
+  const language = useSelector((state) => state.language.currentLanguage);
   const classes = useStyles();
-  const slot1 = 'Alakazam';
-  const slot2 = 'Mew';
-  const slot3 = 'Charizard';
-  let teamMembers = [slot1, slot2, slot3];
+  const slot1 = 'Sabrina & Alakazam';
+  const slot2 = 'Professor Oak & Mew';
+  const slot3 = 'Red & Charizard';
+  let teamMember1 = syncPairNamesAndIds[language][slot1];
+  let teamMember2 = syncPairNamesAndIds[language][slot2];
+  let teamMember3 = syncPairNamesAndIds[language][slot3];
+  let pokemonNamesArray = [
+    teamMember1['pokemonName'],
+    teamMember2['pokemonName'],
+    teamMember3['pokemonName'],
+  ];
+
+  console.log('pokemonNamesArray', pokemonNamesArray);
   // To Add SaveTeam, LoadTeam, ShareTeam, Reset, SelectPokemon
   return (
     <Grid container className={classes.root} spacing={3}>
@@ -83,7 +90,7 @@ function TeamBuilder() {
               component="img"
               alt="Trainer Image"
               height="256"
-              image={trainerPictures['sabrina']}
+              image={trainerPictures[teamMember1.trainerActorId + '_256']}
               title="Trainer Image"
               position="absolute"
             />
@@ -140,12 +147,7 @@ function TeamBuilder() {
               }}
             >
               <img
-                src={
-                  pokemonPictures[
-                    pokemonNameToImageLookUp[`${removeHyphens('alakazam')}`] +
-                      '_128'
-                  ]
-                }
+                src={pokemonPictures[teamMember1.monsterActorId + '_128']}
                 style={{ height: 60 }}
               />
             </div>
@@ -157,7 +159,7 @@ function TeamBuilder() {
               component="img"
               alt="Trainer Image"
               height="256"
-              image={trainerPictures['oak']}
+              image={trainerPictures[teamMember2.trainerActorId + '_256']}
               title="Trainer Image"
               position="absolute"
             />
@@ -214,11 +216,7 @@ function TeamBuilder() {
               }}
             >
               <img
-                src={
-                  pokemonPictures[
-                    pokemonNameToImageLookUp[`${removeHyphens('mew')}`] + '_128'
-                  ]
-                }
+                src={pokemonPictures[teamMember2.monsterActorId + '_128']}
                 style={{ height: 60 }}
               />
             </div>
@@ -230,7 +228,7 @@ function TeamBuilder() {
               component="img"
               alt="Trainer Image"
               height="256"
-              image={trainerPictures['red']}
+              image={trainerPictures[teamMember3.trainerActorId + '_256']}
               title="Trainer Image"
               position="absolute"
             />
@@ -287,12 +285,7 @@ function TeamBuilder() {
               }}
             >
               <img
-                src={
-                  pokemonPictures[
-                    pokemonNameToImageLookUp[`${removeHyphens('charizard')}`] +
-                      '_128'
-                  ]
-                }
+                src={pokemonPictures[teamMember3.monsterActorId + '_128']}
                 style={{ height: 60 }}
               />
             </div>
@@ -302,7 +295,7 @@ function TeamBuilder() {
 
       <Grid item xs={12}>
         <Grid container justify="center" spacing={3}>
-          {teamMembers.map((value, index) => (
+          {pokemonNamesArray.map((value, index) => (
             <Grid key={index} item>
               <Paper className={classes.paper}>
                 <TeamMember

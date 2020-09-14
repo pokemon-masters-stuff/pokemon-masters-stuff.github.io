@@ -27,12 +27,9 @@ import {
   renderMoveName,
   // addSyncLvReq,
   removeHyphens,
+  getPokemonDataByName,
 } from '../../../utils/functions';
-import {
-  pokemonPictures,
-  allSyncGrids,
-  pokemonNameToImageLookUp,
-} from '../../../utils/constants';
+import { pokemonPictures, allSyncGrids } from '../../../utils/constants';
 import BuildDescription from './BuildDescription';
 
 class BuildItem extends Component {
@@ -186,7 +183,7 @@ class BuildItem extends Component {
 
   renderCenterGridText = (classes, pokemon) => {
     // Only renders text when no picture available
-    return pokemonNameToImageLookUp[`${removeHyphens(this.props.pokemon)}`] ===
+    return getPokemonDataByName(removeHyphens(pokemon)).monsterActorId ===
       undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(pokemon)}
@@ -338,9 +335,8 @@ class BuildItem extends Component {
                 id={pokemon}
                 link={
                   pokemonPictures[
-                    pokemonNameToImageLookUp[
-                      `${removeHyphens(this.props.pokemon)}`
-                    ] + '_128'
+                    getPokemonDataByName(removeHyphens(pokemon))
+                      .monsterActorId + '_128'
                   ]
                 }
                 size={{ x: 10, y: 10 }}

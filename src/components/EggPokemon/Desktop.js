@@ -5,11 +5,11 @@ import SelectEggPokemonDropdown from './SelectEggPokemonDropdown';
 import SyncLevelDropdown from './SyncLevelDropdown';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import { pokemonPictures } from '../../utils/constants';
 import {
-  pokemonPictures,
-  pokemonNameToImageLookUp,
-} from '../../utils/constants';
-import { removeHyphens } from '../../utils/functions';
+  removeHyphens,
+  getEggPokemonDataByNameAndRole,
+} from '../../utils/functions';
 
 const regExp = /\(([^)]+)\)/;
 
@@ -34,6 +34,12 @@ const EggPokemon = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pokemon]);
 
+  const roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
+  const pokemonData = getEggPokemonDataByNameAndRole(
+    pokemonName,
+    roles[pokemonRole]
+  );
+
   return (
     <Container maxWidth="sm" style={{ paddingTop: 20, marginBottom: 30 }}>
       <SelectEggPokemonDropdown
@@ -47,16 +53,12 @@ const EggPokemon = () => {
       <Grid container justify="center">
         <img
           alt=""
-          src={
-            pokemonPictures[
-              pokemonNameToImageLookUp[`${removeHyphens(this.props.pokemon)}`] +
-                '_256'
-            ]
-          }
+          src={pokemonPictures[pokemonData.monsterActorId + '_256']}
         />
       </Grid>
       <DataTable
         language={language}
+        pokemonData={pokemonData}
         pokemonName={pokemonName}
         pokemonRole={pokemonRole}
         syncLevel={syncLevel}

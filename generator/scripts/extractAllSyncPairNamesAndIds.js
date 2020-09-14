@@ -48,10 +48,10 @@ const trainerNameDB = {
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
 /*
- * Usage i.e: node extractAllSyncPairNames.js
+ * Usage i.e: node extractAllSyncPairNamesAndIds.js
  * */
-let pokemonImageLookUp = {};
-const extractAllSyncPairNames = () => {
+
+const extractAllSyncPairNamesAndIds = () => {
   let syncPairNames = {
     de: {},
     en: {},
@@ -165,34 +165,31 @@ const extractAllSyncPairNames = () => {
       // if (language === 'en') {
       //   if (trainerName !== 'Hero') {
       //     console.log(
-      //       `export { default as ${trainerActorId} } from './${trainerActorId}_256.ktx.png'; // ${trainerName}`
+      //       `export { default as ${trainerActorId}_256 } from './256px/${trainerActorId}_256.ktx.png'; // ${trainerName}`
       //     );
       //   }
       // }
 
       // prints out export statements for pokemon in console.
-      if (language === 'en') {
-        if (trainerName !== 'Hero') {
-          console.log(
-            `export { default as ${monsterActorId}_128 } from './${monsterActorId}_128.ktx.png'; // ${pokemonName}`
-          );
-        }
-      }
-
-      // prints out key value pairs for pokemon and its actorId in console.
       // if (language === 'en') {
-      //   pokemonImageLookUp[
-      //     pokemonName.toLowerCase().replace(/-/g, '')
-      //   ] = monsterActorId;
+      //   if (trainerName !== 'Hero') {
+      //     console.log(
+      //       `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${pokemonName}`
+      //     );
+      //   }
       // }
     });
   });
   // prints out export statements in console.
-  console.log(`export { default as ch8000_00_hero } from './hero.png';`);
-  console.log(`export { default as ch8001_00_heroine } from './heroine.png';`);
-  console.log(pokemonImageLookUp);
+  // console.log(
+  //   `export { default as ch8000_00_hero_256 } from './256px/hero.png';`
+  // );
+  // console.log(
+  //   `export { default as ch8001_00_heroine_256 } from './256px/heroine.png';`
+  // );
+
   fs.writeFile(
-    `${__dirname}/../../src/data/allSyncPairNames.json`,
+    `${__dirname}/../../src/data/syncPairNamesAndIds.json`,
     JSON.stringify(syncPairNames),
     (err) => {
       if (err) throw err;
@@ -203,4 +200,4 @@ const extractAllSyncPairNames = () => {
   return syncPairNames;
 };
 
-extractAllSyncPairNames();
+extractAllSyncPairNamesAndIds();

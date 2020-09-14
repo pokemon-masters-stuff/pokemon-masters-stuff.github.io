@@ -16,7 +16,6 @@ import RarityDropdown from './RarityDropdown';
 import PotentialDropdown from './PotentialDropdown';
 import AffinityLevelDropdown from './AffinityLevelDropdown';
 import AffinityProgressDropdown from './AffinityProgressDropdown';
-import { getEggPokemonDataByNameAndRole } from '../../utils/functions';
 
 const useRowStyles = makeStyles({
   root: {
@@ -329,16 +328,11 @@ function Passives(props) {
 }
 
 export default function MovesAndSkillsModal(props) {
-  const { language, pokemonName, pokemonRole, syncLevel } = props;
+  const { language, pokemonName, pokemonRole, pokemonData, syncLevel } = props;
   //   const syncLevel = useSelector((state) => state.grid.syncLevel);
 
   // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
-  const roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
-  const pokemonData = getEggPokemonDataByNameAndRole(
-    pokemonName,
-    roles[pokemonRole]
-  );
   const { stats, moves, passives, rarity } = pokemonData;
 
   // const [isMega, setIsMega] = useState(false);

@@ -665,7 +665,7 @@ export default function MovesAndSkillsModal(props) {
   let selectedMoves = hash;
 
   // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
-
+  console.log('pokemon', pokemon);
   const pokemonData = getPokemonDataByName(pokemon);
   console.log('pokemonData', pokemonData);
 

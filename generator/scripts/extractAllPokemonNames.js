@@ -54,7 +54,7 @@ const extractAllPokemonNames = () => {
   });
 
   fs.writeFile(
-    `${__dirname}/../../src/data/pokemonNameListByMonsterBaseId.json`,
+    `${__dirname}/../../src/data/pokemonNamesByMonsterBaseId.json`,
     JSON.stringify(pokemonNames),
     (err) => {
       if (err) throw err;

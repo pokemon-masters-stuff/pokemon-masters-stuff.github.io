@@ -49,7 +49,7 @@ const extractAllTrainerNames = () => {
   });
 
   fs.writeFile(
-    `${__dirname}/../../src/data/trainerNameListBytrainerNameId.json`,
+    `${__dirname}/../../src/data/trainerNamesBytrainerNameId.json`,
     JSON.stringify(trainerNames),
     (err) => {
       if (err) throw err;

@@ -562,11 +562,245 @@ import {
   pm0009_00_kamex_256, // Blastoise
   pm0059_00_windie_256, // Arcanine
   pm0119_01_azumao_256, // Seaking
-} from '../images/PokemonPictures';
+} from '../images/Pokemon';
 
-import { sabrina, red, oak } from '../images/TrainerPictures';
+import {
+  ch0000_00_red_256, // Red
+  ch0001_00_kukui_256, // Kukui
+  ch0002_00_kotone_256, // Lyra
+  ch0002_40_kotone_256, // Lyra
+  ch0003_00_calme_256, // Calem
+  ch0004_00_toko_256, // Hilda
+  ch0005_00_kanna_256, // Lorelei
+  ch0006_00_oba_256, // Flint
+  ch0007_00_acerola_256, // Acerola
+  ch0008_00_erika_256, // Erika
+  ch0009_00_senri_256, // Norman
+  ch0010_00_maximum_256, // Crasher Wake
+  ch0011_00_homika_256, // Roxie
+  ch0012_00_corni_256, // Korrina
+  ch0013_00_hapu_256, // Hapu
+  ch0014_01_cheren_256, // Cheren
+  ch0015_00_takeshi_256, // Brock
+  ch0015_01_takeshi_256, // Brock
+  ch0016_00_huuro_256, // Skyla
+  ch0017_00_leaf_256, // Leaf
+  // ch0017_10_leaf_256, // Leaf
+  ch0018_00_chris_256, // Kris
+  ch0019_00_yuki_256, // Brendan
+  ch0020_00_toya_256, // Hilbert
+  ch0021_00_green_256, // Blue
+  // ch0021_01_green_256, // Blue
+  ch0022_00_urup_256, // Wulfric
+  ch0023_00_momi_256, // Cheryl
+  ch0024_00_shikimi_256, // Shauntal
+  ch0025_00_suzuna_256, // Candice
+  ch0026_00_akane_256, // Whitney
+  ch0027_00_natane_256, // Gardenia
+  ch0028_00_ibuki_256, // Clair
+  ch0029_00_asuna_256, // Flannery
+  ch0030_00_ran_256, // Liza
+  ch0031_00_fuu_256, // Tate
+  ch0032_00_yanagi_256, // Pryce
+  ch0033_00_yakon_256, // Clay
+  ch0034_00_matsurika_256, // Mina
+  ch0035_00_matthies_256, // Lt. Surge
+  ch0036_00_mamane_256, // Sophocles
+  ch0037_00_fukuji_256, // Ramos
+  ch0038_00_hyouta_256, // Roark
+  ch0039_00_viola_256, // Viola
+  ch0040_00_hachiku_256, // Brycen
+  ch0041_00_nejiki_256, // Thorton
+  ch0042_00_nagi_256, // Winona
+  ch0043_00_toki_256, // Brawly
+  ch0044_00_tsutsuji_256, // Roxanne
+  ch0045_00_tsukushi_256, // Bugsy
+  ch0046_00_datsura_256, // Noland
+  ch0047_00_itsuki_256, // Will
+  ch0048_00_gima_256, // Grimsley
+  ch0048_10_gima_256, // Grimsley
+  ch0049_00_fuyo_256, // Phoebe
+  ch0050_00_sumomo_256, // Maylene
+  ch0051_00_litchi_256, // Olivia
+  ch0052_00_shizui_256, // Marlon
+  ch0053_00_zakuro_256, // Grant
+  ch0054_00_kyo_256, // Koga
+  ch0055_00_gampi_256, // Wikstrom
+  ch0056_00_kuchinashi_256, // Nanu
+  ch0057_00_shiba_256, // Bruno
+  ch0058_00_kahiri_256, // Kahili
+  ch0059_00_katsura_256, // Blaine
+  ch0060_00_anzu_256, // Janine
+  ch0061_00_kikuko_256, // Agatha
+  ch0062_00_karin_256, // Karen
+  ch0063_00_renbu_256, // Marshal
+  // ch0074_00_tanpan_256, // Youngster
+  ch0090_00_daigo_256, // Steven
+  ch0090_40_daigo_256, // Steven
+  ch0091_00_shirona_256, // Cynthia
+  ch0091_01_shirona_256, // Cynthia
+  ch0092_00_iris_256, // Iris
+  ch0094_00_genji_256, // Drake
+  ch0095_00_cattleya_256, // Caitlin
+  ch0096_00_zumi_256, // Siebold
+  ch0096_10_zumi_256, // Siebold
+  ch0097_00_mai_256, // Marley
+  ch0098_00_hau_256, // Hau
+  ch0099_00_jun_256, // Barry
+  ch0101_00_mei_256, // Rosa
+  ch0101_10_mei_256, // Rosa
+  ch0106_00_kamitsure_256, // Elesa
+  ch0106_10_kamitsure_256, // Elesa
+  ch0110_01_kasumi_256, // Misty
+  ch0111_00_wataru_256, // Lance
+  ch0112_00_hibiki_256, // Ethan
+  ch0113_00_mikan_256, // Jasmine
+  ch0114_00_natsume_256, // Sabrina
+  ch0116_00_hikari_256, // Dawn
+  ch0118_00_lillie_256, // Lillie
+  ch0119_00_gladion_256, // Gladion
+  ch0120_00_lusamine_256, // Lusamine
+  ch0121_00_plumeria_256, // Plumeria
+  ch0125_00_guzma_256, // Guzma
+  ch0127_00_mikuri_256, // Wallace
+  ch0128_00_mitsuru_256, // Wally
+  ch0129_00_higana_256, // Zinnia
+  ch0130_00_serena_256, // Serena
+  ch0131_00_citron_256, // Clemont
+  ch0133_00_shilver_256, // Silver
+  ch0137_00_orchid1_256, // Professor Oak
+  ch0140_00_sakaki_256, // Giovanni
+  ch0148_00_matsuba_256, // Morty
+  ch0151_00_melissa_256, // Fantina
+  ch0153_00_prim_256, // Glacia
+  ch0157_00_mache_256, // Valerie
+  ch0170_00_arty_256, // Burgh
+  ch0194_00_akagi_256, // Cyrus
+  ch0198_00_azami_256, // Lucy
+  ch0240_00_musashi_256, // Jessie
+  ch0241_00_kojiro_256, // James
+  // ch8000_00_hero_256,
+  // ch8001_00_heroine_256
+} from '../images/Trainers';
 
-export const trainerPictures = { sabrina, red, oak };
+export const trainerPictures = {
+  ch0000_00_red_256, // Red
+  ch0001_00_kukui_256, // Kukui
+  ch0002_00_kotone_256, // Lyra
+  ch0002_40_kotone_256, // Lyra
+  ch0003_00_calme_256, // Calem
+  ch0004_00_toko_256, // Hilda
+  ch0005_00_kanna_256, // Lorelei
+  ch0006_00_oba_256, // Flint
+  ch0007_00_acerola_256, // Acerola
+  ch0008_00_erika_256, // Erika
+  ch0009_00_senri_256, // Norman
+  ch0010_00_maximum_256, // Crasher Wake
+  ch0011_00_homika_256, // Roxie
+  ch0012_00_corni_256, // Korrina
+  ch0013_00_hapu_256, // Hapu
+  ch0014_01_cheren_256, // Cheren
+  ch0015_00_takeshi_256, // Brock
+  ch0015_01_takeshi_256, // Brock
+  ch0016_00_huuro_256, // Skyla
+  ch0017_00_leaf_256, // Leaf
+  // ch0017_10_leaf_256, // Leaf
+  ch0018_00_chris_256, // Kris
+  ch0019_00_yuki_256, // Brendan
+  ch0020_00_toya_256, // Hilbert
+  ch0021_00_green_256, // Blue
+  // ch0021_01_green_256, // Blue
+  ch0022_00_urup_256, // Wulfric
+  ch0023_00_momi_256, // Cheryl
+  ch0024_00_shikimi_256, // Shauntal
+  ch0025_00_suzuna_256, // Candice
+  ch0026_00_akane_256, // Whitney
+  ch0027_00_natane_256, // Gardenia
+  ch0028_00_ibuki_256, // Clair
+  ch0029_00_asuna_256, // Flannery
+  ch0030_00_ran_256, // Liza
+  ch0031_00_fuu_256, // Tate
+  ch0032_00_yanagi_256, // Pryce
+  ch0033_00_yakon_256, // Clay
+  ch0034_00_matsurika_256, // Mina
+  ch0035_00_matthies_256, // Lt. Surge
+  ch0036_00_mamane_256, // Sophocles
+  ch0037_00_fukuji_256, // Ramos
+  ch0038_00_hyouta_256, // Roark
+  ch0039_00_viola_256, // Viola
+  ch0040_00_hachiku_256, // Brycen
+  ch0041_00_nejiki_256, // Thorton
+  ch0042_00_nagi_256, // Winona
+  ch0043_00_toki_256, // Brawly
+  ch0044_00_tsutsuji_256, // Roxanne
+  ch0045_00_tsukushi_256, // Bugsy
+  ch0046_00_datsura_256, // Noland
+  ch0047_00_itsuki_256, // Will
+  ch0048_00_gima_256, // Grimsley
+  ch0048_10_gima_256, // Grimsley
+  ch0049_00_fuyo_256, // Phoebe
+  ch0050_00_sumomo_256, // Maylene
+  ch0051_00_litchi_256, // Olivia
+  ch0052_00_shizui_256, // Marlon
+  ch0053_00_zakuro_256, // Grant
+  ch0054_00_kyo_256, // Koga
+  ch0055_00_gampi_256, // Wikstrom
+  ch0056_00_kuchinashi_256, // Nanu
+  ch0057_00_shiba_256, // Bruno
+  ch0058_00_kahiri_256, // Kahili
+  ch0059_00_katsura_256, // Blaine
+  ch0060_00_anzu_256, // Janine
+  ch0061_00_kikuko_256, // Agatha
+  ch0062_00_karin_256, // Karen
+  ch0063_00_renbu_256, // Marshal
+  // ch0074_00_tanpan_256, // Youngster
+  ch0090_00_daigo_256, // Steven
+  ch0090_40_daigo_256, // Steven
+  ch0091_00_shirona_256, // Cynthia
+  ch0091_01_shirona_256, // Cynthia
+  ch0092_00_iris_256, // Iris
+  ch0094_00_genji_256, // Drake
+  ch0095_00_cattleya_256, // Caitlin
+  ch0096_00_zumi_256, // Siebold
+  ch0096_10_zumi_256, // Siebold
+  ch0097_00_mai_256, // Marley
+  ch0098_00_hau_256, // Hau
+  ch0099_00_jun_256, // Barry
+  ch0101_00_mei_256, // Rosa
+  ch0101_10_mei_256, // Rosa
+  ch0106_00_kamitsure_256, // Elesa
+  ch0106_10_kamitsure_256, // Elesa
+  ch0110_01_kasumi_256, // Misty
+  ch0111_00_wataru_256, // Lance
+  ch0112_00_hibiki_256, // Ethan
+  ch0113_00_mikan_256, // Jasmine
+  ch0114_00_natsume_256, // Sabrina
+  ch0116_00_hikari_256, // Dawn
+  ch0118_00_lillie_256, // Lillie
+  ch0119_00_gladion_256, // Gladion
+  ch0120_00_lusamine_256, // Lusamine
+  ch0121_00_plumeria_256, // Plumeria
+  ch0125_00_guzma_256, // Guzma
+  ch0127_00_mikuri_256, // Wallace
+  ch0128_00_mitsuru_256, // Wally
+  ch0129_00_higana_256, // Zinnia
+  ch0130_00_serena_256, // Serena
+  ch0131_00_citron_256, // Clemont
+  ch0133_00_shilver_256, // Silver
+  ch0137_00_orchid1_256, // Professor Oak
+  ch0140_00_sakaki_256, // Giovanni
+  ch0148_00_matsuba_256, // Morty
+  ch0151_00_melissa_256, // Fantina
+  ch0153_00_prim_256, // Glacia
+  ch0157_00_mache_256, // Valerie
+  ch0170_00_arty_256, // Burgh
+  ch0194_00_akagi_256, // Cyrus
+  ch0198_00_azami_256, // Lucy
+  ch0240_00_musashi_256, // Jessie
+  ch0241_00_kojiro_256, // James
+  // ch8000_00_hero_256,
+  // ch8001_00_heroine_256
+};
 
 export const pokemonPictures = {
   pm0123_00_strike_256, // Scyther
@@ -1154,133 +1388,3 @@ export const allSyncGrids = {
 export const UA_ID = 'UA-157426792-1';
 
 export const DRAWER_WIDTH = 240;
-
-export const pokemonNameToImageLookUp = {
-  // generated by extractAllSyncPairNames.js script
-  charizard: 'pm0006_00_lizardon',
-  lycanroc: 'pm0829_12_okami2night',
-  meganium: 'pm0154_01_meganium',
-  jigglypuff: 'pm0039_00_purin',
-  meowstic: 'pm0734_00_cat2',
-  emboar: 'pm0500_00_enbuoh',
-  lapras: 'pm0131_00_laplace',
-  infernape: 'pm0392_00_goukazaru',
-  palossand: 'pm0823_00_sunaba2',
-  vileplume: 'pm0045_01_ruffresia',
-  slaking: 'pm0289_00_kekking',
-  floatzel: 'pm0419_00_floazel',
-  scolipede: 'pm0545_00_pendror',
-  lucario: 'pm0448_00_lucario',
-  mudsdale: 'pm0840_00_roba2',
-  stoutland: 'pm0508_00_mooland',
-  onix: 'pm0095_00_iwark',
-  tyranitar: 'pm0248_00_bangiras',
-  swanna: 'pm0581_00_swanna',
-  eevee: 'pm0133_00_eievui',
-  venusaur: 'pm0003_00_fushigibana',
-  feraligatr: 'pm0160_00_ordile',
-  sceptile: 'pm0254_00_jukain',
-  samurott: 'pm0503_00_daikenki',
-  pidgeot: 'pm0018_00_pigeot',
-  blastoise: 'pm0009_00_kamex',
-  avalugg: 'pm0751_00_ice3',
-  blissey: 'pm0242_00_happinas',
-  chandelure: 'pm0609_00_chandela',
-  abomasnow: 'pm0460_01_yukinooh',
-  miltank: 'pm0241_00_miltank',
-  roserade: 'pm0407_01_roserade',
-  kingdra: 'pm0230_00_kingdra',
-  torkoal: 'pm0324_00_cotoise',
-  lunatone: 'pm0337_00_lunatone',
-  solrock: 'pm0338_00_solrock',
-  dewgong: 'pm0087_00_jugon',
-  seismitoad: 'pm0537_00_gamageroge',
-  granbull: 'pm0210_00_granbulu',
-  electrode: 'pm0101_00_marumine',
-  togedemaru: 'pm0858_00_nijichu',
-  victreebel: 'pm0071_00_utsubot',
-  rampardos: 'pm0409_00_rampald',
-  masquerain: 'pm0284_00_amemoth',
-  cryogonal: 'pm0615_00_freegeo',
-  bronzong: 'pm0437_00_dohtakun',
-  pelipper: 'pm0279_00_pelipper',
-  hariyama: 'pm0297_00_hariteyama',
-  probopass: 'pm0476_00_dainose',
-  beedrill: 'pm0015_00_spear',
-  pinsir: 'pm0127_00_kailios',
-  xatu: 'pm0178_01_natio',
-  liepard: 'pm0510_00_lepardas',
-  sharpedo: 'pm0319_00_samehader',
-  dusknoir: 'pm0477_00_yonoir',
-  medicham: 'pm0308_01_charem',
-  carracosta: 'pm0565_00_abagoura',
-  aurorus: 'pm0740_00_aurora2',
-  crobat: 'pm0169_00_crobat',
-  aegislash: 'pm0746_11_sword3',
-  persian: 'pm0053_00_persian',
-  machamp: 'pm0068_00_kairiky',
-  toucannon: 'pm0809_00_kuchibashi3',
-  rapidash: 'pm0078_00_gallop',
-  ariados: 'pm0168_00_ariados',
-  gengar: 'pm0094_00_gangar',
-  houndoom: 'pm0229_01_hellgar',
-  conkeldurr: 'pm0534_00_roubushin',
-  cottonee: 'pm0546_00_monmen',
-  metagross: 'pm0376_00_metagross',
-  sandslash: 'pm0028_61_asandpan',
-  garchomp: 'pm0445_01_gaburias',
-  kommoo: 'pm0818_00_uroko3',
-  haxorus: 'pm0612_00_ononokus',
-  salamence: 'pm0373_00_bohmander',
-  reuniclus: 'pm0579_00_lanculus',
-  clawitzer: 'pm0757_00_shrimp2',
-  octillery: 'pm0224_00_okutank',
-  arcanine: 'pm0059_00_windie',
-  raichu: 'pm0026_61_araichu',
-  empoleon: 'pm0395_00_emperte',
-  serperior: 'pm0497_00_jalorda',
-  delibird: 'pm0225_00_delibird',
-  zebstrika: 'pm0523_00_zebraika',
-  rotom: 'pm0479_11_rotom',
-  starmie: 'pm0121_00_starmie',
-  dragonite: 'pm0149_00_kairyu',
-  typhlosion: 'pm0157_00_bakphoon',
-  steelix: 'pm0208_01_haganeil',
-  alakazam: 'pm0065_00_foodin',
-  torterra: 'pm0389_00_dodaitose',
-  clefairy: 'pm0035_00_pippi',
-  silvally: 'pm0862_11_gryps2',
-  pheromosa: 'pm0879_00_beastblue',
-  salazzle: 'pm0806_00_dokutokage2',
-  golisopod: 'pm0867_00_gusokumushi2',
-  milotic: 'pm0350_01_milokaross',
-  gallade: 'pm0475_00_erureido',
-  rayquaza: 'pm0384_00_rayquaza',
-  delphox: 'pm0719_00_fox3',
-  heliolisk: 'pm0732_00_frilledlizard2',
-  hooh: 'pm0250_00_houou',
-  mew: 'pm0151_00_mew',
-  mewtwo: 'pm0150_00_mewtwo',
-  drifblim: 'pm0426_00_fuwaride',
-  mismagius: 'pm0429_00_mumargi',
-  glalie: 'pm0362_00_onigohri',
-  sylveon: 'pm0767_00_ninnfi',
-  leavanny: 'pm0542_00_hahakomori',
-  palkia: 'pm0484_00_palkia',
-  seviper: 'pm0336_00_habunake',
-  arbok: 'pm0024_00_arbok',
-  weezing: 'pm0110_00_matadogas',
-  pikachu: 'pm0025_00_pikachu',
-  torchic: 'pm0255_00_achamo',
-  scyther: 'pm0123_00_strike',
-  venomoth: 'pm0049_00_morphon',
-  tauros: 'pm0128_00_kentauros',
-  golbat: 'pm0042_00_golbat',
-  raticate: 'pm0020_00_ratta',
-  nidoqueen: 'pm0031_00_nidoqueen',
-  aerodactyl: 'pm0142_00_ptera',
-  kabutops: 'pm0141_00_kabutops',
-  golem: 'pm0076_00_golonya',
-  seaking: 'pm0119_01_azumao',
-  solgaleo: 'pm0873_00_sun',
-};
