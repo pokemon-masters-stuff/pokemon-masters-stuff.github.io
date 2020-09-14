@@ -6,7 +6,12 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import TextField from '@material-ui/core/TextField';
 import TeamMember from './TeamMember';
-import { allTrainerPictures, allThumbnails } from '../../utils/constants';
+import {
+  trainerPictures,
+  pokemonPictures,
+  pokemonNameToImageLookUp,
+} from '../../utils/constants';
+import { removeHyphens } from '../../utils/functions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,7 +83,7 @@ function TeamBuilder() {
               component="img"
               alt="Trainer Image"
               height="256"
-              image={allTrainerPictures['sabrina']}
+              image={trainerPictures['sabrina']}
               title="Trainer Image"
               position="absolute"
             />
@@ -134,7 +139,15 @@ function TeamBuilder() {
                 zIndex: 20,
               }}
             >
-              <img src={allThumbnails['alakazam']} style={{ height: 60 }} />
+              <img
+                src={
+                  pokemonPictures[
+                    pokemonNameToImageLookUp[`${removeHyphens('alakazam')}`] +
+                      '_128'
+                  ]
+                }
+                style={{ height: 60 }}
+              />
             </div>
           </Card>
         </Grid>
@@ -144,7 +157,7 @@ function TeamBuilder() {
               component="img"
               alt="Trainer Image"
               height="256"
-              image={allTrainerPictures['oak']}
+              image={trainerPictures['oak']}
               title="Trainer Image"
               position="absolute"
             />
@@ -200,7 +213,14 @@ function TeamBuilder() {
                 zIndex: 20,
               }}
             >
-              <img src={allThumbnails['mew']} style={{ height: 60 }} />
+              <img
+                src={
+                  pokemonPictures[
+                    pokemonNameToImageLookUp[`${removeHyphens('mew')}`] + '_128'
+                  ]
+                }
+                style={{ height: 60 }}
+              />
             </div>
           </Card>
         </Grid>
@@ -210,7 +230,7 @@ function TeamBuilder() {
               component="img"
               alt="Trainer Image"
               height="256"
-              image={allTrainerPictures['red']}
+              image={trainerPictures['red']}
               title="Trainer Image"
               position="absolute"
             />
@@ -266,7 +286,15 @@ function TeamBuilder() {
                 zIndex: 20,
               }}
             >
-              <img src={allThumbnails['charizard']} style={{ height: 60 }} />
+              <img
+                src={
+                  pokemonPictures[
+                    pokemonNameToImageLookUp[`${removeHyphens('charizard')}`] +
+                      '_128'
+                  ]
+                }
+                style={{ height: 60 }}
+              />
             </div>
           </Card>
         </Grid>

@@ -171,20 +171,20 @@ const extractAllSyncPairNames = () => {
       // }
 
       // prints out export statements for pokemon in console.
-      // if (language === 'en') {
-      //   if (trainerName !== 'Hero') {
-      //     console.log(
-      //       `export { default as ${monsterActorId} } from './${monsterActorId}_128.ktx.png'; // ${pokemonName}`
-      //     );
-      //   }
-      // }
+      if (language === 'en') {
+        if (trainerName !== 'Hero') {
+          console.log(
+            `export { default as ${monsterActorId}_128 } from './${monsterActorId}_128.ktx.png'; // ${pokemonName}`
+          );
+        }
+      }
 
       // prints out key value pairs for pokemon and its actorId in console.
-      if (language === 'en') {
-        pokemonImageLookUp[
-          pokemonName.toLowerCase().replace(/-/g, '')
-        ] = monsterActorId;
-      }
+      // if (language === 'en') {
+      //   pokemonImageLookUp[
+      //     pokemonName.toLowerCase().replace(/-/g, '')
+      //   ] = monsterActorId;
+      // }
     });
   });
   // prints out export statements in console.

@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const monsterDB = require('../rawdata/protodump/Monster.json');
+const monsterBaseDB = require('../rawdata/protodump/MonsterBase.json');
 const moveDB = require('../rawdata/protodump/ModifiedMove.json');
 const trainerDB = require('../rawdata/protodump/Trainer.json');
 const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
@@ -247,7 +248,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     if (trainer) {
       // Use trainerBaseId to find monsterId and trainerBaseId in Trainer.json
       monsterId = trainer.monsterId;
-      console.log('monsterId', monsterId);
+      // console.log('monsterId', monsterId);
 
       trainerBaseId = trainer.trainerBaseId;
 
@@ -448,7 +449,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         monsterId === '28000030053' ||
         monsterId === '28000040053'
       ) {
-        console.log('beedrill');
+        // console.log('Change moves for Beedrill');
         // Weedle changes its moveset when evolving into Beedrill
         move1Id = 42;
         if (role === 0) {
@@ -729,6 +730,24 @@ const extractSyncPairDataByTrainerBaseId = () => {
         syncMoveId,
         monsterBaseId,
       } = monster;
+
+      // Use monsterBaseId to find actorId in MonsterBase.json
+      let monsterBase = monsterBaseDB.entries.find(
+        (monsterBase) =>
+          monsterBase.monsterBaseId.toString() === monsterBaseId.toString()
+      );
+      let monsterActorId = monsterBase.actorId;
+      // prints out export statements for egg pokemon in console.
+      let pokemonNameForConsoleLog = pokemonNameDB['en'][monsterBaseId]
+        ? pokemonNameDB['en'][monsterBaseId]
+        : pokemonNameDB['en'][
+            monsterBaseId
+              .toString()
+              .substring(0, monsterBaseId.toString().length - 1) + '0'
+          ];
+      console.log(
+        `export { default as ${monsterActorId}_256 } from './${monsterActorId}_256.ktx.png'; // ${pokemonNameForConsoleLog}`
+      );
 
       stats = {
         hpValues,
@@ -1214,6 +1233,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterBaseId: monsterBaseId.toString(),
             monsterMegaFormBaseId,
             monsterId: monsterId.toString(),
+            monsterActorId: monsterActorId,
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
             trainerNameId: 'ch8000',
@@ -1229,6 +1249,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         : (monsterAndTrainerData = {
             monsterBaseId: monsterBaseId.toString(),
             monsterId: monsterId.toString(),
+            monsterActorId: monsterActorId,
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
             trainerNameId: 'ch8000',
@@ -1265,6 +1286,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterBaseId: monsterBaseId.toString(),
               monsterMegaFormBaseId,
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'ch8000',
@@ -1280,6 +1302,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'ch8000',
@@ -1298,6 +1321,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterBaseId: monsterBaseId.toString(),
               monsterMegaFormBaseId,
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'No Trainer',
@@ -1313,6 +1337,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'No Trainer',

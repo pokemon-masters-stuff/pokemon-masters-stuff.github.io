@@ -25,7 +25,11 @@ import {
   removeHyphens,
   capitalizeSyncPairNameForUrl,
 } from '../../utils/functions';
-import { allThumbnails, allSyncGrids } from '../../utils/constants';
+import {
+  pokemonPictures,
+  allSyncGrids,
+  pokemonNameToImageLookUp,
+} from '../../utils/constants';
 import UI from '../../utils/translations';
 
 class GridMap extends Component {
@@ -290,7 +294,7 @@ class GridMap extends Component {
 
   renderCenterGridText = (classes) => {
     // Only renders text when no picture available
-    return allThumbnails[`${removeHyphens(this.props.pokemon)}`] ===
+    return pokemonNameToImageLookUp[`${removeHyphens(this.props.pokemon)}`] ===
       undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(this.props.pokemon)}
@@ -333,7 +337,13 @@ class GridMap extends Component {
           </Layout>
           <Pattern
             id={this.props.pokemon}
-            link={allThumbnails[`${removeHyphens(this.props.pokemon)}`]}
+            link={
+              pokemonPictures[
+                pokemonNameToImageLookUp[
+                  `${removeHyphens(this.props.pokemon)}`
+                ] + '_128'
+              ]
+            }
             size={{ x: 10, y: 10 }}
           />
         </HexGrid>
