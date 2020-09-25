@@ -71,64 +71,76 @@ function Stats(props) {
     speUpFromGrid = selectedStatTiles.spe || 0;
   }
 
-  let baseHp = hp[4] + (selectedRarity - rarity) * 40;
+  let lv125Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 25;
+  let lv125Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 25;
+  let lv125Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 25;
+  let lv125Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 25;
+  let lv125Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 25;
+  let lv125Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 25;
 
+  // let baseHp = hp[4] + (selectedRarity - rarity) * 40;
+  let baseHp = lv125Hp + (selectedRarity - rarity) * 40;
   let baseAtk =
     Math.floor(
-      (atk[4] + (selectedRarity - rarity) * 20) * (isMega ? atkScale / 100 : 1)
+      (lv125Atk + (selectedRarity - rarity) * 20) *
+        (isMega ? atkScale / 100 : 1)
     ) +
     (isMega &&
     atkScale !== 100 &&
     Number.isInteger(
-      (atk[4] + (selectedRarity - rarity) * 20) * (atkScale / 100)
+      (lv125Atk + (selectedRarity - rarity) * 20) * (atkScale / 100)
     )
       ? -1
       : 0);
 
   let baseDef =
     Math.floor(
-      (def[4] + (selectedRarity - rarity) * 20) * (isMega ? defScale / 100 : 1)
+      (lv125Def + (selectedRarity - rarity) * 20) *
+        (isMega ? defScale / 100 : 1)
     ) +
     (isMega &&
     defScale !== 100 &&
     Number.isInteger(
-      (def[4] + (selectedRarity - rarity) * 20) * (defScale / 100)
+      (lv125Def + (selectedRarity - rarity) * 20) * (defScale / 100)
     )
       ? -1
       : 0);
 
   let baseSpa =
     Math.floor(
-      (spa[4] + (selectedRarity - rarity) * 20) * (isMega ? spaScale / 100 : 1)
+      (lv125Spa + (selectedRarity - rarity) * 20) *
+        (isMega ? spaScale / 100 : 1)
     ) +
     (isMega &&
     spaScale !== 100 &&
     Number.isInteger(
-      (spa[4] + (selectedRarity - rarity) * 20) * (spaScale / 100)
+      (lv125Spa + (selectedRarity - rarity) * 20) * (spaScale / 100)
     )
       ? -1
       : 0);
 
   let baseSpd =
     Math.floor(
-      (spd[4] + (selectedRarity - rarity) * 20) * (isMega ? spdScale / 100 : 1)
+      (lv125Spd + (selectedRarity - rarity) * 20) *
+        (isMega ? spdScale / 100 : 1)
     ) +
     (isMega &&
     spdScale !== 100 &&
     Number.isInteger(
-      (spd[4] + (selectedRarity - rarity) * 20) * (spdScale / 100)
+      (lv125Spd + (selectedRarity - rarity) * 20) * (spdScale / 100)
     )
       ? -1
       : 0);
 
   let baseSpe =
     Math.floor(
-      (spe[4] + (selectedRarity - rarity) * 20) * (isMega ? speScale / 100 : 1)
+      (lv125Spe + (selectedRarity - rarity) * 20) *
+        (isMega ? speScale / 100 : 1)
     ) +
     (isMega &&
     speScale !== 100 &&
     Number.isInteger(
-      (spe[4] + (selectedRarity - rarity) * 20) * (speScale / 100)
+      (lv125Spe + (selectedRarity - rarity) * 20) * (speScale / 100)
     )
       ? -1
       : 0);
@@ -665,9 +677,9 @@ export default function MovesAndSkillsModal(props) {
   let selectedMoves = hash;
 
   // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
-  console.log('pokemon', pokemon);
+  // console.log('pokemon', pokemon);
   const pokemonData = getPokemonDataByName(pokemon);
-  console.log('pokemonData', pokemonData);
+  // console.log('pokemonData', pokemonData);
 
   const { stats, moves, passives, megaForm, rarity } = pokemonData;
 
@@ -802,7 +814,7 @@ export default function MovesAndSkillsModal(props) {
             <TableHead>
               <TableRow>
                 <TableCell />
-                <TableCell>Lv120 Stats</TableCell>
+                <TableCell>Lv125 Stats</TableCell>
                 <TableCell align="right">Stat</TableCell>
                 <TableCell align="right">
                   {!isMega ? 'Grid' : 'Grid (xMega↑)'}
