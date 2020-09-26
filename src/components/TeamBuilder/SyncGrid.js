@@ -376,16 +376,16 @@ class GridMap extends Component {
           />
         </HexGrid>
         {this.state.screenWidth >= 960 &&
-        this.props.team.gridData.energy !== undefined ? (
+        this.props.grid.gridData.energy !== undefined ? (
           <ReactTooltip className="tooltip" effect="solid" id="skillTooltip">
             <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
-              <li>{this.props.team.gridData.name}</li>
+              <li>{this.props.grid.gridData.name}</li>
               <li>
-                {UI['Energy'][language]}: {this.props.team.gridData.energy}
+                {UI['Energy'][language]}: {this.props.grid.gridData.energy}
               </li>
-              {this.props.team.gridData.description ? (
+              {this.props.grid.gridData.description ? (
                 <li style={{ marginTop: 1 }}>
-                  {this.props.team.gridData.description}
+                  {this.props.grid.gridData.description}
                 </li>
               ) : null}
             </ul>
@@ -399,6 +399,7 @@ class GridMap extends Component {
 const mapStateToProps = (state) => ({
   // pokemon: state.pokemon.selectedPokemon.toLowerCase(),
   team: state.team,
+  grid: state.grid,
   darkMode: state.darkMode.mode,
   language: state.language.currentLanguage,
 });
