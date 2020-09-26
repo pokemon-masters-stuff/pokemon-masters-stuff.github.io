@@ -47,6 +47,69 @@ const trainerNameDB = {
 
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
+// Update this list (of trainerBaseId) based on new datamine
+const gridedTrainerList = [
+  // trainerBaseId
+  '10700000',
+  '10002900',
+  '10000600',
+  '10003200',
+  '10009200',
+  '10002800',
+  '10010100',
+  '10000800',
+  '10013700',
+  '10009000',
+  '10000000',
+  '10000700',
+  '10004800',
+  '10006200',
+  '10009800',
+  '10010610',
+  '10011400',
+  '10009500',
+  '10000300',
+  '10003900',
+  '10012100',
+  '10012500',
+  '10013100',
+  '10001600',
+  '10001200',
+  '10009100',
+  '10012700',
+  '10011300',
+  '10012800',
+  '10011001',
+  '10011600',
+  '10017000',
+  '10009900',
+  '10004810',
+  // 6/25/2020
+  '10000400',
+  '10014800',
+  '10013000',
+  '10005400',
+  // 7/29/2020
+  '10009101', // kommo-o
+  '10009040', // alolan sandslash
+  '10000240', // jigglypuff
+  '10011100', // dragonite
+  '10001500', // onix
+  '10000100', // lycanroc midday
+  // 8/14/2020 test
+  // "10005100", // lycanroc midnight
+  // 8/25/2020
+  '10000200', // Meganium
+  '10011200', // Typhlosion
+  '10001800', // Feraligatr
+  '10001710', // Venusaur
+  '10002101', // Blastoise
+  // 9/7/2020
+  '10011800', // clefairy
+  '10011900', // silvally
+  '10012000', // pheromosa
+];
+
 /*
  * Usage i.e: node extractAllSyncPairNamesAndIds.js
  * */
@@ -111,6 +174,16 @@ const extractAllSyncPairNamesAndIds = () => {
       (trainerBase) => trainerBase.trainerBaseId === trainerBaseId.toString()
     );
     let trainerNameId = trainerBase.trainerNameId;
+    let grided = false;
+    if (gridedTrainerList.includes(trainerBase.trainerBaseId)) {
+      if (
+        // MC (10700000)  Pikachu(20002500)
+        trainerBase.trainerBaseId !== '10700000' ||
+        monsterBase.monsterBaseId === 20002500
+      ) {
+        grided = true;
+      }
+    }
 
     // Identify alts and give them a modified TrainerNameId to help link to their images
     // let trainerActorId = trainerNameId + '_' + trainerId.slice(5, 7);
@@ -159,6 +232,7 @@ const extractAllSyncPairNamesAndIds = () => {
         type: type,
         rarity: rarity,
         role: role,
+        grided: grided,
       };
 
       // prints out export statements for trainers in console.

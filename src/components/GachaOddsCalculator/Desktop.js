@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import TextField from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import { makeStyles } from "@material-ui/core/styles";
-import Tooltip from "@material-ui/core/Tooltip";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import Container from "@material-ui/core/Container";
+import React, { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import { makeStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    "& .MuiTextField-root": {
+    '& .MuiTextField-root': {
       margin: theme.spacing(1),
       width: 150,
     },
@@ -79,7 +79,7 @@ const GachaOddsCalculator = () => {
           <h4>Inputs: </h4>
           <div
             className="row"
-            style={{ display: "flex", alignItems: "center" }}
+            style={{ display: 'flex', alignItems: 'center' }}
           >
             <TextField
               id="target-unit-rate"
@@ -96,7 +96,7 @@ const GachaOddsCalculator = () => {
               }}
               variant="outlined"
               margin="dense"
-            />{" "}
+            />{' '}
             <Tooltip
               title="2% for focus unit. Check in-game offering rate for non-focus
                 units"
@@ -107,7 +107,7 @@ const GachaOddsCalculator = () => {
           </div>
           <div
             className="row"
-            style={{ display: "flex", alignItems: "center" }}
+            style={{ display: 'flex', alignItems: 'center' }}
           >
             <TextField
               id="five-star-unit-rate"
@@ -124,7 +124,7 @@ const GachaOddsCalculator = () => {
               }}
               variant="outlined"
               margin="dense"
-            />{" "}
+            />{' '}
             <Tooltip
               title="7% for Spotlight Scout. 10% for Poke Fair Scout"
               placement="top"
@@ -166,18 +166,18 @@ const GachaOddsCalculator = () => {
           <Divider />
           <br />
           <h4>Results: </h4>
-          Total number of scouts:{" "}
-          <span style={{ color: "red" }}>{totalScouts}</span>
+          Total number of scouts:{' '}
+          <span style={{ color: 'red' }}>{totalScouts}</span>
           <br />
-          Total gems spent:{" "}
-          <span style={{ color: "red" }}>
-            {paidGems + nonPaidGems}{" "}
-          </span> (Paid: <span style={{ color: "red" }}> {paidGems}</span>;
-          Non-Paid: <span style={{ color: "red" }}>{nonPaidGems}</span> )
+          Total gems spent:{' '}
+          <span style={{ color: 'red' }}>
+            {paidGems + nonPaidGems}{' '}
+          </span> (Paid: <span style={{ color: 'red' }}> {paidGems}</span>;
+          Non-Paid: <span style={{ color: 'red' }}>{nonPaidGems}</span> )
           <br />
           <br />
           Probability of summoning at least 1 target unit:&nbsp; &nbsp;
-          <span style={{ color: "red" }}>
+          <span style={{ color: 'red' }}>
             {totalScouts === 0
               ? 0
               : (
@@ -187,8 +187,8 @@ const GachaOddsCalculator = () => {
             %
           </span>
           <br />
-          Probability of summoning at least 2 target units:{" "}
-          <span style={{ color: "red" }}>
+          Probability of summoning at least 2 target units:{' '}
+          <span style={{ color: 'red' }}>
             {totalScouts === 0
               ? 0
               : (
@@ -200,8 +200,8 @@ const GachaOddsCalculator = () => {
             %
           </span>
           <br />
-          Probability of summoning at least 3 target units:{" "}
-          <span style={{ color: "red" }}>
+          Probability of summoning at least 3 target units:{' '}
+          <span style={{ color: 'red' }}>
             {totalScouts === 0
               ? 0
               : (
@@ -214,8 +214,8 @@ const GachaOddsCalculator = () => {
             %
           </span>
           <br />
-          Probability of summoning at least 4 target units:{" "}
-          <span style={{ color: "red" }}>
+          Probability of summoning at least 4 target units:{' '}
+          <span style={{ color: 'red' }}>
             {totalScouts === 0
               ? 0
               : (
@@ -229,8 +229,8 @@ const GachaOddsCalculator = () => {
             %
           </span>
           <br />
-          Probability of summoning at least 5 target units:{" "}
-          <span style={{ color: "red" }}>
+          Probability of summoning at least 5 target units:{' '}
+          <span style={{ color: 'red' }}>
             {totalScouts === 0
               ? 0
               : (
@@ -246,12 +246,12 @@ const GachaOddsCalculator = () => {
           </span>
           <br />
           <br />
-          You can expect a total of{" "}
-          <span style={{ color: "red" }}>
+          You can expect a total of{' '}
+          <span style={{ color: 'red' }}>
             {Math.floor(
               (totalScouts * (!isNaN(fiveStarRate) ? fiveStarRate : 0)) / 100
-            )}{" "}
-          </span>{" "}
+            )}{' '}
+          </span>{' '}
           5-Star units (focus and non-focus).
           <br />
         </form>
