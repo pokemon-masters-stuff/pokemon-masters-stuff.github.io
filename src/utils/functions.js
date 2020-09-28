@@ -63,7 +63,8 @@ export const getPokemonNameList = (language) =>
         entry.monsterBaseId === '20026200' ||
         entry.monsterBaseId === '20040500' ||
         entry.monsterBaseId === '20052301' ||
-        entry.monsterBaseId === '20036200'
+        entry.monsterBaseId === '20036200' ||
+        entry.monsterBaseId === '20042901'
       ) {
         return {
           key: index,
@@ -176,6 +177,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   if (syncLevel === '1') {
     if (
       pokemon === 'pikachu' ||
+      pokemon === 'mismagius' ||
       pokemon === 'charizard' ||
       pokemon === 'dewgong' ||
       pokemon === 'infernape' ||
@@ -355,6 +357,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   if (syncLevel === '2') {
     if (
       pokemon === 'pikachu' ||
+      pokemon === 'mismagius' ||
       pokemon === 'charizard' ||
       pokemon === 'dewgong' ||
       pokemon === 'infernape' ||
@@ -486,7 +489,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-let names = {}; // to generate list of skills to be abbreviated
+// let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
