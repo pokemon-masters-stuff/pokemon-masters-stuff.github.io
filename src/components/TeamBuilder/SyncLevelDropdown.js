@@ -22,7 +22,7 @@ function SyncLevelDropdown(props) {
   const handleChange = (event) => {
     handleChangeSyncLevel(event.target.value);
   };
-  console.log('syncLevel', syncLevel);
+  // console.log('syncLevel', syncLevel);
   return (
     <FormControl
       variant="outlined"

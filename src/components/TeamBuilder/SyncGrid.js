@@ -330,10 +330,10 @@ class GridMap extends Component {
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, language } = this.props;
-    console.log(
-      'this.props.grid.teamSelectedCellsById',
-      this.props.grid.teamSelectedCellsById
-    );
+    // console.log(
+    //   'this.props.grid.teamSelectedCellsById',
+    //   this.props.grid.teamSelectedCellsById
+    // );
     return initialRender ? (
       <div className={classes.progressWrapper}>
         <CircularProgress color="secondary" />
