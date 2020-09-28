@@ -11,20 +11,21 @@ import styles from './styles';
 import { updateUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 import {
-  loadSelectedBuild,
-  deleteSelectedBuild,
+  loadSelectedTeamBuild,
+  deleteSelectedTeamBuild,
 } from '../../actions/actionCreators';
 
-// To update for team
 function LoadTeamDropdown(props) {
   const { classes } = props;
 
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  const selectedPokemon = props.pokemon;
-  const selectedBuild = useSelector((state) => state.grid.selectedBuild);
+  // const teamMembers = useSelector((state) => state.grid.teamMembers);
+  const selectedBuild = useSelector((state) => state.grid.teamSelectedBuild);
   const savedBuilds = useSelector((state) =>
-    state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
+    state.grid.teamSavedBuilds.allIds.map(
+      (id) => state.grid.teamSavedBuilds.byIds[id]
+    )
   );
 
   const inputLabel = React.useRef(null);
@@ -37,8 +38,8 @@ function LoadTeamDropdown(props) {
   }, []);
 
   const handleChange = (event) => {
-    dispatch(loadSelectedBuild(event.target.value));
-    dispatch(updateUrl(selectedPokemon));
+    dispatch(loadSelectedTeamBuild({ buildId: event.target.value }));
+    // dispatch(updateUrl(selectedPokemon));
   };
 
   const handleOpen = () => {
@@ -52,7 +53,7 @@ function LoadTeamDropdown(props) {
   const handleDelete = (buildId, event) => {
     event.stopPropagation();
     window.confirm('Are you sure you wish to delete this save?') &&
-      dispatch(deleteSelectedBuild(buildId));
+      dispatch(deleteSelectedTeamBuild({ buildId: buildId }));
   };
 
   return (
@@ -62,8 +63,7 @@ function LoadTeamDropdown(props) {
       className={classes.formControl}
     >
       <InputLabel ref={inputLabel} id="select-team-build">
-        {/* {UI['Load Builds'][language]} */}
-        Load Team Build
+        {UI['Load Builds'][language]}
       </InputLabel>
       <Select
         labelId="select-team-build"
@@ -74,22 +74,19 @@ function LoadTeamDropdown(props) {
         onClose={handleClose}
       >
         {Boolean(savedBuilds.length) &&
-          savedBuilds.map(
-            (build) =>
-              build.pokemon.toLowerCase() === selectedPokemon.toLowerCase() && (
-                <MenuItem key={build.id} value={build.id}>
-                  {build.name}
-                  {showClearIcon ? (
-                    <IconButton
-                      onClick={handleDelete.bind(this, build.id)}
-                      style={{ marginLeft: 'auto', padding: 0 }}
-                    >
-                      <HighlightOffIcon />
-                    </IconButton>
-                  ) : null}
-                </MenuItem>
-              )
-          )}
+          savedBuilds.map((build) => (
+            <MenuItem key={build.id} value={build.id}>
+              {build.name}
+              {showClearIcon ? (
+                <IconButton
+                  onClick={handleDelete.bind(this, build.id)}
+                  style={{ marginLeft: 'auto', padding: 0 }}
+                >
+                  <HighlightOffIcon />
+                </IconButton>
+              ) : null}
+            </MenuItem>
+          ))}
       </Select>
     </FormControl>
   );

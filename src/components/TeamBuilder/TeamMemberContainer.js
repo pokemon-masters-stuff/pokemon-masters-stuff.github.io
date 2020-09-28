@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import SyncGrid from './SyncGrid';
-import LoadBuildDropdown from './LoadBuildDropdown';
+import ResetIndividualGridButton from './ResetIndividualGridButton';
+import LoadIndividualBuildDropdown from './LoadIndividualBuildDropdown';
 import SyncLevelDropdown from './SyncLevelDropdown';
 import { MovesAndSkillsButtonMobile } from '../MovesAndSkills';
 import { setTeamSyncLevels } from '../../actions/actionCreators';
 
-const TeamMember = (props) => {
+const TeamMemberContainer = (props) => {
   const dispatch = useDispatch();
   const { pokemon, slot } = props;
   const language = useSelector((state) => state.language.currentLanguage);
-  const syncLevels = useSelector((state) => state.team.syncLevels);
-  const remainingEnergy = useSelector((state) => state.team.remainingEnergy);
-  const orbSpent = useSelector((state) => state.team.orbSpent);
+  const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
+  const remainingEnergy = useSelector(
+    (state) => state.grid.teamRemainingEnergy
+  );
+  const orbSpent = useSelector((state) => state.grid.teamOrbSpent);
   const selectedCellsById = useSelector(
-    (state) => state.team.selectedCellsById[slot]
+    (state) => state.grid.teamSelectedCellsById[slot]
   );
   const [syncLevel, setSyncLevel] = useState(syncLevels[slot]);
 
@@ -28,17 +31,18 @@ const TeamMember = (props) => {
     setIsMovesAndSkillsModalVisible,
   ] = useState(false);
 
-  const handleOnOpenMovesAndSkillsModal = () => {
-    setIsMovesAndSkillsModalVisible(true);
-  };
+  // const handleOnOpenMovesAndSkillsModal = () => {
+  //   setIsMovesAndSkillsModalVisible(true);
+  // };
+  console.log('slot', slot);
 
   return (
     <div style={{ position: 'relative', paddingTop: 5 }}>
       <SyncLevelDropdown
-        syncLevel={syncLevel}
+        syncLevel={syncLevels[slot]}
         handleChangeSyncLevel={handleChangeSyncLevel}
       />
-      <LoadBuildDropdown {...props} />
+      <LoadIndividualBuildDropdown {...props} />
       <br />
       <div style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}>
         E: {remainingEnergy[slot]}/60
@@ -46,7 +50,7 @@ const TeamMember = (props) => {
         O: {orbSpent[slot]}/750
       </div>
 
-      <div style={{ marginLeft: 8 }}>
+      <div style={{ marginLeft: 8, marginTop: -7 }}>
         <MovesAndSkillsButtonMobile
           pokemon={pokemon}
           selectedCellsById={selectedCellsById}
@@ -56,10 +60,14 @@ const TeamMember = (props) => {
           setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
         />
       </div>
-
-      <SyncGrid {...props} syncLevel={syncLevel} />
+      <div style={{ marginLeft: 8, marginTop: 8 }}>
+        <ResetIndividualGridButton slot={slot} />
+      </div>
+      <div style={{ marginTop: -70 }}>
+        <SyncGrid {...props} syncLevel={syncLevel} />
+      </div>
     </div>
   );
 };
 
-export default TeamMember;
+export default TeamMemberContainer;

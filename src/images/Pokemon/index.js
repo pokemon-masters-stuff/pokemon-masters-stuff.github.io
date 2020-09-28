@@ -121,6 +121,7 @@ export { default as pm0579_00_lanculus_128 } from './128px/pm0579_00_lanculus_12
 export { default as pm0757_00_shrimp2_128 } from './128px/pm0757_00_shrimp2_128.ktx.png'; // Clawitzer
 export { default as pm0224_00_okutank_128 } from './128px/pm0224_00_okutank_128.ktx.png'; // Octillery
 export { default as pm0059_00_windie_128 } from './128px/pm0059_00_windie_128.ktx.png'; // Arcanine
+export { default as pm0025_00_pikachu_128 } from './128px/pm0025_00_pikachu_128.ktx.png'; // Pikachu
 export { default as pm0026_61_araichu_128 } from './128px/pm0026_61_araichu_128.ktx.png'; // Raichu
 export { default as pm0395_00_emperte_128 } from './128px/pm0395_00_emperte_128.ktx.png'; // Empoleon
 export { default as pm0497_00_jalorda_128 } from './128px/pm0497_00_jalorda_128.ktx.png'; // Serperior

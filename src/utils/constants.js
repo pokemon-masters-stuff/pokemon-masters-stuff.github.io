@@ -509,6 +509,7 @@ import {
   pm0757_00_shrimp2_128, // Clawitzer
   pm0224_00_okutank_128, // Octillery
   pm0059_00_windie_128, // Arcanine
+  pm0025_00_pikachu_128, //Pikachu
   pm0026_61_araichu_128, // Raichu
   pm0395_00_emperte_128, // Empoleon
   pm0497_00_jalorda_128, // Serperior
@@ -903,6 +904,7 @@ export const pokemonPictures = {
   pm0757_00_shrimp2_128, // Clawitzer
   pm0224_00_okutank_128, // Octillery
   pm0059_00_windie_128, // Arcanine
+  pm0025_00_pikachu_128, //Pikachu
   pm0026_61_araichu_128, // Raichu
   pm0395_00_emperte_128, // Empoleon
   pm0497_00_jalorda_128, // Serperior

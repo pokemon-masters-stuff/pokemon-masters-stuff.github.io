@@ -291,8 +291,8 @@ class GridMap extends Component {
 
   renderCenterGridText = (classes) => {
     // Only renders text when no picture available
-    return getPokemonDataByName(removeHyphens(this.props.pokemon))
-      .monsterActorId === undefined ? (
+    return getPokemonDataByName(this.props.pokemon).monsterActorId ===
+      undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(this.props.pokemon)}
       </Text>
@@ -336,8 +336,7 @@ class GridMap extends Component {
             id={this.props.pokemon}
             link={
               pokemonPictures[
-                getPokemonDataByName(removeHyphens(this.props.pokemon))
-                  .monsterActorId + '_128'
+                getPokemonDataByName(this.props.pokemon).monsterActorId + '_128'
               ]
             }
             size={{ x: 10, y: 10 }}

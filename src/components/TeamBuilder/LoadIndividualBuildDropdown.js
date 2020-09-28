@@ -1,34 +1,35 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+// import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
-import { updateUrl } from '../../actions/actionCreators';
+// import { updateUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 import {
-  loadSelectedBuild,
-  deleteSelectedBuild,
+  loadSelectedIndividualBuild,
+  // deleteSelectedBuild,
 } from '../../actions/actionCreators';
 
 function LoadBuildDropdown(props) {
-  const { classes } = props;
+  const { classes, pokemon, slot } = props;
 
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  const selectedPokemon = props.pokemon;
-  const selectedBuild = useSelector((state) => state.grid.selectedBuild);
+  const selectedBuild = useSelector(
+    (state) => state.grid.teamSelectedIndividualBuilds
+  );
   const savedBuilds = useSelector((state) =>
     state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
   );
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
-  const [showClearIcon, setShowClearIcon] = React.useState(false);
+  // const [showClearIcon, setShowClearIcon] = React.useState(false);
 
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
@@ -36,23 +37,25 @@ function LoadBuildDropdown(props) {
   }, []);
 
   const handleChange = (event) => {
-    dispatch(loadSelectedBuild(event.target.value));
-    dispatch(updateUrl(selectedPokemon));
+    dispatch(
+      loadSelectedIndividualBuild({ buildId: event.target.value, slot: slot })
+    );
+    // dispatch(updateUrl(pokemon));
   };
 
-  const handleOpen = () => {
-    setShowClearIcon(true);
-  };
+  // const handleOpen = () => {
+  //   setShowClearIcon(true);
+  // };
 
-  const handleClose = () => {
-    setShowClearIcon(false);
-  };
+  // const handleClose = () => {
+  //   setShowClearIcon(false);
+  // };
 
-  const handleDelete = (buildId, event) => {
-    event.stopPropagation();
-    window.confirm('Are you sure you wish to delete this save?') &&
-      dispatch(deleteSelectedBuild(buildId));
-  };
+  // const handleDelete = (buildId, event) => {
+  //   event.stopPropagation();
+  //   window.confirm('Are you sure you wish to delete this save?') &&
+  //     dispatch(deleteSelectedBuild(buildId));
+  // };
 
   return (
     <FormControl
@@ -66,25 +69,25 @@ function LoadBuildDropdown(props) {
       <Select
         labelId="select-build"
         labelWidth={labelWidth}
-        value={selectedBuild.id}
+        value={selectedBuild[slot].id}
         onChange={handleChange}
-        onOpen={handleOpen}
-        onClose={handleClose}
+        // onOpen={handleOpen}
+        // onClose={handleClose}
       >
         {Boolean(savedBuilds.length) &&
           savedBuilds.map(
             (build) =>
-              build.pokemon.toLowerCase() === selectedPokemon.toLowerCase() && (
+              build.pokemon.toLowerCase() === pokemon.toLowerCase() && (
                 <MenuItem key={build.id} value={build.id}>
                   {build.name}
-                  {showClearIcon ? (
+                  {/* {showClearIcon ? (
                     <IconButton
                       onClick={handleDelete.bind(this, build.id)}
                       style={{ marginLeft: 'auto', padding: 0 }}
                     >
                       <HighlightOffIcon />
                     </IconButton>
-                  ) : null}
+                  ) : null} */}
                 </MenuItem>
               )
           )}

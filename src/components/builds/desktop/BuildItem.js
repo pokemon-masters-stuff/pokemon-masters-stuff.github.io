@@ -226,8 +226,7 @@ class BuildItem extends Component {
 
   renderCenterGridText = (classes, pokemon) => {
     // Only renders text when no picture available
-    return getPokemonDataByName(removeHyphens(pokemon)).monsterActorId ===
-      undefined ? (
+    return getPokemonDataByName(pokemon).monsterActorId === undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(pokemon)}
       </Text>
@@ -390,8 +389,7 @@ class BuildItem extends Component {
                   id={pokemon}
                   link={
                     pokemonPictures[
-                      getPokemonDataByName(removeHyphens(pokemon))
-                        .monsterActorId + '_128'
+                      getPokemonDataByName(pokemon).monsterActorId + '_128'
                     ]
                   }
                   size={{ x: 10, y: 10 }}

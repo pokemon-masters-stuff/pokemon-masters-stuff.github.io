@@ -49,6 +49,7 @@ import {
   RESET_TEAM_GRIDS,
   RESET_INDIVIDUAL_GRID,
   SAVE_CURRENT_TEAM_BUILD,
+  LOAD_SELECTED_INDIVIDUAL_BUILD,
   LOAD_SELECTED_TEAM_BUILD,
   DELETE_SELECTED_TEAM_BUILD,
   LOAD_TEAM_GRID_FROM_URL,
@@ -568,8 +569,9 @@ export const addBackToTeamRemainingEnergy = (payload) => ({
 //   type: HIDE_GRID_DATA,
 // });
 
-export const resetTeamGrids = () => ({
+export const resetTeamGrids = (payload) => ({
   type: RESET_TEAM_GRIDS,
+  payload,
 });
 
 export const resetIndividualGrid = (payload) => ({
@@ -579,6 +581,11 @@ export const resetIndividualGrid = (payload) => ({
 
 export const saveCurrentTeamBuild = (payload) => ({
   type: SAVE_CURRENT_TEAM_BUILD,
+  payload,
+});
+
+export const loadSelectedIndividualBuild = (payload) => ({
+  type: LOAD_SELECTED_INDIVIDUAL_BUILD,
   payload,
 });
 

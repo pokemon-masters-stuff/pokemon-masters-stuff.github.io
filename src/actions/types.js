@@ -53,6 +53,7 @@ export const SET_TEAM_SYNC_LEVELS = 'set_team_sync_levels';
 export const RESET_INDIVIDUAL_GRID = 'reset_individual_grid';
 export const RESET_TEAM_GRIDS = 'reset_team_grids';
 export const SAVE_CURRENT_TEAM_BUILD = 'save_current_team_build';
+export const LOAD_SELECTED_INDIVIDUAL_BUILD = 'load_selected_individual_build';
 export const LOAD_SELECTED_TEAM_BUILD = 'load_selected_team_build';
 export const DELETE_SELECTED_TEAM_BUILD = 'delete_selected_team_build';
 export const LOAD_TEAM_GRID_FROM_URL = 'load_team_grid_from_url';

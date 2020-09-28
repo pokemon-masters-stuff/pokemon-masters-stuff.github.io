@@ -200,7 +200,7 @@ class GridMap extends Component {
     e.stopPropagation();
     // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    if (!this.props.team.selectedCellsById[this.props.slot][data.cellId]) {
+    if (!this.props.grid.teamSelectedCellsById[this.props.slot][data.cellId]) {
       this.props.addToTeamGridList({ gridData: data, slot: this.props.slot });
       this.props.subtractFromTeamRemainingEnergy({
         gridData: data,
@@ -251,7 +251,6 @@ class GridMap extends Component {
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         this.props.pokemon,
         cell,
-        // this.props.team.syncLevel
         this.props.syncLevel
       );
 
@@ -278,14 +277,14 @@ class GridMap extends Component {
         }),
         onClickHandler:
           isSeletableBasedOnSyncLv ||
-          this.props.team.selectedCellsById[this.props.slot][cell.cellId]
+          this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
             ? (e, data) => this.handleClick(e, index, data)
             : null,
         className: this.props.darkMode
-          ? this.props.team.selectedCellsById[this.props.slot][cell.cellId]
+          ? this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
             ? 'selected dark-mode'
             : 'dark-mode'
-          : this.props.team.selectedCellsById[this.props.slot][cell.cellId]
+          : this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
           ? 'selected'
           : null,
       };
@@ -320,8 +319,8 @@ class GridMap extends Component {
 
   renderCenterGridText = (classes) => {
     // Only renders text when no picture available
-    return getPokemonDataByName(removeHyphens(this.props.pokemon))
-      .monsterActorId === undefined ? (
+    return getPokemonDataByName(this.props.pokemon).monsterActorId ===
+      undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(this.props.pokemon)}
       </Text>
@@ -332,8 +331,8 @@ class GridMap extends Component {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, language } = this.props;
     console.log(
-      'this.props.team.selectedCellsById',
-      this.props.team.selectedCellsById
+      'this.props.grid.teamSelectedCellsById',
+      this.props.grid.teamSelectedCellsById
     );
     return initialRender ? (
       <div className={classes.progressWrapper}>
@@ -368,8 +367,7 @@ class GridMap extends Component {
             id={this.props.pokemon}
             link={
               pokemonPictures[
-                getPokemonDataByName(removeHyphens(this.props.pokemon))
-                  .monsterActorId + '_128'
+                getPokemonDataByName(this.props.pokemon).monsterActorId + '_128'
               ]
             }
             size={{ x: 10, y: 10 }}
@@ -397,8 +395,6 @@ class GridMap extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  // pokemon: state.pokemon.selectedPokemon.toLowerCase(),
-  team: state.team,
   grid: state.grid,
   darkMode: state.darkMode.mode,
   language: state.language.currentLanguage,
