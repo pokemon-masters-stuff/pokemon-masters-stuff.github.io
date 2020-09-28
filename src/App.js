@@ -23,7 +23,7 @@ import {
   GachaOddsCalculatorMobile,
 } from './components/GachaOddsCalculator';
 import { EggPokemonDesktop, EggPokemonMobile } from './components/EggPokemon';
-import { TeamBuilderDesktop } from './components/TeamBuilder';
+// import { TeamBuilderDesktop } from './components/TeamBuilder';
 
 export default function App({ store }) {
   const darkMode = useSelector((state) => state.darkMode.mode);
@@ -54,11 +54,11 @@ export default function App({ store }) {
               path="/egg-pokemon"
               component={withTracker(EggPokemonDesktop)}
             />
-            <Route
+            {/* <Route
               exact
               path="/team-builder"
               component={withTracker(TeamBuilderDesktop)}
-            />
+            /> */}
             <PrivateRoute
               path="/builds"
               screenSize={'large'}

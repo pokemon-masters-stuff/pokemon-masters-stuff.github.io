@@ -64,7 +64,7 @@ const convertMoveJson = () => {
     entry['user'] = user[entry['user']];
     entry['group'] = group[entry['group']];
     entry['target'] = target[entry['target']];
-    entry['maxUses'] = entry['uses'];
+    entry['maxUses'] = entry['maxUses'];
     entry['tags'] = tags[entry['tags']];
     delete entry.uses;
   });

@@ -275,7 +275,7 @@ function Stats(props) {
 
 function Moves(props) {
   const { language, move, selectedMoves, syncLevel } = props;
-  console.log('syncLevel', syncLevel);
+  // console.log('syncLevel', syncLevel);
   const [open, setOpen] = React.useState(false);
   const classes = useRowStyles();
 

@@ -427,6 +427,63 @@ import {
   clefairyGridDataZH,
   pheromosaGridDataZH,
   silvallyGridDataZH,
+  // 9/28/2020
+  blastoise_newGridDataDE,
+  mimikyuGridDataDE,
+  mightyenaGridDataDE,
+  zebstrikaGridDataDE,
+  luxrayGridDataDE,
+  mismagiusGridDataDE,
+  glalieGridDataDE,
+  blastoise_newGridDataEN,
+  mimikyuGridDataEN,
+  mightyenaGridDataEN,
+  zebstrikaGridDataEN,
+  luxrayGridDataEN,
+  mismagiusGridDataEN,
+  glalieGridDataEN,
+  blastoise_newGridDataES,
+  mimikyuGridDataES,
+  mightyenaGridDataES,
+  zebstrikaGridDataES,
+  luxrayGridDataES,
+  mismagiusGridDataES,
+  glalieGridDataES,
+  blastoise_newGridDataFR,
+  mimikyuGridDataFR,
+  mightyenaGridDataFR,
+  zebstrikaGridDataFR,
+  luxrayGridDataFR,
+  mismagiusGridDataFR,
+  glalieGridDataFR,
+  blastoise_newGridDataIT,
+  mimikyuGridDataIT,
+  mightyenaGridDataIT,
+  zebstrikaGridDataIT,
+  luxrayGridDataIT,
+  mismagiusGridDataIT,
+  glalieGridDataIT,
+  blastoise_newGridDataJA,
+  mimikyuGridDataJA,
+  mightyenaGridDataJA,
+  zebstrikaGridDataJA,
+  luxrayGridDataJA,
+  mismagiusGridDataJA,
+  glalieGridDataJA,
+  blastoise_newGridDataKO,
+  mimikyuGridDataKO,
+  mightyenaGridDataKO,
+  zebstrikaGridDataKO,
+  luxrayGridDataKO,
+  mismagiusGridDataKO,
+  glalieGridDataKO,
+  blastoise_newGridDataZH,
+  mimikyuGridDataZH,
+  mightyenaGridDataZH,
+  zebstrikaGridDataZH,
+  luxrayGridDataZH,
+  mismagiusGridDataZH,
+  glalieGridDataZH,
 } from '../data';
 import {
   pm0006_00_lizardon_128, // Charizard
@@ -563,6 +620,17 @@ import {
   pm0009_00_kamex_256, // Blastoise
   pm0059_00_windie_256, // Arcanine
   pm0119_01_azumao_256, // Seaking
+  // 9/28/2020
+  pm0115_00_garura_128, // Kangaskhan
+  pm0057_00_okorizaru_128, // Primeape
+  pm0115_00_garura_256, // Kangaskhan
+  pm0131_00_laplace_256, // Lapras
+  pm0087_00_jugon_256, // Dewgong
+  pm0057_00_okorizaru_256, // Primeape
+  pm0068_00_kairiky_256, // Machamp
+  pm0819_11_horror_128, // Mimikyu
+  pm0262_00_graena_128, // Mightyena
+  pm0405_00_rentorar_128, // Luxray
 } from '../images/Pokemon';
 
 import {
@@ -586,12 +654,12 @@ import {
   ch0015_01_takeshi_256, // Brock
   ch0016_00_huuro_256, // Skyla
   ch0017_00_leaf_256, // Leaf
-  // ch0017_10_leaf_256, // Leaf
+  ch0017_10_leaf_256, // Leaf
   ch0018_00_chris_256, // Kris
   ch0019_00_yuki_256, // Brendan
   ch0020_00_toya_256, // Hilbert
   ch0021_00_green_256, // Blue
-  // ch0021_01_green_256, // Blue
+  ch0021_01_green_256, // Blue
   ch0022_00_urup_256, // Wulfric
   ch0023_00_momi_256, // Cheryl
   ch0024_00_shikimi_256, // Shauntal
@@ -682,6 +750,10 @@ import {
   ch0241_00_kojiro_256, // James
   // ch8000_00_hero_256,
   // ch8001_00_heroine_256
+  // 9/28/2020
+  ch0007_40_acerola_256, // H!Acerola
+  ch0020_40_toya_256, // H!Hilbert
+  ch0115_00_denji_256, // Volkner
 } from '../images/Trainers';
 
 export const trainerPictures = {
@@ -705,12 +777,12 @@ export const trainerPictures = {
   ch0015_01_takeshi_256, // Brock
   ch0016_00_huuro_256, // Skyla
   ch0017_00_leaf_256, // Leaf
-  // ch0017_10_leaf_256, // Leaf
+  ch0017_10_leaf_256, // Leaf
   ch0018_00_chris_256, // Kris
   ch0019_00_yuki_256, // Brendan
   ch0020_00_toya_256, // Hilbert
   ch0021_00_green_256, // Blue
-  // ch0021_01_green_256, // Blue
+  ch0021_01_green_256, // Blue
   ch0022_00_urup_256, // Wulfric
   ch0023_00_momi_256, // Cheryl
   ch0024_00_shikimi_256, // Shauntal
@@ -801,6 +873,10 @@ export const trainerPictures = {
   ch0241_00_kojiro_256, // James
   // ch8000_00_hero_256,
   // ch8001_00_heroine_256
+  // 9/28/2020
+  ch0007_40_acerola_256, // H!Acerola
+  ch0020_40_toya_256, // H!Hilbert
+  ch0115_00_denji_256, // Volkner
 };
 
 export const pokemonPictures = {
@@ -939,6 +1015,17 @@ export const pokemonPictures = {
   pm0336_00_habunake_128, // Seviper
   pm0024_00_arbok_128, // Arbok
   pm0110_00_matadogas_128, // Weezing
+  // 9/28/2020
+  pm0115_00_garura_128, // Kangaskhan
+  pm0057_00_okorizaru_128, // Primeape
+  pm0115_00_garura_256, // Kangaskhan
+  pm0131_00_laplace_256, // Lapras
+  pm0087_00_jugon_256, // Dewgong
+  pm0057_00_okorizaru_256, // Primeape
+  pm0068_00_kairiky_256, // Machamp
+  pm0819_11_horror_128, // Mimikyu
+  pm0262_00_graena_128, // Mightyena
+  pm0405_00_rentorar_128, // Luxray
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -1006,6 +1093,13 @@ export const allSyncGrids = {
     clefairyGridDataDE,
     pheromosaGridDataDE,
     silvallyGridDataDE,
+    blastoise_newGridDataDE,
+    mimikyuGridDataDE,
+    mightyenaGridDataDE,
+    zebstrikaGridDataDE,
+    luxrayGridDataDE,
+    mismagiusGridDataDE,
+    glalieGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -1060,6 +1154,13 @@ export const allSyncGrids = {
     clefairyGridDataEN,
     pheromosaGridDataEN,
     silvallyGridDataEN,
+    blastoise_newGridDataEN,
+    mimikyuGridDataEN,
+    mightyenaGridDataEN,
+    zebstrikaGridDataEN,
+    luxrayGridDataEN,
+    mismagiusGridDataEN,
+    glalieGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1114,6 +1215,13 @@ export const allSyncGrids = {
     clefairyGridDataES,
     pheromosaGridDataES,
     silvallyGridDataES,
+    blastoise_newGridDataES,
+    mimikyuGridDataES,
+    mightyenaGridDataES,
+    zebstrikaGridDataES,
+    luxrayGridDataES,
+    mismagiusGridDataES,
+    glalieGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1168,6 +1276,13 @@ export const allSyncGrids = {
     clefairyGridDataFR,
     pheromosaGridDataFR,
     silvallyGridDataFR,
+    blastoise_newGridDataFR,
+    mimikyuGridDataFR,
+    mightyenaGridDataFR,
+    zebstrikaGridDataFR,
+    luxrayGridDataFR,
+    mismagiusGridDataFR,
+    glalieGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1222,6 +1337,13 @@ export const allSyncGrids = {
     clefairyGridDataIT,
     pheromosaGridDataIT,
     silvallyGridDataIT,
+    blastoise_newGridDataIT,
+    mimikyuGridDataIT,
+    mightyenaGridDataIT,
+    zebstrikaGridDataIT,
+    luxrayGridDataIT,
+    mismagiusGridDataIT,
+    glalieGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1276,6 +1398,13 @@ export const allSyncGrids = {
     clefairyGridDataJA,
     pheromosaGridDataJA,
     silvallyGridDataJA,
+    blastoise_newGridDataJA,
+    mimikyuGridDataJA,
+    mightyenaGridDataJA,
+    zebstrikaGridDataJA,
+    luxrayGridDataJA,
+    mismagiusGridDataJA,
+    glalieGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1330,6 +1459,13 @@ export const allSyncGrids = {
     clefairyGridDataKO,
     pheromosaGridDataKO,
     silvallyGridDataKO,
+    blastoise_newGridDataKO,
+    mimikyuGridDataKO,
+    mightyenaGridDataKO,
+    zebstrikaGridDataKO,
+    luxrayGridDataKO,
+    mismagiusGridDataKO,
+    glalieGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1384,6 +1520,13 @@ export const allSyncGrids = {
     clefairyGridDataZH,
     pheromosaGridDataZH,
     silvallyGridDataZH,
+    blastoise_newGridDataZH,
+    mimikyuGridDataZH,
+    mightyenaGridDataZH,
+    zebstrikaGridDataZH,
+    luxrayGridDataZH,
+    mismagiusGridDataZH,
+    glalieGridDataZH,
   },
 };
 

@@ -18,12 +18,12 @@ export { default as ch0015_00_takeshi_256 } from './256px/ch0015_00_takeshi_256.
 export { default as ch0015_01_takeshi_256 } from './256px/ch0015_01_takeshi_256.ktx.png'; // Brock
 export { default as ch0016_00_huuro_256 } from './256px/ch0016_00_huuro_256.ktx.png'; // Skyla
 export { default as ch0017_00_leaf_256 } from './256px/ch0017_00_leaf_256.ktx.png'; // Leaf
-// export { default as ch0017_10_leaf_256 } from './256px/ch0017_10_leaf_256.ktx.png'; // Leaf
+export { default as ch0017_10_leaf_256 } from './256px/ch0017_10_leaf_256.ktx.png'; // Leaf
 export { default as ch0018_00_chris_256 } from './256px/ch0018_00_chris_256.ktx.png'; // Kris
 export { default as ch0019_00_yuki_256 } from './256px/ch0019_00_yuki_256.ktx.png'; // Brendan
 export { default as ch0020_00_toya_256 } from './256px/ch0020_00_toya_256.ktx.png'; // Hilbert
 export { default as ch0021_00_green_256 } from './256px/ch0021_00_green_256.ktx.png'; // Blue
-// export { default as ch0021_01_green_256 } from './256px/ch0021_01_green_256.ktx.png'; // Blue
+export { default as ch0021_01_green_256 } from './256px/ch0021_01_green_256.ktx.png'; // Blue
 export { default as ch0022_00_urup_256 } from './256px/ch0022_00_urup_256.ktx.png'; // Wulfric
 export { default as ch0023_00_momi_256 } from './256px/ch0023_00_momi_256.ktx.png'; // Cheryl
 export { default as ch0024_00_shikimi_256 } from './256px/ch0024_00_shikimi_256.ktx.png'; // Shauntal
@@ -114,3 +114,8 @@ export { default as ch0240_00_musashi_256 } from './256px/ch0240_00_musashi_256.
 export { default as ch0241_00_kojiro_256 } from './256px/ch0241_00_kojiro_256.ktx.png'; // James
 // export { default as ch8000_00_hero_256 } from './256px/hero.png';
 // export { default as ch8001_00_heroine_256 } from './256px/heroine.png';
+
+// 9/28/2020
+export { default as ch0007_40_acerola_256 } from './256px/ch0007_40_acerola_256.ktx.png'; // H!Acerola
+export { default as ch0020_40_toya_256 } from './256px/ch0020_40_toya_256.ktx.png'; // H!Hilbert
+export { default as ch0115_00_denji_256 } from './256px/ch0115_00_denji_256.ktx.png'; // Volkner

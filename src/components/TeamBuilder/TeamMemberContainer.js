@@ -34,7 +34,7 @@ const TeamMemberContainer = (props) => {
   // const handleOnOpenMovesAndSkillsModal = () => {
   //   setIsMovesAndSkillsModalVisible(true);
   // };
-  console.log('slot', slot);
+  // console.log('slot', slot);
 
   return (
     <div style={{ position: 'relative', paddingTop: 5 }}>

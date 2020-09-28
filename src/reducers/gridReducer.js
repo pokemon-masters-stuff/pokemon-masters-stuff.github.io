@@ -73,8 +73,8 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-  console.log('action.type', action.type);
-  console.log('action.payload', action.payload);
+  // console.log('action.type', action.type);
+  // console.log('action.payload', action.payload);
   let syncPair = {};
   let gridData = {};
   let slot = '';

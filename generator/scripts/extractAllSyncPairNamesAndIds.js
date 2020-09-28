@@ -108,8 +108,27 @@ const gridedTrainerList = [
   '10011800', // clefairy
   '10011900', // silvally
   '10012000', // pheromosa
+  // 9/28/2020
+  '10000740', // mimikyu
+  '10002040', // mightyena
+  '10011500', // luxray
+  '10002101', // blastoise_new
+  '10010600', // zebstrika
+  '10015100', // mismagius
+  '10015300', // glalie
 ];
 
+const newTrainerBaseIdArray = [
+  // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
+  // 9/28/2020
+  '10000740', // mimikyu
+  '10002040', // mightyena
+  '10011500', // luxray
+  '10002101', // blastoise_new
+  '10010600', // zebstrika
+  '10015100', // mismagius
+  '10015300', // glalie
+];
 /*
  * Usage i.e: node extractAllSyncPairNamesAndIds.js
  * */
@@ -173,7 +192,9 @@ const extractAllSyncPairNamesAndIds = () => {
     trainerBase = trainerBaseDB.entries.find(
       (trainerBase) => trainerBase.trainerBaseId === trainerBaseId.toString()
     );
-    let trainerNameId = trainerBase.trainerNameId;
+    // let trainerNameId = trainerBase.trainerNameId; // name changed on 9/28/2020
+    let trainerNameId = trainerBase.trainerNameIdShort;
+
     let grided = false;
     if (gridedTrainerList.includes(trainerBase.trainerBaseId)) {
       if (
@@ -187,7 +208,8 @@ const extractAllSyncPairNamesAndIds = () => {
 
     // Identify alts and give them a modified TrainerNameId to help link to their images
     // let trainerActorId = trainerNameId + '_' + trainerId.slice(5, 7);
-    let trainerActorId = trainerBase.actorId;
+    // let trainerActorId = trainerBase.actorId;// name changed on 9/28/2020
+    let trainerActorId = trainerBase.trainerNameId;
 
     // Use Ids to find names
     let pokemonName = '';
@@ -195,7 +217,7 @@ const extractAllSyncPairNamesAndIds = () => {
     let syncPairName = '';
     languages.forEach((language) => {
       let updatedMonsterBaseId = monsterBaseId;
-      // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason. Same for 20003501 Clefairy, 20033601 Seviper, 20007601 Golem, 20007101 Victreebel, 20005301 Persian, 20004901 Venomoth, 20011901 Seaking
+      // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason. Same for 20003501 Clefairy, 20033601 Seviper, 20007601 Golem, 20007101 Victreebel, 20005301 Persian, 20004901 Venomoth, 20011901 Seaking, 20011501 Kangaskhan
       if (monsterBaseId) {
         if (
           monsterBaseId === 20003901 ||
@@ -205,7 +227,8 @@ const extractAllSyncPairNamesAndIds = () => {
           monsterBaseId === 20005301 ||
           monsterBaseId === 20004901 ||
           monsterBaseId === 20011901 ||
-          monsterBaseId === 20003501
+          monsterBaseId === 20003501 ||
+          monsterBaseId === 20011501
         ) {
           updatedMonsterBaseId = Number(
             monsterBaseId.toString().slice(0, -1) + '0'
@@ -235,23 +258,25 @@ const extractAllSyncPairNamesAndIds = () => {
         grided: grided,
       };
 
-      // prints out export statements for trainers in console.
-      // if (language === 'en') {
-      //   if (trainerName !== 'Hero') {
-      //     console.log(
-      //       `export { default as ${trainerActorId}_256 } from './256px/${trainerActorId}_256.ktx.png'; // ${trainerName}`
-      //     );
-      //   }
-      // }
+      if (newTrainerBaseIdArray.includes(entry.trainerBaseId.toString())) {
+        // prints out export statements for trainers in console.
+        // if (language === 'en') {
+        //   if (trainerName !== 'Hero') {
+        //     console.log(
+        //       `export { default as ${trainerActorId}_256 } from './256px/${trainerActorId}_256.ktx.png'; // ${trainerName}`
+        //     );
+        //   }
+        // }
 
-      // prints out export statements for pokemon in console.
-      // if (language === 'en') {
-      //   if (trainerName !== 'Hero') {
-      //     console.log(
-      //       `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${pokemonName}`
-      //     );
-      //   }
-      // }
+        // prints out export statements for pokemon in console.
+        if (language === 'en') {
+          if (trainerName !== 'Hero') {
+            console.log(
+              `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${pokemonName}`
+            );
+          }
+        }
+      }
     });
   });
   // prints out export statements in console.

@@ -18,7 +18,14 @@ export { default as pm0076_00_golonya_128 } from './128px/pm0076_00_golonya_128.
 // export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_128.ktx.png'; // Charizard
 // export { default as pm0009_00_kamex_128 } from './128px/pm0009_00_kamex_128.ktx.png'; // Blastoise
 // export { default as pm0059_00_windie_128 } from './128px/pm0059_00_windie_128.ktx.png'; // Arcanine
-// export { default as pm0119_01_azumao_128 } from './128px/pm0119_01_azumao_128.ktx.png'; // Seaking
+export { default as pm0119_01_azumao_128 } from './128px/pm0119_01_azumao_128.ktx.png'; //
+// 9/28/2020
+export { default as pm0115_00_garura_128 } from './128px/pm0115_00_garura_128.ktx.png'; // Kangaskhan
+// export { default as pm0131_00_laplace_128 } from './128px/pm0131_00_laplace_128.ktx.png'; // Lapras
+// export { default as pm0087_00_jugon_128 } from './128px/pm0087_00_jugon_128.ktx.png'; // Dewgong
+export { default as pm0057_00_okorizaru_128 } from './128px/pm0057_00_okorizaru_128.ktx.png'; // Primeape
+// export { default as pm0068_00_kairiky_128 } from './128px/pm0068_00_kairiky_128.ktx.png'; // Machamp
+
 // 256px
 export { default as pm0123_00_strike_256 } from './256px/pm0123_00_strike_256.ktx.png'; // Scyther
 export { default as pm0127_00_kailios_256 } from './256px/pm0127_00_kailios_256.ktx.png'; // Pinsir
@@ -39,6 +46,12 @@ export { default as pm0006_00_lizardon_256 } from './256px/pm0006_00_lizardon_25
 export { default as pm0009_00_kamex_256 } from './256px/pm0009_00_kamex_256.ktx.png'; // Blastoise
 export { default as pm0059_00_windie_256 } from './256px/pm0059_00_windie_256.ktx.png'; // Arcanine
 export { default as pm0119_01_azumao_256 } from './256px/pm0119_01_azumao_256.ktx.png'; // Seaking
+// 9/28/2020
+export { default as pm0115_00_garura_256 } from './256px/pm0115_00_garura_256.ktx.png'; // Kangaskhan
+export { default as pm0131_00_laplace_256 } from './256px/pm0131_00_laplace_256.ktx.png'; // Lapras
+export { default as pm0087_00_jugon_256 } from './256px/pm0087_00_jugon_256.ktx.png'; // Dewgong
+export { default as pm0057_00_okorizaru_256 } from './256px/pm0057_00_okorizaru_256.ktx.png'; // Primeape
+export { default as pm0068_00_kairiky_256 } from './256px/pm0068_00_kairiky_256.ktx.png'; // Machamp
 
 // Pokemon 128px
 export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_128.ktx.png'; // Charizard
@@ -156,3 +169,7 @@ export { default as pm0484_00_palkia_128 } from './128px/pm0484_00_palkia_128.kt
 export { default as pm0336_00_habunake_128 } from './128px/pm0336_00_habunake_128.ktx.png'; // Seviper
 export { default as pm0024_00_arbok_128 } from './128px/pm0024_00_arbok_128.ktx.png'; // Arbok
 export { default as pm0110_00_matadogas_128 } from './128px/pm0110_00_matadogas_128.ktx.png'; // Weezing
+// 9/28/2020
+export { default as pm0819_11_horror_128 } from './128px/pm0819_11_horror_128.ktx.png'; // Mimikyu
+export { default as pm0262_00_graena_128 } from './128px/pm0262_00_graena_128.ktx.png'; // Mightyena
+export { default as pm0405_00_rentorar_128 } from './128px/pm0405_00_rentorar_128.ktx.png'; // Luxray

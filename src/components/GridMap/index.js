@@ -44,6 +44,9 @@ class GridMap extends Component {
     let pokemonFromUrl;
     if (getQueryStringValue('p')) {
       pokemonFromUrl = getQueryStringValue('p');
+      if (pokemonFromUrl === 'Blastoise_New') {
+        pokemonFromUrl = 'Blastoise_new';
+      }
       this.props.selectPokemon(pokemonFromUrl);
     }
 
