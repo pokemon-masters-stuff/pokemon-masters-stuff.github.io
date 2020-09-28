@@ -1,5 +1,5 @@
-import arrayOfAllGridedPokemon from '../data/allGridedPokemon.json';
-import arrayOfAllEggPokemon from '../data/allEggPokemon.json';
+import gridedSyncPairDataArray from '../data/gridedSyncPairData.json';
+import eggPokemonDataArray from '../data/eggPokemonData.json';
 import { shortenedMoveNameByAbilityId } from './constants';
 
 export const removeHyphens = (str) => {
@@ -20,7 +20,7 @@ export const capitalizeSyncPairNameForUrl = (syncPairName) => {
 };
 
 export const getPokemonNameList = (language) =>
-  arrayOfAllGridedPokemon
+  gridedSyncPairDataArray
     .map((entry, index) => {
       let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
       let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
@@ -47,11 +47,23 @@ export const getPokemonNameList = (language) =>
       //     value: value + "*", // value changes as language changes. name stays the same so old links and saves are compatible
       //   };
       // }
+      if (entry.pokemonNameByLanguage['en'] === 'Blastoise') {
+        // for the old sync pair, change displayed value but not name so that old saves are still compatible
+        return {
+          key: index,
+          name: name,
+          // value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value + '_old', // value changes as language changes. name stays the same so old links and saves are compatible
+        };
+      }
 
       if (
-        entry.monsterBaseId === '20003501' ||
-        entry.monsterBaseId === '20087900' ||
-        entry.monsterBaseId === '20086211'
+        entry.monsterBaseId === '20000900' ||
+        entry.monsterBaseId === '20081911' ||
+        entry.monsterBaseId === '20026200' ||
+        entry.monsterBaseId === '20040500' ||
+        entry.monsterBaseId === '20052301' ||
+        entry.monsterBaseId === '20036200'
       ) {
         return {
           key: index,
@@ -74,7 +86,7 @@ export const getPokemonNameList = (language) =>
 
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;
-  arrayOfAllGridedPokemon.forEach((pokemon) => {
+  gridedSyncPairDataArray.forEach((pokemon) => {
     if (
       pokemon.pokemonNameByLanguage['en'] === pokemonName ||
       pokemon.pokemonNameByLanguage['en'].toLowerCase() === pokemonName ||
@@ -89,7 +101,7 @@ export const getPokemonDataByName = (pokemonName) => {
 
 const role = { 0: 'P.Strike', 1: 'S.Strike', 2: 'Support', 3: 'Tech' };
 export const getEggPokemonNameList = (language) =>
-  arrayOfAllEggPokemon
+  eggPokemonDataArray
     .map((entry, index) => {
       // if (entry.monsterBaseId === 'id of new duplicate pokemon') {
       //  // for the new sync pair:
@@ -115,7 +127,7 @@ export const getEggPokemonNameList = (language) =>
 
 export const getEggPokemonDataByNameAndRole = (pokemonName, role) => {
   let pokemonData;
-  arrayOfAllEggPokemon.forEach((pokemon) => {
+  eggPokemonDataArray.forEach((pokemon) => {
     if (
       pokemon.pokemonNameByLanguage['en'] === pokemonName &&
       pokemon.role === role
@@ -182,6 +194,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'leavanny' ||
       pokemon === 'sharpedo' ||
       pokemon === 'emboar' ||
+      pokemon === 'zebstrika' ||
+      pokemon === 'mightyena' ||
       pokemon === 'drifblim' ||
       pokemon === 'dragonite' ||
       pokemon === 'jigglypuff' ||
@@ -221,6 +235,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
 
     if (
       pokemon === 'torkoal' ||
+      pokemon === 'mimikyu' ||
+      pokemon === 'luxray' ||
       pokemon === 'vileplume' ||
       pokemon === 'palossand' ||
       pokemon === 'liepard' ||
@@ -272,7 +288,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'starmie' ||
       pokemon === 'torterra' ||
       pokemon === 'blastoise' ||
+      pokemon === 'blastoise_new' ||
       pokemon === 'meganium' ||
+      pokemon === 'glalie' ||
       pokemon === 'clefairy'
     ) {
       if (
@@ -297,7 +315,12 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
         (cell.coords.q === 3 && cell.coords.r === 3) ||
         (cell.coords.q === -3 && cell.coords.r === 4) ||
         (cell.coords.q === -2 && cell.coords.r === 4) ||
-        (cell.coords.q === -1 && cell.coords.r === 3)
+        (cell.coords.q === -1 && cell.coords.r === 3) ||
+        // New Blastoise grid
+        (cell.coords.q === -2 && cell.coords.r === 1) ||
+        (cell.coords.q === -3 && cell.coords.r === 1) ||
+        (cell.coords.q === 2 && cell.coords.r === -2) ||
+        (cell.coords.q === 2 && cell.coords.r === 0)
       ) {
         selectable = false;
       }
@@ -350,6 +373,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'leavanny' ||
       pokemon === 'sharpedo' ||
       pokemon === 'emboar' ||
+      pokemon === 'zebstrika' ||
+      pokemon === 'mightyena' ||
       pokemon === 'drifblim' ||
       pokemon === 'dragonite' ||
       pokemon === 'jigglypuff' ||
@@ -377,6 +402,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
 
     if (
       pokemon === 'torkoal' ||
+      pokemon === 'mimikyu' ||
+      pokemon === 'luxray' ||
       pokemon === 'vileplume' ||
       pokemon === 'palossand' ||
       pokemon === 'liepard' ||
@@ -416,7 +443,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'starmie' ||
       pokemon === 'torterra' ||
       pokemon === 'blastoise' ||
+      pokemon === 'blastoise_new' ||
       pokemon === 'meganium' ||
+      pokemon === 'glalie' ||
       pokemon === 'clefairy'
     ) {
       if (
@@ -429,7 +458,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
         (cell.coords.q === 2 && cell.coords.r === 4) ||
         (cell.coords.q === 1 && cell.coords.r === 4) ||
         (cell.coords.q === -1 && cell.coords.r === 4) ||
-        (cell.coords.q === -3 && cell.coords.r === 5)
+        (cell.coords.q === -3 && cell.coords.r === 5) ||
+        // New Blastoise grid
+        (cell.coords.q === -3 && cell.coords.r === 1) ||
+        (cell.coords.q === 2 && cell.coords.r === -2)
       ) {
         selectable = false;
       }
@@ -454,7 +486,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-// let names = {}; // to generate list of skills to be abbreviated
+let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
@@ -474,7 +506,7 @@ export const renderMoveName = (moveName, abilityId, language) => {
       //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
       //     console.log(names); // to generate list of skills to be abbreviated
       //   }
-      // }
+      // } // end
     } else {
       if (shortenedMoveNameByAbilityId['en'][abilityId]) {
         renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];

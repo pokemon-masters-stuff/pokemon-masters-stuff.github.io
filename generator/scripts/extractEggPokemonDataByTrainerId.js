@@ -1,73 +1,74 @@
 const fs = require('fs');
 
-const monsterDB = require('../rawdata/Monster.json');
-const moveDB = require('../rawdata/ModifiedMove.json');
-const trainerDB = require('../rawdata/Trainer.json');
-const trainerBaseDB = require('../rawdata/TrainerBase.json');
-const monsterVariationDB = require('../rawdata/MonsterVariation.json');
+const monsterDB = require('../rawdata/protodump/Monster.json');
+const monsterBaseDB = require('../rawdata/protodump/MonsterBase.json');
+const moveDB = require('../rawdata/protodump/ModifiedMove.json');
+const trainerDB = require('../rawdata/protodump/Trainer.json');
+const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
+const monsterVariationDB = require('../rawdata/protodump/MonsterVariation.json');
 
-const pokemonNameDBde = require('../rawdata/de/monster_name_de.json');
-const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
-const pokemonNameDBes = require('../rawdata/es/monster_name_es.json');
-const pokemonNameDBfr = require('../rawdata/fr/monster_name_fr.json');
-const pokemonNameDBit = require('../rawdata/it/monster_name_it.json');
-const pokemonNameDBja = require('../rawdata/ja/monster_name_ja.json');
-const pokemonNameDBko = require('../rawdata/ko/monster_name_ko.json');
-const pokemonNameDBzh = require('../rawdata/zh/monster_name_zh-TW.json');
+const pokemonNameDBde = require('../rawdata/lsddump/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/lsddump/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/lsddump/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/lsddump/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/lsddump/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/lsddump/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/lsddump/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/lsddump/monster_name_zh-TW.json');
 
-const trainerNameDBde = require('../rawdata/de/trainer_name_de.json');
-const trainerNameDBen = require('../rawdata/en/trainer_name_en.json');
-const trainerNameDBes = require('../rawdata/es/trainer_name_es.json');
-const trainerNameDBfr = require('../rawdata/fr/trainer_name_fr.json');
-const trainerNameDBit = require('../rawdata/it/trainer_name_it.json');
-const trainerNameDBja = require('../rawdata/ja/trainer_name_ja.json');
-const trainerNameDBko = require('../rawdata/ko/trainer_name_ko.json');
-const trainerNameDBzh = require('../rawdata/zh/trainer_name_zh-TW.json');
+const trainerNameDBde = require('../rawdata/lsddump/trainer_name_de.json');
+const trainerNameDBen = require('../rawdata/lsddump/trainer_name_en.json');
+const trainerNameDBes = require('../rawdata/lsddump/trainer_name_es.json');
+const trainerNameDBfr = require('../rawdata/lsddump/trainer_name_fr.json');
+const trainerNameDBit = require('../rawdata/lsddump/trainer_name_it.json');
+const trainerNameDBja = require('../rawdata/lsddump/trainer_name_ja.json');
+const trainerNameDBko = require('../rawdata/lsddump/trainer_name_ko.json');
+const trainerNameDBzh = require('../rawdata/lsddump/trainer_name_zh-TW.json');
 
-const moveNameDBde = require('../rawdata/de/move_name_de.json');
-const moveNameDBen = require('../rawdata/en/move_name_en.json');
-const moveNameDBes = require('../rawdata/es/move_name_es.json');
-const moveNameDBfr = require('../rawdata/fr/move_name_fr.json');
-const moveNameDBit = require('../rawdata/it/move_name_it.json');
-const moveNameDBja = require('../rawdata/ja/move_name_ja.json');
-const moveNameDBko = require('../rawdata/ko/move_name_ko.json');
-const moveNameDBzh = require('../rawdata/zh/move_name_zh-TW.json');
+const moveNameDBde = require('../rawdata/lsddump/move_name_de.json');
+const moveNameDBen = require('../rawdata/lsddump/move_name_en.json');
+const moveNameDBes = require('../rawdata/lsddump/move_name_es.json');
+const moveNameDBfr = require('../rawdata/lsddump/move_name_fr.json');
+const moveNameDBit = require('../rawdata/lsddump/move_name_it.json');
+const moveNameDBja = require('../rawdata/lsddump/move_name_ja.json');
+const moveNameDBko = require('../rawdata/lsddump/move_name_ko.json');
+const moveNameDBzh = require('../rawdata/lsddump/move_name_zh-TW.json');
 
-const moveDescriptionDBde = require('../rawdata/de/move_description_de.json');
-const moveDescriptionDBen = require('../rawdata/en/move_description_en.json');
-const moveDescriptionDBes = require('../rawdata/es/move_description_es.json');
-const moveDescriptionDBfr = require('../rawdata/fr/move_description_fr.json');
-const moveDescriptionDBit = require('../rawdata/it/move_description_it.json');
-const moveDescriptionDBja = require('../rawdata/ja/move_description_ja.json');
-const moveDescriptionDBko = require('../rawdata/ko/move_description_ko.json');
-const moveDescriptionDBzh = require('../rawdata/zh/move_description_zh-TW.json');
+const moveDescriptionDBde = require('../rawdata/lsddump/move_description_de.json');
+const moveDescriptionDBen = require('../rawdata/lsddump/move_description_en.json');
+const moveDescriptionDBes = require('../rawdata/lsddump/move_description_es.json');
+const moveDescriptionDBfr = require('../rawdata/lsddump/move_description_fr.json');
+const moveDescriptionDBit = require('../rawdata/lsddump/move_description_it.json');
+const moveDescriptionDBja = require('../rawdata/lsddump/move_description_ja.json');
+const moveDescriptionDBko = require('../rawdata/lsddump/move_description_ko.json');
+const moveDescriptionDBzh = require('../rawdata/lsddump/move_description_zh-TW.json');
 
-const moveTargetTypeDBde = require('../rawdata/de/move_target_type_de.json');
-const moveTargetTypeDBen = require('../rawdata/en/move_target_type_en.json');
-const moveTargetTypeDBes = require('../rawdata/es/move_target_type_es.json');
-const moveTargetTypeDBfr = require('../rawdata/fr/move_target_type_fr.json');
-const moveTargetTypeDBit = require('../rawdata/it/move_target_type_it.json');
-const moveTargetTypeDBja = require('../rawdata/ja/move_target_type_ja.json');
-const moveTargetTypeDBko = require('../rawdata/ko/move_target_type_ko.json');
-const moveTargetTypeDBzh = require('../rawdata/zh/move_target_type_zh-TW.json');
+const moveTargetTypeDBde = require('../rawdata/lsddump/move_target_type_de.json');
+const moveTargetTypeDBen = require('../rawdata/lsddump/move_target_type_en.json');
+const moveTargetTypeDBes = require('../rawdata/lsddump/move_target_type_es.json');
+const moveTargetTypeDBfr = require('../rawdata/lsddump/move_target_type_fr.json');
+const moveTargetTypeDBit = require('../rawdata/lsddump/move_target_type_it.json');
+const moveTargetTypeDBja = require('../rawdata/lsddump/move_target_type_ja.json');
+const moveTargetTypeDBko = require('../rawdata/lsddump/move_target_type_ko.json');
+const moveTargetTypeDBzh = require('../rawdata/lsddump/move_target_type_zh-TW.json');
 
-const passiveNameDBde = require('../rawdata/de/passive_skill_name_de.json');
-const passiveNameDBen = require('../rawdata/en/passive_skill_name_en.json');
-const passiveNameDBes = require('../rawdata/es/passive_skill_name_es.json');
-const passiveNameDBfr = require('../rawdata/fr/passive_skill_name_fr.json');
-const passiveNameDBit = require('../rawdata/it/passive_skill_name_it.json');
-const passiveNameDBja = require('../rawdata/ja/passive_skill_name_ja.json');
-const passiveNameDBko = require('../rawdata/ko/passive_skill_name_ko.json');
-const passiveNameDBzh = require('../rawdata/zh/passive_skill_name_zh-TW.json');
+const passiveNameDBde = require('../rawdata/lsddump/passive_skill_name_de.json');
+const passiveNameDBen = require('../rawdata/lsddump/passive_skill_name_en.json');
+const passiveNameDBes = require('../rawdata/lsddump/passive_skill_name_es.json');
+const passiveNameDBfr = require('../rawdata/lsddump/passive_skill_name_fr.json');
+const passiveNameDBit = require('../rawdata/lsddump/passive_skill_name_it.json');
+const passiveNameDBja = require('../rawdata/lsddump/passive_skill_name_ja.json');
+const passiveNameDBko = require('../rawdata/lsddump/passive_skill_name_ko.json');
+const passiveNameDBzh = require('../rawdata/lsddump/passive_skill_name_zh-TW.json');
 
-const passiveDescriptionDBde = require('../rawdata/de/passive_skill_description_de.json');
-const passiveDescriptionDBen = require('../rawdata/en/passive_skill_description_en.json');
-const passiveDescriptionDBes = require('../rawdata/es/passive_skill_description_es.json');
-const passiveDescriptionDBfr = require('../rawdata/fr/passive_skill_description_fr.json');
-const passiveDescriptionDBit = require('../rawdata/it/passive_skill_description_it.json');
-const passiveDescriptionDBja = require('../rawdata/ja/passive_skill_description_ja.json');
-const passiveDescriptionDBko = require('../rawdata/ko/passive_skill_description_ko.json');
-const passiveDescriptionDBzh = require('../rawdata/zh/passive_skill_description_zh-TW.json');
+const passiveDescriptionDBde = require('../rawdata/lsddump/passive_skill_description_de.json');
+const passiveDescriptionDBen = require('../rawdata/lsddump/passive_skill_description_en.json');
+const passiveDescriptionDBes = require('../rawdata/lsddump/passive_skill_description_es.json');
+const passiveDescriptionDBfr = require('../rawdata/lsddump/passive_skill_description_fr.json');
+const passiveDescriptionDBit = require('../rawdata/lsddump/passive_skill_description_it.json');
+const passiveDescriptionDBja = require('../rawdata/lsddump/passive_skill_description_ja.json');
+const passiveDescriptionDBko = require('../rawdata/lsddump/passive_skill_description_ko.json');
+const passiveDescriptionDBzh = require('../rawdata/lsddump/passive_skill_description_zh-TW.json');
 
 const pokemonNameDB = {
   de: pokemonNameDBde,
@@ -151,44 +152,73 @@ const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 // Update this list (of trainerId) based on new datamine
 const trainerList = [
   // Egg mons trainerId from Trainer.json
+  // "18000000000", Pikachu
+  // "18000020000", Torchic
+  // "18000120000", Solgaleo
   '18000020011',
   '18000020021',
   '18000020031',
   '18000020051',
+  '18000020056',
   '18000020061',
   '18000020071',
+  '18000020076',
   '18000020081',
   '18000020101',
   '18000020111',
+  '18000020116',
   '18000020121',
   '18000020131',
   '18000020141',
   '18000020151',
   '18000020161',
+  '18000020166',
   '18000020171',
   '18000020181',
   '18000020191',
   '18000020201',
   '18000020211',
+  '18000020251',
+  '18000020261',
+  '18000020266',
+  '18000020271',
+  '18000020276',
+  '18000020281',
+  '18000020286',
+  '18000020291',
+  '18000020296',
   '18000030011',
   '18000030021',
   '18000030031',
   '18000030051',
+  '18000030056',
   '18000030061',
   '18000030071',
+  '18000030076',
   '18000030081',
   '18000030101',
   '18000030111',
+  '18000030116',
   '18000030121',
   '18000030131',
   '18000030141',
   '18000030151',
   '18000030161',
+  '18000030166',
   '18000030171',
   '18000030181',
   '18000030191',
   '18000030201',
   '18000030211',
+  '18000030251',
+  '18000030261',
+  '18000030266',
+  '18000030271',
+  '18000030276',
+  '18000030281',
+  '18000030286',
+  '18000030291',
+  '18000030296',
   '18000040001',
   '18000040004',
   '18000040007',
@@ -196,24 +226,34 @@ const trainerList = [
   '18000040021',
   '18000040031',
   '18000040051',
+  '18000040056',
   '18000040061',
   '18000040071',
+  '18000040076',
   '18000040081',
   '18000040101',
   '18000040111',
+  '18000040116',
   '18000040121',
   '18000040131',
   '18000040141',
   '18000040151',
   '18000040161',
+  '18000040166',
   '18000040171',
   '18000040181',
   '18000040191',
   '18000040201',
   '18000040211',
-  // "18000000000", Pikachu
-  // "18000020000", Torchic
-  // "18000120000", Solgaleo
+  '18000040251',
+  '18000040261',
+  '18000040266',
+  '18000040271',
+  '18000040276',
+  '18000040281',
+  '18000040286',
+  '18000040291',
+  '18000040296',
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -247,7 +287,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     if (trainer) {
       // Use trainerBaseId to find monsterId and trainerBaseId in Trainer.json
       monsterId = trainer.monsterId;
-      console.log('monsterId', monsterId);
+      // console.log('monsterId', monsterId);
 
       trainerBaseId = trainer.trainerBaseId;
 
@@ -317,8 +357,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
         role,
       } = trainer;
 
-      // Use moveId to find move name in move_name_xx.json
-      // Use moveId to find move description in move_description_xx.json
+      // Use moveId to find move name lsddump move_name_xx.json
+      // Use moveId to find move description lsddump move_description_xx.json
       let move1NameByLanguage = {
           de: '',
           en: '',
@@ -448,7 +488,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         monsterId === '28000030053' ||
         monsterId === '28000040053'
       ) {
-        console.log('beedrill');
+        // console.log('Change moves for Beedrill');
         // Weedle changes its moveset when evolving into Beedrill
         move1Id = 42;
         if (role === 0) {
@@ -612,7 +652,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               },
             };
 
-      // Use passiveId to find passive skill name and description in passive_skill_name_xx.json and passive_skill_description_xx.json
+      // Use passiveId to find passive skill name and description lsddump passive_skill_name_xx.json alsddump passive_skill_description_xx.json
       let passive1NameByLanguage = {
           de: '',
           en: '',
@@ -730,6 +770,24 @@ const extractSyncPairDataByTrainerBaseId = () => {
         monsterBaseId,
       } = monster;
 
+      // Use monsterBaseId to find actorId in MonsterBase.json
+      let monsterBase = monsterBaseDB.entries.find(
+        (monsterBase) =>
+          monsterBase.monsterBaseId.toString() === monsterBaseId.toString()
+      );
+      let monsterActorId = monsterBase.actorId;
+      // prints out export statements for egg pokemon in console.
+      let pokemonNameForConsoleLog = pokemonNameDB['en'][monsterBaseId]
+        ? pokemonNameDB['en'][monsterBaseId]
+        : pokemonNameDB['en'][
+            monsterBaseId
+              .toString()
+              .substring(0, monsterBaseId.toString().length - 1) + '0'
+          ];
+      console.log(
+        `export { default as ${monsterActorId}_256 } from './256px/${monsterActorId}_256.ktx.png'; // ${pokemonNameForConsoleLog}`
+      );
+
       stats = {
         hpValues,
         atkValues,
@@ -833,8 +891,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
       //       speScale,
       //     };
 
-      //     // Use megaMoveId to find megaMove name in move_name_xx.json
-      //     // Use megaMoveId to find megaMove description in move_description_xx.json
+      //     // Use megaMoveId to find megaMove name lsddump move_name_xx.json
+      //     // Use megaMoveId to find megaMove description lsddump move_description_xx.json
       //     let megaMove1NameByLanguage = {
       //         de: '',
       //         en: '',
@@ -1093,7 +1151,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
       //         },
       //       });
 
-      //     // Use passiveId to find passive skill name and description in passive_skill_name_xx.json and passive_skill_description_xx.json
+      //     // Use passiveId to find passive skill name and description lsddump passive_skill_name_xx.json alsddump passive_skill_description_xx.json
       //     let megaPassive1NameByLanguage = {
       //         de: '',
       //         en: '',
@@ -1214,6 +1272,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
             monsterBaseId: monsterBaseId.toString(),
             monsterMegaFormBaseId,
             monsterId: monsterId.toString(),
+            monsterActorId: monsterActorId,
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
             trainerNameId: 'ch8000',
@@ -1229,6 +1288,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         : (monsterAndTrainerData = {
             monsterBaseId: monsterBaseId.toString(),
             monsterId: monsterId.toString(),
+            monsterActorId: monsterActorId,
             trainerId: trainerIdFromList,
             trainerBaseId: trainerBaseId.toString(),
             trainerNameId: 'ch8000',
@@ -1265,6 +1325,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterBaseId: monsterBaseId.toString(),
               monsterMegaFormBaseId,
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'ch8000',
@@ -1280,6 +1341,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'ch8000',
@@ -1298,6 +1360,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
               monsterBaseId: monsterBaseId.toString(),
               monsterMegaFormBaseId,
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'No Trainer',
@@ -1313,6 +1376,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
           : (monsterAndTrainerData = {
               monsterBaseId: monsterBaseId.toString(),
               monsterId: monsterId.toString(),
+              monsterActorId: monsterActorId,
               trainerId: trainerIdFromList,
               trainerBaseId: trainerBaseId.toString(),
               trainerNameId: 'No Trainer',
@@ -1415,7 +1479,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
     entry.syncPairNameByLanguage = syncPairNameByLanguage;
   });
   fs.writeFile(
-    `${__dirname}/../../src/data/allEggPokemon.json`,
+    `${__dirname}/../../src/data/eggPokemonData.json`,
     JSON.stringify(syncPairDataArray),
     (err) => {
       if (err) throw err;

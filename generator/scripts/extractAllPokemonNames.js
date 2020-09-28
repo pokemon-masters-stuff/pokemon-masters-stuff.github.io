@@ -1,14 +1,14 @@
 // To be used when need all pokemon names to form teams.
 const fs = require('fs');
 
-const pokemonNameDBde = require('../rawdata/de/monster_name_de.json');
-const pokemonNameDBen = require('../rawdata/en/monster_name_en.json');
-const pokemonNameDBes = require('../rawdata/es/monster_name_es.json');
-const pokemonNameDBfr = require('../rawdata/fr/monster_name_fr.json');
-const pokemonNameDBit = require('../rawdata/it/monster_name_it.json');
-const pokemonNameDBja = require('../rawdata/ja/monster_name_ja.json');
-const pokemonNameDBko = require('../rawdata/ko/monster_name_ko.json');
-const pokemonNameDBzh = require('../rawdata/zh/monster_name_zh-TW.json');
+const pokemonNameDBde = require('../rawdata/lsddump/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/lsddump/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/lsddump/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/lsddump/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/lsddump/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/lsddump/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/lsddump/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/lsddump/monster_name_zh-TW.json');
 
 const pokemonNameDB = {
   de: pokemonNameDBde,
@@ -54,7 +54,7 @@ const extractAllPokemonNames = () => {
   });
 
   fs.writeFile(
-    `${__dirname}/../../src/data/pokemonNameListByMonsterBaseId.json`,
+    `${__dirname}/../../src/data/pokemonNamesByMonsterBaseId.json`,
     JSON.stringify(pokemonNames),
     (err) => {
       if (err) throw err;

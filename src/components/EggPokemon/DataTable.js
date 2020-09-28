@@ -16,7 +16,6 @@ import RarityDropdown from './RarityDropdown';
 import PotentialDropdown from './PotentialDropdown';
 import AffinityLevelDropdown from './AffinityLevelDropdown';
 import AffinityProgressDropdown from './AffinityProgressDropdown';
-import { getEggPokemonDataByNameAndRole } from '../../utils/functions';
 
 const useRowStyles = makeStyles({
   root: {
@@ -41,12 +40,19 @@ function Stats(props) {
 
   const classes = useRowStyles();
 
-  let baseHp = hp[4] + (selectedRarity - rarity) * 40;
-  let baseAtk = atk[4] + (selectedRarity - rarity) * 20;
-  let baseDef = def[4] + (selectedRarity - rarity) * 20;
-  let baseSpa = spa[4] + (selectedRarity - rarity) * 20;
-  let baseSpd = spd[4] + (selectedRarity - rarity) * 20;
-  let baseSpe = spe[4] + (selectedRarity - rarity) * 20;
+  let lv125Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 25;
+  let lv125Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 25;
+  let lv125Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 25;
+  let lv125Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 25;
+  let lv125Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 25;
+  let lv125Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 25;
+
+  let baseHp = lv125Hp + (selectedRarity - rarity) * 40;
+  let baseAtk = lv125Atk + (selectedRarity - rarity) * 20;
+  let baseDef = lv125Def + (selectedRarity - rarity) * 20;
+  let baseSpa = lv125Spa + (selectedRarity - rarity) * 20;
+  let baseSpd = lv125Spd + (selectedRarity - rarity) * 20;
+  let baseSpe = lv125Spe + (selectedRarity - rarity) * 20;
 
   return (
     <Fragment>
@@ -329,16 +335,11 @@ function Passives(props) {
 }
 
 export default function MovesAndSkillsModal(props) {
-  const { language, pokemonName, pokemonRole, syncLevel } = props;
+  const { language, pokemonName, pokemonRole, pokemonData, syncLevel } = props;
   //   const syncLevel = useSelector((state) => state.grid.syncLevel);
 
   // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
-  const roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
-  const pokemonData = getEggPokemonDataByNameAndRole(
-    pokemonName,
-    roles[pokemonRole]
-  );
   const { stats, moves, passives, rarity } = pokemonData;
 
   // const [isMega, setIsMega] = useState(false);
@@ -548,7 +549,7 @@ export default function MovesAndSkillsModal(props) {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell>Lv120 Stats</TableCell>
+              <TableCell>Lv125 Stats</TableCell>
               <TableCell align="right">Base</TableCell>
               <TableCell align="right">Potential</TableCell>
               <TableCell align="right">Affinity</TableCell>

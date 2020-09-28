@@ -38,3 +38,23 @@ export const DELETE_COMMENT = 'delete_comment';
 export const CHANGE_FILTER = 'change_filter';
 export const CHANGE_SORT = 'change_sort';
 export const SET_SYNC_LEVEL = 'set_sync_level';
+
+export const ADD_TO_TEAM_GRID_LIST = 'add_to_team_grid_list';
+export const REMOVE_FROM_TEAM_GRID_LIST = 'remove_from_team_grid_list';
+// export const DISPLAY_GRID_DATA = 'display_grid_data';
+// export const HIDE_GRID_DATA = 'hide_grid_data';
+export const SUBTRACT_FROM_TEAM_REMAINING_ENERGY =
+  'subtract_from_team_remaining_energy';
+export const ADD_BACK_TO_TEAM_REMAINING_ENERGY =
+  'add_back_to_team_remaining_energy';
+
+export const SET_TEAM = 'set_team';
+export const SET_TEAM_SYNC_LEVELS = 'set_team_sync_levels';
+export const RESET_INDIVIDUAL_GRID = 'reset_individual_grid';
+export const RESET_TEAM_GRIDS = 'reset_team_grids';
+export const SAVE_CURRENT_TEAM_BUILD = 'save_current_team_build';
+export const LOAD_SELECTED_INDIVIDUAL_BUILD = 'load_selected_individual_build';
+export const LOAD_SELECTED_TEAM_BUILD = 'load_selected_team_build';
+export const DELETE_SELECTED_TEAM_BUILD = 'delete_selected_team_build';
+export const LOAD_TEAM_GRID_FROM_URL = 'load_team_grid_from_url';
+export const UPDATE_TEAM_URL = 'update_team_url';

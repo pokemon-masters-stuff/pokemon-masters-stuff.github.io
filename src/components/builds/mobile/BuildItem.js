@@ -1,35 +1,36 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import { withStyles } from "@material-ui/core";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { fade } from "@material-ui/core/styles/colorManipulator";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import EditIcon from "@material-ui/icons/Edit";
-import DeleteIcon from "@material-ui/icons/Delete";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
-import ShareBuildModal from "../common/ShareBuildModal";
-import EditBuildModal from "../common/EditBuildModal";
-import ReactTooltip from "react-tooltip";
-import { HexGrid, Layout, Hexagon, Text, Pattern } from "../../Hexagon";
-import styles from "./styles";
-import Comments from "../common/Comments";
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { withStyles } from '@material-ui/core';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import ShareBuildModal from '../common/ShareBuildModal';
+import EditBuildModal from '../common/EditBuildModal';
+import ReactTooltip from 'react-tooltip';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
+import styles from './styles';
+import Comments from '../common/Comments';
 import {
   addLike,
   removeLike,
   deleteBuild,
-} from "../../../actions/actionCreators";
+} from '../../../actions/actionCreators';
 import {
   getFillColorByMoveType,
   renderMoveName,
   // addSyncLvReq,
   removeHyphens,
-} from "../../../utils/functions";
-import { allThumbnails, allSyncGrids } from "../../../utils/constants";
-import BuildDescription from "./BuildDescription";
+  getPokemonDataByName,
+} from '../../../utils/functions';
+import { pokemonPictures, allSyncGrids } from '../../../utils/constants';
+import BuildDescription from './BuildDescription';
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -40,9 +41,9 @@ class BuildItem extends Component {
     this.state = {
       initialRender: true,
       mapSizeBoundaries: {
-        width: "100vw",
+        width: '100vw',
         height: 440,
-        viewbox: "-35 -35 70 70",
+        viewbox: '-35 -35 70 70',
       },
       screenWidth: document.body.clientWidth,
     };
@@ -53,7 +54,7 @@ class BuildItem extends Component {
   componentDidMount() {
     this._isMounted = true;
     setTimeout(() => this.fitMapToScreen(), 1000);
-    window.addEventListener("resize", this.fitMapToScreen);
+    window.addEventListener('resize', this.fitMapToScreen);
   }
 
   componentDidUpdate() {
@@ -62,7 +63,7 @@ class BuildItem extends Component {
 
   componentWillUnmount() {
     this._isMounted = false;
-    window.removeEventListener("resize", this.fitMapToScreen);
+    window.removeEventListener('resize', this.fitMapToScreen);
   }
 
   fitMapToScreen = () => {
@@ -76,20 +77,20 @@ class BuildItem extends Component {
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
-        width: "100vw",
+        width: '100vw',
         height: 768,
-        viewbox: "-50 -50 100 100",
+        viewbox: '-50 -50 100 100',
       };
     }
 
     if (clientWrappingBoundaries.width < 768) {
       updatedMapSizeBoundaries = {
-        width: "100vw",
+        width: '100vw',
         height: (
           ((clientWrappingBoundaries.width / 100) * 73.28) / 2 +
           clientWrappingBoundaries.width
         ).toFixed(),
-        viewbox: "-35 -35 70 70",
+        viewbox: '-35 -35 70 70',
       };
     }
 
@@ -112,7 +113,7 @@ class BuildItem extends Component {
   };
 
   handleClickDelete = (build, e) => {
-    window.confirm("Are you sure you wish to delete this build?") &&
+    window.confirm('Are you sure you wish to delete this build?') &&
       this.props.deleteBuild(build._id);
   };
 
@@ -122,7 +123,7 @@ class BuildItem extends Component {
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
-        cell.move.name.substring(0, 5) === "Move:"
+        cell.move.name.substring(0, 5) === 'Move:'
           ? cell.move.name.substring(6)
           : cell.move.name;
 
@@ -147,11 +148,11 @@ class BuildItem extends Component {
         }),
         className: this.props.darkMode
           ? build.selectedCellsById[cell.cellId]
-            ? "selected dark-mode build"
-            : "dark-mode build"
+            ? 'selected dark-mode build'
+            : 'dark-mode build'
           : build.selectedCellsById[cell.cellId]
-          ? "selected build"
-          : "build",
+          ? 'selected build'
+          : 'build',
       };
       return (
         <Hexagon {...hexagonProps}>
@@ -171,7 +172,7 @@ class BuildItem extends Component {
               textAnchor="middle"
               x="0"
               y="1.6em"
-              style={this.props.darkMode ? { fill: "white" } : null}
+              style={this.props.darkMode ? { fill: 'white' } : null}
             >
               ({cell.move.energyCost})
             </text>
@@ -182,7 +183,7 @@ class BuildItem extends Component {
 
   renderCenterGridText = (classes, pokemon) => {
     // Only renders text when no picture available
-    return allThumbnails[`${removeHyphens(pokemon)}`] === undefined ? (
+    return getPokemonDataByName(pokemon).monsterActorId === undefined ? (
       <Text className={classes.selectedPokemonCell}>
         {removeHyphens(pokemon)}
       </Text>
@@ -257,7 +258,7 @@ class BuildItem extends Component {
   };
 
   render() {
-    const currentUser = this.props.auth.user || "";
+    const currentUser = this.props.auth.user || '';
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build, darkMode } = this.props;
     const pokemon = build.pokemon.toLowerCase();
@@ -276,15 +277,15 @@ class BuildItem extends Component {
           <div className="pl-1 pr-1">
             <span
               style={{
-                fontWeight: "bold",
-                color: "#bdbdbd",
+                fontWeight: 'bold',
+                color: '#bdbdbd',
               }}
             >
-              Name:{" "}
+              Name:{' '}
             </span>
-            <span style={{ color: "white" }}>{build.buildName}</span>
-            <span style={{ fontWeight: "bold", color: "#bdbdbd" }}> by </span>
-            <span style={{ color: "white" }}>{build.username}</span>
+            <span style={{ color: 'white' }}>{build.buildName}</span>
+            <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}> by </span>
+            <span style={{ color: 'white' }}>{build.username}</span>
           </div>
         </Paper>
         <Divider light />
@@ -297,8 +298,8 @@ class BuildItem extends Component {
         <Paper
           style={
             !darkMode
-              ? { backgroundColor: fade("#fafafa", 0.6) }
-              : { backgroundColor: "black" }
+              ? { backgroundColor: fade('#fafafa', 0.6) }
+              : { backgroundColor: 'black' }
           }
         >
           <BuildDescription build={build} classes={classes} />
@@ -323,7 +324,7 @@ class BuildItem extends Component {
                   s={0}
                   fill={`url(#${pokemon})`}
                   data={{ cellId: 0 }}
-                  className={"center-grid"}
+                  className={'center-grid'}
                 >
                   {this.renderCenterGridText(classes, pokemon)}
                 </Hexagon>
@@ -331,7 +332,11 @@ class BuildItem extends Component {
               </Layout>
               <Pattern
                 id={pokemon}
-                link={allThumbnails[`${removeHyphens(pokemon)}`]}
+                link={
+                  pokemonPictures[
+                    getPokemonDataByName(pokemon).monsterActorId + '_128'
+                  ]
+                }
                 size={{ x: 10, y: 10 }}
               />
             </HexGrid>

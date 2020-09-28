@@ -15,7 +15,7 @@ import { SaveBuildButtonDesktop } from '../../components/SaveBuildButton';
 import { ShareButtonDesktop } from '../../components/ShareButton';
 import { PublishBuildButtonDesktop } from '../../components/PublishBuildButton';
 import LoadBuildDropdown from '../../components/LoadBuildDropdown';
-import { MovesAndSkillsButtonDesktop } from '../../components/MovesAndSkillsButton';
+import { MovesAndSkillsButtonDesktop } from '../../components/MovesAndSkills';
 
 class DesktopLayout extends Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class DesktopLayout extends Component {
   };
 
   render() {
-    const { pokemon, darkMode } = this.props;
+    const { pokemon, grid, darkMode } = this.props;
 
     return (
       <div className={`App ${darkMode ? 'dark-mode' : null}`}>
@@ -58,7 +58,11 @@ class DesktopLayout extends Component {
                     onDeleteHandler={this.handleOnDeleteSavedBuild}
                   />
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
-                    <MovesAndSkillsButtonDesktop />
+                    <MovesAndSkillsButtonDesktop
+                      pokemon={pokemon.selectedPokemon}
+                      selectedCellsById={grid.selectedCellsById}
+                      syncLevel={grid.syncLevel}
+                    />
                   </div>
                   <div style={{ marginLeft: 8, marginTop: 10 }}>
                     <SaveBuildButtonDesktop />
@@ -90,6 +94,7 @@ class DesktopLayout extends Component {
 
 const mapStateToProps = (state) => ({
   pokemon: state.pokemon,
+  grid: state.grid,
   darkMode: state.darkMode.mode,
 });
 

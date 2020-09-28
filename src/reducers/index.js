@@ -14,5 +14,5 @@ export default combineReducers({
   alert: alertReducer,
   auth: authReducer,
   build: publishedBuildReducer,
-  language: languageReducer
+  language: languageReducer,
 });
