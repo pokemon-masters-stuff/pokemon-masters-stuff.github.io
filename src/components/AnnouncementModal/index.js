@@ -45,7 +45,8 @@ const AnnouncementModal = (props) => {
           <DialogContentText>
             9/28/2020:
             <br />
-            Added new grids. Old Blastoise grid is kept for reference.
+            Added new grids. Old Blastoise grid is kept for reference. Also
+            updated stats to lv125.
             <br />
             <br />
             9/7/2020:
