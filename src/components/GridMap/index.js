@@ -26,7 +26,7 @@ import {
   capitalizeSyncPairNameForUrl,
   getPokemonDataByName,
 } from '../../utils/functions';
-import { pokemonPictures, allSyncGrids } from '../../utils/constants';
+import { allSyncGrids } from '../../utils/constants';
 import UI from '../../utils/translations';
 
 class GridMap extends Component {
@@ -337,11 +337,9 @@ class GridMap extends Component {
           </Layout>
           <Pattern
             id={this.props.pokemon}
-            link={
-              pokemonPictures[
-                getPokemonDataByName(this.props.pokemon).monsterActorId + '_128'
-              ]
-            }
+            link={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${
+              getPokemonDataByName(this.props.pokemon).monsterActorId
+            }_128.ktx.png`}
             size={{ x: 10, y: 10 }}
           />
         </HexGrid>

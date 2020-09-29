@@ -6,7 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import TeamMemberContainer from './TeamMemberContainer';
-import { trainerPictures, pokemonPictures } from '../../utils/constants';
 import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 import SyncPairNameField from './SyncPairNameField';
 import { setTeam } from '../../actions/actionCreators';
@@ -109,9 +108,7 @@ function TeamBuilder() {
                     component="img"
                     alt="Trainer Image"
                     height="256"
-                    image={
-                      trainerPictures[teamMember1Data.trainerActorId + '_256']
-                    }
+                    image={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${teamMember1Data.trainerActorId}_256.ktx.png`}
                     title="Trainer Image"
                     position="absolute"
                   />
@@ -168,9 +165,7 @@ function TeamBuilder() {
                     }}
                   >
                     <img
-                      src={
-                        pokemonPictures[teamMember1Data.monsterActorId + '_128']
-                      }
+                      src={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${teamMember1Data.monsterActorId}_128.ktx.png`}
                       style={{ height: 60 }}
                     />
                   </div>
@@ -242,9 +237,7 @@ function TeamBuilder() {
                     component="img"
                     alt="Trainer Image"
                     height="256"
-                    image={
-                      trainerPictures[teamMember2Data.trainerActorId + '_256']
-                    }
+                    image={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${teamMember2Data.trainerActorId}_256.ktx.png`}
                     title="Trainer Image"
                     position="absolute"
                   />
@@ -301,9 +294,7 @@ function TeamBuilder() {
                     }}
                   >
                     <img
-                      src={
-                        pokemonPictures[teamMember2Data.monsterActorId + '_128']
-                      }
+                      src={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${teamMember2Data.monsterActorId}_128.ktx.png`}
                       style={{ height: 60 }}
                     />
                   </div>
@@ -375,9 +366,7 @@ function TeamBuilder() {
                     component="img"
                     alt="Trainer Image"
                     height="256"
-                    image={
-                      trainerPictures[teamMember3Data.trainerActorId + '_256']
-                    }
+                    image={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${teamMember3Data.trainerActorId}_256.ktx.png`}
                     title="Trainer Image"
                     position="absolute"
                   />
@@ -434,9 +423,7 @@ function TeamBuilder() {
                     }}
                   >
                     <img
-                      src={
-                        pokemonPictures[teamMember3Data.monsterActorId + '_128']
-                      }
+                      src={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${teamMember3Data.monsterActorId}_128.ktx.png`}
                       style={{ height: 60 }}
                     />
                   </div>
