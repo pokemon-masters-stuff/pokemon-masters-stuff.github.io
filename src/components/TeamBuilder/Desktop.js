@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
@@ -55,25 +55,33 @@ function TeamBuilder() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
+
   const slot1OnChangeHandler = (e, newValue) => {
-    dispatch(setTeam({ slot: 'slot1', syncPair: newValue }));
+    let syncPair1EnglishName = newValue
+      ? syncPairNamesAndIds[language][newValue].syncPairEnglishName
+      : '';
+    // console.log('syncPair1EnglishName', syncPair1EnglishName);
+    dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1EnglishName }));
     dispatch(updateTeamUrl());
   };
   const slot2OnChangeHandler = (e, newValue) => {
-    dispatch(setTeam({ slot: 'slot2', syncPair: newValue }));
+    let syncPair2EnglishName = newValue
+      ? syncPairNamesAndIds[language][newValue].syncPairEnglishName
+      : '';
+    dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2EnglishName }));
     dispatch(updateTeamUrl());
   };
   const slot3OnChangeHandler = (e, newValue) => {
-    dispatch(setTeam({ slot: 'slot3', syncPair: newValue }));
+    let syncPair3EnglishName = newValue
+      ? syncPairNamesAndIds[language][newValue].syncPairEnglishName
+      : '';
+    dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3EnglishName }));
     dispatch(updateTeamUrl());
   };
 
-  let teamMember1Data =
-    syncPairNamesAndIds[language][teamMembers.slot1] || null;
-  let teamMember2Data =
-    syncPairNamesAndIds[language][teamMembers.slot2] || null;
-  let teamMember3Data =
-    syncPairNamesAndIds[language][teamMembers.slot3] || null;
+  let teamMember1Data = syncPairNamesAndIds['en'][teamMembers.slot1] || null;
+  let teamMember2Data = syncPairNamesAndIds['en'][teamMembers.slot2] || null;
+  let teamMember3Data = syncPairNamesAndIds['en'][teamMembers.slot3] || null;
 
   const loadUrlTeamData = () => {
     if (
@@ -99,8 +107,8 @@ function TeamBuilder() {
           .join(' & ');
       }
       dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1 }));
-      let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonName;
-
+      let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
+      // console.log('pokemon1', pokemon1);
       let syncPair1SyncLevel;
       if (getQueryStringValue('s1', location.search)) {
         syncPair1SyncLevel = getQueryStringValue('s1', location.search);
@@ -173,8 +181,8 @@ function TeamBuilder() {
           .join(' & ');
       }
       dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2 }));
-      let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonName;
-
+      let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonEnglishName;
+      // console.log('pokemon2', pokemon2);
       let syncPair2SyncLevel;
       if (getQueryStringValue('s2', location.search)) {
         syncPair2SyncLevel = getQueryStringValue('s2', location.search);
@@ -247,8 +255,8 @@ function TeamBuilder() {
           .join(' & ');
       }
       dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3 }));
-      let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonName;
-
+      let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonEnglishName;
+      // console.log('pokemon3', pokemon3);
       let syncPair3SyncLevel;
       if (getQueryStringValue('s3', location.search)) {
         syncPair3SyncLevel = getQueryStringValue('s3', location.search);
@@ -318,21 +326,39 @@ function TeamBuilder() {
           <Grid item>
             <SyncPairNameField
               label={'Left'}
-              syncPairName={teamMembers.slot1}
+              syncPairName={
+                syncPairNamesAndIds['en'][teamMembers.slot1]
+                  ? syncPairNamesAndIds['en'][teamMembers.slot1][
+                      'syncPairNameByLanguage'
+                    ][language]
+                  : ''
+              }
               handleOnChange={slot1OnChangeHandler}
             />
           </Grid>
           <Grid item>
             <SyncPairNameField
               label={'Middle'}
-              syncPairName={teamMembers.slot2}
+              syncPairName={
+                syncPairNamesAndIds['en'][teamMembers.slot2]
+                  ? syncPairNamesAndIds['en'][teamMembers.slot1][
+                      'syncPairNameByLanguage'
+                    ][language]
+                  : ''
+              }
               handleOnChange={slot2OnChangeHandler}
             />
           </Grid>
           <Grid item>
             <SyncPairNameField
               label={'Right'}
-              syncPairName={teamMembers.slot3}
+              syncPairName={
+                syncPairNamesAndIds['en'][teamMembers.slot3]
+                  ? syncPairNamesAndIds['en'][teamMembers.slot1][
+                      'syncPairNameByLanguage'
+                    ][language]
+                  : ''
+              }
               handleOnChange={slot3OnChangeHandler}
             />
           </Grid>
@@ -749,7 +775,9 @@ function TeamBuilder() {
                 <Grid item>
                   <Paper className={classes.paper}>
                     <TeamMemberContainer
-                      pokemon={teamMember1Data['pokemonName'].toLowerCase()}
+                      pokemon={teamMember1Data[
+                        'pokemonEnglishName'
+                      ].toLowerCase()}
                       slot={'slot1'}
                     />
                   </Paper>
@@ -761,7 +789,9 @@ function TeamBuilder() {
                 <Grid item>
                   <Paper className={classes.paper}>
                     <TeamMemberContainer
-                      pokemon={teamMember2Data['pokemonName'].toLowerCase()}
+                      pokemon={teamMember2Data[
+                        'pokemonEnglishName'
+                      ].toLowerCase()}
                       slot={'slot2'}
                     />
                   </Paper>
@@ -773,7 +803,9 @@ function TeamBuilder() {
                 <Grid item>
                   <Paper className={classes.paper}>
                     <TeamMemberContainer
-                      pokemon={teamMember3Data['pokemonName'].toLowerCase()}
+                      pokemon={teamMember3Data[
+                        'pokemonEnglishName'
+                      ].toLowerCase()}
                       slot={'slot3'}
                     />
                   </Paper>
