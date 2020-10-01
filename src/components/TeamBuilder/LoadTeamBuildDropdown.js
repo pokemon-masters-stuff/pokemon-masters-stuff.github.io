@@ -8,7 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
-import { updateUrl } from '../../actions/actionCreators';
+import { updateTeamUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 import {
   loadSelectedTeamBuild,
@@ -39,7 +39,7 @@ function LoadTeamDropdown(props) {
 
   const handleChange = (event) => {
     dispatch(loadSelectedTeamBuild({ buildId: event.target.value }));
-    // dispatch(updateUrl(selectedPokemon));
+    dispatch(updateTeamUrl());
   };
 
   const handleOpen = () => {

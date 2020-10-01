@@ -1,7 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import { resetIndividualGrid } from '../../actions/actionCreators';
+import {
+  resetIndividualGrid,
+  updateTeamUrl,
+} from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 
 const ResetGridButton = (props) => {
@@ -12,7 +15,7 @@ const ResetGridButton = (props) => {
 
   const handleOnClick = () => {
     dispatch(resetIndividualGrid(slot));
-    // dispatch(updateUrl(pokemon));
+    dispatch(updateTeamUrl());
   };
 
   return (

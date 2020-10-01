@@ -5,7 +5,7 @@ import ResetIndividualGridButton from './ResetIndividualGridButton';
 import LoadIndividualBuildDropdown from './LoadIndividualBuildDropdown';
 import SyncLevelDropdown from './SyncLevelDropdown';
 import { MovesAndSkillsButtonMobile } from '../MovesAndSkills';
-import { setTeamSyncLevels } from '../../actions/actionCreators';
+import { setTeamSyncLevels, updateTeamUrl } from '../../actions/actionCreators';
 
 const TeamMemberContainer = (props) => {
   const dispatch = useDispatch();
@@ -24,6 +24,7 @@ const TeamMemberContainer = (props) => {
   const handleChangeSyncLevel = (syncLevel) => {
     setSyncLevel(syncLevel);
     dispatch(setTeamSyncLevels({ slot: slot, syncLevel: syncLevel }));
+    dispatch(updateTeamUrl());
   };
 
   const [

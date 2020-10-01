@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import { resetTeamGrids } from '../../actions/actionCreators';
+import { resetTeam, updateTeamUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 
 const ResetTeamButton = () => {
@@ -10,8 +10,8 @@ const ResetTeamButton = () => {
   //   const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
   const handleOnClick = () => {
-    dispatch(resetTeamGrids());
-    // dispatch(updateUrl(pokemon));
+    dispatch(resetTeam());
+    dispatch(updateTeamUrl());
   };
 
   return (

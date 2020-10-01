@@ -6,16 +6,14 @@ import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
 import styles from './styles';
 import { getQueryStringValue } from '../../queryString';
+import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 import {
-  selectPokemon,
   addToTeamGridList,
   removeFromTeamGridList,
   subtractFromTeamRemainingEnergy,
   addBackToTeamRemainingEnergy,
-  resetGrids,
-  loadGridFromUrl,
-  updateUrl,
-  // setSyncLevel,
+  updateTeamUrl,
+  // setTeamSyncLevels,
 } from '../../actions/actionCreators';
 import {
   getFillColorByMoveType,
@@ -41,64 +39,9 @@ class GridMap extends Component {
     screenWidth: document.body.clientWidth,
   };
 
-  // to change to loadUrlgridData
-  //   loadUrlGridData() {
-  //     let pokemonFromUrl;
-  //     if (getQueryStringValue("p")) {
-  //       pokemonFromUrl = getQueryStringValue("p");
-  //       this.props.selectPokemon(pokemonFromUrl);
-  //     }
-
-  //     let syncLevelFromUrl;
-  //     if (getQueryStringValue("s")) {
-  //       syncLevelFromUrl = getQueryStringValue("s");
-  //       this.props.setSyncLevel(syncLevelFromUrl);
-  //     } else {
-  //       this.props.setSyncLevel("5");
-  //     }
-
-  //     // if user uses an url that includes grid data, generate gridmap based on url
-  //     if (getQueryStringValue("grid")) {
-  //       this.props.resetGrids();
-  //       let remainingEnergy = Number(getQueryStringValue("e"));
-  //       let orbSpent = Number(getQueryStringValue("o"));
-
-  //       let cellData = {};
-  //       let selectedCellByIdFromUrl = {};
-
-  //       getQueryStringValue("grid").map((id) => {
-  //         cellData =
-  //           allSyncGrids[this.props.language][
-  //             `${removeHyphens(
-  //               pokemonFromUrl
-  //             ).toLowerCase()}GridData${this.props.language.toUpperCase()}`
-  //           ][Number(id)];
-
-  //         selectedCellByIdFromUrl = {
-  //           cellId: cellData.cellId,
-  //           name: cellData.move.name,
-  //           description: cellData.move.description,
-  //           energy: cellData.move.energyCost,
-  //           moveId: cellData.ability.moveId,
-  //           value: cellData.ability.value,
-  //           type: cellData.ability.type,
-  //         };
-
-  //         return this.props.loadGridFromUrl(
-  //           selectedCellByIdFromUrl,
-  //           remainingEnergy,
-  //           orbSpent
-  //         );
-  //       });
-  //     }
-  //   }
-
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
-    // this.loadUrlGridData();
-
-    getQueryStringValue('p') && this.props.updateUrl(getQueryStringValue('p'));
   }
 
   componentDidUpdate() {
@@ -198,7 +141,6 @@ class GridMap extends Component {
 
   handleClick(e, index, data) {
     e.stopPropagation();
-    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
     if (!this.props.grid.teamSelectedCellsById[this.props.slot][data.cellId]) {
       this.props.addToTeamGridList({ gridData: data, slot: this.props.slot });
@@ -206,15 +148,7 @@ class GridMap extends Component {
         gridData: data,
         slot: this.props.slot,
       });
-      if (this.props.pokemon.indexOf('_') !== -1) {
-        // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
-        this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
-      } else {
-        this.props.updateUrl(
-          this.props.pokemon.charAt(0).toUpperCase() +
-            this.props.pokemon.slice(1)
-        );
-      }
+      this.props.updateTeamUrl();
     } else {
       this.props.removeFromTeamGridList({
         gridData: data,
@@ -224,15 +158,7 @@ class GridMap extends Component {
         gridData: data,
         slot: this.props.slot,
       });
-      if (this.props.pokemon.indexOf('_') !== -1) {
-        // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
-        this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
-      } else {
-        this.props.updateUrl(
-          this.props.pokemon.charAt(0).toUpperCase() +
-            this.props.pokemon.slice(1)
-        );
-      }
+      this.props.updateTeamUrl();
     }
   }
 
@@ -330,10 +256,7 @@ class GridMap extends Component {
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, language } = this.props;
-    // console.log(
-    //   'this.props.grid.teamSelectedCellsById',
-    //   this.props.grid.teamSelectedCellsById
-    // );
+
     return initialRender ? (
       <div className={classes.progressWrapper}>
         <CircularProgress color="secondary" />
@@ -399,13 +322,10 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-  selectPokemon,
   addToTeamGridList,
   removeFromTeamGridList,
   subtractFromTeamRemainingEnergy,
   addBackToTeamRemainingEnergy,
-  resetGrids,
-  loadGridFromUrl,
-  updateUrl,
-  // setSyncLevel,
+  updateTeamUrl,
+  // setTeamSyncLevels,
 })(withStyles(styles)(GridMap));

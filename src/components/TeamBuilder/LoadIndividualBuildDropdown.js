@@ -8,7 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 // import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
-// import { updateUrl } from '../../actions/actionCreators';
+import { updateTeamUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 import {
   loadSelectedIndividualBuild,
@@ -40,7 +40,7 @@ function LoadBuildDropdown(props) {
     dispatch(
       loadSelectedIndividualBuild({ buildId: event.target.value, slot: slot })
     );
-    // dispatch(updateUrl(pokemon));
+    dispatch(updateTeamUrl());
   };
 
   // const handleOpen = () => {

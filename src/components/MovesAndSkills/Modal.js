@@ -503,11 +503,15 @@ export default function MovesAndSkillsModal(props) {
     setIsMovesAndSkillsModalVisible,
   } = props;
 
+  // console.log('selectedCellsById', selectedCellsById);
+
   // const selectedCellsById = grid.selectedCellsById;
 
   // const syncLevel = useSelector((state) => state.grid.syncLevel);
 
   const selectedCellsArray = Object.values(selectedCellsById);
+
+  // console.log('selectedCellsArray', selectedCellsArray);
 
   let hash = {};
 

@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -8,10 +9,21 @@ import CardMedia from '@material-ui/core/CardMedia';
 import TeamMemberContainer from './TeamMemberContainer';
 import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 import SyncPairNameField from './SyncPairNameField';
-import { setTeam } from '../../actions/actionCreators';
+import {
+  setTeam,
+  updateTeamUrl,
+  setTeamSyncLevels,
+  loadTeamGridFromUrl,
+  resetTeam,
+} from '../../actions/actionCreators';
+import { removeHyphens } from '../../utils/functions';
+import { getQueryStringValue } from '../../queryString';
 import SaveBuildButton from './SaveBuildButton';
 import LoadTeamBuildDropdown from './LoadTeamBuildDropdown';
 import ResetTeamButton from './ResetTeamButton';
+import { allSyncGrids } from '../../utils/constants';
+import ShareTeamButton from './ShareTeamButton';
+import ShareTeamModal from './ShareTeamModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,17 +51,21 @@ const useStyles = makeStyles((theme) => ({
 
 function TeamBuilder() {
   const classes = useStyles();
+  const location = useLocation();
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
   const slot1OnChangeHandler = (e, newValue) => {
     dispatch(setTeam({ slot: 'slot1', syncPair: newValue }));
+    dispatch(updateTeamUrl());
   };
   const slot2OnChangeHandler = (e, newValue) => {
     dispatch(setTeam({ slot: 'slot2', syncPair: newValue }));
+    dispatch(updateTeamUrl());
   };
   const slot3OnChangeHandler = (e, newValue) => {
     dispatch(setTeam({ slot: 'slot3', syncPair: newValue }));
+    dispatch(updateTeamUrl());
   };
 
   let teamMember1Data =
@@ -59,7 +75,242 @@ function TeamBuilder() {
   let teamMember3Data =
     syncPairNamesAndIds[language][teamMembers.slot3] || null;
 
-  // To Add ShareTeam
+  const loadUrlTeamData = () => {
+    if (
+      getQueryStringValue('sp1', location.search) ||
+      getQueryStringValue('sp2', location.search) ||
+      getQueryStringValue('sp3', location.search)
+    ) {
+      dispatch(resetTeam());
+    }
+    let syncPair1;
+    if (getQueryStringValue('sp1', location.search)) {
+      if (
+        getQueryStringValue('sp1', location.search) === 'Lt.Surge_Electrode'
+      ) {
+        syncPair1 = 'Lt. Surge & Electrode';
+      } else if (
+        getQueryStringValue('sp1', location.search) === 'CrasherWake_Floatzel'
+      ) {
+        syncPair1 = 'Crasher Wake & Floatzel';
+      } else {
+        syncPair1 = getQueryStringValue('sp1', location.search)
+          .split('_')
+          .join(' & ');
+      }
+      dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1 }));
+      let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonName;
+
+      let syncPair1SyncLevel;
+      if (getQueryStringValue('s1', location.search)) {
+        syncPair1SyncLevel = getQueryStringValue('s1', location.search);
+        dispatch(
+          setTeamSyncLevels({
+            slot: 'slot1',
+            syncLevel: syncPair1SyncLevel,
+          })
+        );
+      } else {
+        dispatch(
+          setTeamSyncLevels({
+            slot: 'slot1',
+            syncLevel: '5',
+          })
+        );
+      }
+
+      if (getQueryStringValue('g1', location.search)) {
+        let remainingEnergy = Number(
+          getQueryStringValue('e1', location.search)
+        );
+        let orbSpent = Number(getQueryStringValue('o1', location.search));
+        let cellData = {};
+        let selectedCellByIdFromUrl = {};
+
+        getQueryStringValue('g1', location.search).map((id) => {
+          cellData =
+            allSyncGrids[language][
+              `${removeHyphens(
+                pokemon1
+              ).toLowerCase()}GridData${language.toUpperCase()}`
+            ][Number(id)];
+
+          selectedCellByIdFromUrl = {
+            cellId: cellData.cellId,
+            name: cellData.move.name,
+            description: cellData.move.description,
+            energy: cellData.move.energyCost,
+            moveId: cellData.ability.moveId,
+            value: cellData.ability.value,
+            type: cellData.ability.type,
+          };
+
+          return dispatch(
+            loadTeamGridFromUrl({
+              slot: 'slot1',
+              selectedCellByIdFromUrl,
+              remainingEnergy,
+              orbSpent,
+            })
+          );
+        });
+      }
+    }
+
+    let syncPair2;
+    if (getQueryStringValue('sp2', location.search)) {
+      if (
+        getQueryStringValue('sp2', location.search) === 'Lt.Surge_Electrode'
+      ) {
+        syncPair2 = 'Lt. Surge & Electrode';
+      } else if (
+        getQueryStringValue('sp2', location.search) === 'CrasherWake_Floatzel'
+      ) {
+        syncPair2 = 'Crasher Wake & Floatzel';
+      } else {
+        syncPair2 = getQueryStringValue('sp2', location.search)
+          .split('_')
+          .join(' & ');
+      }
+      dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2 }));
+      let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonName;
+
+      let syncPair2SyncLevel;
+      if (getQueryStringValue('s2', location.search)) {
+        syncPair2SyncLevel = getQueryStringValue('s2', location.search);
+        dispatch(
+          setTeamSyncLevels({
+            slot: 'slot2',
+            syncLevel: syncPair2SyncLevel,
+          })
+        );
+      } else {
+        dispatch(
+          setTeamSyncLevels({
+            slot: 'slot2',
+            syncLevel: '5',
+          })
+        );
+      }
+
+      if (getQueryStringValue('g2', location.search)) {
+        let remainingEnergy = Number(
+          getQueryStringValue('e2', location.search)
+        );
+        let orbSpent = Number(getQueryStringValue('o2', location.search));
+        let cellData = {};
+        let selectedCellByIdFromUrl = {};
+
+        getQueryStringValue('g2', location.search).map((id) => {
+          cellData =
+            allSyncGrids[language][
+              `${removeHyphens(
+                pokemon2
+              ).toLowerCase()}GridData${language.toUpperCase()}`
+            ][Number(id)];
+
+          selectedCellByIdFromUrl = {
+            cellId: cellData.cellId,
+            name: cellData.move.name,
+            description: cellData.move.description,
+            energy: cellData.move.energyCost,
+            moveId: cellData.ability.moveId,
+            value: cellData.ability.value,
+            type: cellData.ability.type,
+          };
+
+          return dispatch(
+            loadTeamGridFromUrl({
+              slot: 'slot2',
+              selectedCellByIdFromUrl,
+              remainingEnergy,
+              orbSpent,
+            })
+          );
+        });
+      }
+    }
+
+    let syncPair3;
+    if (getQueryStringValue('sp3', location.search)) {
+      if (
+        getQueryStringValue('sp3', location.search) === 'Lt.Surge_Electrode'
+      ) {
+        syncPair3 = 'Lt. Surge & Electrode';
+      } else if (
+        getQueryStringValue('sp3', location.search) === 'CrasherWake_Floatzel'
+      ) {
+        syncPair3 = 'Crasher Wake & Floatzel';
+      } else {
+        syncPair3 = getQueryStringValue('sp3', location.search)
+          .split('_')
+          .join(' & ');
+      }
+      dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3 }));
+      let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonName;
+
+      let syncPair3SyncLevel;
+      if (getQueryStringValue('s3', location.search)) {
+        syncPair3SyncLevel = getQueryStringValue('s3', location.search);
+        dispatch(
+          setTeamSyncLevels({
+            slot: 'slot3',
+            syncLevel: syncPair3SyncLevel,
+          })
+        );
+      } else {
+        dispatch(
+          setTeamSyncLevels({
+            slot: 'slot3',
+            syncLevel: '5',
+          })
+        );
+      }
+
+      if (getQueryStringValue('g3', location.search)) {
+        let remainingEnergy = Number(
+          getQueryStringValue('e3', location.search)
+        );
+        let orbSpent = Number(getQueryStringValue('o3', location.search));
+        let cellData = {};
+        let selectedCellByIdFromUrl = {};
+
+        getQueryStringValue('g3', location.search).map((id) => {
+          cellData =
+            allSyncGrids[language][
+              `${removeHyphens(
+                pokemon3
+              ).toLowerCase()}GridData${language.toUpperCase()}`
+            ][Number(id)];
+
+          selectedCellByIdFromUrl = {
+            cellId: cellData.cellId,
+            name: cellData.move.name,
+            description: cellData.move.description,
+            energy: cellData.move.energyCost,
+            moveId: cellData.ability.moveId,
+            value: cellData.ability.value,
+            type: cellData.ability.type,
+          };
+
+          return dispatch(
+            loadTeamGridFromUrl({
+              slot: 'slot3',
+              selectedCellByIdFromUrl,
+              remainingEnergy,
+              orbSpent,
+            })
+          );
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
+    loadUrlTeamData();
+    dispatch(updateTeamUrl());
+  }, []);
+
   return (
     <Fragment>
       <Grid container className={classes.root} spacing={3}>
@@ -98,6 +349,8 @@ function TeamBuilder() {
           </div>
           <LoadTeamBuildDropdown />
           <ResetTeamButton />
+          <ShareTeamButton />
+          <ShareTeamModal />
         </Grid>
         <Grid container justify="center" spacing={0}>
           <Grid item>

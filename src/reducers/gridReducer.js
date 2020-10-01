@@ -22,7 +22,7 @@ import {
   SET_TEAM,
   SET_TEAM_SYNC_LEVELS,
   RESET_INDIVIDUAL_GRID,
-  RESET_TEAM_GRIDS,
+  RESET_TEAM,
   SAVE_CURRENT_TEAM_BUILD,
   LOAD_SELECTED_INDIVIDUAL_BUILD,
   LOAD_SELECTED_TEAM_BUILD,
@@ -51,7 +51,6 @@ const initialState = {
   syncLevel: '5',
   // team builder
   teamMembers: { slot1: '', slot2: '', slot3: '' },
-  // teamGridData: { slot1: {}, slot2: {}, slot3: {} },
   teamRemainingEnergy: { slot1: 60, slot2: 60, slot3: 60 },
   teamOrbSpent: { slot1: 0, slot2: 0, slot3: 0 },
   teamSelectedCellsById: { slot1: {}, slot2: {}, slot3: {} },
@@ -73,8 +72,6 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-  // console.log('action.type', action.type);
-  // console.log('action.payload', action.payload);
   let syncPair = {};
   let gridData = {};
   let slot = '';
@@ -219,7 +216,8 @@ export default function (state = initialState, action) {
         ...state,
         selectedCellsById: {
           ...state.selectedCellsById,
-          [action.gridData.cellId]: action.gridData,
+          [action.selectedCellByIdFromUrl.cellId]:
+            action.selectedCellByIdFromUrl,
         },
         remainingEnergy: action.remainingEnergy,
         orbSpent: action.orbSpent,
@@ -272,6 +270,10 @@ export default function (state = initialState, action) {
       return {
         ...state,
         teamMembers: { ...state.teamMembers, [slot]: syncPair },
+        teamRemainingEnergy: { ...state.teamRemainingEnergy, [slot]: 60 },
+        teamOrbSpent: { ...state.teamOrbSpent, [slot]: 0 },
+        teamSelectedCellsById: { ...state.teamSelectedCellsById, [slot]: {} },
+        teamSyncLevels: { ...state.teamSyncLevels, [slot]: '5' },
       };
     case ADD_TO_TEAM_GRID_LIST: // updated
       gridData = action.payload.gridData;
@@ -460,21 +462,30 @@ export default function (state = initialState, action) {
           ],
         },
       };
-    // case LOAD_TEAM_GRID_FROM_URL:
-    //   return {
-    //     ...state,
-    //     selectedCellsById: {
-    //       ...state.selectedCellsById,
-    //       [action.payload.gridData.cellId]: action.payload.gridData,
-    //     },
-    //     remainingEnergy: action.remainingEnergy,
-    //     orbSpent: action.orbSpent,
-    //   };
-    case RESET_TEAM_GRIDS: // updated
+    case LOAD_TEAM_GRID_FROM_URL: // updated
+      slot = action.payload.slot;
+      let selectedCellByIdFromUrl = action.payload.selectedCellByIdFromUrl;
+      let remainingEnergy = action.payload.remainingEnergy;
+      let orbSpent = action.payload.orbSpent;
+      return {
+        ...state,
+        teamSelectedCellsById: {
+          ...state.teamSelectedCellsById,
+          [slot]: {
+            ...state.teamSelectedCellsById[slot],
+            [selectedCellByIdFromUrl.cellId]: selectedCellByIdFromUrl,
+          },
+        },
+        teamRemainingEnergy: {
+          ...state.teamRemainingEnergy,
+          [slot]: remainingEnergy,
+        },
+        teamOrbSpent: { ...state.teamOrbSpent, [slot]: orbSpent },
+      };
+    case RESET_TEAM: // updated
       return {
         ...state,
         teamMembers: { slot1: '', slot2: '', slot3: '' },
-        // teamGridData: { slot1: {}, slot2: {}, slot3: {} },
         teamRemainingEnergy: { slot1: 60, slot2: 60, slot3: 60 },
         teamOrbSpent: { slot1: 0, slot2: 0, slot3: 0 },
         teamSelectedCellsById: { slot1: {}, slot2: {}, slot3: {} },
@@ -489,7 +500,6 @@ export default function (state = initialState, action) {
       slot = action.payload;
       return {
         ...state,
-        // teamGridData: { ...state.teamGridData, [slot]: {} },
         teamRemainingEnergy: {
           ...state.teamRemainingEnergy,
           [slot]: 60,
@@ -504,29 +514,92 @@ export default function (state = initialState, action) {
           [slot]: { id: '', name: '' },
         },
       };
-    // case UPDATE_TEAM_URL:
-    //   let b64GridUrlArray;
-    //   const gridUrlArray =
-    //     Object.keys(state.selectedCellsById).length === 0
-    //       ? ''
-    //       : Object.keys(state.selectedCellsById).map((e) => {
-    //           return e.slice(-2);
-    //         });
-    //   if (gridUrlArray === '') {
-    //     b64GridUrlArray = '';
-    //   } else {
-    //     let len = gridUrlArray.length;
-    //     let chArray = new Array(len);
-    //     for (let i = 0; i < len; i++) {
-    //       chArray[i] = String.fromCharCode(gridUrlArray[i]);
-    //     }
-    //     b64GridUrlArray = '&grid=' + window.btoa(chArray.join(''));
-    //   }
+    case UPDATE_TEAM_URL:
+      let syncPair1 = state.teamMembers.slot1
+        ? state.teamMembers.slot1.replace(/\s+/g, '').replace(/&/g, '_')
+        : '';
+      let syncPair2 = state.teamMembers.slot2
+        ? state.teamMembers.slot2.replace(/\s+/g, '').replace(/&/g, '_')
+        : '';
+      let syncPair3 = state.teamMembers.slot3
+        ? state.teamMembers.slot3.replace(/\s+/g, '').replace(/&/g, '_')
+        : '';
+      let slot1B64GridUrlArray = '';
+      let slot2B64GridUrlArray = '';
+      let slot3B64GridUrlArray = '';
+      if (syncPair1) {
+        const slot1GridUrlArray =
+          Object.keys(state.teamSelectedCellsById.slot1).length === 0
+            ? ''
+            : Object.keys(state.teamSelectedCellsById.slot1).map((e) => {
+                return e.slice(-2);
+              });
+        if (slot1GridUrlArray === '') {
+          slot1B64GridUrlArray = '';
+        } else {
+          let len = slot1GridUrlArray.length;
+          let chArray = new Array(len);
+          for (let i = 0; i < len; i++) {
+            chArray[i] = String.fromCharCode(slot1GridUrlArray[i]);
+          }
+          slot1B64GridUrlArray = window.btoa(chArray.join(''));
+        }
+      }
 
-    //   return {
-    //     ...state,
-    //     url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}&s=${state.syncLevel}`,
-    //   };
+      if (syncPair2) {
+        const slot2GridUrlArray =
+          Object.keys(state.teamSelectedCellsById.slot2).length === 0
+            ? ''
+            : Object.keys(state.teamSelectedCellsById.slot2).map((e) => {
+                return e.slice(-2);
+              });
+        if (slot2GridUrlArray === '') {
+          slot2B64GridUrlArray = '';
+        } else {
+          let len = slot2GridUrlArray.length;
+          let chArray = new Array(len);
+          for (let i = 0; i < len; i++) {
+            chArray[i] = String.fromCharCode(slot2GridUrlArray[i]);
+          }
+          slot2B64GridUrlArray = window.btoa(chArray.join(''));
+        }
+      }
+
+      if (syncPair3) {
+        const slot3GridUrlArray =
+          Object.keys(state.teamSelectedCellsById.slot3).length === 0
+            ? ''
+            : Object.keys(state.teamSelectedCellsById.slot3).map((e) => {
+                return e.slice(-2);
+              });
+        if (slot3GridUrlArray === '') {
+          slot3B64GridUrlArray = '';
+        } else {
+          let len = slot3GridUrlArray.length;
+          let chArray = new Array(len);
+          for (let i = 0; i < len; i++) {
+            chArray[i] = String.fromCharCode(slot3GridUrlArray[i]);
+          }
+          slot3B64GridUrlArray = window.btoa(chArray.join(''));
+        }
+      }
+
+      let syncPair1Url = syncPair1
+        ? `sp1=${syncPair1}&e1=${state.teamRemainingEnergy.slot1}&o1=${state.teamOrbSpent.slot1}&g1=${slot1B64GridUrlArray}&s1=${state.teamSyncLevels.slot1}`
+        : '';
+      let syncPair2Url = syncPair2
+        ? `sp2=${syncPair2}&e2=${state.teamRemainingEnergy.slot2}&o2=${state.teamOrbSpent.slot2}&g2=${slot2B64GridUrlArray}&s2=${state.teamSyncLevels.slot2}`
+        : '';
+      let syncPair3Url = syncPair3
+        ? `sp3=${syncPair3}&e3=${state.teamRemainingEnergy.slot3}&o3=${state.teamOrbSpent.slot3}&g3=${slot3B64GridUrlArray}&s3=${state.teamSyncLevels.slot3}`
+        : '';
+
+      let teamUrl = `http://localhost:3000/#/team-builder/?${syncPair1Url}&${syncPair2Url}&${syncPair3Url}`;
+
+      return {
+        ...state,
+        teamUrl: teamUrl,
+      };
     case SET_TEAM_SYNC_LEVELS: // updated
       slot = action.payload.slot;
       let syncLevel = action.payload.syncLevel;
