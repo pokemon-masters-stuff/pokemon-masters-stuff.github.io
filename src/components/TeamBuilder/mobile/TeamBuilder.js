@@ -76,6 +76,10 @@ function TeamBuilder() {
         getQueryStringValue('sp1', location.search) === 'CrasherWake_Floatzel'
       ) {
         syncPair1 = 'Crasher Wake & Floatzel';
+      } else if (
+        getQueryStringValue('sp1', location.search) === 'ProfessorOak_Mew'
+      ) {
+        syncPair1 = 'Professor Oak & Mew';
       } else {
         syncPair1 = getQueryStringValue('sp1', location.search)
           .split('_')
@@ -150,6 +154,10 @@ function TeamBuilder() {
         getQueryStringValue('sp2', location.search) === 'CrasherWake_Floatzel'
       ) {
         syncPair2 = 'Crasher Wake & Floatzel';
+      } else if (
+        getQueryStringValue('sp2', location.search) === 'ProfessorOak_Mew'
+      ) {
+        syncPair2 = 'Professor Oak & Mew';
       } else {
         syncPair2 = getQueryStringValue('sp2', location.search)
           .split('_')
@@ -224,6 +232,10 @@ function TeamBuilder() {
         getQueryStringValue('sp3', location.search) === 'CrasherWake_Floatzel'
       ) {
         syncPair3 = 'Crasher Wake & Floatzel';
+      } else if (
+        getQueryStringValue('sp3', location.search) === 'ProfessorOak_Mew'
+      ) {
+        syncPair3 = 'Professor Oak & Mew';
       } else {
         syncPair3 = getQueryStringValue('sp3', location.search)
           .split('_')
