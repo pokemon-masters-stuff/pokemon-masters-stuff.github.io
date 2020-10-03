@@ -150,7 +150,7 @@ function TeamBuilder() {
       ) {
         syncPair2 = 'Crasher Wake & Floatzel';
       } else if (
-        getQueryStringValue('sp1', location.search) === 'ProfessorOak_Mew'
+        getQueryStringValue('sp2', location.search) === 'ProfessorOak_Mew'
       ) {
         syncPair2 = 'Professor Oak & Mew';
       } else {
@@ -228,7 +228,7 @@ function TeamBuilder() {
       ) {
         syncPair3 = 'Crasher Wake & Floatzel';
       } else if (
-        getQueryStringValue('sp1', location.search) === 'ProfessorOak_Mew'
+        getQueryStringValue('sp3', location.search) === 'ProfessorOak_Mew'
       ) {
         syncPair3 = 'Professor Oak & Mew';
       } else {
