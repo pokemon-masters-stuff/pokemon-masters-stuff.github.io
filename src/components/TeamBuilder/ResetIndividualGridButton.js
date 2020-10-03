@@ -11,7 +11,6 @@ const ResetGridButton = (props) => {
   const { slot } = props;
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  //   const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
   const handleOnClick = () => {
     dispatch(resetIndividualGrid(slot));

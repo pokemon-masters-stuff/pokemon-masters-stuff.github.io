@@ -7,7 +7,6 @@ import UI from '../../utils/translations';
 const ResetTeamButton = () => {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  //   const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
 
   const handleOnClick = () => {
     dispatch(resetTeam());

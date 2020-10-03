@@ -20,7 +20,6 @@ function LoadTeamDropdown(props) {
 
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  // const teamMembers = useSelector((state) => state.grid.teamMembers);
   const selectedBuild = useSelector((state) => state.grid.teamSelectedBuild);
   const savedBuilds = useSelector((state) =>
     state.grid.teamSavedBuilds.allIds.map(

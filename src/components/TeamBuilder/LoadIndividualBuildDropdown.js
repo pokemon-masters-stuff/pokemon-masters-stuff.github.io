@@ -1,19 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/core';
-// import IconButton from '@material-ui/core/IconButton';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-// import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
 import { updateTeamUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
-import {
-  loadSelectedIndividualBuild,
-  // deleteSelectedBuild,
-} from '../../actions/actionCreators';
+import { loadSelectedIndividualBuild } from '../../actions/actionCreators';
 
 function LoadBuildDropdown(props) {
   const { classes, pokemon, slot } = props;
@@ -29,7 +24,6 @@ function LoadBuildDropdown(props) {
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
-  // const [showClearIcon, setShowClearIcon] = React.useState(false);
 
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
@@ -42,20 +36,6 @@ function LoadBuildDropdown(props) {
     );
     dispatch(updateTeamUrl());
   };
-
-  // const handleOpen = () => {
-  //   setShowClearIcon(true);
-  // };
-
-  // const handleClose = () => {
-  //   setShowClearIcon(false);
-  // };
-
-  // const handleDelete = (buildId, event) => {
-  //   event.stopPropagation();
-  //   window.confirm('Are you sure you wish to delete this save?') &&
-  //     dispatch(deleteSelectedBuild(buildId));
-  // };
 
   return (
     <FormControl
@@ -71,8 +51,6 @@ function LoadBuildDropdown(props) {
         labelWidth={labelWidth}
         value={selectedBuild[slot].id}
         onChange={handleChange}
-        // onOpen={handleOpen}
-        // onClose={handleClose}
       >
         {Boolean(savedBuilds.length) &&
           savedBuilds.map(
@@ -80,14 +58,6 @@ function LoadBuildDropdown(props) {
               build.pokemon.toLowerCase() === pokemon.toLowerCase() && (
                 <MenuItem key={build.id} value={build.id}>
                   {build.name}
-                  {/* {showClearIcon ? (
-                    <IconButton
-                      onClick={handleDelete.bind(this, build.id)}
-                      style={{ marginLeft: 'auto', padding: 0 }}
-                    >
-                      <HighlightOffIcon />
-                    </IconButton>
-                  ) : null} */}
                 </MenuItem>
               )
           )}

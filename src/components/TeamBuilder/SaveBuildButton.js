@@ -11,11 +11,11 @@ import {
   saveCurrentTeamBuild,
   deleteSelectedTeamBuild,
 } from '../../actions/actionCreators';
+import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 
 const SaveBuildButton = () => {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  // const darkMode = useSelector((state) => state.darkMode.mode);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
   const teamSavedBuilds = useSelector((state) =>
     state.grid.teamSavedBuilds.allIds.map(
@@ -24,36 +24,6 @@ const SaveBuildButton = () => {
   );
   const newBuildNameRef = useRef(null);
 
-  // handleOnSaveBuild = () => {
-  //   let userConfirmation = true;
-  //   if (this.newBuildNameRef.current.value) {
-  //     // If already has a save with the same name, delete old save
-  //     for (let build in this.props.savedBuilds) {
-  //       if (
-  //         this.props.savedBuilds[build].name ===
-  //           this.newBuildNameRef.current.value &&
-  //         this.props.savedBuilds[build].pokemon ===
-  //           this.props.pokemon.selectedPokemon
-  //       ) {
-  //         userConfirmation = window.confirm(
-  //           'There is a save with the same name. Do you wish to overwrite it?'
-  //         );
-  //         userConfirmation &&
-  //           this.props.deleteSelectedBuild({
-  //             buildId: this.props.savedBuilds[build].id,
-  //           });
-  //       }
-  //     }
-  //     userConfirmation &&
-  //       this.props.saveCurrentBuild({
-  //         selectedPokemon: this.props.pokemon.selectedPokemon,
-  //         buildName: this.newBuildNameRef.current.value,
-  //       });
-  //     this.handleOnCloseSaveBuildModal();
-  //   } else {
-  //     alert('Please enter a name');
-  //   }
-  // };
   const [isSaveBuildModalVisible, setIsSaveBuildModalVisible] = useState(false);
 
   const handleOnCloseSaveBuildModal = () => {
@@ -61,7 +31,23 @@ const SaveBuildButton = () => {
   };
 
   const handleOnOpenSaveBuildModal = () => {
-    setIsSaveBuildModalVisible(true);
+    if (
+      teamMembers.slot1 &&
+      teamMembers.slot2 &&
+      teamMembers.slot3 &&
+      (syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
+        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ||
+        syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
+          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName ||
+        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ===
+          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName)
+    ) {
+      return alert(
+        'A Trainer with the same name is already on this team. Please choose another.'
+      );
+    } else {
+      setIsSaveBuildModalVisible(true);
+    }
   };
 
   // handleOnClickSaveBuild = () => {
@@ -73,10 +59,7 @@ const SaveBuildButton = () => {
     if (newBuildNameRef.current.value) {
       // If already have a save with the same name, delete old save
       for (let build in teamSavedBuilds) {
-        if (
-          teamSavedBuilds[build].name === newBuildNameRef.current.value &&
-          teamSavedBuilds[build].pokemon === teamMembers
-        ) {
+        if (teamSavedBuilds[build].name === newBuildNameRef.current.value) {
           userConfirmation = window.confirm(
             'There is a save with the same name. Do you wish to overwrite it?'
           );

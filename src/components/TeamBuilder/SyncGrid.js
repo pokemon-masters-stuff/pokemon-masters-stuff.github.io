@@ -74,12 +74,12 @@ class GridMap extends Component {
     //     viewbox_xl: '-50 -50 100 100',
     //   },
     // };
-    const viewbox = {
-      viewbox_sm: '-35 -35 70 70',
-      viewbox_md: '-50 -50 100 100',
-      viewbox_lg: '-38.5 -50 100 100',
-      viewbox_xl: '-50 -50 100 100',
-    };
+    // const viewbox = {
+    //   viewbox_sm: '-35 -35 70 70',
+    //   viewbox_md: '-50 -50 100 100',
+    //   viewbox_lg: '-38.5 -50 100 100',
+    //   viewbox_xl: '-50 -50 100 100',
+    // };
 
     const clientWrappingBoundaries = {
       width: document.body.clientWidth,
@@ -95,7 +95,7 @@ class GridMap extends Component {
         height: 800,
         // viewbox: '-50 -50 100 100',
         // viewbox: viewbox[this.props.slot]['viewbox_lg'],
-        viewbox: viewbox['viewbox_lg'],
+        viewbox: '-38.5 -50 100 100',
       };
     }
 
@@ -104,17 +104,17 @@ class GridMap extends Component {
       clientWrappingBoundaries.width < 1200
     ) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: 650,
         height: 768,
-        viewbox: '-15 -50 100 100',
+        viewbox: '-38.5 -50 100 100',
       };
     }
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: 650,
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: '-38.5 -50 100 100',
       };
     }
 

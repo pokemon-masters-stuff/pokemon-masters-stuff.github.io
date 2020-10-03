@@ -12,7 +12,10 @@ function SkillOverview(props) {
   const language = useSelector((state) => state.language.currentLanguage);
   return (
     Boolean(skill) && (
-      <div className={classes.skillOverviewCardWrapper}>
+      <div
+        className={classes.skillOverviewCardWrapper}
+        style={{ zIndex: 9999 }}
+      >
         <Card className={classes.skillOverviewCard} variant="outlined">
           <CardContent>
             <Typography

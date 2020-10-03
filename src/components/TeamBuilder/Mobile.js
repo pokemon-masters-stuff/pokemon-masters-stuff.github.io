@@ -1,9 +1,9 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import SyncGridContainer from './desktop/SyncGridContainer';
+import SyncGridContainer from './mobile/SyncGridContainer';
 import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 import {
   setTeam,
@@ -20,6 +20,10 @@ import ResetTeamButton from './ResetTeamButton';
 import { allSyncGrids } from '../../utils/constants';
 import ShareTeamButton from './ShareTeamButton';
 import SyncPairCard from './common/SyncPairCard';
+import AppBar from '@material-ui/core/AppBar';
+import Nav from '../MainAppbar/Nav';
+import { NavigationMobile } from '../Navigation';
+import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,6 +44,7 @@ function TeamBuilder() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
+  const darkMode = useSelector((state) => state.darkMode.mode);
 
   const onChangeHandler = (e, newValue, slot) => {
     let syncPairEnglishName = newValue
@@ -289,8 +294,25 @@ function TeamBuilder() {
     dispatch(updateTeamUrl());
   }, []);
 
+  const [isNavOpened, setIsNavOpened] = useState(false);
+
+  const handleOnCloseNav = () => setIsNavOpened(false);
+
+  const handleOnOpenNav = () => setIsNavOpened(true);
+
   return (
-    <Fragment>
+    <div
+      className={`App ${darkMode ? 'dark-mode' : null}`}
+      style={{ paddingBottom: 150 }}
+    >
+      <AppBar position="fixed">
+        <Nav onOpenNavHandler={handleOnOpenNav} />
+        <NavigationMobile
+          isOpened={isNavOpened}
+          onCloseHandler={handleOnCloseNav}
+        />{' '}
+      </AppBar>
+
       <Grid container className={classes.root} spacing={3}>
         <Grid
           container
@@ -326,7 +348,7 @@ function TeamBuilder() {
         </Grid>
 
         <Grid item xs={12}>
-          <Grid container justify="center" spacing={3}>
+          <Grid container justify="center" spacing={0}>
             {[teamMember1Data, teamMember2Data, teamMember3Data].map(
               (teamMemberData, index) =>
                 teamMemberData ? (
@@ -337,6 +359,15 @@ function TeamBuilder() {
                           'pokemonEnglishName'
                         ].toLowerCase()}
                         slot={`slot${index + 1}`}
+                        syncPairName={
+                          syncPairNamesAndIds['en'][
+                            teamMembers[`slot${index + 1}`]
+                          ]
+                            ? syncPairNamesAndIds['en'][
+                                teamMembers[`slot${index + 1}`]
+                              ]['syncPairNameByLanguage'][language]
+                            : ''
+                        }
                       />
                     </Grid>
                   ) : null
@@ -345,7 +376,8 @@ function TeamBuilder() {
           </Grid>
         </Grid>
       </Grid>
-    </Fragment>
+      <LoginOrRegisterModal />
+    </div>
   );
 }
 
