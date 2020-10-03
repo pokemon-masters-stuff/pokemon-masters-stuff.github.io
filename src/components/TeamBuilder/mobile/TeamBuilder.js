@@ -3,27 +3,27 @@ import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import SyncGridContainer from './mobile/SyncGridContainer';
-import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
+import SyncGridContainer from './SyncGridContainer';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import {
   setTeam,
   updateTeamUrl,
   setTeamSyncLevels,
   loadTeamGridFromUrl,
   resetTeam,
-} from '../../actions/actionCreators';
-import { removeHyphens } from '../../utils/functions';
-import { getQueryStringValue } from '../../queryString';
-import SaveTeamButton from './SaveTeamButton';
-import LoadTeamDropdown from './LoadTeamDropdown';
-import ResetTeamButton from './ResetTeamButton';
-import { allSyncGrids } from '../../utils/constants';
-import ShareTeamButton from './ShareTeamButton';
-import SyncPairCard from './common/SyncPairCard';
+} from '../../../actions/actionCreators';
+import { removeHyphens } from '../../../utils/functions';
+import { getQueryStringValue } from '../../../queryString';
+import SaveTeamButton from '../common/SaveTeamButton';
+import LoadTeamDropdown from '../common/LoadTeamDropdown';
+import ResetTeamButton from '../common/ResetTeamButton';
+import { allSyncGrids } from '../../../utils/constants';
+import ShareTeamButton from '../common/ShareTeamButton';
+import SyncPairCard from '../common/SyncPairCard';
 import AppBar from '@material-ui/core/AppBar';
-import Nav from '../MainAppbar/Nav';
-import { NavigationMobile } from '../Navigation';
-import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
+import Nav from '../../MainAppbar/Nav';
+import { NavigationMobile } from '../../Navigation';
+import LoginOrRegisterModal from '../../auth/LoginOrRegisterModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -8,12 +8,12 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
-import { updateTeamUrl } from '../../actions/actionCreators';
-import UI from '../../utils/translations';
+import { updateTeamUrl } from '../../../actions/actionCreators';
+import UI from '../../../utils/translations';
 import {
   loadSelectedTeamBuild,
   deleteSelectedTeamBuild,
-} from '../../actions/actionCreators';
+} from '../../../actions/actionCreators';
 
 function LoadTeamDropdown(props) {
   const { classes } = props;

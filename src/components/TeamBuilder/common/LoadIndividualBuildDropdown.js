@@ -6,9 +6,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import styles from './styles';
-import { updateTeamUrl } from '../../actions/actionCreators';
-import UI from '../../utils/translations';
-import { loadSelectedIndividualBuild } from '../../actions/actionCreators';
+import { updateTeamUrl } from '../../../actions/actionCreators';
+import UI from '../../../utils/translations';
+import { loadSelectedIndividualBuild } from '../../../actions/actionCreators';
 
 function LoadBuildDropdown(props) {
   const { classes, pokemon, slot } = props;

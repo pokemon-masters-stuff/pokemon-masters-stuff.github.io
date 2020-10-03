@@ -1,15 +1,19 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import { resetTeam, updateTeamUrl } from '../../actions/actionCreators';
-import UI from '../../utils/translations';
+import {
+  resetIndividualGrid,
+  updateTeamUrl,
+} from '../../../actions/actionCreators';
+import UI from '../../../utils/translations';
 
-const ResetTeamButton = () => {
+const ResetGridButton = (props) => {
+  const { slot } = props;
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
 
   const handleOnClick = () => {
-    dispatch(resetTeam());
+    dispatch(resetIndividualGrid(slot));
     dispatch(updateTeamUrl());
   };
 
@@ -20,4 +24,4 @@ const ResetTeamButton = () => {
   );
 };
 
-export default ResetTeamButton;
+export default ResetGridButton;

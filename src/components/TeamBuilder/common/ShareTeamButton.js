@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import UI from '../../utils/translations';
-import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
+import UI from '../../../utils/translations';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 
 const ShareTeamButton = () => {
   const language = useSelector((state) => state.language.currentLanguage);

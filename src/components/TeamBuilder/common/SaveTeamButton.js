@@ -6,12 +6,12 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import UI from '../../utils/translations';
+import UI from '../../../utils/translations';
 import {
   saveCurrentTeamBuild,
   deleteSelectedTeamBuild,
-} from '../../actions/actionCreators';
-import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
+} from '../../../actions/actionCreators';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 
 const SaveBuildButton = () => {
   const dispatch = useDispatch();

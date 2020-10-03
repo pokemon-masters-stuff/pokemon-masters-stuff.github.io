@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
-import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import styles from './styles';
-import { getQueryStringValue } from '../../queryString';
-import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
+import { getQueryStringValue } from '../../../queryString';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import {
   addToTeamGridList,
   removeFromTeamGridList,
@@ -14,7 +14,7 @@ import {
   addBackToTeamRemainingEnergy,
   updateTeamUrl,
   // setTeamSyncLevels,
-} from '../../actions/actionCreators';
+} from '../../../actions/actionCreators';
 import {
   getFillColorByMoveType,
   renderMoveName,
@@ -23,9 +23,9 @@ import {
   removeHyphens,
   capitalizeSyncPairNameForUrl,
   getPokemonDataByName,
-} from '../../utils/functions';
-import { allSyncGrids } from '../../utils/constants';
-import UI from '../../utils/translations';
+} from '../../../utils/functions';
+import { allSyncGrids } from '../../../utils/constants';
+import UI from '../../../utils/translations';
 
 // To combine with GridMap. Need to pass pokemon, grid, viewbox, and actions as props
 class GridMap extends Component {

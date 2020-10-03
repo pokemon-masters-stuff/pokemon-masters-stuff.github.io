@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import SyncGrid from '../SyncGrid';
-import ResetIndividualGridButton from '../ResetIndividualGridButton';
-import LoadIndividualBuildDropdown from '../LoadIndividualBuildDropdown';
-import SyncLevelDropdown from '../SyncLevelDropdown';
+import SyncGrid from '../common/SyncGrid';
+import ResetIndividualGridButton from '../common/ResetIndividualGridButton';
+import LoadIndividualBuildDropdown from '../common/LoadIndividualBuildDropdown';
+import SyncLevelDropdown from '../common/SyncLevelDropdown';
 import { MovesAndSkillsButtonMobile } from '../../MovesAndSkills';
 import {
   setTeamSyncLevels,

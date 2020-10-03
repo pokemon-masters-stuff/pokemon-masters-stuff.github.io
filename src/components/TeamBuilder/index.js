@@ -1,2 +1,2 @@
-export { default as TeamBuilderDesktop } from './Desktop';
-export { default as TeamBuilderMobile } from './Mobile';
+export { default as TeamBuilderDesktop } from './desktop/TeamBuilder';
+export { default as TeamBuilderMobile } from './mobile/TeamBuilder';
