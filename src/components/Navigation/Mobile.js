@@ -1,28 +1,29 @@
-import React, { Fragment, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { withStyles } from "@material-ui/core";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import VpnKeyIcon from "@material-ui/icons/VpnKey";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import FeedbackIcon from "@material-ui/icons/Feedback";
-import FeedbackForm from "../FeedbackForm";
-import styles from "./styles";
-import { logout } from "../../actions/actionCreators";
-import AnnouncementModal from "../AnnouncementModal";
-import ContributeModal from "../ContributeModal";
-import LanguageModal from "../LanguageModal";
-import UI from "../../utils/translations";
-import Divider from "@material-ui/core/Divider";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
-import Brightness1Icon from "@material-ui/icons/Brightness1";
-import HomeIcon from "@material-ui/icons/Home"; // for Sync Grid Helper home page
-import ExposureIcon from "@material-ui/icons/Exposure";
+import React, { Fragment, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/core';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import FeedbackForm from '../FeedbackForm';
+import styles from './styles';
+import { logout } from '../../actions/actionCreators';
+import AnnouncementModal from '../AnnouncementModal';
+import ContributeModal from '../ContributeModal';
+import LanguageModal from '../LanguageModal';
+import UI from '../../utils/translations';
+import Divider from '@material-ui/core/Divider';
+import WhatshotIcon from '@material-ui/icons/Whatshot';
+import Brightness1Icon from '@material-ui/icons/Brightness1';
+import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
+import ExposureIcon from '@material-ui/icons/Exposure';
+import ViewColumnIcon from '@material-ui/icons/ViewColumn'; // for teams
 
 function Navigation(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -37,7 +38,7 @@ function Navigation(props) {
   const { classes, isOpened, onCloseHandler } = props;
 
   const handleOnClose = () =>
-    typeof onCloseHandler === "function" ? onCloseHandler() : null;
+    typeof onCloseHandler === 'function' ? onCloseHandler() : null;
 
   const handleClickOpenModal = () => {
     setOpen(true);
@@ -50,24 +51,24 @@ function Navigation(props) {
   return (
     <Drawer open={isOpened} onClose={handleOnClose}>
       <List className={classes.listRoot}>
-        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <ListItem button>
             <ListItemIcon className={classes.listIcon}>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary={UI["Home"][language]} />
+            <ListItemText primary={UI['Home'][language]} />
           </ListItem>
         </Link>
         {isAuthenticated ? (
           <Link
             to="/builds/popular"
-            style={{ textDecoration: "none", color: "inherit" }}
+            style={{ textDecoration: 'none', color: 'inherit' }}
           >
             <ListItem button>
               <ListItemIcon className={classes.listIcon}>
                 <WhatshotIcon />
               </ListItemIcon>
-              <ListItemText primary={UI["Popular Builds"][language]} />
+              <ListItemText primary={UI['Popular Builds'][language]} />
             </ListItem>
           </Link>
         ) : (
@@ -80,12 +81,25 @@ function Navigation(props) {
             <ListItemIcon className={classes.listIcon}>
               <WhatshotIcon />
             </ListItemIcon>
-            <ListItemText primary={UI["Popular Builds"][language]} />
+            <ListItemText primary={UI['Popular Builds'][language]} />
           </ListItem>
         )}
+
+        <Link
+          to="/team-builder"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ListItem button>
+            <ListItemIcon className={classes.listIcon}>
+              <ViewColumnIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Team Builder'} />
+          </ListItem>
+        </Link>
+
         <Link
           to="/gacha-odds-calculator"
-          style={{ textDecoration: "none", color: "inherit" }}
+          style={{ textDecoration: 'none', color: 'inherit' }}
         >
           <ListItem button>
             <ListItemIcon className={classes.listIcon}>
@@ -96,7 +110,7 @@ function Navigation(props) {
         </Link>
         <Link
           to="/egg-pokemon"
-          style={{ textDecoration: "none", color: "inherit" }}
+          style={{ textDecoration: 'none', color: 'inherit' }}
         >
           <ListItem button>
             <ListItemIcon className={classes.listIcon}>
@@ -116,7 +130,7 @@ function Navigation(props) {
           <ListItemIcon className={classes.listIcon}>
             <FeedbackIcon />
           </ListItemIcon>
-          <ListItemText primary={UI["Submit Feedback"][language]} />
+          <ListItemText primary={UI['Submit Feedback'][language]} />
         </ListItem>
         <FeedbackForm open={open} onCloseModalHandler={handleCloseModal} />
         <LanguageModal classes={classes} />
@@ -139,7 +153,7 @@ function Navigation(props) {
               <ListItemIcon className={classes.listIcon}>
                 <VpnKeyIcon />
               </ListItemIcon>
-              <ListItemText primary={UI["Login"][language]} />
+              <ListItemText primary={UI['Login'][language]} />
             </ListItem>
 
             <ListItem
@@ -151,7 +165,7 @@ function Navigation(props) {
               <ListItemIcon className={classes.listIcon}>
                 <AccountCircleIcon />
               </ListItemIcon>
-              <ListItemText primary={UI["Register"][language]} />
+              <ListItemText primary={UI['Register'][language]} />
             </ListItem>
           </Fragment>
         )}
