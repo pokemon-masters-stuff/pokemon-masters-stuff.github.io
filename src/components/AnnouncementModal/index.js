@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            10/3/2020:
+            <br />
+            Added Team Builder.
+            <br />
+            <br />
             9/28/2020:
             <br />
             Added new grids. Old Blastoise grid is kept for reference. Also
