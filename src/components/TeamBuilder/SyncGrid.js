@@ -54,33 +54,6 @@ class GridMap extends Component {
   }
 
   fitMapToScreen = () => {
-    // const viewbox = {
-    //   1: {
-    //     viewbox_sm: '-35 -35 70 70',
-    //     viewbox_md: '-50 -50 100 100',
-    //     viewbox_lg: '-42 -65 100 100',
-    //     viewbox_xl: '-50 -50 100 100',
-    //   },
-    //   2: {
-    //     viewbox_sm: '-35 -35 70 70',
-    //     viewbox_md: '-50 -50 100 100',
-    //     viewbox_lg: '-15 -50 100 100',
-    //     viewbox_xl: '-50 -50 100 100',
-    //   },
-    //   3: {
-    //     viewbox_sm: '-35 -35 70 70',
-    //     viewbox_md: '-50 -50 100 100',
-    //     viewbox_lg: '-15 -50 100 100',
-    //     viewbox_xl: '-50 -50 100 100',
-    //   },
-    // };
-    // const viewbox = {
-    //   viewbox_sm: '-35 -35 70 70',
-    //   viewbox_md: '-50 -50 100 100',
-    //   viewbox_lg: '-38.5 -50 100 100',
-    //   viewbox_xl: '-50 -50 100 100',
-    // };
-
     const clientWrappingBoundaries = {
       width: document.body.clientWidth,
       height: document.body.clientHeight,
@@ -93,8 +66,6 @@ class GridMap extends Component {
       updatedMapSizeBoundaries = {
         width: 650,
         height: 800,
-        // viewbox: '-50 -50 100 100',
-        // viewbox: viewbox[this.props.slot]['viewbox_lg'],
         viewbox: '-38.5 -50 100 100',
       };
     }
@@ -174,6 +145,7 @@ class GridMap extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
+      console.log('sync level', this.props.syncLevel);
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         this.props.pokemon,
         cell,

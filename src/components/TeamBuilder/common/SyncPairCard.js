@@ -129,6 +129,9 @@ function SyncPairCard(props) {
                 component="img"
                 alt="Trainer Image"
                 height="250"
+                image={
+                  'https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/empty_256.png'
+                }
                 title="Trainer Image"
                 position="absolute"
               />

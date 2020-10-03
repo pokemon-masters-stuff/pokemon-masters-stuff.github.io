@@ -32,10 +32,11 @@ const SyncGridContainer = (props) => {
   const selectedCellsById = useSelector(
     (state) => state.grid.teamSelectedCellsById[slot]
   );
-  const [syncLevel, setSyncLevel] = useState(syncLevels[slot]);
+  // const [syncLevel, setSyncLevel] = useState(syncLevels[slot]);
+  // console.log('sync level parent', syncLevel);
 
   const handleChangeSyncLevel = (syncLevel) => {
-    setSyncLevel(syncLevel);
+    // setSyncLevel(syncLevel);
     dispatch(setTeamSyncLevels({ slot: slot, syncLevel: syncLevel }));
     dispatch(updateTeamUrl());
   };
@@ -64,7 +65,7 @@ const SyncGridContainer = (props) => {
           <MovesAndSkillsButtonMobile
             pokemon={pokemon}
             selectedCellsById={selectedCellsById}
-            syncLevel={syncLevel}
+            syncLevel={syncLevels[slot]}
             language={language}
             isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
             setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
@@ -74,7 +75,7 @@ const SyncGridContainer = (props) => {
           <ResetIndividualGridButton slot={slot} />
         </div>
         <div style={{ marginTop: -70 }}>
-          <SyncGrid {...props} syncLevel={syncLevel} />
+          <SyncGrid {...props} syncLevel={syncLevels[slot]} />
         </div>
       </div>
     </Paper>
