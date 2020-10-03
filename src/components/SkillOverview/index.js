@@ -14,7 +14,7 @@ function SkillOverview(props) {
     Boolean(skill) && (
       <div
         className={classes.skillOverviewCardWrapper}
-        style={{ zIndex: 9999 }}
+        style={{ zIndex: 1100 }}
       >
         <Card className={classes.skillOverviewCard} variant="outlined">
           <CardContent>
