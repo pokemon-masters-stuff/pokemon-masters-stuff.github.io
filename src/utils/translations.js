@@ -451,6 +451,37 @@ const UI = {
     ko: '기술・스킬',
     zh: '招式／技能',
   },
+  // Team Builder
+  'Save Team': {
+    de: 'Team Speichern',
+    en: 'Save Team',
+    es: 'Guardar Compilación',
+    fr: 'Enregistrer le Team',
+    it: 'Salva Uniteca',
+    ja: 'チームを保存',
+    ko: '팀 저장',
+    zh: '保存队伍',
+  },
+  'Load Teams': {
+    de: 'Lade Teams',
+    en: 'Load Teams',
+    es: 'Cargars',
+    fr: 'Charger',
+    it: 'Carica',
+    ja: '読み込み',
+    ko: '로드 팀',
+    zh: '加載队伍',
+  },
+  'Team name': {
+    de: 'Team-Name',
+    en: 'Team name',
+    es: 'Nombre de compilación',
+    fr: 'Nom du Team',
+    it: 'Nome Uniteca',
+    ja: 'チーム名',
+    ko: '팀 이름',
+    zh: '队伍名稱',
+  },
 };
 
 export default UI;

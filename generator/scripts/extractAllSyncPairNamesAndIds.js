@@ -243,40 +243,163 @@ const extractAllSyncPairNamesAndIds = () => {
         syncPairName = `${trainerName} & ${pokemonName}`;
       }
 
-      syncPairNames[language][syncPairName] = {
-        trainerId: trainerId,
-        trainerBaseId: trainerBaseId.toString(),
-        trainerNameId: trainerNameId,
-        trainerActorId: trainerActorId,
-        monsterBaseId: monsterBaseId.toString(),
-        monsterActorId: monsterActorId,
-        pokemonName: pokemonName,
-        trainerName: trainerName,
-        type: type,
-        rarity: rarity,
-        role: role,
-        grided: grided,
-      };
+      let pokemonEnglishName = pokemonNameDB['en'][updatedMonsterBaseId];
+      let trainerEnglishName =
+        trainerNameId === 'ch8000'
+          ? 'Hero'
+          : trainerNameDB['en'][trainerNameId];
+      let syncPairEnglishName = `${trainerEnglishName} & ${pokemonEnglishName}`;
 
-      if (newTrainerBaseIdArray.includes(entry.trainerBaseId.toString())) {
-        // prints out export statements for trainers in console.
-        // if (language === 'en') {
-        //   if (trainerName !== 'Hero') {
-        //     console.log(
-        //       `export { default as ${trainerActorId}_256 } from './256px/${trainerActorId}_256.ktx.png'; // ${trainerName}`
-        //     );
-        //   }
-        // }
+      if (language === 'en') {
+        let syncPairNameByLanguage = {
+          de: {},
+          en: {},
+          es: {},
+          fr: {},
+          it: {},
+          ja: {},
+          ko: {},
+          zh: {},
+        };
 
-        // prints out export statements for pokemon in console.
-        if (language === 'en') {
-          if (trainerName !== 'Hero') {
-            console.log(
-              `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${pokemonName}`
-            );
-          }
+        let pokemonNameByLanguage = {
+          de: {},
+          en: {},
+          es: {},
+          fr: {},
+          it: {},
+          ja: {},
+          ko: {},
+          zh: {},
+        };
+
+        let trainerNameByLanguage = {
+          de: {},
+          en: {},
+          es: {},
+          fr: {},
+          it: {},
+          ja: {},
+          ko: {},
+          zh: {},
+        };
+
+        languages.forEach((language) => {
+          pokemonNameByLanguage[language] =
+            pokemonNameDB[language][updatedMonsterBaseId];
+          trainerNameByLanguage[language] =
+            trainerNameId === 'ch8000'
+              ? 'Hero'
+              : trainerNameDB[language][trainerNameId];
+          syncPairNameByLanguage[
+            language
+          ] = `${trainerNameByLanguage[language]} & ${pokemonNameByLanguage[language]}`;
+        });
+
+        if (trainerBase.trainerBaseId === '10002101') {
+          // New Blastoise
+          syncPairNames[language][syncPairName] = {
+            trainerId: trainerId,
+            trainerBaseId: trainerBaseId.toString(),
+            trainerNameId: trainerNameId,
+            trainerActorId: trainerActorId,
+            monsterBaseId: monsterBaseId.toString(),
+            monsterActorId: monsterActorId,
+            pokemonName: pokemonName,
+            trainerName: trainerName,
+            type: type,
+            rarity: rarity,
+            role: role,
+            grided: grided,
+            pokemonEnglishName: pokemonEnglishName + '_new',
+            trainerEnglishName: trainerEnglishName,
+            syncPairEnglishName: syncPairEnglishName,
+            pokemonNameByLanguage: pokemonNameByLanguage,
+            trainerNameByLanguage: trainerNameByLanguage,
+            syncPairNameByLanguage: syncPairNameByLanguage,
+          };
+        } else {
+          syncPairNames[language][syncPairName] = {
+            trainerId: trainerId,
+            trainerBaseId: trainerBaseId.toString(),
+            trainerNameId: trainerNameId,
+            trainerActorId: trainerActorId,
+            monsterBaseId: monsterBaseId.toString(),
+            monsterActorId: monsterActorId,
+            pokemonName: pokemonName,
+            trainerName: trainerName,
+            type: type,
+            rarity: rarity,
+            role: role,
+            grided: grided,
+            pokemonEnglishName: pokemonEnglishName,
+            trainerEnglishName: trainerEnglishName,
+            syncPairEnglishName: syncPairEnglishName,
+            pokemonNameByLanguage: pokemonNameByLanguage,
+            trainerNameByLanguage: trainerNameByLanguage,
+            syncPairNameByLanguage: syncPairNameByLanguage,
+          };
+        }
+      } else {
+        if (trainerBase.trainerBaseId === '10002101') {
+          // New Blastoise
+          syncPairNames[language][syncPairName] = {
+            trainerId: trainerId,
+            trainerBaseId: trainerBaseId.toString(),
+            trainerNameId: trainerNameId,
+            trainerActorId: trainerActorId,
+            monsterBaseId: monsterBaseId.toString(),
+            monsterActorId: monsterActorId,
+            pokemonName: pokemonName,
+            trainerName: trainerName,
+            type: type,
+            rarity: rarity,
+            role: role,
+            grided: grided,
+            pokemonEnglishName: pokemonEnglishName + '_new',
+            trainerEnglishName: trainerEnglishName,
+            syncPairEnglishName: syncPairEnglishName,
+          };
+        } else {
+          syncPairNames[language][syncPairName] = {
+            trainerId: trainerId,
+            trainerBaseId: trainerBaseId.toString(),
+            trainerNameId: trainerNameId,
+            trainerActorId: trainerActorId,
+            monsterBaseId: monsterBaseId.toString(),
+            monsterActorId: monsterActorId,
+            pokemonName: pokemonName,
+            trainerName: trainerName,
+            type: type,
+            rarity: rarity,
+            role: role,
+            grided: grided,
+            pokemonEnglishName: pokemonEnglishName,
+            trainerEnglishName: trainerEnglishName,
+            syncPairEnglishName: syncPairEnglishName,
+          };
         }
       }
+
+      // if (newTrainerBaseIdArray.includes(entry.trainerBaseId.toString())) {
+      // prints out export statements for trainers in console.
+      // if (language === 'en') {
+      //   if (trainerName !== 'Hero') {
+      //     console.log(
+      //       `export { default as ${trainerActorId}_256 } from './256px/${trainerActorId}_256.ktx.png'; // ${trainerName}`
+      //     );
+      //   }
+      // }
+
+      // prints out export statements for pokemon in console.
+      // if (language === 'en') {
+      //   if (trainerName !== 'Hero') {
+      //     console.log(
+      //       `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${pokemonName}`
+      //     );
+      //   }
+      // }
+      // }
     });
   });
   // prints out export statements in console.

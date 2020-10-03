@@ -16,9 +16,9 @@ export const getQueryStringValue = (
 ) => {
   const base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
   const values = qs.parse(queryString, { arrayFormat: 'comma' });
-  if (key === 'grid') {
-    if (base64regex.test(values.grid)) {
-      let encoded = values.grid;
+  if (key === 'grid' || key === 'g1' || key === 'g2' || key === 'g3') {
+    if (base64regex.test(values[key])) {
+      let encoded = values[key];
       let str = window.atob(encoded);
       let len = str.length;
       let decodedGridArray = new Array(len);
@@ -27,7 +27,7 @@ export const getQueryStringValue = (
       }
       return decodedGridArray;
     } else {
-      if (Array.isArray(values.grid)) {
+      if (Array.isArray(values[key])) {
         return values[key];
       } else {
         return values[key] ? values[key].split(',') : values[key];

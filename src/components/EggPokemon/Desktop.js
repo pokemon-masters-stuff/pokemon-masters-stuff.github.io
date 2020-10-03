@@ -5,7 +5,6 @@ import SelectEggPokemonDropdown from './SelectEggPokemonDropdown';
 import SyncLevelDropdown from './SyncLevelDropdown';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import { pokemonPictures } from '../../utils/constants';
 import {
   removeHyphens,
   getEggPokemonDataByNameAndRole,
@@ -53,7 +52,7 @@ const EggPokemon = () => {
       <Grid container justify="center">
         <img
           alt=""
-          src={pokemonPictures[pokemonData.monsterActorId + '_256']}
+          src={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/256px/${pokemonData.monsterActorId}_256.ktx.png`}
         />
       </Grid>
       <DataTable

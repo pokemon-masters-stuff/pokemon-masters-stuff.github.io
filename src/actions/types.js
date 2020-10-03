@@ -51,10 +51,12 @@ export const ADD_BACK_TO_TEAM_REMAINING_ENERGY =
 export const SET_TEAM = 'set_team';
 export const SET_TEAM_SYNC_LEVELS = 'set_team_sync_levels';
 export const RESET_INDIVIDUAL_GRID = 'reset_individual_grid';
-export const RESET_TEAM_GRIDS = 'reset_team_grids';
+export const RESET_TEAM = 'reset_team';
 export const SAVE_CURRENT_TEAM_BUILD = 'save_current_team_build';
 export const LOAD_SELECTED_INDIVIDUAL_BUILD = 'load_selected_individual_build';
 export const LOAD_SELECTED_TEAM_BUILD = 'load_selected_team_build';
 export const DELETE_SELECTED_TEAM_BUILD = 'delete_selected_team_build';
 export const LOAD_TEAM_GRID_FROM_URL = 'load_team_grid_from_url';
 export const UPDATE_TEAM_URL = 'update_team_url';
+
+export const CHANGE_GENDER = 'change_gender';

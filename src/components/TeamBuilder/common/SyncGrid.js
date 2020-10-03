@@ -3,20 +3,18 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
-import { HexGrid, Layout, Hexagon, Text, Pattern } from '../Hexagon';
+import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import styles from './styles';
-import { getQueryStringValue } from '../../queryString';
+import { getQueryStringValue } from '../../../queryString';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import {
-  selectPokemon,
-  addToGridList,
-  removeFromGridList,
-  subtractFromRemainingEnergy,
-  addBackToRemainingEnergy,
-  resetGrids,
-  loadGridFromUrl,
-  updateUrl,
-  setSyncLevel,
-} from '../../actions/actionCreators';
+  addToTeamGridList,
+  removeFromTeamGridList,
+  subtractFromTeamRemainingEnergy,
+  addBackToTeamRemainingEnergy,
+  updateTeamUrl,
+  // setTeamSyncLevels,
+} from '../../../actions/actionCreators';
 import {
   getFillColorByMoveType,
   renderMoveName,
@@ -25,10 +23,11 @@ import {
   removeHyphens,
   capitalizeSyncPairNameForUrl,
   getPokemonDataByName,
-} from '../../utils/functions';
-import { allSyncGrids } from '../../utils/constants';
-import UI from '../../utils/translations';
+} from '../../../utils/functions';
+import { allSyncGrids } from '../../../utils/constants';
+import UI from '../../../utils/translations';
 
+// To combine with GridMap. Need to pass pokemon, grid, viewbox, and actions as props
 class GridMap extends Component {
   state = {
     initialRender: true,
@@ -40,66 +39,9 @@ class GridMap extends Component {
     screenWidth: document.body.clientWidth,
   };
 
-  loadUrlGridData() {
-    let pokemonFromUrl;
-    if (getQueryStringValue('p')) {
-      pokemonFromUrl = getQueryStringValue('p');
-      if (pokemonFromUrl === 'Blastoise_New') {
-        pokemonFromUrl = 'Blastoise_new';
-      }
-      this.props.selectPokemon(pokemonFromUrl);
-    }
-
-    let syncLevelFromUrl;
-    if (getQueryStringValue('s')) {
-      syncLevelFromUrl = getQueryStringValue('s');
-      this.props.setSyncLevel(syncLevelFromUrl);
-    } else {
-      this.props.setSyncLevel('5');
-    }
-
-    // if user uses an url that includes grid data, generate gridmap based on url
-    if (getQueryStringValue('grid')) {
-      this.props.resetGrids();
-      let remainingEnergy = Number(getQueryStringValue('e'));
-      let orbSpent = Number(getQueryStringValue('o'));
-
-      let cellData = {};
-      let selectedCellByIdFromUrl = {};
-
-      getQueryStringValue('grid').map((id) => {
-        cellData =
-          allSyncGrids[this.props.language][
-            `${removeHyphens(
-              pokemonFromUrl
-            ).toLowerCase()}GridData${this.props.language.toUpperCase()}`
-          ][Number(id)];
-
-        selectedCellByIdFromUrl = {
-          cellId: cellData.cellId,
-          name: cellData.move.name,
-          description: cellData.move.description,
-          energy: cellData.move.energyCost,
-          moveId: cellData.ability.moveId,
-          value: cellData.ability.value,
-          type: cellData.ability.type,
-        };
-
-        return this.props.loadGridFromUrl(
-          selectedCellByIdFromUrl,
-          remainingEnergy,
-          orbSpent
-        );
-      });
-    }
-  }
-
   componentDidMount() {
     setTimeout(() => this.fitMapToScreen(), 1000);
     window.addEventListener('resize', this.fitMapToScreen);
-    this.loadUrlGridData();
-
-    getQueryStringValue('p') && this.props.updateUrl(getQueryStringValue('p'));
   }
 
   componentDidUpdate() {
@@ -122,9 +64,9 @@ class GridMap extends Component {
 
     if (clientWrappingBoundaries.width > 1200) {
       updatedMapSizeBoundaries = {
-        width: 800,
-        height: 768,
-        viewbox: '-50 -50 100 100',
+        width: 650,
+        height: 800,
+        viewbox: '-38.5 -50 100 100',
       };
     }
 
@@ -133,17 +75,17 @@ class GridMap extends Component {
       clientWrappingBoundaries.width < 1200
     ) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: 650,
         height: 768,
-        viewbox: '-15 -50 100 100',
+        viewbox: '-38.5 -50 100 100',
       };
     }
 
     if (clientWrappingBoundaries.width <= 960) {
       updatedMapSizeBoundaries = {
-        width: '100vw',
+        width: 650,
         height: 768,
-        viewbox: '-50 -50 100 100',
+        viewbox: '-38.5 -50 100 100',
       };
     }
 
@@ -171,30 +113,23 @@ class GridMap extends Component {
   handleClick(e, index, data) {
     e.stopPropagation();
 
-    if (!this.props.grid.selectedCellsById[data.cellId]) {
-      this.props.addToGridList(data);
-      this.props.subtractFromRemainingEnergy(data);
-      if (this.props.pokemon.indexOf('_') !== -1) {
-        // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
-        this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
-      } else {
-        this.props.updateUrl(
-          this.props.pokemon.charAt(0).toUpperCase() +
-            this.props.pokemon.slice(1)
-        );
-      }
+    if (!this.props.grid.teamSelectedCellsById[this.props.slot][data.cellId]) {
+      this.props.addToTeamGridList({ gridData: data, slot: this.props.slot });
+      this.props.subtractFromTeamRemainingEnergy({
+        gridData: data,
+        slot: this.props.slot,
+      });
+      this.props.updateTeamUrl();
     } else {
-      this.props.removeFromGridList(data);
-      this.props.addBackToRemainingEnergy(data);
-      if (this.props.pokemon.indexOf('_') !== -1) {
-        // when url uses sync pair name instead of pokemon name. This happens when multiple pokemon have the same name
-        this.props.updateUrl(capitalizeSyncPairNameForUrl(this.props.pokemon));
-      } else {
-        this.props.updateUrl(
-          this.props.pokemon.charAt(0).toUpperCase() +
-            this.props.pokemon.slice(1)
-        );
-      }
+      this.props.removeFromTeamGridList({
+        gridData: data,
+        slot: this.props.slot,
+      });
+      this.props.addBackToTeamRemainingEnergy({
+        gridData: data,
+        slot: this.props.slot,
+      });
+      this.props.updateTeamUrl();
     }
   }
 
@@ -210,17 +145,10 @@ class GridMap extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      // const nameWithSyncLvRequirement = addSyncLvReq(
-      //   this.props.pokemon,
-      //   cell,
-      //   moveName,
-      //   this.props.grid.syncLevel
-      // );
-
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         this.props.pokemon,
         cell,
-        this.props.grid.syncLevel
+        this.props.syncLevel
       );
 
       const hexagonProps = {
@@ -243,20 +171,17 @@ class GridMap extends Component {
         fill: getFillColorByMoveType({
           type: cell.ability.type,
           group: cell.move.group,
-          // pokemon: this.props.pokemon, // will need this and the two lines below if want to add a Lock pattern
-          // cell: cell,
-          // syncLevel: this.props.grid.syncLevel,
         }),
         onClickHandler:
           isSeletableBasedOnSyncLv ||
-          this.props.grid.selectedCellsById[cell.cellId]
+          this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
             ? (e, data) => this.handleClick(e, index, data)
             : null,
         className: this.props.darkMode
-          ? this.props.grid.selectedCellsById[cell.cellId]
+          ? this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
             ? 'selected dark-mode'
             : 'dark-mode'
-          : this.props.grid.selectedCellsById[cell.cellId]
+          : this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
           ? 'selected'
           : null,
       };
@@ -265,9 +190,6 @@ class GridMap extends Component {
         cell.move.name,
         cell.ability.abilityId,
         this.props.language
-        // cell,
-        // this.props.pokemon,
-        // this.props.grid.syncLevel
       );
 
       return (
@@ -365,20 +287,16 @@ class GridMap extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  pokemon: state.pokemon.selectedPokemon.toLowerCase(),
   grid: state.grid,
   darkMode: state.darkMode.mode,
   language: state.language.currentLanguage,
 });
 
 export default connect(mapStateToProps, {
-  selectPokemon,
-  addToGridList,
-  removeFromGridList,
-  subtractFromRemainingEnergy,
-  addBackToRemainingEnergy,
-  resetGrids,
-  loadGridFromUrl,
-  updateUrl,
-  setSyncLevel,
+  addToTeamGridList,
+  removeFromTeamGridList,
+  subtractFromTeamRemainingEnergy,
+  addBackToTeamRemainingEnergy,
+  updateTeamUrl,
+  // setTeamSyncLevels,
 })(withStyles(styles)(GridMap));

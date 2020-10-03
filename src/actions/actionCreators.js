@@ -46,7 +46,7 @@ import {
   REMOVE_FROM_TEAM_GRID_LIST,
   SUBTRACT_FROM_TEAM_REMAINING_ENERGY,
   ADD_BACK_TO_TEAM_REMAINING_ENERGY,
-  RESET_TEAM_GRIDS,
+  RESET_TEAM,
   RESET_INDIVIDUAL_GRID,
   SAVE_CURRENT_TEAM_BUILD,
   LOAD_SELECTED_INDIVIDUAL_BUILD,
@@ -54,6 +54,7 @@ import {
   DELETE_SELECTED_TEAM_BUILD,
   LOAD_TEAM_GRID_FROM_URL,
   UPDATE_TEAM_URL,
+  CHANGE_GENDER,
 } from './types';
 
 export const selectPokemon = (selectedPokemon) => ({
@@ -109,9 +110,13 @@ export const deleteSelectedBuild = (payload) => ({
   payload,
 });
 
-export const loadGridFromUrl = (gridData, remainingEnergy, orbSpent) => ({
+export const loadGridFromUrl = (
+  selectedCellByIdFromUrl,
+  remainingEnergy,
+  orbSpent
+) => ({
   type: LOAD_GRID_FROM_URL,
-  gridData,
+  selectedCellByIdFromUrl,
   remainingEnergy,
   orbSpent,
 });
@@ -569,8 +574,8 @@ export const addBackToTeamRemainingEnergy = (payload) => ({
 //   type: HIDE_GRID_DATA,
 // });
 
-export const resetTeamGrids = (payload) => ({
-  type: RESET_TEAM_GRIDS,
+export const resetTeam = (payload) => ({
+  type: RESET_TEAM,
   payload,
 });
 
@@ -599,14 +604,16 @@ export const deleteSelectedTeamBuild = (payload) => ({
   payload,
 });
 
-export const loadTeamGridFromUrl = (gridData, remainingEnergy, orbSpent) => ({
+export const loadTeamGridFromUrl = (payload) => ({
   type: LOAD_TEAM_GRID_FROM_URL,
-  gridData,
-  remainingEnergy,
-  orbSpent,
+  payload,
 });
 
 export const updateTeamUrl = (payload) => ({
   type: UPDATE_TEAM_URL,
   payload,
+});
+
+export const changeGender = () => ({
+  type: CHANGE_GENDER,
 });

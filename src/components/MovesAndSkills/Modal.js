@@ -503,11 +503,15 @@ export default function MovesAndSkillsModal(props) {
     setIsMovesAndSkillsModalVisible,
   } = props;
 
+  // console.log('selectedCellsById', selectedCellsById);
+
   // const selectedCellsById = grid.selectedCellsById;
 
   // const syncLevel = useSelector((state) => state.grid.syncLevel);
 
   const selectedCellsArray = Object.values(selectedCellsById);
+
+  // console.log('selectedCellsArray', selectedCellsArray);
 
   let hash = {};
 
@@ -676,10 +680,7 @@ export default function MovesAndSkillsModal(props) {
 
   let selectedMoves = hash;
 
-  // const pokemon = useSelector((state) => state.pokemon.selectedPokemon);
-  // console.log('pokemon', pokemon);
   const pokemonData = getPokemonDataByName(pokemon);
-  // console.log('pokemonData', pokemonData);
 
   const { stats, moves, passives, megaForm, rarity } = pokemonData;
 

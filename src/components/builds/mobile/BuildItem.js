@@ -29,7 +29,7 @@ import {
   removeHyphens,
   getPokemonDataByName,
 } from '../../../utils/functions';
-import { pokemonPictures, allSyncGrids } from '../../../utils/constants';
+import { allSyncGrids } from '../../../utils/constants';
 import BuildDescription from './BuildDescription';
 
 class BuildItem extends Component {
@@ -332,11 +332,9 @@ class BuildItem extends Component {
               </Layout>
               <Pattern
                 id={pokemon}
-                link={
-                  pokemonPictures[
-                    getPokemonDataByName(pokemon).monsterActorId + '_128'
-                  ]
-                }
+                link={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${
+                  getPokemonDataByName(pokemon).monsterActorId
+                }_128.ktx.png`}
                 size={{ x: 10, y: 10 }}
               />
             </HexGrid>
