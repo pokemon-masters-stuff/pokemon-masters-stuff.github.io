@@ -303,7 +303,9 @@ function TeamBuilder() {
           </div>
           <LoadTeamBuildDropdown />
           <ShareTeamButton />
-          <ResetTeamButton />
+          <div style={{ marginLeft: 8 }}>
+            <ResetTeamButton />
+          </div>
         </Grid>
         <Grid container justify="center" spacing={0}>
           {[teamMember1Data, teamMember2Data, teamMember3Data].map(

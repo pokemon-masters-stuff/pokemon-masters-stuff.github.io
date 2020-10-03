@@ -35,7 +35,6 @@ const ShareTeamButton = () => {
         variant="outlined"
         data-toggle="modal"
         data-target="#shareTeamModal"
-        style={{ marginLeft: 8 }}
         onClick={handleOnOpenShareTeamModal}
       >
         {UI['Share'][language]}
