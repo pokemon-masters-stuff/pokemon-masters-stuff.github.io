@@ -89,18 +89,18 @@ const SaveBuildButton = () => {
         // data-target="#saveBuildModal"
         onClick={handleOnOpenSaveBuildModal}
       >
-        {UI['Save Build'][language]}
+        {UI['Save Team'][language]}
       </Button>
 
       <Dialog
         open={isSaveBuildModalVisible}
         onClose={handleOnCloseSaveBuildModal}
       >
-        <DialogTitle>{UI['Save Build'][language]}</DialogTitle>
+        <DialogTitle>{UI['Save Team'][language]}</DialogTitle>
         <DialogContent>
           <TextField
             // className={classes.buildNameField}
-            label={UI['Build name'][language]}
+            label={UI['Team name'][language]}
             placeholder="Enter a name as a reference"
             inputProps={{ ref: newBuildNameRef }}
           />

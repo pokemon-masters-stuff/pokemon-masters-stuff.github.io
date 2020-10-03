@@ -14,8 +14,8 @@ import {
 } from '../../actions/actionCreators';
 import { removeHyphens } from '../../utils/functions';
 import { getQueryStringValue } from '../../queryString';
-import SaveBuildButton from './SaveBuildButton';
-import LoadTeamBuildDropdown from './LoadTeamBuildDropdown';
+import SaveTeamButton from './SaveTeamButton';
+import LoadTeamDropdown from './LoadTeamDropdown';
 import ResetTeamButton from './ResetTeamButton';
 import { allSyncGrids } from '../../utils/constants';
 import ShareTeamButton from './ShareTeamButton';
@@ -321,9 +321,9 @@ function TeamBuilder() {
           style={{ marginTop: 5 }}
         >
           <div style={{ marginTop: 10, paddingBottom: 10 }}>
-            <SaveBuildButton />
+            <SaveTeamButton />
           </div>
-          <LoadTeamBuildDropdown />
+          <LoadTeamDropdown />
           <ShareTeamButton />
           <ResetTeamButton />
         </Grid>

@@ -54,6 +54,7 @@ import {
   DELETE_SELECTED_TEAM_BUILD,
   LOAD_TEAM_GRID_FROM_URL,
   UPDATE_TEAM_URL,
+  CHANGE_GENDER,
 } from './types';
 
 export const selectPokemon = (selectedPokemon) => ({
@@ -611,4 +612,8 @@ export const loadTeamGridFromUrl = (payload) => ({
 export const updateTeamUrl = (payload) => ({
   type: UPDATE_TEAM_URL,
   payload,
+});
+
+export const changeGender = () => ({
+  type: CHANGE_GENDER,
 });

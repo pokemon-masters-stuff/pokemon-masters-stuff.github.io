@@ -58,3 +58,5 @@ export const LOAD_SELECTED_TEAM_BUILD = 'load_selected_team_build';
 export const DELETE_SELECTED_TEAM_BUILD = 'delete_selected_team_build';
 export const LOAD_TEAM_GRID_FROM_URL = 'load_team_grid_from_url';
 export const UPDATE_TEAM_URL = 'update_team_url';
+
+export const CHANGE_GENDER = 'change_gender';

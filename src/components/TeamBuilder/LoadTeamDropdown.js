@@ -62,7 +62,7 @@ function LoadTeamDropdown(props) {
       className={classes.formControl}
     >
       <InputLabel ref={inputLabel} id="select-team-build">
-        {UI['Load Builds'][language]}
+        {UI['Load Teams'][language]}
       </InputLabel>
       <Select
         labelId="select-team-build"

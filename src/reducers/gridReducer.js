@@ -264,7 +264,7 @@ export default function (state = initialState, action) {
       };
 
     // team builder
-    case SET_TEAM: // updated
+    case SET_TEAM:
       slot = action.payload.slot;
       syncPair = action.payload.syncPair;
       return {
@@ -275,7 +275,7 @@ export default function (state = initialState, action) {
         teamSelectedCellsById: { ...state.teamSelectedCellsById, [slot]: {} },
         teamSyncLevels: { ...state.teamSyncLevels, [slot]: '5' },
       };
-    case ADD_TO_TEAM_GRID_LIST: // updated
+    case ADD_TO_TEAM_GRID_LIST:
       gridData = action.payload.gridData;
       slot = action.payload.slot;
       return {
@@ -288,7 +288,7 @@ export default function (state = initialState, action) {
           },
         },
       };
-    case REMOVE_FROM_TEAM_GRID_LIST: // updated
+    case REMOVE_FROM_TEAM_GRID_LIST:
       slot = action.payload.slot;
       gridData = action.payload.gridData;
       const updatedTeamSelectedCellsById = {
@@ -303,7 +303,7 @@ export default function (state = initialState, action) {
           [slot]: updatedTeamSelectedCellsById,
         },
       };
-    case SUBTRACT_FROM_TEAM_REMAINING_ENERGY: // updated
+    case SUBTRACT_FROM_TEAM_REMAINING_ENERGY:
       slot = action.payload.slot;
       gridData = action.payload.gridData;
       return {
@@ -319,7 +319,7 @@ export default function (state = initialState, action) {
             (gridData.energy === 0 ? 5 : gridData.energy * 12),
         },
       };
-    case ADD_BACK_TO_TEAM_REMAINING_ENERGY: // updated
+    case ADD_BACK_TO_TEAM_REMAINING_ENERGY:
       slot = action.payload.slot;
       gridData = action.payload.gridData;
       return {
@@ -462,7 +462,7 @@ export default function (state = initialState, action) {
           ],
         },
       };
-    case LOAD_TEAM_GRID_FROM_URL: // updated
+    case LOAD_TEAM_GRID_FROM_URL:
       slot = action.payload.slot;
       let selectedCellByIdFromUrl = action.payload.selectedCellByIdFromUrl;
       let remainingEnergy = action.payload.remainingEnergy;
@@ -482,7 +482,7 @@ export default function (state = initialState, action) {
         },
         teamOrbSpent: { ...state.teamOrbSpent, [slot]: orbSpent },
       };
-    case RESET_TEAM: // updated
+    case RESET_TEAM:
       return {
         ...state,
         teamMembers: { slot1: '', slot2: '', slot3: '' },
@@ -594,13 +594,16 @@ export default function (state = initialState, action) {
         ? `sp3=${syncPair3}&e3=${state.teamRemainingEnergy.slot3}&o3=${state.teamOrbSpent.slot3}&g3=${slot3B64GridUrlArray}&s3=${state.teamSyncLevels.slot3}`
         : '';
 
-      let teamUrl = `http://localhost:3000/#/team-builder/?${syncPair1Url}&${syncPair2Url}&${syncPair3Url}`;
+      let teamUrl = `https://pokemon-masters-stuff.github.io/#/team-builder/?${syncPair1Url}&${syncPair2Url}&${syncPair3Url}`;
+      if (!syncPair1Url && !syncPair2Url && !syncPair3Url) {
+        teamUrl = 'https://pokemon-masters-stuff.github.io/#/team-builder';
+      }
 
       return {
         ...state,
         teamUrl: teamUrl,
       };
-    case SET_TEAM_SYNC_LEVELS: // updated
+    case SET_TEAM_SYNC_LEVELS:
       slot = action.payload.slot;
       let syncLevel = action.payload.syncLevel;
       return {

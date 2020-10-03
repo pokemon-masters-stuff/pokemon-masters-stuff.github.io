@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -7,9 +7,12 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
+import Fab from '@material-ui/core/Fab';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import SyncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
+import { changeGender } from '../../../actions/actionCreators';
+import RefreshIcon from '@material-ui/icons/Refresh';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -20,13 +23,22 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     display: 'inline-block',
   },
+  fab: {
+    color: 'primary',
+    position: 'absolute',
+    top: 2,
+    right: 2,
+    label: 'Gender',
+  },
 }));
 
 function SyncPairCard(props) {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const { teamMemberData, index, syncPairName, handleOnChange } = props;
   const syncPairNames = Object.keys(SyncPairNamesAndIds[language]);
+  const gender = useSelector((state) => state.gender.selectedGender);
 
   const [
     isSelectSyncPairModalVisible,
@@ -51,9 +63,31 @@ function SyncPairCard(props) {
     getOptionLabel: (option) => option,
   };
 
+  let trainerActorId = teamMemberData ? teamMemberData.trainerActorId : '';
+  if (gender === 'Female' && trainerActorId === 'hero') {
+    trainerActorId = 'heroine';
+  }
+
+  const onChangeGender = () => {
+    dispatch(changeGender());
+  };
+
   return (
     <Fragment>
       <Card className={classes.card} position="relative" variant="outlined">
+        {trainerActorId === 'hero' || trainerActorId === 'heroine' ? (
+          <Fab
+            aria-label={'Gender'}
+            className={classes.fab}
+            variant="round"
+            size="small"
+            onClick={onChangeGender}
+            style={{ zIndex: 9999 }}
+          >
+            <RefreshIcon />
+          </Fab>
+        ) : null}
+
         <CardActionArea onClick={onClickCard}>
           {teamMemberData ? (
             <div>
@@ -61,7 +95,7 @@ function SyncPairCard(props) {
                 component="img"
                 alt="Trainer Image"
                 height="250"
-                image={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${teamMemberData.trainerActorId}_256.ktx.png`}
+                image={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${trainerActorId}_256.ktx.png`}
                 title="Trainer Image"
                 position="absolute"
               />

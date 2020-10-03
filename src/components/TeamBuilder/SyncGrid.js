@@ -145,7 +145,6 @@ class GridMap extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      console.log('sync level', this.props.syncLevel);
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         this.props.pokemon,
         cell,

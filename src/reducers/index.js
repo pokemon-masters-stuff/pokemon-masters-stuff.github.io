@@ -6,6 +6,7 @@ import alertReducer from './alertReducer';
 import authReducer from './authReducer';
 import publishedBuildReducer from './publishedBuildReducer';
 import languageReducer from './languageReducer';
+import genderReducer from './genderReducer';
 
 export default combineReducers({
   pokemon: pokemonReducer,
@@ -15,4 +16,5 @@ export default combineReducers({
   auth: authReducer,
   build: publishedBuildReducer,
   language: languageReducer,
+  gender: genderReducer,
 });
