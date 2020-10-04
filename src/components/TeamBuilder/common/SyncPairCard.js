@@ -82,7 +82,7 @@ function SyncPairCard(props) {
             variant="round"
             size="small"
             onClick={onChangeGender}
-            style={{ zIndex: 1200 }}
+            style={{ zIndex: 100 }}
           >
             <RefreshIcon />
           </Fab>
