@@ -486,6 +486,136 @@ import {
   glalieGridDataZH,
 } from '../data';
 
+import {
+  // Pokemon 128px (grided)
+  pm0006_00_lizardon_128, // Charizard
+  pm0829_11_okami2noon_128, // Lycanroc
+  pm0154_01_meganium_128, // Meganium
+  pm0039_00_purin_128, // Jigglypuff
+  pm0734_00_cat2_128, // Meowstic
+  pm0500_00_enbuoh_128, // Emboar
+  pm0392_00_goukazaru_128, // Infernape
+  pm0823_00_sunaba2_128, // Palossand
+  pm0045_01_ruffresia_128, // Vileplume
+  pm0448_00_lucario_128, // Lucario
+  pm0095_00_iwark_128, // Onix
+  pm0581_00_swanna_128, // Swanna
+  pm0133_00_eievui_128, // Eevee
+  pm0003_01_fushigibana_128, // Venusaur
+  pm0160_00_ordile_128, // Feraligatr
+  pm0009_00_kamex_128, // Blastoise
+  pm0230_00_kingdra_128, // Kingdra
+  pm0324_00_cotoise_128, // Torkoal
+  pm0087_00_jugon_128, // Dewgong
+  pm0284_00_amemoth_128, // Masquerain
+  pm0510_00_lepardas_128, // Liepard
+  pm0319_00_samehader_128, // Sharpedo
+  pm0169_00_crobat_128, // Crobat
+  pm0229_01_hellgar_128, // Houndoom
+  pm0376_00_metagross_128, // Metagross
+  pm0028_61_asandpan_128, // Sandslash
+  pm0445_01_gaburias_128, // Garchomp
+  pm0818_00_uroko3_128, //Kommo-o
+  pm0612_00_ononokus_128, // Haxorus
+  pm0579_00_lanculus_128, // Reuniclus
+  pm0025_00_pikachu_128, // Pikachu
+  pm0026_61_araichu_128, // Raichu
+  pm0395_00_emperte_128, // Empoleon
+  pm0497_00_jalorda_128, // Serperior
+  pm0523_00_zebraika_128, // Zebstrika
+  pm0479_11_rotom_128, // Rotom
+  pm0121_00_starmie_128, // Starmie
+  pm0149_00_kairyu_128, // Dragonite
+  pm0157_00_bakphoon_128, // Typhlosion
+  pm0208_01_haganeil_128, // Steelix
+  pm0065_00_foodin_128, // Alakazam
+  pm0389_00_dodaitose_128, // Torterra
+  pm0035_00_pippi_128, // Clefairy
+  pm0862_11_gryps2_128, // Silvally
+  pm0879_00_beastblue_128, // Pheromosa
+  pm0806_00_dokutokage2_128, // Salazzle
+  pm0867_00_gusokumushi2_128, // Golisopod
+  pm0350_01_milokaross_128, // Milotic
+  pm0475_00_erureido_128, // Gallade
+  pm0719_00_fox3_128, // Delphox
+  pm0732_00_frilledlizard2_128, // Heliolisk
+  pm0151_00_mew_128, // Mew
+  pm0426_00_fuwaride_128, // Drifblim
+  pm0429_00_mumargi_128, // Mismagius
+  pm0362_00_onigohri_128, // Glalie
+  pm0542_00_hahakomori_128, // Leavanny
+
+  // 9/28/2020
+  pm0819_11_horror_128, // Mimikyu
+  pm0262_00_graena_128, // Mightyena
+  pm0405_00_rentorar_128, // Luxray
+} from '../images/Pokemon';
+
+export const pokemonPictures = {
+  // Pokemon 128px
+  pm0006_00_lizardon_128, // Charizard
+  pm0829_11_okami2noon_128, // Lycanroc
+  pm0154_01_meganium_128, // Meganium
+  pm0039_00_purin_128, // Jigglypuff
+  pm0734_00_cat2_128, // Meowstic
+  pm0500_00_enbuoh_128, // Emboar
+  pm0392_00_goukazaru_128, // Infernape
+  pm0823_00_sunaba2_128, // Palossand
+  pm0045_01_ruffresia_128, // Vileplume
+  pm0448_00_lucario_128, // Lucario
+  pm0095_00_iwark_128, // Onix
+  pm0581_00_swanna_128, // Swanna
+  pm0133_00_eievui_128, // Eevee
+  pm0003_01_fushigibana_128, // Venusaur
+  pm0160_00_ordile_128, // Feraligatr
+  pm0009_00_kamex_128, // Blastoise
+  pm0230_00_kingdra_128, // Kingdra
+  pm0324_00_cotoise_128, // Torkoal
+  pm0087_00_jugon_128, // Dewgong
+  pm0284_00_amemoth_128, // Masquerain
+  pm0510_00_lepardas_128, // Liepard
+  pm0319_00_samehader_128, // Sharpedo
+  pm0169_00_crobat_128, // Crobat
+  pm0229_01_hellgar_128, // Houndoom
+  pm0376_00_metagross_128, // Metagross
+  pm0028_61_asandpan_128, // Sandslash
+  pm0445_01_gaburias_128, // Garchomp
+  pm0818_00_uroko3_128, //Kommo-o
+  pm0612_00_ononokus_128, // Haxorus
+  pm0579_00_lanculus_128, // Reuniclus
+  pm0025_00_pikachu_128, // Pikachu
+  pm0026_61_araichu_128, // Raichu
+  pm0395_00_emperte_128, // Empoleon
+  pm0497_00_jalorda_128, // Serperior
+  pm0523_00_zebraika_128, // Zebstrika
+  pm0479_11_rotom_128, // Rotom
+  pm0121_00_starmie_128, // Starmie
+  pm0149_00_kairyu_128, // Dragonite
+  pm0157_00_bakphoon_128, // Typhlosion
+  pm0208_01_haganeil_128, // Steelix
+  pm0065_00_foodin_128, // Alakazam
+  pm0389_00_dodaitose_128, // Torterra
+  pm0035_00_pippi_128, // Clefairy
+  pm0862_11_gryps2_128, // Silvally
+  pm0879_00_beastblue_128, // Pheromosa
+  pm0806_00_dokutokage2_128, // Salazzle
+  pm0867_00_gusokumushi2_128, // Golisopod
+  pm0350_01_milokaross_128, // Milotic
+  pm0475_00_erureido_128, // Gallade
+  pm0719_00_fox3_128, // Delphox
+  pm0732_00_frilledlizard2_128, // Heliolisk
+  pm0151_00_mew_128, // Mew
+  pm0426_00_fuwaride_128, // Drifblim
+  pm0429_00_mumargi_128, // Mismagius
+  pm0362_00_onigohri_128, // Glalie
+  pm0542_00_hahakomori_128, // Leavanny
+
+  // 9/28/2020
+  pm0819_11_horror_128, // Mimikyu
+  pm0262_00_graena_128, // Mightyena
+  pm0405_00_rentorar_128, // Luxray
+};
+
 export const shortenedMoveNameByAbilityId = {
   de: shortenedMoveNameByAbilityIdDE,
   en: shortenedMoveNameByAbilityIdEN,
