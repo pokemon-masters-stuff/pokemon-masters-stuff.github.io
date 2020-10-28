@@ -26,27 +26,28 @@ export const getPokemonNameList = (language) =>
       let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
 
       // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
-      // if (entry.monsterBaseId === "20082912") {
-      //   // for the new sync pair:
-      //   value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-      //   name = entry.syncPairNameByLanguage["en"];
+      if (entry.monsterBaseId === '20082912') {
+        // for the new sync pair:
+        value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+        name = entry.syncPairNameByLanguage['en'];
 
-      //   return {
-      //     key: index,
-      //     name: name,
-      //     value: value + "*", // value changes as language changes. name stays the same so old links and saves are compatible
-      //   };
-      // } else if (entry.monsterBaseId === "20082911") {
-      //   // for the old sync pair, change displayed value but not name so that old saves are still compatible
-      //   value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+        return {
+          key: index,
+          name: name,
+          value: value + '*', // value changes as language changes. name stays the same so old links and saves are compatible
+        };
+      } else if (entry.monsterBaseId === '20082911') {
+        // for the old sync pair, change displayed value but not name so that old saves are still compatible
+        value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
 
-      //   return {
-      //     key: index,
-      //     name: name,
-      //     // value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-      //     value: value + "*", // value changes as language changes. name stays the same so old links and saves are compatible
-      //   };
-      // }
+        return {
+          key: index,
+          name: name,
+          // value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+        };
+      }
+
       if (entry.pokemonNameByLanguage['en'] === 'Blastoise') {
         // for the old sync pair, change displayed value but not name so that old saves are still compatible
         return {
@@ -58,13 +59,13 @@ export const getPokemonNameList = (language) =>
       }
 
       if (
-        entry.monsterBaseId === '20000900' ||
-        entry.monsterBaseId === '20081911' ||
-        entry.monsterBaseId === '20026200' ||
-        entry.monsterBaseId === '20040500' ||
-        entry.monsterBaseId === '20052301' ||
-        entry.monsterBaseId === '20036200' ||
-        entry.monsterBaseId === '20042901'
+        entry.monsterBaseId === '20082912' ||
+        entry.monsterBaseId === '20022400' ||
+        entry.monsterBaseId === '20062800' ||
+        entry.monsterBaseId === '20022501' ||
+        entry.monsterBaseId === '20051801' ||
+        entry.monsterBaseId === '20033400' ||
+        entry.monsterBaseId === '20001800'
       ) {
         return {
           key: index,
@@ -205,7 +206,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'kommo-o' ||
       pokemon === 'typhlosion' ||
       pokemon === 'feraligatr' ||
-      pokemon === 'pheromosa'
+      pokemon === 'pheromosa' ||
+      pokemon === 'braviary' ||
+      pokemon === 'pidgeot' ||
+      pokemon === 'olivia_lycanroc'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -251,7 +255,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'onix' ||
       pokemon === 'lycanroc' ||
       pokemon === 'venusaur' ||
-      pokemon === 'silvally'
+      pokemon === 'silvally' ||
+      pokemon === 'altaria' ||
+      pokemon === 'musharna' ||
+      pokemon === 'octillery'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -293,7 +300,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'blastoise_new' ||
       pokemon === 'meganium' ||
       pokemon === 'glalie' ||
-      pokemon === 'clefairy'
+      pokemon === 'clefairy' ||
+      pokemon === 'delibird'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -385,7 +393,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'kommo-o' ||
       pokemon === 'typhlosion' ||
       pokemon === 'feraligatr' ||
-      pokemon === 'pheromosa'
+      pokemon === 'pheromosa' ||
+      pokemon === 'braviary' ||
+      pokemon === 'pidgeot' ||
+      pokemon === 'olivia_lycanroc'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -419,7 +430,10 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'onix' ||
       pokemon === 'lycanroc' ||
       pokemon === 'venusaur' ||
-      pokemon === 'silvally'
+      pokemon === 'silvally' ||
+      pokemon === 'altaria' ||
+      pokemon === 'musharna' ||
+      pokemon === 'octillery'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -449,7 +463,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'blastoise_new' ||
       pokemon === 'meganium' ||
       pokemon === 'glalie' ||
-      pokemon === 'clefairy'
+      pokemon === 'clefairy' ||
+      pokemon === 'delibird'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||

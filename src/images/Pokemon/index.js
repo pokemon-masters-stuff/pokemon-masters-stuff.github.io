@@ -23,7 +23,6 @@ export { default as pm0003_01_fushigibana_128 } from './128px/pm0003_01_fushigib
 export { default as pm0160_00_ordile_128 } from './128px/pm0160_00_ordile_128.ktx.png'; // Feraligatr
 // export { default as pm0254_00_jukain_128 } from './128px/pm0254_00_jukain_128.ktx.png'; // Sceptile
 // export { default as pm0503_00_daikenki_128 } from './128px/pm0503_00_daikenki_128.ktx.png'; // Samurott
-// export { default as pm0018_00_pigeot_128 } from './128px/pm0018_00_pigeot_128.ktx.png'; // Pidgeot
 export { default as pm0009_00_kamex_128 } from './128px/pm0009_00_kamex_128.ktx.png'; // Blastoise
 // export { default as pm0751_00_ice3_128 } from './128px/pm0751_00_ice3_128.ktx.png'; // Avalugg
 // export { default as pm0242_00_happinas_128 } from './128px/pm0242_00_happinas_128.ktx.png'; // Blissey
@@ -55,7 +54,6 @@ export { default as pm0510_00_lepardas_128 } from './128px/pm0510_00_lepardas_12
 export { default as pm0319_00_samehader_128 } from './128px/pm0319_00_samehader_128.ktx.png'; // Sharpedo
 // export { default as pm0477_00_yonoir_128 } from './128px/pm0477_00_yonoir_128.ktx.png'; // Dusknoir
 // export { default as pm0308_01_charem_128 } from './128px/pm0308_01_charem_128.ktx.png'; // Medicham
-// export { default as pm0829_12_okami2night_128 } from './128px/pm0829_12_okami2night_128.ktx.png'; // Lycanroc
 // export { default as pm0565_00_abagoura_128 } from './128px/pm0565_00_abagoura_128.ktx.png'; // Carracosta
 // export { default as pm0740_00_aurora2_128 } from './128px/pm0740_00_aurora2_128.ktx.png'; // Aurorus
 export { default as pm0169_00_crobat_128 } from './128px/pm0169_00_crobat_128.ktx.png'; // Crobat
@@ -77,13 +75,11 @@ export { default as pm0612_00_ononokus_128 } from './128px/pm0612_00_ononokus_12
 // export { default as pm0373_00_bohmander_128 } from './128px/pm0373_00_bohmander_128.ktx.png'; // Salamence
 export { default as pm0579_00_lanculus_128 } from './128px/pm0579_00_lanculus_128.ktx.png'; // Reuniclus
 // export { default as pm0757_00_shrimp2_128 } from './128px/pm0757_00_shrimp2_128.ktx.png'; // Clawitzer
-// export { default as pm0224_00_okutank_128 } from './128px/pm0224_00_okutank_128.ktx.png'; // Octillery
 // export { default as pm0059_00_windie_128 } from './128px/pm0059_00_windie_128.ktx.png'; // Arcanine
 export { default as pm0025_00_pikachu_128 } from './128px/pm0025_00_pikachu_128.ktx.png'; // Pikachu
 export { default as pm0026_61_araichu_128 } from './128px/pm0026_61_araichu_128.ktx.png'; // Raichu
 export { default as pm0395_00_emperte_128 } from './128px/pm0395_00_emperte_128.ktx.png'; // Empoleon
 export { default as pm0497_00_jalorda_128 } from './128px/pm0497_00_jalorda_128.ktx.png'; // Serperior
-// export { default as pm0225_00_delibird_128 } from './128px/pm0225_00_delibird_128.ktx.png'; // Delibird
 export { default as pm0523_00_zebraika_128 } from './128px/pm0523_00_zebraika_128.ktx.png'; // Zebstrika
 export { default as pm0479_11_rotom_128 } from './128px/pm0479_11_rotom_128.ktx.png'; // Rotom
 export { default as pm0121_00_starmie_128 } from './128px/pm0121_00_starmie_128.ktx.png'; // Starmie
@@ -118,3 +114,11 @@ export { default as pm0542_00_hahakomori_128 } from './128px/pm0542_00_hahakomor
 export { default as pm0819_11_horror_128 } from './128px/pm0819_11_horror_128.ktx.png'; // Mimikyu
 export { default as pm0262_00_graena_128 } from './128px/pm0262_00_graena_128.ktx.png'; // Mightyena
 export { default as pm0405_00_rentorar_128 } from './128px/pm0405_00_rentorar_128.ktx.png'; // Luxray
+// 10/28/2020
+export { default as pm0018_00_pigeot_128 } from './128px/pm0018_00_pigeot_128.ktx.png'; // Pidgeot
+export { default as pm0225_00_delibird_128 } from './128px/pm0225_00_delibird_128.ktx.png'; // Delibird
+export { default as pm0829_12_okami2night_128 } from './128px/pm0829_12_okami2night_128.ktx.png'; // Lycanroc_midnight
+export { default as pm0628_00_warrgle_128 } from './128px/pm0628_00_warrgle_128.ktx.png'; // Braviary
+export { default as pm0518_00_musharna_128 } from './128px/pm0518_00_musharna_128.ktx.png'; // Musharna
+export { default as pm0334_00_tyltalis_128 } from './128px/pm0334_00_tyltalis_128.ktx.png'; // Altaria
+export { default as pm0224_00_okutank_128 } from './128px/pm0224_00_okutank_128.ktx.png'; // Octillery

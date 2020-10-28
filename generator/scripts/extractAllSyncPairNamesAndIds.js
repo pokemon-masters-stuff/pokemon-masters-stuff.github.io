@@ -116,18 +116,26 @@ const gridedTrainerList = [
   '10010600', // zebstrika
   '10015100', // mismagius
   '10015300', // glalie
+  // 10/28/2020
+  '10021500', // altaria
+  '10005100', // lycanroc midnight
+  '10010000', // braviary
+  '10009610', // octillery
+  '10010110', // delibird
+  '10010200', // musharna
+  '11002100', // pigeot
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 9/28/2020
-  '10000740', // mimikyu
-  '10002040', // mightyena
-  '10011500', // luxray
-  '10002101', // blastoise_new
-  '10010600', // zebstrika
-  '10015100', // mismagius
-  '10015300', // glalie
+  // 10/28/2020
+  '10021500', // altaria
+  '10005100', // lycanroc midnight
+  '10010000', // braviary
+  '10009610', // octillery
+  '10010110', // delibird
+  '10010200', // musharna
+  '11002100', // pigeot
 ];
 /*
  * Usage i.e: node extractAllSyncPairNamesAndIds.js
@@ -217,7 +225,7 @@ const extractAllSyncPairNamesAndIds = () => {
     let syncPairName = '';
     languages.forEach((language) => {
       let updatedMonsterBaseId = monsterBaseId;
-      // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason. Same for 20003501 Clefairy, 20033601 Seviper, 20007601 Golem, 20007101 Victreebel, 20005301 Persian, 20004901 Venomoth, 20011901 Seaking, 20011501 Kangaskhan
+      // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason. Same for 20003501 Clefairy, 20033601 Seviper, 20007601 Golem, 20007101 Victreebel, 20005301 Persian, 20004901 Venomoth, 20011901 Seaking, 20011501 Kangaskhan, 20051801 Musharna
       if (monsterBaseId) {
         if (
           monsterBaseId === 20003901 ||
@@ -228,7 +236,8 @@ const extractAllSyncPairNamesAndIds = () => {
           monsterBaseId === 20004901 ||
           monsterBaseId === 20011901 ||
           monsterBaseId === 20003501 ||
-          monsterBaseId === 20011501
+          monsterBaseId === 20011501 ||
+          monsterBaseId === 20051801
         ) {
           updatedMonsterBaseId = Number(
             monsterBaseId.toString().slice(0, -1) + '0'
@@ -400,6 +409,12 @@ const extractAllSyncPairNamesAndIds = () => {
       //   }
       // }
       // }
+      if (
+        newTrainerBaseIdArray.includes(entry.trainerBaseId.toString()) &&
+        language === 'en'
+      ) {
+        console.log(pokemonEnglishName, updatedMonsterBaseId);
+      }
     });
   });
   // prints out export statements in console.

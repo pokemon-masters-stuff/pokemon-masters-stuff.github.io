@@ -79,7 +79,7 @@ function Stats(props) {
   let lv125Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 25;
 
   // let baseHp = hp[4] + (selectedRarity - rarity) * 40;
-  let baseHp = lv125Hp + (selectedRarity - rarity) * 40;
+  let baseHp = Math.floor(lv125Hp + (selectedRarity - rarity) * 40);
   let baseAtk =
     Math.floor(
       (lv125Atk + (selectedRarity - rarity) * 20) *

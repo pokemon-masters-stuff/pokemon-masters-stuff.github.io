@@ -484,6 +484,63 @@ import {
   luxrayGridDataZH,
   mismagiusGridDataZH,
   glalieGridDataZH,
+  // 10/28/2020
+  olivia_lycanrocGridDataDE,
+  altariaGridDataDE,
+  braviaryGridDataDE,
+  octilleryGridDataDE,
+  pidgeotGridDataDE,
+  musharnaGridDataDE,
+  delibirdGridDataDE,
+  olivia_lycanrocGridDataEN,
+  altariaGridDataEN,
+  braviaryGridDataEN,
+  octilleryGridDataEN,
+  pidgeotGridDataEN,
+  musharnaGridDataEN,
+  delibirdGridDataEN,
+  olivia_lycanrocGridDataES,
+  altariaGridDataES,
+  braviaryGridDataES,
+  octilleryGridDataES,
+  pidgeotGridDataES,
+  musharnaGridDataES,
+  delibirdGridDataES,
+  olivia_lycanrocGridDataFR,
+  altariaGridDataFR,
+  braviaryGridDataFR,
+  octilleryGridDataFR,
+  pidgeotGridDataFR,
+  musharnaGridDataFR,
+  delibirdGridDataFR,
+  olivia_lycanrocGridDataIT,
+  altariaGridDataIT,
+  braviaryGridDataIT,
+  octilleryGridDataIT,
+  pidgeotGridDataIT,
+  musharnaGridDataIT,
+  delibirdGridDataIT,
+  olivia_lycanrocGridDataJA,
+  altariaGridDataJA,
+  braviaryGridDataJA,
+  octilleryGridDataJA,
+  pidgeotGridDataJA,
+  musharnaGridDataJA,
+  delibirdGridDataJA,
+  olivia_lycanrocGridDataKO,
+  altariaGridDataKO,
+  braviaryGridDataKO,
+  octilleryGridDataKO,
+  pidgeotGridDataKO,
+  musharnaGridDataKO,
+  delibirdGridDataKO,
+  olivia_lycanrocGridDataZH,
+  altariaGridDataZH,
+  braviaryGridDataZH,
+  octilleryGridDataZH,
+  pidgeotGridDataZH,
+  musharnaGridDataZH,
+  delibirdGridDataZH,
 } from '../data';
 
 import {
@@ -549,6 +606,15 @@ import {
   pm0819_11_horror_128, // Mimikyu
   pm0262_00_graena_128, // Mightyena
   pm0405_00_rentorar_128, // Luxray
+
+  // 10/28/2020
+  pm0018_00_pigeot_128, // Pidgeot
+  pm0225_00_delibird_128, // Delibird
+  pm0829_12_okami2night_128, // Lycanroc_midnight
+  pm0628_00_warrgle_128, // Braviary
+  pm0518_00_musharna_128, // Musharna
+  pm0334_00_tyltalis_128, // Altaria
+  pm0224_00_okutank_128, // Octillery
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -614,6 +680,15 @@ export const pokemonPictures = {
   pm0819_11_horror_128, // Mimikyu
   pm0262_00_graena_128, // Mightyena
   pm0405_00_rentorar_128, // Luxray
+
+  // 10/28/2020
+  pm0018_00_pigeot_128, // Pidgeot
+  pm0225_00_delibird_128, // Delibird
+  pm0829_12_okami2night_128, // Lycanroc_midnight
+  pm0628_00_warrgle_128, // Braviary
+  pm0518_00_musharna_128, // Musharna
+  pm0334_00_tyltalis_128, // Altaria
+  pm0224_00_okutank_128, // Octillery
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -688,6 +763,13 @@ export const allSyncGrids = {
     luxrayGridDataDE,
     mismagiusGridDataDE,
     glalieGridDataDE,
+    olivia_lycanrocGridDataDE,
+    altariaGridDataDE,
+    braviaryGridDataDE,
+    octilleryGridDataDE,
+    pidgeotGridDataDE,
+    musharnaGridDataDE,
+    delibirdGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -749,6 +831,13 @@ export const allSyncGrids = {
     luxrayGridDataEN,
     mismagiusGridDataEN,
     glalieGridDataEN,
+    olivia_lycanrocGridDataEN,
+    altariaGridDataEN,
+    braviaryGridDataEN,
+    octilleryGridDataEN,
+    pidgeotGridDataEN,
+    musharnaGridDataEN,
+    delibirdGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -810,6 +899,13 @@ export const allSyncGrids = {
     luxrayGridDataES,
     mismagiusGridDataES,
     glalieGridDataES,
+    olivia_lycanrocGridDataES,
+    altariaGridDataES,
+    braviaryGridDataES,
+    octilleryGridDataES,
+    pidgeotGridDataES,
+    musharnaGridDataES,
+    delibirdGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -871,6 +967,13 @@ export const allSyncGrids = {
     luxrayGridDataFR,
     mismagiusGridDataFR,
     glalieGridDataFR,
+    olivia_lycanrocGridDataFR,
+    altariaGridDataFR,
+    braviaryGridDataFR,
+    octilleryGridDataFR,
+    pidgeotGridDataFR,
+    musharnaGridDataFR,
+    delibirdGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -932,6 +1035,13 @@ export const allSyncGrids = {
     luxrayGridDataIT,
     mismagiusGridDataIT,
     glalieGridDataIT,
+    olivia_lycanrocGridDataIT,
+    altariaGridDataIT,
+    braviaryGridDataIT,
+    octilleryGridDataIT,
+    pidgeotGridDataIT,
+    musharnaGridDataIT,
+    delibirdGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -993,6 +1103,13 @@ export const allSyncGrids = {
     luxrayGridDataJA,
     mismagiusGridDataJA,
     glalieGridDataJA,
+    olivia_lycanrocGridDataJA,
+    altariaGridDataJA,
+    braviaryGridDataJA,
+    octilleryGridDataJA,
+    pidgeotGridDataJA,
+    musharnaGridDataJA,
+    delibirdGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1054,6 +1171,13 @@ export const allSyncGrids = {
     luxrayGridDataKO,
     mismagiusGridDataKO,
     glalieGridDataKO,
+    olivia_lycanrocGridDataKO,
+    altariaGridDataKO,
+    braviaryGridDataKO,
+    octilleryGridDataKO,
+    pidgeotGridDataKO,
+    musharnaGridDataKO,
+    delibirdGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1094,7 +1218,7 @@ export const allSyncGrids = {
     emboarGridDataZH,
     drifblimGridDataZH,
     crobatGridDataZH,
-    lycanrocGridDataZH,
+    olivia_lycanrocGridDataZH,
     onixGridDataZH,
     sandslashGridDataZH,
     kommooGridDataZH,
@@ -1115,6 +1239,13 @@ export const allSyncGrids = {
     luxrayGridDataZH,
     mismagiusGridDataZH,
     glalieGridDataZH,
+    lycanrocGridDataZH,
+    altariaGridDataZH,
+    braviaryGridDataZH,
+    octilleryGridDataZH,
+    pidgeotGridDataZH,
+    musharnaGridDataZH,
+    delibirdGridDataZH,
   },
 };
 
