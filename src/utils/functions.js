@@ -89,7 +89,14 @@ export const getPokemonNameList = (language) =>
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;
   gridedSyncPairDataArray.forEach((pokemon) => {
-    if (
+    if (pokemonName === 'lycanroc') {
+      if (
+        pokemon.syncPairNameByLanguage['en'] === 'kukui_lycanroc' ||
+        pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'kukui_lycanroc'
+      ) {
+        pokemonData = pokemon;
+      }
+    } else if (
       pokemon.pokemonNameByLanguage['en'] === pokemonName ||
       pokemon.pokemonNameByLanguage['en'].toLowerCase() === pokemonName ||
       pokemon.syncPairNameByLanguage['en'] === pokemonName ||
