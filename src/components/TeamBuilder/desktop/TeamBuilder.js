@@ -350,6 +350,15 @@ function TeamBuilder() {
                         pokemon={teamMemberData[
                           'pokemonEnglishName'
                         ].toLowerCase()}
+                        syncPairName={
+                          syncPairNamesAndIds['en'][
+                            teamMembers[`slot${index + 1}`]
+                          ]
+                            ? syncPairNamesAndIds['en'][
+                                teamMembers[`slot${index + 1}`]
+                              ]['syncPairNameByLanguage'][language]
+                            : ''
+                        }
                         slot={`slot${index + 1}`}
                       />
                     </Grid>

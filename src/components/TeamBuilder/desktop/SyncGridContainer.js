@@ -22,7 +22,11 @@ const useStyles = makeStyles((theme) => ({
 const SyncGridContainer = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const { pokemon, slot } = props;
+  const { pokemon, syncPairName, slot } = props;
+  let pokemonName = pokemon;
+  if (syncPairName === 'Olivia & Lycanroc') {
+    pokemonName = 'olivia_lycanroc';
+  }
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
   const remainingEnergy = useSelector(
@@ -63,7 +67,7 @@ const SyncGridContainer = (props) => {
 
         <div style={{ marginLeft: 8, marginTop: -7 }}>
           <MovesAndSkillsButtonMobile
-            pokemon={pokemon}
+            pokemon={pokemonName}
             selectedCellsById={selectedCellsById}
             syncLevel={syncLevels[slot]}
             language={language}
@@ -75,7 +79,11 @@ const SyncGridContainer = (props) => {
           <ResetIndividualGridButton slot={slot} />
         </div>
         <div style={{ marginTop: -70 }}>
-          <SyncGrid {...props} syncLevel={syncLevels[slot]} />
+          <SyncGrid
+            pokemon={pokemonName}
+            slot={slot}
+            syncLevel={syncLevels[slot]}
+          />
         </div>
       </div>
     </Paper>
