@@ -123,7 +123,7 @@ const gridedTrainerList = [
   '10009610', // octillery
   '10010110', // delibird
   '10010200', // musharna
-  '11002100', // pigeot
+  '10002100', // pigeot
 ];
 
 const newTrainerBaseIdArray = [
@@ -135,7 +135,7 @@ const newTrainerBaseIdArray = [
   '10009610', // octillery
   '10010110', // delibird
   '10010200', // musharna
-  '11002100', // pigeot
+  '10002100', // pigeot
 ];
 /*
  * Usage i.e: node extractAllSyncPairNamesAndIds.js
