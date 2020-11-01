@@ -41,56 +41,71 @@ class GridMap extends Component {
   };
 
   loadUrlGridData() {
-    let pokemonFromUrl;
     if (getQueryStringValue('p')) {
-      pokemonFromUrl = getQueryStringValue('p');
-      if (pokemonFromUrl === 'Blastoise_New') {
+      let pokemonFromUrl = getQueryStringValue('p');
+
+      if (
+        pokemonFromUrl === 'Blastoise_New' ||
+        pokemonFromUrl === 'Blastoise'
+      ) {
         pokemonFromUrl = 'Blastoise_new';
       }
-      this.props.selectPokemon(pokemonFromUrl);
-    }
 
-    let syncLevelFromUrl;
-    if (getQueryStringValue('s')) {
-      syncLevelFromUrl = getQueryStringValue('s');
-      this.props.setSyncLevel(syncLevelFromUrl);
-    } else {
-      this.props.setSyncLevel('5');
-    }
+      if (
+        !allSyncGrids[this.props.language][
+          `${removeHyphens(
+            pokemonFromUrl.toLowerCase()
+          )}GridData${this.props.language.toUpperCase()}`
+        ]
+      ) {
+        // Send alert if invalid url
+        alert('Invalid Pokemon name in url');
+      } else {
+        this.props.selectPokemon(pokemonFromUrl);
 
-    // if user uses an url that includes grid data, generate gridmap based on url
-    if (getQueryStringValue('grid')) {
-      this.props.resetGrids();
-      let remainingEnergy = Number(getQueryStringValue('e'));
-      let orbSpent = Number(getQueryStringValue('o'));
+        let syncLevelFromUrl;
+        if (getQueryStringValue('s')) {
+          syncLevelFromUrl = getQueryStringValue('s');
+          this.props.setSyncLevel(syncLevelFromUrl);
+        } else {
+          this.props.setSyncLevel('5');
+        }
 
-      let cellData = {};
-      let selectedCellByIdFromUrl = {};
+        // if user uses an url that includes grid data, generate gridmap based on url
+        if (getQueryStringValue('grid')) {
+          this.props.resetGrids();
+          let remainingEnergy = Number(getQueryStringValue('e'));
+          let orbSpent = Number(getQueryStringValue('o'));
 
-      getQueryStringValue('grid').map((id) => {
-        cellData =
-          allSyncGrids[this.props.language][
-            `${removeHyphens(
-              pokemonFromUrl
-            ).toLowerCase()}GridData${this.props.language.toUpperCase()}`
-          ][Number(id)];
+          let cellData = {};
+          let selectedCellByIdFromUrl = {};
 
-        selectedCellByIdFromUrl = {
-          cellId: cellData.cellId,
-          name: cellData.move.name,
-          description: cellData.move.description,
-          energy: cellData.move.energyCost,
-          moveId: cellData.ability.moveId,
-          value: cellData.ability.value,
-          type: cellData.ability.type,
-        };
+          getQueryStringValue('grid').map((id) => {
+            cellData =
+              allSyncGrids[this.props.language][
+                `${removeHyphens(
+                  pokemonFromUrl
+                ).toLowerCase()}GridData${this.props.language.toUpperCase()}`
+              ][Number(id)];
 
-        return this.props.loadGridFromUrl(
-          selectedCellByIdFromUrl,
-          remainingEnergy,
-          orbSpent
-        );
-      });
+            selectedCellByIdFromUrl = {
+              cellId: cellData.cellId,
+              name: cellData.move.name,
+              description: cellData.move.description,
+              energy: cellData.move.energyCost,
+              moveId: cellData.ability.moveId,
+              value: cellData.ability.value,
+              type: cellData.ability.type,
+            };
+
+            return this.props.loadGridFromUrl(
+              selectedCellByIdFromUrl,
+              remainingEnergy,
+              orbSpent
+            );
+          });
+        }
+      }
     }
   }
 

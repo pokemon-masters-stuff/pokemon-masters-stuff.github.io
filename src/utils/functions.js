@@ -21,6 +21,7 @@ export const capitalizeSyncPairNameForUrl = (syncPairName) => {
 
 export const getPokemonNameList = (language) =>
   gridedSyncPairDataArray
+    .slice(0, -1) // remove the blank template, which is the last entry of the array
     .map((entry, index) => {
       let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
       let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
@@ -43,18 +44,14 @@ export const getPokemonNameList = (language) =>
         return {
           key: index,
           name: name,
-          // value: value, // value changes as language changes. name stays the same so old links and saves are compatible
           value: value, // value changes as language changes. name stays the same so old links and saves are compatible
         };
-      }
-
-      if (entry.pokemonNameByLanguage['en'] === 'Blastoise') {
-        // for the old sync pair, change displayed value but not name so that old saves are still compatible
+      } else if (entry.monsterBaseId === '20000900') {
+        // rename Blastoise_new to Blastoise
         return {
           key: index,
           name: name,
-          // value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-          value: value + '_old', // value changes as language changes. name stays the same so old links and saves are compatible
+          value: 'Blastoise', // value changes as language changes. name stays the same so old links and saves are compatible
         };
       }
 
@@ -95,6 +92,12 @@ export const getPokemonDataByName = (pokemonName) => {
       ) {
         pokemonData = pokemon;
       }
+    } else if (pokemonName.toLowerCase() === 'blastoise') {
+      if (
+        pokemon.pokemonNameByLanguage['en'].toLowerCase() === 'blastoise_new'
+      ) {
+        pokemonData = pokemon;
+      }
     } else if (
       pokemon.pokemonNameByLanguage['en'] === pokemonName ||
       pokemon.pokemonNameByLanguage['en'].toLowerCase() === pokemonName ||
@@ -104,7 +107,7 @@ export const getPokemonDataByName = (pokemonName) => {
       pokemonData = pokemon;
     }
   });
-  return pokemonData;
+  return pokemonData ? pokemonData : gridedSyncPairDataArray[0];
 };
 
 const role = { 0: 'P.Strike', 1: 'S.Strike', 2: 'Support', 3: 'Tech' };
