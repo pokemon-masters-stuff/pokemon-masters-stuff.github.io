@@ -51,7 +51,7 @@ export const getPokemonNameList = (language) =>
         return {
           key: index,
           name: name,
-          value: 'Blastoise', // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value.replace('_new', ''), // value changes as language changes. name stays the same so old links and saves are compatible
         };
       }
 
