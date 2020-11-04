@@ -541,6 +541,14 @@ import {
   pidgeotGridDataZH,
   musharnaGridDataZH,
   delibirdGridDataZH,
+  volcaronaGridDataDE,
+  volcaronaGridDataEN,
+  volcaronaGridDataES,
+  volcaronaGridDataFR,
+  volcaronaGridDataIT,
+  volcaronaGridDataJA,
+  volcaronaGridDataKO,
+  volcaronaGridDataZH,
 } from '../data';
 
 import {
@@ -615,6 +623,9 @@ import {
   pm0518_00_musharna_128, // Musharna
   pm0334_00_tyltalis_128, // Altaria
   pm0224_00_okutank_128, // Octillery
+
+  // 11/4/2020
+  pm0637_00_ulgamoth_128, // Volcarona
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -689,6 +700,9 @@ export const pokemonPictures = {
   pm0518_00_musharna_128, // Musharna
   pm0334_00_tyltalis_128, // Altaria
   pm0224_00_okutank_128, // Octillery
+
+  // 11/4/2020
+  pm0637_00_ulgamoth_128, // Volcarona
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -770,6 +784,7 @@ export const allSyncGrids = {
     pidgeotGridDataDE,
     musharnaGridDataDE,
     delibirdGridDataDE,
+    volcaronaGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -838,6 +853,7 @@ export const allSyncGrids = {
     pidgeotGridDataEN,
     musharnaGridDataEN,
     delibirdGridDataEN,
+    volcaronaGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -906,6 +922,7 @@ export const allSyncGrids = {
     pidgeotGridDataES,
     musharnaGridDataES,
     delibirdGridDataES,
+    volcaronaGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -974,6 +991,7 @@ export const allSyncGrids = {
     pidgeotGridDataFR,
     musharnaGridDataFR,
     delibirdGridDataFR,
+    volcaronaGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1042,6 +1060,7 @@ export const allSyncGrids = {
     pidgeotGridDataIT,
     musharnaGridDataIT,
     delibirdGridDataIT,
+    volcaronaGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1110,6 +1129,7 @@ export const allSyncGrids = {
     pidgeotGridDataJA,
     musharnaGridDataJA,
     delibirdGridDataJA,
+    volcaronaGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1178,6 +1198,7 @@ export const allSyncGrids = {
     pidgeotGridDataKO,
     musharnaGridDataKO,
     delibirdGridDataKO,
+    volcaronaGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1246,6 +1267,7 @@ export const allSyncGrids = {
     pidgeotGridDataZH,
     musharnaGridDataZH,
     delibirdGridDataZH,
+    volcaronaGridDataZH,
   },
 };
 

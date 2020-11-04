@@ -226,18 +226,14 @@ const gridedTrainerList = [
   '10010110', // delibird
   '10010200', // musharna
   '10002100', // pigeot
+  // 11/4/2020
+  '10013200', // volcarona
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 10/28/2020
-  '10021500', // altaria
-  '10005100', // lycanroc midnight
-  '10010000', // braviary
-  '10009610', // octillery
-  '10010110', // delibird
-  '10010200', // musharna
-  '10002100', // pigeot
+  // 11/4/2020
+  '10013200', // volcarona
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:

@@ -122,3 +122,5 @@ export { default as pm0628_00_warrgle_128 } from './128px/pm0628_00_warrgle_128.
 export { default as pm0518_00_musharna_128 } from './128px/pm0518_00_musharna_128.ktx.png'; // Musharna
 export { default as pm0334_00_tyltalis_128 } from './128px/pm0334_00_tyltalis_128.ktx.png'; // Altaria
 export { default as pm0224_00_okutank_128 } from './128px/pm0224_00_okutank_128.ktx.png'; // Octillery
+// 11/4/2020
+export { default as pm0637_00_ulgamoth_128 } from './128px/pm0637_00_ulgamoth_128.ktx.png'; // Volcarona

@@ -568,3 +568,13 @@ export { default as octilleryGridDataZH } from './grids/zh/octillery.json';
 export { default as pidgeotGridDataZH } from './grids/zh/pidgeot.json';
 export { default as musharnaGridDataZH } from './grids/zh/musharna.json';
 export { default as delibirdGridDataZH } from './grids/zh/delibird.json';
+
+// 11/4/2020
+export { default as volcaronaGridDataDE } from './grids/de/volcarona.json';
+export { default as volcaronaGridDataEN } from './grids/en/volcarona.json';
+export { default as volcaronaGridDataES } from './grids/es/volcarona.json';
+export { default as volcaronaGridDataFR } from './grids/fr/volcarona.json';
+export { default as volcaronaGridDataIT } from './grids/it/volcarona.json';
+export { default as volcaronaGridDataJA } from './grids/ja/volcarona.json';
+export { default as volcaronaGridDataKO } from './grids/ko/volcarona.json';
+export { default as volcaronaGridDataZH } from './grids/zh/volcarona.json';
