@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.4cc63a71.chunk.css",
-    "main.js": "/static/js/main.3ae8406e.chunk.js",
-    "main.js.map": "/static/js/main.3ae8406e.chunk.js.map",
+    "main.js": "/static/js/main.bf46c39d.chunk.js",
+    "main.js.map": "/static/js/main.bf46c39d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
-    "static/js/2.728d1786.chunk.js": "/static/js/2.728d1786.chunk.js",
-    "static/js/2.728d1786.chunk.js.map": "/static/js/2.728d1786.chunk.js.map",
+    "static/js/2.488d4de4.chunk.js": "/static/js/2.488d4de4.chunk.js",
+    "static/js/2.488d4de4.chunk.js.map": "/static/js/2.488d4de4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.cb96767fe4f91caae3fc9fb533440dc8.js": "/precache-manifest.cb96767fe4f91caae3fc9fb533440dc8.js",
+    "precache-manifest.1da76b199fcc3f165a148da6aeeb7aa1.js": "/precache-manifest.1da76b199fcc3f165a148da6aeeb7aa1.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4cc63a71.chunk.css.map": "/static/css/main.4cc63a71.chunk.css.map",
-    "static/js/2.728d1786.chunk.js.LICENSE.txt": "/static/js/2.728d1786.chunk.js.LICENSE.txt",
+    "static/js/2.488d4de4.chunk.js.LICENSE.txt": "/static/js/2.488d4de4.chunk.js.LICENSE.txt",
     "static/media/pm0003_01_fushigibana_128.ktx.png": "/static/media/pm0003_01_fushigibana_128.ktx.b88345b9.png",
     "static/media/pm0006_00_lizardon_128.ktx.png": "/static/media/pm0006_00_lizardon_128.ktx.1d3479bc.png",
     "static/media/pm0009_00_kamex_128.ktx.png": "/static/media/pm0009_00_kamex_128.ktx.c70c193b.png",
@@ -38,6 +38,7 @@
     "static/media/pm0225_00_delibird_128.ktx.png": "/static/media/pm0225_00_delibird_128.ktx.614dd726.png",
     "static/media/pm0229_01_hellgar_128.ktx.png": "/static/media/pm0229_01_hellgar_128.ktx.df22be5c.png",
     "static/media/pm0230_00_kingdra_128.ktx.png": "/static/media/pm0230_00_kingdra_128.ktx.0e58847f.png",
+    "static/media/pm0254_00_jukain_128.ktx.png": "/static/media/pm0254_00_jukain_128.ktx.53f1256b.png",
     "static/media/pm0262_00_graena_128.ktx.png": "/static/media/pm0262_00_graena_128.ktx.c65a54fc.png",
     "static/media/pm0284_00_amemoth_128.ktx.png": "/static/media/pm0284_00_amemoth_128.ktx.58278316.png",
     "static/media/pm0319_00_samehader_128.ktx.png": "/static/media/pm0319_00_samehader_128.ktx.f7b855bf.png",
@@ -54,6 +55,7 @@
     "static/media/pm0429_00_mumargi_128.ktx.png": "/static/media/pm0429_00_mumargi_128.ktx.c47514ac.png",
     "static/media/pm0445_01_gaburias_128.ktx.png": "/static/media/pm0445_01_gaburias_128.ktx.b5c34e61.png",
     "static/media/pm0448_00_lucario_128.ktx.png": "/static/media/pm0448_00_lucario_128.ktx.58371546.png",
+    "static/media/pm0468_00_togekiss_128.ktx.png": "/static/media/pm0468_00_togekiss_128.ktx.ca517b5b.png",
     "static/media/pm0475_00_erureido_128.ktx.png": "/static/media/pm0475_00_erureido_128.ktx.30131b15.png",
     "static/media/pm0479_11_rotom_128.ktx.png": "/static/media/pm0479_11_rotom_128.ktx.f695427f.png",
     "static/media/pm0497_00_jalorda_128.ktx.png": "/static/media/pm0497_00_jalorda_128.ktx.aa2a78d8.png",
@@ -77,13 +79,15 @@
     "static/media/pm0829_11_okami2noon_128.ktx.png": "/static/media/pm0829_11_okami2noon_128.ktx.53e99ae4.png",
     "static/media/pm0829_12_okami2night_128.ktx.png": "/static/media/pm0829_12_okami2night_128.ktx.6e4c9fd6.png",
     "static/media/pm0862_11_gryps2_128.ktx.png": "/static/media/pm0862_11_gryps2_128.ktx.1d7a6d84.png",
+    "static/media/pm0863_00_lei_128.ktx.png": "/static/media/pm0863_00_lei_128.ktx.4d9468f3.png",
     "static/media/pm0867_00_gusokumushi2_128.ktx.png": "/static/media/pm0867_00_gusokumushi2_128.ktx.30531bd3.png",
-    "static/media/pm0879_00_beastblue_128.ktx.png": "/static/media/pm0879_00_beastblue_128.ktx.ec85332e.png"
+    "static/media/pm0879_00_beastblue_128.ktx.png": "/static/media/pm0879_00_beastblue_128.ktx.ec85332e.png",
+    "static/media/pm0888_12_00_zacian_128.ktx.png": "/static/media/pm0888_12_00_zacian_128.ktx.bf7e188a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
-    "static/js/2.728d1786.chunk.js",
+    "static/js/2.488d4de4.chunk.js",
     "static/css/main.4cc63a71.chunk.css",
-    "static/js/main.3ae8406e.chunk.js"
+    "static/js/main.bf46c39d.chunk.js"
   ]
 }
