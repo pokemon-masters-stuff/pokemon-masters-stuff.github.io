@@ -75,6 +75,7 @@
   "20010100": "Electrode",
   "20010200": "Exeggcute",
   "20010300": "Exeggutor",
+  "20010800": "Lickitung",
   "20011000": "Weezing",
   "20011300": "Chansey",
   "20011500": "Kangaskhan",
@@ -182,6 +183,7 @@
   "20037300": "Salamence",
   "20037600": "Metagross",
   "20037651": "MegaMetagross",
+  "20037700": "Regirock",
   "20038100": "Latios",
   "20038400": "Rayquaza",
   "20038700": "Turtwig",
@@ -215,6 +217,7 @@
   "20045500": "Carnivine",
   "20045900": "Snover",
   "20046001": "Abomasnow",
+  "20046800": "Togekiss",
   "20047500": "Gallade",
   "20047551": "MegaGallade",
   "20047600": "Probopass",
@@ -302,6 +305,7 @@
   "20085300": "Bewear",
   "20081300": "Steenee",
   "20081400": "Tsareena",
+  "20086300": "Comfey",
   "20086700": "Golisopod",
   "20082300": "Palossand",
   "20086211": "Silvally",
@@ -367,5 +371,6 @@
   "20015112": "Mew",
   "20038701": "Turtwig",
   "20038801": "Grotle",
-  "20038901": "Torterra"
+  "20038901": "Torterra",
+  "2008881200": "Zacian"
 }

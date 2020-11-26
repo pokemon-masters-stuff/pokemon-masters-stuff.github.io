@@ -75,6 +75,7 @@
   "20010100": "Lektrobal",
   "20010200": "Owei",
   "20010300": "Kokowei",
+  "20010800": "Schlurp",
   "20011000": "Smogmog",
   "20011300": "Chaneira",
   "20011500": "Kangama",
@@ -182,6 +183,7 @@
   "20037300": "Brutalanda",
   "20037600": "Metagross",
   "20037651": "Mega-Metagross",
+  "20037700": "Regirock",
   "20038100": "Latios",
   "20038400": "Rayquaza",
   "20038700": "Chelast",
@@ -215,6 +217,7 @@
   "20045500": "Venuflibis",
   "20045900": "Shnebedeck",
   "20046001": "Rexblisar",
+  "20046800": "Togekiss",
   "20047500": "Galagladi",
   "20047551": "Mega-Galagladi",
   "20047600": "Voluminas",
@@ -302,6 +305,7 @@
   "20085300": "Kosturso",
   "20081300": "Frubaila",
   "20081400": "Fruyal",
+  "20086300": "Curelei",
   "20086700": "Tectass",
   "20082300": "Colossand",
   "20086211": "Amigento",
@@ -367,5 +371,6 @@
   "20015112": "Mew",
   "20038701": "Chelast",
   "20038801": "Chelcarain",
-  "20038901": "Chelterrar"
+  "20038901": "Chelterrar",
+  "2008881200": "Zacian"
 }

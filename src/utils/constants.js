@@ -549,6 +549,38 @@ import {
   volcaronaGridDataJA,
   volcaronaGridDataKO,
   volcaronaGridDataZH,
+  comfeyGridDataDE,
+  zacianGridDataDE,
+  togekissGridDataDE,
+  sceptileGridDataDE,
+  comfeyGridDataEN,
+  zacianGridDataEN,
+  togekissGridDataEN,
+  sceptileGridDataEN,
+  comfeyGridDataES,
+  zacianGridDataES,
+  togekissGridDataES,
+  sceptileGridDataES,
+  comfeyGridDataFR,
+  zacianGridDataFR,
+  togekissGridDataFR,
+  sceptileGridDataFR,
+  comfeyGridDataIT,
+  zacianGridDataIT,
+  togekissGridDataIT,
+  sceptileGridDataIT,
+  comfeyGridDataJA,
+  zacianGridDataJA,
+  togekissGridDataJA,
+  sceptileGridDataJA,
+  comfeyGridDataKO,
+  zacianGridDataKO,
+  togekissGridDataKO,
+  sceptileGridDataKO,
+  comfeyGridDataZH,
+  zacianGridDataZH,
+  togekissGridDataZH,
+  sceptileGridDataZH,
 } from '../data';
 
 import {
@@ -626,6 +658,12 @@ import {
 
   // 11/4/2020
   pm0637_00_ulgamoth_128, // Volcarona
+
+  // 11/26/2020
+  pm0863_00_lei_128, // Comfey
+  pm0468_00_togekiss_128, // Togekiss
+  pm0254_00_jukain_128, // Sceptile
+  pm0888_12_00_zacian_128, // Zacian
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -703,6 +741,12 @@ export const pokemonPictures = {
 
   // 11/4/2020
   pm0637_00_ulgamoth_128, // Volcarona
+
+  // 11/26/2020
+  pm0863_00_lei_128, // Comfey
+  pm0468_00_togekiss_128, // Togekiss
+  pm0254_00_jukain_128, // Sceptile
+  pm0888_12_00_zacian_128, // Zacian
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -785,6 +829,10 @@ export const allSyncGrids = {
     musharnaGridDataDE,
     delibirdGridDataDE,
     volcaronaGridDataDE,
+    comfeyGridDataDE,
+    zacianGridDataDE,
+    togekissGridDataDE,
+    sceptileGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -854,6 +902,10 @@ export const allSyncGrids = {
     musharnaGridDataEN,
     delibirdGridDataEN,
     volcaronaGridDataEN,
+    comfeyGridDataEN,
+    zacianGridDataEN,
+    togekissGridDataEN,
+    sceptileGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -923,6 +975,10 @@ export const allSyncGrids = {
     musharnaGridDataES,
     delibirdGridDataES,
     volcaronaGridDataES,
+    comfeyGridDataES,
+    zacianGridDataES,
+    togekissGridDataES,
+    sceptileGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -992,6 +1048,10 @@ export const allSyncGrids = {
     musharnaGridDataFR,
     delibirdGridDataFR,
     volcaronaGridDataFR,
+    comfeyGridDataFR,
+    zacianGridDataFR,
+    togekissGridDataFR,
+    sceptileGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1061,6 +1121,10 @@ export const allSyncGrids = {
     musharnaGridDataIT,
     delibirdGridDataIT,
     volcaronaGridDataIT,
+    comfeyGridDataIT,
+    zacianGridDataIT,
+    togekissGridDataIT,
+    sceptileGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1130,6 +1194,10 @@ export const allSyncGrids = {
     musharnaGridDataJA,
     delibirdGridDataJA,
     volcaronaGridDataJA,
+    comfeyGridDataJA,
+    zacianGridDataJA,
+    togekissGridDataJA,
+    sceptileGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1199,6 +1267,10 @@ export const allSyncGrids = {
     musharnaGridDataKO,
     delibirdGridDataKO,
     volcaronaGridDataKO,
+    comfeyGridDataKO,
+    zacianGridDataKO,
+    togekissGridDataKO,
+    sceptileGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1268,6 +1340,10 @@ export const allSyncGrids = {
     musharnaGridDataZH,
     delibirdGridDataZH,
     volcaronaGridDataZH,
+    comfeyGridDataZH,
+    zacianGridDataZH,
+    togekissGridDataZH,
+    sceptileGridDataZH,
   },
 };
 

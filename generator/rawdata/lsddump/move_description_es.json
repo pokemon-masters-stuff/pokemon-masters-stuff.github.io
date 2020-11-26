@@ -557,6 +557,16 @@
   "62000": "Evoluciona a Mega-Altaria. Vuelve a la normalidad tras terminar el combate.\nCausa más daño si no hay efectos activos en el terreno del bando rival y si no hay efectos activos que afecten a ambos bandos, como cambios atmosféricos o campos.",
   "75500": "Causa más daño cuanto más se haya reducido la Defensa Especial del objetivo.",
   "81300": "Sin efectos secundarios.",
+  "161": "Rara vez quema, paraliza o congela al objetivo.",
+  "781": "Causa más daño cuando el rival está lleno de determinación.",
+  "10084": "El bando del usuario recupera algunos PS.\nElimina cualquier reducción en las características del bando del usuario.\nAumenta la Defensa del bando del usuario.",
+  "10164": "Aumenta la Velocidad y la probabilidad de asestar golpes críticos del usuario.\nAumenta bastante una de las siguientes características del bando del usuario al azar: Ataque, Defensa, Ataque Especial, Defensa Especial, Precisión o Evasión.",
+  "12430": "Se reduce en 1 el contador de movimientos compi del usuario.\nAumenta bastante el Ataque del usuario.\nHace que el siguiente movimiento del usuario sea crítico.",
+  "81000": "Causa más daño cuando el rival está lleno de determinación.",
+  "81100": "Sin efectos secundarios.",
+  "81200": "Causa más daño cuando el rival sufre problemas de estado.",
+  "334": "Aumenta bastante la Defensa del usuario.",
+  "359": "Reduce la Velocidad del usuario.",
   "11320": "Aumenta de manera espectacular el Ataque Especial del usuario.\nAumenta bastante la Defensa Especial y la Velocidad del usuario.\nReduce mucho la Defensa del usuario.",
   "78600": "Sin efectos secundarios."
 }

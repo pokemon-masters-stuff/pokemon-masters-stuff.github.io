@@ -124,3 +124,8 @@ export { default as pm0334_00_tyltalis_128 } from './128px/pm0334_00_tyltalis_12
 export { default as pm0224_00_okutank_128 } from './128px/pm0224_00_okutank_128.ktx.png'; // Octillery
 // 11/4/2020
 export { default as pm0637_00_ulgamoth_128 } from './128px/pm0637_00_ulgamoth_128.ktx.png'; // Volcarona
+// 11/26/2020
+export { default as pm0863_00_lei_128 } from './128px/pm0863_00_lei_128.ktx.png'; // Comfey
+export { default as pm0468_00_togekiss_128 } from './128px/pm0468_00_togekiss_128.ktx.png'; // Togekiss
+export { default as pm0254_00_jukain_128 } from './128px/pm0254_00_jukain_128.ktx.png'; // Sceptile
+export { default as pm0888_12_00_zacian_128 } from './128px/pm0888_12_00_zacian_128.ktx.png'; // Zacian

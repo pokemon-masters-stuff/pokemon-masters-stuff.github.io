@@ -177,6 +177,17 @@
       "speValues": [9, 46, 70, 180, 200, 220]
     },
     {
+      "monsterId": "20008400000",
+      "monsterBaseId": 20086301,
+      "syncMoveId": 81100,
+      "hpValues": [124, 196, 265, 540, 600, 660],
+      "atkValues": [15, 55, 94, 248, 280, 312],
+      "defValues": [16, 53, 89, 232, 260, 288],
+      "spaValues": [15, 55, 94, 248, 280, 312],
+      "spdValues": [16, 47, 77, 198, 222, 246],
+      "speValues": [9, 46, 82, 225, 253, 281]
+    },
+    {
       "monsterId": "20009000000",
       "monsterBaseId": 20028900,
       "syncMoveId": 70300,
@@ -285,6 +296,17 @@
       "spaValues": [6, 48, 75, 196, 220, 244],
       "spdValues": [9, 41, 62, 150, 170, 190],
       "speValues": [8, 51, 78, 199, 223, 247]
+    },
+    {
+      "monsterId": "20016400000",
+      "monsterBaseId": 20046800,
+      "syncMoveId": 81200,
+      "hpValues": [124, 193, 259, 523, 579, 635],
+      "atkValues": [16, 47, 77, 198, 222, 246],
+      "defValues": [12, 35, 56, 144, 160, 176],
+      "spaValues": [21, 58, 94, 237, 265, 293],
+      "spdValues": [14, 40, 64, 163, 183, 203],
+      "speValues": [18, 51, 81, 202, 226, 250]
     },
     {
       "monsterId": "20017000000",
@@ -1717,6 +1739,17 @@
       "speValues": [7, 44, 68, 178, 202, 226]
     },
     {
+      "monsterId": "20243000000",
+      "monsterBaseId": 2008881200,
+      "syncMoveId": 81000,
+      "hpValues": [92, 161, 227, 491, 547, 603],
+      "atkValues": [20, 75, 126, 335, 379, 423],
+      "defValues": [10, 33, 54, 142, 158, 174],
+      "spaValues": [18, 52, 85, 217, 245, 273],
+      "spdValues": [10, 33, 54, 142, 158, 174],
+      "speValues": [20, 76, 130, 339, 383, 427]
+    },
+    {
       "monsterId": "28000000000",
       "monsterBaseId": 20002500,
       "syncMoveId": 75900,
@@ -1761,6 +1794,17 @@
       "speValues": [10, 20, 29, 62, 70, 78]
     },
     {
+      "monsterId": "28000020026",
+      "monsterBaseId": 20012701,
+      "syncMoveId": 31200,
+      "hpValues": [56, 93, 129, 272, 300, 328],
+      "atkValues": [13, 28, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [13, 28, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
       "monsterId": "28000020031",
       "monsterBaseId": 20004801,
       "syncMoveId": 41200,
@@ -1774,6 +1818,28 @@
     {
       "monsterId": "28000020032",
       "monsterBaseId": 20004901,
+      "syncMoveId": 41200,
+      "hpValues": [71, 107, 140, 272, 300, 328],
+      "atkValues": [17, 31, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [17, 31, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
+      "monsterId": "28000020036",
+      "monsterBaseId": 20004800,
+      "syncMoveId": 41200,
+      "hpValues": [62, 98, 131, 263, 291, 319],
+      "atkValues": [15, 29, 41, 96, 108, 120],
+      "defValues": [8, 15, 21, 43, 47, 51],
+      "spaValues": [15, 29, 41, 96, 108, 120],
+      "spdValues": [8, 15, 21, 43, 47, 51],
+      "speValues": [9, 19, 28, 61, 69, 77]
+    },
+    {
+      "monsterId": "28000020037",
+      "monsterBaseId": 20004900,
       "syncMoveId": 41200,
       "hpValues": [71, 107, 140, 272, 300, 328],
       "atkValues": [17, 31, 43, 98, 110, 122],
@@ -1926,6 +1992,28 @@
       "speValues": [10, 20, 29, 62, 70, 78]
     },
     {
+      "monsterId": "28000020086",
+      "monsterBaseId": 20004101,
+      "syncMoveId": 40800,
+      "hpValues": [62, 98, 131, 263, 291, 319],
+      "atkValues": [15, 29, 41, 96, 108, 120],
+      "defValues": [8, 15, 21, 43, 47, 51],
+      "spaValues": [15, 29, 41, 96, 108, 120],
+      "spdValues": [8, 15, 21, 43, 47, 51],
+      "speValues": [9, 19, 28, 61, 69, 77]
+    },
+    {
+      "monsterId": "28000020087",
+      "monsterBaseId": 20004201,
+      "syncMoveId": 40800,
+      "hpValues": [71, 107, 140, 272, 300, 328],
+      "atkValues": [17, 31, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [17, 31, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
       "monsterId": "28000020101",
       "monsterBaseId": 20001900,
       "syncMoveId": 30100,
@@ -1939,6 +2027,28 @@
     {
       "monsterId": "28000020102",
       "monsterBaseId": 20002000,
+      "syncMoveId": 30100,
+      "hpValues": [71, 107, 140, 272, 300, 328],
+      "atkValues": [17, 31, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [17, 31, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
+      "monsterId": "28000020106",
+      "monsterBaseId": 20001901,
+      "syncMoveId": 30100,
+      "hpValues": [62, 98, 131, 263, 291, 319],
+      "atkValues": [15, 29, 41, 96, 108, 120],
+      "defValues": [8, 15, 21, 43, 47, 51],
+      "spaValues": [15, 29, 41, 96, 108, 120],
+      "spdValues": [8, 15, 21, 43, 47, 51],
+      "speValues": [9, 19, 28, 61, 69, 77]
+    },
+    {
+      "monsterId": "28000020107",
+      "monsterBaseId": 20002001,
       "syncMoveId": 30100,
       "hpValues": [71, 107, 140, 272, 300, 328],
       "atkValues": [17, 31, 43, 98, 110, 122],
@@ -2082,6 +2192,17 @@
     {
       "monsterId": "28000020151",
       "monsterBaseId": 20009501,
+      "syncMoveId": 31300,
+      "hpValues": [56, 93, 129, 272, 300, 328],
+      "atkValues": [13, 28, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [13, 28, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
+      "monsterId": "28000020156",
+      "monsterBaseId": 20009500,
       "syncMoveId": 31300,
       "hpValues": [56, 93, 129, 272, 300, 328],
       "atkValues": [13, 28, 43, 98, 110, 122],
@@ -2278,6 +2399,28 @@
       "speValues": [10, 20, 29, 62, 70, 78]
     },
     {
+      "monsterId": "28000020206",
+      "monsterBaseId": 20005801,
+      "syncMoveId": 30200,
+      "hpValues": [62, 98, 131, 263, 291, 319],
+      "atkValues": [15, 29, 41, 96, 108, 120],
+      "defValues": [8, 15, 21, 43, 47, 51],
+      "spaValues": [15, 29, 41, 96, 108, 120],
+      "spdValues": [8, 15, 21, 43, 47, 51],
+      "speValues": [9, 19, 28, 61, 69, 77]
+    },
+    {
+      "monsterId": "28000020207",
+      "monsterBaseId": 20005901,
+      "syncMoveId": 30200,
+      "hpValues": [71, 107, 140, 272, 300, 328],
+      "atkValues": [17, 31, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [17, 31, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
       "monsterId": "28000020211",
       "monsterBaseId": 20011801,
       "syncMoveId": 40300,
@@ -2291,6 +2434,28 @@
     {
       "monsterId": "28000020212",
       "monsterBaseId": 20011901,
+      "syncMoveId": 40300,
+      "hpValues": [71, 107, 140, 272, 300, 328],
+      "atkValues": [17, 31, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [17, 31, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
+      "monsterId": "28000020216",
+      "monsterBaseId": 20011800,
+      "syncMoveId": 40300,
+      "hpValues": [62, 98, 131, 263, 291, 319],
+      "atkValues": [15, 29, 41, 96, 108, 120],
+      "defValues": [8, 15, 21, 43, 47, 51],
+      "spaValues": [15, 29, 41, 96, 108, 120],
+      "spdValues": [8, 15, 21, 43, 47, 51],
+      "speValues": [9, 19, 28, 61, 69, 77]
+    },
+    {
+      "monsterId": "28000020217",
+      "monsterBaseId": 20011900,
       "syncMoveId": 40300,
       "hpValues": [71, 107, 140, 272, 300, 328],
       "atkValues": [17, 31, 43, 98, 110, 122],
@@ -2641,6 +2806,28 @@
       "speValues": [10, 20, 29, 62, 70, 78]
     },
     {
+      "monsterId": "28000020301",
+      "monsterBaseId": 20010800,
+      "syncMoveId": 30100,
+      "hpValues": [56, 93, 129, 272, 300, 328],
+      "atkValues": [13, 28, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [13, 28, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
+      "monsterId": "28000020306",
+      "monsterBaseId": 20010801,
+      "syncMoveId": 30100,
+      "hpValues": [56, 93, 129, 272, 300, 328],
+      "atkValues": [13, 28, 43, 98, 110, 122],
+      "defValues": [9, 17, 23, 56, 60, 64],
+      "spaValues": [13, 28, 43, 98, 110, 122],
+      "spdValues": [9, 17, 23, 56, 60, 64],
+      "speValues": [10, 20, 29, 62, 70, 78]
+    },
+    {
       "monsterId": "28000030011",
       "monsterBaseId": 20012300,
       "syncMoveId": 31200,
@@ -2663,6 +2850,17 @@
       "speValues": [12, 45, 75, 196, 220, 244]
     },
     {
+      "monsterId": "28000030026",
+      "monsterBaseId": 20012701,
+      "syncMoveId": 31200,
+      "hpValues": [54, 107, 158, 356, 400, 444],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [12, 45, 75, 196, 220, 244]
+    },
+    {
       "monsterId": "28000030031",
       "monsterBaseId": 20004801,
       "syncMoveId": 41200,
@@ -2676,6 +2874,28 @@
     {
       "monsterId": "28000030032",
       "monsterBaseId": 20004901,
+      "syncMoveId": 41200,
+      "hpValues": [62, 114, 162, 360, 400, 440],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [14, 45, 75, 196, 220, 244]
+    },
+    {
+      "monsterId": "28000030036",
+      "monsterBaseId": 20004800,
+      "syncMoveId": 41200,
+      "hpValues": [52, 101, 146, 333, 373, 413],
+      "atkValues": [10, 24, 36, 80, 88, 96],
+      "defValues": [5, 10, 13, 35, 39, 43],
+      "spaValues": [10, 24, 36, 80, 88, 96],
+      "spdValues": [5, 10, 13, 35, 39, 43],
+      "speValues": [10, 40, 67, 177, 201, 225]
+    },
+    {
+      "monsterId": "28000030037",
+      "monsterBaseId": 20004900,
       "syncMoveId": 41200,
       "hpValues": [62, 114, 162, 360, 400, 440],
       "atkValues": [12, 26, 38, 82, 90, 98],
@@ -2828,6 +3048,28 @@
       "speValues": [14, 45, 75, 196, 220, 244]
     },
     {
+      "monsterId": "28000030086",
+      "monsterBaseId": 20004101,
+      "syncMoveId": 40800,
+      "hpValues": [52, 101, 146, 333, 373, 413],
+      "atkValues": [10, 24, 36, 80, 88, 96],
+      "defValues": [5, 10, 13, 35, 39, 43],
+      "spaValues": [10, 24, 36, 80, 88, 96],
+      "spdValues": [5, 10, 13, 35, 39, 43],
+      "speValues": [10, 40, 67, 177, 201, 225]
+    },
+    {
+      "monsterId": "28000030087",
+      "monsterBaseId": 20004201,
+      "syncMoveId": 40800,
+      "hpValues": [62, 114, 162, 360, 400, 440],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [14, 45, 75, 196, 220, 244]
+    },
+    {
       "monsterId": "28000030101",
       "monsterBaseId": 20001900,
       "syncMoveId": 30100,
@@ -2841,6 +3083,28 @@
     {
       "monsterId": "28000030102",
       "monsterBaseId": 20002000,
+      "syncMoveId": 30100,
+      "hpValues": [62, 114, 162, 360, 400, 440],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [14, 45, 75, 196, 220, 244]
+    },
+    {
+      "monsterId": "28000030106",
+      "monsterBaseId": 20001901,
+      "syncMoveId": 30100,
+      "hpValues": [52, 101, 146, 333, 373, 413],
+      "atkValues": [10, 24, 36, 80, 88, 96],
+      "defValues": [5, 10, 13, 35, 39, 43],
+      "spaValues": [10, 24, 36, 80, 88, 96],
+      "spdValues": [5, 10, 13, 35, 39, 43],
+      "speValues": [10, 40, 67, 177, 201, 225]
+    },
+    {
+      "monsterId": "28000030107",
+      "monsterBaseId": 20002001,
       "syncMoveId": 30100,
       "hpValues": [62, 114, 162, 360, 400, 440],
       "atkValues": [12, 26, 38, 82, 90, 98],
@@ -2984,6 +3248,17 @@
     {
       "monsterId": "28000030151",
       "monsterBaseId": 20009501,
+      "syncMoveId": 31300,
+      "hpValues": [54, 107, 158, 356, 400, 444],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [12, 45, 75, 196, 220, 244]
+    },
+    {
+      "monsterId": "28000030156",
+      "monsterBaseId": 20009500,
       "syncMoveId": 31300,
       "hpValues": [54, 107, 158, 356, 400, 444],
       "atkValues": [12, 26, 38, 82, 90, 98],
@@ -3180,6 +3455,28 @@
       "speValues": [14, 45, 75, 196, 220, 244]
     },
     {
+      "monsterId": "28000030206",
+      "monsterBaseId": 20005801,
+      "syncMoveId": 30200,
+      "hpValues": [52, 101, 146, 333, 373, 413],
+      "atkValues": [10, 24, 36, 80, 88, 96],
+      "defValues": [5, 10, 13, 35, 39, 43],
+      "spaValues": [10, 24, 36, 80, 88, 96],
+      "spdValues": [5, 10, 13, 35, 39, 43],
+      "speValues": [10, 40, 67, 177, 201, 225]
+    },
+    {
+      "monsterId": "28000030207",
+      "monsterBaseId": 20005901,
+      "syncMoveId": 30200,
+      "hpValues": [62, 114, 162, 360, 400, 440],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [14, 45, 75, 196, 220, 244]
+    },
+    {
       "monsterId": "28000030211",
       "monsterBaseId": 20011801,
       "syncMoveId": 40300,
@@ -3193,6 +3490,28 @@
     {
       "monsterId": "28000030212",
       "monsterBaseId": 20011901,
+      "syncMoveId": 40300,
+      "hpValues": [62, 114, 162, 360, 400, 440],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [14, 45, 75, 196, 220, 244]
+    },
+    {
+      "monsterId": "28000030216",
+      "monsterBaseId": 20011800,
+      "syncMoveId": 40300,
+      "hpValues": [52, 101, 146, 333, 373, 413],
+      "atkValues": [10, 24, 36, 80, 88, 96],
+      "defValues": [5, 10, 13, 35, 39, 43],
+      "spaValues": [10, 24, 36, 80, 88, 96],
+      "spdValues": [5, 10, 13, 35, 39, 43],
+      "speValues": [10, 40, 67, 177, 201, 225]
+    },
+    {
+      "monsterId": "28000030217",
+      "monsterBaseId": 20011900,
       "syncMoveId": 40300,
       "hpValues": [62, 114, 162, 360, 400, 440],
       "atkValues": [12, 26, 38, 82, 90, 98],
@@ -3543,6 +3862,28 @@
       "speValues": [28, 59, 86, 196, 220, 244]
     },
     {
+      "monsterId": "28000030301",
+      "monsterBaseId": 20010800,
+      "syncMoveId": 30100,
+      "hpValues": [54, 107, 158, 356, 400, 444],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [12, 45, 75, 196, 220, 244]
+    },
+    {
+      "monsterId": "28000030306",
+      "monsterBaseId": 20010801,
+      "syncMoveId": 30100,
+      "hpValues": [54, 107, 158, 356, 400, 444],
+      "atkValues": [12, 26, 38, 82, 90, 98],
+      "defValues": [6, 11, 14, 36, 40, 44],
+      "spaValues": [12, 26, 38, 82, 90, 98],
+      "spdValues": [6, 11, 14, 36, 40, 44],
+      "speValues": [12, 45, 75, 196, 220, 244]
+    },
+    {
       "monsterId": "28000040001",
       "monsterBaseId": 20000100,
       "syncMoveId": 30500,
@@ -3664,6 +4005,17 @@
       "speValues": [9, 29, 47, 124, 140, 156]
     },
     {
+      "monsterId": "28000040026",
+      "monsterBaseId": 20012701,
+      "syncMoveId": 31200,
+      "hpValues": [53, 87, 120, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
       "monsterId": "28000040031",
       "monsterBaseId": 20004801,
       "syncMoveId": 41200,
@@ -3677,6 +4029,28 @@
     {
       "monsterId": "28000040032",
       "monsterBaseId": 20004901,
+      "syncMoveId": 41200,
+      "hpValues": [67, 101, 131, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
+      "monsterId": "28000040036",
+      "monsterBaseId": 20004800,
+      "syncMoveId": 41200,
+      "hpValues": [58, 92, 122, 243, 271, 299],
+      "atkValues": [13, 39, 63, 162, 182, 202],
+      "defValues": [4, 13, 22, 55, 59, 63],
+      "spaValues": [13, 39, 63, 162, 182, 202],
+      "spdValues": [4, 13, 22, 55, 59, 63],
+      "speValues": [7, 27, 45, 122, 138, 154]
+    },
+    {
+      "monsterId": "28000040037",
+      "monsterBaseId": 20004900,
       "syncMoveId": 41200,
       "hpValues": [67, 101, 131, 252, 280, 308],
       "atkValues": [16, 44, 71, 170, 190, 210],
@@ -3829,6 +4203,28 @@
       "speValues": [9, 29, 47, 124, 140, 156]
     },
     {
+      "monsterId": "28000040086",
+      "monsterBaseId": 20004101,
+      "syncMoveId": 40800,
+      "hpValues": [58, 92, 122, 243, 271, 299],
+      "atkValues": [13, 39, 63, 162, 182, 202],
+      "defValues": [4, 13, 22, 55, 59, 63],
+      "spaValues": [13, 39, 63, 162, 182, 202],
+      "spdValues": [4, 13, 22, 55, 59, 63],
+      "speValues": [7, 27, 45, 122, 138, 154]
+    },
+    {
+      "monsterId": "28000040087",
+      "monsterBaseId": 20004201,
+      "syncMoveId": 40800,
+      "hpValues": [67, 101, 131, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
       "monsterId": "28000040101",
       "monsterBaseId": 20001900,
       "syncMoveId": 30100,
@@ -3842,6 +4238,28 @@
     {
       "monsterId": "28000040102",
       "monsterBaseId": 20002000,
+      "syncMoveId": 30100,
+      "hpValues": [67, 101, 131, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
+      "monsterId": "28000040106",
+      "monsterBaseId": 20001901,
+      "syncMoveId": 30100,
+      "hpValues": [58, 92, 122, 243, 271, 299],
+      "atkValues": [13, 39, 63, 162, 182, 202],
+      "defValues": [4, 13, 22, 55, 59, 63],
+      "spaValues": [13, 39, 63, 162, 182, 202],
+      "spdValues": [4, 13, 22, 55, 59, 63],
+      "speValues": [7, 27, 45, 122, 138, 154]
+    },
+    {
+      "monsterId": "28000040107",
+      "monsterBaseId": 20002001,
       "syncMoveId": 30100,
       "hpValues": [67, 101, 131, 252, 280, 308],
       "atkValues": [16, 44, 71, 170, 190, 210],
@@ -3985,6 +4403,17 @@
     {
       "monsterId": "28000040151",
       "monsterBaseId": 20009501,
+      "syncMoveId": 31300,
+      "hpValues": [53, 87, 120, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
+      "monsterId": "28000040156",
+      "monsterBaseId": 20009500,
       "syncMoveId": 31300,
       "hpValues": [53, 87, 120, 252, 280, 308],
       "atkValues": [16, 44, 71, 170, 190, 210],
@@ -4181,6 +4610,28 @@
       "speValues": [9, 29, 47, 124, 140, 156]
     },
     {
+      "monsterId": "28000040206",
+      "monsterBaseId": 20005801,
+      "syncMoveId": 30200,
+      "hpValues": [58, 92, 122, 243, 271, 299],
+      "atkValues": [13, 39, 63, 162, 182, 202],
+      "defValues": [4, 13, 22, 55, 59, 63],
+      "spaValues": [13, 39, 63, 162, 182, 202],
+      "spdValues": [4, 13, 22, 55, 59, 63],
+      "speValues": [7, 27, 45, 122, 138, 154]
+    },
+    {
+      "monsterId": "28000040207",
+      "monsterBaseId": 20005901,
+      "syncMoveId": 30200,
+      "hpValues": [67, 101, 131, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
       "monsterId": "28000040211",
       "monsterBaseId": 20011801,
       "syncMoveId": 40300,
@@ -4194,6 +4645,28 @@
     {
       "monsterId": "28000040212",
       "monsterBaseId": 20011901,
+      "syncMoveId": 40300,
+      "hpValues": [67, 101, 131, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
+      "monsterId": "28000040216",
+      "monsterBaseId": 20011800,
+      "syncMoveId": 40300,
+      "hpValues": [58, 92, 122, 243, 271, 299],
+      "atkValues": [13, 39, 63, 162, 182, 202],
+      "defValues": [4, 13, 22, 55, 59, 63],
+      "spaValues": [13, 39, 63, 162, 182, 202],
+      "spdValues": [4, 13, 22, 55, 59, 63],
+      "speValues": [7, 27, 45, 122, 138, 154]
+    },
+    {
+      "monsterId": "28000040217",
+      "monsterBaseId": 20011900,
       "syncMoveId": 40300,
       "hpValues": [67, 101, 131, 252, 280, 308],
       "atkValues": [16, 44, 71, 170, 190, 210],
@@ -4542,6 +5015,28 @@
       "spaValues": [21, 47, 71, 170, 190, 210],
       "spdValues": [8, 17, 23, 56, 60, 64],
       "speValues": [21, 40, 58, 124, 140, 156]
+    },
+    {
+      "monsterId": "28000040301",
+      "monsterBaseId": 20010800,
+      "syncMoveId": 30100,
+      "hpValues": [53, 87, 120, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
+    },
+    {
+      "monsterId": "28000040306",
+      "monsterBaseId": 20010801,
+      "syncMoveId": 30100,
+      "hpValues": [53, 87, 120, 252, 280, 308],
+      "atkValues": [16, 44, 71, 170, 190, 210],
+      "defValues": [5, 14, 23, 56, 60, 64],
+      "spaValues": [16, 44, 71, 170, 190, 210],
+      "spdValues": [5, 14, 23, 56, 60, 64],
+      "speValues": [9, 29, 47, 124, 140, 156]
     },
     {
       "monsterId": "28000120000",

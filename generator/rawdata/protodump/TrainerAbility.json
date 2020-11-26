@@ -11,6 +11,7 @@
     { "trainerId": "10007000000", "maxEnergy": 60 },
     { "trainerId": "10007400000", "maxEnergy": 60 },
     { "trainerId": "10008000000", "maxEnergy": 60 },
+    { "trainerId": "10008400000", "maxEnergy": 60 },
     { "trainerId": "10009000000", "maxEnergy": 60 },
     { "trainerId": "10010000000", "maxEnergy": 60 },
     { "trainerId": "10011000000", "maxEnergy": 60 },
@@ -20,6 +21,7 @@
     { "trainerId": "10015000000", "maxEnergy": 60 },
     { "trainerId": "10015010000", "maxEnergy": 60 },
     { "trainerId": "10016000000", "maxEnergy": 60 },
+    { "trainerId": "10016400000", "maxEnergy": 60 },
     { "trainerId": "10017000000", "maxEnergy": 60 },
     { "trainerId": "10017100000", "maxEnergy": 60 },
     { "trainerId": "10018000000", "maxEnergy": 60 },
@@ -121,6 +123,7 @@
     { "trainerId": "10215000000", "maxEnergy": 60 },
     { "trainerId": "10240000000", "maxEnergy": 60 },
     { "trainerId": "10241000000", "maxEnergy": 60 },
+    { "trainerId": "10243000000", "maxEnergy": 60 },
     { "trainerId": "18000000000", "maxEnergy": 60 },
     { "trainerId": "18000020000", "maxEnergy": 60 },
     { "trainerId": "18000120000", "maxEnergy": 60 }

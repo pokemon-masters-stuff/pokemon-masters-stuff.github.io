@@ -126,12 +126,20 @@ const gridedTrainerList = [
   '10002100', // pigeot
   // 11/4/2020
   '10013200', // volcarona
+  // 11/26/2020
+  '10024300', // Gloria/Zacian
+  '10000840', // Holiday Erika
+  '10001640', // Holiday Skyla
+  '10001900', // Brendan
 ];
 
 const newTrainerBaseIdArray = [
-  // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 11/4/2020
-  '10013200', // volcarona
+  // Copy paste from the array above. Used to generate a list of monsterBaseId for the import and export script.
+  // 11/26/2020
+  '10024300', // Gloria/Zacian
+  '10000840', // Holiday Erika
+  '10001640', // Holiday Skyla
+  '10001900', // Brendan
 ];
 /*
  * Usage i.e: node extractAllSyncPairNamesAndIds.js
@@ -221,7 +229,7 @@ const extractAllSyncPairNamesAndIds = () => {
     let syncPairName = '';
     languages.forEach((language) => {
       let updatedMonsterBaseId = monsterBaseId;
-      // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason. Same for 20003501 Clefairy, 20033601 Seviper, 20007601 Golem, 20007101 Victreebel, 20005301 Persian, 20004901 Venomoth, 20011901 Seaking, 20011501 Kangaskhan, 20051801 Musharna
+      // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason. Same for 20003501 Clefairy, 20033601 Seviper, 20007601 Golem, 20007101 Victreebel, 20005301 Persian, 20004901 Venomoth, 20011901 Seaking, 20011501 Kangaskhan, 20051801 Musharna, 20086301 Comfey
       if (monsterBaseId) {
         if (
           monsterBaseId === 20003901 ||
@@ -233,7 +241,8 @@ const extractAllSyncPairNamesAndIds = () => {
           monsterBaseId === 20011901 ||
           monsterBaseId === 20003501 ||
           monsterBaseId === 20011501 ||
-          monsterBaseId === 20051801
+          monsterBaseId === 20051801 ||
+          monsterBaseId === 20086301
         ) {
           updatedMonsterBaseId = Number(
             monsterBaseId.toString().slice(0, -1) + '0'

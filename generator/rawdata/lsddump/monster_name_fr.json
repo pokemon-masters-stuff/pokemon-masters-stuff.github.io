@@ -75,6 +75,7 @@
   "20010100": "Électrode",
   "20010200": "Noeunoeuf",
   "20010300": "Noadkoko",
+  "20010800": "Excelangue",
   "20011000": "Smogogo",
   "20011300": "Leveinard",
   "20011500": "Kangourex",
@@ -182,6 +183,7 @@
   "20037300": "Drattak",
   "20037600": "Métalosse",
   "20037651": "Méga-Métalosse",
+  "20037700": "Regirock",
   "20038100": "Latios",
   "20038400": "Rayquaza",
   "20038700": "Tortipouss",
@@ -215,6 +217,7 @@
   "20045500": "Vortente",
   "20045900": "Blizzi",
   "20046001": "Blizzaroi",
+  "20046800": "Togekiss",
   "20047500": "Gallame",
   "20047551": "Méga-Gallame",
   "20047600": "Tarinorme",
@@ -302,6 +305,7 @@
   "20085300": "Chelours",
   "20081300": "Candine",
   "20081400": "Sucreine",
+  "20086300": "Guérilande",
   "20086700": "Sarmuraï",
   "20082300": "Trépassable",
   "20086211": "Silvallié",
@@ -367,5 +371,6 @@
   "20015112": "Mew",
   "20038701": "Tortipouss",
   "20038801": "Boskara",
-  "20038901": "Torterra"
+  "20038901": "Torterra",
+  "2008881200": "Zacian"
 }

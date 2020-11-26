@@ -228,12 +228,20 @@ const gridedTrainerList = [
   '10002100', // pigeot
   // 11/4/2020
   '10013200', // volcarona
+  // 11/26/2020
+  '10024300', // Gloria/Zacian
+  '10000840', // Holiday Erika
+  '10001640', // Holiday Skyla
+  '10001900', // Brendan
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 11/4/2020
-  '10013200', // volcarona
+  // 11/26/2020
+  '10024300', // Gloria/Zacian
+  '10000840', // Holiday Erika
+  '10001640', // Holiday Skyla
+  '10001900', // Brendan
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -1303,6 +1311,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
       // 20003901 is Jigglypuff. Its monsterBaseId is off by 1 in monster_name for some reason.
       // 20003501 is Clefairy, but same as above its id is off by 1
       // 20051801 is Musharna
+      // 20086301 is Comfey
       if (entry.monsterBaseId) {
         if (entry.monsterBaseId === '20003901') {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20003900'];
@@ -1310,6 +1319,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20003500'];
         } else if (entry.monsterBaseId === '20051801') {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20051800'];
+        } else if (entry.monsterBaseId === '20086301') {
+          pokemonNameByLanguage[language] = pokemonNameDB[language]['20086300'];
         } else {
           pokemonNameByLanguage[language] =
             pokemonNameDB[language][entry.monsterBaseId];
