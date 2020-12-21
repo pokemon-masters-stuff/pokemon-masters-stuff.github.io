@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            12/21/2020:
+            <br />
+            Added new grids. New egg Pokemon will be added soon.
+            <br />
+            <br />
             11/26/2020:
             <br />
             Added new grids and egg Pokemon.

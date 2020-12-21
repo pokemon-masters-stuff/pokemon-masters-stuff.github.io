@@ -581,6 +581,54 @@ import {
   zacianGridDataZH,
   togekissGridDataZH,
   sceptileGridDataZH,
+  zekromGridDataDE,
+  gyaradosGridDataDE,
+  ribombeeGridDataDE,
+  swampertGridDataDE,
+  dusknoirGridDataDE,
+  zekromGridDataEN,
+  gyaradosGridDataEN,
+  ribombeeGridDataEN,
+  swampertGridDataEN,
+  dusknoirGridDataEN,
+  zekromGridDataES,
+  gyaradosGridDataES,
+  ribombeeGridDataES,
+  swampertGridDataES,
+  dusknoirGridDataES,
+  zekromGridDataFR,
+  gyaradosGridDataFR,
+  ribombeeGridDataFR,
+  swampertGridDataFR,
+  dusknoirGridDataFR,
+  zekromGridDataIT,
+  gyaradosGridDataIT,
+  ribombeeGridDataIT,
+  swampertGridDataIT,
+  dusknoirGridDataIT,
+  zekromGridDataJA,
+  gyaradosGridDataJA,
+  ribombeeGridDataJA,
+  swampertGridDataJA,
+  dusknoirGridDataJA,
+  zekromGridDataKO,
+  gyaradosGridDataKO,
+  ribombeeGridDataKO,
+  swampertGridDataKO,
+  dusknoirGridDataKO,
+  zekromGridDataZH,
+  gyaradosGridDataZH,
+  ribombeeGridDataZH,
+  swampertGridDataZH,
+  dusknoirGridDataZH,
+  tsareenaGridDataDE,
+  tsareenaGridDataEN,
+  tsareenaGridDataES,
+  tsareenaGridDataFR,
+  tsareenaGridDataIT,
+  tsareenaGridDataJA,
+  tsareenaGridDataKO,
+  tsareenaGridDataZH,
 } from '../data';
 
 import {
@@ -664,6 +712,14 @@ import {
   pm0468_00_togekiss_128, // Togekiss
   pm0254_00_jukain_128, // Sceptile
   pm0888_12_00_zacian_128, // Zacian
+
+  // 12/21/2020
+  pm0477_00_yonoir_128, // Dusknoir
+  pm0644_00_zekrom_128, // Zekrom
+  pm0130_00_gyarados_128, // Gyarados
+  pm0835_00_abu2_128, // Ribombee
+  pm0814_00_mangosteen3_128, // Tsareena
+  pm0260_00_laglarge_128, // Swampert
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -747,6 +803,14 @@ export const pokemonPictures = {
   pm0468_00_togekiss_128, // Togekiss
   pm0254_00_jukain_128, // Sceptile
   pm0888_12_00_zacian_128, // Zacian
+
+  // 12/21/2020
+  pm0477_00_yonoir_128, // Dusknoir
+  pm0644_00_zekrom_128, // Zekrom
+  pm0130_00_gyarados_128, // Gyarados
+  pm0835_00_abu2_128, // Ribombee
+  pm0814_00_mangosteen3_128, // Tsareena
+  pm0260_00_laglarge_128, // Swampert
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -833,6 +897,12 @@ export const allSyncGrids = {
     zacianGridDataDE,
     togekissGridDataDE,
     sceptileGridDataDE,
+    zekromGridDataDE,
+    gyaradosGridDataDE,
+    ribombeeGridDataDE,
+    swampertGridDataDE,
+    dusknoirGridDataDE,
+    tsareenaGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -906,6 +976,12 @@ export const allSyncGrids = {
     zacianGridDataEN,
     togekissGridDataEN,
     sceptileGridDataEN,
+    zekromGridDataEN,
+    gyaradosGridDataEN,
+    ribombeeGridDataEN,
+    swampertGridDataEN,
+    dusknoirGridDataEN,
+    tsareenaGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -979,6 +1055,12 @@ export const allSyncGrids = {
     zacianGridDataES,
     togekissGridDataES,
     sceptileGridDataES,
+    zekromGridDataES,
+    gyaradosGridDataES,
+    ribombeeGridDataES,
+    swampertGridDataES,
+    dusknoirGridDataES,
+    tsareenaGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1052,6 +1134,12 @@ export const allSyncGrids = {
     zacianGridDataFR,
     togekissGridDataFR,
     sceptileGridDataFR,
+    zekromGridDataFR,
+    gyaradosGridDataFR,
+    ribombeeGridDataFR,
+    swampertGridDataFR,
+    dusknoirGridDataFR,
+    tsareenaGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1125,6 +1213,12 @@ export const allSyncGrids = {
     zacianGridDataIT,
     togekissGridDataIT,
     sceptileGridDataIT,
+    zekromGridDataIT,
+    gyaradosGridDataIT,
+    ribombeeGridDataIT,
+    swampertGridDataIT,
+    dusknoirGridDataIT,
+    tsareenaGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1198,6 +1292,12 @@ export const allSyncGrids = {
     zacianGridDataJA,
     togekissGridDataJA,
     sceptileGridDataJA,
+    zekromGridDataJA,
+    gyaradosGridDataJA,
+    ribombeeGridDataJA,
+    swampertGridDataJA,
+    dusknoirGridDataJA,
+    tsareenaGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1271,6 +1371,12 @@ export const allSyncGrids = {
     zacianGridDataKO,
     togekissGridDataKO,
     sceptileGridDataKO,
+    zekromGridDataKO,
+    gyaradosGridDataKO,
+    ribombeeGridDataKO,
+    swampertGridDataKO,
+    dusknoirGridDataKO,
+    tsareenaGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1344,6 +1450,12 @@ export const allSyncGrids = {
     zacianGridDataZH,
     togekissGridDataZH,
     sceptileGridDataZH,
+    zekromGridDataZH,
+    gyaradosGridDataZH,
+    ribombeeGridDataZH,
+    swampertGridDataZH,
+    dusknoirGridDataZH,
+    tsareenaGridDataZH,
   },
 };
 

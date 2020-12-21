@@ -131,15 +131,24 @@ const gridedTrainerList = [
   '10000840', // Holiday Erika
   '10001640', // Holiday Skyla
   '10001900', // Brendan
+  // 12/21/2020
+  '10008900', // N
+  '10011140', // Lance
+  '10011840', // Lillie
+  '10012400', // Mallow
+  '10012600', // May
+  '10004900', // Phoebe
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the array above. Used to generate a list of monsterBaseId for the import and export script.
-  // 11/26/2020
-  '10024300', // Gloria/Zacian
-  '10000840', // Holiday Erika
-  '10001640', // Holiday Skyla
-  '10001900', // Brendan
+  // 12/21/2020
+  '10008900', // N
+  '10011140', // Lance
+  '10011840', // Lillie
+  '10012400', // Mallow
+  '10012600', // May
+  '10004900', // Phoebe
 ];
 /*
  * Usage i.e: node extractAllSyncPairNamesAndIds.js

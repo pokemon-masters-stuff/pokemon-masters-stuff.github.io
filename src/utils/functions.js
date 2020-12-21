@@ -56,10 +56,12 @@ export const getPokemonNameList = (language) =>
       }
 
       if (
-        entry.monsterBaseId === '20086301' ||
-        entry.monsterBaseId === '20046800' ||
-        entry.monsterBaseId === '20025400' ||
-        entry.monsterBaseId === '2008881200'
+        entry.monsterBaseId === '20047701' ||
+        entry.monsterBaseId === '20064400' ||
+        entry.monsterBaseId === '20013000' ||
+        entry.monsterBaseId === '20083500' ||
+        entry.monsterBaseId === '20081400' ||
+        entry.monsterBaseId === '20026000'
       ) {
         return {
           key: index,
@@ -218,7 +220,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'olivia_lycanroc' ||
       pokemon === 'volcarona' ||
       pokemon === 'sceptile' ||
-      pokemon === 'zacian'
+      pokemon === 'zacian' ||
+      pokemon === 'zekrom' ||
+      pokemon === 'gyarados'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -268,7 +272,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'altaria' ||
       pokemon === 'musharna' ||
       pokemon === 'octillery' ||
-      pokemon === 'togekiss'
+      pokemon === 'togekiss' ||
+      pokemon === 'tsareena' ||
+      pokemon === 'swampert'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -312,7 +318,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'glalie' ||
       pokemon === 'clefairy' ||
       pokemon === 'delibird' ||
-      pokemon === 'comfey'
+      pokemon === 'comfey' ||
+      pokemon === 'dusknoir' ||
+      pokemon === 'ribombee'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -410,7 +418,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'olivia_lycanroc' ||
       pokemon === 'volcarona' ||
       pokemon === 'sceptile' ||
-      pokemon === 'zacian'
+      pokemon === 'zacian' ||
+      pokemon === 'zekrom' ||
+      pokemon === 'gyarados'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -448,7 +458,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'altaria' ||
       pokemon === 'musharna' ||
       pokemon === 'octillery' ||
-      pokemon === 'togekiss'
+      pokemon === 'togekiss' ||
+      pokemon === 'tsareena' ||
+      pokemon === 'swampert'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -480,7 +492,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'glalie' ||
       pokemon === 'clefairy' ||
       pokemon === 'delibird' ||
-      pokemon === 'comfey'
+      pokemon === 'comfey' ||
+      pokemon === 'dusknoir' ||
+      pokemon === 'ribombee'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||

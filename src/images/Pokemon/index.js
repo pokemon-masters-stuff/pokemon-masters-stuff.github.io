@@ -129,3 +129,10 @@ export { default as pm0863_00_lei_128 } from './128px/pm0863_00_lei_128.ktx.png'
 export { default as pm0468_00_togekiss_128 } from './128px/pm0468_00_togekiss_128.ktx.png'; // Togekiss
 export { default as pm0254_00_jukain_128 } from './128px/pm0254_00_jukain_128.ktx.png'; // Sceptile
 export { default as pm0888_12_00_zacian_128 } from './128px/pm0888_12_00_zacian_128.ktx.png'; // Zacian
+// 12/21/2020
+export { default as pm0477_00_yonoir_128 } from './128px/pm0477_00_yonoir_128.ktx.png'; // Dusknoir
+export { default as pm0644_00_zekrom_128 } from './128px/pm0644_00_zekrom_128.ktx.png'; // Zekrom
+export { default as pm0130_00_gyarados_128 } from './128px/pm0130_00_gyarados_128.ktx.png'; // Gyarados
+export { default as pm0835_00_abu2_128 } from './128px/pm0835_00_abu2_128.ktx.png'; // Ribombee
+export { default as pm0814_00_mangosteen3_128 } from './128px/pm0814_00_mangosteen3_128.ktx.png'; // Tsareena
+export { default as pm0260_00_laglarge_128 } from './128px/pm0260_00_laglarge_128.ktx.png'; // Swampert
