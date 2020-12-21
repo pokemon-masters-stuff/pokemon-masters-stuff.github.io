@@ -311,7 +311,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
       }
 
       // Use monsterId to find type, weakType, moveId and passiveId in Trainer.json
-      const {
+      let {
         move1Id,
         move2Id,
         move3Id,
@@ -324,6 +324,11 @@ const extractSyncPairDataByTrainerBaseId = () => {
         rarity,
         role,
       } = trainer;
+
+      if (trainerBaseIdFromList === '10012600') {
+        // Swampert's first move is Muddy Water not Water Gun
+        move1Id = 330;
+      }
 
       // Use moveId to find move name in move_name_xx.json
       // Use moveId to find move description in move_description_xx.json
