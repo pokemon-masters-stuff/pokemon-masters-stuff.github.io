@@ -479,7 +479,12 @@ function Passives(props) {
                 <TableHead></TableHead>
                 <TableBody>
                   <TableRow key={passive.name[language]}>
-                    <TableCell align="center">
+                    <TableCell
+                      align="center"
+                      style={{
+                        whiteSpace: 'pre-line',
+                      }}
+                    >
                       {passive.description[language]}
                     </TableCell>
                   </TableRow>
