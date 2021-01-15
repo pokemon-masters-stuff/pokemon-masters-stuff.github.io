@@ -43,6 +43,12 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            1/14/2021:
+            <br />
+            Fixed error where Swampert loses Dizzying Power after mega
+            evolution.
+            <br />
+            <br />
             12/21/2020:
             <br />
             Added new grids and egg Pokemon.
