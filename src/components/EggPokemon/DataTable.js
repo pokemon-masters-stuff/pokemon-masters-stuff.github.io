@@ -40,19 +40,19 @@ function Stats(props) {
 
   const classes = useRowStyles();
 
-  let lv125Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 25;
-  let lv125Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 25;
-  let lv125Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 25;
-  let lv125Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 25;
-  let lv125Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 25;
-  let lv125Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 25;
+  let lv130Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 30;
+  let lv130Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 30;
+  let lv130Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 30;
+  let lv130Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 30;
+  let lv130Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 30;
+  let lv130Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 30;
 
-  let baseHp = lv125Hp + (selectedRarity - rarity) * 40;
-  let baseAtk = lv125Atk + (selectedRarity - rarity) * 20;
-  let baseDef = lv125Def + (selectedRarity - rarity) * 20;
-  let baseSpa = lv125Spa + (selectedRarity - rarity) * 20;
-  let baseSpd = lv125Spd + (selectedRarity - rarity) * 20;
-  let baseSpe = lv125Spe + (selectedRarity - rarity) * 20;
+  let baseHp = lv130Hp + (selectedRarity - rarity) * 40;
+  let baseAtk = lv130Atk + (selectedRarity - rarity) * 20;
+  let baseDef = lv130Def + (selectedRarity - rarity) * 20;
+  let baseSpa = lv130Spa + (selectedRarity - rarity) * 20;
+  let baseSpd = lv130Spd + (selectedRarity - rarity) * 20;
+  let baseSpe = lv130Spe + (selectedRarity - rarity) * 20;
 
   return (
     <Fragment>
@@ -549,7 +549,7 @@ export default function MovesAndSkillsModal(props) {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell>Lv125 Stats</TableCell>
+              <TableCell>Lv130 Stats</TableCell>
               <TableCell align="right">Base</TableCell>
               <TableCell align="right">Potential</TableCell>
               <TableCell align="right">Affinity</TableCell>

@@ -55,95 +55,45 @@ function Stats(props) {
 
   const classes = useRowStyles();
 
-  let hpUpFromGrid,
-    atkUpFromGrid,
-    defUpFromGrid,
-    spaUpFromGrid,
-    spdUpFromGrid,
-    speUpFromGrid;
+  let hpUpFromGrid = 0;
+  let atkUpFromGrid = 0;
+  let defUpFromGrid = 0;
+  let spaUpFromGrid = 0;
+  let spdUpFromGrid = 0;
+  let speUpFromGrid = 0;
+  let atkUpFromMega, defUpFromMega, spaUpFromMega, spdUpFromMega, speUpFromMega;
 
   if (selectedStatTiles) {
-    hpUpFromGrid = selectedStatTiles.hp || 0;
-    atkUpFromGrid = selectedStatTiles.atk || 0;
-    defUpFromGrid = selectedStatTiles.def || 0;
-    spaUpFromGrid = selectedStatTiles.spa || 0;
-    spdUpFromGrid = selectedStatTiles.spd || 0;
-    speUpFromGrid = selectedStatTiles.spe || 0;
+    hpUpFromGrid = selectedStatTiles.hp;
+    atkUpFromGrid = selectedStatTiles.atk;
+    defUpFromGrid = selectedStatTiles.def;
+    spaUpFromGrid = selectedStatTiles.spa;
+    spdUpFromGrid = selectedStatTiles.spd;
+    speUpFromGrid = selectedStatTiles.spe;
   }
 
-  let lv125Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 25;
-  let lv125Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 25;
-  let lv125Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 25;
-  let lv125Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 25;
-  let lv125Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 25;
-  let lv125Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 25;
+  let lv130Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 30;
+  let lv130Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 30;
+  let lv130Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 30;
+  let lv130Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 30;
+  let lv130Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 30;
+  let lv130Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 30;
 
   // let baseHp = hp[4] + (selectedRarity - rarity) * 40;
-  let baseHp = Math.floor(lv125Hp + (selectedRarity - rarity) * 40);
-  let baseAtk =
-    Math.floor(
-      (lv125Atk + (selectedRarity - rarity) * 20) *
-        (isMega ? atkScale / 100 : 1)
-    ) +
-    (isMega &&
-    atkScale !== 100 &&
-    Number.isInteger(
-      (lv125Atk + (selectedRarity - rarity) * 20) * (atkScale / 100)
-    )
-      ? -1
-      : 0);
+  let baseHp = Math.floor(lv130Hp + (selectedRarity - rarity) * 40);
+  let baseAtk = Math.floor(lv130Atk + (selectedRarity - rarity) * 20);
+  let baseDef = Math.floor(lv130Def + (selectedRarity - rarity) * 20);
+  let baseSpa = Math.floor(lv130Spa + (selectedRarity - rarity) * 20);
+  let baseSpd = Math.floor(lv130Spd + (selectedRarity - rarity) * 20);
+  let baseSpe = Math.floor(lv130Spe + (selectedRarity - rarity) * 20);
 
-  let baseDef =
-    Math.floor(
-      (lv125Def + (selectedRarity - rarity) * 20) *
-        (isMega ? defScale / 100 : 1)
-    ) +
-    (isMega &&
-    defScale !== 100 &&
-    Number.isInteger(
-      (lv125Def + (selectedRarity - rarity) * 20) * (defScale / 100)
-    )
-      ? -1
-      : 0);
-
-  let baseSpa =
-    Math.floor(
-      (lv125Spa + (selectedRarity - rarity) * 20) *
-        (isMega ? spaScale / 100 : 1)
-    ) +
-    (isMega &&
-    spaScale !== 100 &&
-    Number.isInteger(
-      (lv125Spa + (selectedRarity - rarity) * 20) * (spaScale / 100)
-    )
-      ? -1
-      : 0);
-
-  let baseSpd =
-    Math.floor(
-      (lv125Spd + (selectedRarity - rarity) * 20) *
-        (isMega ? spdScale / 100 : 1)
-    ) +
-    (isMega &&
-    spdScale !== 100 &&
-    Number.isInteger(
-      (lv125Spd + (selectedRarity - rarity) * 20) * (spdScale / 100)
-    )
-      ? -1
-      : 0);
-
-  let baseSpe =
-    Math.floor(
-      (lv125Spe + (selectedRarity - rarity) * 20) *
-        (isMega ? speScale / 100 : 1)
-    ) +
-    (isMega &&
-    speScale !== 100 &&
-    Number.isInteger(
-      (lv125Spe + (selectedRarity - rarity) * 20) * (speScale / 100)
-    )
-      ? -1
-      : 0);
+  if (isMega) {
+    atkUpFromMega = Math.floor(baseAtk * (atkScale / 100 - 1));
+    defUpFromMega = Math.floor(baseDef * (defScale / 100 - 1));
+    spaUpFromMega = Math.floor(baseSpa * (spaScale / 100 - 1));
+    spdUpFromMega = Math.floor(baseSpd * (spdScale / 100 - 1));
+    speUpFromMega = Math.floor(baseSpe * (speScale / 100 - 1));
+  }
 
   return (
     <Fragment>
@@ -153,16 +103,9 @@ function Stats(props) {
           HP
         </TableCell>
         <TableCell align="right">{baseHp}</TableCell>
-        <TableCell align="right">
-          {!isMega
-            ? hpUpFromGrid || '-'
-            : hpUpFromGrid
-            ? hpUpFromGrid + ' x1.0'
-            : '-'}
-        </TableCell>
-        <TableCell align="right">
-          {hpUpFromGrid ? baseHp + hpUpFromGrid : baseHp}
-        </TableCell>
+        {isMega ? <TableCell align="right">{'-'}</TableCell> : null}
+        <TableCell align="right">{hpUpFromGrid || '-'}</TableCell>
+        <TableCell align="right">{baseHp + hpUpFromGrid}</TableCell>
       </TableRow>
       <TableRow key="atk" className={classes.root}>
         <TableCell></TableCell>
@@ -170,19 +113,14 @@ function Stats(props) {
           Attack
         </TableCell>
         <TableCell align="right">{baseAtk}</TableCell>
+        {isMega ? (
+          <TableCell align="right">{atkUpFromMega || '-'}</TableCell>
+        ) : null}
+        <TableCell align="right">{atkUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {!isMega
-            ? atkUpFromGrid || '-'
-            : atkUpFromGrid
-            ? atkUpFromGrid + ' x' + (atkScale / 100).toFixed(1)
-            : '-'}
-        </TableCell>
-        <TableCell align="right">
-          {atkUpFromGrid
-            ? Math.floor(
-                baseAtk + atkUpFromGrid * (isMega ? atkScale / 100 : 1)
-              )
-            : baseAtk}
+          {isMega
+            ? baseAtk + atkUpFromGrid + atkUpFromMega
+            : baseAtk + atkUpFromGrid}
         </TableCell>
       </TableRow>
       <TableRow key="def" className={classes.root}>
@@ -191,19 +129,14 @@ function Stats(props) {
           Defense
         </TableCell>
         <TableCell align="right">{baseDef}</TableCell>
+        {isMega ? (
+          <TableCell align="right">{defUpFromMega || '-'}</TableCell>
+        ) : null}
+        <TableCell align="right">{defUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {!isMega
-            ? defUpFromGrid || '-'
-            : defUpFromGrid
-            ? defUpFromGrid + ' x' + (defScale / 100).toFixed(1)
-            : '-'}
-        </TableCell>
-        <TableCell align="right">
-          {defUpFromGrid
-            ? Math.floor(
-                baseDef + defUpFromGrid * (isMega ? defScale / 100 : 1)
-              )
-            : baseDef}
+          {isMega
+            ? baseDef + defUpFromGrid + defUpFromMega
+            : baseDef + defUpFromGrid}
         </TableCell>
       </TableRow>
       <TableRow key="spa" className={classes.root}>
@@ -212,19 +145,14 @@ function Stats(props) {
           Sp.Atk
         </TableCell>
         <TableCell align="right">{baseSpa}</TableCell>
+        {isMega ? (
+          <TableCell align="right">{spaUpFromMega || '-'}</TableCell>
+        ) : null}
+        <TableCell align="right">{spaUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {!isMega
-            ? spaUpFromGrid || '-'
-            : spaUpFromGrid
-            ? spaUpFromGrid + ' x' + (spaScale / 100).toFixed(1)
-            : '-'}
-        </TableCell>
-        <TableCell align="right">
-          {spaUpFromGrid
-            ? Math.floor(
-                baseSpa + spaUpFromGrid * (isMega ? spaScale / 100 : 1)
-              )
-            : baseSpa}
+          {isMega
+            ? baseSpa + spaUpFromGrid + spaUpFromMega
+            : baseSpa + spaUpFromGrid}
         </TableCell>
       </TableRow>
       <TableRow key="spd" className={classes.root}>
@@ -233,19 +161,14 @@ function Stats(props) {
           Sp.Def
         </TableCell>
         <TableCell align="right">{baseSpd}</TableCell>
+        {isMega ? (
+          <TableCell align="right">{spdUpFromMega || '-'}</TableCell>
+        ) : null}
+        <TableCell align="right">{spdUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {!isMega
-            ? spdUpFromGrid || '-'
-            : spdUpFromGrid
-            ? spdUpFromGrid + ' x' + (spdScale / 100).toFixed(1)
-            : '-'}
-        </TableCell>
-        <TableCell align="right">
-          {spdUpFromGrid
-            ? Math.floor(
-                baseSpd + spdUpFromGrid * (isMega ? spdScale / 100 : 1)
-              )
-            : baseSpd}
+          {isMega
+            ? baseSpd + spdUpFromGrid + spdUpFromMega
+            : baseSpd + spdUpFromGrid}
         </TableCell>
       </TableRow>
       <TableRow key="spe" className={classes.root}>
@@ -254,19 +177,14 @@ function Stats(props) {
           Speed
         </TableCell>
         <TableCell align="right">{baseSpe}</TableCell>
+        {isMega ? (
+          <TableCell align="right">{speUpFromMega || '-'}</TableCell>
+        ) : null}
+        <TableCell align="right">{speUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {!isMega
-            ? speUpFromGrid || '-'
-            : speUpFromGrid
-            ? speUpFromGrid + ' x' + (speScale / 100).toFixed(1)
-            : '-'}
-        </TableCell>
-        <TableCell align="right">
-          {speUpFromGrid
-            ? Math.floor(
-                baseSpe + speUpFromGrid * (isMega ? speScale / 100 : 1)
-              )
-            : baseSpe}
+          {isMega
+            ? baseSpe + speUpFromGrid + speUpFromMega
+            : baseSpe + speUpFromGrid}
         </TableCell>
       </TableRow>
     </Fragment>
@@ -823,11 +741,10 @@ export default function MovesAndSkillsModal(props) {
             <TableHead>
               <TableRow>
                 <TableCell />
-                <TableCell>Lv125 Stats</TableCell>
-                <TableCell align="right">Stat</TableCell>
-                <TableCell align="right">
-                  {!isMega ? 'Grid' : 'Grid (xMega↑)'}
-                </TableCell>
+                <TableCell>Lv130 Stats</TableCell>
+                <TableCell align="right">Base</TableCell>
+                {isMega ? <TableCell align="right">Mega</TableCell> : null}
+                <TableCell align="right">Grid</TableCell>
                 <TableCell align="right">Total</TableCell>
               </TableRow>
             </TableHead>

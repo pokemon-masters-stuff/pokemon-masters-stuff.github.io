@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            1/15/2021:
+            <br />
+            Updated stats for Lv130.
+            <br />
+            <br />
             1/14/2021:
             <br />
             Fixed error where Swampert loses Dizzying Power after mega
