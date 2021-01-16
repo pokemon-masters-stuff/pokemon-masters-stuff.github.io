@@ -10,10 +10,11 @@ import {
   setTeamSyncLevels,
   updateTeamUrl,
 } from '../../../actions/actionCreators';
-import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
+  box: {
     height: 800,
     width: 500,
   },
@@ -51,7 +52,12 @@ const SyncGridContainer = (props) => {
   ] = useState(false);
 
   return (
-    <Paper variant="outlined" className={classes.paper}>
+    <Box
+      border={2}
+      borderColor="text.primary"
+      borderRadius={10}
+      className={classes.box}
+    >
       <div style={{ position: 'relative', paddingTop: 5 }}>
         <SyncLevelDropdown
           syncLevel={syncLevels[slot]}
@@ -59,11 +65,16 @@ const SyncGridContainer = (props) => {
         />
         <LoadIndividualBuildDropdown {...props} />
         <br />
-        <div style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}>
+
+        <Typography
+          component="div"
+          color="textPrimary"
+          style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}
+        >
           E: {remainingEnergy[slot]}/60
           <br />
           O: {orbSpent[slot]}/750
-        </div>
+        </Typography>
 
         <div style={{ marginLeft: 8, marginTop: -7 }}>
           <MovesAndSkillsButtonMobile
@@ -86,7 +97,7 @@ const SyncGridContainer = (props) => {
           />
         </div>
       </div>
-    </Paper>
+    </Box>
   );
 };
 

@@ -10,22 +10,28 @@ import {
   setTeamSyncLevels,
   updateTeamUrl,
 } from '../../../actions/actionCreators';
-import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import SkillOverview from '../../../components/SkillOverview';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
+  box: {
     // height: 720,
     width: '100vw',
+  },
+  boxDark: {
+    // height: 720,
+    width: '100vw',
+    background: 'black',
   },
 }));
 
 const SyncGridContainer = (props) => {
   const classes = useStyles();
+  const darkMode = useSelector((state) => state.darkMode.mode);
   const dispatch = useDispatch();
   const { pokemon, syncPairName, slot } = props;
   let pokemonName = pokemon;
@@ -64,7 +70,7 @@ const SyncGridContainer = (props) => {
       >
         <Typography className={classes.heading}>{syncPairName}</Typography>
       </ExpansionPanelSummary>
-      <Paper className={classes.paper}>
+      <Box className={darkMode ? classes.boxDark : classes.box}>
         <div style={{ position: 'relative', paddingTop: 5 }}>
           <SyncLevelDropdown
             syncLevel={syncLevels[slot]}
@@ -106,7 +112,7 @@ const SyncGridContainer = (props) => {
           }
           energy={grid.gridData.energy}
         />
-      </Paper>
+      </Box>
     </ExpansionPanel>
   );
 };
