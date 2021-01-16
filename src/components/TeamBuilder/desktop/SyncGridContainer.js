@@ -51,7 +51,7 @@ const SyncGridContainer = (props) => {
   ] = useState(false);
 
   return (
-    <Paper className={classes.paper}>
+    <Paper variant="outlined" className={classes.paper}>
       <div style={{ position: 'relative', paddingTop: 5 }}>
         <SyncLevelDropdown
           syncLevel={syncLevels[slot]}

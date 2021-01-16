@@ -53,21 +53,6 @@ export const getPokemonNameList = (language) =>
           name: name,
           value: value.replace('_new', ''), // value changes as language changes. name stays the same so old links and saves are compatible
         };
-      }
-
-      if (
-        entry.monsterBaseId === '20047701' ||
-        entry.monsterBaseId === '20064400' ||
-        entry.monsterBaseId === '20013000' ||
-        entry.monsterBaseId === '20083500' ||
-        entry.monsterBaseId === '20081400' ||
-        entry.monsterBaseId === '20026000'
-      ) {
-        return {
-          key: index,
-          name: name,
-          value: value + '*', // value changes as language changes. name stays the same so old links and saves are compatible
-        };
       } else {
         return {
           key: index,
@@ -81,6 +66,36 @@ export const getPokemonNameList = (language) =>
       let y = b.value;
       return x < y ? -1 : x > y ? 1 : 0;
     });
+
+export const getNewPokemonNameList = (language) => {
+  let newlyGridedPokemon = [];
+  gridedSyncPairDataArray
+    .slice(0, -1) // remove the blank template, which is the last entry of the array
+    .map((entry, index) => {
+      if (
+        entry.monsterBaseId === '20047701' ||
+        entry.monsterBaseId === '20064400' ||
+        entry.monsterBaseId === '20013000' ||
+        entry.monsterBaseId === '20083500' ||
+        entry.monsterBaseId === '20081400' ||
+        entry.monsterBaseId === '20026000'
+      ) {
+        let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
+        let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
+        return newlyGridedPokemon.push({
+          key: index,
+          name: name,
+          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+        });
+      }
+    });
+
+  return newlyGridedPokemon.sort((a, b) => {
+    let x = a.value;
+    let y = b.value;
+    return x < y ? -1 : x > y ? 1 : 0;
+  });
+};
 
 export const getPokemonDataByName = (pokemonName) => {
   let pokemonData;

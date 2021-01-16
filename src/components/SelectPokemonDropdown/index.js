@@ -1,13 +1,17 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import { getPokemonNameList } from "../../utils/functions";
-import styles from "./styles";
-import { updateUrl, setSyncLevel } from "../../actions/actionCreators";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { withStyles } from '@material-ui/core';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import {
+  getPokemonNameList,
+  getNewPokemonNameList,
+} from '../../utils/functions';
+import styles from './styles';
+import { updateUrl, setSyncLevel } from '../../actions/actionCreators';
+import { useSelector, useDispatch } from 'react-redux';
 
 function SimpleSelect(props) {
   const dispatch = useDispatch();
@@ -28,11 +32,13 @@ function SimpleSelect(props) {
   }, [selectedPokemon]);
 
   const handleChange = (event) => {
-    setPokemon(event.target.value);
-    onChangeHandler(event.target.value);
+    if (event.target.value) {
+      setPokemon(event.target.value);
+      onChangeHandler(event.target.value);
 
-    dispatch(updateUrl(event.target.value));
-    dispatch(setSyncLevel("5"));
+      dispatch(updateUrl(event.target.value));
+      dispatch(setSyncLevel('5'));
+    }
   };
 
   return (
@@ -51,6 +57,13 @@ function SimpleSelect(props) {
         onChange={handleChange}
         labelWidth={labelWidth}
       >
+        <ListSubheader disableSticky={true}>New</ListSubheader>
+        {getNewPokemonNameList(language).map((pokemon, index) => (
+          <MenuItem key={index} value={pokemon.name}>
+            {pokemon.value}
+          </MenuItem>
+        ))}
+        <ListSubheader disableSticky={true}>All</ListSubheader>
         {getPokemonNameList(language).map((pokemon, index) => (
           <MenuItem key={index} value={pokemon.name}>
             {pokemon.value}
