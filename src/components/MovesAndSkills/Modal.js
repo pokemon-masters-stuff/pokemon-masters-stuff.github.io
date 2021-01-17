@@ -64,12 +64,22 @@ function Stats(props) {
   let atkUpFromMega, defUpFromMega, spaUpFromMega, spdUpFromMega, speUpFromMega;
 
   if (selectedStatTiles) {
-    hpUpFromGrid = selectedStatTiles.hp;
-    atkUpFromGrid = selectedStatTiles.atk;
-    defUpFromGrid = selectedStatTiles.def;
-    spaUpFromGrid = selectedStatTiles.spa;
-    spdUpFromGrid = selectedStatTiles.spd;
-    speUpFromGrid = selectedStatTiles.spe;
+    hpUpFromGrid = selectedStatTiles.hp ? selectedStatTiles.hp : hpUpFromGrid;
+    atkUpFromGrid = selectedStatTiles.atk
+      ? selectedStatTiles.atk
+      : atkUpFromGrid;
+    defUpFromGrid = selectedStatTiles.def
+      ? selectedStatTiles.def
+      : defUpFromGrid;
+    spaUpFromGrid = selectedStatTiles.spa
+      ? selectedStatTiles.spa
+      : spaUpFromGrid;
+    spdUpFromGrid = selectedStatTiles.spd
+      ? selectedStatTiles.spd
+      : spdUpFromGrid;
+    speUpFromGrid = selectedStatTiles.spe
+      ? selectedStatTiles.spe
+      : speUpFromGrid;
   }
 
   let lv130Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 30;
