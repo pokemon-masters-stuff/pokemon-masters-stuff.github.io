@@ -21,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
   box: {
     // height: 720,
     width: '100vw',
+    maxWidth: 500,
   },
   boxDark: {
     // height: 720,
     width: '100vw',
+    maxWidth: 500,
     background: 'black',
   },
 }));
