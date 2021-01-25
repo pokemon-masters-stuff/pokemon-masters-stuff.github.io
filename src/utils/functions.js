@@ -28,6 +28,7 @@ export const getPokemonNameList = (language) =>
 
       // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
       if (entry.monsterBaseId === '20082912') {
+        // Lycanroc (Olivia)
         // for the new sync pair:
         value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
         name = entry.syncPairNameByLanguage['en'];
@@ -38,6 +39,7 @@ export const getPokemonNameList = (language) =>
           value: value, // value changes as language changes. name stays the same so old links and saves are compatible
         };
       } else if (entry.monsterBaseId === '20082911') {
+        // Lycanroc (Kukui)
         // for the old sync pair, change displayed value but not name so that old saves are still compatible
         value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
 
@@ -73,6 +75,7 @@ export const getNewPokemonNameList = (language) => {
     .slice(0, -1) // remove the blank template, which is the last entry of the array
     .map((entry, index) => {
       if (
+        // newly grided pokemons monsterBaseId from latest datamine
         entry.monsterBaseId === '20047701' ||
         entry.monsterBaseId === '20064400' ||
         entry.monsterBaseId === '20013000' ||
