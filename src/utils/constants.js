@@ -629,6 +629,47 @@ import {
   tsareenaGridDataJA,
   tsareenaGridDataKO,
   tsareenaGridDataZH,
+  // 1/26/2021
+  alcremieGridDataDE,
+  whimsicottGridDataDE,
+  xerneasGridDataDE,
+  yveltalGridDataDE,
+  obstagoonGridDataDE,
+  alcremieGridDataEN,
+  whimsicottGridDataEN,
+  xerneasGridDataEN,
+  yveltalGridDataEN,
+  obstagoonGridDataEN,
+  alcremieGridDataES,
+  whimsicottGridDataES,
+  xerneasGridDataES,
+  yveltalGridDataES,
+  obstagoonGridDataES,
+  alcremieGridDataFR,
+  whimsicottGridDataFR,
+  xerneasGridDataFR,
+  yveltalGridDataFR,
+  obstagoonGridDataFR,
+  alcremieGridDataIT,
+  whimsicottGridDataIT,
+  xerneasGridDataIT,
+  yveltalGridDataIT,
+  obstagoonGridDataIT,
+  alcremieGridDataJA,
+  whimsicottGridDataJA,
+  xerneasGridDataJA,
+  yveltalGridDataJA,
+  obstagoonGridDataJA,
+  alcremieGridDataKO,
+  whimsicottGridDataKO,
+  xerneasGridDataKO,
+  yveltalGridDataKO,
+  obstagoonGridDataKO,
+  alcremieGridDataZH,
+  whimsicottGridDataZH,
+  xerneasGridDataZH,
+  yveltalGridDataZH,
+  obstagoonGridDataZH,
 } from '../data';
 
 import {
@@ -720,6 +761,13 @@ import {
   pm0835_00_abu2_128, // Ribombee
   pm0814_00_mangosteen3_128, // Tsareena
   pm0260_00_laglarge_128, // Swampert
+
+  // 1/26/2021
+  pm0869_11_11_mawhip_128, // Alcremie
+  pm0547_00_elfuun_128, // Whimsicott
+  pm0768_00_pokemonX_128, // Xerneas
+  pm0769_00_pokemonY_128, // Yveltal
+  pm0862_00_31_tachifusaguma_128, // Obstagoon
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -811,6 +859,13 @@ export const pokemonPictures = {
   pm0835_00_abu2_128, // Ribombee
   pm0814_00_mangosteen3_128, // Tsareena
   pm0260_00_laglarge_128, // Swampert
+
+  // 1/26/2021
+  pm0869_11_11_mawhip_128, // Alcremie
+  pm0547_00_elfuun_128, // Whimsicott
+  pm0768_00_pokemonX_128, // Xerneas
+  pm0769_00_pokemonY_128, // Yveltal
+  pm0862_00_31_tachifusaguma_128, // Obstagoon
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -903,6 +958,11 @@ export const allSyncGrids = {
     swampertGridDataDE,
     dusknoirGridDataDE,
     tsareenaGridDataDE,
+    alcremieGridDataDE,
+    whimsicottGridDataDE,
+    xerneasGridDataDE,
+    yveltalGridDataDE,
+    obstagoonGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -982,6 +1042,11 @@ export const allSyncGrids = {
     swampertGridDataEN,
     dusknoirGridDataEN,
     tsareenaGridDataEN,
+    alcremieGridDataEN,
+    whimsicottGridDataEN,
+    xerneasGridDataEN,
+    yveltalGridDataEN,
+    obstagoonGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1061,6 +1126,11 @@ export const allSyncGrids = {
     swampertGridDataES,
     dusknoirGridDataES,
     tsareenaGridDataES,
+    alcremieGridDataES,
+    whimsicottGridDataES,
+    xerneasGridDataES,
+    yveltalGridDataES,
+    obstagoonGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1140,6 +1210,11 @@ export const allSyncGrids = {
     swampertGridDataFR,
     dusknoirGridDataFR,
     tsareenaGridDataFR,
+    alcremieGridDataFR,
+    whimsicottGridDataFR,
+    xerneasGridDataFR,
+    yveltalGridDataFR,
+    obstagoonGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1219,6 +1294,11 @@ export const allSyncGrids = {
     swampertGridDataIT,
     dusknoirGridDataIT,
     tsareenaGridDataIT,
+    alcremieGridDataIT,
+    whimsicottGridDataIT,
+    xerneasGridDataIT,
+    yveltalGridDataIT,
+    obstagoonGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1298,6 +1378,11 @@ export const allSyncGrids = {
     swampertGridDataJA,
     dusknoirGridDataJA,
     tsareenaGridDataJA,
+    alcremieGridDataJA,
+    whimsicottGridDataJA,
+    xerneasGridDataJA,
+    yveltalGridDataJA,
+    obstagoonGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1377,6 +1462,11 @@ export const allSyncGrids = {
     swampertGridDataKO,
     dusknoirGridDataKO,
     tsareenaGridDataKO,
+    alcremieGridDataKO,
+    whimsicottGridDataKO,
+    xerneasGridDataKO,
+    yveltalGridDataKO,
+    obstagoonGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1456,6 +1546,11 @@ export const allSyncGrids = {
     swampertGridDataZH,
     dusknoirGridDataZH,
     tsareenaGridDataZH,
+    alcremieGridDataZH,
+    whimsicottGridDataZH,
+    xerneasGridDataZH,
+    yveltalGridDataZH,
+    obstagoonGridDataZH,
   },
 };
 

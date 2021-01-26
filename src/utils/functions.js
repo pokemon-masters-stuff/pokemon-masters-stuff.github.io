@@ -76,12 +76,11 @@ export const getNewPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // newly grided pokemons monsterBaseId from latest datamine
-        entry.monsterBaseId === '20047701' ||
-        entry.monsterBaseId === '20064400' ||
-        entry.monsterBaseId === '20013000' ||
-        entry.monsterBaseId === '20083500' ||
-        entry.monsterBaseId === '20081400' ||
-        entry.monsterBaseId === '20026000'
+        entry.monsterBaseId === '2008691111' ||
+        entry.monsterBaseId === '20054700' ||
+        entry.monsterBaseId === '20076800' ||
+        entry.monsterBaseId === '20076900' ||
+        entry.monsterBaseId === '2008620031'
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
@@ -240,7 +239,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'sceptile' ||
       pokemon === 'zacian' ||
       pokemon === 'zekrom' ||
-      pokemon === 'gyarados'
+      pokemon === 'gyarados' ||
+      pokemon === 'yveltal'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -292,7 +292,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'octillery' ||
       pokemon === 'togekiss' ||
       pokemon === 'tsareena' ||
-      pokemon === 'swampert'
+      pokemon === 'swampert' ||
+      pokemon === 'alcremie' ||
+      pokemon === 'whimsicott'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -338,7 +340,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'delibird' ||
       pokemon === 'comfey' ||
       pokemon === 'dusknoir' ||
-      pokemon === 'ribombee'
+      pokemon === 'ribombee' ||
+      pokemon === 'xerneas' ||
+      pokemon === 'obstagoon'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -438,7 +442,8 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'sceptile' ||
       pokemon === 'zacian' ||
       pokemon === 'zekrom' ||
-      pokemon === 'gyarados'
+      pokemon === 'gyarados' ||
+      pokemon === 'yveltal'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -478,7 +483,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'octillery' ||
       pokemon === 'togekiss' ||
       pokemon === 'tsareena' ||
-      pokemon === 'swampert'
+      pokemon === 'swampert' ||
+      pokemon === 'alcremie' ||
+      pokemon === 'whimsicott'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -512,7 +519,9 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       pokemon === 'delibird' ||
       pokemon === 'comfey' ||
       pokemon === 'dusknoir' ||
-      pokemon === 'ribombee'
+      pokemon === 'ribombee' ||
+      pokemon === 'xerneas' ||
+      pokemon === 'obstagoon'
     ) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
@@ -552,7 +561,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-let names = {}; // to generate list of skills to be abbreviated
+// let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;

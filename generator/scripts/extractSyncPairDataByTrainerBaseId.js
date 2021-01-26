@@ -240,17 +240,22 @@ const gridedTrainerList = [
   '10012400', // Mallow
   '10012600', // May
   '10004900', // Phoebe
+  // 1/26/2021
+  '10011640', // V!Dawn
+  '10013040', // V!Serena
+  '10013600', // Sycamore
+  '10019600', // Lysandre
+  '10025600', // Piers
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 12/21/2020
-  '10008900', // N
-  '10011140', // Lance
-  '10011840', // Lillie
-  '10012400', // Mallow
-  '10012600', // May
-  '10004900', // Phoebe
+  // 1/26/2021
+  '10011640', // V!Dawn
+  '10013040', // V!Serena
+  '10013600', // Sycamore
+  '10019600', // Lysandre
+  '10025600', // Piers
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:

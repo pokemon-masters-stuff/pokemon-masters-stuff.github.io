@@ -136,3 +136,9 @@ export { default as pm0130_00_gyarados_128 } from './128px/pm0130_00_gyarados_12
 export { default as pm0835_00_abu2_128 } from './128px/pm0835_00_abu2_128.ktx.png'; // Ribombee
 export { default as pm0814_00_mangosteen3_128 } from './128px/pm0814_00_mangosteen3_128.ktx.png'; // Tsareena
 export { default as pm0260_00_laglarge_128 } from './128px/pm0260_00_laglarge_128.ktx.png'; // Swampert
+// 1/26/2021
+export { default as pm0869_11_11_mawhip_128 } from './128px/pm0869_11_11_mawhip_128.ktx.png'; // Alcremie
+export { default as pm0547_00_elfuun_128 } from './128px/pm0547_00_elfuun_128.ktx.png'; // Whimsicott
+export { default as pm0768_00_pokemonX_128 } from './128px/pm0768_00_pokemonX_128.ktx.png'; // Xerneas
+export { default as pm0769_00_pokemonY_128 } from './128px/pm0769_00_pokemonY_128.ktx.png'; // Yveltal
+export { default as pm0862_00_31_tachifusaguma_128 } from './128px/pm0862_00_31_tachifusaguma_128.ktx.png'; // Obstagoon
