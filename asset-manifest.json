@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e2f979b6.chunk.css",
-    "main.js": "/static/js/main.f07df3ab.chunk.js",
-    "main.js.map": "/static/js/main.f07df3ab.chunk.js.map",
+    "main.js": "/static/js/main.781c1001.chunk.js",
+    "main.js.map": "/static/js/main.781c1001.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
-    "static/js/2.4b2c01ab.chunk.js": "/static/js/2.4b2c01ab.chunk.js",
-    "static/js/2.4b2c01ab.chunk.js.map": "/static/js/2.4b2c01ab.chunk.js.map",
+    "static/js/2.c481898c.chunk.js": "/static/js/2.c481898c.chunk.js",
+    "static/js/2.c481898c.chunk.js.map": "/static/js/2.c481898c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f3d46a7dcc32666e429f3318dbc12e1a.js": "/precache-manifest.f3d46a7dcc32666e429f3318dbc12e1a.js",
+    "precache-manifest.1942bda12a1404e45569ac1b078ce8ca.js": "/precache-manifest.1942bda12a1404e45569ac1b078ce8ca.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e2f979b6.chunk.css.map": "/static/css/main.e2f979b6.chunk.css.map",
-    "static/js/2.4b2c01ab.chunk.js.LICENSE.txt": "/static/js/2.4b2c01ab.chunk.js.LICENSE.txt",
+    "static/js/2.c481898c.chunk.js.LICENSE.txt": "/static/js/2.c481898c.chunk.js.LICENSE.txt",
     "static/media/pm0003_01_fushigibana_128.ktx.png": "/static/media/pm0003_01_fushigibana_128.ktx.b88345b9.png",
     "static/media/pm0006_00_lizardon_128.ktx.png": "/static/media/pm0006_00_lizardon_128.ktx.1d3479bc.png",
     "static/media/pm0009_00_kamex_128.ktx.png": "/static/media/pm0009_00_kamex_128.ktx.c70c193b.png",
@@ -67,6 +67,7 @@
     "static/media/pm0518_00_musharna_128.ktx.png": "/static/media/pm0518_00_musharna_128.ktx.43a2e8b2.png",
     "static/media/pm0523_00_zebraika_128.ktx.png": "/static/media/pm0523_00_zebraika_128.ktx.80682ba6.png",
     "static/media/pm0542_00_hahakomori_128.ktx.png": "/static/media/pm0542_00_hahakomori_128.ktx.3d65d40c.png",
+    "static/media/pm0547_00_elfuun_128.ktx.png": "/static/media/pm0547_00_elfuun_128.ktx.d9e3588d.png",
     "static/media/pm0579_00_lanculus_128.ktx.png": "/static/media/pm0579_00_lanculus_128.ktx.1e294913.png",
     "static/media/pm0581_00_swanna_128.ktx.png": "/static/media/pm0581_00_swanna_128.ktx.47a57055.png",
     "static/media/pm0612_00_ononokus_128.ktx.png": "/static/media/pm0612_00_ononokus_128.ktx.d4b3df0d.png",
@@ -76,6 +77,8 @@
     "static/media/pm0719_00_fox3_128.ktx.png": "/static/media/pm0719_00_fox3_128.ktx.2b256189.png",
     "static/media/pm0732_00_frilledlizard2_128.ktx.png": "/static/media/pm0732_00_frilledlizard2_128.ktx.a7618257.png",
     "static/media/pm0734_00_cat2_128.ktx.png": "/static/media/pm0734_00_cat2_128.ktx.8c285b6a.png",
+    "static/media/pm0768_00_pokemonX_128.ktx.png": "/static/media/pm0768_00_pokemonX_128.ktx.74d98353.png",
+    "static/media/pm0769_00_pokemonY_128.ktx.png": "/static/media/pm0769_00_pokemonY_128.ktx.a13e2087.png",
     "static/media/pm0806_00_dokutokage2_128.ktx.png": "/static/media/pm0806_00_dokutokage2_128.ktx.e68044cd.png",
     "static/media/pm0814_00_mangosteen3_128.ktx.png": "/static/media/pm0814_00_mangosteen3_128.ktx.cfae7882.png",
     "static/media/pm0818_00_uroko3_128.ktx.png": "/static/media/pm0818_00_uroko3_128.ktx.5fb2d9a0.png",
@@ -84,16 +87,18 @@
     "static/media/pm0829_11_okami2noon_128.ktx.png": "/static/media/pm0829_11_okami2noon_128.ktx.53e99ae4.png",
     "static/media/pm0829_12_okami2night_128.ktx.png": "/static/media/pm0829_12_okami2night_128.ktx.6e4c9fd6.png",
     "static/media/pm0835_00_abu2_128.ktx.png": "/static/media/pm0835_00_abu2_128.ktx.d10a8a39.png",
+    "static/media/pm0862_00_31_tachifusaguma_128.ktx.png": "/static/media/pm0862_00_31_tachifusaguma_128.ktx.a122580d.png",
     "static/media/pm0862_11_gryps2_128.ktx.png": "/static/media/pm0862_11_gryps2_128.ktx.1d7a6d84.png",
     "static/media/pm0863_00_lei_128.ktx.png": "/static/media/pm0863_00_lei_128.ktx.4d9468f3.png",
     "static/media/pm0867_00_gusokumushi2_128.ktx.png": "/static/media/pm0867_00_gusokumushi2_128.ktx.30531bd3.png",
+    "static/media/pm0869_11_11_mawhip_128.ktx.png": "/static/media/pm0869_11_11_mawhip_128.ktx.608088d9.png",
     "static/media/pm0879_00_beastblue_128.ktx.png": "/static/media/pm0879_00_beastblue_128.ktx.ec85332e.png",
     "static/media/pm0888_12_00_zacian_128.ktx.png": "/static/media/pm0888_12_00_zacian_128.ktx.bf7e188a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
-    "static/js/2.4b2c01ab.chunk.js",
+    "static/js/2.c481898c.chunk.js",
     "static/css/main.e2f979b6.chunk.css",
-    "static/js/main.f07df3ab.chunk.js"
+    "static/js/main.781c1001.chunk.js"
   ]
 }
