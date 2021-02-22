@@ -1122,7 +1122,7 @@
       "accuracy": 0,
       "maxUses": 2,
       "tags": 0,
-      "description": "Has a good of reducing the user’s sync move countdown by one when the user’s move is successful.",
+      "description": "Has a good chance of reducing the user’s sync move countdown by one when the user’s move is successful.",
       "energyCost": 10,
       "orbCost": 120
     }
