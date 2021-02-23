@@ -1,6 +1,12 @@
 import gridedSyncPairDataArray from '../data/gridedSyncPairData.json';
 import eggPokemonDataArray from '../data/eggPokemonData.json';
-import { shortenedMoveNameByAbilityId } from './constants';
+import {
+  shortenedMoveNameByAbilityId,
+  newGridedPokemonMonsterBaseIdArray,
+  type1SyncGrid,
+  type2SyncGrid,
+  type3SyncGrid,
+} from './constants';
 
 export const removeHyphens = (str) => {
   return str.replace(/-/g, '');
@@ -19,55 +25,62 @@ export const capitalizeSyncPairNameForUrl = (syncPairName) => {
   return newString;
 };
 
-export const getPokemonNameList = (language) =>
+export const getPokemonNameList = (language) => {
+  let existingGridedPokemon = [];
   gridedSyncPairDataArray
     .slice(0, -1) // remove the blank template, which is the last entry of the array
     .map((entry, index) => {
-      let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
-      let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
+      if (
+        // existing grided pokemons monsterBaseId from latest datamine
+        !newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId)
+      ) {
+        let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
+        let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
 
-      // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
-      if (entry.monsterBaseId === '20082912') {
-        // Lycanroc (Olivia)
-        // for the new sync pair:
-        value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-        name = entry.syncPairNameByLanguage['en'];
+        // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
+        if (entry.monsterBaseId === '20082912') {
+          // Lycanroc (Olivia)
+          // for the new sync pair:
+          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+          name = entry.syncPairNameByLanguage['en'];
 
-        return {
-          key: index,
-          name: name,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-        };
-      } else if (entry.monsterBaseId === '20082911') {
-        // Lycanroc (Kukui)
-        // for the old sync pair, change displayed value but not name so that old saves are still compatible
-        value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+          return existingGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          });
+        } else if (entry.monsterBaseId === '20082911') {
+          // Lycanroc (Kukui)
+          // for the old sync pair, change displayed value but not name so that old saves are still compatible
+          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
 
-        return {
-          key: index,
-          name: name,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-        };
-      } else if (entry.monsterBaseId === '20000900') {
-        // rename Blastoise_new to Blastoise
-        return {
-          key: index,
-          name: name,
-          value: value.replace('_new', ''), // value changes as language changes. name stays the same so old links and saves are compatible
-        };
-      } else {
-        return {
-          key: index,
-          name: name,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-        };
+          return existingGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          });
+        } else if (entry.monsterBaseId === '20000900') {
+          // rename Blastoise_new to Blastoise
+          return existingGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value.replace('_new', ''), // value changes as language changes. name stays the same so old links and saves are compatible
+          });
+        } else {
+          return existingGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          });
+        }
       }
-    })
-    .sort((a, b) => {
-      let x = a.value;
-      let y = b.value;
-      return x < y ? -1 : x > y ? 1 : 0;
     });
+  return existingGridedPokemon.sort((a, b) => {
+    let x = a.value;
+    let y = b.value;
+    return x < y ? -1 : x > y ? 1 : 0;
+  });
+};
 
 export const getNewPokemonNameList = (language) => {
   let newlyGridedPokemon = [];
@@ -76,11 +89,7 @@ export const getNewPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // newly grided pokemons monsterBaseId from latest datamine
-        entry.monsterBaseId === '2008691111' ||
-        entry.monsterBaseId === '20054700' ||
-        entry.monsterBaseId === '20076800' ||
-        entry.monsterBaseId === '20076900' ||
-        entry.monsterBaseId === '2008620031'
+        newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId)
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
@@ -201,47 +210,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   let selectable = true;
 
   if (syncLevel === '1') {
-    if (
-      pokemon === 'pikachu' ||
-      pokemon === 'mismagius' ||
-      pokemon === 'charizard' ||
-      pokemon === 'dewgong' ||
-      pokemon === 'infernape' ||
-      pokemon === 'haxorus' ||
-      pokemon === 'kingdra' ||
-      pokemon === 'metagross' ||
-      pokemon === 'houndoom' ||
-      pokemon === 'raichu' ||
-      pokemon === 'reuniclus' ||
-      pokemon === 'golisopod' ||
-      pokemon === 'salazzle' ||
-      pokemon === 'gallade' ||
-      pokemon === 'garchomp' ||
-      pokemon === 'lucario' ||
-      pokemon === 'empoleon' ||
-      pokemon === 'leavanny' ||
-      pokemon === 'sharpedo' ||
-      pokemon === 'emboar' ||
-      pokemon === 'zebstrika' ||
-      pokemon === 'mightyena' ||
-      pokemon === 'drifblim' ||
-      pokemon === 'dragonite' ||
-      pokemon === 'jigglypuff' ||
-      pokemon === 'sandslash' ||
-      pokemon === 'kommo-o' ||
-      pokemon === 'typhlosion' ||
-      pokemon === 'feraligatr' ||
-      pokemon === 'pheromosa' ||
-      pokemon === 'braviary' ||
-      pokemon === 'pidgeot' ||
-      pokemon === 'olivia_lycanroc' ||
-      pokemon === 'volcarona' ||
-      pokemon === 'sceptile' ||
-      pokemon === 'zacian' ||
-      pokemon === 'zekrom' ||
-      pokemon === 'gyarados' ||
-      pokemon === 'yveltal'
-    ) {
+    if (type1SyncGrid.includes(pokemon)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -270,32 +239,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (
-      pokemon === 'torkoal' ||
-      pokemon === 'mimikyu' ||
-      pokemon === 'luxray' ||
-      pokemon === 'vileplume' ||
-      pokemon === 'palossand' ||
-      pokemon === 'liepard' ||
-      pokemon === 'heliolisk' ||
-      pokemon === 'masquerain' ||
-      pokemon === 'meowstic' ||
-      pokemon === 'milotic' ||
-      pokemon === 'delphox' ||
-      pokemon === 'crobat' ||
-      pokemon === 'onix' ||
-      pokemon === 'lycanroc' ||
-      pokemon === 'venusaur' ||
-      pokemon === 'silvally' ||
-      pokemon === 'altaria' ||
-      pokemon === 'musharna' ||
-      pokemon === 'octillery' ||
-      pokemon === 'togekiss' ||
-      pokemon === 'tsareena' ||
-      pokemon === 'swampert' ||
-      pokemon === 'alcremie' ||
-      pokemon === 'whimsicott'
-    ) {
+    if (type2SyncGrid.includes(pokemon)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -324,26 +268,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (
-      pokemon === 'serperior' ||
-      pokemon === 'alakazam' ||
-      pokemon === 'rotom' ||
-      pokemon === 'steelix' ||
-      pokemon === 'swanna' ||
-      pokemon === 'starmie' ||
-      pokemon === 'torterra' ||
-      pokemon === 'blastoise' ||
-      pokemon === 'blastoise_new' ||
-      pokemon === 'meganium' ||
-      pokemon === 'glalie' ||
-      pokemon === 'clefairy' ||
-      pokemon === 'delibird' ||
-      pokemon === 'comfey' ||
-      pokemon === 'dusknoir' ||
-      pokemon === 'ribombee' ||
-      pokemon === 'xerneas' ||
-      pokemon === 'obstagoon'
-    ) {
+    if (type3SyncGrid.includes(pokemon)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -404,47 +329,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   }
 
   if (syncLevel === '2') {
-    if (
-      pokemon === 'pikachu' ||
-      pokemon === 'mismagius' ||
-      pokemon === 'charizard' ||
-      pokemon === 'dewgong' ||
-      pokemon === 'infernape' ||
-      pokemon === 'haxorus' ||
-      pokemon === 'kingdra' ||
-      pokemon === 'metagross' ||
-      pokemon === 'houndoom' ||
-      pokemon === 'raichu' ||
-      pokemon === 'reuniclus' ||
-      pokemon === 'golisopod' ||
-      pokemon === 'salazzle' ||
-      pokemon === 'gallade' ||
-      pokemon === 'garchomp' ||
-      pokemon === 'lucario' ||
-      pokemon === 'empoleon' ||
-      pokemon === 'leavanny' ||
-      pokemon === 'sharpedo' ||
-      pokemon === 'emboar' ||
-      pokemon === 'zebstrika' ||
-      pokemon === 'mightyena' ||
-      pokemon === 'drifblim' ||
-      pokemon === 'dragonite' ||
-      pokemon === 'jigglypuff' ||
-      pokemon === 'sandslash' ||
-      pokemon === 'kommo-o' ||
-      pokemon === 'typhlosion' ||
-      pokemon === 'feraligatr' ||
-      pokemon === 'pheromosa' ||
-      pokemon === 'braviary' ||
-      pokemon === 'pidgeot' ||
-      pokemon === 'olivia_lycanroc' ||
-      pokemon === 'volcarona' ||
-      pokemon === 'sceptile' ||
-      pokemon === 'zacian' ||
-      pokemon === 'zekrom' ||
-      pokemon === 'gyarados' ||
-      pokemon === 'yveltal'
-    ) {
+    if (type1SyncGrid.includes(pokemon)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -461,32 +346,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (
-      pokemon === 'torkoal' ||
-      pokemon === 'mimikyu' ||
-      pokemon === 'luxray' ||
-      pokemon === 'vileplume' ||
-      pokemon === 'palossand' ||
-      pokemon === 'liepard' ||
-      pokemon === 'heliolisk' ||
-      pokemon === 'masquerain' ||
-      pokemon === 'meowstic' ||
-      pokemon === 'milotic' ||
-      pokemon === 'delphox' ||
-      pokemon === 'crobat' ||
-      pokemon === 'onix' ||
-      pokemon === 'lycanroc' ||
-      pokemon === 'venusaur' ||
-      pokemon === 'silvally' ||
-      pokemon === 'altaria' ||
-      pokemon === 'musharna' ||
-      pokemon === 'octillery' ||
-      pokemon === 'togekiss' ||
-      pokemon === 'tsareena' ||
-      pokemon === 'swampert' ||
-      pokemon === 'alcremie' ||
-      pokemon === 'whimsicott'
-    ) {
+    if (type2SyncGrid.includes(pokemon)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -503,26 +363,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (
-      pokemon === 'serperior' ||
-      pokemon === 'alakazam' ||
-      pokemon === 'rotom' ||
-      pokemon === 'steelix' ||
-      pokemon === 'swanna' ||
-      pokemon === 'starmie' ||
-      pokemon === 'torterra' ||
-      pokemon === 'blastoise' ||
-      pokemon === 'blastoise_new' ||
-      pokemon === 'meganium' ||
-      pokemon === 'glalie' ||
-      pokemon === 'clefairy' ||
-      pokemon === 'delibird' ||
-      pokemon === 'comfey' ||
-      pokemon === 'dusknoir' ||
-      pokemon === 'ribombee' ||
-      pokemon === 'xerneas' ||
-      pokemon === 'obstagoon'
-    ) {
+    if (type3SyncGrid.includes(pokemon)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
