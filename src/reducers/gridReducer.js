@@ -151,7 +151,10 @@ export default function (state = initialState, action) {
         state.savedBuilds.byIds[action.payload.buildId].selectedCellsById;
 
       // For old save files that don't contain moveId, value, and type, loop through grid to find them.
-      if (!Object.values(oldSelectedCellsById)[0]['type']) {
+      if (
+        oldSelectedCellsById[0] &&
+        !Object.values(oldSelectedCellsById)[0]['type']
+      ) {
         let selectedCellById = {};
         Object.keys(oldSelectedCellsById).map((cellId) => {
           allSyncGrids['en'][

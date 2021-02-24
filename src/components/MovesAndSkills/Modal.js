@@ -699,8 +699,8 @@ export default function MovesAndSkillsModal(props) {
     if (megaForm.passives) {
       if (megaForm.passives.passive3) {
         postMegaPassives = [
-          megaForm.passives.passive1,
-          megaForm.passives.passive2,
+          megaForm.passives.passive1 || passives.passive1,
+          megaForm.passives.passive2 || passives.passive2,
           megaForm.passives.passive3,
         ];
       } else if (megaForm.passives.passive2) {

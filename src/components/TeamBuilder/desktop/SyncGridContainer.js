@@ -27,6 +27,8 @@ const SyncGridContainer = (props) => {
   let pokemonName = pokemon;
   if (syncPairName === 'Olivia & Lycanroc') {
     pokemonName = 'olivia_lycanroc';
+  } else if (syncPairName === 'Leon & Charizard') {
+    pokemonName = 'leon_charizard';
   }
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);

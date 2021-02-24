@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            2/24/2021:
+            <br />
+            Added new grids.
+            <br />
+            <br />
             1/26/2021:
             <br />
             Added new grids.

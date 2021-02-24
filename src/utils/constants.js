@@ -670,6 +670,55 @@ import {
   xerneasGridDataZH,
   yveltalGridDataZH,
   obstagoonGridDataZH,
+  // 2/24/2021
+  morpekoGridDataDE,
+  gardevoirGridDataDE,
+  leon_charizardGridDataDE,
+  palkiaGridDataDE,
+  hydreigonGridDataDE,
+  samurottGridDataDE,
+  morpekoGridDataEN,
+  gardevoirGridDataEN,
+  palkiaGridDataEN,
+  hydreigonGridDataEN,
+  samurottGridDataEN,
+  leon_charizardGridDataEN,
+  morpekoGridDataES,
+  gardevoirGridDataES,
+  palkiaGridDataES,
+  hydreigonGridDataES,
+  samurottGridDataES,
+  leon_charizardGridDataES,
+  morpekoGridDataFR,
+  gardevoirGridDataFR,
+  palkiaGridDataFR,
+  hydreigonGridDataFR,
+  samurottGridDataFR,
+  leon_charizardGridDataFR,
+  morpekoGridDataIT,
+  gardevoirGridDataIT,
+  palkiaGridDataIT,
+  hydreigonGridDataIT,
+  samurottGridDataIT,
+  leon_charizardGridDataIT,
+  morpekoGridDataJA,
+  gardevoirGridDataJA,
+  palkiaGridDataJA,
+  hydreigonGridDataJA,
+  samurottGridDataJA,
+  leon_charizardGridDataJA,
+  morpekoGridDataKO,
+  gardevoirGridDataKO,
+  palkiaGridDataKO,
+  hydreigonGridDataKO,
+  samurottGridDataKO,
+  leon_charizardGridDataKO,
+  morpekoGridDataZH,
+  gardevoirGridDataZH,
+  palkiaGridDataZH,
+  hydreigonGridDataZH,
+  samurottGridDataZH,
+  leon_charizardGridDataZH,
 } from '../data';
 
 import {
@@ -768,6 +817,13 @@ import {
   pm0768_00_pokemonX_128, // Xerneas
   pm0769_00_pokemonY_128, // Yveltal
   pm0862_00_31_tachifusaguma_128, // Obstagoon
+
+  // 2/24/2021
+  pm0503_00_daikenki_128, // Samurott
+  pm0635_00_sazandora_128, // Hydreigon
+  pm0282_00_sirnight_128, // Gardevoir
+  pm0484_00_palkia_128, // Palkia
+  pm0877_11_00_morpeko_128, // Morpeko
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -866,6 +922,13 @@ export const pokemonPictures = {
   pm0768_00_pokemonX_128, // Xerneas
   pm0769_00_pokemonY_128, // Yveltal
   pm0862_00_31_tachifusaguma_128, // Obstagoon
+
+  // 2/24/2021
+  pm0503_00_daikenki_128, // Samurott
+  pm0635_00_sazandora_128, // Hydreigon
+  pm0282_00_sirnight_128, // Gardevoir
+  pm0484_00_palkia_128, // Palkia
+  pm0877_11_00_morpeko_128, // Morpeko
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -963,6 +1026,12 @@ export const allSyncGrids = {
     xerneasGridDataDE,
     yveltalGridDataDE,
     obstagoonGridDataDE,
+    morpekoGridDataDE,
+    gardevoirGridDataDE,
+    leon_charizardGridDataDE,
+    palkiaGridDataDE,
+    hydreigonGridDataDE,
+    samurottGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -1047,6 +1116,12 @@ export const allSyncGrids = {
     xerneasGridDataEN,
     yveltalGridDataEN,
     obstagoonGridDataEN,
+    morpekoGridDataEN,
+    gardevoirGridDataEN,
+    palkiaGridDataEN,
+    hydreigonGridDataEN,
+    samurottGridDataEN,
+    leon_charizardGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1131,6 +1206,12 @@ export const allSyncGrids = {
     xerneasGridDataES,
     yveltalGridDataES,
     obstagoonGridDataES,
+    morpekoGridDataES,
+    gardevoirGridDataES,
+    palkiaGridDataES,
+    hydreigonGridDataES,
+    samurottGridDataES,
+    leon_charizardGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1215,6 +1296,12 @@ export const allSyncGrids = {
     xerneasGridDataFR,
     yveltalGridDataFR,
     obstagoonGridDataFR,
+    morpekoGridDataFR,
+    gardevoirGridDataFR,
+    palkiaGridDataFR,
+    hydreigonGridDataFR,
+    samurottGridDataFR,
+    leon_charizardGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1299,6 +1386,12 @@ export const allSyncGrids = {
     xerneasGridDataIT,
     yveltalGridDataIT,
     obstagoonGridDataIT,
+    morpekoGridDataIT,
+    gardevoirGridDataIT,
+    palkiaGridDataIT,
+    hydreigonGridDataIT,
+    samurottGridDataIT,
+    leon_charizardGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1383,6 +1476,12 @@ export const allSyncGrids = {
     xerneasGridDataJA,
     yveltalGridDataJA,
     obstagoonGridDataJA,
+    morpekoGridDataJA,
+    gardevoirGridDataJA,
+    palkiaGridDataJA,
+    hydreigonGridDataJA,
+    samurottGridDataJA,
+    leon_charizardGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1467,6 +1566,12 @@ export const allSyncGrids = {
     xerneasGridDataKO,
     yveltalGridDataKO,
     obstagoonGridDataKO,
+    morpekoGridDataKO,
+    gardevoirGridDataKO,
+    palkiaGridDataKO,
+    hydreigonGridDataKO,
+    samurottGridDataKO,
+    leon_charizardGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1551,6 +1656,12 @@ export const allSyncGrids = {
     xerneasGridDataZH,
     yveltalGridDataZH,
     obstagoonGridDataZH,
+    morpekoGridDataZH,
+    gardevoirGridDataZH,
+    palkiaGridDataZH,
+    hydreigonGridDataZH,
+    samurottGridDataZH,
+    leon_charizardGridDataZH,
   },
 };
 
@@ -1559,11 +1670,12 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const newGridedPokemonMonsterBaseIdArray = [
-  '2008691111',
-  '20054700',
-  '20076800',
-  '20076900',
-  '2008620031',
+  '2008771101', // Morpeko (Marnie)
+  '20000600', // Charizard (Leon)
+  '20028201', // Gardevoir (Diantha)
+  '20048400', // Palkia (Cyrus)
+  '20063501', // Hydreigon (Iris)
+  '20050300', // Samurott (Hilbert)
 ];
 
 export const type1SyncGrid = [
@@ -1606,6 +1718,9 @@ export const type1SyncGrid = [
   'zekrom',
   'gyarados',
   'yveltal',
+  'gardevoir',
+  'leon_charizard',
+  'palkia',
 ];
 
 export const type2SyncGrid = [
@@ -1633,6 +1748,8 @@ export const type2SyncGrid = [
   'swampert',
   'alcremie',
   'whimsicott',
+  'hydreigon',
+  'morpeko',
 ];
 
 export const type3SyncGrid = [
@@ -1654,4 +1771,5 @@ export const type3SyncGrid = [
   'ribombee',
   'xerneas',
   'obstagoon',
+  'samurott',
 ];

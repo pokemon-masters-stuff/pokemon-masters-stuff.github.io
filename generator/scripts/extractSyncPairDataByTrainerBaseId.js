@@ -43,6 +43,15 @@ const moveDescriptionDBja = require('../rawdata/lsddump/move_description_ja.json
 const moveDescriptionDBko = require('../rawdata/lsddump/move_description_ko.json');
 const moveDescriptionDBzh = require('../rawdata/lsddump/move_description_zh-TW.json');
 
+const moveDescriptionPartsDBde = require('../rawdata/lsddump/move_description_parts_de.json');
+const moveDescriptionPartsDBen = require('../rawdata/lsddump/move_description_parts_en.json');
+const moveDescriptionPartsDBes = require('../rawdata/lsddump/move_description_parts_es.json');
+const moveDescriptionPartsDBfr = require('../rawdata/lsddump/move_description_parts_fr.json');
+const moveDescriptionPartsDBit = require('../rawdata/lsddump/move_description_parts_it.json');
+const moveDescriptionPartsDBja = require('../rawdata/lsddump/move_description_parts_ja.json');
+const moveDescriptionPartsDBko = require('../rawdata/lsddump/move_description_parts_ko.json');
+const moveDescriptionPartsDBzh = require('../rawdata/lsddump/move_description_parts_zh-TW.json');
+
 const moveTargetTypeDBde = require('../rawdata/lsddump/move_target_type_de.json');
 const moveTargetTypeDBen = require('../rawdata/lsddump/move_target_type_en.json');
 const moveTargetTypeDBes = require('../rawdata/lsddump/move_target_type_es.json');
@@ -112,6 +121,17 @@ const moveDescriptionDB = {
   ja: moveDescriptionDBja,
   ko: moveDescriptionDBko,
   zh: moveDescriptionDBzh,
+};
+
+const moveDescriptionPartsDB = {
+  de: moveDescriptionPartsDBde,
+  en: moveDescriptionPartsDBen,
+  es: moveDescriptionPartsDBes,
+  fr: moveDescriptionPartsDBfr,
+  it: moveDescriptionPartsDBit,
+  ja: moveDescriptionPartsDBja,
+  ko: moveDescriptionPartsDBko,
+  zh: moveDescriptionPartsDBzh,
 };
 
 const moveTargetTypeDB = {
@@ -246,16 +266,24 @@ const gridedTrainerList = [
   '10013600', // Sycamore
   '10019600', // Lysandre
   '10025600', // Piers
+  // 2/24/2021
+  '10024500', // Marnie
+  '10024700', // Leon
+  '10015800', // Diantha
+  '10019400', // Cyrus
+  '10009280', // SS Iris
+  '10002000', // Hilbert
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 1/26/2021
-  '10011640', // V!Dawn
-  '10013040', // V!Serena
-  '10013600', // Sycamore
-  '10019600', // Lysandre
-  '10025600', // Piers
+  // 2/24/2021
+  '10024500', // Marnie
+  '10024700', // Leon
+  '10015800', // Diantha
+  '10019400', // Cyrus
+  '10009280', // SS Iris
+  '10002000', // Hilbert
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -266,6 +294,81 @@ const newTrainerBaseIdArray = [
 /*
  * Usage i.e: node extractSyncPairDataByTrainerBaseId.js
  * */
+
+const getUpdatedMoveDescription = (language, moveId) => {
+  // To refactor
+  if (moveId === 219) {
+    return moveDescriptionPartsDB[language]['999997'];
+  } else if (moveId === 407) {
+    return moveDescriptionPartsDB[language]['999996'];
+  } else if (moveId === 517) {
+    return moveDescriptionPartsDB[language]['999995'];
+  } else if (moveId === 643) {
+    return moveDescriptionPartsDB[language]['999994'];
+  } else if (moveId === 783) {
+    return (
+      moveDescriptionPartsDB[language]['999993'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999969'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999968']
+    );
+  } else if (moveId === 784) {
+    return moveDescriptionPartsDB[language]['999992'];
+  } else if (moveId === 10928) {
+    return (
+      moveDescriptionPartsDB[language]['999991'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999990'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999989'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999988']
+    );
+  } else if (moveId === 11580) {
+    return (
+      moveDescriptionPartsDB[language]['999987'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999967']
+    );
+  } else if (moveId === 12450) {
+    return (
+      moveDescriptionPartsDB[language]['999986'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999966'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999965'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999964']
+    );
+  } else if (moveId === 12470) {
+    return (
+      moveDescriptionPartsDB[language]['999990'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999985'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999988'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999984'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999983']
+    );
+  } else if (moveId === 61500) {
+    return moveDescriptionPartsDB[language]['999963'];
+  } else if (moveId === 81800) {
+    return moveDescriptionPartsDB[language]['999999'];
+  } else if (moveId === 81900) {
+    return (
+      moveDescriptionPartsDB[language]['999962'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999982']
+    );
+  } else if (moveId === 83200) {
+    return moveDescriptionPartsDB[language]['999981'];
+  } else {
+    return moveDescriptionDB[language][moveId];
+  }
+};
 
 const extractSyncPairDataByTrainerBaseId = () => {
   const gridedSyncPairDataArray = [];
@@ -479,14 +582,22 @@ const extractSyncPairDataByTrainerBaseId = () => {
         move2NameByLanguage[language] = moveNameDB[language][move2Id];
         move3NameByLanguage[language] = moveNameDB[language][move3Id];
         move4NameByLanguage[language] = moveNameDB[language][move4Id];
-        move1DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move1Id];
-        move2DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move2Id];
-        move3DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move3Id];
-        move4DescriptionByLanguage[language] =
-          moveDescriptionDB[language][move4Id];
+        move1DescriptionByLanguage[language] = getUpdatedMoveDescription(
+          language,
+          move1Id
+        );
+        move2DescriptionByLanguage[language] = getUpdatedMoveDescription(
+          language,
+          move2Id
+        );
+        move3DescriptionByLanguage[language] = getUpdatedMoveDescription(
+          language,
+          move3Id
+        );
+        move4DescriptionByLanguage[language] = getUpdatedMoveDescription(
+          language,
+          move4Id
+        );
         move1TargetTypeByLanguage[language] =
           moveTargetTypeDB[language][move1.target];
         move2TargetTypeByLanguage[language] =
@@ -718,8 +829,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
 
       languages.forEach((language) => {
         syncMoveNameByLanguage[language] = moveNameDB[language][syncMoveId];
-        syncMoveDescriptionByLanguage[language] =
-          moveDescriptionDB[language][syncMoveId];
+        syncMoveDescriptionByLanguage[language] = getUpdatedMoveDescription(
+          language,
+          syncMoveId
+        );
       });
 
       // Use moveId to find move data, eg. power, accuracy, etc. from Move.json
@@ -759,12 +872,17 @@ const extractSyncPairDataByTrainerBaseId = () => {
         potentialMegaBaseId = monsterBaseId.toString();
       }
 
-      if (pokemonNameDBen[potentialMegaBaseId]) {
+      if (
+        pokemonNameDBen[potentialMegaBaseId] &&
+        trainerBaseIdFromList !== '10024700'
+      ) {
         monsterMegaFormBaseId = potentialMegaBaseId;
 
         monsterMegaFormEntry = monsterVariationDB.entries.find(
           (monster) => monster.monsterId.toString() === monsterId.toString()
         );
+
+        console.log('monsterBaseId', monsterBaseId);
 
         const {
           atkScale,
@@ -1331,6 +1449,9 @@ const extractSyncPairDataByTrainerBaseId = () => {
       // 20003501 is Clefairy, but same as above its id is off by 1
       // 20051801 is Musharna
       // 20086301 is Comfey
+      // 2008771101 Morpeko
+      // 20028201 Gardevoir
+      // 20063501 Hydreigon
       if (entry.monsterBaseId) {
         if (entry.monsterBaseId === '20003901') {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20003900'];
@@ -1340,6 +1461,13 @@ const extractSyncPairDataByTrainerBaseId = () => {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20051800'];
         } else if (entry.monsterBaseId === '20086301') {
           pokemonNameByLanguage[language] = pokemonNameDB[language]['20086300'];
+        } else if (entry.monsterBaseId === '2008771101') {
+          pokemonNameByLanguage[language] =
+            pokemonNameDB[language]['2008771100'];
+        } else if (entry.monsterBaseId === '20028201') {
+          pokemonNameByLanguage[language] = pokemonNameDB[language]['20028200'];
+        } else if (entry.monsterBaseId === '20063501') {
+          pokemonNameByLanguage[language] = pokemonNameDB[language]['20063500'];
         } else {
           pokemonNameByLanguage[language] =
             pokemonNameDB[language][entry.monsterBaseId];

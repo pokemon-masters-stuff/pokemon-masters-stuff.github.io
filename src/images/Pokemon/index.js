@@ -142,3 +142,9 @@ export { default as pm0547_00_elfuun_128 } from './128px/pm0547_00_elfuun_128.kt
 export { default as pm0768_00_pokemonX_128 } from './128px/pm0768_00_pokemonX_128.ktx.png'; // Xerneas
 export { default as pm0769_00_pokemonY_128 } from './128px/pm0769_00_pokemonY_128.ktx.png'; // Yveltal
 export { default as pm0862_00_31_tachifusaguma_128 } from './128px/pm0862_00_31_tachifusaguma_128.ktx.png'; // Obstagoon
+// 2/24/2021
+export { default as pm0503_00_daikenki_128 } from './128px/pm0503_00_daikenki_128.ktx.png'; // Samurott
+export { default as pm0635_00_sazandora_128 } from './128px/pm0635_00_sazandora_128.ktx.png'; // Hydreigon
+export { default as pm0282_00_sirnight_128 } from './128px/pm0282_00_sirnight_128.ktx.png'; // Gardevoir
+export { default as pm0484_00_palkia_128 } from './128px/pm0484_00_palkia_128.ktx.png'; // Palkia
+export { default as pm0877_11_00_morpeko_128 } from './128px/pm0877_11_00_morpeko_128.ktx.png'; // Morpeko

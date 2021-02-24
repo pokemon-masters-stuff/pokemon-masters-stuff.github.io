@@ -32,14 +32,18 @@ export const getPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // existing grided pokemons monsterBaseId from latest datamine
-        !newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId)
+        !newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId) ||
+        entry.trainerBaseId === '10000000' // Charizard (Red)
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
 
         // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
-        if (entry.monsterBaseId === '20082912') {
-          // Lycanroc (Olivia)
+        if (
+          entry.monsterBaseId === '20082912' ||
+          entry.trainerBaseId === '10024700'
+        ) {
+          // Lycanroc (Olivia), Charizard (Leon)
           // for the new sync pair:
           value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
           name = entry.syncPairNameByLanguage['en'];
@@ -49,8 +53,11 @@ export const getPokemonNameList = (language) => {
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
           });
-        } else if (entry.monsterBaseId === '20082911') {
-          // Lycanroc (Kukui)
+        } else if (
+          entry.monsterBaseId === '20082911' ||
+          entry.trainerBaseId === '10000000'
+        ) {
+          // Lycanroc (Kukui) Charizard (Red)
           // for the old sync pair, change displayed value but not name so that old saves are still compatible
           value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
 
@@ -89,10 +96,17 @@ export const getNewPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // newly grided pokemons monsterBaseId from latest datamine
-        newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId)
+        newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId) &&
+        entry.trainerBaseId !== '10000000'
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
+
+        if (entry.trainerBaseId === '10024700') {
+          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+          name = entry.syncPairNameByLanguage['en'];
+        }
+
         return newlyGridedPokemon.push({
           key: index,
           name: name,
@@ -114,6 +128,12 @@ export const getPokemonDataByName = (pokemonName) => {
     if (pokemonName.toLowerCase() === 'lycanroc') {
       if (
         pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'kukui_lycanroc'
+      ) {
+        pokemonData = pokemon;
+      }
+    } else if (pokemonName.toLowerCase() === 'charizard') {
+      if (
+        pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'red_charizard'
       ) {
         pokemonData = pokemon;
       }
@@ -402,7 +422,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   return selectable;
 };
 
-// let names = {}; // to generate list of skills to be abbreviated
+let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
