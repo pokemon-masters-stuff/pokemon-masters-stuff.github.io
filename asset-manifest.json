@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e2f979b6.chunk.css",
-    "main.js": "/static/js/main.a3a609fd.chunk.js",
-    "main.js.map": "/static/js/main.a3a609fd.chunk.js.map",
+    "main.js": "/static/js/main.bf31e2f1.chunk.js",
+    "main.js.map": "/static/js/main.bf31e2f1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
-    "static/js/2.c481898c.chunk.js": "/static/js/2.c481898c.chunk.js",
-    "static/js/2.c481898c.chunk.js.map": "/static/js/2.c481898c.chunk.js.map",
+    "static/js/2.2ee60b7d.chunk.js": "/static/js/2.2ee60b7d.chunk.js",
+    "static/js/2.2ee60b7d.chunk.js.map": "/static/js/2.2ee60b7d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c9431ad04c352eee57ecffa3e4a125f8.js": "/precache-manifest.c9431ad04c352eee57ecffa3e4a125f8.js",
+    "precache-manifest.ec0fbe4bee07760027ffbaaa851a8aff.js": "/precache-manifest.ec0fbe4bee07760027ffbaaa851a8aff.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e2f979b6.chunk.css.map": "/static/css/main.e2f979b6.chunk.css.map",
-    "static/js/2.c481898c.chunk.js.LICENSE.txt": "/static/js/2.c481898c.chunk.js.LICENSE.txt",
+    "static/js/2.2ee60b7d.chunk.js.LICENSE.txt": "/static/js/2.2ee60b7d.chunk.js.LICENSE.txt",
     "static/media/pm0003_01_fushigibana_128.ktx.png": "/static/media/pm0003_01_fushigibana_128.ktx.b88345b9.png",
     "static/media/pm0006_00_lizardon_128.ktx.png": "/static/media/pm0006_00_lizardon_128.ktx.1d3479bc.png",
     "static/media/pm0009_00_kamex_128.ktx.png": "/static/media/pm0009_00_kamex_128.ktx.c70c193b.png",
@@ -42,6 +42,7 @@
     "static/media/pm0254_00_jukain_128.ktx.png": "/static/media/pm0254_00_jukain_128.ktx.53f1256b.png",
     "static/media/pm0260_00_laglarge_128.ktx.png": "/static/media/pm0260_00_laglarge_128.ktx.9902f69d.png",
     "static/media/pm0262_00_graena_128.ktx.png": "/static/media/pm0262_00_graena_128.ktx.c65a54fc.png",
+    "static/media/pm0282_00_sirnight_128.ktx.png": "/static/media/pm0282_00_sirnight_128.ktx.95887288.png",
     "static/media/pm0284_00_amemoth_128.ktx.png": "/static/media/pm0284_00_amemoth_128.ktx.58278316.png",
     "static/media/pm0319_00_samehader_128.ktx.png": "/static/media/pm0319_00_samehader_128.ktx.f7b855bf.png",
     "static/media/pm0324_00_cotoise_128.ktx.png": "/static/media/pm0324_00_cotoise_128.ktx.3d7ac16e.png",
@@ -61,8 +62,10 @@
     "static/media/pm0475_00_erureido_128.ktx.png": "/static/media/pm0475_00_erureido_128.ktx.30131b15.png",
     "static/media/pm0477_00_yonoir_128.ktx.png": "/static/media/pm0477_00_yonoir_128.ktx.0b0915f8.png",
     "static/media/pm0479_11_rotom_128.ktx.png": "/static/media/pm0479_11_rotom_128.ktx.f695427f.png",
+    "static/media/pm0484_00_palkia_128.ktx.png": "/static/media/pm0484_00_palkia_128.ktx.a70512f0.png",
     "static/media/pm0497_00_jalorda_128.ktx.png": "/static/media/pm0497_00_jalorda_128.ktx.aa2a78d8.png",
     "static/media/pm0500_00_enbuoh_128.ktx.png": "/static/media/pm0500_00_enbuoh_128.ktx.f02c8cf5.png",
+    "static/media/pm0503_00_daikenki_128.ktx.png": "/static/media/pm0503_00_daikenki_128.ktx.7ba2e97f.png",
     "static/media/pm0510_00_lepardas_128.ktx.png": "/static/media/pm0510_00_lepardas_128.ktx.3c753940.png",
     "static/media/pm0518_00_musharna_128.ktx.png": "/static/media/pm0518_00_musharna_128.ktx.43a2e8b2.png",
     "static/media/pm0523_00_zebraika_128.ktx.png": "/static/media/pm0523_00_zebraika_128.ktx.80682ba6.png",
@@ -72,6 +75,7 @@
     "static/media/pm0581_00_swanna_128.ktx.png": "/static/media/pm0581_00_swanna_128.ktx.47a57055.png",
     "static/media/pm0612_00_ononokus_128.ktx.png": "/static/media/pm0612_00_ononokus_128.ktx.d4b3df0d.png",
     "static/media/pm0628_00_warrgle_128.ktx.png": "/static/media/pm0628_00_warrgle_128.ktx.e7505fd5.png",
+    "static/media/pm0635_00_sazandora_128.ktx.png": "/static/media/pm0635_00_sazandora_128.ktx.7bab4093.png",
     "static/media/pm0637_00_ulgamoth_128.ktx.png": "/static/media/pm0637_00_ulgamoth_128.ktx.c48bab9c.png",
     "static/media/pm0644_00_zekrom_128.ktx.png": "/static/media/pm0644_00_zekrom_128.ktx.b8e85bfb.png",
     "static/media/pm0719_00_fox3_128.ktx.png": "/static/media/pm0719_00_fox3_128.ktx.2b256189.png",
@@ -92,13 +96,14 @@
     "static/media/pm0863_00_lei_128.ktx.png": "/static/media/pm0863_00_lei_128.ktx.4d9468f3.png",
     "static/media/pm0867_00_gusokumushi2_128.ktx.png": "/static/media/pm0867_00_gusokumushi2_128.ktx.30531bd3.png",
     "static/media/pm0869_11_11_mawhip_128.ktx.png": "/static/media/pm0869_11_11_mawhip_128.ktx.608088d9.png",
+    "static/media/pm0877_11_00_morpeko_128.ktx.png": "/static/media/pm0877_11_00_morpeko_128.ktx.b5c464f1.png",
     "static/media/pm0879_00_beastblue_128.ktx.png": "/static/media/pm0879_00_beastblue_128.ktx.ec85332e.png",
     "static/media/pm0888_12_00_zacian_128.ktx.png": "/static/media/pm0888_12_00_zacian_128.ktx.bf7e188a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
-    "static/js/2.c481898c.chunk.js",
+    "static/js/2.2ee60b7d.chunk.js",
     "static/css/main.e2f979b6.chunk.css",
-    "static/js/main.a3a609fd.chunk.js"
+    "static/js/main.bf31e2f1.chunk.js"
   ]
 }
