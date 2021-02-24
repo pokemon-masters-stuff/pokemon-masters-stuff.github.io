@@ -678,7 +678,14 @@ export default function MovesAndSkillsModal(props) {
   let preMegaPassives;
   let postMegaMoves;
   let postMegaPassives;
-  if (passives.passive3) {
+  if (passives.passive4) {
+    preMegaPassives = [
+      passives.passive1,
+      passives.passive2,
+      passives.passive3,
+      passives.passive4,
+    ];
+  } else if (passives.passive3) {
     preMegaPassives = [passives.passive1, passives.passive2, passives.passive3];
   } else if (passives.passive2) {
     preMegaPassives = [passives.passive1, passives.passive2];

@@ -427,6 +427,7 @@ const extractSyncPairDataByTrainerBaseId = () => {
         passive1Id,
         passive2Id,
         passive3Id,
+        passive4Id,
         type,
         weakType,
         rarity,
@@ -697,6 +698,16 @@ const extractSyncPairDataByTrainerBaseId = () => {
           ko: '',
           zh: '',
         };
+      passive4NameByLanguage = {
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
+      };
 
       let passive1DescriptionByLanguage = {
           de: '',
@@ -728,17 +739,30 @@ const extractSyncPairDataByTrainerBaseId = () => {
           ko: '',
           zh: '',
         };
+      passive4DescriptionByLanguage = {
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
+      };
 
       languages.forEach((language) => {
         passive1NameByLanguage[language] = passiveNameDB[language][passive1Id];
         passive2NameByLanguage[language] = passiveNameDB[language][passive2Id];
         passive3NameByLanguage[language] = passiveNameDB[language][passive3Id];
+        passive4NameByLanguage[language] = passiveNameDB[language][passive4Id];
         passive1DescriptionByLanguage[language] =
           passiveDescriptionDB[language][passive1Id];
         passive2DescriptionByLanguage[language] =
           passiveDescriptionDB[language][passive2Id];
         passive3DescriptionByLanguage[language] =
           passiveDescriptionDB[language][passive3Id];
+        passive4DescriptionByLanguage[language] =
+          passiveDescriptionDB[language][passive4Id];
       });
 
       passive1Id !== 0 &&
@@ -765,6 +789,15 @@ const extractSyncPairDataByTrainerBaseId = () => {
             id: passive3Id,
             name: passive3NameByLanguage,
             description: passive3DescriptionByLanguage,
+          },
+        });
+      passive4Id !== 0 &&
+        (passives = {
+          ...passives,
+          passive4: {
+            id: passive4Id,
+            name: passive4NameByLanguage,
+            description: passive4DescriptionByLanguage,
           },
         });
 
@@ -1192,6 +1225,16 @@ const extractSyncPairDataByTrainerBaseId = () => {
             ko: '',
             zh: '',
           };
+        megaPassive4NameByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
+        };
 
         let megaPassive1DescriptionByLanguage = {
             de: '',
@@ -1223,6 +1266,16 @@ const extractSyncPairDataByTrainerBaseId = () => {
             ko: '',
             zh: '',
           };
+        megaPassive4DescriptionByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
+        };
 
         languages.forEach((language) => {
           megaPassive1NameByLanguage[language] =
@@ -1231,12 +1284,16 @@ const extractSyncPairDataByTrainerBaseId = () => {
             passiveNameDB[language][monsterMegaFormEntry.passive2Id];
           megaPassive3NameByLanguage[language] =
             passiveNameDB[language][monsterMegaFormEntry.passive3Id];
+          megaPassive4NameByLanguage[language] =
+            passiveNameDB[language][monsterMegaFormEntry.passive4Id];
           megaPassive1DescriptionByLanguage[language] =
             passiveDescriptionDB[language][monsterMegaFormEntry.passive1Id];
           megaPassive2DescriptionByLanguage[language] =
             passiveDescriptionDB[language][monsterMegaFormEntry.passive2Id];
           megaPassive3DescriptionByLanguage[language] =
             passiveDescriptionDB[language][monsterMegaFormEntry.passive3Id];
+          megaPassive4DescriptionByLanguage[language] =
+            passiveDescriptionDB[language][monsterMegaFormEntry.passive4Id];
         });
 
         monsterMegaFormEntry.passive1Id !== 0 &&
@@ -1264,6 +1321,15 @@ const extractSyncPairDataByTrainerBaseId = () => {
               id: passive3Id,
               name: megaPassive3NameByLanguage,
               description: megaPassive3DescriptionByLanguage,
+            },
+          });
+        monsterMegaFormEntry.passive4Id !== 0 &&
+          (megaPassives = {
+            ...megaPassives,
+            passive4: {
+              id: passive4Id,
+              name: megaPassive4NameByLanguage,
+              description: megaPassive4DescriptionByLanguage,
             },
           });
       }
