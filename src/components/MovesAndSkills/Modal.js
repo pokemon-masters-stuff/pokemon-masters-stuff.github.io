@@ -704,12 +704,26 @@ export default function MovesAndSkillsModal(props) {
       : preMegaMoves;
 
     if (megaForm.passives) {
-      if (megaForm.passives.passive3) {
+      if (megaForm.passives.passive4) {
         postMegaPassives = [
           megaForm.passives.passive1 || passives.passive1,
           megaForm.passives.passive2 || passives.passive2,
-          megaForm.passives.passive3,
+          megaForm.passives.passive3 || passives.passive3,
+          megaForm.passives.passive4,
         ];
+      } else if (megaForm.passives.passive3) {
+        postMegaPassives = passives.passive4
+          ? [
+              megaForm.passives.passive1 || passives.passive1,
+              megaForm.passives.passive2 || passives.passive2,
+              megaForm.passives.passive3,
+              passives.passive4,
+            ]
+          : [
+              megaForm.passives.passive1 || passives.passive1,
+              megaForm.passives.passive2 || passives.passive2,
+              megaForm.passives.passive3,
+            ];
       } else if (megaForm.passives.passive2) {
         postMegaPassives = passives.passive3
           ? [

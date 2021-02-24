@@ -697,17 +697,17 @@ const extractSyncPairDataByTrainerBaseId = () => {
           ja: '',
           ko: '',
           zh: '',
+        },
+        passive4NameByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
-      passive4NameByLanguage = {
-        de: '',
-        en: '',
-        es: '',
-        fr: '',
-        it: '',
-        ja: '',
-        ko: '',
-        zh: '',
-      };
 
       let passive1DescriptionByLanguage = {
           de: '',
@@ -738,17 +738,17 @@ const extractSyncPairDataByTrainerBaseId = () => {
           ja: '',
           ko: '',
           zh: '',
+        },
+        passive4DescriptionByLanguage = {
+          de: '',
+          en: '',
+          es: '',
+          fr: '',
+          it: '',
+          ja: '',
+          ko: '',
+          zh: '',
         };
-      passive4DescriptionByLanguage = {
-        de: '',
-        en: '',
-        es: '',
-        fr: '',
-        it: '',
-        ja: '',
-        ko: '',
-        zh: '',
-      };
 
       languages.forEach((language) => {
         passive1NameByLanguage[language] = passiveNameDB[language][passive1Id];
@@ -1224,17 +1224,17 @@ const extractSyncPairDataByTrainerBaseId = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          megaPassive4NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
-        megaPassive4NameByLanguage = {
-          de: '',
-          en: '',
-          es: '',
-          fr: '',
-          it: '',
-          ja: '',
-          ko: '',
-          zh: '',
-        };
 
         let megaPassive1DescriptionByLanguage = {
             de: '',
@@ -1265,17 +1265,17 @@ const extractSyncPairDataByTrainerBaseId = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          megaPassive4DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
-        megaPassive4DescriptionByLanguage = {
-          de: '',
-          en: '',
-          es: '',
-          fr: '',
-          it: '',
-          ja: '',
-          ko: '',
-          zh: '',
-        };
 
         languages.forEach((language) => {
           megaPassive1NameByLanguage[language] =
@@ -1323,7 +1323,9 @@ const extractSyncPairDataByTrainerBaseId = () => {
               description: megaPassive3DescriptionByLanguage,
             },
           });
-        monsterMegaFormEntry.passive4Id !== 0 &&
+
+        monsterMegaFormEntry.passive4Id &&
+          monsterMegaFormEntry.passive4Id !== 0 &&
           (megaPassives = {
             ...megaPassives,
             passive4: {
