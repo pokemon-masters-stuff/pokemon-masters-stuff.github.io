@@ -438,6 +438,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
         // Swampert's first move is Muddy Water not Water Gun
         move1Id = 330;
       }
+      if (trainerBaseIdFromList === '10024500') {
+        // Morpeko has Hunger Switch as a "form passive"
+        passive3Id = 99010601;
+      }
 
       // Use moveId to find move name in move_name_xx.json
       // Use moveId to find move description in move_description_xx.json
