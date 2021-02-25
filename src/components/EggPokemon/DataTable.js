@@ -594,6 +594,15 @@ export default function MovesAndSkillsModal(props) {
             ))}
           </TableBody>
         </Table>
+
+        {pokemonName === 'Clefable' || pokemonName === 'Wigglytuff' ? (
+          <Table>
+            <TableCell>
+              Note: Currently missing the 4th move. Will update when I have the
+              information. Apologies for the inconvenience.
+            </TableCell>
+          </Table>
+        ) : null}
       </TableContainer>
 
       <TableContainer component={Paper} style={{ marginTop: 10 }}>

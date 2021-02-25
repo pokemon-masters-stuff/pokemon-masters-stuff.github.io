@@ -45,7 +45,8 @@ const AnnouncementModal = (props) => {
           <DialogContentText>
             2/24/2021:
             <br />
-            Added new grids.
+            Added new grids and eggmons. Still missing the 4th moves for
+            Clefable and Wigglytuff.
             <br />
             <br />
             1/26/2021:
