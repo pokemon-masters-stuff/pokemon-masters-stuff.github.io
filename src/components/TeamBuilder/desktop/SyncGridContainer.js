@@ -25,6 +25,8 @@ const SyncGridContainer = (props) => {
   const dispatch = useDispatch();
   const { pokemon, syncPairName, slot } = props;
   let pokemonName = pokemon;
+
+  // to extract this to utility
   if (syncPairName === 'Olivia & Lycanroc') {
     pokemonName = 'olivia_lycanroc';
   } else if (syncPairName === 'Leon & Charizard') {

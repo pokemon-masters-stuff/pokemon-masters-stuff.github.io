@@ -37,8 +37,12 @@ const SyncGridContainer = (props) => {
   const dispatch = useDispatch();
   const { pokemon, syncPairName, slot } = props;
   let pokemonName = pokemon;
+
+  // to extract this to utility
   if (syncPairName === 'Olivia & Lycanroc') {
     pokemonName = 'olivia_lycanroc';
+  } else if (syncPairName === 'Leon & Charizard') {
+    pokemonName = 'leon_charizard';
   }
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
