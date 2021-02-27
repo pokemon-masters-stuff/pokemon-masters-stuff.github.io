@@ -43,6 +43,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            2/27/2021:
+            <br />
+            Slightly improved skill name abbreviations for non-English versions.
+            <br />
+            <br />
             2/24/2021:
             <br />
             Added new grids and eggmons. Still missing the 4th moves for

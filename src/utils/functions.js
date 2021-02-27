@@ -426,28 +426,71 @@ let names = {}; // to generate list of skills to be abbreviated
 
 export const renderMoveName = (moveName, abilityId, language) => {
   let renderedMoveName = moveName;
-
-  if (moveName.length > 12) {
-    if (shortenedMoveNameByAbilityId[language]) {
-      if (shortenedMoveNameByAbilityId[language][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
-      }
-      // comment out this else-if when generating lists of skill names to be abbreviated
-      else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
-      }
-      // else {
-      //   // to generate list of skills to be abbreviated
-      //   if (language === 'en') {
-      //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
-      //     console.log(names); // to generate list of skills to be abbreviated
-      //   }
-      // } // end
-    } else {
-      if (shortenedMoveNameByAbilityId['en'][abilityId]) {
-        renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
-      }
+  if (language === 'ja') {
+    if (moveName.includes('：威力アップ')) {
+      renderedMoveName = moveName.replace('：威力アップ', '');
+    } else if (moveName.includes('：命中率アップ')) {
+      renderedMoveName = moveName.replace('：命中率アップ', '命中');
+    } else if (moveName.includes('上昇')) {
+      renderedMoveName = moveName.replace('上昇', '↑');
+    } else if (moveName.includes('アップ')) {
+      renderedMoveName = moveName.replace('アップ', '↑');
+    } else if (moveName.includes('ダウン')) {
+      renderedMoveName = moveName.replace('ダウン', '↓');
     }
+  } else if (language === 'zh') {
+    if (moveName.includes('：威力提升')) {
+      renderedMoveName = moveName.replace('：威力提升', '');
+    } else if (moveName.includes('：命中率提升')) {
+      renderedMoveName = moveName.replace('：命中率提升', '命中');
+    } else if (moveName.includes('下降')) {
+      renderedMoveName = moveName.replace('下降', '↓');
+    }
+  } else if (language === 'de') {
+    if (moveName.includes(': Stärke↑ ')) {
+      renderedMoveName = moveName.replace(': Stärke↑ ', '');
+    }
+  } else if (language === 'de') {
+    if (moveName.includes(': Stärke↑ ')) {
+      renderedMoveName = moveName.replace(': Stärke↑ ', '');
+    }
+  } else if (language === 'es') {
+    if (moveName.includes(': Potencia ↑ ')) {
+      renderedMoveName = moveName.replace(': Potencia ↑ ', '');
+    }
+  } else if (language === 'fr') {
+    if (moveName.includes(': Puissance ')) {
+      renderedMoveName = moveName.replace(': Puissance ', '');
+    }
+  } else if (language === 'fr') {
+    if (moveName.includes(': potenza ')) {
+      renderedMoveName = moveName.replace(': potenza ', '');
+    }
+  } else if (language === 'ko') {
+    if (moveName.includes(': 위력 상승 ')) {
+      renderedMoveName = moveName.replace(': 위력 상승 ', '');
+    }
+  }
+
+  if (renderedMoveName.includes('+25')) {
+    renderedMoveName = 'Sync +25';
+  }
+
+  if (renderedMoveName.length > 12) {
+    if (shortenedMoveNameByAbilityId[language][abilityId]) {
+      renderedMoveName = shortenedMoveNameByAbilityId[language][abilityId];
+    }
+    // comment out this else-if when generating lists of skill names to be abbreviated
+    else if (shortenedMoveNameByAbilityId['en'][abilityId]) {
+      renderedMoveName = shortenedMoveNameByAbilityId['en'][abilityId];
+    }
+    // else {
+    //   // to generate list of skills to be abbreviated
+    //   if (language === 'en') {
+    //     names[abilityId] = moveName; // to generate list of skills to be abbreviated
+    //     console.log(names); // to generate list of skills to be abbreviated
+    //   }
+    // } // end
   }
 
   return renderedMoveName;
