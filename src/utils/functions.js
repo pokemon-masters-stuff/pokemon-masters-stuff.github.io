@@ -473,7 +473,23 @@ export const renderMoveName = (moveName, abilityId, language) => {
   }
 
   if (renderedMoveName.includes('+25')) {
-    renderedMoveName = 'Sync +25';
+    if (language === 'ja') {
+      renderedMoveName = 'B技威力+25';
+    } else if (language === 'zh') {
+      renderedMoveName = '拍檔威力+25';
+    } else if (language === 'ko') {
+      renderedMoveName = '버디즈기술+25';
+    } else if (language === 'de') {
+      renderedMoveName = 'VSdS +25';
+    } else if (language === 'es') {
+      renderedMoveName = 'M.Compi +25';
+    } else if (language === 'fr') {
+      renderedMoveName = 'Cap. Duo +25';
+    } else if (language === 'fr') {
+      renderedMoveName = 'Unimossa +25';
+    } else {
+      renderedMoveName = 'Sync +25';
+    }
   }
 
   if (renderedMoveName.length > 12) {
