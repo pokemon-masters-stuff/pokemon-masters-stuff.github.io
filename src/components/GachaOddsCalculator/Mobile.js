@@ -54,19 +54,13 @@ const GachaOddsCalculator = () => {
     setFiveStarRate(parseFloat(event.target.value));
   };
   const handleChangePaidScouts = (event) => {
-    !isNaN(parseFloat(event.target.value))
-      ? setPaidScouts(parseFloat(event.target.value))
-      : setPaidScouts(0);
+    setPaidScouts(parseFloat(event.target.value));
   };
   const handleChangeNonPaidScouts = (event) => {
-    !isNaN(parseFloat(event.target.value))
-      ? setNonPaidScouts(parseFloat(event.target.value))
-      : setNonPaidScouts(0);
+    setNonPaidScouts(parseFloat(event.target.value));
   };
   const handleChangeNonPaidScoutsx11 = (event) => {
-    !isNaN(parseFloat(event.target.value))
-      ? setNonPaidScoutsx11(parseFloat(event.target.value))
-      : setNonPaidScoutsx11(0);
+    setNonPaidScoutsx11(parseFloat(event.target.value));
   };
 
   const handleOnCloseNav = () => setIsNavOpened(false);
@@ -74,11 +68,15 @@ const GachaOddsCalculator = () => {
   const handleOnOpenNav = () => setIsNavOpened(true);
 
   let totalScouts = parseFloat(
-    paidScouts + nonPaidScouts + nonPaidScoutsx11 * 11
+    (!isNaN(paidScouts) ? paidScouts : 0) +
+      (!isNaN(nonPaidScouts) ? nonPaidScouts : 0) +
+      (!isNaN(nonPaidScoutsx11) ? nonPaidScoutsx11 * 11 : 0)
   );
 
-  let paidGems = paidScouts * 100;
-  let nonPaidGems = nonPaidScouts * 300 + nonPaidScoutsx11 * 3000;
+  let paidGems = !isNaN(paidScouts) ? paidScouts * 100 : 0;
+  let nonPaidGems =
+    (!isNaN(nonPaidScouts) ? nonPaidScouts * 300 : 0) +
+    (!isNaN(nonPaidScoutsx11) ? nonPaidScoutsx11 * 3000 : 0);
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
