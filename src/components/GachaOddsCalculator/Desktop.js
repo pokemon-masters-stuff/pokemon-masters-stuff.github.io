@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
-      width: 150,
+      width: 155,
     },
   },
 }));
@@ -37,37 +37,38 @@ const GachaOddsCalculator = () => {
   const classes = useStyles();
   const [paidScouts, setPaidScouts] = useState(0);
   const [nonPaidScouts, setNonPaidScouts] = useState(0);
+  const [nonPaidScoutsx11, setNonPaidScoutsx11] = useState(0);
   const [targetRate, setTargetRate] = useState(2);
   const [fiveStarRate, setFiveStarRate] = useState(7);
 
   const handleChangeFocusRate = (event) => {
     setTargetRate(parseFloat(event.target.value));
   };
-
   const handleChangeFiveStarRate = (event) => {
     setFiveStarRate(parseFloat(event.target.value));
   };
-
   const handleChangePaidScouts = (event) => {
-    setPaidScouts(parseFloat(event.target.value));
+    !isNaN(parseFloat(event.target.value))
+      ? setPaidScouts(parseFloat(event.target.value))
+      : setPaidScouts(0);
   };
   const handleChangeNonPaidScouts = (event) => {
-    setNonPaidScouts(parseFloat(event.target.value));
+    !isNaN(parseFloat(event.target.value))
+      ? setNonPaidScouts(parseFloat(event.target.value))
+      : setNonPaidScouts(0);
+  };
+  const handleChangeNonPaidScoutsx11 = (event) => {
+    !isNaN(parseFloat(event.target.value))
+      ? setNonPaidScoutsx11(parseFloat(event.target.value))
+      : setNonPaidScoutsx11(0);
   };
 
-  let totalScouts = 0;
-  if (!isNaN(paidScouts) && !isNaN(nonPaidScouts)) {
-    totalScouts = parseFloat(paidScouts + nonPaidScouts);
-  } else if (!isNaN(paidScouts)) {
-    totalScouts = parseFloat(paidScouts);
-  } else if (!isNaN(nonPaidScouts)) {
-    totalScouts = parseFloat(nonPaidScouts);
-  } else {
-    totalScouts = 0;
-  }
+  let totalScouts = parseFloat(
+    paidScouts + nonPaidScouts + nonPaidScoutsx11 * 11
+  );
 
-  let paidGems = !isNaN(paidScouts) ? paidScouts * 100 : 0;
-  let nonPaidGems = !isNaN(nonPaidScouts) ? nonPaidScouts * 300 : 0;
+  let paidGems = paidScouts * 100;
+  let nonPaidGems = nonPaidScouts * 300 + nonPaidScoutsx11 * 3000;
 
   return (
     <Container maxWidth="sm" style={{ paddingTop: 10, marginBottom: 30 }}>
@@ -154,6 +155,21 @@ const GachaOddsCalculator = () => {
               type="number"
               value={nonPaidScouts}
               onChange={handleChangeNonPaidScouts}
+              inputProps={{ min: 0 }}
+              InputLabelProps={{
+                shrink: true,
+              }}
+              variant="outlined"
+              margin="dense"
+            />
+          </div>
+          <div className="row">
+            <TextField
+              id="non-paid-scouts-11"
+              label="Non-Paid Scouts x11"
+              type="number"
+              value={nonPaidScoutsx11}
+              onChange={handleChangeNonPaidScoutsx11}
               inputProps={{ min: 0 }}
               InputLabelProps={{
                 shrink: true,

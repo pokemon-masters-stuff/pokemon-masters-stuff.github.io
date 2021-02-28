@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import TextField from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import { makeStyles } from "@material-ui/core/styles";
-import Tooltip from "@material-ui/core/Tooltip";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import Nav from "../MainAppbar/Nav";
-import { NavigationMobile } from "../Navigation";
-import AppBar from "@material-ui/core/AppBar";
-import LoginOrRegisterModal from "../auth/LoginOrRegisterModal";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import { makeStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Nav from '../MainAppbar/Nav';
+import { NavigationMobile } from '../Navigation';
+import AppBar from '@material-ui/core/AppBar';
+import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    "& .MuiTextField-root": {
+    '& .MuiTextField-root': {
       margin: theme.spacing(1),
-      width: 150,
+      width: 155,
     },
   },
 }));
@@ -42,6 +42,7 @@ const GachaOddsCalculator = () => {
   const darkMode = useSelector((state) => state.darkMode.mode);
   const [paidScouts, setPaidScouts] = useState(0);
   const [nonPaidScouts, setNonPaidScouts] = useState(0);
+  const [nonPaidScoutsx11, setNonPaidScoutsx11] = useState(0);
   const [targetRate, setTargetRate] = useState(2);
   const [fiveStarRate, setFiveStarRate] = useState(7);
   const [isNavOpened, setIsNavOpened] = useState(false);
@@ -49,38 +50,38 @@ const GachaOddsCalculator = () => {
   const handleChangeFocusRate = (event) => {
     setTargetRate(parseFloat(event.target.value));
   };
-
   const handleChangeFiveStarRate = (event) => {
     setFiveStarRate(parseFloat(event.target.value));
   };
-
   const handleChangePaidScouts = (event) => {
-    setPaidScouts(parseFloat(event.target.value));
+    !isNaN(parseFloat(event.target.value))
+      ? setPaidScouts(parseFloat(event.target.value))
+      : setPaidScouts(0);
   };
   const handleChangeNonPaidScouts = (event) => {
-    setNonPaidScouts(parseFloat(event.target.value));
+    !isNaN(parseFloat(event.target.value))
+      ? setNonPaidScouts(parseFloat(event.target.value))
+      : setNonPaidScouts(0);
+  };
+  const handleChangeNonPaidScoutsx11 = (event) => {
+    !isNaN(parseFloat(event.target.value))
+      ? setNonPaidScoutsx11(parseFloat(event.target.value))
+      : setNonPaidScoutsx11(0);
   };
 
   const handleOnCloseNav = () => setIsNavOpened(false);
 
   const handleOnOpenNav = () => setIsNavOpened(true);
 
-  let totalScouts = 0;
-  if (!isNaN(paidScouts) && !isNaN(nonPaidScouts)) {
-    totalScouts = parseFloat(paidScouts + nonPaidScouts);
-  } else if (!isNaN(paidScouts)) {
-    totalScouts = parseFloat(paidScouts);
-  } else if (!isNaN(nonPaidScouts)) {
-    totalScouts = parseFloat(nonPaidScouts);
-  } else {
-    totalScouts = 0;
-  }
+  let totalScouts = parseFloat(
+    paidScouts + nonPaidScouts + nonPaidScoutsx11 * 11
+  );
 
-  let paidGems = !isNaN(paidScouts) ? paidScouts * 100 : 0;
-  let nonPaidGems = !isNaN(nonPaidScouts) ? nonPaidScouts * 300 : 0;
+  let paidGems = paidScouts * 100;
+  let nonPaidGems = nonPaidScouts * 300 + nonPaidScoutsx11 * 3000;
 
   return (
-    <div className={`App ${darkMode ? "dark-mode" : null}`}>
+    <div className={`App ${darkMode ? 'dark-mode' : null}`}>
       <div className="content">
         <div className="container container-s">
           <AppBar position="fixed">
@@ -88,7 +89,7 @@ const GachaOddsCalculator = () => {
             <NavigationMobile
               isOpened={isNavOpened}
               onCloseHandler={handleOnCloseNav}
-            />{" "}
+            />{' '}
           </AppBar>
 
           <LoginOrRegisterModal />
@@ -101,7 +102,7 @@ const GachaOddsCalculator = () => {
               <h5>Inputs: </h5>
               <div
                 className="row"
-                style={{ display: "flex", alignItems: "center" }}
+                style={{ display: 'flex', alignItems: 'center' }}
               >
                 <TextField
                   id="target-unit-rate"
@@ -120,8 +121,9 @@ const GachaOddsCalculator = () => {
                   }}
                   variant="outlined"
                   margin="dense"
-                />{" "}
+                />{' '}
                 <Tooltip
+                  enterTouchDelay={10}
                   title="2% for focus unit. Check in-game offering rate for non-focus
                 units"
                   placement="top"
@@ -131,7 +133,7 @@ const GachaOddsCalculator = () => {
               </div>
               <div
                 className="row"
-                style={{ display: "flex", alignItems: "center" }}
+                style={{ display: 'flex', alignItems: 'center' }}
               >
                 <TextField
                   id="five-star-unit-rate"
@@ -150,8 +152,9 @@ const GachaOddsCalculator = () => {
                   }}
                   variant="outlined"
                   margin="dense"
-                />{" "}
+                />{' '}
                 <Tooltip
+                  enterTouchDelay={10}
                   title="7% for Spotlight Scout. 10% for Poke Fair Scout"
                   placement="top"
                 >
@@ -188,23 +191,38 @@ const GachaOddsCalculator = () => {
                   margin="dense"
                 />
               </div>
+              <div className="row">
+                <TextField
+                  id="non-paid-scouts-11"
+                  label="Non-Paid Scouts x11"
+                  type="number"
+                  value={nonPaidScoutsx11}
+                  onChange={handleChangeNonPaidScoutsx11}
+                  inputProps={{ min: 0 }}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  variant="outlined"
+                  margin="dense"
+                />
+              </div>
               <br />
               <Divider />
               <br />
               <h5>Results: </h5>
-              Total number of scouts:{" "}
-              <span style={{ color: "red" }}>{totalScouts}</span>
+              Total number of scouts:{' '}
+              <span style={{ color: 'red' }}>{totalScouts}</span>
               <br />
-              Total gems spent:{" "}
-              <span style={{ color: "red" }}>
-                {paidGems + nonPaidGems}{" "}
-              </span>{" "}
-              (Paid: <span style={{ color: "red" }}> {paidGems}</span>;
-              Non-Paid: <span style={{ color: "red" }}>{nonPaidGems}</span> )
+              Total gems spent:{' '}
+              <span style={{ color: 'red' }}>
+                {paidGems + nonPaidGems}{' '}
+              </span>{' '}
+              (Paid: <span style={{ color: 'red' }}> {paidGems}</span>;
+              Non-Paid: <span style={{ color: 'red' }}>{nonPaidGems}</span> )
               <br />
               <br />
               Probability of summoning at least 1 target unit:&nbsp; &nbsp;
-              <span style={{ color: "red" }}>
+              <span style={{ color: 'red' }}>
                 {totalScouts === 0
                   ? 0
                   : (
@@ -214,8 +232,8 @@ const GachaOddsCalculator = () => {
                 %
               </span>
               <br />
-              Probability of summoning at least 2 target units:{" "}
-              <span style={{ color: "red" }}>
+              Probability of summoning at least 2 target units:{' '}
+              <span style={{ color: 'red' }}>
                 {totalScouts === 0
                   ? 0
                   : (
@@ -227,8 +245,8 @@ const GachaOddsCalculator = () => {
                 %
               </span>
               <br />
-              Probability of summoning at least 3 target units:{" "}
-              <span style={{ color: "red" }}>
+              Probability of summoning at least 3 target units:{' '}
+              <span style={{ color: 'red' }}>
                 {totalScouts === 0
                   ? 0
                   : (
@@ -241,8 +259,8 @@ const GachaOddsCalculator = () => {
                 %
               </span>
               <br />
-              Probability of summoning at least 4 target units:{" "}
-              <span style={{ color: "red" }}>
+              Probability of summoning at least 4 target units:{' '}
+              <span style={{ color: 'red' }}>
                 {totalScouts === 0
                   ? 0
                   : (
@@ -256,8 +274,8 @@ const GachaOddsCalculator = () => {
                 %
               </span>
               <br />
-              Probability of summoning at least 5 target units:{" "}
-              <span style={{ color: "red" }}>
+              Probability of summoning at least 5 target units:{' '}
+              <span style={{ color: 'red' }}>
                 {totalScouts === 0
                   ? 0
                   : (
@@ -273,13 +291,13 @@ const GachaOddsCalculator = () => {
               </span>
               <br />
               <br />
-              You can expect a total of{" "}
-              <span style={{ color: "red" }}>
+              You can expect a total of{' '}
+              <span style={{ color: 'red' }}>
                 {Math.floor(
                   (totalScouts * (!isNaN(fiveStarRate) ? fiveStarRate : 0)) /
                     100
-                )}{" "}
-              </span>{" "}
+                )}{' '}
+              </span>{' '}
               5-Star units (focus and non-focus).
               <br />
             </form>
