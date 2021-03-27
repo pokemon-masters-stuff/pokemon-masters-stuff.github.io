@@ -610,6 +610,43 @@ const extractSyncPairDataByTrainerBaseId = () => {
             move2Id = 19110;
             move4Id = 60;
           }
+        } else if (
+          // Clefable
+          monsterId === '28000020413' ||
+          monsterId === '28000030413' ||
+          monsterId === '28000040413'
+        ) {
+          // roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
+          if (role === 1) {
+            // strike- move4 = Moonblast
+            move4Id = 585;
+          } else if (role === 2) {
+            // support - move4 = Play Rough
+            move4Id = 583;
+          } else if (role === 3) {
+            // tech- move4 = Play Rough
+            move4Id = 583;
+          }
+        } else if (
+          // Wigglytuff
+          monsterId === '28000020423' ||
+          monsterId === '28000030423' ||
+          monsterId === '28000040423'
+        ) {
+          // roles = { 'P.Strike': 0, 'S.Strike': 1, Support: 2, Tech: 3 };
+          if (role === 0) {
+            // strike
+            move1Id = 574;
+            move4Id = 38;
+          } else if (role === 2) {
+            // support
+            move1Id = 574;
+            move4Id = 577;
+          } else if (role === 3) {
+            // tech
+            move1Id = 574;
+            move4Id = 34;
+          }
         }
 
         let move1 = moveDB.entries.find(
