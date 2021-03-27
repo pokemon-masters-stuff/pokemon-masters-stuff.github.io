@@ -37,6 +37,7 @@ function Stats(props) {
     rarity,
     selectedRarity,
     isMega,
+    pokemon,
   } = props;
 
   const {
@@ -52,6 +53,8 @@ function Stats(props) {
     spdScale,
     speScale,
   } = statsPlusPotential;
+
+  console.log(hp, atk, def, spa, spd, spe);
 
   const classes = useRowStyles();
 
@@ -88,6 +91,15 @@ function Stats(props) {
   let lv130Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 30;
   let lv130Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 30;
   let lv130Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 30;
+
+  if (pokemon === 'Mew') {
+    lv130Hp = 354;
+    lv130Atk = 254;
+    lv130Def = 254;
+    lv130Spa = 254;
+    lv130Spd = 254;
+    lv130Spe = 254;
+  }
 
   // let baseHp = hp[4] + (selectedRarity - rarity) * 40;
   let baseHp = Math.floor(lv130Hp + (selectedRarity - rarity) * 40);
@@ -786,6 +798,7 @@ export default function MovesAndSkillsModal(props) {
                 rarity={rarity}
                 selectedRarity={selectedRarity}
                 isMega={isMega}
+                pokemon={pokemon}
               />
             </TableBody>
           </Table>
