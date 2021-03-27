@@ -2,7 +2,7 @@ import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { useSelector } from 'react-redux';
-import UI from '../../utils/translations';
+import UI from '../../../utils/translations';
 
 const SubToolbar = (props) => {
   const { classes, data } = props;

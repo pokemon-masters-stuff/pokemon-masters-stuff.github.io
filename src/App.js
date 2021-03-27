@@ -16,13 +16,10 @@ import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/actionCreators';
 import withTracker from './utils/withTracker';
 import Box from '@material-ui/core/Box';
-import { NavigationDesktop } from './components/Navigation';
+import { NavigationDesktop, NavigationMobile } from './components/Navigation';
 import { DarkModeToggleDesktop } from './components/DarkModeToggle';
-import {
-  GachaOddsCalculatorDesktop,
-  GachaOddsCalculatorMobile,
-} from './components/GachaOddsCalculator';
-import { EggPokemonDesktop, EggPokemonMobile } from './components/EggPokemon';
+import GachaOddsCalculator from './components/GachaOddsCalculator';
+import EggPokemon from './components/EggPokemon';
 import {
   TeamBuilderDesktop,
   TeamBuilderMobile,
@@ -50,12 +47,12 @@ export default function App({ store }) {
             <Route
               exact
               path="/gacha-odds-calculator"
-              component={withTracker(GachaOddsCalculatorDesktop)}
+              component={withTracker(GachaOddsCalculator)}
             />
             <Route
               exact
               path="/egg-pokemon"
-              component={withTracker(EggPokemonDesktop)}
+              component={withTracker(EggPokemon)}
             />
             <Route
               exact
@@ -92,17 +89,18 @@ export default function App({ store }) {
           </div>
         </Hidden>
         <Hidden mdUp>
-          <Box>
+          <NavigationMobile />
+          <Box style={{ marginTop: 74 }}>
             <Route exact path="/" component={withTracker(MobileLayout)} />
             <Route
               exact
               path="/gacha-odds-calculator"
-              component={withTracker(GachaOddsCalculatorMobile)}
+              component={withTracker(GachaOddsCalculator)}
             />
             <Route
               exact
               path="/egg-pokemon"
-              component={withTracker(EggPokemonMobile)}
+              component={withTracker(EggPokemon)}
             />
             <Route
               exact

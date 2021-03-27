@@ -1,2 +1,2 @@
-export { default as NavigationDesktop } from './Desktop';
-export { default as NavigationMobile } from './Mobile';
+export { default as NavigationDesktop } from './desktop';
+export { default as NavigationMobile } from './mobile';

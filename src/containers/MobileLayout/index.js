@@ -12,7 +12,7 @@ import SyncGridControls from '../../components/SyncGridControls';
 import { NavigationMobile } from '../../components/Navigation';
 import { SelectedSkillListMobile } from '../../components/SelectedSkillList';
 import SkillOverview from '../../components/SkillOverview';
-import MainAppbar from '../../components/MainAppbar';
+// import MainAppbar from '../../components/MainAppbar';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
 import {
@@ -46,7 +46,7 @@ const mapDispatchToProps = {
 
 class MobileApp extends Component {
   state = {
-    isNavOpened: false,
+    // isNavOpened: false,
     isSkillListOpened: false,
     isSaveBuildModalVisible: false,
     isShareModalVisible: false,
@@ -54,9 +54,9 @@ class MobileApp extends Component {
 
   newBuildNameRef = React.createRef();
 
-  handleOnCloseNav = () => this.setState({ isNavOpened: false });
+  // handleOnCloseNav = () => this.setState({ isNavOpened: false });
 
-  handleOnOpenNav = () => this.setState({ isNavOpened: true });
+  // handleOnOpenNav = () => this.setState({ isNavOpened: true });
 
   handleOnCloseSaveBuildModal = () =>
     this.setState({ isSaveBuildModalVisible: false });
@@ -126,7 +126,8 @@ class MobileApp extends Component {
 
   render() {
     const {
-      isNavOpened,
+      // isNavOpened,
+      darkMode,
       isSkillListOpened,
       isSaveBuildModalVisible,
       isShareModalVisible,
@@ -140,105 +141,113 @@ class MobileApp extends Component {
       .sort();
 
     return (
-      <div>
-        <NavigationMobile
-          isOpened={isNavOpened}
-          onCloseHandler={this.handleOnCloseNav}
-        />
+      <div className={`App ${darkMode ? 'dark-mode' : null}`}>
+        <div className="content">
+          <div className="container container-s">
+            <NavigationMobile
+              // isOpened={isNavOpened}
+              // onCloseHandler={this.handleOnCloseNav}
+              data={{
+                energy: grid.remainingEnergy,
+                orbs: grid.orbSpent,
+              }}
+            />
 
-        <SelectedSkillListMobile
-          isOpened={isSkillListOpened}
-          onOpenHandler={this.handleOnOpenSkillList}
-          onCloseHandler={this.handleOnCloseSkillList}
-          skillList={skillList}
-          UI={UI}
-          language={language}
-        />
+            <SelectedSkillListMobile
+              isOpened={isSkillListOpened}
+              onOpenHandler={this.handleOnOpenSkillList}
+              onCloseHandler={this.handleOnCloseSkillList}
+              skillList={skillList}
+              UI={UI}
+              language={language}
+            />
 
-        <MainAppbar
+            {/* <MainAppbar
           onOpenNavHandler={this.handleOnOpenNav}
           data={{
             energy: grid.remainingEnergy,
             orbs: grid.orbSpent,
           }}
-        />
+        /> */}
 
-        <div className={classes.mainContainer}>
-          <SyncGridControls
-            selectedPokemon={pokemon.selectedPokemon}
-            grid={grid}
-            language={language}
-            UI={UI}
-            onChangePokemonHandler={this.handleOnChangePokemon}
-            onChangeSavedBuildHandler={this.handleOnChangeSavedBuild}
-            onDeleteSavedBuildHandler={this.handleOnDeleteSavedBuild}
-            onOpenSkillListHandler={this.handleOnOpenSkillList}
-            onSaveBuildClickHandler={this.handleOnClickSaveBuild}
-            onShareClickHandler={this.handleOnClickShare}
-          />
+            <div className={classes.mainContainer}>
+              <SyncGridControls
+                selectedPokemon={pokemon.selectedPokemon}
+                grid={grid}
+                language={language}
+                UI={UI}
+                onChangePokemonHandler={this.handleOnChangePokemon}
+                onChangeSavedBuildHandler={this.handleOnChangeSavedBuild}
+                onDeleteSavedBuildHandler={this.handleOnDeleteSavedBuild}
+                onOpenSkillListHandler={this.handleOnOpenSkillList}
+                onSaveBuildClickHandler={this.handleOnClickSaveBuild}
+                onShareClickHandler={this.handleOnClickShare}
+              />
 
-          <Grid container alignItems="stretch" justify="center">
-            <Grid item xs={12}>
-              <div className={classes.syncGridWrapper}>
-                <GridMap />
-              </div>
-            </Grid>
-          </Grid>
+              <Grid container alignItems="stretch" justify="center">
+                <Grid item xs={12}>
+                  <div className={classes.syncGridWrapper}>
+                    <GridMap />
+                  </div>
+                </Grid>
+              </Grid>
 
-          <SkillOverview
-            skill={grid.gridData.name}
-            description={
-              grid.gridData.description ? grid.gridData.description : ''
-            }
-            energy={grid.gridData.energy}
-          />
+              <SkillOverview
+                skill={grid.gridData.name}
+                description={
+                  grid.gridData.description ? grid.gridData.description : ''
+                }
+                energy={grid.gridData.energy}
+              />
+            </div>
+
+            <Dialog
+              open={isSaveBuildModalVisible}
+              onClose={this.handleOnCloseSaveBuildModal}
+            >
+              <DialogTitle>{UI['Save Build'][language]}</DialogTitle>
+              <DialogContent>
+                <TextField
+                  className={classes.buildNameField}
+                  label={UI['Build name'][language]}
+                  placeholder="Enter a name as a reference"
+                  inputProps={{ ref: this.newBuildNameRef }}
+                />
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={this.handleOnCloseSaveBuildModal}>
+                  {UI['Close'][language]}
+                </Button>
+                <Button onClick={this.handleOnSaveBuild}>
+                  {UI['Save'][language]}
+                </Button>
+              </DialogActions>
+            </Dialog>
+
+            <Dialog
+              open={isShareModalVisible}
+              onClose={this.handleOnCloseShareModal}
+            >
+              <DialogTitle> {UI['Share this link'][language]}</DialogTitle>
+              <DialogContent>
+                <TextField
+                  className={classes.buildNameField}
+                  value={this.props.url}
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+              </DialogContent>
+              <DialogActions>
+                <CopyToClipboard text={this.props.url}>
+                  <Button onClick={this.handleOnCloseShareModal}>
+                    {UI['Copy to Clipboard'][language]}
+                  </Button>
+                </CopyToClipboard>
+              </DialogActions>
+            </Dialog>
+          </div>
         </div>
-
-        <Dialog
-          open={isSaveBuildModalVisible}
-          onClose={this.handleOnCloseSaveBuildModal}
-        >
-          <DialogTitle>{UI['Save Build'][language]}</DialogTitle>
-          <DialogContent>
-            <TextField
-              className={classes.buildNameField}
-              label={UI['Build name'][language]}
-              placeholder="Enter a name as a reference"
-              inputProps={{ ref: this.newBuildNameRef }}
-            />
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={this.handleOnCloseSaveBuildModal}>
-              {UI['Close'][language]}
-            </Button>
-            <Button onClick={this.handleOnSaveBuild}>
-              {UI['Save'][language]}
-            </Button>
-          </DialogActions>
-        </Dialog>
-
-        <Dialog
-          open={isShareModalVisible}
-          onClose={this.handleOnCloseShareModal}
-        >
-          <DialogTitle> {UI['Share this link'][language]}</DialogTitle>
-          <DialogContent>
-            <TextField
-              className={classes.buildNameField}
-              value={this.props.url}
-              InputProps={{
-                readOnly: true,
-              }}
-            />
-          </DialogContent>
-          <DialogActions>
-            <CopyToClipboard text={this.props.url}>
-              <Button onClick={this.handleOnCloseShareModal}>
-                {UI['Copy to Clipboard'][language]}
-              </Button>
-            </CopyToClipboard>
-          </DialogActions>
-        </Dialog>
       </div>
     );
   }

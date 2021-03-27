@@ -20,9 +20,9 @@ import ResetTeamButton from '../common/ResetTeamButton';
 import { allSyncGrids } from '../../../utils/constants';
 import ShareTeamButton from '../common/ShareTeamButton';
 import SyncPairCard from '../common/SyncPairCard';
-import AppBar from '@material-ui/core/AppBar';
-import Nav from '../../MainAppbar/Nav';
-import { NavigationMobile } from '../../Navigation';
+// import AppBar from '@material-ui/core/AppBar';
+// import Nav from '../../MainAppbar/Nav';
+// import { NavigationMobile } from '../../Navigation';
 import LoginOrRegisterModal from '../../auth/LoginOrRegisterModal';
 
 const useStyles = makeStyles((theme) => ({
@@ -306,24 +306,24 @@ function TeamBuilder() {
     dispatch(updateTeamUrl());
   }, []);
 
-  const [isNavOpened, setIsNavOpened] = useState(false);
+  // const [isNavOpened, setIsNavOpened] = useState(false);
 
-  const handleOnCloseNav = () => setIsNavOpened(false);
+  // const handleOnCloseNav = () => setIsNavOpened(false);
 
-  const handleOnOpenNav = () => setIsNavOpened(true);
+  // const handleOnOpenNav = () => setIsNavOpened(true);
 
   return (
     <div
       className={`App ${darkMode ? 'dark-mode' : null}`}
       style={{ paddingBottom: 150 }}
     >
-      <AppBar position="fixed">
+      {/* <AppBar position="fixed">
         <Nav onOpenNavHandler={handleOnOpenNav} />
         <NavigationMobile
           isOpened={isNavOpened}
           onCloseHandler={handleOnCloseNav}
         />{' '}
-      </AppBar>
+      </AppBar> */}
 
       <Grid container className={classes.root} spacing={3}>
         <Grid

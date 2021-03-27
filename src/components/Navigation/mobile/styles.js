@@ -1,7 +1,17 @@
 import { createStyles } from '@material-ui/core/styles';
-import { DRAWER_WIDTH } from '../../utils/constants';
+import { DRAWER_WIDTH } from '../../../utils/constants';
 
 export default createStyles((theme) => ({
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  subToolbar: {
+    background: theme.palette.background.paper,
+    color: theme.palette.common.black,
+  },
   listRoot: {
     width: '100%',
     minWidth: 220,

@@ -16,8 +16,8 @@ import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
-import Nav from '../../MainAppbar/Nav';
-import { NavigationMobile } from '../../Navigation';
+// import Nav from '../../MainAppbar/Nav';
+// import { NavigationMobile } from '../../Navigation';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
 const Builds = (props) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const [isNavOpened, setIsNavOpened] = React.useState(false);
+  // const [isNavOpened, setIsNavOpened] = React.useState(false);
   const sort = useSelector((state) => state.build.sort);
   const filter = useSelector((state) => state.build.filter);
   const language = useSelector((state) => state.language.currentLanguage);
@@ -62,9 +62,9 @@ const Builds = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleOnCloseNav = () => setIsNavOpened(false);
+  // const handleOnCloseNav = () => setIsNavOpened(false);
 
-  const handleOnOpenNav = () => setIsNavOpened(true);
+  // const handleOnOpenNav = () => setIsNavOpened(true);
 
   const handleChangeTab = (event, newValue) => {
     let val;
@@ -93,25 +93,6 @@ const Builds = (props) => {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
-      <AppBar position="fixed">
-        <Nav onOpenNavHandler={handleOnOpenNav} />
-        <NavigationMobile
-          isOpened={isNavOpened}
-          onCloseHandler={handleOnCloseNav}
-        />{' '}
-      </AppBar>
-      <Tabs
-        value={value}
-        indicatorColor="primary"
-        onChange={handleChangeTab}
-        style={{ margin: 'auto' }}
-        centered
-      >
-        <Tab label="Popular" />
-        <Tab label="Liked" />
-        <Tab label="My" />
-      </Tabs>
-
       <Box className={classes.root} style={{ marginBottom: 15 }}>
         <FormControl
           variant="outlined"

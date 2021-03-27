@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
-import { DarkModeToggleMobile } from '../DarkModeToggle';
+import { DarkModeToggleMobile } from '../../DarkModeToggle';
 import styles from './styles';
 
 const Nav = (props) => {

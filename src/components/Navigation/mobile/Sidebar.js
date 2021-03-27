@@ -11,13 +11,13 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import FeedbackIcon from '@material-ui/icons/Feedback';
-import FeedbackForm from '../FeedbackForm';
+import FeedbackForm from '../../FeedbackForm';
 import styles from './styles';
-import { logout } from '../../actions/actionCreators';
-import AnnouncementModal from '../AnnouncementModal';
-import ContributeModal from '../ContributeModal';
-import LanguageModal from '../LanguageModal';
-import UI from '../../utils/translations';
+import { logout } from '../../../actions/actionCreators';
+import AnnouncementModal from '../../AnnouncementModal';
+import ContributeModal from '../../ContributeModal';
+import LanguageModal from '../../LanguageModal';
+import UI from '../../../utils/translations';
 import Divider from '@material-ui/core/Divider';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import Brightness1Icon from '@material-ui/icons/Brightness1';
@@ -25,7 +25,7 @@ import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home pag
 import ExposureIcon from '@material-ui/icons/Exposure';
 import ViewColumnIcon from '@material-ui/icons/ViewColumn'; // for teams
 
-function Navigation(props) {
+function Sidebar(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const language = useSelector((state) => state.language.currentLanguage);
   const dispatch = useDispatch();
@@ -52,7 +52,7 @@ function Navigation(props) {
     <Drawer open={isOpened} onClose={handleOnClose}>
       <List className={classes.listRoot}>
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <ListItem button>
+          <ListItem button onClick={handleOnClose}>
             <ListItemIcon className={classes.listIcon}>
               <HomeIcon />
             </ListItemIcon>
@@ -64,7 +64,7 @@ function Navigation(props) {
             to="/builds/popular"
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
-            <ListItem button>
+            <ListItem button onClick={handleOnClose}>
               <ListItemIcon className={classes.listIcon}>
                 <WhatshotIcon />
               </ListItemIcon>
@@ -89,7 +89,7 @@ function Navigation(props) {
           to="/team-builder"
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          <ListItem button>
+          <ListItem button onClick={handleOnClose}>
             <ListItemIcon className={classes.listIcon}>
               <ViewColumnIcon />
             </ListItemIcon>
@@ -101,18 +101,19 @@ function Navigation(props) {
           to="/gacha-odds-calculator"
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          <ListItem button>
+          <ListItem button onClick={handleOnClose}>
             <ListItemIcon className={classes.listIcon}>
               <ExposureIcon />
             </ListItemIcon>
             <ListItemText primary="Gacha Odds Calculator" />
           </ListItem>
         </Link>
+
         <Link
           to="/egg-pokemon"
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          <ListItem button>
+          <ListItem button onClick={handleOnClose}>
             <ListItemIcon className={classes.listIcon}>
               <Brightness1Icon />
             </ListItemIcon>
@@ -174,4 +175,4 @@ function Navigation(props) {
   );
 }
 
-export default withStyles(styles)(Navigation);
+export default withStyles(styles)(Sidebar);
