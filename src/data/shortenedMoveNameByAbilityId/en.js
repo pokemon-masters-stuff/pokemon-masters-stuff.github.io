@@ -290,7 +290,7 @@ export default {
   2100231003: 'Iron Tail +3',
   2200231010: 'I.Tail Acc +10',
   1202010400360: 'Gyro Ball MGR 4',
-  1202010300231: 'Iron Tail MGR 3',
+  1202010300231: 'I.Tail MGR 3',
   2100360004: 'Gyro Ball +4',
   1202060911130: 'C! Lockstep 9',
   1301020900360: 'Gyro Ball SS 9',
