@@ -402,6 +402,8 @@ const getUpdatedMoveDescription = (language, moveId) => {
     );
   } else if (moveId === 84000) {
     return moveDescriptionPartsDB[language]['999999'];
+  } else if (moveId === 624) {
+    return moveDescriptionPartsDB[language]['999977'];
   } else if (moveId === 29) {
     return moveDescriptionPartsDB[language]['999980'];
   } else if (moveId === 11264) {
@@ -492,6 +494,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
       if (trainerBaseIdFromList === '10012600') {
         // Swampert's first move is Muddy Water not Water Gun
         move1Id = 330;
+      }
+      if (trainerBaseIdFromList === '10012300') {
+        // Decidueye first move is Spirit Shackle
+        move1Id = 624;
       }
       if (trainerBaseIdFromList === '10024500') {
         // Morpeko has Hunger Switch as a "form passive"
