@@ -404,6 +404,8 @@ const getUpdatedMoveDescription = (language, moveId) => {
     return moveDescriptionPartsDB[language]['999999'];
   } else if (moveId === 624) {
     return moveDescriptionPartsDB[language]['999977'];
+  } else if (moveId === 626) {
+    return moveDescriptionPartsDB[language]['999999'];
   } else if (moveId === 29) {
     return moveDescriptionPartsDB[language]['999980'];
   } else if (moveId === 11264) {
@@ -498,6 +500,10 @@ const extractSyncPairDataByTrainerBaseId = () => {
       if (trainerBaseIdFromList === '10012300') {
         // Decidueye first move is Spirit Shackle
         move1Id = 624;
+      }
+      if (trainerBaseIdFromList === '10012200') {
+        // Primarina first move is Sparkling Aria
+        move1Id = 626;
       }
       if (trainerBaseIdFromList === '10024500') {
         // Morpeko has Hunger Switch as a "form passive"
