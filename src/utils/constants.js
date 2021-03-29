@@ -719,6 +719,55 @@ import {
   hydreigonGridDataZH,
   samurottGridDataZH,
   leon_charizardGridDataZH,
+  // 3/20/2021
+  decidueyeGridDataDE,
+  eeveeGridDataDE,
+  rayquazaGridDataDE,
+  primarinaGridDataDE,
+  togepiGridDataDE,
+  lopunnyGridDataDE,
+  decidueyeGridDataEN,
+  eeveeGridDataEN,
+  primarinaGridDataEN,
+  togepiGridDataEN,
+  lopunnyGridDataEN,
+  rayquazaGridDataEN,
+  decidueyeGridDataES,
+  eeveeGridDataES,
+  primarinaGridDataES,
+  togepiGridDataES,
+  lopunnyGridDataES,
+  rayquazaGridDataES,
+  decidueyeGridDataFR,
+  eeveeGridDataFR,
+  primarinaGridDataFR,
+  togepiGridDataFR,
+  lopunnyGridDataFR,
+  rayquazaGridDataFR,
+  decidueyeGridDataIT,
+  eeveeGridDataIT,
+  primarinaGridDataIT,
+  togepiGridDataIT,
+  lopunnyGridDataIT,
+  rayquazaGridDataIT,
+  decidueyeGridDataJA,
+  eeveeGridDataJA,
+  primarinaGridDataJA,
+  togepiGridDataJA,
+  lopunnyGridDataJA,
+  rayquazaGridDataJA,
+  decidueyeGridDataKO,
+  eeveeGridDataKO,
+  primarinaGridDataKO,
+  togepiGridDataKO,
+  lopunnyGridDataKO,
+  rayquazaGridDataKO,
+  decidueyeGridDataZH,
+  eeveeGridDataZH,
+  primarinaGridDataZH,
+  togepiGridDataZH,
+  lopunnyGridDataZH,
+  rayquazaGridDataZH,
 } from '../data';
 
 import {
@@ -735,7 +784,6 @@ import {
   pm0448_00_lucario_128, // Lucario
   pm0095_00_iwark_128, // Onix
   pm0581_00_swanna_128, // Swanna
-  pm0133_00_eievui_128, // Eevee
   pm0003_01_fushigibana_128, // Venusaur
   pm0160_00_ordile_128, // Feraligatr
   pm0009_00_kamex_128, // Blastoise
@@ -824,6 +872,14 @@ import {
   pm0282_00_sirnight_128, // Gardevoir
   pm0484_00_palkia_128, // Palkia
   pm0877_11_00_morpeko_128, // Morpeko
+
+  // 3/29/2021
+  pm0133_00_eievui_128, // Eevee
+  pm0849_00_ashika3_128, // Primarina
+  pm0843_00_fukurou3_128, // Decidueye
+  pm0428_00_mimilop_128, // Lopunny
+  pm0384_00_rayquaza_128, // Rayquaza
+  pm0175_00_togepy_128, // Togepi
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -929,6 +985,14 @@ export const pokemonPictures = {
   pm0282_00_sirnight_128, // Gardevoir
   pm0484_00_palkia_128, // Palkia
   pm0877_11_00_morpeko_128, // Morpeko
+
+  // 3/29/2021
+  pm0133_00_eievui_128, // Eevee
+  pm0849_00_ashika3_128, // Primarina
+  pm0843_00_fukurou3_128, // Decidueye
+  pm0428_00_mimilop_128, // Lopunny
+  pm0384_00_rayquaza_128, // Rayquaza
+  pm0175_00_togepy_128, // Togepi
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -1032,6 +1096,12 @@ export const allSyncGrids = {
     palkiaGridDataDE,
     hydreigonGridDataDE,
     samurottGridDataDE,
+    decidueyeGridDataDE,
+    eeveeGridDataDE,
+    rayquazaGridDataDE,
+    primarinaGridDataDE,
+    togepiGridDataDE,
+    lopunnyGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -1122,6 +1192,12 @@ export const allSyncGrids = {
     hydreigonGridDataEN,
     samurottGridDataEN,
     leon_charizardGridDataEN,
+    decidueyeGridDataEN,
+    eeveeGridDataEN,
+    primarinaGridDataEN,
+    togepiGridDataEN,
+    lopunnyGridDataEN,
+    rayquazaGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1212,6 +1288,12 @@ export const allSyncGrids = {
     hydreigonGridDataES,
     samurottGridDataES,
     leon_charizardGridDataES,
+    decidueyeGridDataES,
+    eeveeGridDataES,
+    primarinaGridDataES,
+    togepiGridDataES,
+    lopunnyGridDataES,
+    rayquazaGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1302,6 +1384,12 @@ export const allSyncGrids = {
     hydreigonGridDataFR,
     samurottGridDataFR,
     leon_charizardGridDataFR,
+    decidueyeGridDataFR,
+    eeveeGridDataFR,
+    primarinaGridDataFR,
+    togepiGridDataFR,
+    lopunnyGridDataFR,
+    rayquazaGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1392,6 +1480,12 @@ export const allSyncGrids = {
     hydreigonGridDataIT,
     samurottGridDataIT,
     leon_charizardGridDataIT,
+    decidueyeGridDataIT,
+    eeveeGridDataIT,
+    primarinaGridDataIT,
+    togepiGridDataIT,
+    lopunnyGridDataIT,
+    rayquazaGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1482,6 +1576,12 @@ export const allSyncGrids = {
     hydreigonGridDataJA,
     samurottGridDataJA,
     leon_charizardGridDataJA,
+    decidueyeGridDataJA,
+    eeveeGridDataJA,
+    primarinaGridDataJA,
+    togepiGridDataJA,
+    lopunnyGridDataJA,
+    rayquazaGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1572,6 +1672,12 @@ export const allSyncGrids = {
     hydreigonGridDataKO,
     samurottGridDataKO,
     leon_charizardGridDataKO,
+    decidueyeGridDataKO,
+    eeveeGridDataKO,
+    primarinaGridDataKO,
+    togepiGridDataKO,
+    lopunnyGridDataKO,
+    rayquazaGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1662,6 +1768,12 @@ export const allSyncGrids = {
     hydreigonGridDataZH,
     samurottGridDataZH,
     leon_charizardGridDataZH,
+    decidueyeGridDataZH,
+    eeveeGridDataZH,
+    primarinaGridDataZH,
+    togepiGridDataZH,
+    lopunnyGridDataZH,
+    rayquazaGridDataZH,
   },
 };
 
@@ -1670,12 +1782,12 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const newGridedPokemonMonsterBaseIdArray = [
-  '2008771101', // Morpeko (Marnie)
-  '20000600', // Charizard (Leon)
-  '20028201', // Gardevoir (Diantha)
-  '20048400', // Palkia (Cyrus)
-  '20063501', // Hydreigon (Iris)
-  '20050300', // Samurott (Hilbert)
+  '20084300', // Decidueye (Selene)
+  '20013300', // Eevee (Leaf)
+  '20038400', // Rayquaza (Zinnia)
+  '20084900', // Primarina (Elio)
+  '20017500', // Togepi (Burgh)
+  '20042800', // Lopunny (May)
 ];
 
 export const type1SyncGrid = [
@@ -1721,6 +1833,9 @@ export const type1SyncGrid = [
   'gardevoir',
   'leon_charizard',
   'palkia',
+  'decidueye',
+  'lopunny',
+  'Rayquaza',
 ];
 
 export const type2SyncGrid = [
@@ -1772,4 +1887,7 @@ export const type3SyncGrid = [
   'xerneas',
   'obstagoon',
   'samurott',
+  'eevee',
+  'primarina',
+  'togepi',
 ];

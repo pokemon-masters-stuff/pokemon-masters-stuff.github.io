@@ -617,5 +617,22 @@
   "83200": "[Name:MoveDescriptionPartsIdTag Idx=\"999981\" ]",
   "11320": "自分の特攻をどっかーんとあげる\n自分の特防と素早さをぐーんとあげる\n自分の防御をがくーんとさげる",
   "78600": "追加効果なし",
-  "84100": "追加効果なし"
+  "84100": "追加効果なし",
+  "29": "[Name:MoveDescriptionPartsIdTag Idx=\"999980\" ]",
+  "47": "[Name:MoveDescriptionPartsIdTag Idx=\"999979\" ]",
+  "90": "[Name:MoveDescriptionPartsIdTag Idx=\"999978\" ]",
+  "118": "[Name:MoveDescriptionPartsIdTag Idx=\"999961\" ]",
+  "348": "[Name:MoveDescriptionPartsIdTag Idx=\"999998\" ]",
+  "624": "[Name:MoveDescriptionPartsIdTag Idx=\"999977\" ]",
+  "626": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+  "11264": "[Name:MoveDescriptionPartsIdTag Idx=\"999960\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999959\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999958\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999957\" ]",
+  "11704": "[Name:MoveDescriptionPartsIdTag Idx=\"999976\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999956\" ]",
+  "11230": "[Name:MoveDescriptionPartsIdTag Idx=\"999975\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999974\" ]",
+  "11220": "[Name:MoveDescriptionPartsIdTag Idx=\"999973\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999972\" ]",
+  "54101": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+  "62300": "[Name:MoveDescriptionPartsIdTag Idx=\"999955\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999954\" ]",
+  "84200": "[Name:MoveDescriptionPartsIdTag Idx=\"999955\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999954\" ]",
+  "84000": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+  "81400": "[Name:MoveDescriptionPartsIdTag Idx=\"999998\" ]",
+  "207": "[Name:MoveDescriptionPartsIdTag Idx=\"999971\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999970\" ]"
 }

@@ -3316,7 +3316,7 @@
           "zh": "招式後招式計量槽增加４"
         },
         "description": {
-          "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Pokémon um 1 Segment auf.",
+          "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Anwenders um 1 Segment auf.",
           "en": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
           "es": "Es muy probable que llene 1 punto de la barra\nde movimientos del usuario si uno de sus\nmovimientos acierta.",
           "fr": "Restaure un segment de la Jauge Capacité quand\nle Duo utilise avec succès une capacité\n(assez souvent).",
@@ -9086,7 +9086,7 @@
           "name": {
             "de": "Volltrefferquote↑ 1",
             "en": "Zero In 1",
-            "es": "Crítico Fácil +1",
+            "es": "Mov. Crítico Fácil +1",
             "fr": "Capa. Crit. ↑ 1",
             "it": "Attaccolpo 1",
             "ja": "技急所狙い１",
@@ -12796,7 +12796,7 @@
           "en": "Puts the target to sleep when a sync move targeting an opponent is successful.",
           "es": "Duerme al objetivo si el movimiento compi del\nusuario acierta.",
           "fr": "Après avoir utilisé avec succès une capacité Duo\nqui vise un ennemi, endort ce dernier.",
-          "it": "Quando un'Unimossa va a segno, addormenta\nil bersaglio.",
+          "it": "Quando un'Unimossa che ha come bersaglio\nun avversario va a segno, addormenta\nil bersaglio.",
           "ja": "相手を対象にしたバディーズわざが成功したときに\n相手をねむり状態にする",
           "ko": "상대를 대상으로 하는 버디즈기술이 성공했을 때\n상대를 잠듦 상태로 만든다",
           "zh": "當以對手為對象的拍組招式成功時，\n會讓對手陷入睡眠狀態。"
@@ -14731,7 +14731,7 @@
           "fr": "Réduit de 1 le nombre\nd'actions nécessaires pour\nlancer la capacité Duo.\nSi le lanceur a\nméga-évolué, réduit\nce nombre de 2.\n(En coop, la réduction\nconcerne tous les alliés.)\nRégénère lentement les\nPV de tous les alliés.",
           "it": "Fa recuperare PS costantemente a tutte le Unità alleate e abbassa di 1 il numero di azioni necessarie per sferrare un'Unimossa. Se MegaVenusaur la usa, abbassa invece di 2 il numero di azioni necessarie per sferrare un'Unimossa. In modalità multigiocatore, abbassa il numero di azioni necessarie per sferrare un'Unimossa per tutti gli alleati.",
           "ja": "自分のバディーズわざ発動可能状態までのカウントを１減らす\n自分がメガフシギバナになっている場合は２減らす\n（マルチプレイの場合は味方のプレイヤー全員のバディーズわざ発動可能状態までのカウントを減らす）\n味方のバディーズ全員を回復付帯状態にする",
-          "ko": "자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 1 줄인다\n자신이 메가이상해꽃이 되어 있을 때는 2 줄인다\n(멀티플레이일 때는 같은 편 플레이어 전원의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 줄인다)\n같은 편 버디즈 전원을 지속회복 상태로 만든다",
+          "ko": "자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 1 줄인다\n자신이 메가이상해꽃이 되어있을 때는 2 줄인다\n(멀티플레이일 때는 같은 편 플레이어 전원의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 줄인다)\n같은 편 버디즈 전원을 지속회복 상태로 만든다",
           "zh": "自己發動拍組招式所需的行動數會減少１次。\n當妙蛙花已經變成超級妙蛙花時會減少２次。\n（多隊模式時，會讓我方全體玩家發動拍組招式所需的行動數減少。）\n讓我方全體拍組變成附帶回復狀態。"
         },
         "category": 3,
@@ -14844,7 +14844,7 @@
           "en": "Has a good chance of leaving the target badly poisoned when a move targeting an opponent is successful.",
           "es": "Es muy probable que envenene gravemente al\nobjetivo si este recibe uno de los movimientos\ndel usuario.",
           "fr": "Quand le Duo utilise avec succès une capacité\nqui vise un ennemi, empoisonne gravement\nce dernier (assez souvent).",
-          "it": "Quando una mossa va a segno, spesso\niperavvelena il bersaglio.",
+          "it": "Quando una mossa che ha come bersaglio\nun avversario va a segno, spesso iperavvelena\nil bersaglio.",
           "ja": "相手を対象にした技が成功したときにときどき\n相手をもうどく状態にする",
           "ko": "상대를 대상으로 하는 기술이 성공했을 때 종종\n상대를 맹독 상태로 만든다",
           "zh": "當以對手為對象的招式成功時，\n有時會讓對手陷入劇毒狀態。"
@@ -14867,7 +14867,7 @@
           "en": "Lowers the target’s Defense or Sp. Def—or both—when a move targeting an opponent is successful.",
           "es": "Siempre reduce la Defensa, la Defensa Especial\no ambas del objetivo si uno de los movimientos\ndel usuario acierta.",
           "fr": "Quand le Duo utilise avec succès une capacité\nqui vise un ennemi, baisse légèrement la Défense\nou la Défense Spéciale, ou les deux, de ce\ndernier (à coup sûr).",
-          "it": "Quando una mossa va a segno, riduce la Difesa\no la Difesa Speciale del bersaglio, oppure\nle riduce entrambe.",
+          "it": "Quando una mossa che ha come bersaglio\nun avversario va a segno, riduce la Difesa\no la Difesa Speciale del bersaglio, oppure\nle riduce entrambe.",
           "ja": "相手を対象にした技が成功したときに\n相手の防御か特防またはその両方をさげる",
           "ko": "상대를 대상으로 하는 기술이 성공했을 때\n상대의 방어나 특수방어\n혹은 방어와 특수방어를 모두 떨어뜨린다",
           "zh": "當以對手為對象的招式成功時，\n會降低對手的防禦或特防，或是兩種皆會降低。"
@@ -14943,7 +14943,7 @@
             "en": "Lowers the target’s Defense or Sp. Def—or both—when a move targeting an opponent is successful.",
             "es": "Siempre reduce la Defensa, la Defensa Especial\no ambas del objetivo si uno de los movimientos\ndel usuario acierta.",
             "fr": "Quand le Duo utilise avec succès une capacité\nqui vise un ennemi, baisse légèrement la Défense\nou la Défense Spéciale, ou les deux, de ce\ndernier (à coup sûr).",
-            "it": "Quando una mossa va a segno, riduce la Difesa\no la Difesa Speciale del bersaglio, oppure\nle riduce entrambe.",
+            "it": "Quando una mossa che ha come bersaglio\nun avversario va a segno, riduce la Difesa\no la Difesa Speciale del bersaglio, oppure\nle riduce entrambe.",
             "ja": "相手を対象にした技が成功したときに\n相手の防御か特防またはその両方をさげる",
             "ko": "상대를 대상으로 하는 기술이 성공했을 때\n상대의 방어나 특수방어\n혹은 방어와 특수방어를 모두 떨어뜨린다",
             "zh": "當以對手為對象的招式成功時，\n會降低對手的防禦或特防，或是兩種皆會降低。"
@@ -15844,7 +15844,7 @@
           "zh": "招式後招式計量槽增加４"
         },
         "description": {
-          "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Pokémon um 1 Segment auf.",
+          "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Anwenders um 1 Segment auf.",
           "en": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
           "es": "Es muy probable que llene 1 punto de la barra\nde movimientos del usuario si uno de sus\nmovimientos acierta.",
           "fr": "Restaure un segment de la Jauge Capacité quand\nle Duo utilise avec succès une capacité\n(assez souvent).",
@@ -16480,7 +16480,7 @@
           "zh": "其他拍組瀕死時招式計量槽增加４"
         },
         "description": {
-          "de": "Füllt die Attackenleiste des Pokémon um vier\nSegmente auf, wenn ein anderes Pokémon\nkampfunfähig wird.",
+          "de": "Füllt die Attackenleiste des Anwenders um 4\nSegmente auf, wenn ein anderes Pokémon\nkampfunfähig wird.",
           "en": "Charges the user’s move gauge by four each time another Pokémon on the field of play faints.",
           "es": "Llena 4 puntos de la barra de movimientos del\nusuario cuando otro Pokémon se debilita.",
           "fr": "Quand un allié autre que le lanceur, ou un\nennemi, est mis K.O., restaure 4 segments\nde la Jauge Capacité.",
@@ -16765,9 +16765,9 @@
       "passive1": {
         "id": 17042409,
         "name": {
-          "de": "Volltr.-Verwirrung 9",
+          "de": "P-Att.-Volltr.-Verwirrung 9",
           "en": "Criticonfuse 9",
-          "es": "Crítico Confusión +9",
+          "es": "Movimiento Crítico Confusión +9",
           "fr": "Capacité Critique Confusion 9",
           "it": "Confondicolpo 9",
           "ja": "技急所時こんらん付与９",
@@ -18408,7 +18408,7 @@
           "zh": "被攻擊時招式計量槽↑９"
         },
         "description": {
-          "de": "Füllt die Attackenleiste des Pokémon um\n1 Segment auf, wenn es von einer Attacke\ngetroffen wird.",
+          "de": "Füllt die Attackenleiste des Anwenders um 1\nSegment auf, wenn das Pokémon von einer\nAttacke getroffen wird.",
           "en": "Charges the user’s move gauge by one when the user is hit by an attack move.",
           "es": "Siempre llena 1 punto de la barra de\nmovimientos del usuario si es atacado.",
           "fr": "Quand le Duo subit une attaque, restaure un\nsegment de la Jauge Capacité (à coup sûr).",
@@ -18763,7 +18763,7 @@
         "name": {
           "de": "Volltreffer-Init.↑ 1",
           "en": "Amped Up 1",
-          "es": "Crítico Veloz +1",
+          "es": "Crítico Velocidad ↑ +1",
           "fr": "Critique Rapide 1",
           "it": "Colpoturbo 1",
           "ja": "急所時素早さアップ１",
@@ -18771,7 +18771,7 @@
           "zh": "擊中要害時速度提升１"
         },
         "description": {
-          "de": "Erhöht nach gelandeten Volltreffern die Initiative.",
+          "de": "Erhöht nach gelandeten Volltreffern die Initiative\ndes Pokémon.",
           "en": "Raises the user’s Speed when the user lands a critical hit.",
           "es": "Aumenta la Velocidad tras asestar un golpe\ncrítico.",
           "fr": "Augmente la Vitesse du Pokémon quand il inflige\nun coup critique.",
@@ -20656,7 +20656,7 @@
           "zh": "拍組招式後計量槽增加６"
         },
         "description": {
-          "de": "Füllt nach Einsatz der Gefährtenattacke die\nAttackenleiste des Pokémon um 6  Segmente auf.",
+          "de": "Füllt nach Einsatz der Gefährtenattacke die\nAttackenleiste des Anwenders um 6 Segmente\nauf.",
           "en": "Charges the user’s move gauge by six after using a sync move.",
           "es": "Tras usar un movimiento compi, llena 6 puntos de la barra de movimientos del usuario.",
           "fr": "Après l'utilisation d'une capacité Duo, restaure 6\nsegments de la Jauge Capacité.",
@@ -20974,7 +20974,7 @@
           "zh": "招式後招式計量槽增加４"
         },
         "description": {
-          "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Pokémon um 1 Segment auf.",
+          "de": "Füllt nach Erfolg einer Attacke oftmals die\nAttackenleiste des Anwenders um 1 Segment auf.",
           "en": "Has a good chance of charging the user’s move gauge by one when a move is successful.",
           "es": "Es muy probable que llene 1 punto de la barra\nde movimientos del usuario si uno de sus\nmovimientos acierta.",
           "fr": "Restaure un segment de la Jauge Capacité quand\nle Duo utilise avec succès une capacité\n(assez souvent).",
@@ -21865,7 +21865,7 @@
           "de": "Laubklinge des\nKahlschlags",
           "en": "Leaf Blade\nof Sundering",
           "es": "Hoja Aguda\nCortatodo",
-          "fr": "Finissons-en !\nLame-Feuille !",
+          "fr": "Finissons-en !\nLame Feuille !",
           "it": "Fendifoglia distruttiva",
           "ja": "まとめてぶったぎる\nリーフブレード",
           "ko": "한번에 베기\n리프블레이드",
@@ -26026,8 +26026,8 @@
           "zh": "伽勒爾的先驅"
         },
         "description": {
-          "de": "Erhöht den Angriff aller Gefährten im Team um\n10 %. Verringert den erlittenen Schaden aller Gefährten im Team um 20 %. Die Effektivität steigt abhängig von der Anzahl der Gefährten im Team mit dem Galar-Attribut. (Jedes zusätzliche Gefährtengespann steigert den Angriff um 10 % und verringert den erlittenen Schaden um 3 %. Der Angriff kann um maximal\n30 % erhöht und der Schaden um maximal 26 % verringert werden.)",
-          "en": "Powers up the moves of all allied sync pairs by 10%.\nReduces attack damage taken by all allied sync pairs by 20%.\nThese percentages increase according to the number of allied sync pairs with the Galar theme on your team. (Each additional sync pair powers up moves by 10% and reduces damage by 3%. The maximum power-up is 30%, and the maximum damage reduction is 26%.)",
+          "de": "Erhöht den Angriff aller Gefährten im Team um\n10 %. Verringert den durch Pokémon-Attacken\nerlittenen Schaden aller Gefährten im Team um\n20 %. Die Effektivität steigt abhängig von der Anzahl der Gefährten im Team mit dem Galar-Attribut. (Jedes zusätzliche Gefährtengespann steigert den Angriff um 10 % und verringert den erlittenen Schaden um 3 %. Der Angriff kann um maximal 30 % erhöht und der Schaden um maximal 26 % verringert werden.)",
+          "en": "Powers up the moves of all allied sync pairs by 10%.\nReduces attack move damage taken by all allied sync pairs by 20%.\nThese percentages increase according to the number of allied sync pairs with the Galar theme on your team. (Each additional sync pair powers up moves by 10% and reduces damage by 3%. The maximum power-up is 30%, and the maximum damage reduction is 26%.)",
           "es": "Aumenta la potencia de los movimientos del bando del usuario en un 10%. Mitiga el daño recibido por el bando del usuario en un 20%. Cuantas más parejas con habilidades de equipo con el distintivo \"Galar\" tenga el bando del usuario, más efectiva será esta habilidad. Cada una de ellas aumenta la potencia de los movimientos en un 10% adicional (hasta un total máximo del 30%), y mitiga el daño recibido en un 3% adicional (hasta un total máximo del 26%).",
           "fr": "Augmente de 10 % la puissance des capacités\npour tous les alliés et augmente de 20 %\nla résilience pour tous les alliés.\nPlus il y a de Duos de Galar dans votre équipe,\nplus cet effet est puissant.\n(Chaque Duo supplémentaire augmente de 10 %\nla puissance des capacités\net de 3 % la résilience.)\n(L'augmentation maximum est de 30 %\npour la puissance des capacités\net 26 % pour la résilience.)",
           "it": "Aumenta del 10% la potenza delle mosse di tutte\nle Unità alleate e riduce del 20% i danni subiti\nda attacchi semplici per tutte le Unità alleate.\nGli effetti aumentano in base al numero di Unità\nin squadra del gruppo \"Galar\". Ogni Unità in più\naumenta la potenza delle mosse del 10%\ne la riduzione dei danni del 3%. L'aumento\nmassimo è del 30% per la potenza delle mosse\ne del 26% per la riduzione dei danni.",
@@ -26710,7 +26710,7 @@
         "name": {
           "de": "Volltrefferstärke↑ 9",
           "en": "Critical Strike 9",
-          "es": "Crítico Potente +9",
+          "es": "Crítico Impulsor +9",
           "fr": "Puissance Critique 9",
           "it": "Peggiorcolpo 9",
           "ja": "急所時威力上昇９",
@@ -27352,6 +27352,1962 @@
       "ja": "トウヤ_ダイケンキ",
       "ko": "투지_대검귀",
       "zh": "鬥也_大劍鬼"
+    }
+  },
+  {
+    "monsterBaseId": "20084300",
+    "monsterId": "20084100002",
+    "monsterActorId": "pm0843_00_fukurou3",
+    "trainerBaseId": "10012300",
+    "trainerNameId": "ch0123",
+    "trainerActorId": "ch0123_00_mizuki",
+    "stats": {
+      "hpValues": [139, 201, 258, 489, 537, 585],
+      "atkValues": [36, 80, 122, 287, 323, 359],
+      "defValues": [16, 33, 48, 114, 126, 138],
+      "spaValues": [30, 73, 112, 277, 313, 349],
+      "spdValues": [24, 42, 60, 126, 138, 150],
+      "speValues": [22, 55, 85, 206, 230, 254]
+    },
+    "moves": {
+      "move1": {
+        "id": 33,
+        "name": {
+          "de": "Tackle",
+          "en": "Tackle",
+          "es": "Placaje",
+          "fr": "Charge",
+          "it": "Azione",
+          "ja": "たいあたり",
+          "ko": "몸통박치기",
+          "zh": "撞擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 25,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19010,
+        "name": {
+          "de": "X-Angriff",
+          "en": "X Attack",
+          "es": "Ataque X",
+          "fr": "Attaque +",
+          "it": "Attacco X",
+          "ja": "プラスパワー",
+          "ko": "플러스파워",
+          "zh": "力量強化"
+        },
+        "description": {
+          "de": "Erhöht den Angriff des\nAnwenders stark.",
+          "en": "Sharply raises the user’s Attack.",
+          "es": "Aumenta bastante el\nAtaque del usuario.",
+          "fr": "Augmente modérément\nl'Attaque du lanceur.",
+          "it": "Aumenta di molto\nl'Attacco di chi la usa.",
+          "ja": "自分の攻撃をぐーんとあげる",
+          "ko": "자신의 공격이 크게 오른다",
+          "zh": "大幅提高自己的攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 348,
+        "name": {
+          "de": "Laubklinge",
+          "en": "Leaf Blade",
+          "es": "Hoja Aguda",
+          "fr": "Lame Feuille",
+          "it": "Fendifoglia",
+          "ja": "リーフブレード",
+          "ko": "리프블레이드",
+          "zh": "葉刃"
+        },
+        "description": {
+          "de": "Hat eine hohe Volltrefferquote.",
+          "en": "Critical hits land more easily.",
+          "es": "Suele ser crítico.",
+          "fr": "Taux de critiques élevé.",
+          "it": "Probabile brutto colpo.",
+          "ja": "急所に当たりやすい",
+          "ko": "급소에 맞기 쉽다",
+          "zh": "容易擊中要害。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 5,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 80,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 11230,
+        "name": {
+          "de": "Zielsicher!",
+          "en": "Stare ’Em\nDown!",
+          "es": "¡No apartes\nla mirada!",
+          "fr": "Œil de\nrapace !",
+          "it": "Teniamoli\nd'occhio!",
+          "ja": "じーっと狙って！",
+          "ko": "지그시노리자!",
+          "zh": "緊緊鎖定目標！"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung, die Spezial-Verteidigung und die Volltrefferquote des Anwenders stark.\nDie KP des Anwenders werden kontinuierlich regeneriert.",
+          "en": "Sharply raises the user’s Defense, Sp. Def, and critical-hit rate.\nMakes the user gradually heal itself.",
+          "es": "Aumenta bastante la Defensa, la Defensa Especial y la probabilidad de asestar golpes críticos del usuario.\nDespués de usar este movimiento, el usuario recuperará PS tras cada acción.",
+          "fr": "Augmente modérément la Défense, la Défense Spéciale et le taux de critiques du lanceur.\nLe lanceur regagne lentement ses PV.",
+          "it": "Aumenta di molto la Difesa, la Difesa Speciale e la probabilità di mandare a segno brutti colpi di chi la usa.\nInoltre, gli fa recuperare PS costantemente.",
+          "ja": "自分の防御と特防と急所率をぐーんとあげる\n自分を回復付帯状態にする",
+          "ko": "자신의 방어와 특수방어, 급소율이 크게 오른다\n자신을 지속회복 상태로 만든다",
+          "zh": "大幅提高自己的防禦、特防和擊中要害率。\n讓自己變成附帶回復狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 1
+      },
+      "syncMove": {
+        "id": 81400,
+        "name": {
+          "de": "Laubklinge des strahlenden Lächelns",
+          "en": "Moonlight\nLeaf Blade",
+          "es": "Hoja Aguda de la\nSonrisa Radiante",
+          "fr": "Un sourire radieux !\nLame Feuille !",
+          "it": "Fendifoglia del sorriso smagliante",
+          "ja": "キラキラ光る笑顔の\nリーフブレード",
+          "ko": "반짝반짝 빛나는 미소의\n리프블레이드",
+          "zh": "閃亮的笑容之\n葉刃"
+        },
+        "description": {
+          "de": "Hat eine hohe Volltrefferquote.",
+          "en": "Critical hits land more easily.",
+          "es": "Suele ser crítico.",
+          "fr": "Taux de critiques élevé.",
+          "it": "Probabile brutto colpo.",
+          "ja": "急所に当たりやすい",
+          "ko": "급소에 맞기 쉽다",
+          "zh": "容易擊中要害。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 5,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 13014805,
+        "name": {
+          "de": "Gegn.-Wechselsperre-Stärke↑ 5",
+          "en": "Hold Hostage 5",
+          "es": "Relevo Impos. Rival Impulsor +5",
+          "fr": "Carcan Enn. Puissance ↑ 5",
+          "it": "Vietacambio rafforzante 5",
+          "ja": "相手交代禁止時威力↑５",
+          "ko": "상대교체금지시위력↑5",
+          "zh": "對手禁止替換時威力提升５"
+        },
+        "description": {
+          "de": "Erhöht die Stärke von Attacken, wenn das Ziel in\neiner Wechselsperre gefangen ist.",
+          "en": "Powers up moves when the target is restrained.",
+          "es": "Aumenta la potencia de los movimientos cuando\nel rival sufre relevo imposible.",
+          "fr": "Augmente la puissance des capacités du Duo\nquand l'ennemi est en Carcan, c'est-à-dire,\nqu'il ne peut pas être échangé.",
+          "it": "Aumenta la potenza delle mosse quando\nil bersaglio è affetto da \"Sostituzione vietata\".",
+          "ja": "相手が交代禁止状態のときに技の威力をあげる",
+          "ko": "상대가 교체금지 상태일 때 기술의 위력이 오른다",
+          "zh": "當對手陷入禁止替換狀態時，會提高招式的威力。"
+        }
+      },
+      "passive2": {
+        "id": 18092705,
+        "name": {
+          "de": "Wechselsperre-Treffer-Leiste↑ 5",
+          "en": "Hold and Hit 5",
+          "es": "At. Relevo Impos. Riv. Llenabarr. +5",
+          "fr": "Carcan Enn. C. Off. Jauge Capa. ↑ 5",
+          "it": "Vietacambio attaccarica 5",
+          "ja": "交代禁止相手攻撃時ゲージ↑５",
+          "ko": "교체금지상대공격시게이지↑5",
+          "zh": "攻擊禁止替換中的對手時招式計量槽↑５"
+        },
+        "description": {
+          "de": "Füllt nach Erfolg einer Attacke sehr oft die\nAttackenleiste des Anwenders um 1 Segment auf,\nwenn das Ziel in einer Wechselsperre gefangen\nist.",
+          "en": "Has a very good chance of charging the user’s move gauge by one when an attack is successful against a restrained opponent.",
+          "es": "Con mucha frecuencia llena 1 punto de la barra\nde movimientos del usuario si uno de sus\nataques acierta a un objetivo que sufre\nrelevo imposible.",
+          "fr": "Restaure un segment de la Jauge Capacité quand\nune capacité offensive du Pokémon touche\nun ennemi en Carcan, c'est-à-dire, qui ne peut\npas être échangé (souvent).",
+          "it": "Dopo aver mandato a segno un attacco semplice,\nse il bersaglio è affetto da \"Sostituzione vietata\",\nabbastanza spesso viene aggiunta una barretta\nalla propria barra mosse.",
+          "ja": "相手が交代禁止状態のときに技での攻撃が成功した場合\nたびたび自分のわざゲージを１増やす",
+          "ko": "상대가 교체금지 상태일 때 기술로 공격에 성공한 경우\n자주 자신의 기술게이지를 1 추가한다",
+          "zh": "當對手陷入禁止替換狀態時，若使出招式攻擊成功，\n經常會幫自己增加１條招式計量槽。"
+        }
+      },
+      "passive3": {
+        "id": 18092805,
+        "name": {
+          "de": "Volltreffer-Initiative↑ 5",
+          "en": "Critical Speed 5",
+          "es": "Movimiento Crítico Velocidad ↑ +5",
+          "fr": "Capacité Critique Vitesse ↑ 5",
+          "it": "Colpolesto 5",
+          "ja": "技急所時素早さアップ５",
+          "ko": "기술급소시스피드업5",
+          "zh": "招式擊中要害時速度提升５"
+        },
+        "description": {
+          "de": "Erhöht bei gelandeten Volltreffern sehr oft die\nInitiative des Pokémon.",
+          "en": "Has a very good chance of raising the user’s Speed when a move is a critical hit.",
+          "es": "Con mucha frecuencia aumenta la Velocidad del\nusuario al asestar un movimiento crítico.",
+          "fr": "Augmente légèrement la Vitesse du Pokémon\nquand il inflige un coup critique (souvent).",
+          "it": "Quando l'Unità manda a segno un brutto colpo\ncon una mossa, abbastanza spesso\nla sua Velocità aumenta.",
+          "ja": "技が相手の急所に当たったときにたびたび\n自分の素早さをあげる",
+          "ko": "기술이 상대의 급소를 맞혔을 때\n자주 자신의 스피드가 오른다",
+          "zh": "招式擊中對手要害時，\n經常會提高自己的速度。"
+        }
+      }
+    },
+    "type": 5,
+    "weakType": 6,
+    "rarity": 5,
+    "role": 0,
+    "pokemonNameByLanguage": {
+      "de": "Silvarro",
+      "en": "Decidueye",
+      "es": "Decidueye",
+      "fr": "Archéduc",
+      "it": "Decidueye",
+      "ja": "ジュナイパー",
+      "ko": "모크나이퍼",
+      "zh": "狙射樹梟"
+    },
+    "trainerNameByLanguage": {
+      "de": "Selene",
+      "en": "Selene",
+      "es": "Selene",
+      "fr": "Selene",
+      "it": "Selene",
+      "ja": "ミヅキ",
+      "ko": "미월",
+      "zh": "美月"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Selene_Silvarro",
+      "en": "Selene_Decidueye",
+      "es": "Selene_Decidueye",
+      "fr": "Selene_Archéduc",
+      "it": "Selene_Decidueye",
+      "ja": "ミヅキ_ジュナイパー",
+      "ko": "미월_모크나이퍼",
+      "zh": "美月_狙射樹梟"
+    }
+  },
+  {
+    "monsterBaseId": "20013300",
+    "monsterId": "20017000000",
+    "monsterActorId": "pm0133_00_eievui",
+    "trainerBaseId": "10001700",
+    "trainerNameId": "ch0017",
+    "trainerActorId": "ch0017_00_leaf",
+    "stats": {
+      "hpValues": [121, 200, 275, 572, 636, 700],
+      "atkValues": [12, 39, 63, 162, 182, 202],
+      "defValues": [18, 47, 74, 184, 208, 232],
+      "spaValues": [6, 28, 49, 126, 142, 158],
+      "spdValues": [19, 48, 75, 185, 209, 233],
+      "speValues": [13, 46, 76, 197, 221, 245]
+    },
+    "moves": {
+      "move1": {
+        "id": 33,
+        "name": {
+          "de": "Tackle",
+          "en": "Tackle",
+          "es": "Placaje",
+          "fr": "Charge",
+          "it": "Azione",
+          "ja": "たいあたり",
+          "ko": "몸통박치기",
+          "zh": "撞擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 25,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19000,
+        "name": {
+          "de": "Trank",
+          "en": "Potion",
+          "es": "Poción",
+          "fr": "Potion",
+          "it": "Pozione",
+          "ja": "キズぐすり",
+          "ko": "상처약",
+          "zh": "傷藥"
+        },
+        "description": {
+          "de": "Stellt einige KP eines\nGefährten wieder her.",
+          "en": "Restores a bit of an ally’s HP.",
+          "es": "Restaura algunos PS a un\naliado.",
+          "fr": "Rend beaucoup de PV\nà un allié.",
+          "it": "Fa recuperare un po'\ndi PS a un'Unità alleata.",
+          "ja": "味方のＨＰを少し回復する",
+          "ko": "같은 편의 HP를 조금 회복한다",
+          "zh": "少量回復我方的ＨＰ。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 0,
+        "targetType": {
+          "de": "1 Gefährte",
+          "en": "An ally",
+          "es": "Un aliado",
+          "fr": "1 allié",
+          "it": "Un alleato",
+          "ja": "味方１体",
+          "ko": "같은 편 1마리",
+          "zh": "我方１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 231,
+        "name": {
+          "de": "Eisenschweif",
+          "en": "Iron Tail",
+          "es": "Cola Férrea",
+          "fr": "Queue de Fer",
+          "it": "Codacciaio",
+          "ja": "アイアンテール",
+          "ko": "아이언테일",
+          "zh": "鐵尾"
+        },
+        "description": {
+          "de": "Senkt eventuell die\nVerteidigung des Zieles.",
+          "en": "Has a moderate chance of lowering the target’s Defense.",
+          "es": "A veces reduce la\nDefensa del objetivo.",
+          "fr": "Baisse légèrement la\nDéfense de l'ennemi\n(assez rarement).",
+          "it": "A volte riduce la Difesa\ndel bersaglio.",
+          "ja": "たまに相手の防御をさげる",
+          "ko": "가끔 상대의 방어를 떨어뜨린다",
+          "zh": "偶爾會降低對手的防禦。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 17,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 132,
+        "accuracy": 75,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 10170,
+        "name": {
+          "de": "Vorwärts, alle\nmiteinander!",
+          "en": "Let’s Go!",
+          "es": "¡Entre todos\npodemos!",
+          "fr": "Tous ensemble !",
+          "it": "Muoviamoci\ninsieme!",
+          "ja": "みんなでいくよ！",
+          "ko": "다함께가자!",
+          "zh": "大家一起上喔！"
+        },
+        "description": {
+          "de": "Füllt die Attackenleiste\naller Gefährten im Team\num zwei Segmente auf.\nErhöht den Angriff des\nAnwenders stark.",
+          "en": "Increases the move gauges of all allied sync pairs by two. Sharply raises the user’s Attack.",
+          "es": "Llena 2  puntos de las\nbarras de movimientos\ndel bando del usuario.\nAumenta bastante el\nAtaque del usuario.",
+          "fr": "Remplit 2 segments de\nla Jauge Capacité de\ntous les alliés. Augmente\nmodérément l'Attaque\ndu lanceur.",
+          "it": "Aggiunge due barrette\nalla barra mosse di tutte\nle Unità alleate\ne aumenta di molto\nl'Attacco di chi la usa.",
+          "ja": "味方のバディーズ全員のわざゲージを２増やす\n自分の攻撃をぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 기술게이지를 2 추가한다\n자신의 공격이 크게 오른다",
+          "zh": "幫我方全體拍組增加２條招式計量槽。\n大幅提高自己的攻擊。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 53501,
+        "name": {
+          "de": "Potenzial der\nMacht der Neun",
+          "en": "Endless Possibilities\nExtreme Evoboost",
+          "es": "Posibilidades\na la Novena Potencia",
+          "fr": "Possibilités infinies !\nNeuf pour Un !",
+          "it": "Potenziamento Eevolutivo dell'anelito",
+          "ja": "追い求める可能性の\nナインエボルブースト",
+          "ko": "가능성을 추구하는\n나인이볼부스트",
+          "zh": "追求可能性之\n九彩昇華齊聚頂"
+        },
+        "description": {
+          "de": "Füllt die Attackenleiste\num die Höhe des\nAttacken-Levels auf.\nErhöht den Angriff,\ndie Verteidigung,\nden Spezial-Angriff,\ndie Spezial-Verteidigung,\ndie Initiative und die\nGenauigkeit aller\nGefährten im Team stark.",
+          "en": "Increases the user’s move gauge by the user’s current move level. Sharply raises the Attack, Defense, Sp. Atk, Sp. Def, Speed, and accuracy of all allied sync pairs.",
+          "es": "Llena una cantidad de puntos de la barra de movimientos del usuario equivalente al nivel de su movimiento compi. Aumenta bastante el Ataque, la Defensa, el Ataque Especial, la Defensa Especial, la Velocidad y la Precisión del bando del usuario.",
+          "fr": "Augmente la Jauge\nCapacité du même\nnombre que le niveau\ndes capacités du Duo.\nAugmente modérément\nl'Attaque, la Défense,\nl'Attaque Spéciale, la\nDéfense Spéciale, la\nVitesse et la Précision de\ntous les alliés.",
+          "it": "Aggiunge alla barra mosse un numero di barrette pari al livello delle mosse e aumenta di molto l'Attacco, la Difesa, l'Attacco Speciale, la Difesa Speciale, la Velocità e la precisione di tutte le Unità alleate.",
+          "ja": "自分のわざゲージをわざレベルと同じ数だけ増やす\n味方のバディーズ全員の攻撃と防御と特攻と特防と素早さと命中率をぐーんとあげる",
+          "ko": "자신의 기술게이지를 기술 레벨만큼 추가한다\n같은 편 버디즈 전원의 공격과 방어, 특수공격, 특수방어, 스피드, 명중률이 크게 오른다",
+          "zh": "幫自己增加和招式等級相同數量的招式計量槽。\n大幅提高我方全體拍組的攻擊、防禦、特攻、特防、速度和命中率。"
+        },
+        "category": 3,
+        "group": 3,
+        "type": 1,
+        "target": 1,
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18030201,
+        "name": {
+          "de": "Wechselwerteübergabe",
+          "en": "Benefactor",
+          "es": "Mejora Relevo",
+          "fr": "Relais Stats",
+          "it": "Trasferibonus",
+          "ja": "交代時能力引継",
+          "ko": "교체시능력인계",
+          "zh": "替換時能力轉移"
+        },
+        "description": {
+          "de": "Wird das Pokémon ausgewechselt, werden seine\nerhöhten Statuswerte auf die eingewechselten\nGefährten übertragen.",
+          "en": "Transfers this sync pair’s stat increases to the sync pair that will switch in when this sync pair switches out.",
+          "es": "Cuando es relevado, el Pokémon pasa sus\nmejoras en las características al compi que lo\nsustituye.",
+          "fr": "Lorsque le Duo est remplacé par un autre,\nses augmentations de stats sont transmises\nau Duo qui le remplace.",
+          "it": "Dopo la sostituzione, gli aumenti delle statistiche\npassano all'Unità che entra in campo.",
+          "ja": "交代時にあがっていた能力変化を替わったバディーズが受けつぐ",
+          "ko": "교체할 때 올라간 능력 변화를 교체한 버디즈가 이어받는다",
+          "zh": "替換時，已提高的能力變化會由接替的拍組承接。"
+        }
+      },
+      "passive2": {
+        "id": 18020901,
+        "name": {
+          "de": "Werte↓-Schutz",
+          "en": "Impervious",
+          "es": "Inmunidad Características ↓",
+          "fr": "Immunité ↓Stats",
+          "it": "Status quo",
+          "ja": "全ダウン無効",
+          "ko": "전체다운무효",
+          "zh": "全種類下降無效"
+        },
+        "description": {
+          "de": "Schützt vor einer Senkung aller Statuswerte.",
+          "en": "Stats cannot be lowered.",
+          "es": "Impide que el Pokémon sufra reducciones en las\ncaracterísticas.",
+          "fr": "Empêche les baisses de stats.",
+          "it": "Rende immuni alle riduzioni delle statistiche.",
+          "ja": "すべての能力がさがらない",
+          "ko": "모든 능력이 떨어지지 않는다",
+          "zh": "所有的能力都不會降低。"
+        }
+      }
+    },
+    "type": 1,
+    "weakType": 7,
+    "rarity": 5,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Evoli",
+      "en": "Eevee",
+      "es": "Eevee",
+      "fr": "Évoli",
+      "it": "Eevee",
+      "ja": "イーブイ",
+      "ko": "이브이",
+      "zh": "伊布"
+    },
+    "trainerNameByLanguage": {
+      "de": "Leaf",
+      "en": "Leaf",
+      "es": "Hoja",
+      "fr": "Leaf",
+      "it": "Leaf",
+      "ja": "リーフ",
+      "ko": "리프",
+      "zh": "葉子"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Leaf_Evoli",
+      "en": "Leaf_Eevee",
+      "es": "Hoja_Eevee",
+      "fr": "Leaf_Évoli",
+      "it": "Leaf_Eevee",
+      "ja": "リーフ_イーブイ",
+      "ko": "리프_이브이",
+      "zh": "葉子_伊布"
+    }
+  },
+  {
+    "monsterBaseId": "20038400",
+    "monsterId": "20129000000",
+    "monsterActorId": "pm0384_00_rayquaza",
+    "trainerBaseId": "10012900",
+    "trainerNameId": "ch0129",
+    "trainerActorId": "ch0129_00_higana",
+    "stats": {
+      "hpValues": [97, 192, 246, 466, 506, 546],
+      "atkValues": [23, 97, 139, 315, 347, 379],
+      "defValues": [9, 40, 58, 124, 136, 148],
+      "spaValues": [23, 97, 139, 315, 347, 379],
+      "spdValues": [9, 40, 58, 124, 136, 148],
+      "speValues": [10, 63, 93, 214, 234, 254]
+    },
+    "moves": {
+      "move1": {
+        "id": 200,
+        "name": {
+          "de": "Wutanfall",
+          "en": "Outrage",
+          "es": "Enfado",
+          "fr": "Colère",
+          "it": "Oltraggio",
+          "ja": "げきりん",
+          "ko": "역린",
+          "zh": "逆鱗"
+        },
+        "description": {
+          "de": "Verwirrt den Anwender.",
+          "en": "Leaves the user confused.",
+          "es": "Confunde al usuario.",
+          "fr": "Rend le lanceur confus.",
+          "it": "Confonde chi la usa.",
+          "ja": "自分をこんらん状態にする",
+          "ko": "자신을 혼란 상태로 만든다",
+          "zh": "讓自己陷入混亂狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 15,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 115,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 332,
+        "name": {
+          "de": "Aero-Ass",
+          "en": "Aerial Ace",
+          "es": "Golpe Aéreo",
+          "fr": "Aéropique",
+          "it": "Aeroassalto",
+          "ja": "つばめがえし",
+          "ko": "제비반환",
+          "zh": "燕返"
+        },
+        "description": {
+          "de": "Trifft garantiert.",
+          "en": "Never misses.",
+          "es": "Acierta siempre.",
+          "fr": "N'échoue jamais.",
+          "it": "Va sempre a segno.",
+          "ja": "攻撃が必ず命中する",
+          "ko": "공격이 반드시 명중한다",
+          "zh": "攻擊必定會命中。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 10,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 45,
+        "accuracy": 0,
+        "maxUses": 0
+      },
+      "move3": {
+        "id": 11290,
+        "name": {
+          "de": "Benutzt eure\nFantasie!",
+          "en": "Stellar\nImagination!",
+          "es": "¡Con un poquito\nde imaginación!",
+          "fr": "Un peu\nd'imagination !",
+          "it": "Usiamo un po'\nd'immaginazione!",
+          "ja": "想像力を働かせて",
+          "ko": "상상력을발휘해봐",
+          "zh": "發揮想像力"
+        },
+        "description": {
+          "de": "Ist der Anwender\nzurückgeschreckt, verwirrt\noder umschlungen, wird\ner von dem Zustand\nbefreit.\nErhöht den Angriff und\nden Spezial-Angriff des\nAnwenders stark.\nErhöht die Initiative und\ndie Genauigkeit des\nAnwenders.\nSenkt die Verteidigung\nund die\nSpezial-Verteidigung\ndes Anwenders stark.",
+          "en": "Removes the confused, flinching, and trapped conditions from the user. Sharply raises the user’s Attack and Sp. Atk. Raises the user’s Speed and accuracy. Sharply lowers the user’s Defense and Sp. Def.",
+          "es": "El Pokémon se cura de\nretroceso, confusión y\nataduras.\nAumenta bastante el\nAtaque y el Ataque\nEspecial del usuario.\nAumenta la Velocidad y\nla Precisión del usuario.\nReduce bastante la\nDefensa y la Defensa\nEspecial del usuario.",
+          "fr": "Soigne le lanceur de la\npeur, de la confusion et\ndu ligotage.\nAugmente modérément\nl'Attaque et l'Attaque\nSpéciale du lanceur.\nAugmente légèrement\nsa Vitesse et sa Précision.\nBaisse modérément sa\nDéfense et sa Défense\nSpéciale.",
+          "it": "Aumenta di molto\nl'Attacco e l'Attacco\nSpeciale di chi la usa,\noltre ad aumentarne\nla Velocità e\nla precisione, ma ne\nriduce di molto la Difesa\ne la Difesa Speciale.\nInoltre, chi la usa\nguarisce dalla confusione,\ndal tentennamento e\ndall'imprigionamento.",
+          "ja": "自分のひるみ状態やこんらん状態やバインド状態を解除する\n自分の攻撃と特攻をぐーんとあげる\n自分の素早さと命中率をあげる\n自分の防御と特防をがくっとさげる",
+          "ko": "자신의 풀죽음 상태나 혼란 상태, 바인드 상태를 해제한다\n자신의 공격과 특수공격이 크게 오른다\n자신의 스피드와 명중률이 오른다\n자신의 방어와 특수방어를 크게 떨어뜨린다",
+          "zh": "解除自己的畏縮、混亂和束縛狀態。\n大幅提高自己的攻擊和特攻。\n提高自己的速度和命中率。\n大幅降低自己的防禦和特防。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 4,
+        "targetType": {
+          "de": "Anwender",
+          "en": "Self",
+          "es": "Usuario",
+          "fr": "Lanceur",
+          "it": "Se stesso",
+          "ja": "自分",
+          "ko": "자기 자신",
+          "zh": "自己"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 434,
+        "name": {
+          "de": "Draco Meteor",
+          "en": "Draco Meteor",
+          "es": "Cometa Draco",
+          "fr": "Draco Météore",
+          "it": "Dragobolide",
+          "ja": "りゅうせいぐん",
+          "ko": "용성군",
+          "zh": "流星群"
+        },
+        "description": {
+          "de": "Senkt den Spezial-Angriff\ndes Anwenders stark.",
+          "en": "Sharply lowers the user’s Sp. Atk.",
+          "es": "Reduce bastante el\nAtaque Especial del\nusuario.",
+          "fr": "Baisse modérément\nl'Attaque Spéciale\ndu lanceur.",
+          "it": "Riduce di molto\nl'Attacco Speciale\ndi chi la usa.",
+          "ja": "自分の特攻をがくっとさげる",
+          "ko": "자신의 특수공격을 크게 떨어뜨린다",
+          "zh": "大幅降低自己的特攻。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 15,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 3,
+        "power": 136,
+        "accuracy": 90,
+        "maxUses": 0
+      },
+      "syncMove": {
+        "id": 78100,
+        "name": {
+          "de": "Draco Meteor des Schutzes aller",
+          "en": "Dimensional Defender\nDraco Meteor",
+          "es": "Cometa Draco Protector del Mundo",
+          "fr": "Je sauverai le monde !\nDraco Météore !",
+          "it": "Dragobolide che\ninvoca la salvezza",
+          "ja": "みんなを守る祈りの\nりゅうせいぐん",
+          "ko": "모두를 지켜줄 기도의\n용성군",
+          "zh": "祈願守護大家之\n流星群"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 15,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 13010903,
+        "name": {
+          "de": "Wetterwechselstärke↑ 3",
+          "en": "Weather Surge 3",
+          "es": "Potencia Climática +3",
+          "fr": "Puissance Météo 3",
+          "it": "Meteoforza 3",
+          "ja": "天気変化時威力上昇３",
+          "ko": "날씨변화시위력상승3",
+          "zh": "天氣變化時威力提升３"
+        },
+        "description": {
+          "de": "Erhöht die Stärke von Attacken, wenn sich das\nWetter verändert hat.",
+          "en": "Powers up moves when weather conditions are in effect.",
+          "es": "Aumenta la potencia de los movimientos cuando\nhay condiciones atmosféricas activas.",
+          "fr": "Augmente la puissance des capacités lorsque la\nmétéo a été modifiée.",
+          "it": "Se le condizioni atmosferiche sono cambiate,\nla potenza delle mosse aumenta.",
+          "ja": "天気が変化しているときだけ技の威力をあげる",
+          "ko": "날씨가 바뀌었을 때만 기술의 위력이 오른다",
+          "zh": "只有在天氣變化時，會提高招式的威力。"
+        }
+      }
+    },
+    "type": 15,
+    "weakType": 13,
+    "rarity": 5,
+    "role": 1,
+    "pokemonNameByLanguage": {
+      "de": "Rayquaza",
+      "en": "Rayquaza",
+      "es": "Rayquaza",
+      "fr": "Rayquaza",
+      "it": "Rayquaza",
+      "ja": "レックウザ",
+      "ko": "레쿠쟈",
+      "zh": "烈空坐"
+    },
+    "trainerNameByLanguage": {
+      "de": "Amalia",
+      "en": "Zinnia",
+      "es": "Tristana",
+      "fr": "Amaryllis",
+      "it": "Lyris",
+      "ja": "ヒガナ",
+      "ko": "피아나",
+      "zh": "希嘉娜"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Amalia_Rayquaza",
+      "en": "Zinnia_Rayquaza",
+      "es": "Tristana_Rayquaza",
+      "fr": "Amaryllis_Rayquaza",
+      "it": "Lyris_Rayquaza",
+      "ja": "ヒガナ_レックウザ",
+      "ko": "피아나_레쿠쟈",
+      "zh": "希嘉娜_烈空坐"
+    }
+  },
+  {
+    "monsterBaseId": "20084900",
+    "monsterId": "20084700002",
+    "monsterActorId": "pm0849_00_ashika3",
+    "trainerBaseId": "10012200",
+    "trainerNameId": "ch0122",
+    "trainerActorId": "ch0122_00_yo",
+    "stats": {
+      "hpValues": [167, 226, 283, 503, 551, 599],
+      "atkValues": [22, 51, 78, 188, 212, 236],
+      "defValues": [27, 55, 82, 181, 201, 221],
+      "spaValues": [23, 59, 92, 224, 252, 280],
+      "spdValues": [28, 61, 91, 212, 236, 260],
+      "speValues": [19, 48, 75, 185, 209, 233]
+    },
+    "moves": {
+      "move1": {
+        "id": 55,
+        "name": {
+          "de": "Aquaknarre",
+          "en": "Water Gun",
+          "es": "Pistola Agua",
+          "fr": "Pistolet à O",
+          "it": "Pistolacqua",
+          "ja": "みずでっぽう",
+          "ko": "물대포",
+          "zh": "水槍"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 2,
+        "type": 3,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 20,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19041,
+        "name": {
+          "de": "X-Spezial-Vert.\n(Team)",
+          "en": "X Sp. Def All",
+          "es": "Def. Esp. X\nMúltiple",
+          "fr": "Omni-Déf. Spé. +",
+          "it": "Dif. Speciale X-G",
+          "ja": "ＳＰガードＧ",
+          "ko": "스페셜가드G",
+          "zh": "特防強化Ｇ"
+        },
+        "description": {
+          "de": "Erhöht die\nSpezial-Verteidigung aller\nGefährten im Team stark.",
+          "en": "Sharply raises the Sp. Def of all allied sync pairs.",
+          "es": "Aumenta bastante la\nDefensa Especial del\nbando del usuario.",
+          "fr": "Augmente modérément\nla Défense Spéciale de\ntous les alliés.",
+          "it": "Aumenta di molto\nla Difesa Speciale\ndi tutte le Unità alleate.",
+          "ja": "味方のバディーズ全員の特防をぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 특수방어가 크게 오른다",
+          "zh": "大幅提高我方全體拍組的特防。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 47,
+        "name": {
+          "de": "Gesang",
+          "en": "Sing",
+          "es": "Canto",
+          "fr": "Berceuse",
+          "it": "Canto",
+          "ja": "うたう",
+          "ko": "노래하기",
+          "zh": "唱歌"
+        },
+        "description": {
+          "de": "Versetzt das Ziel in Schlaf.",
+          "en": "Puts the target to sleep.",
+          "es": "Duerme al objetivo.",
+          "fr": "Endort l'ennemi.",
+          "it": "Addormenta il bersaglio.",
+          "ja": "相手をねむり状態にする",
+          "ko": "상대를 잠듦 상태로 만든다",
+          "zh": "讓對手陷入睡眠狀態。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 0,
+        "accuracy": 45,
+        "maxUses": 0
+      },
+      "move4": {
+        "id": 11220,
+        "name": {
+          "de": "Ass im\nÄrmel!",
+          "en": "We’ve Got\nTricks!",
+          "es": "¡Un as bajo\nla manga!",
+          "fr": "Faisons de\nnotre mieux !",
+          "it": "Diamo\nspettacolo!",
+          "ja": "一緒にがんばろう！",
+          "ko": "같이힘내자!",
+          "zh": "一起加油吧！"
+        },
+        "description": {
+          "de": "Erhöht die Initiative aller Gefährten im Team.\nVerbraucht maximal 3  Segmente der Attackenleiste des Anwenders.\nErhöht abhängig davon, wie viel von der Leiste verbraucht wurde, den Angriff und Spezial-Angriff aller Gefährten im Team um maximal  4.",
+          "en": "Raises the Speed of all allied sync pairs.\nUses a maximum of three slots of the user’s move gauge. Based on the amount used, this move raises all allied sync pairs’ Attack and Sp. Atk by up to four stat ranks.",
+          "es": "Aumenta la Velocidad del bando del usuario.\nConsume hasta 3 puntos de la barra de movimientos del usuario.\nAumenta hasta 4 niveles el Ataque y el Ataque Especial del bando del usuario en proporción al número de puntos de la barra que consuma.",
+          "fr": "Augmente légèrement la Vitesse de tous les alliés.\nConsomme jusqu'à trois segments de la Jauge Capacité du lanceur.\nL'Attaque et l'Attaque Spéciale de tous les alliés augmentent en fonction du nombre de segments consommés (maximum 4 rangs).",
+          "it": "Aumenta la Velocità di tutte le Unità alleate.\nConsuma fino a tre barrette della barra mosse di chi la usa e aumenta l'Attacco e l'Attacco Speciale di tutte le Unità alleate fino a un massimo di 4 gradi, in base al numero di barrette consumate.",
+          "ja": "味方のバディーズ全員の素早さをあげる\n自分のわざゲージを最大で３使う\n使った量に応じて味方のバディーズ全員の攻撃と特攻を最大で４段階あげる",
+          "ko": "같은 편 버디즈 전원의 스피드가 오른다\n자신의 기술게이지를 최대 3까지 사용한다\n사용한 양에 따라 같은 편 버디즈 전원의 공격과 특수공격이 최대 4단계까지 오른다",
+          "zh": "提高我方全體拍組的速度。\n使用最多３條自己的招式計量槽。\n根據使用量，最多可提高我方全體拍組的攻擊和特攻４階段。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 1
+      },
+      "syncMove": {
+        "id": 54101,
+        "name": {
+          "de": "Grandiose Meeressymphonie des Morgens",
+          "en": "Sunshine\nOceanic Operetta",
+          "es": "Sinfonía de la Diva\nMarina Radiante",
+          "fr": "Futur radieux,\nSymphonie des Ondines !",
+          "it": "Sinfonia del Mare dal futuro luminoso",
+          "ja": "サンサン輝く未来への\nわだつみのシンフォニア",
+          "ko": "빛나는 미래를 향한\n바다의심포니",
+          "zh": "迎向燦爛未來之\n海神莊嚴交響樂"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 2,
+        "group": 3,
+        "type": 3,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 12021105,
+        "name": {
+          "de": "P-Attacke-Attackenleiste↑ 5",
+          "en": "Propelling Move 5",
+          "es": "Acción Llenabarras +5",
+          "fr": "Action Jauge ↑ 5",
+          "it": "Barraggiunta 5",
+          "ja": "Ｐ技後わざゲージ↑５",
+          "ko": "P기술후기술게이지↑5",
+          "zh": "寶可夢出招後招式計量槽↑５"
+        },
+        "description": {
+          "de": "Füllt nach Einsatz einer Attacke des Pokémon sehr\noft die Attackenleiste des Anwenders um\n1 Segment auf.",
+          "en": "Has a very good chance of charging the user’s move gauge by one when the user’s Pokémon uses a move.",
+          "es": "Con mucha frecuencia llena 1 punto de la barra\nde movimientos del usuario después de que el\nPokémon use un movimiento.",
+          "fr": "Restaure un segment de la Jauge Capacité quand\nle Pokémon utilise une capacité (souvent).",
+          "it": "Quando il Pokémon usa una mossa, abbastanza\nspesso viene aggiunta una barretta alla propria\nbarra mosse.",
+          "ja": "ポケモンが技をつかったときにたびたび\n自分のわざゲージを１増やす",
+          "ko": "포켓몬이 기술을 사용하면\n자주 자신의 기술게이지를 1 추가한다",
+          "zh": "在寶可夢使出招式時，\n經常會幫自己增加１條招式計量槽。"
+        }
+      },
+      "passive2": {
+        "id": 11010104,
+        "name": {
+          "de": "Notfallheilung 4",
+          "en": "First Aid 4",
+          "es": "Remedio +4",
+          "fr": "Premiers Soins 4",
+          "it": "Cerottino 4",
+          "ja": "ピンチ時ＨＰ回復４",
+          "ko": "위기시HP회복4",
+          "zh": "危機時ＨＰ回復４"
+        },
+        "description": {
+          "de": "Stellt ein Mal pro Kampf in einer Notsituation\neinige KP wieder her.",
+          "en": "Once per battle, restores the user’s HP when in a pinch.",
+          "es": "Una vez por combate, el usuario recupera\nalgunos PS en un apuro.",
+          "fr": "Une fois par combat, le Pokémon regagne des PV\ns'il est en mauvaise posture.",
+          "it": "Una volta sola per lotta, fa recuperare PS\nquando l'Unità è in difficoltà.",
+          "ja": "バトル中に１回だけピンチのときに\n自分のＨＰを回復する",
+          "ko": "배틀 중 1번만 위급할 때\n자신의 HP를 회복한다",
+          "zh": "對戰中僅限１次，\n在陷入危機時會回復自己的ＨＰ。"
+        }
+      },
+      "passive3": {
+        "id": 18092903,
+        "name": {
+          "de": "P-Status-Attacke-Heilung T 3",
+          "en": "Team Inflict and Heal 3",
+          "es": "Acción de Estado Curativa M +3",
+          "fr": "Capa. Statut Coach Soin 3",
+          "it": "Statomossa curativa-G 3",
+          "ja": "Ｐ変化技後ＨＰ回復Ｇ３",
+          "ko": "P변화기술후HP회복G3",
+          "zh": "寶可夢變化招式後ＨＰ回復Ｇ３"
+        },
+        "description": {
+          "de": "Stellt nach Erfolg einer Status-Attacke des\nPokémon gelegentlich bei allen Gefährten im\nTeam einige KP wieder her.",
+          "en": "Has a moderately good chance of restoring the HP of all allied sync pairs when a status move used by the Pokémon is successful.",
+          "es": "Si uno de los movimientos de estado del\nPokémon acierta, es probable que el bando del\nusuario recupere algunos PS.",
+          "fr": "Quand le Pokémon utilise une capacité de statut\navec succès, restaure les PV de tous les alliés\n(parfois).",
+          "it": "Quando il Pokémon manda a segno una mossa\ndi stato, ogni tanto fa recuperare PS a tutte\nle Unità alleate.",
+          "ja": "ポケモンがつかった変化技が成功したときにときたま\n味方のバディーズ全員のＨＰを回復する",
+          "ko": "포켓몬이 사용한 변화기술이 성공했을 때\n이따금 같은 편 버디즈 전원의 HP를 회복한다",
+          "zh": "當寶可夢使出的變化招式成功時，\n有些情況下會回復我方全體拍組的ＨＰ。"
+        }
+      }
+    },
+    "type": 3,
+    "weakType": 5,
+    "rarity": 5,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Primarene",
+      "en": "Primarina",
+      "es": "Primarina",
+      "fr": "Oratoria",
+      "it": "Primarina",
+      "ja": "アシレーヌ",
+      "ko": "누리레느",
+      "zh": "西獅海壬"
+    },
+    "trainerNameByLanguage": {
+      "de": "Elio",
+      "en": "Elio",
+      "es": "Elio",
+      "fr": "Elio",
+      "it": "Elio",
+      "ja": "ヨウ",
+      "ko": "영태",
+      "zh": "小陽"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Elio_Primarene",
+      "en": "Elio_Primarina",
+      "es": "Elio_Primarina",
+      "fr": "Elio_Oratoria",
+      "it": "Elio_Primarina",
+      "ja": "ヨウ_アシレーヌ",
+      "ko": "영태_누리레느",
+      "zh": "小陽_西獅海壬"
+    }
+  },
+  {
+    "monsterBaseId": "20017500",
+    "monsterId": "20017500000",
+    "monsterActorId": "pm0175_00_togepy",
+    "trainerBaseId": "10017040",
+    "trainerNameId": "ch0170",
+    "trainerActorId": "ch0170_40_arty",
+    "stats": {
+      "hpValues": [115, 194, 269, 566, 630, 694],
+      "atkValues": [10, 37, 61, 160, 180, 200],
+      "defValues": [19, 49, 76, 186, 210, 234],
+      "spaValues": [10, 37, 61, 160, 180, 200],
+      "spdValues": [19, 49, 76, 186, 210, 234],
+      "speValues": [12, 43, 73, 194, 218, 242]
+    },
+    "moves": {
+      "move1": {
+        "id": 118,
+        "name": {
+          "de": "Metronom",
+          "en": "Metronome",
+          "es": "Metrónomo",
+          "fr": "Métronome",
+          "it": "Metronomo",
+          "ja": "ゆびをふる",
+          "ko": "손가락흔들기",
+          "zh": "揮指"
+        },
+        "description": {
+          "de": "Setzt zufällig eine von mehreren Attacken ein.",
+          "en": "Uses one of several moves at random.",
+          "es": "Usa un movimiento al azar.",
+          "fr": "Utilise aléatoirement une des capacités parmi plusieurs.",
+          "it": "Usa una mossa a caso tra varie.",
+          "ja": "いろいろなわざの中からどれかひとつを使う",
+          "ko": "여러 기술 중에서 하나를 사용한다",
+          "zh": "從各種招式當中，使用其中一種招式。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 1,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19083,
+        "name": {
+          "de": "Angriffplus+\n(Team)",
+          "en": "Dire Hit All +",
+          "es": "Directo\nMúltiple+",
+          "fr": "Omni-Muscle ++",
+          "it": "Supercolpo-G+",
+          "ja": "クリティカットＧ＋",
+          "ko": "크리티컬커터G+",
+          "zh": "要害攻擊Ｇ＋"
+        },
+        "description": {
+          "de": "Erhöht die Volltrefferquote\naller Gefährten im Team\nstark.",
+          "en": "Sharply raises the critical-hit rate of all allied sync pairs.",
+          "es": "Aumenta bastante la\nprobabilidad de asestar\ngolpes críticos del bando\ndel usuario.",
+          "fr": "Augmente modérément\nle taux de critiques de\ntous les alliés.",
+          "it": "Rende molto più probabili\ni brutti colpi per tutte le\nUnità alleate.",
+          "ja": "味方のバディーズ全員の急所率をぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 급소율이 크게 오른다",
+          "zh": "大幅提高我方全體拍組的擊中要害率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 19000,
+        "name": {
+          "de": "Trank",
+          "en": "Potion",
+          "es": "Poción",
+          "fr": "Potion",
+          "it": "Pozione",
+          "ja": "キズぐすり",
+          "ko": "상처약",
+          "zh": "傷藥"
+        },
+        "description": {
+          "de": "Stellt einige KP eines\nGefährten wieder her.",
+          "en": "Restores a bit of an ally’s HP.",
+          "es": "Restaura algunos PS a un\naliado.",
+          "fr": "Rend beaucoup de PV\nà un allié.",
+          "it": "Fa recuperare un po'\ndi PS a un'Unità alleata.",
+          "ja": "味方のＨＰを少し回復する",
+          "ko": "같은 편의 HP를 조금 회복한다",
+          "zh": "少量回復我方的ＨＰ。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 0,
+        "targetType": {
+          "de": "1 Gefährte",
+          "en": "An ally",
+          "es": "Un aliado",
+          "fr": "1 allié",
+          "it": "Un alleato",
+          "ja": "味方１体",
+          "ko": "같은 편 1마리",
+          "zh": "我方１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 11704,
+        "name": {
+          "de": "Fröhliche\nFarbenpracht!",
+          "en": "Happy Colors!",
+          "es": "¡El arte de\nla felicidad!",
+          "fr": "Peignons\nle bonheur !",
+          "it": "Il colore\ndella felicità!",
+          "ja": "幸せを描こう！",
+          "ko": "행복을그리자!",
+          "zh": "描繪幸福！"
+        },
+        "description": {
+          "de": "Erhöht die Genauigkeit aller Gefährten im Team.\nErhöht die Verteidigung und Spezial-Verteidigung aller Gefährten im Team um zufällig 1 bis 3.",
+          "en": "Raises the accuracy of all allied sync pairs.\nRaises the Defense and Sp. Def of all allied sync pairs by one to three stat ranks at random.",
+          "es": "Aumenta la Precisión del bando del usuario.\nAumenta al azar entre 1 y 3 niveles los valores de la Defensa y la Defensa Especial del bando del usuario.",
+          "fr": "Augmente légèrement la Précision de tous les alliés.\nAugmente légèrement la Défense et la Défense Spéciale de tous les alliés d'un à trois points de stats, aléatoirement.",
+          "it": "Aumenta la precisione di tutte le Unità alleate.\nAumenta la Difesa e la\nDifesa Speciale di tutte\nle Unità alleate da uno a tre gradi in modo casuale.",
+          "ja": "味方のバディーズ全員の命中率をあげる\n味方のバディーズ全員の防御と特防を１～３段階のいずれかの量をあげる",
+          "ko": "같은 편 버디즈 전원의 명중률이 오른다\n같은 편 버디즈 전원의 방어와 특수방어가 1~3단계 중 하나만큼 오른다",
+          "zh": "提高我方全體拍組的命中率。\n提高我方全體拍組的防禦和特防１～３階段中任一階段的量。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 84000,
+        "name": {
+          "de": "Feenstoß der bunten Glücksgefühle",
+          "en": "Color of Joy\nFairy Impact",
+          "es": "Impacto Hada de\nAlegría Colorida",
+          "fr": "Couleur du bonheur !\nImpact Fée !",
+          "it": "Impatto Folletto color felicità",
+          "ja": "幸せ色に染めあげる\nフェアリーインパクト",
+          "ko": "행복의 색으로 물들이는\n페어리임팩트",
+          "zh": "渲染出幸福的色彩之\n妖精衝擊"
+        },
+        "description": {
+          "de": "Hat keinen Zusatzeffekt.",
+          "en": "No additional effect.",
+          "es": "Sin efectos secundarios.",
+          "fr": "Aucun effet additionnel.",
+          "it": "Non ha effetti aggiuntivi.",
+          "ja": "追加効果なし",
+          "ko": "추가 효과 없음",
+          "zh": "沒有追加效果。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 18,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 250,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 18092605,
+        "name": {
+          "de": "Geg.-Att.-Ang.-Sp.-Ang.↑ T 5",
+          "en": "Team Supercharger 5",
+          "es": "Aumentataques M +5",
+          "fr": "Capa. Succès Coach Atq. Atq. Spé. 5",
+          "it": "Impattacco-G 5",
+          "ja": "相手に技後攻撃特攻↑Ｇ５",
+          "ko": "상대에게기술후공격특공↑G5",
+          "zh": "對手中招後攻擊特攻↑Ｇ５"
+        },
+        "description": {
+          "de": "Nach Erfolg einer Attacke auf einen Gegner\nwerden sehr oft der Angriff, der Spezial-Angriff\noder sogar beide Werte aller Gefährten im Team\nerhöht.",
+          "en": "Has a very good chance of raising the Attack or Sp. Atk—or both—of all allied sync pairs when a move targeting an opponent is successful.",
+          "es": "Con mucha frecuencia aumenta el Ataque,\nel Ataque Especial o ambos del bando del\nusuario si uno de los movimientos del usuario\nacierta al objetivo.",
+          "fr": "Quand le Duo utilise avec succès une capacité\nqui vise l'ennemi, augmente légèrement\nl'Attaque, l'Attaque Spéciale, ou les deux,\nde tous les alliés (souvent).",
+          "it": "Quando una mossa che ha come bersaglio\nun avversario va a segno, abbastanza spesso\nl'Attacco o l'Attacco Speciale di tutte le Unità\nalleate aumenta, oppure aumentano entrambi.",
+          "ja": "相手を対象にした技が成功したときにたびたび\n味方のバディーズ全員の攻撃か特攻\nまたはその両方をあげる",
+          "ko": "상대를 대상으로 하는 기술이 성공했을 때\n자주 같은 편 버디즈 전원의 공격이나 특수공격\n혹은 공격과 특수공격이 모두 오른다",
+          "zh": "當以對手為對象的招式成功時，\n經常會提高我方全體拍組的攻擊或特攻，\n或是兩種皆會提高。"
+        }
+      },
+      "passive2": {
+        "id": 19020501,
+        "name": {
+          "de": "GA-Attackenleiste↑ T",
+          "en": "Catalyst",
+          "es": "Movimiento Compi Llenabarras M",
+          "fr": "Capacité Duo Turbo Équipe",
+          "it": "Unicampo colmabarra",
+          "ja": "Ｂ技後場に技ゲージ加速",
+          "ko": "B기술후필드에기술게이지가속",
+          "zh": "拍組招式後場地招式計量槽加速"
+        },
+        "description": {
+          "de": "Beschleunigt ein Mal pro Kampf nach dem ersten\nEinsatz der Gefährtenattacke das Auffüllen der\nAttackenleiste auf der Anwender-Seite.\n",
+          "en": "Accelerates move gauges on the allied field of play when a sync move is used for the first time.",
+          "es": "Una vez por combate, aumenta la velocidad a la\nque se llena la barra de movimientos del bando\ndel usuario la primera vez que el usuario usa\nun movimiento compi.",
+          "fr": "La première fois que le Duo utilise une capacité\nDuo, la Jauge Capacité des alliés se remplit\nplus vite.",
+          "it": "Una sola volta per lotta, quando l'Unità usa\nun'Unimossa, accelera la barra mosse nel campo\nalleato.",
+          "ja": "初めてバディーズわざを使ったときだけ\n味方全体の場をわざゲージ加速状態にする",
+          "ko": "처음 버디즈기술을 사용했을 때만\n같은 편 전원의 필드를 기술게이지 가속 상태로 만든다",
+          "zh": "首次使出拍組招式時，\n會讓我方場地變成招式計量槽加速狀態。"
+        }
+      },
+      "passive3": {
+        "id": 11011209,
+        "name": {
+          "de": "Effektivitätsheilung 9",
+          "en": "Healing Superhit 9",
+          "es": "Mov. Supereficaz Curativo +9",
+          "fr": "Super Efficace Soin 9",
+          "it": "Superefficacia curativa 9",
+          "ja": "抜群時ＨＰ回復９",
+          "ko": "발군시HP회복9",
+          "zh": "效果絕佳時ＨＰ回復９"
+        },
+        "description": {
+          "de": "Stellt nach einer sehr effektiven Attacke einige\nKP des Pokémon wieder her.",
+          "en": "Restores the user’s HP when a move is super effective.",
+          "es": "Recupera algunos PS del usuario cuando uno\nde sus movimientos resulta supereficaz.",
+          "fr": "Quand le Duo utilise une capacité super efficace,\nrestaure les PV du Pokémon.",
+          "it": "Quando una mossa è superefficace, l'Unità\nrecupera PS.",
+          "ja": "技が効果抜群のときに自分のＨＰを回復する",
+          "ko": "기술이 효과가 굉장했을 때 자신의 HP를 회복한다",
+          "zh": "當招式的效果絕佳時，會回復自己的ＨＰ。"
+        }
+      }
+    },
+    "type": 18,
+    "weakType": 8,
+    "rarity": 5,
+    "role": 2,
+    "pokemonNameByLanguage": {
+      "de": "Togepi",
+      "en": "Togepi",
+      "es": "Togepi",
+      "fr": "Togepi",
+      "it": "Togepi",
+      "ja": "トゲピー",
+      "ko": "토게피",
+      "zh": "波克比"
+    },
+    "trainerNameByLanguage": {
+      "de": "Artie",
+      "en": "Burgh",
+      "es": "Camus",
+      "fr": "Artie",
+      "it": "Artemisio",
+      "ja": "アーティ",
+      "ko": "아티",
+      "zh": "亞堤"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Artie_Togepi",
+      "en": "Burgh_Togepi",
+      "es": "Camus_Togepi",
+      "fr": "Artie_Togepi",
+      "it": "Artemisio_Togepi",
+      "ja": "アーティ_トゲピー",
+      "ko": "아티_토게피",
+      "zh": "亞堤_波克比"
+    }
+  },
+  {
+    "monsterBaseId": "20042800",
+    "monsterMegaFormBaseId": "20042851",
+    "monsterId": "20042800000",
+    "monsterActorId": "pm0428_00_mimilop",
+    "trainerBaseId": "10012640",
+    "trainerNameId": "ch0126",
+    "trainerActorId": "ch0126_40_haruka",
+    "stats": {
+      "hpValues": [94, 166, 235, 510, 570, 630],
+      "atkValues": [20, 66, 108, 284, 320, 356],
+      "defValues": [20, 39, 57, 123, 139, 155],
+      "spaValues": [20, 51, 81, 202, 226, 250],
+      "spdValues": [20, 40, 58, 135, 151, 167],
+      "speValues": [20, 57, 93, 236, 264, 292],
+      "atkScale": 120,
+      "defScale": 100,
+      "spaScale": 100,
+      "spdScale": 100,
+      "speScale": 120
+    },
+    "moves": {
+      "move1": {
+        "id": 29,
+        "name": {
+          "de": "Kopfnuss",
+          "en": "Headbutt",
+          "es": "Golpe Cabeza",
+          "fr": "Coup d'Boule",
+          "it": "Bottintesta",
+          "ja": "ずつき",
+          "ko": "박치기",
+          "zh": "頭錘"
+        },
+        "description": {
+          "de": "Lässt das Ziel eventuell zurückschrecken.",
+          "en": "Has a moderate chance of making the target flinch.",
+          "es": "A veces hace retroceder al objetivo.",
+          "fr": "Apeure l'ennemi (assez rarement).",
+          "it": "A volte fa tentennare il bersaglio.",
+          "ja": "たまに相手をひるみ状態にする",
+          "ko": "가끔 상대를 풀죽음 상태로 만든다",
+          "zh": "偶爾會讓對手陷入畏縮狀態。"
+        },
+        "category": 1,
+        "group": 2,
+        "type": 1,
+        "target": 2,
+        "targetType": {
+          "de": "1 Gegner",
+          "en": "An opponent",
+          "es": "Un rival",
+          "fr": "1 ennemi",
+          "it": "Un nemico",
+          "ja": "相手１体",
+          "ko": "상대 1마리",
+          "zh": "對手１對拍組"
+        },
+        "gaugeDrain": 2,
+        "power": 53,
+        "accuracy": 100,
+        "maxUses": 0
+      },
+      "move2": {
+        "id": 19000,
+        "name": {
+          "de": "Trank",
+          "en": "Potion",
+          "es": "Poción",
+          "fr": "Potion",
+          "it": "Pozione",
+          "ja": "キズぐすり",
+          "ko": "상처약",
+          "zh": "傷藥"
+        },
+        "description": {
+          "de": "Stellt einige KP eines\nGefährten wieder her.",
+          "en": "Restores a bit of an ally’s HP.",
+          "es": "Restaura algunos PS a un\naliado.",
+          "fr": "Rend beaucoup de PV\nà un allié.",
+          "it": "Fa recuperare un po'\ndi PS a un'Unità alleata.",
+          "ja": "味方のＨＰを少し回復する",
+          "ko": "같은 편의 HP를 조금 회복한다",
+          "zh": "少量回復我方的ＨＰ。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 0,
+        "targetType": {
+          "de": "1 Gefährte",
+          "en": "An ally",
+          "es": "Un aliado",
+          "fr": "1 allié",
+          "it": "Un alleato",
+          "ja": "味方１体",
+          "ko": "같은 편 1마리",
+          "zh": "我方１對拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move3": {
+        "id": 19021,
+        "name": {
+          "de": "X-Abwehr\n(Team)",
+          "en": "X Defense All",
+          "es": "Defensa X\nMúltiple",
+          "fr": "Omni-Défense +",
+          "it": "Difesa X-G",
+          "ja": "ディフェンダーＧ",
+          "ko": "디펜드업G",
+          "zh": "防禦強化Ｇ"
+        },
+        "description": {
+          "de": "Erhöht die Verteidigung\naller Gefährten im Team\nstark.",
+          "en": "Sharply raises the Defense of all allied sync pairs.",
+          "es": "Aumenta bastante la\nDefensa del bando del\nusuario.",
+          "fr": "Augmente modérément\nla Défense de tous les\nalliés.",
+          "it": "Aumenta di molto\nla Difesa di tutte le Unità\nalleate.",
+          "ja": "味方のバディーズ全員の防御をぐーんとあげる",
+          "ko": "같은 편 버디즈 전원의 방어가 크게 오른다",
+          "zh": "大幅提高我方全體拍組的防禦。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "move4": {
+        "id": 11264,
+        "name": {
+          "de": "Hoppelsprung!",
+          "en": "Hippity Hoppity!",
+          "es": "¡Un salto\nde gracia!",
+          "fr": "Chou et\ntout doux !",
+          "it": "Quattro salti\nin morbidezza!",
+          "ja": "もこもこキュートに",
+          "ko": "뭉실뭉실귀엽게",
+          "zh": "毛茸茸無敵可愛"
+        },
+        "description": {
+          "de": "Erhöht die Initiative aller Gefährten im Team stark, wenn der Anwender Schlapor ist.\nErhöht den Fluchtwert des Anwenders stark, wenn der Anwender Schlapor ist.\nErhöht die Genauigkeit des Anwenders, wenn der Anwender zu Mega-Schlapor geworden ist.\nErhöht den Fluchtwert des Anwenders sehr stark, wenn der Anwender zu Mega-Schlapor geworden ist.",
+          "en": "If used by Lopunny, sharply raises the Speed of all allied sync pairs.\nIf used by Lopunny, sharply raises the user’s evasiveness.\nIf used by Mega Lopunny, raises the user’s accuracy.\nIf used by Mega Lopunny, drastically raises the user’s evasiveness.",
+          "es": "Si lo usa Lopunny, aumenta bastante la Velocidad del bando del usuario.\nSi lo usa Lopunny, aumenta bastante la Evasión del usuario.\nSi ha evolucionado a Mega-Lopunny, aumenta la Precisión del usuario.\nSi ha evolucionado a Mega-Lopunny, aumenta mucho la Evasión del usuario.",
+          "fr": "Si lancé par Lockpin, augmente modérément la Vitesse de tous les alliés.\nSi lancé par Lockpin, augmente modérément l'Esquive du lanceur.\nSi le lanceur a méga-évolué, augmente légèrement la Précision du lanceur.\nSi le lanceur a méga-évolué, augmente beaucoup l'Esquive du lanceur.",
+          "it": "Se Lopunny la usa, aumenta di molto la Velocità di tutte le Unità alleate.\nSe Lopunny la usa, aumenta di molto l'elusione di chi la usa.\nSe MegaLopunny usa questa mossa, aumenta la sua precisione.\nSe MegaLopunny usa questa mossa, aumenta moltissimo la sua elusione.",
+          "ja": "自分がミミロップの場合は味方のバディーズ全員の素早さをぐーんとあげる\n自分がミミロップの場合は自分の回避率をぐーんとあげる\n自分がメガミミロップになっている場合は自分の命中率をあげる\n自分がメガミミロップになっている場合は自分の回避率をぐぐーんとあげる",
+          "ko": "자신이 이어롭일 때 같은 편 버디즈 전원의 스피드가 크게 오른다\n자신이 이어롭일 때 자신의 회피율이 크게 오른다\n자신이 메가이어롭이 되어있을 때는 자신의 명중률이 오른다\n자신이 메가이어롭이 되어있을 때는 자신의 회피율이 매우 크게 오른다",
+          "zh": "當自己是長耳兔時，大幅提高我方全體拍組的速度。\n當自己是長耳兔時，大幅提高自己的閃避率。\n當長耳兔已經變成超級長耳兔時，會提高自己的命中率。\n當長耳兔已經變成超級長耳兔時，會極大幅提高自己的閃避率。"
+        },
+        "category": 3,
+        "group": 2,
+        "type": 0,
+        "target": 1,
+        "targetType": {
+          "de": "Alle Gefährten",
+          "en": "All allies",
+          "es": "Todos los aliados",
+          "fr": "Tous les alliés",
+          "it": "Tutti gli alleati",
+          "ja": "味方全員",
+          "ko": "같은 편 전원",
+          "zh": "我方全體拍組"
+        },
+        "gaugeDrain": 0,
+        "power": 0,
+        "accuracy": 0,
+        "maxUses": 2
+      },
+      "syncMove": {
+        "id": 62300,
+        "name": {
+          "de": "Normalstoß des Herzschlags",
+          "en": "Heart-Thumping\nNormal Impact",
+          "es": "Impacto Normal del\nBum Bum del Corazón",
+          "fr": "Cœur battant !\nImpact Normal !",
+          "it": "Impatto Normale del batticuore",
+          "ja": "心が弾むドキドキの\nノーマルインパクト",
+          "ko": "마음이 들뜨는 두근두근\n노말임팩트",
+          "zh": "歡喜雀躍心跳加速之\n一般衝擊"
+        },
+        "description": {
+          "de": "Löst bei Schlapor bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Schlapor aus.\nNach dem ersten Einsatz nimmt die Gefährtenattacke bis zum Ende des Kampfes den Typ Kampf an.",
+          "en": "Become Mega Lopunny until the end of battle.\nAfter this sync move is used for the first time, it becomes Fighting type until the end of battle.",
+          "es": "Evoluciona a Mega-Lopunny. Vuelve a la normalidad tras terminar el combate.\nEste movimiento compi se transforma en tipo Lucha tras usarlo por primera vez. Vuelve a la normalidad tras terminar el combate.",
+          "fr": "Permet à Lockpin de devenir Méga-Lockpin jusqu'à la fin du combat.\nAprès utilisation pour la première fois de cette capacité Duo, elle devient de type Combat jusqu'à la fin du combat.",
+          "it": "Permette a Lopunny di megaevolversi. L'effetto svanisce al termine della lotta.\nDopo l'utilizzo di questa Unimossa per la prima volta, essa diventa di tipo Lotta fino alla fine della lotta.",
+          "ja": "バトル終了までメガミミロップになる\n初めてバディーズわざを使ったあと　バトル終了までバディーズわざがかくとうタイプになる",
+          "ko": "배틀이 끝날 때까지 메가이어롭이 된다\n처음 버디즈기술을 사용한 뒤 배틀이 끝날 때까지 버디즈기술이 격투타입이 된다",
+          "zh": "變成超級長耳兔直到對戰結束。\n首次使出拍組招式後，拍組招式變成格鬥屬性直到對戰結束。"
+        },
+        "category": 1,
+        "group": 3,
+        "type": 1,
+        "target": 2,
+        "gaugeDrain": 0,
+        "power": 200,
+        "accuracy": 0,
+        "maxUses": 0
+      }
+    },
+    "passives": {
+      "passive1": {
+        "id": 16012701,
+        "name": {
+          "de": "GA-GA-Typenwechsel",
+          "en": "Sync Morph",
+          "es": "Movimiento Compi Cambio Tipo",
+          "fr": "C. D. Changement Type C. D.",
+          "it": "Cambiotipo Unimossa",
+          "ja": "Ｂ技後Ｂ技タイプ変化",
+          "ko": "B기술후B기술타입변화",
+          "zh": "拍組招式後拍組招式屬性變化"
+        },
+        "description": {
+          "de": "Nach dem ersten Einsatz der Gefährtenattacke\nändert diese ein Mal pro Kampf ihren Typ.",
+          "en": "Changes the user’s sync move type when a sync move is used for the first time.",
+          "es": "Una vez por combate, cambia el tipo del\nmovimiento compi del usuario la primera vez que\nlo usa.",
+          "fr": "La première fois que le Duo utilise une capacité\nDuo, le type de la capacité Duo change.",
+          "it": "Una sola volta per lotta, quando l'Unità usa\nun'Unimossa, il tipo della sua Unimossa cambia.",
+          "ja": "初めてバディーズわざを使ったときだけ\nバディーズわざのタイプが変化する",
+          "ko": "처음 버디즈기술을 사용했을 때만\n버디즈기술의 타입이 변화한다",
+          "zh": "首次使出拍組招式時，\n拍組招式的屬性會產生變化。"
+        }
+      },
+      "passive2": {
+        "id": 12020405,
+        "name": {
+          "de": "Gegentreffer-Leiste↑ 5",
+          "en": "Revenge Boost 5",
+          "es": "Daño Llenabarras +5",
+          "fr": "Réflexe Jauge ↑ 5",
+          "it": "Reazione riempibarra 5",
+          "ja": "被攻撃時わざゲージ↑５",
+          "ko": "피격시기술게이지↑5",
+          "zh": "被攻擊時招式計量槽↑５"
+        },
+        "description": {
+          "de": "Füllt sehr oft die Attackenleiste des Anwenders\num 1 Segment auf, wenn das Pokémon von einer\nAttacke getroffen wird.",
+          "en": "Has a very good chance of charging the user’s move gauge by one when the user is hit by an attack move.",
+          "es": "Con mucha frecuencia llena 1 punto de la barra\nde movimientos del usuario si es atacado.",
+          "fr": "Quand le Duo subit une attaque, restaure un\nsegment de la Jauge Capacité (souvent).",
+          "it": "Quando l'Unità subisce un attacco semplice,\nabbastanza spesso viene aggiunta una barretta\nalla sua barra mosse.",
+          "ja": "技で攻撃を受けたときにたびたび\n自分のわざゲージを１増やす",
+          "ko": "기술로 공격받았을 때 자주\n자신의 기술게이지를 1 추가한다",
+          "zh": "受到招式攻擊時，經常會\n幫自己增加１條招式計量槽。"
+        }
+      },
+      "passive3": {
+        "id": 18092506,
+        "name": {
+          "de": "GA-Angriff↑ 6",
+          "en": "Solo Fanfare 6",
+          "es": "Movimiento Compi Ataque ↑ +6",
+          "fr": "Capacité Duo Attaque ↑ 6",
+          "it": "Uniattacco 6",
+          "ja": "Ｂ技後攻撃アップ６",
+          "ko": "B기술후공격업6",
+          "zh": "拍組招式後攻擊提升６"
+        },
+        "description": {
+          "de": "Erhöht ein Mal pro Kampf nach dem ersten\nEinsatz der Gefährtenattacke den Angriff des\nPokémon drastisch.",
+          "en": "Radically raises the user’s Attack when a sync move is used for the first time.",
+          "es": "Una vez por combate, aumenta de manera\nespectacular el Ataque del usuario la primera\nvez que usa su movimiento compi.",
+          "fr": "La première fois que le Duo utilise une capacité\nDuo, l'Attaque du Pokémon augmente\nvertigineusement.",
+          "it": "Una sola volta per lotta, quando l'Unità usa\nun'Unimossa, il suo Attacco aumenta al massimo.",
+          "ja": "初めてバディーズわざを使ったときだけ\n自分の攻撃をどっかーんとあげる",
+          "ko": "처음 버디즈기술을 사용했을 때만\n자신의 공격이 폭발적으로 오른다",
+          "zh": "首次使出拍組招式時，\n會爆發式提高自己的攻擊。"
+        }
+      }
+    },
+    "type": 1,
+    "weakType": 7,
+    "rarity": 5,
+    "role": 0,
+    "megaForm": {
+      "moves": {
+        "move1": {
+          "id": 19100,
+          "name": {
+            "de": "Attackenleiste\nauffüllen",
+            "en": "Move Gauge Boost",
+            "es": "Barra Mov. ↑",
+            "fr": "Jauge Capacité ↑",
+            "it": "Riempibarra",
+            "ja": "わざゲージアップ",
+            "ko": "기술게이지업",
+            "zh": "招式計量槽填充"
+          },
+          "description": {
+            "de": "Füllt die Attackenleiste\ndes Anwenders um\ndrei Segmente auf.",
+            "en": "Increases the user’s move gauge by three.",
+            "es": "Llena 3  puntos de la\nbarra de movimientos\ndel usuario.",
+            "fr": "Remplit 3 segments\nde la Jauge Capacité\ndu lanceur.",
+            "it": "Aggiunge tre barrette\nalla barra mosse.",
+            "ja": "自分のわざゲージを３増やす",
+            "ko": "자신의 기술게이지를 3 추가한다",
+            "zh": "幫自己增加３條招式計量槽。"
+          },
+          "category": 3,
+          "group": 2,
+          "type": 0,
+          "target": 4,
+          "targetType": {
+            "de": "Anwender",
+            "en": "Self",
+            "es": "Usuario",
+            "fr": "Lanceur",
+            "it": "Se stesso",
+            "ja": "自分",
+            "ko": "자기 자신",
+            "zh": "自己"
+          },
+          "gaugeDrain": 0,
+          "power": 0,
+          "accuracy": 0,
+          "maxUses": 2
+        },
+        "move3": {
+          "id": 136,
+          "name": {
+            "de": "Turmkick",
+            "en": "High Jump Kick",
+            "es": "Pat. Salto Alta",
+            "fr": "Pied Voltige",
+            "it": "Calcinvolo",
+            "ja": "とびひざげり",
+            "ko": "무릎차기",
+            "zh": "飛膝踢"
+          },
+          "description": {
+            "de": "Schlägt die Attacke fehl,\nerleidet der Anwender\nSchaden in Höhe der\nHälfte seiner maximalen\nKP.",
+            "en": "If it fails, the user takes damage equal to half of its maximum HP.",
+            "es": "Si falla, el usuario recibe\nun daño equivalente a la\nmitad de sus PS máximos.",
+            "fr": "Le lanceur perd la moitié\nde ses PV max si la\ncapacité échoue.",
+            "it": "Se la mossa fallisce,\nchi l'ha usata subisce\nuna quantità di danni\npari a 1/2 dei suoi\nPS massimi.",
+            "ja": "攻撃が失敗すると自分の最大ＨＰの半分のダメージを受ける",
+            "ko": "공격이 실패하면 자신의 최대 HP의 절반만큼 데미지를 입는다",
+            "zh": "攻擊失敗時，會受到自己最大ＨＰ的一半的傷害。"
+          },
+          "category": 1,
+          "group": 2,
+          "type": 7,
+          "target": 2,
+          "targetType": {
+            "de": "1 Gegner",
+            "en": "An opponent",
+            "es": "Un rival",
+            "fr": "1 ennemi",
+            "it": "Un nemico",
+            "ja": "相手１体",
+            "ko": "상대 1마리",
+            "zh": "對手１對拍組"
+          },
+          "gaugeDrain": 3,
+          "power": 135,
+          "accuracy": 90,
+          "maxUses": 0
+        }
+      },
+      "passives": {
+        "passive2": {
+          "id": 12020405,
+          "name": {
+            "de": "Treffer-Attackenleiste↑ 5",
+            "en": "Propelling Strike 5",
+            "es": "Ataque Llenabarras +5",
+            "fr": "Capa. Offensive Jauge ↑ 5",
+            "it": "Attacco riempibarra 5",
+            "ja": "攻撃時わざゲージ↑５",
+            "ko": "공격시기술게이지↑5",
+            "zh": "攻擊時招式計量槽增加５"
+          },
+          "description": {
+            "de": "Füllt nach Erfolg einer Attacke sehr oft die\nAttackenleiste des Anwenders um 1 Segment auf.",
+            "en": "Has a very good chance of charging the user’s move gauge by one when an attack move is successful.",
+            "es": "Con mucha frecuencia llena 1 punto de la barra\nde movimientos del usuario si uno de sus\nataques acierta.",
+            "fr": "Restaure un segment de la Jauge Capacité quand\nle Duo utilise avec succès une capacité offensive\n(souvent).",
+            "it": "Dopo aver mandato a segno un attacco semplice,\nabbastanza spesso viene aggiunta una barretta\nalla propria barra mosse.",
+            "ja": "技での攻撃が成功したときにたびたび\n自分のわざゲージを１増やす",
+            "ko": "기술로 공격에 성공했을 때\n자주 자신의 기술게이지를 1 추가한다",
+            "zh": "使出招式攻擊成功時，\n經常會幫自己增加１條招式計量槽。"
+          }
+        }
+      }
+    },
+    "pokemonNameByLanguage": {
+      "de": "Schlapor",
+      "en": "Lopunny",
+      "es": "Lopunny",
+      "fr": "Lockpin",
+      "it": "Lopunny",
+      "ja": "ミミロップ",
+      "ko": "이어롭",
+      "zh": "長耳兔"
+    },
+    "trainerNameByLanguage": {
+      "de": "Maike",
+      "en": "May",
+      "es": "Aura",
+      "fr": "Flora",
+      "it": "Vera",
+      "ja": "ハルカ",
+      "ko": "봄이",
+      "zh": "小遙"
+    },
+    "syncPairNameByLanguage": {
+      "de": "Maike_Schlapor",
+      "en": "May_Lopunny",
+      "es": "Aura_Lopunny",
+      "fr": "Flora_Lockpin",
+      "it": "Vera_Lopunny",
+      "ja": "ハルカ_ミミロップ",
+      "ko": "봄이_이어롭",
+      "zh": "小遙_長耳兔"
     }
   },
   {

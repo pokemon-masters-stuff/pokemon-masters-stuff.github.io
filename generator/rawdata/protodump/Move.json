@@ -151,6 +151,21 @@
       "tags": "none"
     },
     {
+      "moveId": 29,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 1,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 2,
+      "power": 53,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
       "moveId": 33,
       "category": "Physical",
       "u3": 1,
@@ -299,6 +314,21 @@
       "accuracy": 0,
       "maxUses": 2,
       "tags": "ForcedSwitch"
+    },
+    {
+      "moveId": 47,
+      "category": "Status",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 1,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 1,
+      "power": 0,
+      "accuracy": 45,
+      "maxUses": 0,
+      "tags": "none"
     },
     {
       "moveId": 51,
@@ -676,6 +706,21 @@
       "tags": "none"
     },
     {
+      "moveId": 90,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 9,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 4,
+      "power": 0,
+      "accuracy": 30,
+      "maxUses": 0,
+      "tags": 16777216
+    },
+    {
       "moveId": 92,
       "category": "Status",
       "u3": 1,
@@ -824,6 +869,21 @@
       "accuracy": 0,
       "maxUses": 2,
       "tags": "none"
+    },
+    {
+      "moveId": 118,
+      "category": "Status",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 1,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 1,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 8388608
     },
     {
       "moveId": 122,
@@ -1225,6 +1285,21 @@
       "target": "OpponentSingle",
       "u8": 1,
       "gaugeDrain": 2,
+      "power": 0,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
+      "moveId": 207,
+      "category": "Status",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 1,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 1,
       "power": 0,
       "accuracy": 100,
       "maxUses": 0,
@@ -2037,6 +2112,21 @@
       "gaugeDrain": 2,
       "power": 0,
       "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
+      "moveId": 348,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 5,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 80,
+      "accuracy": 100,
       "maxUses": 0,
       "tags": "none"
     },
@@ -3419,6 +3509,36 @@
       "accuracy": 100,
       "maxUses": 3,
       "tags": "QuickMove"
+    },
+    {
+      "moveId": 624,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 14,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 80,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
+      "moveId": 626,
+      "category": "Special",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 3,
+      "target": "OpponentAll",
+      "u8": 1,
+      "gaugeDrain": 3,
+      "power": 100,
+      "accuracy": 100,
+      "maxUses": 0,
+      "tags": "none"
     },
     {
       "moveId": 629,
@@ -8296,6 +8416,21 @@
       "tags": 1048576
     },
     {
+      "moveId": 9329,
+      "category": "Status",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 0,
+      "target": "Self",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 1048576
+    },
+    {
       "moveId": 9330,
       "category": "Status",
       "u3": 1,
@@ -8378,6 +8513,21 @@
       "group": "Regular",
       "type": 0,
       "target": "Self",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": 1048576
+    },
+    {
+      "moveId": 9339,
+      "category": "Status",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Regular",
+      "type": 0,
+      "target": "AllySingle",
       "u8": 1,
       "gaugeDrain": 0,
       "power": 0,
@@ -10081,6 +10231,36 @@
       "tags": "none"
     },
     {
+      "moveId": 11220,
+      "category": "Status",
+      "u3": 2,
+      "user": "Trainer",
+      "group": "Regular",
+      "type": 0,
+      "target": "AllyAll",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 1,
+      "tags": "none"
+    },
+    {
+      "moveId": 11230,
+      "category": "Status",
+      "u3": 2,
+      "user": "Trainer",
+      "group": "Regular",
+      "type": 0,
+      "target": "Self",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 1,
+      "tags": "none"
+    },
+    {
       "moveId": 11240,
       "category": "Status",
       "u3": 2,
@@ -10124,6 +10304,21 @@
       "accuracy": 0,
       "maxUses": 2,
       "tags": "none"
+    },
+    {
+      "moveId": 11264,
+      "category": "Status",
+      "u3": 2,
+      "user": "Trainer",
+      "group": "Regular",
+      "type": 0,
+      "target": "AllyAll",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": 8388608
     },
     {
       "moveId": 11270,
@@ -10373,6 +10568,21 @@
       "group": "Regular",
       "type": 0,
       "target": "Self",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 0,
+      "accuracy": 0,
+      "maxUses": 2,
+      "tags": "none"
+    },
+    {
+      "moveId": 11704,
+      "category": "Status",
+      "u3": 2,
+      "user": "Trainer",
+      "group": "Regular",
+      "type": 0,
+      "target": "AllyAll",
       "u8": 1,
       "gaugeDrain": 0,
       "power": 0,
@@ -12466,6 +12676,21 @@
       "tags": "none"
     },
     {
+      "moveId": 46000,
+      "category": "Special",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Sync",
+      "type": 10,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
       "moveId": 46100,
       "category": "Special",
       "u3": 1,
@@ -12689,6 +12914,21 @@
       "accuracy": 0,
       "maxUses": 0,
       "tags": 8388608
+    },
+    {
+      "moveId": 54101,
+      "category": "Special",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Sync",
+      "type": 3,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
     },
     {
       "moveId": 54301,
@@ -13001,6 +13241,21 @@
       "u8": 1,
       "gaugeDrain": 0,
       "power": 160,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
+      "moveId": 62300,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Sync",
+      "type": 1,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
       "accuracy": 0,
       "maxUses": 0,
       "tags": "none"
@@ -14461,6 +14716,21 @@
       "tags": "none"
     },
     {
+      "moveId": 81400,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Sync",
+      "type": 5,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
       "moveId": 81700,
       "category": "Physical",
       "u3": 1,
@@ -14596,6 +14866,21 @@
       "tags": "none"
     },
     {
+      "moveId": 84000,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Sync",
+      "type": 18,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
       "moveId": 84100,
       "category": "Special",
       "u3": 1,
@@ -14606,6 +14891,21 @@
       "u8": 1,
       "gaugeDrain": 0,
       "power": 250,
+      "accuracy": 0,
+      "maxUses": 0,
+      "tags": "none"
+    },
+    {
+      "moveId": 84200,
+      "category": "Physical",
+      "u3": 1,
+      "user": "Pokemon",
+      "group": "Sync",
+      "type": 7,
+      "target": "OpponentSingle",
+      "u8": 1,
+      "gaugeDrain": 0,
+      "power": 200,
       "accuracy": 0,
       "maxUses": 0,
       "tags": "none"

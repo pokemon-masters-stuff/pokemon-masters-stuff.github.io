@@ -54,8 +54,6 @@ function Stats(props) {
     speScale,
   } = statsPlusPotential;
 
-  console.log(hp, atk, def, spa, spd, spe);
-
   const classes = useRowStyles();
 
   let hpUpFromGrid = 0;
@@ -716,37 +714,12 @@ export default function MovesAndSkillsModal(props) {
       : preMegaMoves;
 
     if (megaForm.passives) {
-      if (megaForm.passives.passive4) {
-        postMegaPassives = [
-          megaForm.passives.passive1 || passives.passive1,
-          megaForm.passives.passive2 || passives.passive2,
-          megaForm.passives.passive3 || passives.passive3,
-          megaForm.passives.passive4,
-        ];
-      } else if (megaForm.passives.passive3) {
-        postMegaPassives = passives.passive4
-          ? [
-              megaForm.passives.passive1 || passives.passive1,
-              megaForm.passives.passive2 || passives.passive2,
-              megaForm.passives.passive3,
-              passives.passive4,
-            ]
-          : [
-              megaForm.passives.passive1 || passives.passive1,
-              megaForm.passives.passive2 || passives.passive2,
-              megaForm.passives.passive3,
-            ];
-      } else if (megaForm.passives.passive2) {
-        postMegaPassives = passives.passive3
-          ? [
-              megaForm.passives.passive1,
-              megaForm.passives.passive2,
-              passives.passive3,
-            ]
-          : [megaForm.passives.passive1, megaForm.passives.passive2];
-      } else {
-        postMegaPassives = [megaForm.passives.passive1];
-      }
+      postMegaPassives = [
+        megaForm.passives.passive1 || passives.passive1,
+        megaForm.passives.passive2 || passives.passive2,
+        megaForm.passives.passive3 || passives.passive3,
+        megaForm.passives.passive4 || passives.passive4,
+      ];
     } else {
       postMegaPassives = preMegaPassives;
     }
@@ -874,20 +847,24 @@ export default function MovesAndSkillsModal(props) {
             </TableHead>
             <TableBody>
               {!isMega
-                ? preMegaPassives.map((passive, index) => (
-                    <Passives
-                      key={index}
-                      language={language}
-                      passive={passive}
-                    />
-                  ))
-                : postMegaPassives.map((passive, index) => (
-                    <Passives
-                      key={index}
-                      language={language}
-                      passive={passive}
-                    />
-                  ))}
+                ? preMegaPassives.map((passive, index) =>
+                    passive ? (
+                      <Passives
+                        key={index}
+                        language={language}
+                        passive={passive}
+                      />
+                    ) : null
+                  )
+                : postMegaPassives.map((passive, index) =>
+                    passive ? (
+                      <Passives
+                        key={index}
+                        language={language}
+                        passive={passive}
+                      />
+                    ) : null
+                  )}
             </TableBody>
           </Table>
         </TableContainer>

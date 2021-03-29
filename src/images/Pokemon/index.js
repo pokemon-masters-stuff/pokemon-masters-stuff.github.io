@@ -18,7 +18,6 @@ export { default as pm0448_00_lucario_128 } from './128px/pm0448_00_lucario_128.
 export { default as pm0095_00_iwark_128 } from './128px/pm0095_00_iwark_128.ktx.png'; // Onix
 // export { default as pm0248_00_bangiras_128 } from './128px/pm0248_00_bangiras_128.ktx.png'; // Tyranitar
 export { default as pm0581_00_swanna_128 } from './128px/pm0581_00_swanna_128.ktx.png'; // Swanna
-export { default as pm0133_00_eievui_128 } from './128px/pm0133_00_eievui_128.ktx.png'; // Eevee
 export { default as pm0003_01_fushigibana_128 } from './128px/pm0003_01_fushigibana_128.ktx.png'; // Venusaur
 export { default as pm0160_00_ordile_128 } from './128px/pm0160_00_ordile_128.ktx.png'; // Feraligatr
 // export { default as pm0254_00_jukain_128 } from './128px/pm0254_00_jukain_128.ktx.png'; // Sceptile
@@ -148,3 +147,10 @@ export { default as pm0635_00_sazandora_128 } from './128px/pm0635_00_sazandora_
 export { default as pm0282_00_sirnight_128 } from './128px/pm0282_00_sirnight_128.ktx.png'; // Gardevoir
 export { default as pm0484_00_palkia_128 } from './128px/pm0484_00_palkia_128.ktx.png'; // Palkia
 export { default as pm0877_11_00_morpeko_128 } from './128px/pm0877_11_00_morpeko_128.ktx.png'; // Morpeko
+// 3/29/2021
+export { default as pm0133_00_eievui_128 } from './128px/pm0133_00_eievui_128.ktx.png'; // Eevee
+export { default as pm0849_00_ashika3_128 } from './128px/pm0849_00_ashika3_128.ktx.png'; // Primarina
+export { default as pm0843_00_fukurou3_128 } from './128px/pm0843_00_fukurou3_128.ktx.png'; // Decidueye
+export { default as pm0428_00_mimilop_128 } from './128px/pm0428_00_mimilop_128.ktx.png'; // Lopunny
+export { default as pm0384_00_rayquaza_128 } from './128px/pm0384_00_rayquaza_128.ktx.png'; // Rayquaza
+export { default as pm0175_00_togepy_128 } from './128px/pm0175_00_togepy_128.ktx.png'; // Togepi

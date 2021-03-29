@@ -273,17 +273,24 @@ const gridedTrainerList = [
   '10019400', // Cyrus
   '10009280', // SS Iris
   '10002000', // Hilbert
+  // 3/29/2021
+  '10012300', // Selene
+  '10001700', // Leaf
+  '10012900', // Zinnia
+  '10012200', // Elio
+  '10017040', // Burgh
+  '10012640', // May
 ];
 
 const newTrainerBaseIdArray = [
   // Copy paste from the other array. Used to generate a list of monsterBaseId for the import and export script.
-  // 2/24/2021
-  '10024500', // Marnie
-  '10024700', // Leon
-  '10015800', // Diantha
-  '10019400', // Cyrus
-  '10009280', // SS Iris
-  '10002000', // Hilbert
+  // 3/29/2021
+  '10012300', // Selene
+  '10001700', // Leaf
+  '10012900', // Zinnia
+  '10012200', // Elio
+  '10017040', // Burgh
+  '10012640', // May
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -365,6 +372,54 @@ const getUpdatedMoveDescription = (language, moveId) => {
     );
   } else if (moveId === 83200) {
     return moveDescriptionPartsDB[language]['999981'];
+  } else if (moveId === 348) {
+    return moveDescriptionPartsDB[language]['999998'];
+  } else if (moveId === 11230) {
+    return (
+      moveDescriptionPartsDB[language]['999975'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999974']
+    );
+  } else if (moveId === 81400) {
+    return moveDescriptionPartsDB[language]['999998'];
+  } else if (moveId === 47) {
+    return moveDescriptionPartsDB[language]['999979'];
+  } else if (moveId === 11220) {
+    return (
+      moveDescriptionPartsDB[language]['999973'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999972']
+    );
+  } else if (moveId === 54101) {
+    return moveDescriptionPartsDB[language]['999999'];
+  } else if (moveId === 118) {
+    return moveDescriptionPartsDB[language]['999961'];
+  } else if (moveId === 11704) {
+    return (
+      moveDescriptionPartsDB[language]['999976'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999956']
+    );
+  } else if (moveId === 84000) {
+    return moveDescriptionPartsDB[language]['999999'];
+  } else if (moveId === 29) {
+    return moveDescriptionPartsDB[language]['999980'];
+  } else if (moveId === 11264) {
+    return (
+      moveDescriptionPartsDB[language]['999960'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999959'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999958'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999957']
+    );
+  } else if (moveId === 62300) {
+    return (
+      moveDescriptionPartsDB[language]['999955'] +
+      '\n' +
+      moveDescriptionPartsDB[language]['999954']
+    );
   } else {
     return moveDescriptionDB[language][moveId];
   }
