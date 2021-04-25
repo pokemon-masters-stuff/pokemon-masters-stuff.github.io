@@ -303,129 +303,32 @@ const newTrainerBaseIdArray = [
  * */
 
 const getUpdatedMoveDescription = (language, moveId) => {
-  // To refactor
-  if (moveId === 219) {
-    return moveDescriptionPartsDB[language]['999997'];
-  } else if (moveId === 407) {
-    return moveDescriptionPartsDB[language]['999996'];
-  } else if (moveId === 517) {
-    return moveDescriptionPartsDB[language]['999995'];
-  } else if (moveId === 643) {
-    return moveDescriptionPartsDB[language]['999994'];
-  } else if (moveId === 783) {
-    return (
-      moveDescriptionPartsDB[language]['999993'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999969'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999968']
-    );
-  } else if (moveId === 784) {
-    return moveDescriptionPartsDB[language]['999992'];
-  } else if (moveId === 10928) {
-    return (
-      moveDescriptionPartsDB[language]['999991'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999990'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999989'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999988']
-    );
-  } else if (moveId === 11580) {
-    return (
-      moveDescriptionPartsDB[language]['999987'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999967']
-    );
-  } else if (moveId === 12450) {
-    return (
-      moveDescriptionPartsDB[language]['999986'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999966'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999965'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999964']
-    );
-  } else if (moveId === 12470) {
-    return (
-      moveDescriptionPartsDB[language]['999990'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999985'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999988'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999984'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999983']
-    );
-  } else if (moveId === 61500) {
-    return moveDescriptionPartsDB[language]['999963'];
-  } else if (moveId === 81800) {
-    return moveDescriptionPartsDB[language]['999999'];
-  } else if (moveId === 81900) {
-    return (
-      moveDescriptionPartsDB[language]['999962'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999982']
-    );
-  } else if (moveId === 83200) {
-    return moveDescriptionPartsDB[language]['999981'];
-  } else if (moveId === 348) {
-    return moveDescriptionPartsDB[language]['999998'];
-  } else if (moveId === 11230) {
-    return (
-      moveDescriptionPartsDB[language]['999975'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999974']
-    );
-  } else if (moveId === 81400) {
-    return moveDescriptionPartsDB[language]['999998'];
-  } else if (moveId === 47) {
-    return moveDescriptionPartsDB[language]['999979'];
-  } else if (moveId === 11220) {
-    return (
-      moveDescriptionPartsDB[language]['999973'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999972']
-    );
-  } else if (moveId === 54101) {
-    return moveDescriptionPartsDB[language]['999999'];
-  } else if (moveId === 118) {
-    return moveDescriptionPartsDB[language]['999961'];
-  } else if (moveId === 11704) {
-    return (
-      moveDescriptionPartsDB[language]['999976'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999956']
-    );
-  } else if (moveId === 84000) {
-    return moveDescriptionPartsDB[language]['999999'];
-  } else if (moveId === 624) {
-    return moveDescriptionPartsDB[language]['999977'];
-  } else if (moveId === 626) {
-    return moveDescriptionPartsDB[language]['999999'];
-  } else if (moveId === 29) {
-    return moveDescriptionPartsDB[language]['999980'];
-  } else if (moveId === 11264) {
-    return (
-      moveDescriptionPartsDB[language]['999960'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999959'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999958'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999957']
-    );
-  } else if (moveId === 62300) {
-    return (
-      moveDescriptionPartsDB[language]['999955'] +
-      '\n' +
-      moveDescriptionPartsDB[language]['999954']
-    );
+  let originalMoveDescription = moveDescriptionDB[language][moveId];
+  if (originalMoveDescription.includes('Idx')) {
+    let iteratorOfIdx = originalMoveDescription.matchAll('Idx');
+    let arrayOfIdxIndex = [];
+    let arrayOfMoveDescriptionParts = [];
+    for (const Idx of iteratorOfIdx) {
+      // console.log(`For moveId=${moveId}: Found ${Idx[0]} at ${Idx.index}`);
+      // console.log(
+      //   `For moveId=${moveId}: Idx has the following properties: ${Object.keys(Idx)}
+      //   index=${Idx.index}
+      //   input=${Idx.input}
+      //   groups=${Idx.groups}
+      //   `
+      // );
+      arrayOfIdxIndex.push(
+        originalMoveDescription.slice(Idx.index + 5, Idx.index + 11)
+      );
+    }
+    for (const index of arrayOfIdxIndex) {
+      arrayOfMoveDescriptionParts.push(
+        moveDescriptionPartsDB[language][index.toString()]
+      );
+    }
+    return arrayOfMoveDescriptionParts.join('\n');
   } else {
-    return moveDescriptionDB[language][moveId];
+    return originalMoveDescription;
   }
 };
 
