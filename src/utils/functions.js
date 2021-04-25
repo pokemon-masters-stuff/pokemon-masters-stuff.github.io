@@ -25,6 +25,22 @@ export const capitalizeSyncPairNameForUrl = (syncPairName) => {
   return newString;
 };
 
+export const convertSyncPairNameFromUrl = (syncPairName) => {
+  let updatedSyncPairName;
+  if (syncPairName === 'Lt.Surge_Electrode') {
+    updatedSyncPairName = 'Lt. Surge & Electrode';
+  } else if (syncPairName === 'CrasherWake_Floatzel') {
+    updatedSyncPairName = 'Crasher Wake & Floatzel';
+  } else if (syncPairName === 'ProfessorOak_Mew') {
+    updatedSyncPairName = 'Professor Oak & Mew';
+  } else if (syncPairName === 'ProfessorSycamore_Xerneas') {
+    updatedSyncPairName = 'Professor Sycamore & Xerneas';
+  } else {
+    updatedSyncPairName = syncPairName.split('_').join(' & ');
+  }
+  return updatedSyncPairName;
+};
+
 export const getPokemonNameList = (language) => {
   let existingGridedPokemon = [];
   gridedSyncPairDataArray

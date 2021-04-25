@@ -12,7 +12,10 @@ import {
   loadTeamGridFromUrl,
   resetTeam,
 } from '../../../actions/actionCreators';
-import { removeHyphens } from '../../../utils/functions';
+import {
+  removeHyphens,
+  convertSyncPairNameFromUrl,
+} from '../../../utils/functions';
 import { getQueryStringValue } from '../../../queryString';
 import SaveTeamButton from '../common/SaveTeamButton';
 import LoadTeamDropdown from '../common/LoadTeamDropdown';
@@ -63,28 +66,9 @@ function TeamBuilder() {
     }
     let syncPair1;
     if (getQueryStringValue('sp1', location.search)) {
-      if (
-        getQueryStringValue('sp1', location.search) === 'Lt.Surge_Electrode'
-      ) {
-        syncPair1 = 'Lt. Surge & Electrode';
-      } else if (
-        getQueryStringValue('sp1', location.search) === 'CrasherWake_Floatzel'
-      ) {
-        syncPair1 = 'Crasher Wake & Floatzel';
-      } else if (
-        getQueryStringValue('sp1', location.search) === 'ProfessorOak_Mew'
-      ) {
-        syncPair1 = 'Professor Oak & Mew';
-      } else if (
-        getQueryStringValue('sp1', location.search) ===
-        'ProfessorSycamore_Xerneas'
-      ) {
-        syncPair1 = 'Professor Sycamore & Xerneas';
-      } else {
-        syncPair1 = getQueryStringValue('sp1', location.search)
-          .split('_')
-          .join(' & ');
-      }
+      syncPair1 = convertSyncPairNameFromUrl(
+        getQueryStringValue('sp1', location.search)
+      );
       if (syncPairNamesAndIds['en'][syncPair1]) {
         dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1 }));
         let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
@@ -152,28 +136,9 @@ function TeamBuilder() {
 
     let syncPair2;
     if (getQueryStringValue('sp2', location.search)) {
-      if (
-        getQueryStringValue('sp2', location.search) === 'Lt.Surge_Electrode'
-      ) {
-        syncPair2 = 'Lt. Surge & Electrode';
-      } else if (
-        getQueryStringValue('sp2', location.search) === 'CrasherWake_Floatzel'
-      ) {
-        syncPair2 = 'Crasher Wake & Floatzel';
-      } else if (
-        getQueryStringValue('sp2', location.search) === 'ProfessorOak_Mew'
-      ) {
-        syncPair2 = 'Professor Oak & Mew';
-      } else if (
-        getQueryStringValue('sp2', location.search) ===
-        'ProfessorSycamore_Xerneas'
-      ) {
-        syncPair2 = 'Professor Sycamore & Xerneas';
-      } else {
-        syncPair2 = getQueryStringValue('sp2', location.search)
-          .split('_')
-          .join(' & ');
-      }
+      syncPair2 = convertSyncPairNameFromUrl(
+        getQueryStringValue('sp2', location.search)
+      );
       if (syncPairNamesAndIds['en'][syncPair2]) {
         dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2 }));
         let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonEnglishName;
@@ -241,28 +206,9 @@ function TeamBuilder() {
 
     let syncPair3;
     if (getQueryStringValue('sp3', location.search)) {
-      if (
-        getQueryStringValue('sp3', location.search) === 'Lt.Surge_Electrode'
-      ) {
-        syncPair3 = 'Lt. Surge & Electrode';
-      } else if (
-        getQueryStringValue('sp3', location.search) === 'CrasherWake_Floatzel'
-      ) {
-        syncPair3 = 'Crasher Wake & Floatzel';
-      } else if (
-        getQueryStringValue('sp3', location.search) === 'ProfessorOak_Mew'
-      ) {
-        syncPair3 = 'Professor Oak & Mew';
-      } else if (
-        getQueryStringValue('sp3', location.search) ===
-        'ProfessorSycamore_Xerneas'
-      ) {
-        syncPair3 = 'Professor Sycamore & Xerneas';
-      } else {
-        syncPair3 = getQueryStringValue('sp3', location.search)
-          .split('_')
-          .join(' & ');
-      }
+      syncPair3 = convertSyncPairNameFromUrl(
+        getQueryStringValue('sp3', location.search)
+      );
       if (syncPairNamesAndIds['en'][syncPair3]) {
         dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3 }));
         let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonEnglishName;
