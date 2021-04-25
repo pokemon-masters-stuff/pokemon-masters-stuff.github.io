@@ -90,62 +90,68 @@ function TeamBuilder() {
           .split('_')
           .join(' & ');
       }
-      dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1 }));
-      let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
-      // console.log('pokemon1', pokemon1);
-      let syncPair1SyncLevel;
-      if (getQueryStringValue('s1', location.search)) {
-        syncPair1SyncLevel = getQueryStringValue('s1', location.search);
-        dispatch(
-          setTeamSyncLevels({
-            slot: 'slot1',
-            syncLevel: syncPair1SyncLevel,
-          })
-        );
-      } else {
-        dispatch(
-          setTeamSyncLevels({
-            slot: 'slot1',
-            syncLevel: '5',
-          })
-        );
-      }
-
-      if (getQueryStringValue('g1', location.search)) {
-        let remainingEnergy = Number(
-          getQueryStringValue('e1', location.search)
-        );
-        let orbSpent = Number(getQueryStringValue('o1', location.search));
-        let cellData = {};
-        let selectedCellByIdFromUrl = {};
-
-        getQueryStringValue('g1', location.search).map((id) => {
-          cellData =
-            allSyncGrids[language][
-              `${removeHyphens(
-                pokemon1
-              ).toLowerCase()}GridData${language.toUpperCase()}`
-            ][Number(id)];
-
-          selectedCellByIdFromUrl = {
-            cellId: cellData.cellId,
-            name: cellData.move.name,
-            description: cellData.move.description,
-            energy: cellData.move.energyCost,
-            moveId: cellData.ability.moveId,
-            value: cellData.ability.value,
-            type: cellData.ability.type,
-          };
-
-          return dispatch(
-            loadTeamGridFromUrl({
+      if (syncPairNamesAndIds['en'][syncPair1]) {
+        dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1 }));
+        let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
+        // console.log('pokemon1', pokemon1);
+        let syncPair1SyncLevel;
+        if (getQueryStringValue('s1', location.search)) {
+          syncPair1SyncLevel = getQueryStringValue('s1', location.search);
+          dispatch(
+            setTeamSyncLevels({
               slot: 'slot1',
-              selectedCellByIdFromUrl,
-              remainingEnergy,
-              orbSpent,
+              syncLevel: syncPair1SyncLevel,
             })
           );
-        });
+        } else {
+          dispatch(
+            setTeamSyncLevels({
+              slot: 'slot1',
+              syncLevel: '5',
+            })
+          );
+        }
+
+        if (getQueryStringValue('g1', location.search)) {
+          let remainingEnergy = Number(
+            getQueryStringValue('e1', location.search)
+          );
+          let orbSpent = Number(getQueryStringValue('o1', location.search));
+          let cellData = {};
+          let selectedCellByIdFromUrl = {};
+
+          getQueryStringValue('g1', location.search).map((id) => {
+            cellData =
+              allSyncGrids[language][
+                `${removeHyphens(
+                  pokemon1
+                ).toLowerCase()}GridData${language.toUpperCase()}`
+              ][Number(id)];
+
+            selectedCellByIdFromUrl = {
+              cellId: cellData.cellId,
+              name: cellData.move.name,
+              description: cellData.move.description,
+              energy: cellData.move.energyCost,
+              moveId: cellData.ability.moveId,
+              value: cellData.ability.value,
+              type: cellData.ability.type,
+            };
+
+            return dispatch(
+              loadTeamGridFromUrl({
+                slot: 'slot1',
+                selectedCellByIdFromUrl,
+                remainingEnergy,
+                orbSpent,
+              })
+            );
+          });
+        }
+      } else {
+        alert(
+          "There is an error in the URL. The sync pair on the left won't be displayed due to misspelled name."
+        );
       }
     }
 
@@ -173,62 +179,68 @@ function TeamBuilder() {
           .split('_')
           .join(' & ');
       }
-      dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2 }));
-      let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonEnglishName;
-      // console.log('pokemon2', pokemon2);
-      let syncPair2SyncLevel;
-      if (getQueryStringValue('s2', location.search)) {
-        syncPair2SyncLevel = getQueryStringValue('s2', location.search);
-        dispatch(
-          setTeamSyncLevels({
-            slot: 'slot2',
-            syncLevel: syncPair2SyncLevel,
-          })
-        );
-      } else {
-        dispatch(
-          setTeamSyncLevels({
-            slot: 'slot2',
-            syncLevel: '5',
-          })
-        );
-      }
-
-      if (getQueryStringValue('g2', location.search)) {
-        let remainingEnergy = Number(
-          getQueryStringValue('e2', location.search)
-        );
-        let orbSpent = Number(getQueryStringValue('o2', location.search));
-        let cellData = {};
-        let selectedCellByIdFromUrl = {};
-
-        getQueryStringValue('g2', location.search).map((id) => {
-          cellData =
-            allSyncGrids[language][
-              `${removeHyphens(
-                pokemon2
-              ).toLowerCase()}GridData${language.toUpperCase()}`
-            ][Number(id)];
-
-          selectedCellByIdFromUrl = {
-            cellId: cellData.cellId,
-            name: cellData.move.name,
-            description: cellData.move.description,
-            energy: cellData.move.energyCost,
-            moveId: cellData.ability.moveId,
-            value: cellData.ability.value,
-            type: cellData.ability.type,
-          };
-
-          return dispatch(
-            loadTeamGridFromUrl({
+      if (syncPairNamesAndIds['en'][syncPair2]) {
+        dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2 }));
+        let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonEnglishName;
+        // console.log('pokemon2', pokemon2);
+        let syncPair2SyncLevel;
+        if (getQueryStringValue('s2', location.search)) {
+          syncPair2SyncLevel = getQueryStringValue('s2', location.search);
+          dispatch(
+            setTeamSyncLevels({
               slot: 'slot2',
-              selectedCellByIdFromUrl,
-              remainingEnergy,
-              orbSpent,
+              syncLevel: syncPair2SyncLevel,
             })
           );
-        });
+        } else {
+          dispatch(
+            setTeamSyncLevels({
+              slot: 'slot2',
+              syncLevel: '5',
+            })
+          );
+        }
+
+        if (getQueryStringValue('g2', location.search)) {
+          let remainingEnergy = Number(
+            getQueryStringValue('e2', location.search)
+          );
+          let orbSpent = Number(getQueryStringValue('o2', location.search));
+          let cellData = {};
+          let selectedCellByIdFromUrl = {};
+
+          getQueryStringValue('g2', location.search).map((id) => {
+            cellData =
+              allSyncGrids[language][
+                `${removeHyphens(
+                  pokemon2
+                ).toLowerCase()}GridData${language.toUpperCase()}`
+              ][Number(id)];
+
+            selectedCellByIdFromUrl = {
+              cellId: cellData.cellId,
+              name: cellData.move.name,
+              description: cellData.move.description,
+              energy: cellData.move.energyCost,
+              moveId: cellData.ability.moveId,
+              value: cellData.ability.value,
+              type: cellData.ability.type,
+            };
+
+            return dispatch(
+              loadTeamGridFromUrl({
+                slot: 'slot2',
+                selectedCellByIdFromUrl,
+                remainingEnergy,
+                orbSpent,
+              })
+            );
+          });
+        }
+      } else {
+        alert(
+          "There is an error in the URL. The sync pair in the middle won't be displayed due to misspelled name."
+        );
       }
     }
 
@@ -256,62 +268,68 @@ function TeamBuilder() {
           .split('_')
           .join(' & ');
       }
-      dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3 }));
-      let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonEnglishName;
-      // console.log('pokemon3', pokemon3);
-      let syncPair3SyncLevel;
-      if (getQueryStringValue('s3', location.search)) {
-        syncPair3SyncLevel = getQueryStringValue('s3', location.search);
-        dispatch(
-          setTeamSyncLevels({
-            slot: 'slot3',
-            syncLevel: syncPair3SyncLevel,
-          })
-        );
-      } else {
-        dispatch(
-          setTeamSyncLevels({
-            slot: 'slot3',
-            syncLevel: '5',
-          })
-        );
-      }
-
-      if (getQueryStringValue('g3', location.search)) {
-        let remainingEnergy = Number(
-          getQueryStringValue('e3', location.search)
-        );
-        let orbSpent = Number(getQueryStringValue('o3', location.search));
-        let cellData = {};
-        let selectedCellByIdFromUrl = {};
-
-        getQueryStringValue('g3', location.search).map((id) => {
-          cellData =
-            allSyncGrids[language][
-              `${removeHyphens(
-                pokemon3
-              ).toLowerCase()}GridData${language.toUpperCase()}`
-            ][Number(id)];
-
-          selectedCellByIdFromUrl = {
-            cellId: cellData.cellId,
-            name: cellData.move.name,
-            description: cellData.move.description,
-            energy: cellData.move.energyCost,
-            moveId: cellData.ability.moveId,
-            value: cellData.ability.value,
-            type: cellData.ability.type,
-          };
-
-          return dispatch(
-            loadTeamGridFromUrl({
+      if (syncPairNamesAndIds['en'][syncPair3]) {
+        dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3 }));
+        let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonEnglishName;
+        // console.log('pokemon3', pokemon3);
+        let syncPair3SyncLevel;
+        if (getQueryStringValue('s3', location.search)) {
+          syncPair3SyncLevel = getQueryStringValue('s3', location.search);
+          dispatch(
+            setTeamSyncLevels({
               slot: 'slot3',
-              selectedCellByIdFromUrl,
-              remainingEnergy,
-              orbSpent,
+              syncLevel: syncPair3SyncLevel,
             })
           );
-        });
+        } else {
+          dispatch(
+            setTeamSyncLevels({
+              slot: 'slot3',
+              syncLevel: '5',
+            })
+          );
+        }
+
+        if (getQueryStringValue('g3', location.search)) {
+          let remainingEnergy = Number(
+            getQueryStringValue('e3', location.search)
+          );
+          let orbSpent = Number(getQueryStringValue('o3', location.search));
+          let cellData = {};
+          let selectedCellByIdFromUrl = {};
+
+          getQueryStringValue('g3', location.search).map((id) => {
+            cellData =
+              allSyncGrids[language][
+                `${removeHyphens(
+                  pokemon3
+                ).toLowerCase()}GridData${language.toUpperCase()}`
+              ][Number(id)];
+
+            selectedCellByIdFromUrl = {
+              cellId: cellData.cellId,
+              name: cellData.move.name,
+              description: cellData.move.description,
+              energy: cellData.move.energyCost,
+              moveId: cellData.ability.moveId,
+              value: cellData.ability.value,
+              type: cellData.ability.type,
+            };
+
+            return dispatch(
+              loadTeamGridFromUrl({
+                slot: 'slot3',
+                selectedCellByIdFromUrl,
+                remainingEnergy,
+                orbSpent,
+              })
+            );
+          });
+        }
+      } else {
+        alert(
+          "There is an error in the URL. The sync pair on the right won't be displayed due to misspelled name."
+        );
       }
     }
   };
