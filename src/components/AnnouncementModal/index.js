@@ -45,7 +45,7 @@ const AnnouncementModal = (props) => {
           <DialogContentText>
             4/26/2021:
             <br />
-            Added new grids. Eggmons will be added later.
+            Added new grids and Eggmons - Ninetales, Magmar, and Rapidash.
             <br />
             <br />
             3/29/2021:

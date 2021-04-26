@@ -13,7 +13,7 @@ import {
 const regExp = /\(([^)]+)\)/;
 
 const EggPokemon = () => {
-  const [pokemon, setPokemon] = useState('Scyther (P.Strike)');
+  const [pokemon, setPokemon] = useState('Ninetales (Tech)');
   const [syncLevel, setSyncLevel] = useState('1');
   const language = useSelector((state) => state.language.currentLanguage);
 
