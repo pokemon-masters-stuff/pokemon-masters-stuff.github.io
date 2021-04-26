@@ -141,7 +141,10 @@
   "ch0170": "Burgh",
   "ch0183": "Molayne",
   "ch0190": "Ryuki",
+  "ch0192": "Maxie",
+  "ch0193": "Archie",
   "ch0194": "Cyrus",
+  "ch0195": "Ghetsis",
   "ch0196": "Lysandre",
   "ch0198": "Lucy",
   "ch0215": "Lisia",
@@ -150,5 +153,8 @@
   "ch0243": "Gloria",
   "ch0245": "Marnie",
   "ch0247": "Leon",
-  "ch0256": "Piers"
+  "ch0249": "Nessa",
+  "ch0250": "Bea",
+  "ch0256": "Piers",
+  "ch0257": "Raihan"
 }

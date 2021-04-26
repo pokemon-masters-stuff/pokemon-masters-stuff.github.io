@@ -44,5 +44,20 @@
   "999957": "If used by Mega Lopunny, drastically raises the user’s evasiveness.",
   "999956": "Raises the Defense and Sp. Def of all allied sync pairs by one to three stat ranks at random.",
   "999955": "Become Mega Lopunny until the end of battle.",
-  "999954": "After this sync move is used for the first time, it becomes Fighting type until the end of battle."
+  "999954": "After this sync move is used for the first time, it becomes Fighting type until the end of battle.",
+  "999953": "Has a good chance of lowering the target’s Defense.",
+  "999952": "Applies the Restrain effect to the target and the user.",
+  "999951": "In addition, drastically raises the user’s Speed when the weather is rainy.",
+  "999950": "This move’s power increases if the target is restrained.",
+  "999949": "The user takes damage equal to half of its maximum HP.",
+  "999948": "The damage is taken even if the attack fails.",
+  "999947": "Lowers the target’s Speed.",
+  "999946": "Lowers the target’s Attack and Sp. Atk.",
+  "999945": "Sharply raises the user’s critical-hit rate.",
+  "999944": "Applies the Supereffective ↑ Next effect to the user.",
+  "999943": "Lowers the user’s Sp. Def.",
+  "999942": "Sharply raises the user’s Defense.",
+  "999941": "Raises the user’s evasiveness.",
+  "999940": "Raises the user’s Sp. Atk by up to three stat ranks based on how low their HP is.",
+  "999939": "The more the target’s Speed has been lowered, the greater the power of this move."
 }

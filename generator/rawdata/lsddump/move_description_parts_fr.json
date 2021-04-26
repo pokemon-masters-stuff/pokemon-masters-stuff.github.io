@@ -44,5 +44,20 @@
   "999957": "Si le lanceur a méga-évolué, augmente beaucoup l'Esquive du lanceur.",
   "999956": "Augmente légèrement la Défense et la Défense Spéciale de tous les alliés d'un à trois points de stats, aléatoirement.",
   "999955": "Permet à Lockpin de devenir Méga-Lockpin jusqu'à la fin du combat.",
-  "999954": "Après utilisation pour la première fois de cette capacité Duo, elle devient de type Combat jusqu'à la fin du combat."
+  "999954": "Après utilisation pour la première fois de cette capacité Duo, elle devient de type Combat jusqu'à la fin du combat.",
+  "999953": "Baisse légèrement la Défense de l'ennemi (assez souvent).",
+  "999952": "Applique l'effet Carcan à la cible et au lanceur.",
+  "999951": "Augmente également beaucoup la Vitesse du lanceur quand il pleut.",
+  "999950": "Augmente en puissance si l'ennemi subit l'effet Carcan.",
+  "999949": "Le lanceur perd la moitié de ses PV max.",
+  "999948": "Il subira ces dégâts même si l'attaque échoue.",
+  "999947": "Baisse légèrement la Vitesse de l'ennemi.",
+  "999946": "Baisse l'Attaque et l'Attaque Spéciale de la cible.",
+  "999945": "Augmente modérément le taux de critiques du lanceur.",
+  "999944": "Applique l'effet Prochain super efficace ↑ au lanceur.",
+  "999943": "Baisse la Défense Spéciale du lanceur.",
+  "999942": "Augmente modérément la Défense du lanceur.",
+  "999941": "Augmente légèrement l'Esquive du lanceur.",
+  "999940": "Plus les PV du lanceur sont bas, plus l'Attaque Spéciale augmente (jusqu'à 3 rangs max).",
+  "999939": "Plus la Vitesse de l'ennemi a été abaissée, plus cette capacité est puissante."
 }

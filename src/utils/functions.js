@@ -9,6 +9,9 @@ import {
 } from './constants';
 
 export const removeHyphens = (str) => {
+  if (str.toLowerCase() === 'sirfetch’d') {
+    str = 'sirfetchd';
+  }
   return str.replace(/-/g, '');
 };
 

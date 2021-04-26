@@ -141,7 +141,10 @@
   "ch0170": "Camus",
   "ch0183": "Lario",
   "ch0190": "Olano",
+  "ch0192": "Magno",
+  "ch0193": "Aquiles",
   "ch0194": "Helio",
+  "ch0195": "Ghechis",
   "ch0196": "Lysson",
   "ch0198": "Fortunia",
   "ch0215": "Ariana",
@@ -150,5 +153,8 @@
   "ch0243": "Gloria",
   "ch0245": "Roxy",
   "ch0247": "Lionel",
-  "ch0256": "Nerio"
+  "ch0249": "Cathy",
+  "ch0250": "Judith",
+  "ch0256": "Nerio",
+  "ch0257": "Roy"
 }

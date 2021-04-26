@@ -141,7 +141,10 @@
   "ch0170": "Artie",
   "ch0183": "Molène",
   "ch0190": "Solane",
+  "ch0192": "Max",
+  "ch0193": "Arthur",
   "ch0194": "Hélio",
+  "ch0195": "Ghetis",
   "ch0196": "Lysandre",
   "ch0198": "Charline",
   "ch0215": "Atalante",
@@ -150,5 +153,8 @@
   "ch0243": "Gloria",
   "ch0245": "Rosemary",
   "ch0247": "Tarak",
-  "ch0256": "Peterson"
+  "ch0249": "Donna",
+  "ch0250": "Faïza",
+  "ch0256": "Peterson",
+  "ch0257": "Roy"
 }

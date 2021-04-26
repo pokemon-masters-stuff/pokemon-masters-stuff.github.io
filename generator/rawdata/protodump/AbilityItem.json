@@ -134,6 +134,7 @@
     { "abilityItemId": "562017040000", "trainerId": "10170400000" },
     { "abilityItemId": "562018300000", "trainerId": "10183000000" },
     { "abilityItemId": "562019400000", "trainerId": "10194000000" },
+    { "abilityItemId": "562019500000", "trainerId": "10195000000" },
     { "abilityItemId": "562019600000", "trainerId": "10196000000" },
     { "abilityItemId": "562019800000", "trainerId": "10198000000" },
     { "abilityItemId": "562021500000", "trainerId": "10215000000" },
@@ -142,7 +143,10 @@
     { "abilityItemId": "562024300000", "trainerId": "10243000000" },
     { "abilityItemId": "562024500000", "trainerId": "10245000000" },
     { "abilityItemId": "562024700000", "trainerId": "10247000000" },
+    { "abilityItemId": "562024900000", "trainerId": "10249000000" },
+    { "abilityItemId": "562025000000", "trainerId": "10250000000" },
     { "abilityItemId": "562025600000", "trainerId": "10256000000" },
+    { "abilityItemId": "562025700000", "trainerId": "10257000000" },
     { "abilityItemId": "562800000000", "trainerId": "18000000000" },
     { "abilityItemId": "562800002000", "trainerId": "18000020000" },
     { "abilityItemId": "562800012000", "trainerId": "18000120000" }

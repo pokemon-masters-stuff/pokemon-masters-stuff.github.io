@@ -154,3 +154,9 @@ export { default as pm0843_00_fukurou3_128 } from './128px/pm0843_00_fukurou3_12
 export { default as pm0428_00_mimilop_128 } from './128px/pm0428_00_mimilop_128.ktx.png'; // Lopunny
 export { default as pm0384_00_rayquaza_128 } from './128px/pm0384_00_rayquaza_128.ktx.png'; // Rayquaza
 export { default as pm0175_00_togepy_128 } from './128px/pm0175_00_togepy_128.ktx.png'; // Togepi
+// 4/26/2021
+export { default as pm0250_00_houou_128 } from './128px/pm0250_00_houou_128.ktx.png'; // Ho-Oh
+export { default as pm0646_11_kyurem_128 } from './128px/pm0646_11_kyurem_128.ktx.png'; // Kyurem
+export { default as pm0834_00_00_kajirigame_128 } from './128px/pm0834_00_00_kajirigame_128.ktx.png'; // Drednaw
+export { default as pm0865_00_31_negigaknight_128 } from './128px/pm0865_00_31_negigaknight_128.ktx.png'; // Sirfetch’d
+export { default as pm0884_00_00_duraludon_128 } from './128px/pm0884_00_00_duraludon_128.ktx.png'; // Duraludon

@@ -141,7 +141,10 @@
   "ch0170": "Artemisio",
   "ch0183": "Tapso",
   "ch0190": "Morel",
+  "ch0192": "Max",
+  "ch0193": "Ivan",
   "ch0194": "Cyrus",
+  "ch0195": "Ghecis",
   "ch0196": "Elisio",
   "ch0198": "Fortunata",
   "ch0215": "Orthilla",
@@ -150,5 +153,8 @@
   "ch0243": "Gloria",
   "ch0245": "Mary",
   "ch0247": "Dandel",
-  "ch0256": "Ginepro"
+  "ch0249": "Azzurra",
+  "ch0250": "Fabia",
+  "ch0256": "Ginepro",
+  "ch0257": "Laburno"
 }

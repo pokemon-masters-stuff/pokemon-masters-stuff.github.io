@@ -768,6 +768,47 @@ import {
   togepiGridDataZH,
   lopunnyGridDataZH,
   rayquazaGridDataZH,
+  // 4/26/2021
+  hoohGridDataDE,
+  kyuremGridDataDE,
+  drednawGridDataDE,
+  sirfetchdGridDataDE,
+  duraludonGridDataDE,
+  hoohGridDataEN,
+  kyuremGridDataEN,
+  drednawGridDataEN,
+  sirfetchdGridDataEN,
+  duraludonGridDataEN,
+  hoohGridDataES,
+  kyuremGridDataES,
+  drednawGridDataES,
+  sirfetchdGridDataES,
+  duraludonGridDataES,
+  hoohGridDataFR,
+  kyuremGridDataFR,
+  drednawGridDataFR,
+  sirfetchdGridDataFR,
+  duraludonGridDataFR,
+  hoohGridDataIT,
+  kyuremGridDataIT,
+  drednawGridDataIT,
+  sirfetchdGridDataIT,
+  duraludonGridDataIT,
+  hoohGridDataJA,
+  kyuremGridDataJA,
+  drednawGridDataJA,
+  sirfetchdGridDataJA,
+  duraludonGridDataJA,
+  hoohGridDataKO,
+  kyuremGridDataKO,
+  drednawGridDataKO,
+  sirfetchdGridDataKO,
+  duraludonGridDataKO,
+  hoohGridDataZH,
+  kyuremGridDataZH,
+  drednawGridDataZH,
+  sirfetchdGridDataZH,
+  duraludonGridDataZH,
 } from '../data';
 
 import {
@@ -880,6 +921,13 @@ import {
   pm0428_00_mimilop_128, // Lopunny
   pm0384_00_rayquaza_128, // Rayquaza
   pm0175_00_togepy_128, // Togepi
+
+  // 4/26/2021
+  pm0250_00_houou_128, // Ho-Oh
+  pm0646_11_kyurem_128, // Kyurem
+  pm0834_00_00_kajirigame_128, // Drednaw
+  pm0865_00_31_negigaknight_128, // Sirfetch’d
+  pm0884_00_00_duraludon_128, // Duraludon
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -993,6 +1041,13 @@ export const pokemonPictures = {
   pm0428_00_mimilop_128, // Lopunny
   pm0384_00_rayquaza_128, // Rayquaza
   pm0175_00_togepy_128, // Togepi
+
+  // 4/26/2021
+  pm0250_00_houou_128, // Ho-Oh
+  pm0646_11_kyurem_128, // Kyurem
+  pm0834_00_00_kajirigame_128, // Drednaw
+  pm0865_00_31_negigaknight_128, // Sirfetch’d
+  pm0884_00_00_duraludon_128, // Duraludon
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -1102,6 +1157,11 @@ export const allSyncGrids = {
     primarinaGridDataDE,
     togepiGridDataDE,
     lopunnyGridDataDE,
+    hoohGridDataDE,
+    kyuremGridDataDE,
+    drednawGridDataDE,
+    sirfetchdGridDataDE,
+    duraludonGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -1198,6 +1258,11 @@ export const allSyncGrids = {
     togepiGridDataEN,
     lopunnyGridDataEN,
     rayquazaGridDataEN,
+    hoohGridDataEN,
+    kyuremGridDataEN,
+    drednawGridDataEN,
+    sirfetchdGridDataEN,
+    duraludonGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1294,6 +1359,11 @@ export const allSyncGrids = {
     togepiGridDataES,
     lopunnyGridDataES,
     rayquazaGridDataES,
+    hoohGridDataES,
+    kyuremGridDataES,
+    drednawGridDataES,
+    sirfetchdGridDataES,
+    duraludonGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1390,6 +1460,11 @@ export const allSyncGrids = {
     togepiGridDataFR,
     lopunnyGridDataFR,
     rayquazaGridDataFR,
+    hoohGridDataFR,
+    kyuremGridDataFR,
+    drednawGridDataFR,
+    sirfetchdGridDataFR,
+    duraludonGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1486,6 +1561,11 @@ export const allSyncGrids = {
     togepiGridDataIT,
     lopunnyGridDataIT,
     rayquazaGridDataIT,
+    hoohGridDataIT,
+    kyuremGridDataIT,
+    drednawGridDataIT,
+    sirfetchdGridDataIT,
+    duraludonGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1582,6 +1662,11 @@ export const allSyncGrids = {
     togepiGridDataJA,
     lopunnyGridDataJA,
     rayquazaGridDataJA,
+    hoohGridDataJA,
+    kyuremGridDataJA,
+    drednawGridDataJA,
+    sirfetchdGridDataJA,
+    duraludonGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1678,6 +1763,11 @@ export const allSyncGrids = {
     togepiGridDataKO,
     lopunnyGridDataKO,
     rayquazaGridDataKO,
+    hoohGridDataKO,
+    kyuremGridDataKO,
+    drednawGridDataKO,
+    sirfetchdGridDataKO,
+    duraludonGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1774,6 +1864,11 @@ export const allSyncGrids = {
     togepiGridDataZH,
     lopunnyGridDataZH,
     rayquazaGridDataZH,
+    hoohGridDataZH,
+    kyuremGridDataZH,
+    drednawGridDataZH,
+    sirfetchdGridDataZH,
+    duraludonGridDataZH,
   },
 };
 
@@ -1782,12 +1877,11 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const newGridedPokemonMonsterBaseIdArray = [
-  '20084300', // Decidueye (Selene)
-  '20013300', // Eevee (Leaf)
-  '20038400', // Rayquaza (Zinnia)
-  '20084900', // Primarina (Elio)
-  '20017500', // Togepi (Burgh)
-  '20042800', // Lopunny (May)
+  '2008650031', // Sirfetch’d (Bea)
+  '2008340000', // Drednaw (Nessa)
+  '2008840000', // Duraludon (Raihan)
+  '20064611', // Kyurem (Ghetsis)
+  '20025000', // Ho-Oh (Silver)
 ];
 
 export const type1SyncGrid = [
@@ -1835,7 +1929,10 @@ export const type1SyncGrid = [
   'palkia',
   'decidueye',
   'lopunny',
-  'Rayquaza',
+  'rayquaza',
+  'sirfetch’d',
+  'duraludon',
+  'ho-oh',
 ];
 
 export const type2SyncGrid = [
@@ -1865,6 +1962,8 @@ export const type2SyncGrid = [
   'whimsicott',
   'hydreigon',
   'morpeko',
+  'drednaw',
+  'kyurem',
 ];
 
 export const type3SyncGrid = [

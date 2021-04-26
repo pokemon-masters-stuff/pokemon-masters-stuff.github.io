@@ -133,6 +133,7 @@
     { "trainerId": "10170400000", "maxEnergy": 60 },
     { "trainerId": "10183000000", "maxEnergy": 60 },
     { "trainerId": "10194000000", "maxEnergy": 60 },
+    { "trainerId": "10195000000", "maxEnergy": 60 },
     { "trainerId": "10196000000", "maxEnergy": 60 },
     { "trainerId": "10198000000", "maxEnergy": 60 },
     { "trainerId": "10215000000", "maxEnergy": 60 },
@@ -141,7 +142,10 @@
     { "trainerId": "10243000000", "maxEnergy": 60 },
     { "trainerId": "10245000000", "maxEnergy": 60 },
     { "trainerId": "10247000000", "maxEnergy": 60 },
+    { "trainerId": "10249000000", "maxEnergy": 60 },
+    { "trainerId": "10250000000", "maxEnergy": 60 },
     { "trainerId": "10256000000", "maxEnergy": 60 },
+    { "trainerId": "10257000000", "maxEnergy": 60 },
     { "trainerId": "18000000000", "maxEnergy": 60 },
     { "trainerId": "18000020000", "maxEnergy": 60 },
     { "trainerId": "18000120000", "maxEnergy": 60 }
