@@ -1,0 +1,592 @@
+{
+  "0": {
+    "de": "-",
+    "en": "-",
+    "es": "-",
+    "fr": "-",
+    "it": "-",
+    "ja": "-",
+    "ko": "-",
+    "zh": "-"
+  },
+  "13010102": {
+    "de": "Notfallstärke↑ 2",
+    "en": "Power Reserves 2",
+    "es": "Ultravínculo +2",
+    "fr": "Liens Profonds 2",
+    "it": "Emergrinta 2",
+    "ja": "ピンチ時威力上昇２",
+    "ko": "위기시위력상승2",
+    "zh": "危機時威力提升２"
+  },
+  "13010203": {
+    "de": "Sandsturmstärke↑ 3",
+    "en": "Surging Sand 3",
+    "es": "Impulso Arena +3",
+    "fr": "Pouvoir Sable 3",
+    "it": "Sabbiaforza 3",
+    "ja": "砂嵐時威力上昇３",
+    "ko": "모래바람시위력상승3",
+    "zh": "沙暴時威力提升３"
+  },
+  "13010303": {
+    "de": "Problemstärke↑ 3",
+    "en": "Gritty 3",
+    "es": "Osadía +3",
+    "fr": "Puissance Altération 3",
+    "it": "Ritorsione 3",
+    "ja": "異常時威力上昇３",
+    "ko": "상태이상시위력상승3",
+    "zh": "異常狀態時威力提升３"
+  },
+  "13010401": {
+    "de": "Effektivitätsstärke↑ 1",
+    "en": "Superduper Effective 1",
+    "es": "Ultraeficacia +1",
+    "fr": "Ultra-Efficace 1",
+    "it": "Iperefficace 1",
+    "ja": "抜群時威力上昇１",
+    "ko": "발군시위력상승1",
+    "zh": "效果絕佳時威力提升１"
+  },
+  "13010503": {
+    "de": "Leistenstärke↑ 3",
+    "en": "Power Flux 3",
+    "es": "Condensador +3",
+    "fr": "Condensateur 3",
+    "it": "Condensatore 3",
+    "ja": "わざゲージ分威力上昇３",
+    "ko": "기술게이지분위력상승3",
+    "zh": "威力隨招式計量槽提升３"
+  },
+  "13010602": {
+    "de": "Volltrefferstärke↑ 2",
+    "en": "Critical Strike 2",
+    "es": "Crítico Impulsor +2",
+    "fr": "Puissance Critique 2",
+    "it": "Peggiorcolpo 2",
+    "ja": "急所時威力上昇２",
+    "ko": "급소시위력상승2",
+    "zh": "擊中要害時威力提升２"
+  },
+  "13010702": {
+    "de": "Harmoniestärke↑ 2",
+    "en": "Power Chain 2",
+    "es": "Combo Mejora +2",
+    "fr": "Renforce-Combo 2",
+    "it": "Combiforza 2",
+    "ja": "ＩＣ時威力上昇２",
+    "ko": "동시찬스시위력상승2",
+    "zh": "一齊機會時威力提升２"
+  },
+  "17010101": {
+    "de": "Giftschutz",
+    "en": "Antitoxin",
+    "es": "Inmunidad Veneno",
+    "fr": "Immu. Empoisonnement",
+    "it": "Antitossine",
+    "ja": "どく無効",
+    "ko": "독무효",
+    "zh": "中毒無效"
+  },
+  "17010201": {
+    "de": "Brandschutz",
+    "en": "Flameproof",
+    "es": "Inmunidad Quemaduras",
+    "fr": "Immunité Brûlure",
+    "it": "Estintore",
+    "ja": "やけど無効",
+    "ko": "화상무효",
+    "zh": "灼傷無效"
+  },
+  "17010301": {
+    "de": "Paralyseschutz",
+    "en": "Lithe",
+    "es": "Inmunidad Parálisis",
+    "fr": "Immunité Paralysie",
+    "it": "Argentovivo",
+    "ja": "まひ無効",
+    "ko": "마비무효",
+    "zh": "麻痺無效"
+  },
+  "17010401": {
+    "de": "Gefrierschutz",
+    "en": "Antifreeze",
+    "es": "Inmunidad Congelación",
+    "fr": "Immunité Gel",
+    "it": "Cuorecaldo",
+    "ja": "こおり無効",
+    "ko": "얼음무효",
+    "zh": "冰凍無效"
+  },
+  "17010501": {
+    "de": "Hagelschutz",
+    "en": "Snow Shelter",
+    "es": "Inmunidad Granizo",
+    "fr": "Immunité Grêle",
+    "it": "Rifugio",
+    "ja": "あられ無効",
+    "ko": "싸라기눈무효",
+    "zh": "冰雹無效"
+  },
+  "17010601": {
+    "de": "Schlafschutz",
+    "en": "Wide Awake",
+    "es": "Inmunidad Sueño",
+    "fr": "Immunité Sommeil",
+    "it": "Allerta",
+    "ja": "ねむり無効",
+    "ko": "잠듦무효",
+    "zh": "睡眠無效"
+  },
+  "17010701": {
+    "de": "Verwirrungsschutz",
+    "en": "Clearheaded",
+    "es": "Inmunidad Confusión",
+    "fr": "Immunité Confusion",
+    "it": "Chiaramente",
+    "ja": "こんらん無効",
+    "ko": "혼란무효",
+    "zh": "混亂無效"
+  },
+  "17010801": {
+    "de": "Schreckschutz",
+    "en": "Unflappable",
+    "es": "Inmunidad Retroceso",
+    "fr": "Immunité Peur",
+    "it": "Pilastro",
+    "ja": "ひるみ無効",
+    "ko": "풀죽음무효",
+    "zh": "畏縮無效"
+  },
+  "17010901": {
+    "de": "Umschlingschutz",
+    "en": "Escape Artist",
+    "es": "Inmunidad Ataduras",
+    "fr": "Immunité Ligotage",
+    "it": "Scioglicatene",
+    "ja": "バインド無効",
+    "ko": "바인드무효",
+    "zh": "束縛無效"
+  },
+  "17020109": {
+    "de": "Giftresistenz 9",
+    "en": "Lessen Poison 9",
+    "es": "Resistencia Veneno +9",
+    "fr": "Résist. Empoisonnem. 9",
+    "it": "Avvelenameno 9",
+    "ja": "どく耐性９",
+    "ko": "독내성9",
+    "zh": "中毒抗性９"
+  },
+  "17020209": {
+    "de": "Paralyseresistenz 9",
+    "en": "Lessen Paralysis 9",
+    "es": "Resistencia Parálisis +9",
+    "fr": "Résistance Paralysie 9",
+    "it": "Paralizzameno 9",
+    "ja": "まひ耐性９",
+    "ko": "마비내성9",
+    "zh": "麻痺抗性９"
+  },
+  "17020309": {
+    "de": "Schlafresistenz 9",
+    "en": "Lessen Sleep 9",
+    "es": "Resistencia Sueño +9",
+    "fr": "Résistance Sommeil 9",
+    "it": "Addormentameno 9",
+    "ja": "ねむり耐性９",
+    "ko": "잠듦내성9",
+    "zh": "睡眠抗性９"
+  },
+  "17020409": {
+    "de": "Brandresistenz 9",
+    "en": "Lessen Burn 9",
+    "es": "Resistencia Quemaduras +9",
+    "fr": "Résistance Brûlure 9",
+    "it": "Scottameno 9",
+    "ja": "やけど耐性９",
+    "ko": "화상내성9",
+    "zh": "灼傷抗性９"
+  },
+  "17020509": {
+    "de": "Gefrierresistenz 9",
+    "en": "Lessen Freeze 9",
+    "es": "Resistencia Congelación +9",
+    "fr": "Résistance Gel 9",
+    "it": "Congelameno 9",
+    "ja": "こおり耐性９",
+    "ko": "얼음내성9",
+    "zh": "冰凍抗性９"
+  },
+  "17020609": {
+    "de": "Verwirrungsresistenz 9",
+    "en": "Lessen Confusion 9",
+    "es": "Resistencia Confusión +9",
+    "fr": "Résistance Confusion 9",
+    "it": "Confondimeno 9",
+    "ja": "こんらん耐性９",
+    "ko": "혼란내성9",
+    "zh": "混亂抗性９"
+  },
+  "17020709": {
+    "de": "Schreckresistenz 9",
+    "en": "Lessen Flinch 9",
+    "es": "Resistencia Retroceso +9",
+    "fr": "Résistance Peur 9",
+    "it": "Tentennameno 9",
+    "ja": "ひるみ耐性９",
+    "ko": "풀죽음내성9",
+    "zh": "畏縮抗性９"
+  },
+  "17020809": {
+    "de": "Umschlingresistenz 9",
+    "en": "Lessen Trap 9",
+    "es": "Resistencia Ataduras +9",
+    "fr": "Résistance Ligotage 9",
+    "it": "Imprigionameno 9",
+    "ja": "バインド耐性９",
+    "ko": "바인드내성9",
+    "zh": "束縛抗性９"
+  },
+  "18010909": {
+    "de": "Werte↓-Resistenz 9",
+    "en": "Enlightenment 9",
+    "es": "Resistencia Características ↓ +9",
+    "fr": "Résistance ↓Stats 9",
+    "it": "Illuminazione 9",
+    "ja": "全ダウン耐性９",
+    "ko": "전체다운내성9",
+    "zh": "全種類下降抗性９"
+  },
+  "18020101": {
+    "de": "Angriff↓-Schutz",
+    "en": "Headstrong",
+    "es": "Inmunidad Ataque ↓",
+    "fr": "Immunité ↓Attaque",
+    "it": "Fermezza",
+    "ja": "攻撃ダウン無効",
+    "ko": "공격다운무효",
+    "zh": "攻擊下降無效"
+  },
+  "18020201": {
+    "de": "Vert.↓-Schutz",
+    "en": "Unbending",
+    "es": "Inmunidad Defensa ↓",
+    "fr": "Immunité ↓Défense",
+    "it": "Resilienza",
+    "ja": "防御ダウン無効",
+    "ko": "방어다운무효",
+    "zh": "防禦下降無效"
+  },
+  "18020301": {
+    "de": "Sp.-Ang.↓-Schutz",
+    "en": "Dauntless",
+    "es": "Inmunidad Ataque Especial ↓",
+    "fr": "Immunité ↓Atq. Spé.",
+    "it": "Ardimento",
+    "ja": "特攻ダウン無効",
+    "ko": "특수공격다운무효",
+    "zh": "特攻下降無效"
+  },
+  "18020401": {
+    "de": "Sp.-Vert.↓-Schutz",
+    "en": "Stalwart",
+    "es": "Inmunidad Defensa Especial ↓",
+    "fr": "Immunité ↓Déf. Spé.",
+    "it": "Ostinazione",
+    "ja": "特防ダウン無効",
+    "ko": "특수방어다운무효",
+    "zh": "特防下降無效"
+  },
+  "18020501": {
+    "de": "Init.↓-Schutz",
+    "en": "Haste",
+    "es": "Inmunidad Velocidad ↓",
+    "fr": "Immunité ↓Vitesse",
+    "it": "Prontezza",
+    "ja": "素早さダウン無効",
+    "ko": "스피드다운무효",
+    "zh": "速度下降無效"
+  },
+  "18020601": {
+    "de": "Genauigk.↓-Schutz",
+    "en": "Acuity",
+    "es": "Inmunidad Precisión ↓",
+    "fr": "Immunité ↓Précision",
+    "it": "Destrezza",
+    "ja": "命中率ダウン無効",
+    "ko": "명중률다운무효",
+    "zh": "命中率下降無效"
+  },
+  "18020701": {
+    "de": "Fluchtw.↓-Schutz",
+    "en": "Fast Runner",
+    "es": "Inmunidad Evasión ↓",
+    "fr": "Immunité ↓Esquive",
+    "it": "Flessibilità",
+    "ja": "回避率ダウン無効",
+    "ko": "회피율다운무효",
+    "zh": "閃避率下降無效"
+  },
+  "18020801": {
+    "de": "Volltrefferquote↓-Schutz",
+    "en": "Steady Aim",
+    "es": "Inmunidad Críticos ↓",
+    "fr": "Immu. ↓Taux Crit.",
+    "it": "Aggiustatiro",
+    "ja": "急所率ダウン無効",
+    "ko": "급소율다운무효",
+    "zh": "擊中要害率下降無效"
+  },
+  "18040502": {
+    "de": "P-Attacken-Initiative↑ 2",
+    "en": "Fast-Track 2",
+    "es": "Acción Veloz +2",
+    "fr": "Action Vitesse ↑ 2",
+    "it": "Marcia in più 2",
+    "ja": "Ｐ技後素早さアップ２",
+    "ko": "P기술후스피드업2",
+    "zh": "寶可夢出招後速度↑２"
+  },
+  "18040602": {
+    "de": "Treffer-Angriff↑ 2",
+    "en": "Mad Strength 2",
+    "es": "Ataque Alzado +2",
+    "fr": "Attaque Furie 2",
+    "it": "Tuttaforza 2",
+    "ja": "攻撃時攻撃アップ２",
+    "ko": "공격시공격업2",
+    "zh": "攻擊時攻擊提升２"
+  },
+  "18040702": {
+    "de": "Treffer-Vert.↓ 2",
+    "en": "Defense Crush 2",
+    "es": "Ataque Defensa ↓ +2",
+    "fr": "Déstabilisateur 2",
+    "it": "Rompidifesa 2",
+    "ja": "攻撃時防御ダウン２",
+    "ko": "공격시방어다운2",
+    "zh": "攻擊時防禦下降２ "
+  },
+  "18040802": {
+    "de": "P-Attacken-Verteidigung↑ 2",
+    "en": "Stoic 2",
+    "es": "Estoico +2",
+    "fr": "Action Défense ↑ 2",
+    "it": "Migliordifesa 2",
+    "ja": "Ｐ技後防御アップ２",
+    "ko": "P기술후방어업2",
+    "zh": "寶可夢出招後防禦↑２"
+  },
+  "18050301": {
+    "de": "Statusproblemchance↑ 1",
+    "en": "Troublemaker 1",
+    "es": "Granuja +1",
+    "fr": "Délinquant 1",
+    "it": "Furbacchione 1",
+    "ja": "異常命中上昇１",
+    "ko": "상태이상명중상승1",
+    "zh": "異常狀態命中率提升１"
+  },
+  "20010101": {
+    "de": "Sandsturmschutz",
+    "en": "Sand Shelter",
+    "es": "Inmunidad Arena",
+    "fr": "Immunité Sable",
+    "it": "Schivasabbia",
+    "ja": "砂嵐無効",
+    "ko": "모래바람무효",
+    "zh": "沙暴無效"
+  },
+  "21010101": {
+    "de": "Volltrefferschutz",
+    "en": "Vigilance",
+    "es": "Inmunidad Golpes Críticos",
+    "fr": "Immunité Critique",
+    "it": "Barriercolpo",
+    "ja": "急所無効",
+    "ko": "급소무효",
+    "zh": "擊中要害無效"
+  },
+  "24010101": {
+    "de": "Normal-Abwehr",
+    "en": "Normal Guard",
+    "es": "Mitiga Normal",
+    "fr": "Résistance Normal",
+    "it": "Fendinormale",
+    "ja": "ノーマルガード",
+    "ko": "노말가드",
+    "zh": "一般屬性防守"
+  },
+  "24010201": {
+    "de": "Feuer-Abwehr",
+    "en": "Fire Guard",
+    "es": "Mitiga Fuego",
+    "fr": "Résistance Feu",
+    "it": "Fendifiamma",
+    "ja": "ほのおガード",
+    "ko": "불꽃가드",
+    "zh": "火屬性防守"
+  },
+  "24010301": {
+    "de": "Wasser-Abwehr",
+    "en": "Water Guard",
+    "es": "Mitiga Agua",
+    "fr": "Résistance Eau",
+    "it": "Fendiflutti",
+    "ja": "みずガード",
+    "ko": "물가드",
+    "zh": "水屬性防守"
+  },
+  "24010401": {
+    "de": "Elektro-Abwehr",
+    "en": "Electric Guard",
+    "es": "Mitiga Eléctrico",
+    "fr": "Résistance Électrik",
+    "it": "Fendilampo",
+    "ja": "でんきガード",
+    "ko": "전기가드",
+    "zh": "電屬性防守"
+  },
+  "24010501": {
+    "de": "Pflanzen-Abwehr",
+    "en": "Grass Guard",
+    "es": "Mitiga Planta",
+    "fr": "Résistance Plante",
+    "it": "Fendierba",
+    "ja": "くさガード",
+    "ko": "풀가드",
+    "zh": "草屬性防守"
+  },
+  "24010601": {
+    "de": "Eis-Abwehr",
+    "en": "Ice Guard",
+    "es": "Mitiga Hielo",
+    "fr": "Résistance Glace",
+    "it": "Fendigelo",
+    "ja": "こおりガード",
+    "ko": "얼음가드",
+    "zh": "冰屬性防守"
+  },
+  "24010701": {
+    "de": "Kampf-Abwehr",
+    "en": "Fighting Guard",
+    "es": "Mitiga Lucha",
+    "fr": "Résistance Combat",
+    "it": "Fendilotta",
+    "ja": "かくとうガード",
+    "ko": "격투가드",
+    "zh": "格鬥屬性防守"
+  },
+  "24010801": {
+    "de": "Gift-Abwehr",
+    "en": "Poison Guard",
+    "es": "Mitiga Veneno",
+    "fr": "Résistance Poison",
+    "it": "Fendiveleno",
+    "ja": "どくガード",
+    "ko": "독가드",
+    "zh": "毒屬性防守"
+  },
+  "24010901": {
+    "de": "Boden-Abwehr",
+    "en": "Ground Guard",
+    "es": "Mitiga Tierra",
+    "fr": "Résistance Sol",
+    "it": "Fenditerra",
+    "ja": "じめんガード",
+    "ko": "땅가드",
+    "zh": "地面屬性防守"
+  },
+  "24011001": {
+    "de": "Flug-Abwehr",
+    "en": "Flying Guard",
+    "es": "Mitiga Volador",
+    "fr": "Résistance Vol",
+    "it": "Fendicielo",
+    "ja": "ひこうガード",
+    "ko": "비행가드",
+    "zh": "飛行屬性防守"
+  },
+  "24011101": {
+    "de": "Psycho-Abwehr",
+    "en": "Psychic Guard",
+    "es": "Mitiga Psíquico",
+    "fr": "Résistance Psy",
+    "it": "Fendipsico",
+    "ja": "エスパーガード",
+    "ko": "에스퍼가드",
+    "zh": "超能力屬性防守"
+  },
+  "24011201": {
+    "de": "Käfer-Abwehr",
+    "en": "Bug Guard",
+    "es": "Mitiga Bicho",
+    "fr": "Résistance Insecte",
+    "it": "Fendinsetto",
+    "ja": "むしガード",
+    "ko": "벌레가드",
+    "zh": "蟲屬性防守"
+  },
+  "24011301": {
+    "de": "Gesteins-Abwehr",
+    "en": "Rock Guard",
+    "es": "Mitiga Roca",
+    "fr": "Résistance Roche",
+    "it": "Fendiroccia",
+    "ja": "いわガード",
+    "ko": "바위가드",
+    "zh": "岩石屬性防守"
+  },
+  "24011401": {
+    "de": "Geister-Abwehr",
+    "en": "Ghost Guard",
+    "es": "Mitiga Fantasma",
+    "fr": "Résistance Spectre",
+    "it": "Fendispettro",
+    "ja": "ゴーストガード",
+    "ko": "고스트가드",
+    "zh": "幽靈屬性防守"
+  },
+  "24011501": {
+    "de": "Drachen-Abwehr",
+    "en": "Dragon Guard",
+    "es": "Mitiga Dragón",
+    "fr": "Résistance Dragon",
+    "it": "Fendidrago",
+    "ja": "ドラゴンガード",
+    "ko": "드래곤가드",
+    "zh": "龍屬性防守"
+  },
+  "24011601": {
+    "de": "Unlicht-Abwehr",
+    "en": "Dark Guard",
+    "es": "Mitiga Siniestro",
+    "fr": "Résistance Ténèbres",
+    "it": "Fendibuio",
+    "ja": "あくガード",
+    "ko": "악가드",
+    "zh": "惡屬性防守"
+  },
+  "24011701": {
+    "de": "Stahl-Abwehr",
+    "en": "Steel Guard",
+    "es": "Mitiga Acero",
+    "fr": "Résistance Acier",
+    "it": "Fendiacciaio",
+    "ja": "はがねガード",
+    "ko": "강철가드",
+    "zh": "鋼屬性防守"
+  },
+  "24011801": {
+    "de": "Feen-Abwehr",
+    "en": "Fairy Guard",
+    "es": "Mitiga Hada",
+    "fr": "Résistance Fée",
+    "it": "Fendifata",
+    "ja": "フェアリーガード",
+    "ko": "페어리가드",
+    "zh": "妖精屬性防守"
+  }
+}

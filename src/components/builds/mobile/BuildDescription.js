@@ -6,6 +6,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import UI from '../../../utils/translations';
+import LUCKY_SKILL_LIST from '../../../data/luckySkills.json';
 
 const BuildDescription = ({ classes, build }) => {
   const language = useSelector((state) => state.language.currentLanguage);
@@ -34,6 +35,30 @@ const BuildDescription = ({ classes, build }) => {
           </span>
           <span>{build.orbSpent}</span>
           <br />
+
+          {build.syncLevel ? (
+            <>
+              <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                {UI['Sync Move Level'][language]}:{' '}
+              </span>
+              <span>{build.syncLevel}</span>
+              <br />
+            </>
+          ) : null}
+
+          {build.luckySkillId ? (
+            <>
+              <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                {UI['Lucky Skill'][language]}:{' '}
+              </span>
+              <span>
+                {' '}
+                {LUCKY_SKILL_LIST[build.luckySkillId][language] || '-'}
+              </span>
+              <br />
+            </>
+          ) : null}
+
           <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
             {UI['Description'][language]}:{' '}
           </span>

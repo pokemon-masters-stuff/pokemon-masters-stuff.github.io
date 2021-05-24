@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
@@ -23,9 +23,6 @@ import ResetTeamButton from '../common/ResetTeamButton';
 import { allSyncGrids } from '../../../utils/constants';
 import ShareTeamButton from '../common/ShareTeamButton';
 import SyncPairCard from '../common/SyncPairCard';
-// import AppBar from '@material-ui/core/AppBar';
-// import Nav from '../../MainAppbar/Nav';
-// import { NavigationMobile } from '../../Navigation';
 import LoginOrRegisterModal from '../../auth/LoginOrRegisterModal';
 
 const useStyles = makeStyles((theme) => ({
@@ -284,12 +281,6 @@ function TeamBuilder() {
     loadTeamFromUrl();
     dispatch(updateTeamUrl());
   }, []);
-
-  // const [isNavOpened, setIsNavOpened] = useState(false);
-
-  // const handleOnCloseNav = () => setIsNavOpened(false);
-
-  // const handleOnOpenNav = () => setIsNavOpened(true);
 
   return (
     <div

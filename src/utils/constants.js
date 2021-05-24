@@ -944,7 +944,6 @@ export const pokemonPictures = {
   pm0448_00_lucario_128, // Lucario
   pm0095_00_iwark_128, // Onix
   pm0581_00_swanna_128, // Swanna
-  pm0133_00_eievui_128, // Eevee
   pm0003_01_fushigibana_128, // Venusaur
   pm0160_00_ordile_128, // Feraligatr
   pm0009_00_kamex_128, // Blastoise
@@ -1883,6 +1882,9 @@ export const newGridedPokemonMonsterBaseIdArray = [
   '20064611', // Kyurem (Ghetsis)
   '20025000', // Ho-Oh (Silver)
 ];
+
+export const CLOUD_FUNCTIONS_URL =
+  'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app'; // production
 
 export const type1SyncGrid = [
   'pikachu',

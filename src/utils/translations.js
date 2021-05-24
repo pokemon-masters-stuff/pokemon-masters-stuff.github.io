@@ -15,10 +15,10 @@ const UI = {
     en: 'Orbs Spent',
     es: 'Orbes Gastadas',
     fr: 'Orbes Dépensées',
-    ja: 'オーブの消費',
-    ko: '사용 된 보주',
+    ja: 'ドロップの消費',
+    ko: '드롭 된 보주',
     it: 'Uniciondoli Usati',
-    zh: '寶珠消耗',
+    zh: '滴晶消耗',
   },
   Energy: {
     de: 'Energie',
@@ -305,23 +305,37 @@ const UI = {
     en: 'Build description (Optional. Can be edited later.)',
     es: 'Descripción de la compilación (Opcional. Se puede editar más tarde).',
     fr: 'Description du Build (Facultatif. Peut être modifiée ultérieurement.)',
-    it:
-      'Descrizione Uniteca (Opzionale. Può essere modificata successivamente.)',
+    it: 'Descrizione Uniteca (Opzionale. Può essere modificata successivamente.)',
     ja: 'ビルドの説明（オプション。後で編集できます。）',
     ko: '빌드 설명 (선택 사항. 나중에 편집 할 수 있음)',
     zh: '配置說明（可選。以後可以編輯。）',
   },
+  'Lucky Skill': {
+    de: 'Glücksfähigkeit bei',
+    en: 'Lucky Skill',
+    es: 'Habilidad Fortuita',
+    fr: 'Talent Surprise',
+    it: 'Talento Casuale',
+    ja: 'ポテンシャル',
+    ko: '포텐셜을',
+    zh: '潛能',
+  },
+  'Sync Move Level': {
+    de: 'Attacken-Level',
+    en: 'Sync Move Level',
+    es: 'Nivel de Movimiento Compi',
+    fr: 'Niveau des Capacité Duo',
+    it: 'Livello mosse',
+    ja: 'わざレベル',
+    ko: '기술 레벨',
+    zh: '拍組招式等級',
+  },
   Note: {
-    de:
-      'Hinweis: Sobald ein Build veröffentlicht wurde, können Sie nur noch seine Beschreibung bearbeiten.',
-    en:
-      'Note: Once a build is published, you will only be able to edit its description.',
-    es:
-      'Nota: Una vez que se publica una compilación, solo podrá editar su descripción.',
-    fr:
-      "Remarque: Une fois qu'une version est publiée, vous ne pourrez modifier que sa description.",
-    it:
-      "Nota: Una volta che l'Uniteca viene pubblicata, sarai in grado di modificarne solo la descrizione.",
+    de: 'Hinweis: Sobald ein Build veröffentlicht wurde, können Sie nur noch seine Beschreibung bearbeiten.',
+    en: 'Note: Once a build is published, you will only be able to edit its description.',
+    es: 'Nota: Una vez que se publica una compilación, solo podrá editar su descripción.',
+    fr: "Remarque: Une fois qu'une version est publiée, vous ne pourrez modifier que sa description.",
+    it: "Nota: Una volta che l'Uniteca viene pubblicata, sarai in grado di modificarne solo la descrizione.",
     ja: '注：ビルドが公開されると、その説明のみを編集できます。',
     ko: '참고 : 빌드가 게시되면 해당 설명 만 편집 할 수 있습니다.',
     zh: '注意：發布後，您將只能編輯其描述。',
@@ -421,8 +435,7 @@ const UI = {
   'Contribute Title': {
     de: 'Bitte helfen Sie mir mit Abkürzungen für Fertigkeitsnamen',
     en: 'Please Help Me With Skill Name Abbreviations',
-    es:
-      'Por favor, ayúdame con las abreviaturas de los nombres de las habilidades',
+    es: 'Por favor, ayúdame con las abreviaturas de los nombres de las habilidades',
     fr: "Veuillez m'aider avec les abréviations des noms de compétences",
     it: 'Aiutatemi con le abbreviazioni dei nomi delle abilità',
     ja: 'スキル名の省略形について教えてください',

@@ -39,9 +39,6 @@ export default createStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   hide: {
     display: 'none',
   },

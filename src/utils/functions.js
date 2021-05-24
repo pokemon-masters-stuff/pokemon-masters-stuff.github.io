@@ -1,5 +1,6 @@
 import gridedSyncPairDataArray from '../data/gridedSyncPairData.json';
 import eggPokemonDataArray from '../data/eggPokemonData.json';
+// import luckySkillList from '../data/luckySkills.json';
 import {
   shortenedMoveNameByAbilityId,
   newGridedPokemonMonsterBaseIdArray,
@@ -43,6 +44,17 @@ export const convertSyncPairNameFromUrl = (syncPairName) => {
   }
   return updatedSyncPairName;
 };
+
+// export const getLuckySkillList = (language) => {
+//   let luckySkills = [];
+//   Object.keys(luckySkillList).map((key) => {
+//     return luckySkills.push({
+//       key: key,
+//       value: luckySkillList[key][language],
+//     });
+//   });
+//   return luckySkills;
+// };
 
 export const getPokemonNameList = (language) => {
   let existingGridedPokemon = [];

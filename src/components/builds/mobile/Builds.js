@@ -7,17 +7,12 @@ import {
   getNewPokemonNameList,
 } from '../../../utils/functions';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
-// import Nav from '../../MainAppbar/Nav';
-// import { NavigationMobile } from '../../Navigation';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';

@@ -56,6 +56,7 @@ import {
   UPDATE_TEAM_URL,
   CHANGE_GENDER,
 } from './types';
+import { CLOUD_FUNCTIONS_URL } from '../utils/constants';
 
 export const selectPokemon = (selectedPokemon) => ({
   type: SELECT_POKEMON,
@@ -130,16 +131,18 @@ export const changeMode = () => ({
   type: CHANGE_MODE,
 });
 
-export const setAlert = (msg, alertType, timeout = 2000) => (dispatch) => {
-  const id = uuid.v4();
+export const setAlert =
+  (msg, alertType, timeout = 2000) =>
+  (dispatch) => {
+    const id = uuid.v4();
 
-  dispatch({
-    type: SET_ALERT,
-    payload: { msg, alertType, id },
-  });
+    dispatch({
+      type: SET_ALERT,
+      payload: { msg, alertType, id },
+    });
 
-  setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout);
-};
+    setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout);
+  };
 
 // Load User
 export const loadUser = () => async (dispatch) => {
@@ -148,9 +151,7 @@ export const loadUser = () => async (dispatch) => {
   }
 
   try {
-    const res = await axios.get(
-      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/auth'
-    );
+    const res = await axios.get(`${CLOUD_FUNCTIONS_URL}/api/auth`);
 
     dispatch({
       type: USER_LOADED,
@@ -166,40 +167,42 @@ export const loadUser = () => async (dispatch) => {
 };
 
 // Register User
-export const register = ({ username, password }) => async (dispatch) => {
-  dispatch(setLoading(true));
+export const register =
+  ({ username, password }) =>
+  async (dispatch) => {
+    dispatch(setLoading(true));
 
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
 
-  const body = JSON.stringify({ username, password });
+    const body = JSON.stringify({ username, password });
 
-  try {
-    const res = await axios.post(
-      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/users',
-      body,
-      config
-    );
+    try {
+      const res = await axios.post(
+        `${CLOUD_FUNCTIONS_URL}/api/users`,
+        body,
+        config
+      );
 
-    dispatch({
-      type: REGISTER_SUCCESS,
-      payload: res.data,
-    });
+      dispatch({
+        type: REGISTER_SUCCESS,
+        payload: res.data,
+      });
 
-    dispatch(loadUser());
-    dispatch(setLoading(false));
-    dispatch(setAlert('Registration Successful', 'success'));
-  } catch (err) {
-    const errors = err.response.data.errors;
-    if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      dispatch(loadUser());
+      dispatch(setLoading(false));
+      dispatch(setAlert('Registration Successful', 'success'));
+    } catch (err) {
+      const errors = err.response.data.errors;
+      if (errors) {
+        errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      }
+      dispatch(setLoading(false));
     }
-    dispatch(setLoading(false));
-  }
-};
+  };
 
 // Login User
 export const login = (username, password) => async (dispatch) => {
@@ -215,7 +218,7 @@ export const login = (username, password) => async (dispatch) => {
 
   try {
     const res = await axios.post(
-      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/auth',
+      `${CLOUD_FUNCTIONS_URL}/api/auth`,
       body,
       config
     );
@@ -255,7 +258,7 @@ export const setLoading = (payload) => (dispatch) => {
 export const getBuilds = (filter, sort, skip, limit) => async (dispatch) => {
   try {
     const res = await axios.get(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
+      `${CLOUD_FUNCTIONS_URL}/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
         filter !== 'None' ? '&filter=' + filter : ''
       }`
     );
@@ -276,63 +279,59 @@ export const getBuilds = (filter, sort, skip, limit) => async (dispatch) => {
 };
 
 // Get Liked Builds
-export const getLikedBuilds = (filter, sort, skip, limit) => async (
-  dispatch
-) => {
-  try {
-    const res = await axios.get(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/liked?skip=${skip}&limit=${limit}&sort=${sort}${
-        filter !== 'None' ? '&filter=' + filter : ''
-      }`
-    );
+export const getLikedBuilds =
+  (filter, sort, skip, limit) => async (dispatch) => {
+    try {
+      const res = await axios.get(
+        `${CLOUD_FUNCTIONS_URL}/api/builds/liked?skip=${skip}&limit=${limit}&sort=${sort}${
+          filter !== 'None' ? '&filter=' + filter : ''
+        }`
+      );
 
-    dispatch({
-      type: GET_LIKED_BUILDS,
-      payload: res.data,
-    });
-  } catch (error) {
-    dispatch({
-      type: BUILD_ERROR,
-      payload: {
-        msg: error.response.statusText,
-        status: error.response.status,
-      },
-    });
-  }
-};
+      dispatch({
+        type: GET_LIKED_BUILDS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: BUILD_ERROR,
+        payload: {
+          msg: error.response.statusText,
+          status: error.response.status,
+        },
+      });
+    }
+  };
 
 // Get user's Builds
-export const getUsersBuilds = (filter, sort, skip, limit) => async (
-  dispatch
-) => {
-  try {
-    const res = await axios.get(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/users?skip=${skip}&limit=${limit}&sort=${sort}${
-        filter !== 'None' ? '&filter=' + filter : ''
-      }`
-    );
+export const getUsersBuilds =
+  (filter, sort, skip, limit) => async (dispatch) => {
+    try {
+      const res = await axios.get(
+        `${CLOUD_FUNCTIONS_URL}/api/builds/users?skip=${skip}&limit=${limit}&sort=${sort}${
+          filter !== 'None' ? '&filter=' + filter : ''
+        }`
+      );
 
-    dispatch({
-      type: GET_USERS_BUILDS,
-      payload: res.data,
-    });
-  } catch (error) {
-    dispatch({
-      type: BUILD_ERROR,
-      payload: {
-        msg: error.response.statusText,
-        status: error.response.status,
-      },
-    });
-  }
-};
+      dispatch({
+        type: GET_USERS_BUILDS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: BUILD_ERROR,
+        payload: {
+          msg: error.response.statusText,
+          status: error.response.status,
+        },
+      });
+    }
+  };
 
 // Add like
 export const addLike = (id) => async (dispatch) => {
   try {
-    const res = await axios.put(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/like/${id}`
-    );
+    const res = await axios.put(`${CLOUD_FUNCTIONS_URL}/api/builds/like/${id}`);
     dispatch({
       type: UPDATE_LIKES,
       payload: { id, likes: res.data },
@@ -352,7 +351,7 @@ export const addLike = (id) => async (dispatch) => {
 export const removeLike = (id) => async (dispatch) => {
   try {
     const res = await axios.put(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/unlike/${id}`
+      `${CLOUD_FUNCTIONS_URL}/api/builds/unlike/${id}`
     );
     dispatch({
       type: UPDATE_LIKES,
@@ -379,7 +378,7 @@ export const addBuild = (data) => async (dispatch) => {
 
   try {
     const res = await axios.post(
-      'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds',
+      `${CLOUD_FUNCTIONS_URL}/api/builds`,
       data,
       config
     );
@@ -415,7 +414,7 @@ export const editBuild = (id, description) => async (dispatch) => {
 
   try {
     const res = await axios.put(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/edit/${id}`,
+      `${CLOUD_FUNCTIONS_URL}/api/builds/edit/${id}`,
       body,
       config
     );
@@ -437,9 +436,7 @@ export const editBuild = (id, description) => async (dispatch) => {
 // Delete build
 export const deleteBuild = (id) => async (dispatch) => {
   try {
-    await axios.delete(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/${id}`
-    );
+    await axios.delete(`${CLOUD_FUNCTIONS_URL}/api/builds/${id}`);
 
     dispatch({
       type: DELETE_BUILD,
@@ -465,7 +462,7 @@ export const addComment = (buildId, text) => async (dispatch) => {
   const body = JSON.stringify({ text });
   try {
     const res = await axios.post(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/comment/${buildId}`,
+      `${CLOUD_FUNCTIONS_URL}/api/builds/comment/${buildId}`,
       body,
       config
     );
@@ -493,7 +490,7 @@ export const addComment = (buildId, text) => async (dispatch) => {
 export const deleteComment = (buildId, commentId) => async (dispatch) => {
   try {
     await axios.delete(
-      `https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app/api/builds/comment/${buildId}/${commentId}`
+      `${CLOUD_FUNCTIONS_URL}/api/builds/comment/${buildId}/${commentId}`
     );
 
     dispatch({

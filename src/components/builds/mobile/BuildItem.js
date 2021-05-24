@@ -28,6 +28,7 @@ import {
   // addSyncLvReq,
   removeHyphens,
   getPokemonDataByName,
+  checkSelectabilityBasedOnSyncLv,
 } from '../../../utils/functions';
 import { pokemonPictures, allSyncGrids } from '../../../utils/constants';
 import BuildDescription from './BuildDescription';
@@ -129,6 +130,12 @@ class BuildItem extends Component {
 
       // const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
 
+      const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
+        pokemon,
+        cell,
+        build.syncLevel
+      );
+
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -159,14 +166,17 @@ class BuildItem extends Component {
           <Text
             className={`build ${this.props.darkMode ? classes.darkMode : null}`}
           >
-            {renderMoveName(
-              cell.move.name,
-              cell.ability.abilityId,
-              this.props.language
-            )}
+            {isSeletableBasedOnSyncLv
+              ? renderMoveName(
+                  cell.move.name,
+                  cell.ability.abilityId,
+                  this.props.language
+                )
+              : ''}
           </Text>
           {this.state.screenWidth < 960 &&
-          cell.move.energyCost !== undefined ? (
+          cell.move.energyCost !== undefined &&
+          isSeletableBasedOnSyncLv ? (
             <text
               className="energy-inside-grid"
               textAnchor="middle"

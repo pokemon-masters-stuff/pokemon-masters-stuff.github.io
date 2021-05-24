@@ -29,9 +29,11 @@ import {
   // addSyncLvReq,
   removeHyphens,
   getPokemonDataByName,
+  checkSelectabilityBasedOnSyncLv,
 } from '../../../utils/functions';
 import { pokemonPictures, allSyncGrids } from '../../../utils/constants';
 import UI from '../../../utils/translations';
+import LUCKY_SKILL_LIST from '../../../data/luckySkills.json';
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -170,6 +172,12 @@ class BuildItem extends Component {
 
       // const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
 
+      const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
+        pokemon,
+        cell,
+        build.syncLevel
+      );
+
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
@@ -202,14 +210,17 @@ class BuildItem extends Component {
           <Text
             className={`build ${this.props.darkMode ? classes.darkMode : null}`}
           >
-            {renderMoveName(
-              cell.move.name,
-              cell.ability.abilityId,
-              this.props.language
-            )}
+            {isSeletableBasedOnSyncLv
+              ? renderMoveName(
+                  cell.move.name,
+                  cell.ability.abilityId,
+                  this.props.language
+                )
+              : ''}
           </Text>
           {this.state.screenWidth < 960 &&
-          cell.move.energyCost !== undefined ? (
+          cell.move.energyCost !== undefined &&
+          isSeletableBasedOnSyncLv ? (
             <text
               className="energy-inside-grid"
               textAnchor="middle"
@@ -439,6 +450,29 @@ class BuildItem extends Component {
                   </span>
                   <span style={{ fontWeight: 'bold' }}>{build.orbSpent}</span>
                 </p>
+
+                {build.syncLevel ? (
+                  <p>
+                    <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                      {UI['Sync Move Level'][language]}:{' '}
+                    </span>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {build.syncLevel || '-'}
+                    </span>
+                  </p>
+                ) : null}
+
+                {build.luckySkillId ? (
+                  <p>
+                    <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+                      {UI['Lucky Skill'][language]}:{' '}
+                    </span>
+                    <span>
+                      {LUCKY_SKILL_LIST[build.luckySkillId][language] || '-'}
+                    </span>
+                  </p>
+                ) : null}
+
                 <Typography style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
                   {UI['Description'][language]}:
                 </Typography>
