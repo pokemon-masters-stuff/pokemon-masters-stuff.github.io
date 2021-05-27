@@ -1179,4 +1179,9 @@ export default {
   1809360400000: 'Team FT 4',
   1809440119082: 'Dire Hit + CE1',
   2201030200411: 'F.B. OaR 2',
+  2100625003: 'Dark.Lariat +3',
+  2100655003: 'B.Swing +3',
+  1202010400625: 'Dark.Lariat MGR 4',
+  1202010400655: 'B.Swing MGR 4',
+  1202010411170: 'R.F! MGR 4',
 };

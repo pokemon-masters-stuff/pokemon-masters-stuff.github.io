@@ -914,6 +914,14 @@ import {
   cobalionGridDataJA,
   cobalionGridDataKO,
   cobalionGridDataZH,
+  incineroarGridDataDE,
+  incineroarGridDataEN,
+  incineroarGridDataES,
+  incineroarGridDataFR,
+  incineroarGridDataIT,
+  incineroarGridDataJA,
+  incineroarGridDataKO,
+  incineroarGridDataZH,
 } from '../data';
 
 import {
@@ -1048,6 +1056,7 @@ import {
   pm0377_00_regirock_128, // Regirock
   pm0638_00_cobalon_128, // Cobalion
   pm0873_00_sun_128, // Solgaleo
+  pm0846_00_tora3_128, // Incineroar
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -1183,6 +1192,7 @@ export const pokemonPictures = {
   pm0377_00_regirock_128, // Regirock
   pm0638_00_cobalon_128, // Cobalion
   pm0873_00_sun_128, // Solgaleo
+  pm0846_00_tora3_128, // Incineroar
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -1310,6 +1320,7 @@ export const allSyncGrids = {
     regirockGridDataDE,
     solgaleoGridDataDE,
     cobalionGridDataDE,
+    incineroarGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -1424,6 +1435,7 @@ export const allSyncGrids = {
     regirockGridDataEN,
     solgaleoGridDataEN,
     cobalionGridDataEN,
+    incineroarGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1538,6 +1550,7 @@ export const allSyncGrids = {
     regirockGridDataES,
     solgaleoGridDataES,
     cobalionGridDataES,
+    incineroarGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1652,6 +1665,7 @@ export const allSyncGrids = {
     regirockGridDataFR,
     solgaleoGridDataFR,
     cobalionGridDataFR,
+    incineroarGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1766,6 +1780,7 @@ export const allSyncGrids = {
     regirockGridDataIT,
     solgaleoGridDataIT,
     cobalionGridDataIT,
+    incineroarGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1880,6 +1895,7 @@ export const allSyncGrids = {
     regirockGridDataJA,
     solgaleoGridDataJA,
     cobalionGridDataJA,
+    incineroarGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1994,6 +2010,7 @@ export const allSyncGrids = {
     regirockGridDataKO,
     solgaleoGridDataKO,
     cobalionGridDataKO,
+    incineroarGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -2108,6 +2125,7 @@ export const allSyncGrids = {
     regirockGridDataZH,
     solgaleoGridDataZH,
     cobalionGridDataZH,
+    incineroarGridDataZH,
   },
 };
 
@@ -2129,6 +2147,7 @@ export const newGridedTrainerIdArray = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
+  10117000000, // The Masked Royal & Incineroar
 ];
 
 export const type1SyncGrid = [
@@ -2218,6 +2237,7 @@ export const type2SyncGrid = [
   'kyurem',
   'salamence',
   'tangela',
+  'incineroar',
 ];
 
 export const type3SyncGrid = [

@@ -231,7 +231,6 @@ const gridedTrainerList = [
   10115000000, // Volkner & Luxray
   10116000000, // Dawn & Torterra
   10116400000, // Dawn & Alcremie
-  10117000000, // Kukui & Incineroar
   10118000000, // Lillie & Clefairy
   10118400000, // Lillie & Ribombee
   10119000000, // Gladion & Silvally
@@ -285,6 +284,7 @@ const gridedTrainerList = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
+  10117000000, // The Masked Royal & Incineroar
 ];
 
 const newTrainerIdArray = [
@@ -302,6 +302,7 @@ const newTrainerIdArray = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
+  10117000000, // The Masked Royal & Incineroar
 ];
 
 // On 5/25/2020 the following changes have been made to the .proto files:
@@ -1563,7 +1564,7 @@ const extractSyncPairDataByTrainerId = () => {
         ] = `${trainerNameByLanguage[language]}_${pokemonNameByLanguage[language]}`;
       }
 
-      if (entry.trainerBaseId === '10002101') {
+      if (entry.trainerId === 10021010000) {
         // New Blastoise Grid
         pokemonNameByLanguage[language] =
           pokemonNameByLanguage[language] + '_new';

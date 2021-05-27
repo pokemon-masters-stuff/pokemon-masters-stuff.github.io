@@ -955,3 +955,12 @@ export { default as cobalionGridDataIT } from './grids/it/cobalion.json';
 export { default as cobalionGridDataJA } from './grids/ja/cobalion.json';
 export { default as cobalionGridDataKO } from './grids/ko/cobalion.json';
 export { default as cobalionGridDataZH } from './grids/zh/cobalion.json';
+
+export { default as incineroarGridDataDE } from './grids/de/incineroar.json';
+export { default as incineroarGridDataEN } from './grids/en/incineroar.json';
+export { default as incineroarGridDataES } from './grids/es/incineroar.json';
+export { default as incineroarGridDataFR } from './grids/fr/incineroar.json';
+export { default as incineroarGridDataIT } from './grids/it/incineroar.json';
+export { default as incineroarGridDataJA } from './grids/ja/incineroar.json';
+export { default as incineroarGridDataKO } from './grids/ko/incineroar.json';
+export { default as incineroarGridDataZH } from './grids/zh/incineroar.json';

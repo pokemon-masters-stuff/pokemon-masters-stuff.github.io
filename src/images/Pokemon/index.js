@@ -174,3 +174,4 @@ export { default as pm0382_00_kyogre_128 } from './128px/pm0382_00_kyogre_128.kt
 export { default as pm0377_00_regirock_128 } from './128px/pm0377_00_regirock_128.ktx.png'; // Regirock
 export { default as pm0638_00_cobalon_128 } from './128px/pm0638_00_cobalon_128.ktx.png'; // Cobalion
 export { default as pm0873_00_sun_128 } from './128px/pm0873_00_sun_128.ktx.png'; // Solgaleo
+export { default as pm0846_00_tora3_128 } from './128px/pm0846_00_tora3_128.ktx.png'; // Incineroar

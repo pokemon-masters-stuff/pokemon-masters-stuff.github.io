@@ -190,6 +190,7 @@ const allGridedTrainers = [
   { trainerBaseId: 10012900, trainerId: 10129000001, monsterBaseId: 20037300 }, // Zinnia & Salamence
   { trainerBaseId: 10000800, trainerId: 10008000001, monsterBaseId: 20011400 }, // Erika & Tangela
   { trainerBaseId: 10006200, trainerId: 10062000001, monsterBaseId: 20019700 }, // Karen & Umbreon
+  // to add trainer Id: 10117000000, // The Masked Royal & Incineroar
 ];
 
 // Update this list (of trainerBaseId) based on new datamine
@@ -308,6 +309,7 @@ const gridedTrainerList = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
+  10117000000, // The Masked Royal & Incineroar
 ];
 
 const newTrainerIdArray = [
@@ -325,6 +327,7 @@ const newTrainerIdArray = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
+  10117000000, // The Masked Royal & Incineroar
 ];
 
 /*

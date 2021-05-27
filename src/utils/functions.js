@@ -64,7 +64,7 @@ export const getPokemonNameList = (language) => {
         if (
           // Lycanroc (Olivia), Charizard (Leon)
           entry.monsterBaseId === '20082912' ||
-          entry.trainerBaseId === '10024700' ||
+          entry.trainerId === 10247000000 ||
           entry.trainerId === 10148000001 // Morty & Mismagius
         ) {
           // for the new sync pair:
@@ -199,6 +199,7 @@ export const getPokemonDataByName = (pokemonName) => {
       if (
         pokemon.pokemonNameByLanguage['en'].toLowerCase() === 'blastoise_new'
       ) {
+        console.log('blastoise', pokemon);
         pokemonData = pokemon;
       }
     } else if (pokemonName.toLowerCase() === 'mismagius') {
