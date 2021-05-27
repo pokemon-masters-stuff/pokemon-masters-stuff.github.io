@@ -2045,6 +2045,20 @@
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {
+      "trainerBaseId": "10011700",
+      "trainerNameId": "ch0117_00_royalmask",
+      "trainerNameIdShort": "ch0001",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_chara_royalmask",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
       "trainerBaseId": "10011800",
       "trainerNameId": "ch0118_00_lillie",
       "trainerNameIdShort": "ch0118",
@@ -2465,6 +2479,20 @@
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {
+      "trainerBaseId": "10016100",
+      "trainerNameId": "ch0161_00_hara",
+      "trainerNameIdShort": "ch0161",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_shimak_shimaq",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
       "trainerBaseId": "10017000",
       "trainerNameId": "ch0170_00_arty",
       "trainerNameIdShort": "ch0170",
@@ -2617,6 +2645,62 @@
       "isGeneric": 0,
       "battleThemeId": "bgm_btl_chara_lucia",
       "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
+      "trainerBaseId": "10022100",
+      "trainerNameId": "ch0221_00_homura",
+      "trainerNameIdShort": "ch0221",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "",
+      "victoryThemeId": ""
+    },
+    {
+      "trainerBaseId": "10022200",
+      "trainerNameId": "ch0222_00_kagari",
+      "trainerNameIdShort": "ch0222",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "",
+      "victoryThemeId": ""
+    },
+    {
+      "trainerBaseId": "10022300",
+      "trainerNameId": "ch0223_00_ushio",
+      "trainerNameIdShort": "ch0223",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "",
+      "victoryThemeId": ""
+    },
+    {
+      "trainerBaseId": "10022400",
+      "trainerNameId": "ch0224_00_izumi",
+      "trainerNameIdShort": "ch0224",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "",
+      "victoryThemeId": ""
     },
     {
       "trainerBaseId": "10024000",
@@ -3305,6 +3389,20 @@
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {
+      "trainerBaseId": "11011700",
+      "trainerNameId": "ch0117_00_royalmask_01",
+      "trainerNameIdShort": "ch0001",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_chara_royalmask",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
       "trainerBaseId": "11011800",
       "trainerNameId": "ch0118_00_lillie_01",
       "trainerNameIdShort": "ch0118",
@@ -3358,6 +3456,20 @@
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleThemeId": "bgm_btl_chara_lusamine",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
+      "trainerBaseId": "11012100",
+      "trainerNameId": "ch0121_00_plumeria_01",
+      "trainerNameIdShort": "ch0121",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_chara_plumeria",
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {
@@ -3529,6 +3641,20 @@
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {
+      "trainerBaseId": "11014900",
+      "trainerNameId": "ch0149_00_kaki_01",
+      "trainerNameIdShort": "ch0149",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_gl_alola",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
       "trainerBaseId": "11015800",
       "trainerNameId": "ch0158_00_carnet_01",
       "trainerNameIdShort": "ch0158",
@@ -3540,6 +3666,34 @@
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleThemeId": "bgm_btl_chara_carnet",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
+      "trainerBaseId": "11016000",
+      "trainerNameId": "ch0160_00_suiren_01",
+      "trainerNameIdShort": "ch0160",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_gl_alola",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
+      "trainerBaseId": "11016100",
+      "trainerNameId": "ch0161_00_hara_01",
+      "trainerNameIdShort": "ch0161",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_shimak_shimaq",
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {
@@ -3568,6 +3722,34 @@
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleThemeId": "bgm_btl_gl_unova",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
+      "trainerBaseId": "11019200",
+      "trainerNameId": "ch0192_00_matsubusa_01",
+      "trainerNameIdShort": "ch0192",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_chara_matsubusa",
+      "victoryThemeId": "bgm_btlrslt_normal"
+    },
+    {
+      "trainerBaseId": "11019300",
+      "trainerNameId": "ch0193_00_aogiri_01",
+      "trainerNameIdShort": "ch0193",
+      "u4": 1,
+      "u5": 0,
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleThemeId": "bgm_btl_chara_aogiri",
       "victoryThemeId": "bgm_btlrslt_normal"
     },
     {

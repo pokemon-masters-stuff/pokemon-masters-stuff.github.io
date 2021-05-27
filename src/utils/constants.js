@@ -22,7 +22,7 @@ import {
   liepardGridDataDE,
   rotomGridDataDE,
   houndoomGridDataDE,
-  raichuGridDataDE,
+  lt_surge_raichuGridDataDE,
   alakazamGridDataDE,
   helioliskGridDataDE,
   golisopodGridDataDE,
@@ -52,7 +52,7 @@ import {
   liepardGridDataEN,
   rotomGridDataEN,
   houndoomGridDataEN,
-  raichuGridDataEN,
+  lt_surge_raichuGridDataEN,
   alakazamGridDataEN,
   helioliskGridDataEN,
   golisopodGridDataEN,
@@ -82,7 +82,7 @@ import {
   liepardGridDataES,
   rotomGridDataES,
   houndoomGridDataES,
-  raichuGridDataES,
+  lt_surge_raichuGridDataES,
   alakazamGridDataES,
   helioliskGridDataES,
   golisopodGridDataES,
@@ -112,7 +112,7 @@ import {
   liepardGridDataFR,
   rotomGridDataFR,
   houndoomGridDataFR,
-  raichuGridDataFR,
+  lt_surge_raichuGridDataFR,
   alakazamGridDataFR,
   helioliskGridDataFR,
   golisopodGridDataFR,
@@ -142,7 +142,7 @@ import {
   liepardGridDataIT,
   rotomGridDataIT,
   houndoomGridDataIT,
-  raichuGridDataIT,
+  lt_surge_raichuGridDataIT,
   alakazamGridDataIT,
   helioliskGridDataIT,
   golisopodGridDataIT,
@@ -172,7 +172,7 @@ import {
   liepardGridDataJA,
   rotomGridDataJA,
   houndoomGridDataJA,
-  raichuGridDataJA,
+  lt_surge_raichuGridDataJA,
   alakazamGridDataJA,
   helioliskGridDataJA,
   golisopodGridDataJA,
@@ -202,7 +202,7 @@ import {
   liepardGridDataKO,
   rotomGridDataKO,
   houndoomGridDataKO,
-  raichuGridDataKO,
+  lt_surge_raichuGridDataKO,
   alakazamGridDataKO,
   helioliskGridDataKO,
   golisopodGridDataKO,
@@ -232,7 +232,7 @@ import {
   liepardGridDataZH,
   rotomGridDataZH,
   houndoomGridDataZH,
-  raichuGridDataZH,
+  lt_surge_raichuGridDataZH,
   alakazamGridDataZH,
   helioliskGridDataZH,
   golisopodGridDataZH,
@@ -809,6 +809,119 @@ import {
   drednawGridDataZH,
   sirfetchdGridDataZH,
   duraludonGridDataZH,
+  // 5/27/2021
+  tangelaGridDataDE,
+  raichuGridDataDE,
+  umbreonGridDataDE,
+  salamenceGridDataDE,
+  morty_mismagiusGridDataDE,
+  marowakGridDataDE,
+  tangelaGridDataEN,
+  raichuGridDataEN,
+  salamenceGridDataEN,
+  morty_mismagiusGridDataEN,
+  marowakGridDataEN,
+  umbreonGridDataEN,
+  tangelaGridDataES,
+  raichuGridDataES,
+  salamenceGridDataES,
+  morty_mismagiusGridDataES,
+  marowakGridDataES,
+  umbreonGridDataES,
+  tangelaGridDataFR,
+  raichuGridDataFR,
+  salamenceGridDataFR,
+  morty_mismagiusGridDataFR,
+  marowakGridDataFR,
+  umbreonGridDataFR,
+  tangelaGridDataIT,
+  raichuGridDataIT,
+  salamenceGridDataIT,
+  morty_mismagiusGridDataIT,
+  marowakGridDataIT,
+  umbreonGridDataIT,
+  tangelaGridDataJA,
+  raichuGridDataJA,
+  salamenceGridDataJA,
+  morty_mismagiusGridDataJA,
+  marowakGridDataJA,
+  umbreonGridDataJA,
+  tangelaGridDataKO,
+  raichuGridDataKO,
+  salamenceGridDataKO,
+  morty_mismagiusGridDataKO,
+  marowakGridDataKO,
+  umbreonGridDataKO,
+  tangelaGridDataZH,
+  raichuGridDataZH,
+  salamenceGridDataZH,
+  morty_mismagiusGridDataZH,
+  marowakGridDataZH,
+  umbreonGridDataZH,
+  araquanidGridDataDE,
+  crabominableGridDataDE,
+  groudonGridDataDE,
+  kyogreGridDataDE,
+  regirockGridDataDE,
+  araquanidGridDataEN,
+  crabominableGridDataEN,
+  groudonGridDataEN,
+  kyogreGridDataEN,
+  regirockGridDataEN,
+  araquanidGridDataES,
+  crabominableGridDataES,
+  groudonGridDataES,
+  kyogreGridDataES,
+  regirockGridDataES,
+  araquanidGridDataFR,
+  crabominableGridDataFR,
+  groudonGridDataFR,
+  kyogreGridDataFR,
+  regirockGridDataFR,
+  araquanidGridDataIT,
+  crabominableGridDataIT,
+  groudonGridDataIT,
+  kyogreGridDataIT,
+  regirockGridDataIT,
+  araquanidGridDataJA,
+  crabominableGridDataJA,
+  groudonGridDataJA,
+  kyogreGridDataJA,
+  regirockGridDataJA,
+  araquanidGridDataKO,
+  crabominableGridDataKO,
+  groudonGridDataKO,
+  kyogreGridDataKO,
+  regirockGridDataKO,
+  araquanidGridDataZH,
+  crabominableGridDataZH,
+  groudonGridDataZH,
+  kyogreGridDataZH,
+  regirockGridDataZH,
+  solgaleoGridDataDE,
+  solgaleoGridDataEN,
+  solgaleoGridDataES,
+  solgaleoGridDataFR,
+  solgaleoGridDataIT,
+  solgaleoGridDataJA,
+  solgaleoGridDataKO,
+  solgaleoGridDataZH,
+  cobalionGridDataDE,
+  cobalionGridDataEN,
+  cobalionGridDataES,
+  cobalionGridDataFR,
+  cobalionGridDataIT,
+  cobalionGridDataJA,
+  cobalionGridDataKO,
+  cobalionGridDataZH,
+  incineroarGridDataDE,
+  incineroarGridDataEN,
+  incineroarGridDataES,
+  incineroarGridDataFR,
+  incineroarGridDataIT,
+  incineroarGridDataJA,
+  incineroarGridDataKO,
+  incineroarGridDataZH,
 } from '../data';
 
 import {
@@ -865,7 +978,7 @@ import {
   pm0732_00_frilledlizard2_128, // Heliolisk
   pm0151_00_mew_128, // Mew
   pm0426_00_fuwaride_128, // Drifblim
-  pm0429_00_mumargi_128, // Mismagius
+  // pm0429_00_mumargi_128, // Mismagius
   pm0362_00_onigohri_128, // Glalie
   pm0542_00_hahakomori_128, // Leavanny
 
@@ -928,6 +1041,22 @@ import {
   pm0834_00_00_kajirigame_128, // Drednaw
   pm0865_00_31_negigaknight_128, // Sirfetch’d
   pm0884_00_00_duraludon_128, // Duraludon
+
+  // 5/27/2021
+  pm0114_00_monjara_128, // Tangela
+  pm0026_00_raichu_128, // Raichu
+  pm0197_00_blacky_128, // Umbreon
+  pm0373_00_bohmander_128, // Salamence
+  pm0429_00_mumargi_128, // Mismagius
+  pm0105_61_agaragara_128, // Marowak
+  pm0851_00_mizugumo2_128, // Araquanid
+  pm0860_00_yashigani2_128, // Crabominable
+  pm0383_00_groudon_128, // Groudon
+  pm0382_00_kyogre_128, // Kyogre
+  pm0377_00_regirock_128, // Regirock
+  pm0638_00_cobalon_128, // Cobalion
+  pm0873_00_sun_128, // Solgaleo
+  pm0846_00_tora3_128, // Incineroar
 } from '../images/Pokemon';
 
 export const pokemonPictures = {
@@ -984,7 +1113,7 @@ export const pokemonPictures = {
   pm0732_00_frilledlizard2_128, // Heliolisk
   pm0151_00_mew_128, // Mew
   pm0426_00_fuwaride_128, // Drifblim
-  pm0429_00_mumargi_128, // Mismagius
+  // pm0429_00_mumargi_128, // Mismagius
   pm0362_00_onigohri_128, // Glalie
   pm0542_00_hahakomori_128, // Leavanny
 
@@ -1047,6 +1176,22 @@ export const pokemonPictures = {
   pm0834_00_00_kajirigame_128, // Drednaw
   pm0865_00_31_negigaknight_128, // Sirfetch’d
   pm0884_00_00_duraludon_128, // Duraludon
+
+  // 5/27/2021
+  pm0114_00_monjara_128, // Tangela
+  pm0026_00_raichu_128, // Raichu
+  pm0197_00_blacky_128, // Umbreon
+  pm0373_00_bohmander_128, // Salamence
+  pm0429_00_mumargi_128, // Mismagius
+  pm0105_61_agaragara_128, // Marowak
+  pm0851_00_mizugumo2_128, // Araquanid
+  pm0860_00_yashigani2_128, // Crabominable
+  pm0383_00_groudon_128, // Groudon
+  pm0382_00_kyogre_128, // Kyogre
+  pm0377_00_regirock_128, // Regirock
+  pm0638_00_cobalon_128, // Cobalion
+  pm0873_00_sun_128, // Solgaleo
+  pm0846_00_tora3_128, // Incineroar
 };
 
 export const shortenedMoveNameByAbilityId = {
@@ -1077,7 +1222,7 @@ export const allSyncGrids = {
     liepardGridDataDE,
     rotomGridDataDE,
     houndoomGridDataDE,
-    raichuGridDataDE,
+    lt_surge_raichuGridDataDE,
     alakazamGridDataDE,
     helioliskGridDataDE,
     golisopodGridDataDE,
@@ -1161,6 +1306,20 @@ export const allSyncGrids = {
     drednawGridDataDE,
     sirfetchdGridDataDE,
     duraludonGridDataDE,
+    tangelaGridDataDE,
+    raichuGridDataDE,
+    umbreonGridDataDE,
+    salamenceGridDataDE,
+    morty_mismagiusGridDataDE,
+    marowakGridDataDE,
+    araquanidGridDataDE,
+    crabominableGridDataDE,
+    groudonGridDataDE,
+    kyogreGridDataDE,
+    regirockGridDataDE,
+    solgaleoGridDataDE,
+    cobalionGridDataDE,
+    incineroarGridDataDE,
   },
   en: {
     pikachuGridDataEN,
@@ -1178,7 +1337,7 @@ export const allSyncGrids = {
     liepardGridDataEN,
     rotomGridDataEN,
     houndoomGridDataEN,
-    raichuGridDataEN,
+    lt_surge_raichuGridDataEN,
     alakazamGridDataEN,
     helioliskGridDataEN,
     golisopodGridDataEN,
@@ -1262,6 +1421,20 @@ export const allSyncGrids = {
     drednawGridDataEN,
     sirfetchdGridDataEN,
     duraludonGridDataEN,
+    tangelaGridDataEN,
+    raichuGridDataEN,
+    salamenceGridDataEN,
+    morty_mismagiusGridDataEN,
+    marowakGridDataEN,
+    umbreonGridDataEN,
+    araquanidGridDataEN,
+    crabominableGridDataEN,
+    groudonGridDataEN,
+    kyogreGridDataEN,
+    regirockGridDataEN,
+    solgaleoGridDataEN,
+    cobalionGridDataEN,
+    incineroarGridDataEN,
   },
   es: {
     pikachuGridDataES,
@@ -1279,7 +1452,7 @@ export const allSyncGrids = {
     liepardGridDataES,
     rotomGridDataES,
     houndoomGridDataES,
-    raichuGridDataES,
+    lt_surge_raichuGridDataES,
     alakazamGridDataES,
     helioliskGridDataES,
     golisopodGridDataES,
@@ -1363,6 +1536,20 @@ export const allSyncGrids = {
     drednawGridDataES,
     sirfetchdGridDataES,
     duraludonGridDataES,
+    tangelaGridDataES,
+    raichuGridDataES,
+    salamenceGridDataES,
+    morty_mismagiusGridDataES,
+    marowakGridDataES,
+    umbreonGridDataES,
+    araquanidGridDataES,
+    crabominableGridDataES,
+    groudonGridDataES,
+    kyogreGridDataES,
+    regirockGridDataES,
+    solgaleoGridDataES,
+    cobalionGridDataES,
+    incineroarGridDataES,
   },
   fr: {
     pikachuGridDataFR,
@@ -1380,7 +1567,7 @@ export const allSyncGrids = {
     liepardGridDataFR,
     rotomGridDataFR,
     houndoomGridDataFR,
-    raichuGridDataFR,
+    lt_surge_raichuGridDataFR,
     alakazamGridDataFR,
     helioliskGridDataFR,
     golisopodGridDataFR,
@@ -1464,6 +1651,20 @@ export const allSyncGrids = {
     drednawGridDataFR,
     sirfetchdGridDataFR,
     duraludonGridDataFR,
+    tangelaGridDataFR,
+    raichuGridDataFR,
+    salamenceGridDataFR,
+    morty_mismagiusGridDataFR,
+    marowakGridDataFR,
+    umbreonGridDataFR,
+    araquanidGridDataFR,
+    crabominableGridDataFR,
+    groudonGridDataFR,
+    kyogreGridDataFR,
+    regirockGridDataFR,
+    solgaleoGridDataFR,
+    cobalionGridDataFR,
+    incineroarGridDataFR,
   },
   it: {
     pikachuGridDataIT,
@@ -1481,7 +1682,7 @@ export const allSyncGrids = {
     liepardGridDataIT,
     rotomGridDataIT,
     houndoomGridDataIT,
-    raichuGridDataIT,
+    lt_surge_raichuGridDataIT,
     alakazamGridDataIT,
     helioliskGridDataIT,
     golisopodGridDataIT,
@@ -1565,6 +1766,20 @@ export const allSyncGrids = {
     drednawGridDataIT,
     sirfetchdGridDataIT,
     duraludonGridDataIT,
+    tangelaGridDataIT,
+    raichuGridDataIT,
+    salamenceGridDataIT,
+    morty_mismagiusGridDataIT,
+    marowakGridDataIT,
+    umbreonGridDataIT,
+    araquanidGridDataIT,
+    crabominableGridDataIT,
+    groudonGridDataIT,
+    kyogreGridDataIT,
+    regirockGridDataIT,
+    solgaleoGridDataIT,
+    cobalionGridDataIT,
+    incineroarGridDataIT,
   },
   ja: {
     pikachuGridDataJA,
@@ -1582,7 +1797,7 @@ export const allSyncGrids = {
     liepardGridDataJA,
     rotomGridDataJA,
     houndoomGridDataJA,
-    raichuGridDataJA,
+    lt_surge_raichuGridDataJA,
     alakazamGridDataJA,
     helioliskGridDataJA,
     golisopodGridDataJA,
@@ -1666,6 +1881,20 @@ export const allSyncGrids = {
     drednawGridDataJA,
     sirfetchdGridDataJA,
     duraludonGridDataJA,
+    tangelaGridDataJA,
+    raichuGridDataJA,
+    salamenceGridDataJA,
+    morty_mismagiusGridDataJA,
+    marowakGridDataJA,
+    umbreonGridDataJA,
+    araquanidGridDataJA,
+    crabominableGridDataJA,
+    groudonGridDataJA,
+    kyogreGridDataJA,
+    regirockGridDataJA,
+    solgaleoGridDataJA,
+    cobalionGridDataJA,
+    incineroarGridDataJA,
   },
   ko: {
     pikachuGridDataKO,
@@ -1683,7 +1912,7 @@ export const allSyncGrids = {
     liepardGridDataKO,
     rotomGridDataKO,
     houndoomGridDataKO,
-    raichuGridDataKO,
+    lt_surge_raichuGridDataKO,
     alakazamGridDataKO,
     helioliskGridDataKO,
     golisopodGridDataKO,
@@ -1767,6 +1996,20 @@ export const allSyncGrids = {
     drednawGridDataKO,
     sirfetchdGridDataKO,
     duraludonGridDataKO,
+    tangelaGridDataKO,
+    raichuGridDataKO,
+    salamenceGridDataKO,
+    morty_mismagiusGridDataKO,
+    marowakGridDataKO,
+    umbreonGridDataKO,
+    araquanidGridDataKO,
+    crabominableGridDataKO,
+    groudonGridDataKO,
+    kyogreGridDataKO,
+    regirockGridDataKO,
+    solgaleoGridDataKO,
+    cobalionGridDataKO,
+    incineroarGridDataKO,
   },
   zh: {
     pikachuGridDataZH,
@@ -1784,7 +2027,7 @@ export const allSyncGrids = {
     liepardGridDataZH,
     rotomGridDataZH,
     houndoomGridDataZH,
-    raichuGridDataZH,
+    lt_surge_raichuGridDataZH,
     alakazamGridDataZH,
     helioliskGridDataZH,
     golisopodGridDataZH,
@@ -1868,6 +2111,20 @@ export const allSyncGrids = {
     drednawGridDataZH,
     sirfetchdGridDataZH,
     duraludonGridDataZH,
+    tangelaGridDataZH,
+    raichuGridDataZH,
+    salamenceGridDataZH,
+    morty_mismagiusGridDataZH,
+    marowakGridDataZH,
+    umbreonGridDataZH,
+    araquanidGridDataZH,
+    crabominableGridDataZH,
+    groudonGridDataZH,
+    kyogreGridDataZH,
+    regirockGridDataZH,
+    solgaleoGridDataZH,
+    cobalionGridDataZH,
+    incineroarGridDataZH,
   },
 };
 
@@ -1875,12 +2132,21 @@ export const UA_ID = 'UA-157426792-1';
 
 export const DRAWER_WIDTH = 240;
 
-export const newGridedPokemonMonsterBaseIdArray = [
-  '2008650031', // Sirfetch’d (Bea)
-  '2008340000', // Drednaw (Nessa)
-  '2008840000', // Duraludon (Raihan)
-  '20064611', // Kyurem (Ghetsis)
-  '20025000', // Ho-Oh (Silver)
+export const newGridedTrainerIdArray = [
+  10160000000, // Lana & Araquanid
+  10161000000, // Hala & Crabominable
+  10192000000, // Maxie & Groudon
+  10193000000, // Archie & Kyogre
+  10149000000, // Kiawe & Marowak
+  18000120000, // Hero & Solgaleo
+  18000020521, // Hero & Regirock
+  18000020531, // Hero & Cobalion
+  10035000001, // Lt. Surge & Raichu
+  10148000001, // Morty & Mismagius
+  10129000001, // Zinnia & Salamence
+  10008000001, // Erika & Tangela
+  10062000001, // Karen & Umbreon
+  10117000000, // The Masked Royal & Incineroar
 ];
 
 const CLOUD_FUNCTIONS_URL =
@@ -1935,6 +2201,11 @@ export const type1SyncGrid = [
   'sirfetch’d',
   'duraludon',
   'ho-oh',
+  'crabominable',
+  'groudon',
+  'kyogre',
+  'solgaleo',
+  'umbreon',
 ];
 
 export const type2SyncGrid = [
@@ -1966,6 +2237,9 @@ export const type2SyncGrid = [
   'morpeko',
   'drednaw',
   'kyurem',
+  'salamence',
+  'tangela',
+  'incineroar',
 ];
 
 export const type3SyncGrid = [
@@ -1991,4 +2265,10 @@ export const type3SyncGrid = [
   'eevee',
   'primarina',
   'togepi',
+  'araquanid',
+  'cobalion',
+  'marowak',
+  'morty_mismagius',
+  'lt_surge_raichu',
+  'regirock',
 ];

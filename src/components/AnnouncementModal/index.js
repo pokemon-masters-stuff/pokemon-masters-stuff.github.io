@@ -15,9 +15,8 @@ import UI from '../../utils/translations';
 const AnnouncementModal = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
 
-  const [isAnnouncementModalVisible, setIsAnnouncementModalVisible] = useState(
-    false
-  );
+  const [isAnnouncementModalVisible, setIsAnnouncementModalVisible] =
+    useState(false);
 
   const handleOnOpenAnnouncementModal = () => {
     setIsAnnouncementModalVisible(true);
@@ -43,6 +42,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            5/27/2021:
+            <br />
+            Added new grids.
+            <br />
+            <br />
             4/26/2021:
             <br />
             Added new grids and Eggmons - Ninetales, Magmar, and Rapidash.
