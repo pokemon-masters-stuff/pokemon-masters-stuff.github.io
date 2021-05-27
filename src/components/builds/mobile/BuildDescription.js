@@ -41,7 +41,7 @@ const BuildDescription = ({ classes, build }) => {
               <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
                 {UI['Sync Move Level'][language]}:{' '}
               </span>
-              <span>{build.syncLevel}</span>
+              <span>{build.syncLevel === 3 ? '3+' : build.syncLevel}</span>
               <br />
             </>
           ) : null}

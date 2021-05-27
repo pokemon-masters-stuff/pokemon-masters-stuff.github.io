@@ -133,7 +133,7 @@ class BuildItem extends Component {
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         pokemon,
         cell,
-        build.syncLevel
+        build.syncLevel.toString()
       );
 
       const hexagonProps = {
@@ -217,7 +217,12 @@ class BuildItem extends Component {
             >
               <EditIcon />
             </IconButton>
-            <EditBuildModal index={build._id} description={build.description} />
+            <EditBuildModal
+              index={build._id}
+              description={build.description}
+              syncLevel={build.syncLevel}
+              luckySkillId={build.luckySkillId}
+            />
             <IconButton
               value={build}
               onClick={this.handleClickDelete.bind(this, build)}

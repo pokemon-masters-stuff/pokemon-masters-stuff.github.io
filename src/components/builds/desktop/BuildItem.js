@@ -175,7 +175,7 @@ class BuildItem extends Component {
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
         pokemon,
         cell,
-        build.syncLevel
+        build.syncLevel.toString()
       );
 
       const hexagonProps = {
@@ -265,6 +265,8 @@ class BuildItem extends Component {
               <EditBuildModal
                 index={build._id}
                 description={build.description}
+                syncLevel={build.syncLevel}
+                luckySkillId={build.luckySkillId}
               />
               <IconButton
                 value={build}
@@ -457,7 +459,7 @@ class BuildItem extends Component {
                       {UI['Sync Move Level'][language]}:{' '}
                     </span>
                     <span style={{ fontWeight: 'bold' }}>
-                      {build.syncLevel || '-'}
+                      {build.syncLevel === 3 ? '3+' : build.syncLevel}
                     </span>
                   </p>
                 ) : null}

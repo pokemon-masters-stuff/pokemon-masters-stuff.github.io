@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { changeFilter, changeSort } from '../../../actions/actionCreators';
+import {
+  changePokemonFilter,
+  changeSyncLevelFilter,
+  changeSort,
+} from '../../../actions/actionCreators';
 import {
   getPokemonNameList,
   getNewPokemonNameList,
@@ -29,10 +33,13 @@ const Builds = (props) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const sort = useSelector((state) => state.build.sort);
-  const filter = useSelector((state) => state.build.filter);
+  const pokemonFilter = useSelector((state) => state.build.pokemonFilter);
+  const syncLevelFilter = useSelector((state) => state.build.syncLevelFilter);
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
+
+  console.log('syncLevelFilter', syncLevelFilter);
 
   useEffect(() => {
     if (props.history) {
@@ -66,9 +73,16 @@ const Builds = (props) => {
     }
   };
 
-  const handleChangeFilter = (event) => {
+  const handleChangePokemonFilter = (event) => {
     if (event.target.value) {
-      dispatch(changeFilter(event.target.value));
+      dispatch(changePokemonFilter(event.target.value));
+      dispatch(changeSyncLevelFilter('0'));
+    }
+  };
+
+  const handleChangeSyncLevelFilter = (event) => {
+    if (event.target.value) {
+      dispatch(changeSyncLevelFilter(event.target.value));
     }
   };
 
@@ -115,11 +129,11 @@ const Builds = (props) => {
           </Typography>
           <FormControl className={classes.formControl}>
             <Select
-              value={filter}
-              labelId="filter"
-              onChange={handleChangeFilter}
+              value={pokemonFilter}
+              labelId="pokemonFilter"
+              onChange={handleChangePokemonFilter}
             >
-              <MenuItem value="None">None</MenuItem>
+              <MenuItem value="None">---</MenuItem>
               <ListSubheader disableSticky={true}>New</ListSubheader>
               {getNewPokemonNameList(language).map((pokemon, index) => (
                 <MenuItem key={index} value={pokemon.name}>
@@ -134,6 +148,38 @@ const Builds = (props) => {
               ))}
             </Select>
           </FormControl>
+          {pokemonFilter !== 'None' ? (
+            <>
+              <Typography
+                style={{
+                  borderLeft: '35px solid transparent',
+                  borderRight: '10px solid transparent',
+                }}
+              >
+                Sync Lv:{' '}
+              </Typography>
+              <FormControl className={classes.formControl}>
+                <Select
+                  value={syncLevelFilter}
+                  labelId="syncLevelFilter"
+                  onChange={handleChangeSyncLevelFilter}
+                >
+                  <MenuItem key={'0'} value={'0'}>
+                    ---
+                  </MenuItem>
+                  <MenuItem key={3} value={'3+'}>
+                    3+
+                  </MenuItem>
+                  <MenuItem key={2} value={'2'}>
+                    2
+                  </MenuItem>
+                  <MenuItem key={1} value={'1'}>
+                    1
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </>
+          ) : null}
         </Paper>
       </div>
     </div>

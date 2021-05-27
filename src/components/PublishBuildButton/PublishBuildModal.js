@@ -37,13 +37,15 @@ export default function PublishBuildModal() {
       alert('You cannot publish a grid that exceeds the energy limit.');
       return;
     }
-    let syncLevelToBeDisplayedInBuild = grid.syncLevel;
-    if (
-      syncLevelToBeDisplayedInBuild === '3' ||
-      syncLevelToBeDisplayedInBuild === '4' ||
-      syncLevelToBeDisplayedInBuild === '5'
-    ) {
-      syncLevelToBeDisplayedInBuild = '3+';
+
+    let syncLevelForServer;
+
+    if (grid.syncLevel === '1') {
+      syncLevelForServer = 1;
+    } else if (grid.syncLevel === '2') {
+      syncLevelForServer = 2;
+    } else {
+      syncLevelForServer = 3;
     }
 
     let data = {
@@ -54,7 +56,7 @@ export default function PublishBuildModal() {
       remainingEnergy: grid.remainingEnergy,
       orbSpent: grid.orbSpent,
       url: grid.url,
-      syncLevel: syncLevelToBeDisplayedInBuild,
+      syncLevel: syncLevelForServer,
       luckySkillId: luckySkillId,
     };
 

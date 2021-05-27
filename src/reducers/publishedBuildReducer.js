@@ -10,8 +10,9 @@ import {
   ADD_COMMENT,
   DELETE_COMMENT,
   UPDATE_LIKES,
-  CHANGE_FILTER,
-  CHANGE_SORT
+  CHANGE_POKEMON_FILTER,
+  CHANGE_SYNC_LEVEL_FILTER,
+  CHANGE_SORT,
 } from '../actions/types';
 
 const initialState = {
@@ -19,11 +20,12 @@ const initialState = {
   totalBuildCount: 0,
   loading: true,
   error: {},
-  filter: 'None',
-  sort: 'popular'
+  pokemonFilter: 'None',
+  syncLevelFilter: '0', // All
+  sort: 'popular',
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case GET_BUILDS:
     case GET_LIKED_BUILDS:
@@ -32,16 +34,16 @@ export default function(state = initialState, action) {
         ...state,
         builds: [...state.builds, ...action.payload.builds],
         totalBuildCount: action.payload.totalBuildCount,
-        loading: false
+        loading: false,
       };
     case BUILD_ERROR:
       return {
         ...state,
         error: action.payload,
-        loading: false
+        loading: false,
       };
     case UPDATE_LIKES:
-      const newBuilds = state.builds.map(build => {
+      const newBuilds = state.builds.map((build) => {
         return build._id === action.payload.id
           ? { ...build, likes: action.payload.likes }
           : build;
@@ -49,16 +51,16 @@ export default function(state = initialState, action) {
       return {
         ...state,
         builds: newBuilds,
-        loading: false
+        loading: false,
       };
     case ADD_BUILD:
       return {
         ...state,
         builds: [action.payload, ...state.builds],
-        loading: false
+        loading: false,
       };
     case EDIT_BUILD:
-      const newBuildsArray = state.builds.map(build => {
+      const newBuildsArray = state.builds.map((build) => {
         return build._id === action.payload.id
           ? { ...build, description: action.payload.description }
           : build;
@@ -66,16 +68,16 @@ export default function(state = initialState, action) {
       return {
         ...state,
         builds: newBuildsArray,
-        loading: false
+        loading: false,
       };
     case DELETE_BUILD:
       return {
         ...state,
-        builds: state.builds.filter(build => build._id !== action.payload),
-        loading: false
+        builds: state.builds.filter((build) => build._id !== action.payload),
+        loading: false,
       };
     case ADD_COMMENT:
-      const updatedBuildsWithNewComment = state.builds.map(build => {
+      const updatedBuildsWithNewComment = state.builds.map((build) => {
         return build._id === action.payload.buildId
           ? { ...build, comments: action.payload.data }
           : build;
@@ -83,41 +85,47 @@ export default function(state = initialState, action) {
       return {
         ...state,
         builds: updatedBuildsWithNewComment,
-        loading: false
+        loading: false,
       };
     case DELETE_COMMENT:
-      const updatedBuildsAfterRemovingComment = state.builds.map(build => {
+      const updatedBuildsAfterRemovingComment = state.builds.map((build) => {
         return build._id === action.payload.buildId
           ? {
               ...build,
               comments: build.comments.filter(
-                comment => comment._id !== action.payload.commentId
-              )
+                (comment) => comment._id !== action.payload.commentId
+              ),
             }
           : build;
       });
       return {
         ...state,
         builds: updatedBuildsAfterRemovingComment,
-        loading: false
+        loading: false,
       };
-    case CHANGE_FILTER:
+    case CHANGE_POKEMON_FILTER:
       return {
         ...state,
         builds: [],
-        filter: action.payload
+        pokemonFilter: action.payload,
+      };
+    case CHANGE_SYNC_LEVEL_FILTER:
+      return {
+        ...state,
+        builds: [],
+        syncLevelFilter: action.payload,
       };
     case CHANGE_SORT:
       return {
         ...state,
         builds: [],
-        sort: action.payload
+        sort: action.payload,
       };
     case CLEAR_BUILDS:
       return {
         ...state,
         builds: [],
-        totalBuildCount: 0
+        totalBuildCount: 0,
       };
     default:
       return state;

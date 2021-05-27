@@ -1883,8 +1883,8 @@ export const newGridedPokemonMonsterBaseIdArray = [
   '20025000', // Ho-Oh (Silver)
 ];
 
-export const CLOUD_FUNCTIONS_URL =
-  'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app'; // production
+const CLOUD_FUNCTIONS_URL =
+  'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app';
 
 export const type1SyncGrid = [
   'pikachu',

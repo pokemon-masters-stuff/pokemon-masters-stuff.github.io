@@ -35,7 +35,8 @@ import {
   ADD_COMMENT,
   DELETE_COMMENT,
   BUILD_ERROR,
-  CHANGE_FILTER,
+  CHANGE_POKEMON_FILTER,
+  CHANGE_SYNC_LEVEL_FILTER,
   CHANGE_SORT,
   SET_LANGUAGE,
   SET_SYNC_LEVEL,
@@ -255,37 +256,38 @@ export const setLoading = (payload) => (dispatch) => {
 };
 
 // Get Builds
-export const getBuilds = (filter, sort, skip, limit) => async (dispatch) => {
-  try {
-    const res = await axios.get(
-      `${CLOUD_FUNCTIONS_URL}/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
-        filter !== 'None' ? '&filter=' + filter : ''
-      }`
-    );
+export const getBuilds =
+  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+    try {
+      const res = await axios.get(
+        `${CLOUD_FUNCTIONS_URL}/api/builds?skip=${skip}&limit=${limit}&sort=${sort}${
+          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+      );
 
-    dispatch({
-      type: GET_BUILDS,
-      payload: res.data,
-    });
-  } catch (error) {
-    dispatch({
-      type: BUILD_ERROR,
-      payload: {
-        msg: error.response.statusText,
-        status: error.response.status,
-      },
-    });
-  }
-};
+      dispatch({
+        type: GET_BUILDS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: BUILD_ERROR,
+        payload: {
+          msg: error.response.statusText,
+          status: error.response.status,
+        },
+      });
+    }
+  };
 
 // Get Liked Builds
 export const getLikedBuilds =
-  (filter, sort, skip, limit) => async (dispatch) => {
+  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
     try {
       const res = await axios.get(
         `${CLOUD_FUNCTIONS_URL}/api/builds/liked?skip=${skip}&limit=${limit}&sort=${sort}${
-          filter !== 'None' ? '&filter=' + filter : ''
-        }`
+          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
       );
 
       dispatch({
@@ -303,14 +305,14 @@ export const getLikedBuilds =
     }
   };
 
-// Get user's Builds
+// Get User's Builds
 export const getUsersBuilds =
-  (filter, sort, skip, limit) => async (dispatch) => {
+  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
     try {
       const res = await axios.get(
         `${CLOUD_FUNCTIONS_URL}/api/builds/users?skip=${skip}&limit=${limit}&sort=${sort}${
-          filter !== 'None' ? '&filter=' + filter : ''
-        }`
+          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
       );
 
       dispatch({
@@ -507,8 +509,13 @@ export const deleteComment = (buildId, commentId) => async (dispatch) => {
   }
 };
 
-export const changeFilter = (payload) => ({
-  type: CHANGE_FILTER,
+export const changePokemonFilter = (payload) => ({
+  type: CHANGE_POKEMON_FILTER,
+  payload,
+});
+
+export const changeSyncLevelFilter = (payload) => ({
+  type: CHANGE_SYNC_LEVEL_FILTER,
   payload,
 });
 

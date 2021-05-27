@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import { getLikedBuilds, clearBuilds } from "../../../actions/actionCreators";
-import BuildItemMobile from "../mobile/BuildItem";
-import BuildItemDesktop from "../desktop/BuildItem";
-import Pagination from "@material-ui/lab/Pagination";
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { getLikedBuilds, clearBuilds } from '../../../actions/actionCreators';
+import BuildItemMobile from '../mobile/BuildItem';
+import BuildItemDesktop from '../desktop/BuildItem';
+import Pagination from '@material-ui/lab/Pagination';
 
 class LikedBuilds extends Component {
   constructor(props) {
@@ -20,7 +20,8 @@ class LikedBuilds extends Component {
   componentDidMount() {
     this.props.clearBuilds();
     this.props.getLikedBuilds(
-      this.props.filter,
+      this.props.pokemonFilter,
+      Number(this.props.syncLevelFilter.charAt(0)),
       this.props.sort,
       0,
       this.state.rowsPerPage
@@ -30,9 +31,16 @@ class LikedBuilds extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (
       this.props.sort !== prevProps.sort ||
-      this.props.filter !== prevProps.filter
+      this.props.pokemonFilter !== prevProps.pokemonFilter ||
+      this.props.syncLevelFilter !== prevProps.syncLevelFilter
     ) {
-      this.props.getLikedBuilds(this.props.filter, this.props.sort, 0, 5);
+      this.props.getLikedBuilds(
+        this.props.pokemonFilter,
+        Number(this.props.syncLevelFilter.charAt(0)),
+        this.props.sort,
+        0,
+        5
+      );
       this.setState({ page: 1 });
     }
     if (this.props.totalBuildCount !== prevProps.totalBuildCount) {
@@ -49,7 +57,8 @@ class LikedBuilds extends Component {
   }
 
   handleChangePage = (event, newPage) => {
-    const { totalBuildCount, filter, sort } = this.props;
+    const { totalBuildCount, pokemonFilter, syncLevelFilter, sort } =
+      this.props;
     let limit = Math.min(5, totalBuildCount);
     let skip = (newPage - 1) * this.state.rowsPerPage;
 
@@ -57,7 +66,13 @@ class LikedBuilds extends Component {
 
     this.setState({ page: newPage });
 
-    this.props.getLikedBuilds(filter, sort, skip, limit);
+    this.props.getLikedBuilds(
+      pokemonFilter,
+      Number(syncLevelFilter.charAt(0)),
+      sort,
+      skip,
+      limit
+    );
   };
 
   handleChangeRowsPerPage = (event) => {
@@ -70,7 +85,7 @@ class LikedBuilds extends Component {
     const { screenSize } = this.props;
     return (
       <Fragment>
-        {screenSize === "small"
+        {screenSize === 'small'
           ? this.props.builds.map((build) => (
               <BuildItemMobile key={build._id} build={build} />
             ))
@@ -83,9 +98,9 @@ class LikedBuilds extends Component {
             page={page}
             onChange={this.handleChangePage}
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               marginTop: 15,
             }}
             count={totalPageCount}
@@ -96,7 +111,7 @@ class LikedBuilds extends Component {
             No record found.
           </div>
         )}
-        <div style={{ height: "70px" }}></div>
+        <div style={{ height: '70px' }}></div>
       </Fragment>
     );
   }
@@ -105,7 +120,8 @@ class LikedBuilds extends Component {
 const mapStateToProps = (state) => ({
   builds: state.build.builds,
   sort: state.build.sort,
-  filter: state.build.filter,
+  pokemonFilter: state.build.pokemonFilter,
+  syncLevelFilter: state.build.syncLevelFilter,
   totalBuildCount: state.build.totalBuildCount,
 });
 
