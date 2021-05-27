@@ -2,7 +2,7 @@ import gridedSyncPairDataArray from '../data/gridedSyncPairData.json';
 import eggPokemonDataArray from '../data/eggPokemonData.json';
 import {
   shortenedMoveNameByAbilityId,
-  newGridedPokemonMonsterBaseIdArray,
+  newGridedTrainerIdArray,
   type1SyncGrid,
   type2SyncGrid,
   type3SyncGrid,
@@ -12,6 +12,7 @@ export const removeHyphens = (str) => {
   if (str.toLowerCase() === 'sirfetch’d') {
     str = 'sirfetchd';
   }
+
   return str.replace(/-/g, '');
 };
 
@@ -32,6 +33,8 @@ export const convertSyncPairNameFromUrl = (syncPairName) => {
   let updatedSyncPairName;
   if (syncPairName === 'Lt.Surge_Electrode') {
     updatedSyncPairName = 'Lt. Surge & Electrode';
+  } else if (syncPairName === 'Lt.Surge_Raichu') {
+    updatedSyncPairName = 'Lt. Surge & Raichu';
   } else if (syncPairName === 'CrasherWake_Floatzel') {
     updatedSyncPairName = 'Crasher Wake & Floatzel';
   } else if (syncPairName === 'ProfessorOak_Mew') {
@@ -51,7 +54,7 @@ export const getPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // existing grided pokemons monsterBaseId from latest datamine
-        !newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId) ||
+        !newGridedTrainerIdArray.includes(entry.trainerId) ||
         entry.trainerBaseId === '10000000' // Charizard (Red)
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
@@ -59,10 +62,11 @@ export const getPokemonNameList = (language) => {
 
         // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
         if (
-          entry.monsterBaseId === '20082912' ||
-          entry.trainerBaseId === '10024700'
-        ) {
           // Lycanroc (Olivia), Charizard (Leon)
+          entry.monsterBaseId === '20082912' ||
+          entry.trainerBaseId === '10024700' ||
+          entry.trainerId === 10148000001 // Morty & Mismagius
+        ) {
           // for the new sync pair:
           value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
           name = entry.syncPairNameByLanguage['en'];
@@ -73,8 +77,22 @@ export const getPokemonNameList = (language) => {
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
           });
         } else if (
+          entry.trainerId === 10035000001 // Lt. Surge & Raichu
+        ) {
+          // for the new sync pair:
+          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+          name = 'Lt_Surge_Raichu';
+
+          return existingGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          });
+        } else if (
           entry.monsterBaseId === '20082911' ||
-          entry.trainerBaseId === '10000000'
+          entry.trainerBaseId === '10000000' ||
+          entry.trainerId === 10098000000 || //Hau
+          entry.trainerId === 10151000000 //Fantina
         ) {
           // Lycanroc (Kukui) Charizard (Red)
           // for the old sync pair, change displayed value but not name so that old saves are still compatible
@@ -115,15 +133,36 @@ export const getNewPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // newly grided pokemons monsterBaseId from latest datamine
-        newGridedPokemonMonsterBaseIdArray.includes(entry.monsterBaseId) &&
+        newGridedTrainerIdArray.includes(entry.trainerId) &&
         entry.trainerBaseId !== '10000000'
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
 
-        if (entry.trainerBaseId === '10024700') {
+        if (
+          entry.trainerId === 10148000001 // Morty & Mismagius
+        ) {
+          // for the new sync pair:
           value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
           name = entry.syncPairNameByLanguage['en'];
+
+          return newlyGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          });
+        } else if (
+          entry.trainerId === 10035000001 // Lt. Surge & Raichu
+        ) {
+          // for the new sync pair:
+          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
+          name = 'Lt_Surge_Raichu';
+
+          return newlyGridedPokemon.push({
+            key: index,
+            name: name,
+            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          });
         }
 
         return newlyGridedPokemon.push({
@@ -160,6 +199,24 @@ export const getPokemonDataByName = (pokemonName) => {
       if (
         pokemon.pokemonNameByLanguage['en'].toLowerCase() === 'blastoise_new'
       ) {
+        pokemonData = pokemon;
+      }
+    } else if (pokemonName.toLowerCase() === 'mismagius') {
+      if (
+        pokemon.syncPairNameByLanguage['en'].toLowerCase() ===
+        'fantina_mismagius'
+      ) {
+        pokemonData = pokemon;
+      }
+    } else if (pokemonName.toLowerCase() === 'lt_surge_raichu') {
+      if (
+        pokemon.syncPairNameByLanguage['en'].toLowerCase() ===
+        'lt. surge_raichu'
+      ) {
+        pokemonData = pokemon;
+      }
+    } else if (pokemonName.toLowerCase() === 'raichu') {
+      if (pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'hau_raichu') {
         pokemonData = pokemon;
       }
     } else if (

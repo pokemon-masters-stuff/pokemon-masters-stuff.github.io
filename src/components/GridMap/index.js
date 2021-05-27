@@ -49,6 +49,8 @@ class GridMap extends Component {
         pokemonFromUrl === 'Blastoise'
       ) {
         pokemonFromUrl = 'Blastoise_new';
+      } else if (pokemonFromUrl === 'Lt_Surge_raichu') {
+        pokemonFromUrl = 'Lt_Surge_Raichu';
       }
 
       if (

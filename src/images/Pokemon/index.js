@@ -76,7 +76,7 @@ export { default as pm0579_00_lanculus_128 } from './128px/pm0579_00_lanculus_12
 // export { default as pm0757_00_shrimp2_128 } from './128px/pm0757_00_shrimp2_128.ktx.png'; // Clawitzer
 // export { default as pm0059_00_windie_128 } from './128px/pm0059_00_windie_128.ktx.png'; // Arcanine
 export { default as pm0025_00_pikachu_128 } from './128px/pm0025_00_pikachu_128.ktx.png'; // Pikachu
-export { default as pm0026_61_araichu_128 } from './128px/pm0026_61_araichu_128.ktx.png'; // Raichu
+export { default as pm0026_61_araichu_128 } from './128px/pm0026_61_araichu_128.ktx.png'; // Alolan Raichu
 export { default as pm0395_00_emperte_128 } from './128px/pm0395_00_emperte_128.ktx.png'; // Empoleon
 export { default as pm0497_00_jalorda_128 } from './128px/pm0497_00_jalorda_128.ktx.png'; // Serperior
 export { default as pm0523_00_zebraika_128 } from './128px/pm0523_00_zebraika_128.ktx.png'; // Zebstrika
@@ -160,3 +160,17 @@ export { default as pm0646_11_kyurem_128 } from './128px/pm0646_11_kyurem_128.kt
 export { default as pm0834_00_00_kajirigame_128 } from './128px/pm0834_00_00_kajirigame_128.ktx.png'; // Drednaw
 export { default as pm0865_00_31_negigaknight_128 } from './128px/pm0865_00_31_negigaknight_128.ktx.png'; // Sirfetch’d
 export { default as pm0884_00_00_duraludon_128 } from './128px/pm0884_00_00_duraludon_128.ktx.png'; // Duraludon
+// 5/27/2021
+export { default as pm0114_00_monjara_128 } from './128px/pm0114_00_monjara_128.ktx.png'; // Tangela
+export { default as pm0026_00_raichu_128 } from './128px/pm0026_00_raichu_128.ktx.png'; // Raichu
+export { default as pm0197_00_blacky_128 } from './128px/pm0197_00_blacky_128.ktx.png'; // Umbreon
+export { default as pm0373_00_bohmander_128 } from './128px/pm0373_00_bohmander_128.ktx.png'; // Salamence
+// export { default as pm0429_00_mumargi_128 } from './128px/pm0429_00_mumargi_128.ktx.png'; // Mismagius
+export { default as pm0105_61_agaragara_128 } from './128px/pm0105_61_agaragara_128.ktx.png'; // Marowak
+export { default as pm0851_00_mizugumo2_128 } from './128px/pm0851_00_mizugumo2_128.ktx.png'; // Araquanid
+export { default as pm0860_00_yashigani2_128 } from './128px/pm0860_00_yashigani2_128.ktx.png'; // Crabominable
+export { default as pm0383_00_groudon_128 } from './128px/pm0383_00_groudon_128.ktx.png'; // Groudon
+export { default as pm0382_00_kyogre_128 } from './128px/pm0382_00_kyogre_128.ktx.png'; // Kyogre
+export { default as pm0377_00_regirock_128 } from './128px/pm0377_00_regirock_128.ktx.png'; // Regirock
+export { default as pm0638_00_cobalon_128 } from './128px/pm0638_00_cobalon_128.ktx.png'; // Cobalion
+export { default as pm0873_00_sun_128 } from './128px/pm0873_00_sun_128.ktx.png'; // Solgaleo
