@@ -84,39 +84,39 @@ class LikedBuilds extends Component {
     const { page, totalPageCount } = this.state;
     const { screenSize } = this.props;
     return (
-      <div className="alert alert-info" role="alert">
-        This page is temporarily disabled to allow for a feature update. Please
-        check back later.
-      </div>
-      // <Fragment>
-      //   {screenSize === 'small'
-      //     ? this.props.builds.map((build) => (
-      //         <BuildItemMobile key={build._id} build={build} />
-      //       ))
-      //     : this.props.builds.map((build) => (
-      //         <BuildItemDesktop key={build._id} build={build} />
-      //       ))}
+      // <div className="alert alert-info" role="alert">
+      //   This page is temporarily disabled to allow for a feature update. Please
+      //   check back later.
+      // </div>
+      <Fragment>
+        {screenSize === 'small'
+          ? this.props.builds.map((build) => (
+              <BuildItemMobile key={build._id} build={build} />
+            ))
+          : this.props.builds.map((build) => (
+              <BuildItemDesktop key={build._id} build={build} />
+            ))}
 
-      //   {totalPageCount ? (
-      //     <Pagination
-      //       page={page}
-      //       onChange={this.handleChangePage}
-      //       style={{
-      //         display: 'flex',
-      //         alignItems: 'center',
-      //         justifyContent: 'center',
-      //         marginTop: 15,
-      //       }}
-      //       count={totalPageCount}
-      //       color="primary"
-      //     />
-      //   ) : (
-      //     <div className="alert alert-info" role="alert">
-      //       No record found.
-      //     </div>
-      //   )}
-      //   <div style={{ height: '70px' }}></div>
-      // </Fragment>
+        {totalPageCount ? (
+          <Pagination
+            page={page}
+            onChange={this.handleChangePage}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: 15,
+            }}
+            count={totalPageCount}
+            color="primary"
+          />
+        ) : (
+          <div className="alert alert-info" role="alert">
+            No record found.
+          </div>
+        )}
+        <div style={{ height: '70px' }}></div>
+      </Fragment>
     );
   }
 }

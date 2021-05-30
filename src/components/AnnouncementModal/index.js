@@ -42,6 +42,12 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            5/30/2021:
+            <br />
+            Added sync move level and lucky skills to builds. You can now filter
+            by sync move level.
+            <br />
+            <br />
             5/27/2021:
             <br />
             Added new grids.

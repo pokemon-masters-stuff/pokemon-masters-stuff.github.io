@@ -100,7 +100,7 @@ const Builds = (props) => {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
-      {/* <Box className={classes.root} style={{ marginBottom: 15 }}>
+      <Box className={classes.root} style={{ marginBottom: 15 }}>
         <FormControl
           variant="outlined"
           size="small"
@@ -184,7 +184,7 @@ const Builds = (props) => {
         <BottomNavigationAction label="Popular" icon={<WhatshotIcon />} />
         <BottomNavigationAction label="Liked" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="My" icon={<PersonIcon />} />
-      </BottomNavigation> */}
+      </BottomNavigation>
     </div>
   );
 };
