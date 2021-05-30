@@ -88,7 +88,7 @@ const Builds = (props) => {
     <div className={`App ${darkMode ? 'dark-mode' : null}`}>
       <div className="container container-s">
         <br />
-        <Paper width={1} className={classes.root}>
+        {/* <Paper width={1} className={classes.root}>
           <Tabs
             value={value}
             indicatorColor="primary"
@@ -178,7 +178,7 @@ const Builds = (props) => {
               </FormControl>
             </>
           ) : null}
-        </Paper>
+        </Paper> */}
       </div>
     </div>
   );

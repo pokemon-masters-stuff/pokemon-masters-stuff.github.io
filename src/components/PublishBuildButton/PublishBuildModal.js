@@ -86,7 +86,12 @@ export default function PublishBuildModal() {
               </h4>
             </div>
             <div className="modal-body mx-3">
-              <div className="form-group">
+              <div className="alert alert-info" role="alert">
+                This function is temporarily disabled to allow for a feature
+                update. Please check back later.
+              </div>
+
+              {/* <div className="form-group">
                 <input
                   type="text"
                   className={`form-control ${
@@ -95,7 +100,6 @@ export default function PublishBuildModal() {
                   disabled
                   id="syncLevel"
                   placeholder={UI['Sync Move Level'][language]}
-                  // key={`${Math.floor(Math.random() * 1000)}-min`}
                   key="build-sync-level"
                   value={`${UI['Sync Move Level'][language]}: ${
                     Number(grid.syncLevel) < 3 ? grid.syncLevel : '3+'
@@ -111,7 +115,6 @@ export default function PublishBuildModal() {
                   }`}
                   id="name"
                   placeholder={UI['Build name'][language]}
-                  // key={`${Math.floor(Math.random() * 1000)}-min`}
                   key="build-name"
                   onChange={handleChangeBuildName}
                   value={newBuildName}
@@ -126,7 +129,6 @@ export default function PublishBuildModal() {
                   }`}
                   id="desc"
                   placeholder={UI['Build description'][language]}
-                  // key={`${Math.floor(Math.random() * 1000)}-min`}
                   key="build-desc"
                   onChange={handleChangeBuildDesc}
                   value={newBuildDesc}
@@ -137,18 +139,15 @@ export default function PublishBuildModal() {
                   luckySkillId={luckySkill1Id}
                   setLuckySkillId={setLuckySkill1Id}
                 />
-              </div>
-
-              {/* <div className="form-group">{UI['Note'][language]}</div> */}
+              </div> */}
             </div>
             <div className="modal-footer d-flex justify-content-center">
-              <button
+              {/* <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 onClick={handleOnPublishBuild}
-                // data-dismiss="modal"
               >
                 {UI['Publish'][language]}
-              </button>
+              </button> */}
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 data-dismiss="modal"
