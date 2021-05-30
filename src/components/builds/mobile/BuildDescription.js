@@ -46,14 +46,14 @@ const BuildDescription = ({ classes, build }) => {
             </>
           ) : null}
 
-          {build.luckySkillId ? (
+          {build.luckySkillIds && build.luckySkillIds.length !== 0 ? (
             <>
               <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
                 {UI['Lucky Skill'][language]}:{' '}
               </span>
               <span>
                 {' '}
-                {LUCKY_SKILL_LIST[build.luckySkillId][language] || '-'}
+                {LUCKY_SKILL_LIST[build.luckySkillIds[0]][language] || '-'}
               </span>
               <br />
             </>

@@ -156,7 +156,7 @@ function PersistentDrawerLeft(props) {
               <ListItemIcon className={classes.listIcon}>
                 <ViewColumnIcon />
               </ListItemIcon>
-              <ListItemText primary={'Team Builder'} />
+              <ListItemText primary={UI['Team Builder'][language]} />
             </ListItem>
           </Link>
 
@@ -168,7 +168,7 @@ function PersistentDrawerLeft(props) {
               <ListItemIcon className={classes.listIcon}>
                 <ExposureIcon />
               </ListItemIcon>
-              <ListItemText primary="Gacha Odds Calculator" />
+              <ListItemText primary={UI['Gacha Odds Calculator'][language]} />
             </ListItem>
           </Link>
           <Link
@@ -179,7 +179,7 @@ function PersistentDrawerLeft(props) {
               <ListItemIcon className={classes.listIcon}>
                 <Brightness1Icon />
               </ListItemIcon>
-              <ListItemText primary="Egg Pokémon" />
+              <ListItemText primary={UI['Egg Pokémon'][language]} />
             </ListItem>
           </Link>
         </List>
@@ -203,7 +203,7 @@ function PersistentDrawerLeft(props) {
               <ListItemIcon className={classes.listIcon}>
                 <ExitToAppIcon />
               </ListItemIcon>
-              <ListItemText primary="Logout" />
+              <ListItemText primary={UI['Logout'][language]} />
             </ListItem>
           ) : (
             <Fragment>

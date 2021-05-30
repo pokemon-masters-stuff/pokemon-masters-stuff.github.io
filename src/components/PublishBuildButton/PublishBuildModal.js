@@ -13,7 +13,7 @@ export default function PublishBuildModal() {
   const pokemon = useSelector((state) => state.pokemon);
   const grid = useSelector((state) => state.grid);
 
-  const [luckySkillId, setLuckySkillId] = useState('0');
+  const [luckySkill1Id, setLuckySkill1Id] = useState('0');
   const [newBuildName, setNewBuildName] = useState('');
   const [newBuildDesc, setNewBuildDesc] = useState('');
 
@@ -51,13 +51,14 @@ export default function PublishBuildModal() {
     let data = {
       buildName: newBuildName,
       description: newBuildDesc,
+      // to add trainerId here
       pokemon: pokemon.selectedPokemon,
       selectedCellsById: grid.selectedCellsById,
       remainingEnergy: grid.remainingEnergy,
       orbSpent: grid.orbSpent,
       url: grid.url,
       syncLevel: syncLevelForServer,
-      luckySkillId: luckySkillId,
+      luckySkillIds: [luckySkill1Id],
     };
 
     dispatch(addBuild(data));
@@ -89,6 +90,23 @@ export default function PublishBuildModal() {
                 <input
                   type="text"
                   className={`form-control ${
+                    darkMode ? 'text-light bg-secondary' : null
+                  }`}
+                  disabled
+                  id="syncLevel"
+                  placeholder={UI['Sync Move Level'][language]}
+                  // key={`${Math.floor(Math.random() * 1000)}-min`}
+                  key="build-sync-level"
+                  value={`${UI['Sync Move Level'][language]}: ${
+                    Number(grid.syncLevel) < 3 ? grid.syncLevel : '3+'
+                  }`}
+                />
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="text"
+                  className={`form-control ${
                     darkMode ? 'text-white bg-dark' : null
                   }`}
                   id="name"
@@ -116,18 +134,18 @@ export default function PublishBuildModal() {
               </div>
               <div className="form-group">
                 <LuckySkillDropdown
-                  luckySkillId={luckySkillId}
-                  setLuckySkillId={setLuckySkillId}
+                  luckySkillId={luckySkill1Id}
+                  setLuckySkillId={setLuckySkill1Id}
                 />
               </div>
 
-              <div className="form-group">{UI['Note'][language]}</div>
+              {/* <div className="form-group">{UI['Note'][language]}</div> */}
             </div>
             <div className="modal-footer d-flex justify-content-center">
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 onClick={handleOnPublishBuild}
-                data-dismiss="modal"
+                // data-dismiss="modal"
               >
                 {UI['Publish'][language]}
               </button>

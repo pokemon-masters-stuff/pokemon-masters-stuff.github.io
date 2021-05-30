@@ -39,8 +39,6 @@ const Builds = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
 
-  console.log('syncLevelFilter', syncLevelFilter);
-
   useEffect(() => {
     if (props.history) {
       if (props.history.location.pathname === '/builds/liked') {

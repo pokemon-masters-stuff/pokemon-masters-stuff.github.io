@@ -17,6 +17,7 @@ export const SET_LANGUAGE = 'set_language';
 
 export const SET_ALERT = 'set_alert';
 export const REMOVE_ALERT = 'remove_alert';
+export const REMOVE_ALL_ALERT = 'remove_all_alert';
 export const SET_LOADING = 'set_loading';
 export const REGISTER_SUCCESS = 'register_success';
 export const USER_LOADED = 'user_loaded';

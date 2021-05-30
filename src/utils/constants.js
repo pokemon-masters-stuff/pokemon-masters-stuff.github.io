@@ -2149,7 +2149,7 @@ export const newGridedTrainerIdArray = [
   10117000000, // The Masked Royal & Incineroar
 ];
 
-const CLOUD_FUNCTIONS_URL =
+export const CLOUD_FUNCTIONS_URL =
   'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app';
 
 export const type1SyncGrid = [

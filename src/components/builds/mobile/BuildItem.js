@@ -129,12 +129,14 @@ class BuildItem extends Component {
           : cell.move.name;
 
       // const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
-
-      const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
-        pokemon,
-        cell,
-        build.syncLevel.toString()
-      );
+      let isSeletableBasedOnSyncLv = true;
+      if (build.syncLevel) {
+        isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
+          pokemon,
+          cell,
+          build.syncLevel.toString()
+        );
+      }
 
       const hexagonProps = {
         data: {
@@ -221,7 +223,7 @@ class BuildItem extends Component {
               index={build._id}
               description={build.description}
               syncLevel={build.syncLevel}
-              luckySkillId={build.luckySkillId}
+              luckySkillIds={build.luckySkillIds}
             />
             <IconButton
               value={build}

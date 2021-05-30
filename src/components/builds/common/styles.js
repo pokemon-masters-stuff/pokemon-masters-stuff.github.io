@@ -7,7 +7,7 @@ export default createStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
-  // menuPaper: {
-  //   maxHeight: 500,
-  // },
+  menuPaper: {
+    maxHeight: 500,
+  },
 }));

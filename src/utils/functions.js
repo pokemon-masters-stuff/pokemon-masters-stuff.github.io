@@ -87,6 +87,7 @@ export const getPokemonNameList = (language) => {
             key: index,
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         } else if (
           entry.trainerId === 10035000001 // Lt. Surge & Raichu
@@ -99,6 +100,7 @@ export const getPokemonNameList = (language) => {
             key: index,
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         } else if (
           entry.monsterBaseId === '20082911' ||
@@ -114,6 +116,7 @@ export const getPokemonNameList = (language) => {
             key: index,
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         } else if (entry.monsterBaseId === '20000900') {
           // rename Blastoise_new to Blastoise
@@ -121,16 +124,19 @@ export const getPokemonNameList = (language) => {
             key: index,
             name: name,
             value: value.replace('_new', ''), // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         } else {
           return existingGridedPokemon.push({
             key: index,
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         }
       }
     });
+
   return existingGridedPokemon.sort((a, b) => {
     let x = a.value;
     let y = b.value;
@@ -162,6 +168,7 @@ export const getNewPokemonNameList = (language) => {
             key: index,
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         } else if (
           entry.trainerId === 10035000001 // Lt. Surge & Raichu
@@ -174,6 +181,7 @@ export const getNewPokemonNameList = (language) => {
             key: index,
             name: name,
             value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+            trainerId: entry.trainerId.toString(),
           });
         }
 
@@ -181,6 +189,7 @@ export const getNewPokemonNameList = (language) => {
           key: index,
           name: name,
           value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          trainerId: entry.trainerId.toString(),
         });
       }
     });
@@ -211,7 +220,6 @@ export const getPokemonDataByName = (pokemonName) => {
       if (
         pokemon.pokemonNameByLanguage['en'].toLowerCase() === 'blastoise_new'
       ) {
-        console.log('blastoise', pokemon);
         pokemonData = pokemon;
       }
     } else if (pokemonName.toLowerCase() === 'mismagius') {

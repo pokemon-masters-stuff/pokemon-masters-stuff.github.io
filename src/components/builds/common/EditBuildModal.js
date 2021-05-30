@@ -1,36 +1,28 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/core';
+import Alert from '../../Alert';
 import styles from './styles';
 import { editBuild } from '../../../actions/actionCreators';
+import EditSyncLevelDropdown from './EditSyncLevelDropdown';
 import LuckySkillDropdown from '../../LuckySkillDropdown';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 
 const EditBuildModal = (props) => {
-  const { classes, index, description, syncLevel, luckySkillId } = props;
+  const { classes, index, description, syncLevel, luckySkillIds } = props;
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.darkMode.mode);
   const [desc, setDesc] = useState(description);
   const [syncLv, setSyncLv] = useState(syncLevel);
-  const [luckySkill, setLuckySkill] = useState(luckySkillId);
+  const [luckySkill1Id, setLuckySkill1Id] = useState(
+    luckySkillIds ? luckySkillIds[0] : '0'
+  );
 
   const handleChangeDesc = (e) => {
     setDesc(e.target.value);
   };
 
-  const handleChangeSyncLv = (event) => {
-    console.log('event', event.target.value);
-    if (event.target.value) {
-      console.log('event.target.value', event.target.value);
-      setSyncLv(event.target.value);
-    }
-  };
-
   const onSubmit = () => {
-    dispatch(editBuild(index, desc, syncLv, luckySkill));
+    dispatch(editBuild(index, desc, syncLv, [luckySkill1Id]));
   };
 
   return (
@@ -51,37 +43,14 @@ const EditBuildModal = (props) => {
             <h4 className="modal-title w-100 font-weight-bold">Edit</h4>
           </div>
           <div className="modal-body mx-3">
-            <FormControl
-              variant="outlined"
-              size="small"
-              className={classes.formControl}
-              color="primary"
-            >
-              <InputLabel id="syncLv">Sync</InputLabel>
-              <Select
-                value={syncLv}
-                labelId="syncLv"
-                onChange={handleChangeSyncLv}
-              >
-                <MenuItem key={3} value={'3'}>
-                  3+
-                </MenuItem>
-                <MenuItem key={2} value={'2'}>
-                  2
-                </MenuItem>
-                <MenuItem key={1} value={'1'}>
-                  1
-                </MenuItem>
-              </Select>
-            </FormControl>
+            <EditSyncLevelDropdown syncLv={syncLv} setSyncLv={setSyncLv} />
 
             <LuckySkillDropdown
-              luckySkillId={luckySkill}
-              setLuckySkillId={setLuckySkill}
+              luckySkillId={luckySkill1Id}
+              setLuckySkillId={setLuckySkill1Id}
             />
 
             <div className="form-group">
-              <p>Edit Description:</p>
               <textarea
                 type="text"
                 className={`form-control ${
@@ -90,7 +59,7 @@ const EditBuildModal = (props) => {
                 id="desc"
                 value={desc}
                 onChange={handleChangeDesc}
-                rows={12}
+                rows={10}
               />
             </div>
           </div>
@@ -98,11 +67,18 @@ const EditBuildModal = (props) => {
             <button
               className={`btn btn-default ${darkMode ? 'text-white' : null}`}
               onClick={onSubmit}
-              data-dismiss="modal"
+              // data-dismiss="modal"
             >
               Finish
             </button>
+            <button
+              className={`btn btn-default ${darkMode ? 'text-white' : null}`}
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
+          <Alert />
         </div>
       </div>
     </div>

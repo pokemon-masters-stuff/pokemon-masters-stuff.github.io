@@ -190,7 +190,6 @@ const allGridedTrainers = [
   { trainerBaseId: 10012900, trainerId: 10129000001, monsterBaseId: 20037300 }, // Zinnia & Salamence
   { trainerBaseId: 10000800, trainerId: 10008000001, monsterBaseId: 20011400 }, // Erika & Tangela
   { trainerBaseId: 10006200, trainerId: 10062000001, monsterBaseId: 20019700 }, // Karen & Umbreon
-  // to add trainer Id: 10117000000, // The Masked Royal & Incineroar
 ];
 
 // Update this list (of trainerBaseId) based on new datamine
@@ -255,7 +254,6 @@ const gridedTrainerList = [
   10115000000, // Volkner & Luxray
   10116000000, // Dawn & Torterra
   10116400000, // Dawn & Alcremie
-  10117000000, // Kukui & Incineroar
   10118000000, // Lillie & Clefairy
   10118400000, // Lillie & Ribombee
   10119000000, // Gladion & Silvally
@@ -309,7 +307,7 @@ const gridedTrainerList = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
-  10117000000, // The Masked Royal & Incineroar
+  10117000000, // Kukui & Incineroar
 ];
 
 const newTrainerIdArray = [
@@ -327,7 +325,7 @@ const newTrainerIdArray = [
   10129000001, // Zinnia & Salamence
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
-  10117000000, // The Masked Royal & Incineroar
+  10117000000, // Kukui & Incineroar
 ];
 
 /*
@@ -354,6 +352,7 @@ const extractAllSyncPairNamesAndIds = () => {
     let firstEvolvedFormMonsterId = monsterId.toString();
     // Check if there is an evolved form. If so use the final evolved form's monsterId
     if (
+      // BP pairs seem to end in "1":
       // 10035000001, // Lt. Surge & Raichu
       // 10148000001, // Morty & Mismagius
       // 10129000001, // Zinnia & Salamence
@@ -419,10 +418,10 @@ const extractAllSyncPairNamesAndIds = () => {
     if (gridedTrainerList.includes(Number(trainerId))) {
       if (
         trainerBase.trainerBaseId !== '10700000' || // Hero (10700000)
-        trainerId === 18000000000 || // Hero & Pikachu
-        trainerId === 18000120000 || // Hero & Solgaleo
-        trainerId === 18000020521 || // Hero & Regirock
-        trainerId === 18000020531 // Hero & Cobalion
+        trainerId === '18000000000' || // Hero & Pikachu
+        trainerId === '18000120000' || // Hero & Solgaleo
+        trainerId === '18000020521' || // Hero & Regirock
+        trainerId === '18000020531' // Hero & Cobalion
       ) {
         grided = true;
       }

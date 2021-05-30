@@ -1,22 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeAllAlert } from '../../actions/actionCreators';
 
-const Alert = ({ alerts }) =>
-  alerts !== null &&
-  alerts.length > 0 &&
-  alerts.map(alert => (
-    <div key={alert.id} className={`alert alert-${alert.alertType}`}>
-      {alert.msg}
-    </div>
-  ));
+const Alert = () => {
+  const alerts = useSelector((state) => state.alert);
+  const dispatch = useDispatch();
 
-Alert.propTypes = {
-  alerts: PropTypes.array.isRequired
+  useEffect(() => {
+    setTimeout(() => dispatch(removeAllAlert()), 2000);
+  }, []);
+
+  return (
+    <>
+      {alerts
+        ? alerts.map((alert) => (
+            <div key={alert.id} className={`alert alert-${alert.alertType}`}>
+              {alert.msg}
+            </div>
+          ))
+        : null}
+    </>
+  );
 };
 
-const mapStateToProps = state => ({
-  alerts: state.alert
-});
-
-export default connect(mapStateToProps)(Alert);
+export default Alert;

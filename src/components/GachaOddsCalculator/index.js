@@ -98,7 +98,7 @@ const GachaOddsCalculator = () => {
             />{' '}
             <Tooltip
               enterTouchDelay={10}
-              title="2% for focus unit. Check in-game offering rate for non-focus
+              title="2% for focus unit in Spotlight Scout and Poke Fair Scout. 1% in Master Fair Scout. Check in-game offering rate for non-focus
                 units"
               placement="top"
             >
@@ -127,7 +127,7 @@ const GachaOddsCalculator = () => {
             />{' '}
             <Tooltip
               enterTouchDelay={10}
-              title="7% for Spotlight Scout. 10% for Poke Fair Scout"
+              title="7% for Spotlight Scout. 10% for Poke Fair Scout. 12% for Master Fair Scout"
               placement="top"
             >
               <HelpOutlineIcon />

@@ -69,6 +69,8 @@ class BuildItem extends Component {
       this.props.build.likes !== nextProps.build.likes ||
       this.props.build.comments !== nextProps.build.comments ||
       this.props.build.description !== nextProps.build.description ||
+      this.props.build.syncLevel !== nextProps.build.syncLevel ||
+      this.props.build.luckySkillIds !== nextProps.build.luckySkillIds ||
       this.props.darkMode !== nextProps.darkMode
     );
   }
@@ -171,12 +173,14 @@ class BuildItem extends Component {
           : cell.move.name;
 
       // const nameWithSyncLvRequirement = addSyncLvReq(pokemon, cell, moveName);
-
-      const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
-        pokemon,
-        cell,
-        build.syncLevel.toString()
-      );
+      let isSeletableBasedOnSyncLv = true;
+      if (build.syncLevel) {
+        isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
+          pokemon,
+          cell,
+          build.syncLevel.toString()
+        );
+      }
 
       const hexagonProps = {
         data: {
@@ -266,7 +270,7 @@ class BuildItem extends Component {
                 index={build._id}
                 description={build.description}
                 syncLevel={build.syncLevel}
-                luckySkillId={build.luckySkillId}
+                luckySkillIds={build.luckySkillIds}
               />
               <IconButton
                 value={build}
@@ -464,13 +468,14 @@ class BuildItem extends Component {
                   </p>
                 ) : null}
 
-                {build.luckySkillId ? (
+                {build.luckySkillIds && build.luckySkillIds.length !== 0 ? (
                   <p>
                     <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
                       {UI['Lucky Skill'][language]}:{' '}
                     </span>
                     <span>
-                      {LUCKY_SKILL_LIST[build.luckySkillId][language] || '-'}
+                      {LUCKY_SKILL_LIST[build.luckySkillIds[0]][language] ||
+                        '-'}
                     </span>
                   </p>
                 ) : null}

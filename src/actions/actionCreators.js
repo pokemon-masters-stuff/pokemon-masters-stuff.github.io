@@ -19,6 +19,7 @@ import {
   CHANGE_MODE,
   SET_ALERT,
   REMOVE_ALERT,
+  REMOVE_ALL_ALERT,
   SET_LOADING,
   REGISTER_SUCCESS,
   USER_LOADED,
@@ -144,6 +145,10 @@ export const setAlert =
 
     setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout);
   };
+
+export const removeAllAlert = () => ({
+  type: REMOVE_ALL_ALERT,
+});
 
 // Load User
 export const loadUser = () => async (dispatch) => {
@@ -405,35 +410,37 @@ export const addBuild = (data) => async (dispatch) => {
 };
 
 // Edit build
-export const editBuild = (id, description) => async (dispatch) => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-    },
+export const editBuild =
+  (id, description, syncLevel, luckySkillIds) => async (dispatch) => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    const body = JSON.stringify({ description, syncLevel, luckySkillIds });
+
+    try {
+      const res = await axios.put(
+        `${CLOUD_FUNCTIONS_URL}/api/builds/edit/${id}`,
+        body,
+        config
+      );
+
+      dispatch({
+        type: EDIT_BUILD,
+        // payload: { id, description: res.data },
+        payload: res.data,
+      });
+
+      dispatch(setAlert('Build Updated', 'success'));
+    } catch (err) {
+      dispatch({
+        type: BUILD_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status },
+      });
+    }
   };
-
-  const body = JSON.stringify({ description });
-
-  try {
-    const res = await axios.put(
-      `${CLOUD_FUNCTIONS_URL}/api/builds/edit/${id}`,
-      body,
-      config
-    );
-
-    dispatch({
-      type: EDIT_BUILD,
-      payload: { id, description: res.data },
-    });
-
-    dispatch(setAlert('Build Updated', 'success'));
-  } catch (err) {
-    dispatch({
-      type: BUILD_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status },
-    });
-  }
-};
 
 // Delete build
 export const deleteBuild = (id) => async (dispatch) => {
