@@ -423,19 +423,19 @@ const extractSyncPairDataByTrainerId = () => {
         role,
       } = trainer;
 
-      if (trainerIdFromList === '10012600') {
+      if (trainerIdFromList === 10126000000) {
         // Swampert's first move is Muddy Water not Water Gun
         move1Id = 330;
       }
-      if (trainerIdFromList === '10012300') {
+      if (trainerIdFromList === 10123000000) {
         // Decidueye first move is Spirit Shackle
         move1Id = 624;
       }
-      if (trainerIdFromList === '10012200') {
+      if (trainerIdFromList === 10122000000) {
         // Primarina first move is Sparkling Aria
         move1Id = 626;
       }
-      if (trainerIdFromList === '10024500') {
+      if (trainerIdFromList === 10245000000) {
         // Morpeko has Hunger Switch as a "form passive"
         passive3Id = 99010601;
       }
