@@ -25,6 +25,15 @@ const trainerNameDBja = require('../rawdata/lsddump/trainer_name_ja.json');
 const trainerNameDBko = require('../rawdata/lsddump/trainer_name_ko.json');
 const trainerNameDBzh = require('../rawdata/lsddump/trainer_name_zh-TW.json');
 
+const roleTypeNameDBde = require('../rawdata/lsddump/role_type_name_de.json');
+const roleTypeNameDBen = require('../rawdata/lsddump/role_type_name_en.json');
+const roleTypeNameDBes = require('../rawdata/lsddump/role_type_name_es.json');
+const roleTypeNameDBfr = require('../rawdata/lsddump/role_type_name_fr.json');
+const roleTypeNameDBit = require('../rawdata/lsddump/role_type_name_it.json');
+const roleTypeNameDBja = require('../rawdata/lsddump/role_type_name_ja.json');
+const roleTypeNameDBko = require('../rawdata/lsddump/role_type_name_ko.json');
+const roleTypeNameDBzh = require('../rawdata/lsddump/role_type_name_zh-TW.json');
+
 const moveNameDBde = require('../rawdata/lsddump/move_name_de.json');
 const moveNameDBen = require('../rawdata/lsddump/move_name_en.json');
 const moveNameDBes = require('../rawdata/lsddump/move_name_es.json');
@@ -99,6 +108,17 @@ const trainerNameDB = {
   ja: trainerNameDBja,
   ko: trainerNameDBko,
   zh: trainerNameDBzh,
+};
+
+const roleTypeNameDB = {
+  de: roleTypeNameDBde,
+  en: roleTypeNameDBen,
+  es: roleTypeNameDBes,
+  fr: roleTypeNameDBfr,
+  it: roleTypeNameDBit,
+  ja: roleTypeNameDBja,
+  ko: roleTypeNameDBko,
+  zh: roleTypeNameDBzh,
 };
 
 const moveNameDB = {
@@ -439,6 +459,30 @@ const extractSyncPairDataByTrainerId = () => {
         // Morpeko has Hunger Switch as a "form passive"
         passive3Id = 99010601;
       }
+
+      // find role type
+      let roleTypeNameByLanguage = {
+        de: '',
+        en: '',
+        es: '',
+        fr: '',
+        it: '',
+        ja: '',
+        ko: '',
+        zh: '',
+      };
+
+      const updateRoleTable = {
+        0: '100',
+        1: '101',
+        2: '103',
+        3: '102',
+      };
+
+      languages.forEach((language) => {
+        roleTypeNameByLanguage[language] =
+          roleTypeNameDB[language][updateRoleTable[role]];
+      });
 
       // Use moveId to find move name in move_name_xx.json
       // Use moveId to find move description in move_description_xx.json
@@ -1366,6 +1410,7 @@ const extractSyncPairDataByTrainerId = () => {
             weakType,
             rarity,
             role,
+            roleTypeNameByLanguage,
             megaForm: { moves: megaMoves, passives: megaPassives },
           })
         : (monsterAndTrainerData = {
@@ -1383,6 +1428,7 @@ const extractSyncPairDataByTrainerId = () => {
             weakType,
             rarity,
             role,
+            roleTypeNameByLanguage,
           });
 
       gridedSyncPairDataArray.push(monsterAndTrainerData);
@@ -1428,6 +1474,7 @@ const extractSyncPairDataByTrainerId = () => {
               weakType,
               rarity,
               role,
+              roleTypeNameByLanguage,
               megaForm: { moves: megaMoves, passives: megaPassives },
             })
           : (monsterAndTrainerData = {
@@ -1445,6 +1492,7 @@ const extractSyncPairDataByTrainerId = () => {
               weakType,
               rarity,
               role,
+              roleTypeNameByLanguage,
             });
         gridedSyncPairDataArray.push(monsterAndTrainerData);
       } else {
@@ -1465,6 +1513,7 @@ const extractSyncPairDataByTrainerId = () => {
               weakType,
               rarity,
               role,
+              roleTypeNameByLanguage,
               megaForm: { moves: megaMoves, passives: megaPassives },
             })
           : (monsterAndTrainerData = {
@@ -1482,6 +1531,7 @@ const extractSyncPairDataByTrainerId = () => {
               weakType,
               rarity,
               role,
+              roleTypeNameByLanguage,
             });
         gridedSyncPairDataArray.push(monsterAndTrainerData);
       }

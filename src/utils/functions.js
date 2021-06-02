@@ -66,17 +66,15 @@ export const getPokemonNameList = (language) => {
     .map((entry, index) => {
       if (
         // existing grided pokemons monsterBaseId from latest datamine
-        !newGridedTrainerIdArray.includes(entry.trainerId) ||
-        entry.trainerBaseId === '10000000' // Charizard (Red)
+        !newGridedTrainerIdArray.includes(entry.trainerId)
       ) {
         let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
 
         // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
         if (
-          // Lycanroc (Olivia), Charizard (Leon)
-          entry.monsterBaseId === '20082912' ||
-          entry.trainerId === 10247000000 ||
+          entry.monsterBaseId === '20082912' || // Lycanroc (Olivia)
+          entry.trainerId === 10247000000 || // Charizard (Leon)
           entry.trainerId === 10148000001 // Morty & Mismagius
         ) {
           // for the new sync pair:
@@ -105,6 +103,7 @@ export const getPokemonNameList = (language) => {
         } else if (
           entry.monsterBaseId === '20082911' ||
           entry.trainerBaseId === '10000000' ||
+          entry.trainerId === 10000000000 || // Charizard (Red)
           entry.trainerId === 10098000000 || //Hau
           entry.trainerId === 10151000000 //Fantina
         ) {

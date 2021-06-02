@@ -625,7 +625,16 @@ export default function MovesAndSkillsModal(props) {
 
   const pokemonData = getPokemonDataByName(pokemon);
 
-  const { stats, moves, passives, megaForm, rarity } = pokemonData;
+  const {
+    stats,
+    moves,
+    passives,
+    megaForm,
+    rarity,
+    pokemonNameByLanguage,
+    trainerNameByLanguage,
+    roleTypeNameByLanguage,
+  } = pokemonData;
 
   const [isMega, setIsMega] = useState(false);
 
@@ -731,7 +740,10 @@ export default function MovesAndSkillsModal(props) {
       onClose={handleOnCloseMovesAndSkillsModal}
     >
       <DialogTitle>
-        {UI['Moves & Skills'][language]}
+        {/* {UI['Moves & Skills'][language]} */}
+        {`${trainerNameByLanguage[language]} & ${pokemonNameByLanguage[language]} (${roleTypeNameByLanguage[language]})`}
+        {/* <br /> */}
+        {/* {`(${roleTypeNameByLanguage[language]})`} */}
         {megaForm ? (
           <Button
             style={{ float: 'right' }}
