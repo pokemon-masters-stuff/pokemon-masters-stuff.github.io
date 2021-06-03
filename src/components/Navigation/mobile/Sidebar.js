@@ -141,7 +141,7 @@ function Sidebar(props) {
             <ListItemIcon className={classes.listIcon}>
               <ExitToAppIcon />
             </ListItemIcon>
-            <ListItemText primary="Logout" />
+            <ListItemText primary={UI['Logout'][language]} />
           </ListItem>
         ) : (
           <Fragment>
