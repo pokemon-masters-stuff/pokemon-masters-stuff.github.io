@@ -130,15 +130,15 @@ const Builds = (props) => {
           >
             <MenuItem value="None">---</MenuItem>
             <ListSubheader disableSticky={true}>New</ListSubheader>
-            {getNewPokemonNameList(language).map((pokemon, index) => (
-              <MenuItem key={index} value={pokemon.name}>
-                {pokemon.value}
+            {getNewPokemonNameList(language).map((syncPairData, index) => (
+              <MenuItem key={index} value={syncPairData.trainerId}>
+                {syncPairData.value}
               </MenuItem>
             ))}
             <ListSubheader disableSticky={true}>All</ListSubheader>
-            {getPokemonNameList(language).map((pokemon, index) => (
-              <MenuItem key={index} value={pokemon.name}>
-                {pokemon.value}
+            {getPokemonNameList(language).map((syncPairData, index) => (
+              <MenuItem key={index} value={syncPairData.trainerId}>
+                {syncPairData.value}
               </MenuItem>
             ))}
           </Select>
