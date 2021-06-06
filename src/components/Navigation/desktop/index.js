@@ -146,6 +146,7 @@ function PersistentDrawerLeft(props) {
               <ListItemText primary={UI['Popular Builds'][language]} />
             </ListItem>
           )}
+
           <LoginOrRegisterModal />
 
           <Link
@@ -159,6 +160,31 @@ function PersistentDrawerLeft(props) {
               <ListItemText primary={UI['Team Builder'][language]} />
             </ListItem>
           </Link>
+
+          {isAuthenticated ? (
+            <Link
+              to="/teams/popular"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <ListItem button>
+                <ListItemIcon className={classes.listIcon}>
+                  <WhatshotIcon />
+                </ListItemIcon>
+                <ListItemText primary="Popular Teams" />
+              </ListItem>
+            </Link>
+          ) : (
+            <ListItem
+              button
+              data-toggle="modal"
+              data-target="#loginOrRegisterModal"
+            >
+              <ListItemIcon className={classes.listIcon}>
+                <WhatshotIcon />
+              </ListItemIcon>
+              <ListItemText primary="Popular Teams" />
+            </ListItem>
+          )}
 
           <Link
             to="/gacha-odds-calculator"

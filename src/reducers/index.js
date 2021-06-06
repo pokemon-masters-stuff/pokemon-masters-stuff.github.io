@@ -6,6 +6,7 @@ import darkModeReducer from './darkModeReducer';
 import alertReducer from './alertReducer';
 import authReducer from './authReducer';
 import publishedBuildReducer from './publishedBuildReducer';
+import publishedTeamReducer from './publishedTeamReducer';
 import languageReducer from './languageReducer';
 import genderReducer from './genderReducer';
 
@@ -17,6 +18,7 @@ export default combineReducers({
   alert: alertReducer,
   auth: authReducer,
   build: publishedBuildReducer,
+  team: publishedTeamReducer,
   language: languageReducer,
   gender: genderReducer,
 });

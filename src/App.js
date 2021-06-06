@@ -10,6 +10,11 @@ import PopularBuilds from './components/builds/common/PopularBuilds';
 import LikedBuilds from './components/builds/common/LikedBuilds';
 import UsersBuilds from './components/builds/common/UsersBuilds';
 import BuildsMobile from './components/builds/mobile/Builds';
+import TeamsDesktop from './components/teams/desktop/Teams';
+import PopularTeams from './components/teams/common/PopularTeams';
+import LikedTeams from './components/teams/common/LikedTeams';
+import UsersTeams from './components/teams/common/UsersTeams';
+import TeamsMobile from './components/teams/mobile/Teams';
 import { theme, darkTheme } from './theme';
 import { useSelector } from 'react-redux';
 import setAuthToken from './utils/setAuthToken';
@@ -86,6 +91,33 @@ export default function App({ store }) {
                 />
               </Box>
             </div>
+            <PrivateRoute
+              path="/teams"
+              screenSize={'large'}
+              component={withTracker(TeamsDesktop)}
+            />
+            <div className="container container-s">
+              <Box>
+                <PrivateRoute
+                  exact
+                  path="/teams/popular"
+                  screenSize={'large'}
+                  component={PopularTeams}
+                />
+                <PrivateRoute
+                  exact
+                  path="/teams/liked"
+                  screenSize={'large'}
+                  component={LikedTeams}
+                />
+                <PrivateRoute
+                  exact
+                  path="/teams/users"
+                  screenSize={'large'}
+                  component={UsersTeams}
+                />
+              </Box>
+            </div>
           </div>
         </Hidden>
         <Hidden mdUp>
@@ -128,6 +160,25 @@ export default function App({ store }) {
               path="/builds/users"
               screenSize={'small'}
               component={UsersBuilds}
+            />
+            <PrivateRoute path="/teams" component={withTracker(TeamsMobile)} />
+            <PrivateRoute
+              exact
+              path="/teams/popular"
+              screenSize={'small'}
+              component={PopularTeams}
+            />
+            <PrivateRoute
+              exact
+              path="/teams/liked"
+              screenSize={'small'}
+              component={LikedTeams}
+            />
+            <PrivateRoute
+              exact
+              path="/teams/users"
+              screenSize={'small'}
+              component={UsersTeams}
             />
           </Box>
         </Hidden>

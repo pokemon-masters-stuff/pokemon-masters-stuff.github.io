@@ -58,6 +58,20 @@ import {
   LOAD_TEAM_GRID_FROM_URL,
   UPDATE_TEAM_URL,
   CHANGE_GENDER,
+  ADD_TEAM,
+  EDIT_TEAM,
+  DELETE_TEAM,
+  TEAM_ERROR,
+  ADD_COMMENT_TO_TEAM,
+  DELETE_COMMENT_FROM_TEAM,
+  CLEAR_TEAMS,
+  GET_TEAMS,
+  GET_LIKED_TEAMS,
+  GET_USERS_TEAMS,
+  UPDATE_TEAM_LIKES,
+  CHANGE_TEAM_SYNC_PAIR_FILTER,
+  CHANGE_TEAM_SYNC_LEVEL_FILTER,
+  CHANGE_TEAM_SORT,
 } from './types';
 import { CLOUD_FUNCTIONS_URL } from '../utils/constants';
 
@@ -633,4 +647,280 @@ export const updateTeamUrl = (payload) => ({
 
 export const changeGender = () => ({
   type: CHANGE_GENDER,
+});
+
+// Add team
+export const addTeam = (data) => async (dispatch) => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  try {
+    const res = await axios.post(
+      `${CLOUD_FUNCTIONS_URL}/api/teams`,
+      data,
+      config
+    );
+
+    dispatch({
+      type: ADD_TEAM,
+      payload: res.data,
+    });
+
+    dispatch(setAlert('Team Published', 'success'));
+  } catch (err) {
+    const errors = err.response.data.errors;
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+    }
+
+    dispatch({
+      type: TEAM_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Edit team
+export const editTeam =
+  (id, description, syncLevel, luckySkillIds) => async (dispatch) => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    const body = JSON.stringify({ description, syncLevel, luckySkillIds });
+
+    try {
+      const res = await axios.put(
+        `${CLOUD_FUNCTIONS_URL}/api/teams/edit/${id}`,
+        body,
+        config
+      );
+
+      dispatch({
+        type: EDIT_TEAM,
+        // payload: { id, description: res.data },
+        payload: res.data,
+      });
+
+      dispatch(setAlert('Team Updated', 'success'));
+    } catch (err) {
+      dispatch({
+        type: TEAM_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status },
+      });
+    }
+  };
+
+// Delete team
+export const deleteTeam = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`${CLOUD_FUNCTIONS_URL}/api/teams/${id}`);
+
+    dispatch({
+      type: DELETE_TEAM,
+      payload: id,
+    });
+
+    dispatch(setAlert('Team Removed', 'success'));
+  } catch (err) {
+    dispatch({
+      type: TEAM_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Add comment to team
+export const addCommentToTeam = (teamId, text) => async (dispatch) => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  const body = JSON.stringify({ text });
+  try {
+    const res = await axios.post(
+      `${CLOUD_FUNCTIONS_URL}/api/teams/comment/${teamId}`,
+      body,
+      config
+    );
+
+    dispatch({
+      type: ADD_COMMENT_TO_TEAM,
+      payload: { teamId: teamId, data: res.data },
+    });
+
+    dispatch(setAlert('Comment Added', 'success'));
+  } catch (err) {
+    const errors = err.response.data.errors;
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+    }
+
+    dispatch({
+      type: TEAM_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Delete comment from team
+export const deleteCommentFromTeam =
+  (teamId, commentId) => async (dispatch) => {
+    try {
+      await axios.delete(
+        `${CLOUD_FUNCTIONS_URL}/api/teams/comment/${teamId}/${commentId}`
+      );
+
+      dispatch({
+        type: DELETE_COMMENT_FROM_TEAM,
+        payload: { teamId, commentId },
+      });
+
+      dispatch(setAlert('Comment Removed', 'success'));
+    } catch (err) {
+      dispatch({
+        type: TEAM_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status },
+      });
+    }
+  };
+
+export const clearTeams = () => ({
+  type: CLEAR_TEAMS,
+});
+
+// Get Teams
+export const getTeams =
+  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+    try {
+      const res = await axios.get(
+        `${CLOUD_FUNCTIONS_URL}/api/teams?skip=${skip}&limit=${limit}&sort=${sort}${
+          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+      );
+
+      dispatch({
+        type: GET_TEAMS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: TEAM_ERROR,
+        payload: {
+          msg: error.response.statusText,
+          status: error.response.status,
+        },
+      });
+    }
+  };
+
+// Get Liked Teams
+export const getLikedTeams =
+  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+    try {
+      const res = await axios.get(
+        `${CLOUD_FUNCTIONS_URL}/api/teams/liked?skip=${skip}&limit=${limit}&sort=${sort}${
+          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+      );
+
+      dispatch({
+        type: GET_LIKED_TEAMS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: TEAM_ERROR,
+        payload: {
+          msg: error.response.statusText,
+          status: error.response.status,
+        },
+      });
+    }
+  };
+
+// Get User's Teams
+export const getUsersTeams =
+  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+    try {
+      const res = await axios.get(
+        `${CLOUD_FUNCTIONS_URL}/api/teams/users?skip=${skip}&limit=${limit}&sort=${sort}${
+          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+      );
+
+      dispatch({
+        type: GET_USERS_TEAMS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: TEAM_ERROR,
+        payload: {
+          msg: error.response.statusText,
+          status: error.response.status,
+        },
+      });
+    }
+  };
+
+// Add like to team
+export const addLikeToTeam = (id) => async (dispatch) => {
+  try {
+    const res = await axios.put(`${CLOUD_FUNCTIONS_URL}/api/teams/like/${id}`);
+    dispatch({
+      type: UPDATE_TEAM_LIKES,
+      payload: { id, likes: res.data },
+    });
+  } catch (error) {
+    dispatch({
+      type: TEAM_ERROR,
+      payload: {
+        msg: error.response.statusText,
+        status: error.response.status,
+      },
+    });
+  }
+};
+
+// Remove like from team
+export const removeLikeFromTeam = (id) => async (dispatch) => {
+  try {
+    const res = await axios.put(
+      `${CLOUD_FUNCTIONS_URL}/api/teams/unlike/${id}`
+    );
+    dispatch({
+      type: UPDATE_TEAM_LIKES,
+      payload: { id, likes: res.data },
+    });
+  } catch (error) {
+    dispatch({
+      type: TEAM_ERROR,
+      payload: {
+        msg: error.response.statusText,
+        status: error.response.status,
+      },
+    });
+  }
+};
+
+export const changeTeamSyncPairFilter = (payload) => ({
+  type: CHANGE_TEAM_SYNC_PAIR_FILTER,
+  payload,
+});
+
+export const changeTeamSyncLevelFilter = (payload) => ({
+  type: CHANGE_TEAM_SYNC_LEVEL_FILTER,
+  payload,
+});
+
+export const changeTeamSort = (payload) => ({
+  type: CHANGE_TEAM_SORT,
+  payload,
 });

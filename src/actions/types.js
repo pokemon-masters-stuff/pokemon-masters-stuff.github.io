@@ -63,3 +63,18 @@ export const LOAD_TEAM_GRID_FROM_URL = 'load_team_grid_from_url';
 export const UPDATE_TEAM_URL = 'update_team_url';
 
 export const CHANGE_GENDER = 'change_gender';
+
+export const ADD_TEAM = 'add_team';
+export const EDIT_TEAM = 'edit_team';
+export const DELETE_TEAM = 'delete_team';
+export const TEAM_ERROR = 'team_error';
+export const ADD_COMMENT_TO_TEAM = 'add_comment_to_team';
+export const DELETE_COMMENT_FROM_TEAM = 'delete_comment_from_team';
+export const CLEAR_TEAMS = 'clear_teams';
+export const GET_TEAMS = 'get_teams';
+export const GET_LIKED_TEAMS = 'get_liked_teams';
+export const GET_USERS_TEAMS = 'get_users_teams';
+export const UPDATE_TEAM_LIKES = 'update_team_likes';
+export const CHANGE_TEAM_SYNC_PAIR_FILTER = 'change_team_sync_pair_filter';
+export const CHANGE_TEAM_SYNC_LEVEL_FILTER = 'change_team_sync_level_filter';
+export const CHANGE_TEAM_SORT = 'change_team_sort';

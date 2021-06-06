@@ -97,6 +97,32 @@ function Sidebar(props) {
           </ListItem>
         </Link>
 
+        {isAuthenticated ? (
+          <Link
+            to="/teams/popular"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ListItem button onClick={handleOnClose}>
+              <ListItemIcon className={classes.listIcon}>
+                <WhatshotIcon />
+              </ListItemIcon>
+              <ListItemText primary={UI['Popular Teams'][language]} />
+            </ListItem>
+          </Link>
+        ) : (
+          <ListItem
+            button
+            onClick={handleOnClose}
+            data-toggle="modal"
+            data-target="#loginOrRegisterModal"
+          >
+            <ListItemIcon className={classes.listIcon}>
+              <WhatshotIcon />
+            </ListItemIcon>
+            <ListItemText primary={UI['Popular Teams'][language]} />
+          </ListItem>
+        )}
+
         <Link
           to="/gacha-odds-calculator"
           style={{ textDecoration: 'none', color: 'inherit' }}

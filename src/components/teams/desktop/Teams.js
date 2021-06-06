@@ -1,0 +1,187 @@
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import {
+  changeTeamSyncPairFilter,
+  changeTeamSyncLevelFilter,
+  changeTeamSort,
+} from '../../../actions/actionCreators';
+import {
+  getPokemonNameList,
+  getNewPokemonNameList,
+} from '../../../utils/functions';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import MenuItem from '@material-ui/core/MenuItem';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { makeStyles } from '@material-ui/core/styles';
+// import UI from '../../../utils/translations';
+
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+const Teams = (props) => {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+  const sort = useSelector((state) => state.team.sort);
+  const syncPairFilter = useSelector((state) => state.team.syncPairFilter);
+  const syncLevelFilter = useSelector((state) => state.team.syncLevelFilter);
+  const dispatch = useDispatch();
+  const language = useSelector((state) => state.language.currentLanguage);
+  const darkMode = useSelector((state) => state.darkMode.mode);
+
+  useEffect(() => {
+    if (props.history) {
+      if (props.history.location.pathname === '/teams/liked') {
+        setValue(1);
+      } else if (props.history.location.pathname === '/teams/users') {
+        setValue(2);
+      } else {
+        setValue(0);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleChangeTab = (event, newValue) => {
+    let val;
+    if (newValue === 0) {
+      val = 'popular';
+    } else if (newValue === 1) {
+      val = 'liked';
+    } else {
+      val = 'users';
+    }
+    props.history.push(`/teams/${val}`);
+    setValue(newValue);
+  };
+
+  const handleChangeSort = (event) => {
+    if (event.target.value) {
+      dispatch(changeTeamSort(event.target.value));
+    }
+  };
+
+  const handleChangeSyncPairFilter = (event) => {
+    if (event.target.value) {
+      dispatch(changeTeamSyncPairFilter(event.target.value));
+      dispatch(changeTeamSyncLevelFilter('0'));
+    }
+  };
+
+  const handleChangeSyncLevelFilter = (event) => {
+    if (event.target.value) {
+      dispatch(changeTeamSyncLevelFilter(event.target.value));
+    }
+  };
+
+  return (
+    <div className={`App ${darkMode ? 'dark-mode' : null}`}>
+      <div className="container container-s">
+        <br />
+        <Paper width={1} className={classes.root}>
+          <Tabs
+            value={value}
+            indicatorColor="primary"
+            onChange={handleChangeTab}
+            style={{ margin: 'auto' }}
+            centered
+          >
+            <Tab label="Popular Teams" />
+            <Tab label="Liked Teams" />
+            <Tab label="My Published Teams" />
+          </Tabs>
+        </Paper>
+        <Paper width={1} className={classes.root} style={{ marginBottom: 20 }}>
+          <Typography
+            style={{
+              borderLeft: '15px solid transparent',
+              borderRight: '10px solid transparent',
+            }}
+          >
+            Sort by:{' '}
+          </Typography>
+          <FormControl className={classes.formControl}>
+            <Select value={sort} labelId="sort" onChange={handleChangeSort}>
+              <MenuItem value="popular">Popular</MenuItem>
+              <MenuItem value="newest">Newest</MenuItem>
+              <MenuItem value="oldest">Oldest</MenuItem>
+            </Select>
+          </FormControl>
+          <Typography
+            style={{
+              borderLeft: '35px solid transparent',
+              borderRight: '10px solid transparent',
+            }}
+          >
+            Filter by:{' '}
+          </Typography>
+          <FormControl className={classes.formControl}>
+            <Select
+              value={syncPairFilter}
+              labelId="syncPairFilter"
+              onChange={handleChangeSyncPairFilter}
+            >
+              <MenuItem value="None">---</MenuItem>
+              <ListSubheader disableSticky={true}>New</ListSubheader>
+              {getNewPokemonNameList(language).map((pokemon, index) => (
+                <MenuItem key={index} value={pokemon.name}>
+                  {pokemon.value}
+                </MenuItem>
+              ))}
+              <ListSubheader disableSticky={true}>All</ListSubheader>
+              {getPokemonNameList(language).map((pokemon, index) => (
+                <MenuItem key={index} value={pokemon.name}>
+                  {pokemon.value}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          {syncPairFilter !== 'None' ? (
+            <>
+              <Typography
+                style={{
+                  borderLeft: '35px solid transparent',
+                  borderRight: '10px solid transparent',
+                }}
+              >
+                Sync Lv:{' '}
+              </Typography>
+              <FormControl className={classes.formControl}>
+                <Select
+                  value={syncLevelFilter}
+                  labelId="syncLevelFilter"
+                  onChange={handleChangeSyncLevelFilter}
+                >
+                  <MenuItem key={'0'} value={'0'}>
+                    ---
+                  </MenuItem>
+                  <MenuItem key={3} value={'3+'}>
+                    3+
+                  </MenuItem>
+                  <MenuItem key={2} value={'2'}>
+                    2
+                  </MenuItem>
+                  <MenuItem key={1} value={'1'}>
+                    1
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </>
+          ) : null}
+        </Paper>
+      </div>
+    </div>
+  );
+};
+
+export default withRouter(Teams);
