@@ -12,17 +12,14 @@ import {
   loadTeamGridFromUrl,
   resetTeam,
 } from '../../../actions/actionCreators';
-import {
-  removeHyphens,
-  convertSyncPairNameFromUrl,
-} from '../../../utils/functions';
 import { getQueryStringValue } from '../../../queryString';
 import SaveTeamButton from '../common/SaveTeamButton';
 import LoadTeamDropdown from '../common/LoadTeamDropdown';
 import ResetTeamButton from '../common/ResetTeamButton';
-import { allSyncGrids } from '../../../utils/constants';
+import { allSyncGrids } from '../../../data/exportGridsAsObject';
 import ShareTeamButton from '../common/ShareTeamButton';
 import SyncPairCard from '../common/SyncPairCard';
+import { lookupTrainerIdBySyncPairNameFromUrl } from '../../../data/lookupTables';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,234 +42,104 @@ function TeamBuilder() {
   const teamMembers = useSelector((state) => state.grid.teamMembers);
 
   const onChangeHandler = (e, newValue, slot) => {
-    let syncPairEnglishName = newValue
-      ? syncPairNamesAndIds[language][newValue].syncPairEnglishName
-      : '';
-    dispatch(setTeam({ slot: slot, syncPair: syncPairEnglishName }));
+    let syncPairTrainerId = newValue || '';
+    dispatch(setTeam({ slot: slot, syncPair: syncPairTrainerId }));
     dispatch(updateTeamUrl());
   };
 
-  let teamMember1Data = syncPairNamesAndIds['en'][teamMembers.slot1] || null;
-  let teamMember2Data = syncPairNamesAndIds['en'][teamMembers.slot2] || null;
-  let teamMember3Data = syncPairNamesAndIds['en'][teamMembers.slot3] || null;
+  let teamMember1Data = syncPairNamesAndIds[teamMembers.slot1] || null;
+  let teamMember2Data = syncPairNamesAndIds[teamMembers.slot2] || null;
+  let teamMember3Data = syncPairNamesAndIds[teamMembers.slot3] || null;
 
   const loadTeamFromUrl = () => {
     if (
+      getQueryStringValue('id1', location.search) ||
+      getQueryStringValue('id2', location.search) ||
+      getQueryStringValue('id3', location.search) ||
       getQueryStringValue('sp1', location.search) ||
       getQueryStringValue('sp2', location.search) ||
       getQueryStringValue('sp3', location.search)
     ) {
       dispatch(resetTeam());
     }
-    let syncPair1;
-    if (getQueryStringValue('sp1', location.search)) {
-      syncPair1 = convertSyncPairNameFromUrl(
-        getQueryStringValue('sp1', location.search)
-      );
-      if (syncPairNamesAndIds['en'][syncPair1]) {
-        dispatch(setTeam({ slot: 'slot1', syncPair: syncPair1 }));
-        let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
-        // console.log('pokemon1', pokemon1);
-        let syncPair1SyncLevel;
-        if (getQueryStringValue('s1', location.search)) {
-          syncPair1SyncLevel = getQueryStringValue('s1', location.search);
+
+    let indexArray = [1, 2, 3];
+    indexArray.forEach((index) => {
+      let syncPairTrainerId;
+      if (
+        getQueryStringValue(`id${index}`, location.search) ||
+        getQueryStringValue(`sp${index}`, location.search)
+      ) {
+        syncPairTrainerId = getQueryStringValue(`id${index}`, location.search)
+          ? getQueryStringValue(`id${index}`, location.search)
+          : lookupTrainerIdBySyncPairNameFromUrl[
+              getQueryStringValue(`sp${index}`, location.search).toLowerCase()
+            ];
+        if (syncPairNamesAndIds[syncPairTrainerId]) {
           dispatch(
-            setTeamSyncLevels({
-              slot: 'slot1',
-              syncLevel: syncPair1SyncLevel,
-            })
+            setTeam({ slot: `slot${index}`, syncPair: syncPairTrainerId })
           );
-        } else {
-          dispatch(
-            setTeamSyncLevels({
-              slot: 'slot1',
-              syncLevel: '5',
-            })
-          );
-        }
-
-        if (getQueryStringValue('g1', location.search)) {
-          let remainingEnergy = Number(
-            getQueryStringValue('e1', location.search)
-          );
-          let orbSpent = Number(getQueryStringValue('o1', location.search));
-          let cellData = {};
-          let selectedCellByIdFromUrl = {};
-
-          getQueryStringValue('g1', location.search).map((id) => {
-            cellData =
-              allSyncGrids[language][
-                `${removeHyphens(
-                  pokemon1
-                ).toLowerCase()}GridData${language.toUpperCase()}`
-              ][Number(id)];
-
-            selectedCellByIdFromUrl = {
-              cellId: cellData.cellId,
-              name: cellData.move.name,
-              description: cellData.move.description,
-              energy: cellData.move.energyCost,
-              moveId: cellData.ability.moveId,
-              value: cellData.ability.value,
-              type: cellData.ability.type,
-            };
-
-            return dispatch(
-              loadTeamGridFromUrl({
-                slot: 'slot1',
-                selectedCellByIdFromUrl,
-                remainingEnergy,
-                orbSpent,
+          // let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
+          // console.log('pokemon1', pokemon1);
+          let syncLevel;
+          if (getQueryStringValue(`s${index}`, location.search)) {
+            syncLevel = getQueryStringValue(`s${index}`, location.search);
+            dispatch(
+              setTeamSyncLevels({
+                slot: `slot${index}`,
+                syncLevel: syncLevel,
               })
             );
-          });
-        }
-      } else {
-        alert(
-          "There is an error in the URL. The sync pair on the left won't be displayed due to misspelled name."
-        );
-      }
-    }
-
-    let syncPair2;
-    if (getQueryStringValue('sp2', location.search)) {
-      syncPair2 = convertSyncPairNameFromUrl(
-        getQueryStringValue('sp2', location.search)
-      );
-      if (syncPairNamesAndIds['en'][syncPair2]) {
-        dispatch(setTeam({ slot: 'slot2', syncPair: syncPair2 }));
-        let pokemon2 = syncPairNamesAndIds['en'][syncPair2].pokemonEnglishName;
-        // console.log('pokemon2', pokemon2);
-        let syncPair2SyncLevel;
-        if (getQueryStringValue('s2', location.search)) {
-          syncPair2SyncLevel = getQueryStringValue('s2', location.search);
-          dispatch(
-            setTeamSyncLevels({
-              slot: 'slot2',
-              syncLevel: syncPair2SyncLevel,
-            })
-          );
-        } else {
-          dispatch(
-            setTeamSyncLevels({
-              slot: 'slot2',
-              syncLevel: '5',
-            })
-          );
-        }
-
-        if (getQueryStringValue('g2', location.search)) {
-          let remainingEnergy = Number(
-            getQueryStringValue('e2', location.search)
-          );
-          let orbSpent = Number(getQueryStringValue('o2', location.search));
-          let cellData = {};
-          let selectedCellByIdFromUrl = {};
-
-          getQueryStringValue('g2', location.search).map((id) => {
-            cellData =
-              allSyncGrids[language][
-                `${removeHyphens(
-                  pokemon2
-                ).toLowerCase()}GridData${language.toUpperCase()}`
-              ][Number(id)];
-
-            selectedCellByIdFromUrl = {
-              cellId: cellData.cellId,
-              name: cellData.move.name,
-              description: cellData.move.description,
-              energy: cellData.move.energyCost,
-              moveId: cellData.ability.moveId,
-              value: cellData.ability.value,
-              type: cellData.ability.type,
-            };
-
-            return dispatch(
-              loadTeamGridFromUrl({
-                slot: 'slot2',
-                selectedCellByIdFromUrl,
-                remainingEnergy,
-                orbSpent,
+          } else {
+            dispatch(
+              setTeamSyncLevels({
+                slot: `slot${index}`,
+                syncLevel: '5',
               })
             );
-          });
-        }
-      } else {
-        alert(
-          "There is an error in the URL. The sync pair in the middle won't be displayed due to misspelled name."
-        );
-      }
-    }
+          }
 
-    let syncPair3;
-    if (getQueryStringValue('sp3', location.search)) {
-      syncPair3 = convertSyncPairNameFromUrl(
-        getQueryStringValue('sp3', location.search)
-      );
-      if (syncPairNamesAndIds['en'][syncPair3]) {
-        dispatch(setTeam({ slot: 'slot3', syncPair: syncPair3 }));
-        let pokemon3 = syncPairNamesAndIds['en'][syncPair3].pokemonEnglishName;
-        // console.log('pokemon3', pokemon3);
-        let syncPair3SyncLevel;
-        if (getQueryStringValue('s3', location.search)) {
-          syncPair3SyncLevel = getQueryStringValue('s3', location.search);
-          dispatch(
-            setTeamSyncLevels({
-              slot: 'slot3',
-              syncLevel: syncPair3SyncLevel,
-            })
-          );
-        } else {
-          dispatch(
-            setTeamSyncLevels({
-              slot: 'slot3',
-              syncLevel: '5',
-            })
-          );
-        }
-
-        if (getQueryStringValue('g3', location.search)) {
-          let remainingEnergy = Number(
-            getQueryStringValue('e3', location.search)
-          );
-          let orbSpent = Number(getQueryStringValue('o3', location.search));
-          let cellData = {};
-          let selectedCellByIdFromUrl = {};
-
-          getQueryStringValue('g3', location.search).map((id) => {
-            cellData =
-              allSyncGrids[language][
-                `${removeHyphens(
-                  pokemon3
-                ).toLowerCase()}GridData${language.toUpperCase()}`
-              ][Number(id)];
-
-            selectedCellByIdFromUrl = {
-              cellId: cellData.cellId,
-              name: cellData.move.name,
-              description: cellData.move.description,
-              energy: cellData.move.energyCost,
-              moveId: cellData.ability.moveId,
-              value: cellData.ability.value,
-              type: cellData.ability.type,
-            };
-
-            return dispatch(
-              loadTeamGridFromUrl({
-                slot: 'slot3',
-                selectedCellByIdFromUrl,
-                remainingEnergy,
-                orbSpent,
-              })
+          if (getQueryStringValue(`g${index}`, location.search)) {
+            let remainingEnergy = Number(
+              getQueryStringValue(`e${index}`, location.search)
             );
-          });
+            let orbSpent = Number(
+              getQueryStringValue(`o${index}`, location.search)
+            );
+            let cellData = {};
+            let selectedCellByIdFromUrl = {};
+
+            getQueryStringValue(`g${index}`, location.search).map((id) => {
+              cellData =
+                allSyncGrids[language][
+                  `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
+                ][Number(id)];
+
+              selectedCellByIdFromUrl = {
+                cellId: cellData.cellId,
+                name: cellData.move.name,
+                description: cellData.move.description,
+                energy: cellData.move.energyCost,
+                moveId: cellData.ability.moveId,
+                value: cellData.ability.value,
+                type: cellData.ability.type,
+              };
+
+              return dispatch(
+                loadTeamGridFromUrl({
+                  slot: `slot${index}`,
+                  selectedCellByIdFromUrl,
+                  remainingEnergy,
+                  orbSpent,
+                })
+              );
+            });
+          }
+        } else {
+          alert('Invalid URL.');
         }
-      } else {
-        alert(
-          "There is an error in the URL. The sync pair on the right won't be displayed due to misspelled name."
-        );
       }
-    }
+    });
   };
 
   useEffect(() => {
@@ -302,16 +169,9 @@ function TeamBuilder() {
           {[teamMember1Data, teamMember2Data, teamMember3Data].map(
             (teamMemberData, index) => (
               <SyncPairCard
-                teamMemberData={teamMemberData}
                 key={index}
                 index={index}
-                syncPairName={
-                  syncPairNamesAndIds['en'][teamMembers[`slot${index + 1}`]]
-                    ? syncPairNamesAndIds['en'][
-                        teamMembers[`slot${index + 1}`]
-                      ]['syncPairNameByLanguage'][language]
-                    : ''
-                }
+                teamMemberData={teamMemberData}
                 handleOnChange={onChangeHandler}
               />
             )
@@ -323,21 +183,10 @@ function TeamBuilder() {
             {[teamMember1Data, teamMember2Data, teamMember3Data].map(
               (teamMemberData, index) =>
                 teamMemberData ? (
-                  teamMemberData.grided ? (
+                  teamMemberData.isGrided ? (
                     <Grid item key={index}>
                       <SyncGridContainer
-                        pokemon={teamMemberData[
-                          'pokemonEnglishName'
-                        ].toLowerCase()}
-                        syncPairName={
-                          syncPairNamesAndIds['en'][
-                            teamMembers[`slot${index + 1}`]
-                          ]
-                            ? syncPairNamesAndIds['en'][
-                                teamMembers[`slot${index + 1}`]
-                              ]['syncPairNameByLanguage'][language]
-                            : ''
-                        }
+                        trainerId={teamMemberData['trainerId']}
                         slot={`slot${index + 1}`}
                       />
                     </Grid>

@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
-import { allSyncGrids } from '../utils/constants';
+import { allSyncGrids } from '../data/exportGridsAsObject';
+import { lookupTrainerIdBySyncPairName } from '../data/lookupTables';
 
 import {
   // grid helper
@@ -84,6 +85,7 @@ export default function (state = initialState, action) {
     case HIDE_GRID_DATA:
       return { ...state, gridData: {} };
     case ADD_TO_GRID_LIST:
+      console.log('adding to grid list in reducer');
       return {
         ...state,
         selectedCellsById: {
@@ -126,7 +128,8 @@ export default function (state = initialState, action) {
             ...state.savedBuilds.byIds,
             [newBuildUUID]: {
               id: newBuildUUID,
-              pokemon: action.payload.selectedPokemon,
+              trainerId: action.payload.trainerId,
+              // pokemon: action.payload.selectedPokemon,
               name: action.payload.buildName,
               selectedCellsById: state.selectedCellsById,
               remainingEnergy: state.remainingEnergy,
@@ -158,9 +161,9 @@ export default function (state = initialState, action) {
         let selectedCellById = {};
         Object.keys(oldSelectedCellsById).map((cellId) => {
           allSyncGrids['en'][
-            `${state.savedBuilds.byIds[
-              action.payload.buildId
-            ].pokemon.toLowerCase()}GridDataEN`
+            `trainerId_${
+              state.savedBuilds.byIds[action.payload.buildId].trainerId
+            }_GridDataEN`
           ].forEach((cellData) => {
             if (cellData.cellId === Number(cellId)) {
               selectedCellById = {
@@ -258,7 +261,7 @@ export default function (state = initialState, action) {
 
       return {
         ...state,
-        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&p=${action.payload}&s=${state.syncLevel}`,
+        url: `https://pokemon-masters-stuff.github.io/?e=${state.remainingEnergy}${b64GridUrlArray}&o=${state.orbSpent}&id=${action.payload}&s=${state.syncLevel}`,
       };
     case SET_SYNC_LEVEL:
       return {
@@ -376,9 +379,9 @@ export default function (state = initialState, action) {
         let selectedCellById = {};
         Object.keys(oldSelectedCellsById).map((cellId) => {
           allSyncGrids['en'][
-            `${state.savedBuilds.byIds[
-              action.payload.buildId
-            ].pokemon.toLowerCase()}GridDataEN`
+            `trainerId_${
+              state.savedBuilds.byIds[action.payload.buildId].trainerId
+            }_GridDataEN`
           ].forEach((cellData) => {
             if (cellData.cellId === Number(cellId)) {
               selectedCellById = {
@@ -429,10 +432,40 @@ export default function (state = initialState, action) {
         },
       };
     case LOAD_SELECTED_TEAM_BUILD:
+      console.log(
+        'state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers',
+        state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers
+      );
+      let member1 =
+        state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers.slot1;
+      let member2 =
+        state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers.slot2;
+      let member3 =
+        state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers.slot3;
+      let member1TrainerId = member1;
+      let member2TrainerId = member2;
+      let member3TrainerId = member3;
+      if (member1 !== '' && isNaN(member1)) {
+        member1TrainerId = lookupTrainerIdBySyncPairName[member1];
+      }
+      if (member2 !== '' && isNaN(member2)) {
+        member2TrainerId = lookupTrainerIdBySyncPairName[member2];
+      }
+      if (member3 !== '' && isNaN(member3)) {
+        member3TrainerId = lookupTrainerIdBySyncPairName[member3];
+      }
+      console.log('members', [
+        member1TrainerId,
+        member2TrainerId,
+        member3TrainerId,
+      ]);
       return {
         ...state,
-        teamMembers:
-          state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers,
+        teamMembers: {
+          slot1: member1TrainerId,
+          slot2: member2TrainerId,
+          slot3: member3TrainerId,
+        },
         teamSelectedCellsById:
           state.teamSavedBuilds.byIds[action.payload.buildId]
             .teamSelectedCellsById,
@@ -518,15 +551,9 @@ export default function (state = initialState, action) {
         },
       };
     case UPDATE_TEAM_URL:
-      let syncPair1 = state.teamMembers.slot1
-        ? state.teamMembers.slot1.replace(/\s+/g, '').replace(/&/g, '_')
-        : '';
-      let syncPair2 = state.teamMembers.slot2
-        ? state.teamMembers.slot2.replace(/\s+/g, '').replace(/&/g, '_')
-        : '';
-      let syncPair3 = state.teamMembers.slot3
-        ? state.teamMembers.slot3.replace(/\s+/g, '').replace(/&/g, '_')
-        : '';
+      let syncPair1 = state.teamMembers.slot1 ? state.teamMembers.slot1 : '';
+      let syncPair2 = state.teamMembers.slot2 ? state.teamMembers.slot2 : '';
+      let syncPair3 = state.teamMembers.slot3 ? state.teamMembers.slot3 : '';
       let slot1B64GridUrlArray = '';
       let slot2B64GridUrlArray = '';
       let slot3B64GridUrlArray = '';
@@ -588,13 +615,13 @@ export default function (state = initialState, action) {
       }
 
       let syncPair1Url = syncPair1
-        ? `sp1=${syncPair1}&e1=${state.teamRemainingEnergy.slot1}&o1=${state.teamOrbSpent.slot1}&g1=${slot1B64GridUrlArray}&s1=${state.teamSyncLevels.slot1}`
+        ? `id1=${syncPair1}&e1=${state.teamRemainingEnergy.slot1}&o1=${state.teamOrbSpent.slot1}&g1=${slot1B64GridUrlArray}&s1=${state.teamSyncLevels.slot1}`
         : '';
       let syncPair2Url = syncPair2
-        ? `sp2=${syncPair2}&e2=${state.teamRemainingEnergy.slot2}&o2=${state.teamOrbSpent.slot2}&g2=${slot2B64GridUrlArray}&s2=${state.teamSyncLevels.slot2}`
+        ? `id2=${syncPair2}&e2=${state.teamRemainingEnergy.slot2}&o2=${state.teamOrbSpent.slot2}&g2=${slot2B64GridUrlArray}&s2=${state.teamSyncLevels.slot2}`
         : '';
       let syncPair3Url = syncPair3
-        ? `sp3=${syncPair3}&e3=${state.teamRemainingEnergy.slot3}&o3=${state.teamOrbSpent.slot3}&g3=${slot3B64GridUrlArray}&s3=${state.teamSyncLevels.slot3}`
+        ? `id3=${syncPair3}&e3=${state.teamRemainingEnergy.slot3}&o3=${state.teamOrbSpent.slot3}&g3=${slot3B64GridUrlArray}&s3=${state.teamSyncLevels.slot3}`
         : '';
 
       let teamUrl = `https://pokemon-masters-stuff.github.io/#/team-builder/?${syncPair1Url}&${syncPair2Url}&${syncPair3Url}`;

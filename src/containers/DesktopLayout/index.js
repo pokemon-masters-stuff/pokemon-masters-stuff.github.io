@@ -6,7 +6,8 @@ import SyncLevelDropdown from '../../components/SyncLevelDropdown';
 import { ResetGridButtonDesktop } from '../../components/ResetGridButton';
 import GridMap from '../../components/GridMap';
 import {
-  selectPokemon,
+  selectSyncPair,
+  // selectPokemon,
   resetGrids,
   loadSelectedBuild,
   deleteSelectedBuild,
@@ -21,12 +22,12 @@ class DesktopLayout extends Component {
   constructor(props) {
     super(props);
 
-    this.selectPokemon = this.selectPokemon.bind(this);
+    this.selectSyncPair = this.selectSyncPair.bind(this);
     this.handleOnChangeSavedBuild = this.handleOnChangeSavedBuild.bind(this);
   }
 
-  selectPokemon(value) {
-    this.props.selectPokemon(value);
+  selectSyncPair(value) {
+    this.props.selectSyncPair(value);
     this.props.resetGrids();
   }
 
@@ -39,7 +40,8 @@ class DesktopLayout extends Component {
   };
 
   render() {
-    const { pokemon, grid, darkMode } = this.props;
+    const { trainerId, grid, darkMode } = this.props;
+    // const { trainerId, pokemon, grid, darkMode } = this.props;
 
     return (
       <div className={`App ${darkMode ? 'dark-mode' : null}`}>
@@ -49,8 +51,9 @@ class DesktopLayout extends Component {
               <div className="col-sm-8">
                 <div style={{ marginTop: 24 }}>
                   <SelectPokemonDropdown
-                    selectedPokemon={pokemon.selectedPokemon}
-                    onChangeHandler={this.selectPokemon}
+                    trainerId={trainerId}
+                    // selectedPokemon={pokemon.selectedPokemon}
+                    onChangeHandler={this.selectSyncPair}
                   />
                   <SyncLevelDropdown />
                   <LoadBuildDropdown
@@ -59,7 +62,8 @@ class DesktopLayout extends Component {
                   />
                   <div style={{ marginLeft: 8, marginTop: 3 }}>
                     <MovesAndSkillsButtonDesktop
-                      pokemon={pokemon.selectedPokemon}
+                      trainerId={trainerId}
+                      // pokemon={pokemon.selectedPokemon}
                       selectedCellsById={grid.selectedCellsById}
                       syncLevel={grid.syncLevel}
                     />
@@ -93,13 +97,15 @@ class DesktopLayout extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  pokemon: state.pokemon,
+  trainerId: state.id.trainerId,
+  // pokemon: state.pokemon,
   grid: state.grid,
   darkMode: state.darkMode.mode,
 });
 
 export default connect(mapStateToProps, {
-  selectPokemon,
+  selectSyncPair,
+  // selectPokemon,
   resetGrids,
   loadSelectedBuild,
   deleteSelectedBuild,

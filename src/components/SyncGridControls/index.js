@@ -19,7 +19,8 @@ import styles from './styles';
 function SyncGridControls(props) {
   const {
     classes,
-    selectedPokemon,
+    trainerId,
+    // selectedPokemon,
     grid,
     onChangePokemonHandler,
     onOpenSkillListHandler,
@@ -38,9 +39,9 @@ function SyncGridControls(props) {
       ? onOpenSkillListHandler()
       : null;
 
-  const handleOnChangePokemonHandler = (pokemon) =>
+  const handleOnChangePokemonHandler = (trainerId) =>
     typeof onChangePokemonHandler === 'function'
-      ? onChangePokemonHandler(pokemon)
+      ? onChangePokemonHandler(trainerId)
       : null;
 
   const handleOnChangeSavedBuild = (value) =>
@@ -72,7 +73,8 @@ function SyncGridControls(props) {
       <LoginOrRegisterModal />
       <Grid item>
         <SelectPokemonDropdown
-          selectedPokemon={selectedPokemon}
+          trainerId={trainerId}
+          // selectedPokemon={selectedPokemon}
           onChangeHandler={handleOnChangePokemonHandler}
         />
         <SyncLevelDropdown />
@@ -121,7 +123,8 @@ function SyncGridControls(props) {
       <Grid item>
         <div>
           <MovesAndSkillsButtonMobile
-            pokemon={selectedPokemon}
+            trainerId={trainerId}
+            // pokemon={selectedPokemon}
             selectedCellsById={grid.selectedCellsById}
             syncLevel={grid.syncLevel}
           />

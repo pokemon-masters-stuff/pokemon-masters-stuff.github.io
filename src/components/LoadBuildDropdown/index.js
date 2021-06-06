@@ -10,13 +10,15 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import styles from './styles';
 import { updateUrl } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
+import { lookupTrainerIdByPokemonName } from '../../data/lookupTables';
 
 function LoadBuildDropdown(props) {
   const { classes, onChangeHandler, onDeleteHandler } = props;
 
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
+  const trainerId = useSelector((state) => state.id.trainerId);
+  // const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
   const selectedBuild = useSelector((state) => state.grid.selectedBuild);
   const savedBuilds = useSelector((state) =>
     state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
@@ -33,7 +35,7 @@ function LoadBuildDropdown(props) {
 
   const handleChange = (event) => {
     onChangeHandler(event.target.value);
-    dispatch(updateUrl(selectedPokemon));
+    dispatch(updateUrl(trainerId));
   };
 
   const handleOpen = () => {
@@ -68,21 +70,35 @@ function LoadBuildDropdown(props) {
         onClose={handleClose}
       >
         {Boolean(savedBuilds.length) &&
-          savedBuilds.map(
-            (build) =>
-              build.pokemon.toLowerCase() === selectedPokemon.toLowerCase() && (
-                <MenuItem key={build.id} value={build.id}>
-                  {build.name}
-                  {showClearIcon ? (
-                    <IconButton
-                      onClick={handleDelete.bind(this, build.id)}
-                      style={{ marginLeft: 'auto', padding: 0 }}
-                    >
-                      <HighlightOffIcon />
-                    </IconButton>
-                  ) : null}
-                </MenuItem>
-              )
+          savedBuilds.map((build) =>
+            build.trainerId
+              ? build.trainerId.toString() === trainerId.toString() && (
+                  <MenuItem key={build.id} value={build.id}>
+                    {build.name}
+                    {showClearIcon ? (
+                      <IconButton
+                        onClick={handleDelete.bind(this, build.id)}
+                        style={{ marginLeft: 'auto', padding: 0 }}
+                      >
+                        <HighlightOffIcon />
+                      </IconButton>
+                    ) : null}
+                  </MenuItem>
+                )
+              : lookupTrainerIdByPokemonName[build.pokemon.toLowerCase()] ===
+                  trainerId.toString() && (
+                  <MenuItem key={build.id} value={build.id}>
+                    {build.name}
+                    {showClearIcon ? (
+                      <IconButton
+                        onClick={handleDelete.bind(this, build.id)}
+                        style={{ marginLeft: 'auto', padding: 0 }}
+                      >
+                        <HighlightOffIcon />
+                      </IconButton>
+                    ) : null}
+                  </MenuItem>
+                )
           )}
       </Select>
     </FormControl>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import uuid from 'uuid';
 import setAuthToken from '../utils/setAuthToken';
 import {
+  SELECT_SYNC_PAIR,
   SELECT_POKEMON,
   ADD_TO_GRID_LIST,
   REMOVE_FROM_GRID_LIST,
@@ -59,6 +60,11 @@ import {
   CHANGE_GENDER,
 } from './types';
 import { CLOUD_FUNCTIONS_URL } from '../utils/constants';
+
+export const selectSyncPair = (trainerId) => ({
+  type: SELECT_SYNC_PAIR,
+  trainerId,
+});
 
 export const selectPokemon = (selectedPokemon) => ({
   type: SELECT_POKEMON,

@@ -10,7 +10,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import Fab from '@material-ui/core/Fab';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import SyncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import { changeGender } from '../../../actions/actionCreators';
 import RefreshIcon from '@material-ui/icons/Refresh';
 
@@ -36,14 +36,12 @@ function SyncPairCard(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
-  const { teamMemberData, index, syncPairName, handleOnChange } = props;
-  const syncPairNames = Object.keys(SyncPairNamesAndIds[language]);
+  const { index, teamMemberData, handleOnChange } = props;
+  let syncPairs = Object.values(syncPairNamesAndIds);
   const gender = useSelector((state) => state.gender.selectedGender);
 
-  const [
-    isSelectSyncPairModalVisible,
-    setIsSelectSyncPairModalVisible,
-  ] = useState(false);
+  const [isSelectSyncPairModalVisible, setIsSelectSyncPairModalVisible] =
+    useState(false);
 
   const handleOnCloseSelectSyncPairModal = () => {
     setIsSelectSyncPairModalVisible(false);
@@ -54,13 +52,12 @@ function SyncPairCard(props) {
   };
 
   const handleOnChangeSyncPair = (e, newValue) => {
-    handleOnChange(e, newValue, `slot${index + 1}`);
+    if (newValue) {
+      handleOnChange(e, newValue.trainerId, `slot${index + 1}`);
+    } else {
+      handleOnChange(e, '', `slot${index + 1}`);
+    }
     setIsSelectSyncPairModalVisible(false);
-  };
-
-  const defaultProps = {
-    options: syncPairNames.sort(),
-    getOptionLabel: (option) => option,
   };
 
   let trainerActorId = teamMemberData ? teamMemberData.trainerActorId : '';
@@ -225,19 +222,24 @@ function SyncPairCard(props) {
         maxWidth={'xs'}
       >
         <DialogTitle style={{ textAlign: 'center' }}>
-          {/* {UI['Language'][language]} */}
           Select Sync Pair
         </DialogTitle>
         <DialogContent dividers>
           <Autocomplete
-            {...defaultProps}
-            id={syncPairName}
+            id={`sync-pair-card-${index}`}
+            options={syncPairs.sort((a, b) => {
+              let x = a['syncPairNameByLanguage'][language];
+              let y = b['syncPairNameByLanguage'][language];
+              return x < y ? -1 : x > y ? 1 : 0;
+            })}
+            getOptionLabel={(option) =>
+              option['syncPairNameByLanguage']
+                ? option['syncPairNameByLanguage'][language]
+                : ''
+            }
             autoComplete
             includeInputInList
-            value={syncPairName}
-            // onChange={(event, newValue) => {
-            //   setValue(newValue);
-            // }}
+            value={teamMemberData}
             onChange={handleOnChangeSyncPair}
             renderInput={(params) => <TextField {...params} margin="normal" />}
           />

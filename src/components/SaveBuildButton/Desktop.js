@@ -6,12 +6,14 @@ import {
 } from '../../actions/actionCreators';
 import UI from '../../utils/translations';
 import './desktop.css';
+import { lookupTrainerIdByPokemonName } from '../../data/lookupTables';
 
 export default function SaveBuildButton() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
-  const pokemon = useSelector((state) => state.pokemon);
+  // const pokemon = useSelector((state) => state.pokemon);
+  const trainerId = useSelector((state) => state.id.trainerId);
   const savedBuilds = useSelector((state) =>
     state.grid.savedBuilds.allIds.map((id) => state.grid.savedBuilds.byIds[id])
   );
@@ -22,25 +24,45 @@ export default function SaveBuildButton() {
     if (newBuildNameRef.current.value) {
       // If already have a save with the same name, delete old save
       for (let build in savedBuilds) {
-        if (
-          savedBuilds[build].name === newBuildNameRef.current.value &&
-          savedBuilds[build].pokemon === pokemon.selectedPokemon
-        ) {
-          userConfirmation = window.confirm(
-            'There is a save with the same name. Do you wish to overwrite it?'
-          );
-          userConfirmation &&
-            dispatch(
-              deleteSelectedBuild({
-                buildId: savedBuilds[build].id,
-              })
+        if (savedBuilds[build].trainerId) {
+          if (
+            savedBuilds[build].name === newBuildNameRef.current.value &&
+            savedBuilds[build].trainerId === trainerId
+          ) {
+            userConfirmation = window.confirm(
+              'There is a save with the same name. Do you wish to overwrite it?'
             );
+            userConfirmation &&
+              dispatch(
+                deleteSelectedBuild({
+                  buildId: savedBuilds[build].id,
+                })
+              );
+          }
+        } else {
+          if (
+            savedBuilds[build].name === newBuildNameRef.current.value &&
+            lookupTrainerIdByPokemonName[
+              savedBuilds[build].pokemon.toLowerCase()
+            ] === trainerId
+          ) {
+            userConfirmation = window.confirm(
+              'There is a save with the same name. Do you wish to overwrite it?'
+            );
+            userConfirmation &&
+              dispatch(
+                deleteSelectedBuild({
+                  buildId: savedBuilds[build].id,
+                })
+              );
+          }
         }
       }
       userConfirmation &&
         dispatch(
           saveCurrentBuild({
-            selectedPokemon: pokemon.selectedPokemon,
+            trainerId: trainerId,
+            // selectedPokemon: pokemon.selectedPokemon,
             buildName: newBuildNameRef.current.value,
           })
         );

@@ -18,13 +18,10 @@ import {
 import {
   getFillColorByMoveType,
   renderMoveName,
-  // addSyncLvReq,
   checkSelectabilityBasedOnSyncLv,
-  removeHyphens,
-  capitalizeSyncPairNameForUrl,
-  getPokemonDataByName,
+  getPokemonDataByTrainerId,
 } from '../../../utils/functions';
-import { allSyncGrids } from '../../../utils/constants';
+import { allSyncGrids } from '../../../data/exportGridsAsObject';
 import UI from '../../../utils/translations';
 
 // To combine with GridMap. Need to pass pokemon, grid, viewbox, and actions as props
@@ -135,9 +132,9 @@ class GridMap extends Component {
 
   renderHexagonCells = (classes) =>
     allSyncGrids[this.props.language][
-      `${removeHyphens(
-        this.props.pokemon
-      )}GridData${this.props.language.toUpperCase()}`
+      `trainerId_${
+        this.props.trainerId
+      }_GridData${this.props.language.toUpperCase()}`
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
@@ -146,7 +143,7 @@ class GridMap extends Component {
           : cell.move.name;
 
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
-        this.props.pokemon,
+        this.props.trainerId,
         cell,
         this.props.syncLevel
       );
@@ -216,11 +213,9 @@ class GridMap extends Component {
 
   renderCenterGridText = (classes) => {
     // Only renders text when no picture available
-    return getPokemonDataByName(this.props.pokemon).monsterActorId ===
+    return getPokemonDataByTrainerId(this.props.trainerId).monsterActorId ===
       undefined ? (
-      <Text className={classes.selectedPokemonCell}>
-        {removeHyphens(this.props.pokemon)}
-      </Text>
+      <Text className={classes.selectedPokemonCell}>:P</Text>
     ) : null;
   };
 
@@ -249,7 +244,7 @@ class GridMap extends Component {
               q={0}
               r={0}
               s={0}
-              fill={`url(#${this.props.pokemon})`}
+              fill={`url(#${this.props.trainerId})`}
               data={{ cellId: 0 }}
               className={'center-grid'}
             >
@@ -258,9 +253,9 @@ class GridMap extends Component {
             {this.renderHexagonCells(classes)}
           </Layout>
           <Pattern
-            id={this.props.pokemon}
+            id={this.props.trainerId}
             link={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${
-              getPokemonDataByName(this.props.pokemon).monsterActorId
+              getPokemonDataByTrainerId(this.props.trainerId).monsterActorId
             }_128.ktx.png`}
             size={{ x: 10, y: 10 }}
           />

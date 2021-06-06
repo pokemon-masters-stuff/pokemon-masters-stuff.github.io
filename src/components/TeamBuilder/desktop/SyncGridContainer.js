@@ -23,19 +23,7 @@ const useStyles = makeStyles((theme) => ({
 const SyncGridContainer = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const { pokemon, syncPairName, slot } = props;
-  let pokemonName = pokemon;
-
-  // to extract this to utility
-  if (syncPairName === 'Olivia & Lycanroc') {
-    pokemonName = 'olivia_lycanroc';
-  } else if (syncPairName === 'Leon & Charizard') {
-    pokemonName = 'leon_charizard';
-  } else if (syncPairName === 'Morty & Mismagius') {
-    pokemonName = 'morty_mismagius';
-  } else if (syncPairName === 'Lt. Surge & Raichu') {
-    pokemonName = 'lt_surge_raichu';
-  }
+  const { trainerId, slot } = props;
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
   const remainingEnergy = useSelector(
@@ -45,11 +33,8 @@ const SyncGridContainer = (props) => {
   const selectedCellsById = useSelector(
     (state) => state.grid.teamSelectedCellsById[slot]
   );
-  // const [syncLevel, setSyncLevel] = useState(syncLevels[slot]);
-  // console.log('sync level parent', syncLevel);
 
   const handleChangeSyncLevel = (syncLevel) => {
-    // setSyncLevel(syncLevel);
     dispatch(setTeamSyncLevels({ slot: slot, syncLevel: syncLevel }));
     dispatch(updateTeamUrl());
   };
@@ -84,7 +69,7 @@ const SyncGridContainer = (props) => {
 
         <div style={{ marginLeft: 8, marginTop: -7 }}>
           <MovesAndSkillsButtonMobile
-            pokemon={pokemonName}
+            trainerId={trainerId}
             selectedCellsById={selectedCellsById}
             syncLevel={syncLevels[slot]}
             language={language}
@@ -97,7 +82,7 @@ const SyncGridContainer = (props) => {
         </div>
         <div style={{ marginTop: -70 }}>
           <SyncGrid
-            pokemon={pokemonName}
+            trainerId={trainerId}
             slot={slot}
             syncLevel={syncLevels[slot]}
           />

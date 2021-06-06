@@ -1,9 +1,10 @@
-import gridedSyncPairDataArray from '../data/gridedSyncPairData.json';
+import gridedSyncPairData from '../data/gridedSyncPairData.json';
 import eggPokemonDataArray from '../data/eggPokemonData.json';
 // import luckySkillList from '../data/luckySkills.json';
 import {
   shortenedMoveNameByAbilityId,
-  newGridedTrainerIdArray,
+  arrayOfTrainerIdsForNewlyGridedSyncPairs,
+  arrayOfTrainerIdsWithSamePokemon,
   type1SyncGrid,
   type2SyncGrid,
   type3SyncGrid,
@@ -17,36 +18,36 @@ export const removeHyphens = (str) => {
   return str.replace(/-/g, '');
 };
 
-export const capitalizeSyncPairNameForUrl = (syncPairName) => {
-  let firstPart = syncPairName.substr(0, syncPairName.indexOf('_'));
-  let secondPart = syncPairName.substr(syncPairName.indexOf('_') + 1);
+// export const capitalizeSyncPairNameForUrl = (syncPairName) => {
+//   let firstPart = syncPairName.substr(0, syncPairName.indexOf('_'));
+//   let secondPart = syncPairName.substr(syncPairName.indexOf('_') + 1);
 
-  let capitalizedFirstPart =
-    firstPart.charAt(0).toUpperCase() + firstPart.slice(1);
-  let capitalizedSecondPart =
-    secondPart.charAt(0).toUpperCase() + secondPart.slice(1);
+//   let capitalizedFirstPart =
+//     firstPart.charAt(0).toUpperCase() + firstPart.slice(1);
+//   let capitalizedSecondPart =
+//     secondPart.charAt(0).toUpperCase() + secondPart.slice(1);
 
-  let newString = capitalizedFirstPart + '_' + capitalizedSecondPart;
-  return newString;
-};
+//   let newString = capitalizedFirstPart + '_' + capitalizedSecondPart;
+//   return newString;
+// };
 
-export const convertSyncPairNameFromUrl = (syncPairName) => {
-  let updatedSyncPairName;
-  if (syncPairName === 'Lt.Surge_Electrode') {
-    updatedSyncPairName = 'Lt. Surge & Electrode';
-  } else if (syncPairName === 'Lt.Surge_Raichu') {
-    updatedSyncPairName = 'Lt. Surge & Raichu';
-  } else if (syncPairName === 'CrasherWake_Floatzel') {
-    updatedSyncPairName = 'Crasher Wake & Floatzel';
-  } else if (syncPairName === 'ProfessorOak_Mew') {
-    updatedSyncPairName = 'Professor Oak & Mew';
-  } else if (syncPairName === 'ProfessorSycamore_Xerneas') {
-    updatedSyncPairName = 'Professor Sycamore & Xerneas';
-  } else {
-    updatedSyncPairName = syncPairName.split('_').join(' & ');
-  }
-  return updatedSyncPairName;
-};
+// export const convertSyncPairNameFromUrl = (syncPairName) => {
+//   let updatedSyncPairName;
+//   if (syncPairName === 'Lt.Surge_Electrode') {
+//     updatedSyncPairName = 'Lt. Surge & Electrode';
+//   } else if (syncPairName === 'Lt.Surge_Raichu') {
+//     updatedSyncPairName = 'Lt. Surge & Raichu';
+//   } else if (syncPairName === 'CrasherWake_Floatzel') {
+//     updatedSyncPairName = 'Crasher Wake & Floatzel';
+//   } else if (syncPairName === 'ProfessorOak_Mew') {
+//     updatedSyncPairName = 'Professor Oak & Mew';
+//   } else if (syncPairName === 'ProfessorSycamore_Xerneas') {
+//     updatedSyncPairName = 'Professor Sycamore & Xerneas';
+//   } else {
+//     updatedSyncPairName = syncPairName.split('_').join(' & ');
+//   }
+//   return updatedSyncPairName;
+// };
 
 // export const getLuckySkillList = (language) => {
 //   let luckySkills = [];
@@ -61,81 +62,32 @@ export const convertSyncPairNameFromUrl = (syncPairName) => {
 
 export const getPokemonNameList = (language) => {
   let existingGridedPokemon = [];
-  gridedSyncPairDataArray
-    .slice(0, -1) // remove the blank template, which is the last entry of the array
-    .map((entry, index) => {
-      if (
-        // existing grided pokemons monsterBaseId from latest datamine
-        !newGridedTrainerIdArray.includes(entry.trainerId)
-      ) {
-        let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
+
+  Object.values(gridedSyncPairData).map((entry, index) => {
+    if (
+      !arrayOfTrainerIdsForNewlyGridedSyncPairs.includes(
+        Number(entry.trainerId)
+      )
+    ) {
+      if (arrayOfTrainerIdsWithSamePokemon.includes(Number(entry.trainerId))) {
+        let value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`; // value changes as language changes
+        let trainerId = entry.trainerId.toString();
+        return existingGridedPokemon.push({
+          key: index,
+          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          trainerId: trainerId,
+        });
+      } else {
         let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
-
-        // // if there's already a pokemon with the same name, then use sync pair name for the new grided pokemon instead of pokemon name, eg. Lycanroc midday and midnight forms
-        if (
-          entry.monsterBaseId === '20082912' || // Lycanroc (Olivia)
-          entry.trainerId === 10247000000 || // Charizard (Leon)
-          entry.trainerId === 10148000001 // Morty & Mismagius
-        ) {
-          // for the new sync pair:
-          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-          name = entry.syncPairNameByLanguage['en'];
-
-          return existingGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        } else if (
-          entry.trainerId === 10035000001 // Lt. Surge & Raichu
-        ) {
-          // for the new sync pair:
-          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-          name = 'Lt_Surge_Raichu';
-
-          return existingGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        } else if (
-          entry.monsterBaseId === '20082911' ||
-          entry.trainerBaseId === '10000000' ||
-          entry.trainerId === 10000000000 || // Charizard (Red)
-          entry.trainerId === 10098000000 || //Hau
-          entry.trainerId === 10151000000 //Fantina
-        ) {
-          // Lycanroc (Kukui) Charizard (Red)
-          // for the old sync pair, change displayed value but not name so that old saves are still compatible
-          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-
-          return existingGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        } else if (entry.monsterBaseId === '20000900') {
-          // rename Blastoise_new to Blastoise
-          return existingGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value.replace('_new', ''), // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        } else {
-          return existingGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        }
+        let trainerId = entry.trainerId.toString();
+        return existingGridedPokemon.push({
+          key: index,
+          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          trainerId: trainerId,
+        });
       }
-    });
-
+    }
+  });
   return existingGridedPokemon.sort((a, b) => {
     let x = a.value;
     let y = b.value;
@@ -145,54 +97,29 @@ export const getPokemonNameList = (language) => {
 
 export const getNewPokemonNameList = (language) => {
   let newlyGridedPokemon = [];
-  gridedSyncPairDataArray
-    .slice(0, -1) // remove the blank template, which is the last entry of the array
-    .map((entry, index) => {
-      if (
-        // newly grided pokemons monsterBaseId from latest datamine
-        newGridedTrainerIdArray.includes(entry.trainerId) &&
-        entry.trainerBaseId !== '10000000'
-      ) {
-        let name = entry.pokemonNameByLanguage['en']; // name stays the same so old links and saves are compatible
-        let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
-
-        if (
-          entry.trainerId === 10148000001 // Morty & Mismagius
-        ) {
-          // for the new sync pair:
-          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-          name = entry.syncPairNameByLanguage['en'];
-
-          return newlyGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        } else if (
-          entry.trainerId === 10035000001 // Lt. Surge & Raichu
-        ) {
-          // for the new sync pair:
-          value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`;
-          name = 'Lt_Surge_Raichu';
-
-          return newlyGridedPokemon.push({
-            key: index,
-            name: name,
-            value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-            trainerId: entry.trainerId.toString(),
-          });
-        }
-
+  Object.values(gridedSyncPairData).map((entry, index) => {
+    if (
+      arrayOfTrainerIdsForNewlyGridedSyncPairs.includes(Number(entry.trainerId))
+    ) {
+      if (arrayOfTrainerIdsWithSamePokemon.includes(Number(entry.trainerId))) {
+        let value = `${entry.pokemonNameByLanguage[language]} (${entry.trainerNameByLanguage[language]})`; // value changes as language changes
+        let trainerId = entry.trainerId.toString();
         return newlyGridedPokemon.push({
           key: index,
-          name: name,
           value: value, // value changes as language changes. name stays the same so old links and saves are compatible
-          trainerId: entry.trainerId.toString(),
+          trainerId: trainerId,
+        });
+      } else {
+        let value = entry.pokemonNameByLanguage[language]; // value changes as language changes
+        let trainerId = entry.trainerId.toString();
+        return newlyGridedPokemon.push({
+          key: index,
+          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          trainerId: trainerId,
         });
       }
-    });
-
+    }
+  });
   return newlyGridedPokemon.sort((a, b) => {
     let x = a.value;
     let y = b.value;
@@ -200,55 +127,8 @@ export const getNewPokemonNameList = (language) => {
   });
 };
 
-export const getPokemonDataByName = (pokemonName) => {
-  let pokemonData;
-  gridedSyncPairDataArray.forEach((pokemon) => {
-    if (pokemonName.toLowerCase() === 'lycanroc') {
-      if (
-        pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'kukui_lycanroc'
-      ) {
-        pokemonData = pokemon;
-      }
-    } else if (pokemonName.toLowerCase() === 'charizard') {
-      if (
-        pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'red_charizard'
-      ) {
-        pokemonData = pokemon;
-      }
-    } else if (pokemonName.toLowerCase() === 'blastoise') {
-      if (
-        pokemon.pokemonNameByLanguage['en'].toLowerCase() === 'blastoise_new'
-      ) {
-        pokemonData = pokemon;
-      }
-    } else if (pokemonName.toLowerCase() === 'mismagius') {
-      if (
-        pokemon.syncPairNameByLanguage['en'].toLowerCase() ===
-        'fantina_mismagius'
-      ) {
-        pokemonData = pokemon;
-      }
-    } else if (pokemonName.toLowerCase() === 'lt_surge_raichu') {
-      if (
-        pokemon.syncPairNameByLanguage['en'].toLowerCase() ===
-        'lt. surge_raichu'
-      ) {
-        pokemonData = pokemon;
-      }
-    } else if (pokemonName.toLowerCase() === 'raichu') {
-      if (pokemon.syncPairNameByLanguage['en'].toLowerCase() === 'hau_raichu') {
-        pokemonData = pokemon;
-      }
-    } else if (
-      pokemon.pokemonNameByLanguage['en'] === pokemonName ||
-      pokemon.pokemonNameByLanguage['en'].toLowerCase() === pokemonName ||
-      pokemon.syncPairNameByLanguage['en'] === pokemonName ||
-      pokemon.syncPairNameByLanguage['en'].toLowerCase() === pokemonName
-    ) {
-      pokemonData = pokemon;
-    }
-  });
-  return pokemonData ? pokemonData : gridedSyncPairDataArray[0];
+export const getPokemonDataByTrainerId = (trainerId) => {
+  return gridedSyncPairData[trainerId];
 };
 
 const role = { 0: 'P.Strike', 1: 'S.Strike', 2: 'Support', 3: 'Tech' };
@@ -322,11 +202,11 @@ export const getFillColorByMoveType = ({ type, group }) => {
   return cellColor;
 };
 
-export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
+export const checkSelectabilityBasedOnSyncLv = (trainerId, cell, syncLevel) => {
   let selectable = true;
 
   if (syncLevel === '1') {
-    if (type1SyncGrid.includes(pokemon)) {
+    if (type1SyncGrid.includes(trainerId)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -355,7 +235,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (type2SyncGrid.includes(pokemon)) {
+    if (type2SyncGrid.includes(trainerId)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -384,7 +264,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (type3SyncGrid.includes(pokemon)) {
+    if (type3SyncGrid.includes(trainerId)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -418,7 +298,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (pokemon === 'mew') {
+    if (trainerId === '10137000000') {
       if (
         (cell.coords.q === 3 && cell.coords.r === -4) ||
         (cell.coords.q === 4 && cell.coords.r === -4) ||
@@ -445,7 +325,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
   }
 
   if (syncLevel === '2') {
-    if (type1SyncGrid.includes(pokemon)) {
+    if (type1SyncGrid.includes(trainerId)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -462,7 +342,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (type2SyncGrid.includes(pokemon)) {
+    if (type2SyncGrid.includes(trainerId)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -479,7 +359,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (type3SyncGrid.includes(pokemon)) {
+    if (type3SyncGrid.includes(trainerId)) {
       if (
         (cell.coords.q === 0 && cell.coords.r === 3) ||
         (cell.coords.q === 0 && cell.coords.r === -3) ||
@@ -499,7 +379,7 @@ export const checkSelectabilityBasedOnSyncLv = (pokemon, cell, syncLevel) => {
       }
     }
 
-    if (pokemon === 'mew') {
+    if (trainerId === '10137000000') {
       if (
         (cell.coords.q === 3 && cell.coords.r === -4) ||
         (cell.coords.q === 4 && cell.coords.r === -4) ||

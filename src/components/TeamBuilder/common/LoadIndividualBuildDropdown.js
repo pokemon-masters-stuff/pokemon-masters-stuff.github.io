@@ -9,9 +9,10 @@ import styles from './styles';
 import { updateTeamUrl } from '../../../actions/actionCreators';
 import UI from '../../../utils/translations';
 import { loadSelectedIndividualBuild } from '../../../actions/actionCreators';
+import { lookupTrainerIdByPokemonName } from '../../../data/lookupTables';
 
 function LoadBuildDropdown(props) {
-  const { classes, pokemon, slot } = props;
+  const { classes, trainerId, slot } = props;
 
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
@@ -53,13 +54,19 @@ function LoadBuildDropdown(props) {
         onChange={handleChange}
       >
         {Boolean(savedBuilds.length) &&
-          savedBuilds.map(
-            (build) =>
-              build.pokemon.toLowerCase() === pokemon.toLowerCase() && (
-                <MenuItem key={build.id} value={build.id}>
-                  {build.name}
-                </MenuItem>
-              )
+          savedBuilds.map((build) =>
+            build.trainerId
+              ? build.trainerId === trainerId && (
+                  <MenuItem key={build.id} value={build.id}>
+                    {build.name}
+                  </MenuItem>
+                )
+              : lookupTrainerIdByPokemonName[build.pokemon.toLowerCase()] ===
+                  trainerId && (
+                  <MenuItem key={build.id} value={build.id}>
+                    {build.name}
+                  </MenuItem>
+                )
           )}
       </Select>
     </FormControl>

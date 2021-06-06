@@ -3,25 +3,28 @@ import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import UI from '../../../utils/translations';
-import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
+import { getPokemonDataByTrainerId } from '../../../utils/functions';
 
 const ShareTeamButton = () => {
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
   const url = useSelector((state) => state.grid.teamUrl);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
-
+  let arrayOfTeamMemberTrainerNameIds = [
+    getPokemonDataByTrainerId(teamMembers.slot1)
+      ? getPokemonDataByTrainerId(teamMembers.slot1).trainerNameId
+      : '',
+    getPokemonDataByTrainerId(teamMembers.slot2)
+      ? getPokemonDataByTrainerId(teamMembers.slot2).trainerNameId
+      : '',
+    getPokemonDataByTrainerId(teamMembers.slot3)
+      ? getPokemonDataByTrainerId(teamMembers.slot3).trainerNameId
+      : '',
+  ];
   const handleOnOpenShareTeamModal = () => {
     if (
-      teamMembers.slot1 &&
-      teamMembers.slot2 &&
-      teamMembers.slot3 &&
-      (syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
-        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ||
-        syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
-          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName ||
-        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ===
-          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName)
+      arrayOfTeamMemberTrainerNameIds.length !==
+      new Set(arrayOfTeamMemberTrainerNameIds).size // if contains duplicates
     ) {
       return alert(
         'A Trainer with the same name is already on this team. Please choose another.'
@@ -39,15 +42,8 @@ const ShareTeamButton = () => {
       >
         {UI['Share'][language]}
       </Button>
-      {teamMembers.slot1 &&
-      teamMembers.slot2 &&
-      teamMembers.slot3 &&
-      (syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
-        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ||
-        syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
-          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName ||
-        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ===
-          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName) ? null : (
+      {arrayOfTeamMemberTrainerNameIds.length !==
+      new Set(arrayOfTeamMemberTrainerNameIds).size ? null : (
         <div
           className="modal fade"
           id="shareTeamModal"

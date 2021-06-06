@@ -19,7 +19,7 @@ import Paper from '@material-ui/core/Paper';
 import UI from '../../utils/translations';
 import RarityDropdown from './RarityDropdown';
 import PotentialDropdown from './PotentialDropdown';
-import { getPokemonDataByName } from '../../utils/functions';
+import { getPokemonDataByTrainerId } from '../../utils/functions';
 
 const useRowStyles = makeStyles({
   root: {
@@ -37,7 +37,8 @@ function Stats(props) {
     rarity,
     selectedRarity,
     isMega,
-    pokemon,
+    // pokemon,
+    trainerId,
   } = props;
 
   const {
@@ -90,7 +91,7 @@ function Stats(props) {
   let lv130Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 30;
   let lv130Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 30;
 
-  if (pokemon === 'Mew') {
+  if (trainerId === '10137000000') {
     lv130Hp = 354;
     lv130Atk = 254;
     lv130Def = 254;
@@ -438,7 +439,8 @@ function Passives(props) {
 
 export default function MovesAndSkillsModal(props) {
   const {
-    pokemon,
+    trainerId,
+    // pokemon,
     selectedCellsById,
     syncLevel,
     language,
@@ -623,7 +625,7 @@ export default function MovesAndSkillsModal(props) {
 
   let selectedMoves = hash;
 
-  const pokemonData = getPokemonDataByName(pokemon);
+  const pokemonData = getPokemonDataByTrainerId(trainerId);
 
   const {
     stats,
@@ -652,7 +654,7 @@ export default function MovesAndSkillsModal(props) {
     setSelectedRarity(rarity);
     setSelectedPotential(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pokemon]);
+  }, [trainerId]);
 
   const handleOnChangeRarity = (value) => {
     let selectedValue;
@@ -783,7 +785,8 @@ export default function MovesAndSkillsModal(props) {
                 rarity={rarity}
                 selectedRarity={selectedRarity}
                 isMega={isMega}
-                pokemon={pokemon}
+                trainerId={trainerId}
+                // pokemon={pokemon}
               />
             </TableBody>
           </Table>

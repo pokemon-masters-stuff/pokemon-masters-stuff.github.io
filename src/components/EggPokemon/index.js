@@ -5,10 +5,7 @@ import SelectEggPokemonDropdown from './SelectEggPokemonDropdown';
 import SyncLevelDropdown from './SyncLevelDropdown';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import {
-  removeHyphens,
-  getEggPokemonDataByNameAndRole,
-} from '../../utils/functions';
+import { getEggPokemonDataByNameAndRole } from '../../utils/functions';
 
 const regExp = /\(([^)]+)\)/;
 

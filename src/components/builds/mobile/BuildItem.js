@@ -25,13 +25,13 @@ import {
 import {
   getFillColorByMoveType,
   renderMoveName,
-  // addSyncLvReq,
-  removeHyphens,
-  getPokemonDataByName,
+  getPokemonDataByTrainerId,
   checkSelectabilityBasedOnSyncLv,
 } from '../../../utils/functions';
-import { pokemonPictures, allSyncGrids } from '../../../utils/constants';
+import { allSyncGrids } from '../../../data/exportGridsAsObject';
+import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 import BuildDescription from './BuildDescription';
+import { lookupTrainerIdByPokemonName } from '../../../data/lookupTables';
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -118,9 +118,9 @@ class BuildItem extends Component {
       this.props.deleteBuild(build._id);
   };
 
-  renderHexagonCells = (classes, pokemon, build) =>
+  renderHexagonCells = (classes, trainerId, build) =>
     allSyncGrids[this.props.language][
-      `${removeHyphens(pokemon)}GridData${this.props.language.toUpperCase()}`
+      `trainerId_${trainerId}_GridData${this.props.language.toUpperCase()}`
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
       let moveName =
@@ -132,7 +132,7 @@ class BuildItem extends Component {
       let isSeletableBasedOnSyncLv = true;
       if (build.syncLevel) {
         isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
-          pokemon,
+          trainerId,
           cell,
           build.syncLevel.toString()
         );
@@ -193,12 +193,10 @@ class BuildItem extends Component {
       );
     });
 
-  renderCenterGridText = (classes, pokemon) => {
+  renderCenterGridText = (classes, trainerId) => {
     // Only renders text when no picture available
-    return getPokemonDataByName(pokemon).monsterActorId === undefined ? (
-      <Text className={classes.selectedPokemonCell}>
-        {removeHyphens(pokemon)}
-      </Text>
+    return getPokemonDataByTrainerId(trainerId).monsterActorId === undefined ? (
+      <Text className={classes.selectedPokemonCell}>:P</Text>
     ) : null;
   };
 
@@ -279,6 +277,9 @@ class BuildItem extends Component {
     const { mapSizeBoundaries, initialRender } = this.state;
     const { classes, build, darkMode } = this.props;
     const pokemon = build.pokemon.toLowerCase();
+    const trainerId = build.trainerId
+      ? build.trainerId
+      : lookupTrainerIdByPokemonName[build.pokemon.toLowerCase()];
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
@@ -339,19 +340,19 @@ class BuildItem extends Component {
                   q={0}
                   r={0}
                   s={0}
-                  fill={`url(#${pokemon})`}
+                  fill={`url(#${trainerId})`}
                   data={{ cellId: 0 }}
                   className={'center-grid'}
                 >
-                  {this.renderCenterGridText(classes, pokemon)}
+                  {this.renderCenterGridText(classes, trainerId)}
                 </Hexagon>
-                {this.renderHexagonCells(classes, pokemon, build)}
+                {this.renderHexagonCells(classes, trainerId, build)}
               </Layout>
               <Pattern
-                id={pokemon}
+                id={trainerId}
                 link={
                   pokemonPictures[
-                    getPokemonDataByName(pokemon).monsterActorId + '_128'
+                    getPokemonDataByTrainerId(trainerId).monsterActorId + '_128'
                   ]
                 }
                 size={{ x: 10, y: 10 }}
@@ -382,7 +383,7 @@ class BuildItem extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  pokemon: state.pokemon.selectedPokemon.toLowerCase(),
+  // pokemon: state.pokemon.selectedPokemon.toLowerCase(),
   grid: state.grid,
   darkMode: state.darkMode.mode,
   auth: state.auth,

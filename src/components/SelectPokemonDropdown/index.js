@@ -15,8 +15,9 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function SimpleSelect(props) {
   const dispatch = useDispatch();
-  const { classes, selectedPokemon, onChangeHandler } = props;
-  const [pokemon, setPokemon] = React.useState(selectedPokemon);
+  const { classes, trainerId, selectedPokemon, onChangeHandler } = props;
+  // const [pokemon, setPokemon] = React.useState(selectedPokemon);
+  const [syncPair, setSyncPair] = React.useState(trainerId);
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
@@ -27,13 +28,15 @@ function SimpleSelect(props) {
   }, []);
 
   React.useEffect(() => {
-    setPokemon(selectedPokemon);
+    // setPokemon(selectedPokemon);
+    setSyncPair(trainerId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedPokemon]);
+  }, [trainerId]);
 
   const handleChange = (event) => {
     if (event.target.value) {
-      setPokemon(event.target.value);
+      // setPokemon(event.target.value);
+      setSyncPair(event.target.value);
       onChangeHandler(event.target.value);
 
       dispatch(updateUrl(event.target.value));
@@ -53,20 +56,20 @@ function SimpleSelect(props) {
       </InputLabel>
       <Select
         labelId="select-pokemon"
-        value={pokemon}
+        value={syncPair}
         onChange={handleChange}
         labelWidth={labelWidth}
       >
         <ListSubheader disableSticky={true}>New</ListSubheader>
-        {getNewPokemonNameList(language).map((pokemon, index) => (
-          <MenuItem key={index} value={pokemon.name}>
-            {pokemon.value}
+        {getNewPokemonNameList(language).map((syncPairData, index) => (
+          <MenuItem key={index} value={syncPairData.trainerId}>
+            {syncPairData.value}
           </MenuItem>
         ))}
         <ListSubheader disableSticky={true}>All</ListSubheader>
-        {getPokemonNameList(language).map((pokemon, index) => (
-          <MenuItem key={index} value={pokemon.name}>
-            {pokemon.value}
+        {getPokemonNameList(language).map((syncPairData, index) => (
+          <MenuItem key={index} value={syncPairData.trainerId}>
+            {syncPairData.value}
           </MenuItem>
         ))}
       </Select>

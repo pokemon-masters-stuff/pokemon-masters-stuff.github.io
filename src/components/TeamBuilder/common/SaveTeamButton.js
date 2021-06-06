@@ -11,17 +11,30 @@ import {
   saveCurrentTeamBuild,
   deleteSelectedTeamBuild,
 } from '../../../actions/actionCreators';
-import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
+import { getPokemonDataByTrainerId } from '../../../utils/functions';
 
 const SaveBuildButton = () => {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
+
   const teamSavedBuilds = useSelector((state) =>
     state.grid.teamSavedBuilds.allIds.map(
       (id) => state.grid.teamSavedBuilds.byIds[id]
     )
   );
+  let arrayOfTeamMemberTrainerNameIds = [
+    getPokemonDataByTrainerId(teamMembers.slot1)
+      ? getPokemonDataByTrainerId(teamMembers.slot1).trainerNameId
+      : '',
+    getPokemonDataByTrainerId(teamMembers.slot2)
+      ? getPokemonDataByTrainerId(teamMembers.slot2).trainerNameId
+      : '',
+    getPokemonDataByTrainerId(teamMembers.slot3)
+      ? getPokemonDataByTrainerId(teamMembers.slot3).trainerNameId
+      : '',
+  ];
+
   const newBuildNameRef = useRef(null);
 
   const [isSaveBuildModalVisible, setIsSaveBuildModalVisible] = useState(false);
@@ -32,15 +45,8 @@ const SaveBuildButton = () => {
 
   const handleOnOpenSaveBuildModal = () => {
     if (
-      teamMembers.slot1 &&
-      teamMembers.slot2 &&
-      teamMembers.slot3 &&
-      (syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
-        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ||
-        syncPairNamesAndIds['en'][teamMembers.slot1].trainerName ===
-          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName ||
-        syncPairNamesAndIds['en'][teamMembers.slot2].trainerName ===
-          syncPairNamesAndIds['en'][teamMembers.slot3].trainerName)
+      arrayOfTeamMemberTrainerNameIds.length !==
+      new Set(arrayOfTeamMemberTrainerNameIds).size // if contains duplicates
     ) {
       return alert(
         'A Trainer with the same name is already on this team. Please choose another.'
@@ -49,10 +55,6 @@ const SaveBuildButton = () => {
       setIsSaveBuildModalVisible(true);
     }
   };
-
-  // handleOnClickSaveBuild = () => {
-  //   setIsSaveBuildModalVisible(true);
-  // };
 
   const handleOnSaveBuild = () => {
     let userConfirmation = true;

@@ -16,7 +16,8 @@ import SkillOverview from '../../components/SkillOverview';
 import GridMap from '../../components/GridMap';
 import styles from './styles';
 import {
-  selectPokemon,
+  selectSyncPair,
+  // selectPokemon,
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
@@ -24,9 +25,11 @@ import {
 } from '../../actions/actionCreators';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import UI from '../../utils/translations';
+import { lookupTrainerIdByPokemonName } from '../../data/lookupTables';
 
 const mapStateToProps = (state) => ({
-  pokemon: state.pokemon,
+  trainerId: state.id.trainerId,
+  // pokemon: state.pokemon,
   grid: state.grid,
   savedBuilds: state.grid.savedBuilds.allIds.map(
     (id) => state.grid.savedBuilds.byIds[id]
@@ -37,7 +40,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  selectPokemon,
+  selectSyncPair,
+  // selectPokemon,
   resetGrids,
   saveCurrentBuild,
   loadSelectedBuild,
@@ -73,7 +77,12 @@ class MobileApp extends Component {
   handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
 
   handleOnChangePokemon = (value) => {
-    this.props.selectPokemon(value);
+    console.log(
+      'value for handleOnChangePokemon (supposed to be trainerId)',
+      value
+    );
+    this.props.selectSyncPair(value);
+    // this.props.selectPokemon(value);
     this.props.resetGrids();
   };
 
@@ -98,24 +107,42 @@ class MobileApp extends Component {
     if (this.newBuildNameRef.current.value) {
       // If already has a save with the same name, delete old save
       for (let build in this.props.savedBuilds) {
-        if (
-          this.props.savedBuilds[build].name ===
-            this.newBuildNameRef.current.value &&
-          this.props.savedBuilds[build].pokemon ===
-            this.props.pokemon.selectedPokemon
-        ) {
-          userConfirmation = window.confirm(
-            'There is a save with the same name. Do you wish to overwrite it?'
-          );
-          userConfirmation &&
-            this.props.deleteSelectedBuild({
-              buildId: this.props.savedBuilds[build].id,
-            });
+        if (this.props.savedBuilds[build].trainerId) {
+          if (
+            this.props.savedBuilds[build].name ===
+              this.newBuildNameRef.current.value &&
+            this.props.savedBuilds[build].trainerId === this.props.trainerId
+          ) {
+            userConfirmation = window.confirm(
+              'There is a save with the same name. Do you wish to overwrite it?'
+            );
+            userConfirmation &&
+              this.props.deleteSelectedBuild({
+                buildId: this.props.savedBuilds[build].id,
+              });
+          }
+        } else {
+          if (
+            this.props.savedBuilds[build].name ===
+              this.newBuildNameRef.current.value &&
+            lookupTrainerIdByPokemonName[
+              this.props.savedBuilds[build].pokemon.toLowerCase()
+            ] === this.props.trainerId
+          ) {
+            userConfirmation = window.confirm(
+              'There is a save with the same name. Do you wish to overwrite it?'
+            );
+            userConfirmation &&
+              this.props.deleteSelectedBuild({
+                buildId: this.props.savedBuilds[build].id,
+              });
+          }
         }
       }
       userConfirmation &&
         this.props.saveCurrentBuild({
-          selectedPokemon: this.props.pokemon.selectedPokemon,
+          trainerId: this.props.trainerId,
+          // selectedPokemon: this.props.pokemon.selectedPokemon,
           buildName: this.newBuildNameRef.current.value,
         });
       this.handleOnCloseSaveBuildModal();
@@ -132,7 +159,7 @@ class MobileApp extends Component {
       isSaveBuildModalVisible,
       isShareModalVisible,
     } = this.state;
-    const { classes, pokemon, grid, language } = this.props;
+    const { classes, pokemon, trainerId, grid, language } = this.props;
 
     let skillList = Object.keys(grid.selectedCellsById)
       .map((cellId) => {
@@ -160,7 +187,8 @@ class MobileApp extends Component {
 
         <div className={classes.mainContainer}>
           <SyncGridControls
-            selectedPokemon={pokemon.selectedPokemon}
+            trainerId={trainerId}
+            // selectedPokemon={pokemon.selectedPokemon}
             grid={grid}
             language={language}
             UI={UI}

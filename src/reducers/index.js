@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import idReducer from './idReducer';
 import pokemonReducer from './pokemonReducer';
 import gridReducer from './gridReducer';
 import darkModeReducer from './darkModeReducer';
@@ -9,6 +10,7 @@ import languageReducer from './languageReducer';
 import genderReducer from './genderReducer';
 
 export default combineReducers({
+  id: idReducer,
   pokemon: pokemonReducer,
   grid: gridReducer,
   darkMode: darkModeReducer,

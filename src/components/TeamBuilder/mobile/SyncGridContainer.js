@@ -35,19 +35,20 @@ const SyncGridContainer = (props) => {
   const classes = useStyles();
   const darkMode = useSelector((state) => state.darkMode.mode);
   const dispatch = useDispatch();
-  const { pokemon, syncPairName, slot } = props;
-  let pokemonName = pokemon;
+  const { trainerId, syncPairName, slot } = props;
+  // const { trainerId, pokemon, syncPairName, slot } = props;
+  // let pokemonName = pokemon;
 
   // to extract this to utility
-  if (syncPairName === 'Olivia & Lycanroc') {
-    pokemonName = 'olivia_lycanroc';
-  } else if (syncPairName === 'Leon & Charizard') {
-    pokemonName = 'leon_charizard';
-  } else if (syncPairName === 'Morty & Mismagius') {
-    pokemonName = 'morty_mismagius';
-  } else if (syncPairName === 'Lt. Surge & Raichu') {
-    pokemonName = 'lt_surge_raichu';
-  }
+  // if (syncPairName === 'Olivia & Lycanroc') {
+  //   pokemonName = 'olivia_lycanroc';
+  // } else if (syncPairName === 'Leon & Charizard') {
+  //   pokemonName = 'leon_charizard';
+  // } else if (syncPairName === 'Morty & Mismagius') {
+  //   pokemonName = 'morty_mismagius';
+  // } else if (syncPairName === 'Lt. Surge & Raichu') {
+  //   pokemonName = 'lt_surge_raichu';
+  // }
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
   const remainingEnergy = useSelector(
@@ -94,7 +95,8 @@ const SyncGridContainer = (props) => {
 
           <div style={{ marginLeft: 8, marginTop: -7 }}>
             <MovesAndSkillsButtonMobile
-              pokemon={pokemonName}
+              trainerId={trainerId}
+              // pokemon={pokemonName}
               selectedCellsById={selectedCellsById}
               syncLevel={syncLevels[slot]}
               language={language}
@@ -107,7 +109,8 @@ const SyncGridContainer = (props) => {
           </div>
           <div style={{ marginTop: 20, paddingBottom: 20 }}>
             <SyncGrid
-              pokemon={pokemonName}
+              trainerId={trainerId}
+              // pokemon={pokemonName}
               slot={slot}
               syncLevel={syncLevels[slot]}
             />

@@ -5,13 +5,17 @@ import Alert from '../Alert';
 import './desktop.css';
 import LuckySkillDropdown from '../LuckySkillDropdown';
 import UI from '../../utils/translations';
+import { getPokemonDataByTrainerId } from '../../utils/functions';
 
 export default function PublishBuildModal() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
-  const pokemon = useSelector((state) => state.pokemon);
+  const trainerId = useSelector((state) => state.id.trainerId);
+  // const pokemon = useSelector((state) => state.pokemon);
   const grid = useSelector((state) => state.grid);
+  const pokemon =
+    getPokemonDataByTrainerId(trainerId).pokemonNameByLanguage['en'];
 
   const [luckySkill1Id, setLuckySkill1Id] = useState('0');
   const [newBuildName, setNewBuildName] = useState('');
@@ -52,7 +56,9 @@ export default function PublishBuildModal() {
       buildName: newBuildName,
       description: newBuildDesc,
       // to add trainerId here
-      pokemon: pokemon.selectedPokemon,
+      trainerId: trainerId,
+      // pokemon: pokemon.selectedPokemon,
+      pokemon: pokemon,
       selectedCellsById: grid.selectedCellsById,
       remainingEnergy: grid.remainingEnergy,
       orbSpent: grid.orbSpent,
