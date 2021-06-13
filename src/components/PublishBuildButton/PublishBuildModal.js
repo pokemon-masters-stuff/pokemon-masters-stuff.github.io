@@ -79,6 +79,7 @@ export default function PublishBuildModal() {
         role="dialog"
         aria-labelledby="myModalLabel"
         aria-hidden="true"
+        style={{ zIndex: 9999 }}
       >
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div

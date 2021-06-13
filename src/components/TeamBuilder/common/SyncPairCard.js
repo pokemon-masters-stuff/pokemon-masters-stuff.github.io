@@ -13,13 +13,15 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import { changeGender } from '../../../actions/actionCreators';
 import RefreshIcon from '@material-ui/icons/Refresh';
+import { getPokemonDataByTrainerId } from '../../../utils/functions';
+import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    margin: 3,
+    margin: 2,
     marginTop: 15,
     height: 300,
-    width: 110,
+    width: 105,
     position: 'relative',
     display: 'inline-block',
   },
@@ -106,7 +108,7 @@ function SyncPairCard(props) {
               >
                 <svg style={{ height: 300 }}>
                   <circle
-                    cx="65"
+                    cx="60"
                     cy="235"
                     r="40"
                     stroke="white"
@@ -131,7 +133,7 @@ function SyncPairCard(props) {
                     fill="grey"
                   />
                   <circle
-                    cx="65"
+                    cx="60"
                     cy="235"
                     r="40"
                     stroke="white"
@@ -143,13 +145,20 @@ function SyncPairCard(props) {
               <div
                 style={{
                   top: 209,
-                  left: 35,
+                  left: 30,
                   position: 'absolute',
                   zIndex: 20,
                 }}
               >
                 <img
-                  src={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${teamMemberData.monsterActorId}_128.ktx.png`}
+                  src={
+                    getPokemonDataByTrainerId(teamMemberData.trainerId)
+                      ? pokemonPictures[
+                          getPokemonDataByTrainerId(teamMemberData.trainerId)
+                            .monsterActorId + '_128'
+                        ]
+                      : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${teamMemberData.monsterActorId}_128.ktx.png`
+                  }
                   style={{ height: 60 }}
                 />
               </div>
@@ -176,7 +185,7 @@ function SyncPairCard(props) {
               >
                 <svg style={{ height: 300 }}>
                   <circle
-                    cx="65"
+                    cx="60"
                     cy="235"
                     r="39"
                     stroke="white"
@@ -201,7 +210,7 @@ function SyncPairCard(props) {
                     fill="grey"
                   />
                   <circle
-                    cx="65"
+                    cx="60"
                     cy="235"
                     r="39"
                     stroke="white"
@@ -234,7 +243,9 @@ function SyncPairCard(props) {
             })}
             getOptionLabel={(option) =>
               option['syncPairNameByLanguage']
-                ? option['syncPairNameByLanguage'][language]
+                ? option.isEggmon
+                  ? `${option['syncPairNameByLanguage'][language]} (${option['roleTypeNameByLanguage'][language]})`
+                  : option['syncPairNameByLanguage'][language]
                 : ''
             }
             autoComplete

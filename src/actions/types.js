@@ -78,3 +78,4 @@ export const UPDATE_TEAM_LIKES = 'update_team_likes';
 export const CHANGE_TEAM_SYNC_PAIR_FILTER = 'change_team_sync_pair_filter';
 export const CHANGE_TEAM_SYNC_LEVEL_FILTER = 'change_team_sync_level_filter';
 export const CHANGE_TEAM_SORT = 'change_team_sort';
+export const CHANGE_TEAM_TAG_FILTER = 'change_team_tag_filter';

@@ -1,6 +1,6 @@
 import gridedSyncPairData from '../data/gridedSyncPairData.json';
+import syncPairNamesAndIds from '../data/syncPairNamesAndIds.json';
 import eggPokemonDataArray from '../data/eggPokemonData.json';
-// import luckySkillList from '../data/luckySkills.json';
 import {
   shortenedMoveNameByAbilityId,
   arrayOfTrainerIdsForNewlyGridedSyncPairs,
@@ -17,48 +17,6 @@ export const removeHyphens = (str) => {
 
   return str.replace(/-/g, '');
 };
-
-// export const capitalizeSyncPairNameForUrl = (syncPairName) => {
-//   let firstPart = syncPairName.substr(0, syncPairName.indexOf('_'));
-//   let secondPart = syncPairName.substr(syncPairName.indexOf('_') + 1);
-
-//   let capitalizedFirstPart =
-//     firstPart.charAt(0).toUpperCase() + firstPart.slice(1);
-//   let capitalizedSecondPart =
-//     secondPart.charAt(0).toUpperCase() + secondPart.slice(1);
-
-//   let newString = capitalizedFirstPart + '_' + capitalizedSecondPart;
-//   return newString;
-// };
-
-// export const convertSyncPairNameFromUrl = (syncPairName) => {
-//   let updatedSyncPairName;
-//   if (syncPairName === 'Lt.Surge_Electrode') {
-//     updatedSyncPairName = 'Lt. Surge & Electrode';
-//   } else if (syncPairName === 'Lt.Surge_Raichu') {
-//     updatedSyncPairName = 'Lt. Surge & Raichu';
-//   } else if (syncPairName === 'CrasherWake_Floatzel') {
-//     updatedSyncPairName = 'Crasher Wake & Floatzel';
-//   } else if (syncPairName === 'ProfessorOak_Mew') {
-//     updatedSyncPairName = 'Professor Oak & Mew';
-//   } else if (syncPairName === 'ProfessorSycamore_Xerneas') {
-//     updatedSyncPairName = 'Professor Sycamore & Xerneas';
-//   } else {
-//     updatedSyncPairName = syncPairName.split('_').join(' & ');
-//   }
-//   return updatedSyncPairName;
-// };
-
-// export const getLuckySkillList = (language) => {
-//   let luckySkills = [];
-//   Object.keys(luckySkillList).map((key) => {
-//     return luckySkills.push({
-//       key: key,
-//       value: luckySkillList[key][language],
-//     });
-//   });
-//   return luckySkills;
-// };
 
 export const getPokemonNameList = (language) => {
   let existingGridedPokemon = [];
@@ -129,6 +87,10 @@ export const getNewPokemonNameList = (language) => {
 
 export const getPokemonDataByTrainerId = (trainerId) => {
   return gridedSyncPairData[trainerId];
+};
+
+export const getSyncPairNameAndIdByTrainerId = (trainerId) => {
+  return syncPairNamesAndIds[trainerId];
 };
 
 const role = { 0: 'P.Strike', 1: 'S.Strike', 2: 'Support', 3: 'Tech' };

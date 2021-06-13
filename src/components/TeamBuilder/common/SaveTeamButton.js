@@ -11,7 +11,7 @@ import {
   saveCurrentTeamBuild,
   deleteSelectedTeamBuild,
 } from '../../../actions/actionCreators';
-import { getPokemonDataByTrainerId } from '../../../utils/functions';
+import { getSyncPairNameAndIdByTrainerId } from '../../../utils/functions';
 
 const SaveBuildButton = () => {
   const dispatch = useDispatch();
@@ -24,15 +24,15 @@ const SaveBuildButton = () => {
     )
   );
   let arrayOfTeamMemberTrainerNameIds = [
-    getPokemonDataByTrainerId(teamMembers.slot1)
-      ? getPokemonDataByTrainerId(teamMembers.slot1).trainerNameId
-      : '',
-    getPokemonDataByTrainerId(teamMembers.slot2)
-      ? getPokemonDataByTrainerId(teamMembers.slot2).trainerNameId
-      : '',
-    getPokemonDataByTrainerId(teamMembers.slot3)
-      ? getPokemonDataByTrainerId(teamMembers.slot3).trainerNameId
-      : '',
+    getSyncPairNameAndIdByTrainerId(teamMembers.slot1)
+      ? getSyncPairNameAndIdByTrainerId(teamMembers.slot1).trainerNameId
+      : 'Empty_Slot_1',
+    getSyncPairNameAndIdByTrainerId(teamMembers.slot2)
+      ? getSyncPairNameAndIdByTrainerId(teamMembers.slot2).trainerNameId
+      : 'Empty_Slot_2',
+    getSyncPairNameAndIdByTrainerId(teamMembers.slot3)
+      ? getSyncPairNameAndIdByTrainerId(teamMembers.slot3).trainerNameId
+      : 'Empty_Slot_3',
   ];
 
   const newBuildNameRef = useRef(null);

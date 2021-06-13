@@ -131,7 +131,7 @@ const Builds = (props) => {
               labelId="pokemonFilter"
               onChange={handleChangePokemonFilter}
             >
-              <MenuItem value="None">---</MenuItem>
+              <MenuItem value="None">-----</MenuItem>
               <ListSubheader disableSticky={true}>New</ListSubheader>
               {getNewPokemonNameList(language).map((syncPairData, index) => (
                 <MenuItem key={index} value={syncPairData.trainerId}>

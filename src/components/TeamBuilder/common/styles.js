@@ -24,4 +24,9 @@ export default createStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+  expanded: {
+    '&$expanded': {
+      margin: 0,
+    },
+  },
 }));

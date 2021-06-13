@@ -337,7 +337,17 @@ class GridMap extends Component {
         </HexGrid>
         {this.state.screenWidth >= 960 &&
         this.props.grid.gridData.energy !== undefined ? (
-          <ReactTooltip className="tooltip" effect="solid" id="skillTooltip">
+          <ReactTooltip
+            className="tooltip"
+            effect="solid"
+            id="skillTooltip"
+            overridePosition={({ left, top }, _e, _t, node) => {
+              return {
+                top,
+                left: typeof node === 'string' ? left : Math.max(left, 0),
+              };
+            }}
+          >
             <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
               <li>{this.props.grid.gridData.name}</li>
               <li>

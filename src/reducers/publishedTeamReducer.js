@@ -13,6 +13,7 @@ import {
   CHANGE_TEAM_SYNC_PAIR_FILTER,
   CHANGE_TEAM_SYNC_LEVEL_FILTER,
   CHANGE_TEAM_SORT,
+  CHANGE_TEAM_TAG_FILTER,
 } from '../actions/types';
 
 const initialState = {
@@ -22,6 +23,7 @@ const initialState = {
   error: {},
   syncPairFilter: 'None',
   syncLevelFilter: '0', // All
+  teamTagFilter: [],
   sort: 'popular',
 };
 
@@ -114,6 +116,12 @@ export default function (state = initialState, action) {
         ...state,
         teams: [],
         syncLevelFilter: action.payload,
+      };
+    case CHANGE_TEAM_TAG_FILTER:
+      return {
+        ...state,
+        teams: [],
+        teamTagFilter: action.payload,
       };
     case CHANGE_TEAM_SORT:
       return {

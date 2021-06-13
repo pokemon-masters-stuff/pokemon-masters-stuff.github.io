@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import UI from '../../../utils/translations';
 
-const ShareBuildModal = ({ index, url }) => {
+const ShareTeamModal = ({ index, url }) => {
   const darkMode = useSelector((state) => state.darkMode.mode);
   const language = useSelector((state) => state.language.currentLanguage);
 
@@ -53,4 +53,4 @@ const ShareBuildModal = ({ index, url }) => {
   );
 };
 
-export default ShareBuildModal;
+export default ShareTeamModal;

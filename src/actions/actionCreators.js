@@ -72,6 +72,7 @@ import {
   CHANGE_TEAM_SYNC_PAIR_FILTER,
   CHANGE_TEAM_SYNC_LEVEL_FILTER,
   CHANGE_TEAM_SORT,
+  CHANGE_TEAM_TAG_FILTER,
 } from './types';
 import { CLOUD_FUNCTIONS_URL } from '../utils/constants';
 
@@ -684,37 +685,38 @@ export const addTeam = (data) => async (dispatch) => {
 };
 
 // Edit team
-export const editTeam =
-  (id, description, syncLevel, luckySkillIds) => async (dispatch) => {
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-
-    const body = JSON.stringify({ description, syncLevel, luckySkillIds });
-
-    try {
-      const res = await axios.put(
-        `${CLOUD_FUNCTIONS_URL}/api/teams/edit/${id}`,
-        body,
-        config
-      );
-
-      dispatch({
-        type: EDIT_TEAM,
-        // payload: { id, description: res.data },
-        payload: res.data,
-      });
-
-      dispatch(setAlert('Team Updated', 'success'));
-    } catch (err) {
-      dispatch({
-        type: TEAM_ERROR,
-        payload: { msg: err.response.statusText, status: err.response.status },
-      });
-    }
+export const editTeam = (id, updatedTeamData) => async (dispatch) => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
   };
+
+  const body = JSON.stringify({ updatedTeamData });
+
+  console.log('body in actionCreator', body);
+
+  try {
+    const res = await axios.put(
+      `${CLOUD_FUNCTIONS_URL}/api/teams/edit/${id}`,
+      body,
+      config
+    );
+
+    dispatch({
+      type: EDIT_TEAM,
+      // payload: { id, description: res.data },
+      payload: res.data,
+    });
+
+    dispatch(setAlert('Team Updated', 'success'));
+  } catch (err) {
+    dispatch({
+      type: TEAM_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
 
 // Delete team
 export const deleteTeam = (id) => async (dispatch) => {
@@ -797,12 +799,17 @@ export const clearTeams = () => ({
 
 // Get Teams
 export const getTeams =
-  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+  (syncPairFilter, syncLevelFilter, teamTagFilter, sort, skip, limit) =>
+  async (dispatch) => {
     try {
       const res = await axios.get(
         `${CLOUD_FUNCTIONS_URL}/api/teams?skip=${skip}&limit=${limit}&sort=${sort}${
-          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
-        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+          syncPairFilter !== 'None' ? '&syncPairFilter=' + syncPairFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}${
+          teamTagFilter !== ['']
+            ? '&teamTagFilter=' + JSON.stringify(teamTagFilter)
+            : ''
+        }`
       );
 
       dispatch({
@@ -822,12 +829,17 @@ export const getTeams =
 
 // Get Liked Teams
 export const getLikedTeams =
-  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+  (syncPairFilter, syncLevelFilter, teamTagFilter, sort, skip, limit) =>
+  async (dispatch) => {
     try {
       const res = await axios.get(
         `${CLOUD_FUNCTIONS_URL}/api/teams/liked?skip=${skip}&limit=${limit}&sort=${sort}${
-          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
-        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+          syncPairFilter !== 'None' ? '&syncPairFilter=' + syncPairFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}${
+          teamTagFilter !== ['']
+            ? '&teamTagFilter=' + JSON.stringify(teamTagFilter)
+            : ''
+        }`
       );
 
       dispatch({
@@ -847,12 +859,17 @@ export const getLikedTeams =
 
 // Get User's Teams
 export const getUsersTeams =
-  (pokemonFilter, syncLevelFilter, sort, skip, limit) => async (dispatch) => {
+  (syncPairFilter, syncLevelFilter, teamTagFilter, sort, skip, limit) =>
+  async (dispatch) => {
     try {
       const res = await axios.get(
         `${CLOUD_FUNCTIONS_URL}/api/teams/users?skip=${skip}&limit=${limit}&sort=${sort}${
-          pokemonFilter !== 'None' ? '&pokemonFilter=' + pokemonFilter : ''
-        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}`
+          syncPairFilter !== 'None' ? '&syncPairFilter=' + syncPairFilter : ''
+        }${syncLevelFilter ? '&syncLevelFilter=' + syncLevelFilter : ''}${
+          teamTagFilter !== ['']
+            ? '&teamTagFilter=' + JSON.stringify(teamTagFilter)
+            : ''
+        }`
       );
 
       dispatch({
@@ -922,5 +939,10 @@ export const changeTeamSyncLevelFilter = (payload) => ({
 
 export const changeTeamSort = (payload) => ({
   type: CHANGE_TEAM_SORT,
+  payload,
+});
+
+export const changeTeamTagFilter = (payload) => ({
+  type: CHANGE_TEAM_TAG_FILTER,
   payload,
 });

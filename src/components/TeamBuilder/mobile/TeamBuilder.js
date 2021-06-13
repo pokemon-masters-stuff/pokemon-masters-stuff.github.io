@@ -21,6 +21,7 @@ import ShareTeamButton from '../common/ShareTeamButton';
 import SyncPairCard from '../common/SyncPairCard';
 import LoginOrRegisterModal from '../../auth/LoginOrRegisterModal';
 import { lookupTrainerIdBySyncPairNameFromUrl } from '../../../data/lookupTables';
+import PublishTeamButton from '../../PublishTeamButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,85 +64,84 @@ function TeamBuilder() {
       getQueryStringValue('sp3', location.search)
     ) {
       dispatch(resetTeam());
-    }
 
-    let indexArray = [1, 2, 3];
-    indexArray.forEach((index) => {
-      let syncPairTrainerId;
-      if (
-        getQueryStringValue(`id${index}`, location.search) ||
-        getQueryStringValue(`sp${index}`, location.search)
-      ) {
-        syncPairTrainerId = getQueryStringValue(`id${index}`, location.search)
-          ? getQueryStringValue(`id${index}`, location.search)
-          : lookupTrainerIdBySyncPairNameFromUrl[
-              getQueryStringValue(`sp${index}`, location.search)
-            ];
-        if (syncPairNamesAndIds[syncPairTrainerId]) {
-          dispatch(
-            setTeam({ slot: `slot${index}`, syncPair: syncPairTrainerId })
-          );
-          // let pokemon1 = syncPairNamesAndIds['en'][syncPair1].pokemonEnglishName;
-          // console.log('pokemon1', pokemon1);
-          let syncLevel;
-          if (getQueryStringValue(`s${index}`, location.search)) {
-            syncLevel = getQueryStringValue(`s${index}`, location.search);
+      let indexArray = [1, 2, 3];
+      indexArray.forEach((index) => {
+        let syncPairTrainerId;
+        if (
+          getQueryStringValue(`id${index}`, location.search) ||
+          getQueryStringValue(`sp${index}`, location.search)
+        ) {
+          syncPairTrainerId = getQueryStringValue(`id${index}`, location.search)
+            ? getQueryStringValue(`id${index}`, location.search)
+            : lookupTrainerIdBySyncPairNameFromUrl[
+                getQueryStringValue(`sp${index}`, location.search).toLowerCase()
+              ];
+
+          if (syncPairNamesAndIds[syncPairTrainerId]) {
             dispatch(
-              setTeamSyncLevels({
-                slot: `slot${index}`,
-                syncLevel: syncLevel,
-              })
+              setTeam({ slot: `slot${index}`, syncPair: syncPairTrainerId })
             );
-          } else {
-            dispatch(
-              setTeamSyncLevels({
-                slot: `slot${index}`,
-                syncLevel: '5',
-              })
-            );
-          }
-
-          if (getQueryStringValue(`g${index}`, location.search)) {
-            let remainingEnergy = Number(
-              getQueryStringValue(`e${index}`, location.search)
-            );
-            let orbSpent = Number(
-              getQueryStringValue(`o${index}`, location.search)
-            );
-            let cellData = {};
-            let selectedCellByIdFromUrl = {};
-
-            getQueryStringValue(`g${index}`, location.search).map((id) => {
-              cellData =
-                allSyncGrids[language][
-                  `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
-                ][Number(id)];
-
-              selectedCellByIdFromUrl = {
-                cellId: cellData.cellId,
-                name: cellData.move.name,
-                description: cellData.move.description,
-                energy: cellData.move.energyCost,
-                moveId: cellData.ability.moveId,
-                value: cellData.ability.value,
-                type: cellData.ability.type,
-              };
-
-              return dispatch(
-                loadTeamGridFromUrl({
+            let syncLevel;
+            if (getQueryStringValue(`s${index}`, location.search)) {
+              syncLevel = getQueryStringValue(`s${index}`, location.search);
+              dispatch(
+                setTeamSyncLevels({
                   slot: `slot${index}`,
-                  selectedCellByIdFromUrl,
-                  remainingEnergy,
-                  orbSpent,
+                  syncLevel: syncLevel,
                 })
               );
-            });
+            } else {
+              dispatch(
+                setTeamSyncLevels({
+                  slot: `slot${index}`,
+                  syncLevel: '5',
+                })
+              );
+            }
+
+            if (getQueryStringValue(`g${index}`, location.search)) {
+              let remainingEnergy = Number(
+                getQueryStringValue(`e${index}`, location.search)
+              );
+              let orbSpent = Number(
+                getQueryStringValue(`o${index}`, location.search)
+              );
+              let cellData = {};
+              let selectedCellByIdFromUrl = {};
+
+              getQueryStringValue(`g${index}`, location.search).map((id) => {
+                cellData =
+                  allSyncGrids[language][
+                    `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
+                  ][Number(id)];
+
+                selectedCellByIdFromUrl = {
+                  cellId: cellData.cellId,
+                  name: cellData.move.name,
+                  description: cellData.move.description,
+                  energy: cellData.move.energyCost,
+                  moveId: cellData.ability.moveId,
+                  value: cellData.ability.value,
+                  type: cellData.ability.type,
+                };
+
+                return dispatch(
+                  loadTeamGridFromUrl({
+                    slot: `slot${index}`,
+                    selectedCellByIdFromUrl,
+                    remainingEnergy,
+                    orbSpent,
+                  })
+                );
+              });
+            }
+          } else {
+            alert('Invalid URL. One or more sync pairs cannot be loaded');
           }
-        } else {
-          alert('Invalid URL.');
         }
-      }
-    });
+      });
+    }
   };
 
   useEffect(() => {
@@ -168,6 +168,9 @@ function TeamBuilder() {
           <ShareTeamButton />
           <div style={{ marginLeft: 8 }}>
             <ResetTeamButton />
+          </div>
+          <div style={{ marginLeft: 8 }}>
+            <PublishTeamButton />
           </div>
         </Grid>
         <Grid container justify="center" spacing={0}>

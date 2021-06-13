@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addComment } from '../../../actions/actionCreators';
+import { addCommentToTeam } from '../../../actions/actionCreators';
 import UI from '../../../utils/translations';
 
 const AddCommentModal = ({ index }) => {
@@ -14,14 +14,14 @@ const AddCommentModal = ({ index }) => {
   };
 
   const onSubmit = (e) => {
-    dispatch(addComment(index, text));
+    dispatch(addCommentToTeam(index, text));
     setText('');
   };
 
   return (
     <div
       className="modal fade"
-      id={`addComment${index}`}
+      id={`addCommentToTeam${index}`}
       tabIndex="-1"
       role="dialog"
       aria-labelledby="myModalLabel"

@@ -20,7 +20,7 @@ const initialState = {
   totalBuildCount: 0,
   loading: true,
   error: {},
-  pokemonFilter: '',
+  pokemonFilter: 'None',
   syncLevelFilter: '0', // All
   sort: 'popular',
 };

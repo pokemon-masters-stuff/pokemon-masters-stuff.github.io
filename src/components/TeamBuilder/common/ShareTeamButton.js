@@ -3,23 +3,27 @@ import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import UI from '../../../utils/translations';
-import { getPokemonDataByTrainerId } from '../../../utils/functions';
+import {
+  // getPokemonDataByTrainerId,
+  getSyncPairNameAndIdByTrainerId,
+} from '../../../utils/functions';
 
 const ShareTeamButton = () => {
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
   const url = useSelector((state) => state.grid.teamUrl);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
+
   let arrayOfTeamMemberTrainerNameIds = [
-    getPokemonDataByTrainerId(teamMembers.slot1)
-      ? getPokemonDataByTrainerId(teamMembers.slot1).trainerNameId
-      : '',
-    getPokemonDataByTrainerId(teamMembers.slot2)
-      ? getPokemonDataByTrainerId(teamMembers.slot2).trainerNameId
-      : '',
-    getPokemonDataByTrainerId(teamMembers.slot3)
-      ? getPokemonDataByTrainerId(teamMembers.slot3).trainerNameId
-      : '',
+    getSyncPairNameAndIdByTrainerId(teamMembers.slot1)
+      ? getSyncPairNameAndIdByTrainerId(teamMembers.slot1).trainerNameId
+      : 'Empty_Slot_1',
+    getSyncPairNameAndIdByTrainerId(teamMembers.slot2)
+      ? getSyncPairNameAndIdByTrainerId(teamMembers.slot2).trainerNameId
+      : 'Empty_Slot_2',
+    getSyncPairNameAndIdByTrainerId(teamMembers.slot3)
+      ? getSyncPairNameAndIdByTrainerId(teamMembers.slot3).trainerNameId
+      : 'Empty_Slot_3',
   ];
   const handleOnOpenShareTeamModal = () => {
     if (

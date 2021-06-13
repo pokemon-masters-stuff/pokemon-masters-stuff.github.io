@@ -5,16 +5,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactTooltip from 'react-tooltip';
 import { HexGrid, Layout, Hexagon, Text, Pattern } from '../../Hexagon';
 import styles from './styles';
-import { getQueryStringValue } from '../../../queryString';
-import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
-import {
-  addToTeamGridList,
-  removeFromTeamGridList,
-  subtractFromTeamRemainingEnergy,
-  addBackToTeamRemainingEnergy,
-  updateTeamUrl,
-  // setTeamSyncLevels,
-} from '../../../actions/actionCreators';
 import {
   getFillColorByMoveType,
   renderMoveName,
@@ -25,7 +15,6 @@ import { allSyncGrids } from '../../../data/exportGridsAsObject';
 import UI from '../../../utils/translations';
 import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 
-// To combine with GridMap. Need to pass pokemon, grid, viewbox, and actions as props
 class GridMap extends Component {
   state = {
     initialRender: true,
@@ -108,33 +97,10 @@ class GridMap extends Component {
     }));
   };
 
-  handleClick(e, index, data) {
-    e.stopPropagation();
-
-    if (!this.props.grid.teamSelectedCellsById[this.props.slot][data.cellId]) {
-      this.props.addToTeamGridList({ gridData: data, slot: this.props.slot });
-      this.props.subtractFromTeamRemainingEnergy({
-        gridData: data,
-        slot: this.props.slot,
-      });
-      this.props.updateTeamUrl();
-    } else {
-      this.props.removeFromTeamGridList({
-        gridData: data,
-        slot: this.props.slot,
-      });
-      this.props.addBackToTeamRemainingEnergy({
-        gridData: data,
-        slot: this.props.slot,
-      });
-      this.props.updateTeamUrl();
-    }
-  }
-
-  renderHexagonCells = (classes) =>
+  renderHexagonCells = (classes, teamMemberData) =>
     allSyncGrids[this.props.language][
       `trainerId_${
-        this.props.trainerId
+        teamMemberData.trainerId
       }_GridData${this.props.language.toUpperCase()}`
     ].map((cell, index) => {
       // remove "Move:" from the start of moveName
@@ -144,15 +110,14 @@ class GridMap extends Component {
           : cell.move.name;
 
       const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
-        this.props.trainerId,
+        teamMemberData.trainerId,
         cell,
-        this.props.syncLevel
+        teamMemberData.syncLevel.toString()
       );
 
       const hexagonProps = {
         data: {
           cellId: cell.cellId,
-          // name: nameWithSyncLvRequirement || moveName,
           name: moveName,
           description: cell.move.description,
           energy: cell.move.energyCost,
@@ -170,16 +135,11 @@ class GridMap extends Component {
           type: cell.ability.type,
           group: cell.move.group,
         }),
-        onClickHandler:
-          isSeletableBasedOnSyncLv ||
-          this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
-            ? (e, data) => this.handleClick(e, index, data)
-            : null,
         className: this.props.darkMode
-          ? this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
+          ? teamMemberData.selectedCellsById[cell.cellId]
             ? 'selected dark-mode'
             : 'dark-mode'
-          : this.props.grid.teamSelectedCellsById[this.props.slot][cell.cellId]
+          : teamMemberData.selectedCellsById[cell.cellId]
           ? 'selected'
           : null,
       };
@@ -212,17 +172,17 @@ class GridMap extends Component {
       );
     });
 
-  renderCenterGridText = (classes) => {
+  renderCenterGridText = (classes, teamMemberData) => {
     // Only renders text when no picture available
-    return getPokemonDataByTrainerId(this.props.trainerId).monsterActorId ===
-      undefined ? (
+    return getPokemonDataByTrainerId(teamMemberData.trainerId)
+      .monsterActorId === undefined ? (
       <Text className={classes.selectedPokemonCell}>:P</Text>
     ) : null;
   };
 
   render() {
     const { mapSizeBoundaries, initialRender } = this.state;
-    const { classes, language } = this.props;
+    const { classes, language, teamMemberData } = this.props;
 
     return initialRender ? (
       <div className={classes.progressWrapper}>
@@ -245,27 +205,26 @@ class GridMap extends Component {
               q={0}
               r={0}
               s={0}
-              fill={`url(#${this.props.trainerId})`}
+              fill={`url(#${teamMemberData.trainerId})`}
               data={{ cellId: 0 }}
               className={'center-grid'}
             >
-              {this.renderCenterGridText(classes)}
+              {this.renderCenterGridText(classes, teamMemberData)}
             </Hexagon>
-            {this.renderHexagonCells(classes)}
+            {this.renderHexagonCells(classes, teamMemberData)}
           </Layout>
           <Pattern
-            id={this.props.trainerId}
+            id={teamMemberData.trainerId}
             link={
               pokemonPictures[
-                getPokemonDataByTrainerId(this.props.trainerId).monsterActorId +
-                  '_128'
+                getPokemonDataByTrainerId(teamMemberData.trainerId)
+                  .monsterActorId + '_128'
               ]
             }
             size={{ x: 10, y: 10 }}
           />
         </HexGrid>
-        {this.state.screenWidth >= 960 &&
-        this.props.grid.gridData.energy !== undefined ? (
+        {this.props.grid.gridData.energy !== undefined ? (
           <ReactTooltip
             className="tooltip"
             effect="solid"
@@ -302,10 +261,10 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-  addToTeamGridList,
-  removeFromTeamGridList,
-  subtractFromTeamRemainingEnergy,
-  addBackToTeamRemainingEnergy,
-  updateTeamUrl,
+  // addToTeamGridList,
+  // removeFromTeamGridList,
+  // subtractFromTeamRemainingEnergy,
+  // addBackToTeamRemainingEnergy,
+  // updateTeamUrl,
   // setTeamSyncLevels,
 })(withStyles(styles)(GridMap));

@@ -85,7 +85,6 @@ export default function (state = initialState, action) {
     case HIDE_GRID_DATA:
       return { ...state, gridData: {} };
     case ADD_TO_GRID_LIST:
-      console.log('adding to grid list in reducer');
       return {
         ...state,
         selectedCellsById: {
@@ -432,10 +431,6 @@ export default function (state = initialState, action) {
         },
       };
     case LOAD_SELECTED_TEAM_BUILD:
-      console.log(
-        'state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers',
-        state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers
-      );
       let member1 =
         state.teamSavedBuilds.byIds[action.payload.buildId].teamMembers.slot1;
       let member2 =
@@ -454,11 +449,6 @@ export default function (state = initialState, action) {
       if (member3 !== '' && isNaN(member3)) {
         member3TrainerId = lookupTrainerIdBySyncPairName[member3];
       }
-      console.log('members', [
-        member1TrainerId,
-        member2TrainerId,
-        member3TrainerId,
-      ]);
       return {
         ...state,
         teamMembers: {

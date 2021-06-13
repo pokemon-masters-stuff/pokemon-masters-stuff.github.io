@@ -10,7 +10,7 @@ import styles from './styles';
 import { useSelector } from 'react-redux';
 
 function SimpleSelect(props) {
-  const { classes, luckySkillId, setLuckySkillId } = props;
+  const { classes, luckySkillId, setLuckySkillId, syncPairName } = props;
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
@@ -35,7 +35,7 @@ function SimpleSelect(props) {
       color="primary"
     >
       <InputLabel ref={inputLabel} id="select-lucky-skill">
-        {UI['Lucky Skill'][language]}
+        {syncPairName ? syncPairName : UI['Lucky Skill'][language]}
       </InputLabel>
       <Select
         labelId="select-lucky-skill"

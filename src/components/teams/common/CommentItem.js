@@ -5,15 +5,15 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { deleteComment } from '../../../actions/actionCreators';
+import { deleteCommentFromTeam } from '../../../actions/actionCreators';
 
-const CommentItem = ({ build, comment }) => {
+const CommentItem = ({ team, comment }) => {
   const dispatch = useDispatch();
-  const currentUser = useSelector(state => state.auth.user);
+  const currentUser = useSelector((state) => state.auth.user);
 
   const handleClickDelete = () => {
     window.confirm('Are you sure you wish to delete this comment?') &&
-      dispatch(deleteComment(build._id, comment._id));
+      dispatch(deleteCommentFromTeam(team._id, comment._id));
   };
 
   const renderDeleteIcon = () => {
@@ -34,7 +34,7 @@ const CommentItem = ({ build, comment }) => {
         <Typography
           color="textSecondary"
           style={{
-            fontSize: 12
+            fontSize: 12,
           }}
         >
           {comment.username} | {comment.date.substring(0, 10)}{' '}
@@ -43,7 +43,7 @@ const CommentItem = ({ build, comment }) => {
 
         <Typography
           style={{
-            wordWrap: 'break-word'
+            wordWrap: 'break-word',
           }}
         >
           {comment.text}

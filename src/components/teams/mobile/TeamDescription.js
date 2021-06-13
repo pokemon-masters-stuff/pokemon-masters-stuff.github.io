@@ -6,12 +6,16 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import UI from '../../../utils/translations';
+import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import LUCKY_SKILL_LIST from '../../../data/luckySkills.json';
 
-const BuildDescription = ({ classes, build }) => {
+const TeamDescription = ({ classes, team }) => {
   const language = useSelector((state) => state.language.currentLanguage);
   return (
-    <ExpansionPanel className={classes.expanded}>
+    <ExpansionPanel
+      className={classes.expanded}
+      TransitionProps={{ unmountOnExit: true }}
+    >
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -25,57 +29,57 @@ const BuildDescription = ({ classes, build }) => {
         <Typography
           style={{ display: 'inline-block', wordBreak: 'break-word' }}
         >
-          <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-            {UI['Remaining Energy'][language]}:{' '}
-          </span>
-          <span>{build.remainingEnergy}</span>
-          <br />
-          <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-            {UI['Orbs Spent'][language]}:{' '}
-          </span>
-          <span>{build.orbSpent}</span>
-          <br />
-
-          {build.syncLevel ? (
-            <>
-              <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                {UI['Sync Move Level'][language]}:{' '}
-              </span>
-              <span>{build.syncLevel === 3 ? '3+' : build.syncLevel}</span>
-              <br />
-            </>
-          ) : null}
-
-          {build.luckySkillIds && build.luckySkillIds.length !== 0 ? (
-            <>
-              <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
-                {UI['Lucky Skill'][language]}:{' '}
-              </span>
-              <span>
-                {' '}
-                {LUCKY_SKILL_LIST[build.luckySkillIds[0]][language] || '-'}
-              </span>
-              <br />
-            </>
-          ) : null}
-
           <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
             {UI['Description'][language]}:{' '}
           </span>
           <br />
           <span style={{ whiteSpace: 'pre-line' }}>
-            {build.description || 'None'}
+            {team.description || 'None'}
           </span>
           <br />
+          <br />
+          <span style={{ fontWeight: 'bold', color: '#bdbdbd' }}>
+            {UI['Lucky Skill'][language]}:{' '}
+          </span>
+          <br />
+          {[
+            team.syncPairs.slot1,
+            team.syncPairs.slot2,
+            team.syncPairs.slot3,
+          ].map((teamMemberData, index) =>
+            teamMemberData.trainerId ? (
+              <span key={`lucky-skill-${index}`}>
+                {`${
+                  syncPairNamesAndIds[teamMemberData.trainerId][
+                    'syncPairNameByLanguage'
+                  ][language]
+                }${
+                  syncPairNamesAndIds[teamMemberData.trainerId]['isEggmon']
+                    ? ' (' +
+                      syncPairNamesAndIds[teamMemberData.trainerId][
+                        'roleTypeNameByLanguage'
+                      ][language] +
+                      ')'
+                    : ''
+                }`}
+                :{' '}
+                {LUCKY_SKILL_LIST[teamMemberData.luckySkillIds[0]][language] ||
+                  '-'}
+                <br />
+              </span>
+            ) : null
+          )}
+          <br />
+
           <span style={{ color: '#bdbdbd', fontWeight: 'bold' }}>
             {' '}
             {UI['Date'][language]}:{' '}
           </span>
-          <span>{build.date.substring(0, 10)}</span>
+          <span>{team.date.substring(0, 10)}</span>
         </Typography>
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
 };
 
-export default BuildDescription;
+export default TeamDescription;

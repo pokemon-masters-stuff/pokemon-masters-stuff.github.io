@@ -363,6 +363,12 @@ class BuildItem extends Component {
                 className="tooltip-mobile"
                 effect="solid"
                 id="skillTooltip"
+                overridePosition={({ left, top }, _e, _t, node) => {
+                  return {
+                    top,
+                    left: typeof node === 'string' ? left : Math.max(left, 0),
+                  };
+                }}
               >
                 <ul style={{ margin: 0, padding: 0, fontSize: 16 }}>
                   <li>{this.props.grid.gridData.name}</li>

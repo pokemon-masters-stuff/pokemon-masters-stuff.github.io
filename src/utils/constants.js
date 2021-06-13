@@ -55,6 +55,25 @@ export const arrayOfTrainerIdsWithSamePokemon = [
 export const CLOUD_FUNCTIONS_URL =
   'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app';
 
+export const tags = [
+  '1v3',
+  '2v3',
+  '3v3',
+  '1v9',
+  '2v9',
+  '3v9',
+  'F2P',
+  'Meme',
+  'Co-op',
+  'Events',
+  'Battle Villa',
+  'Legendary Arena',
+  'Champion Stadium',
+  'Time Trial Event',
+  'Full-Force Battle',
+  'Extreme Battle Event',
+];
+
 export const type1SyncGrid = [
   '18000000000',
   '10151000000',

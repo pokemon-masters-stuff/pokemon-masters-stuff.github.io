@@ -20,8 +20,9 @@ class PopularTeams extends Component {
   componentDidMount() {
     this.props.clearTeams();
     this.props.getTeams(
-      this.props.pokemonFilter,
+      this.props.syncPairFilter,
       Number(this.props.syncLevelFilter.charAt(0)),
+      this.props.teamTagFilter,
       this.props.sort,
       0,
       this.state.rowsPerPage
@@ -31,12 +32,14 @@ class PopularTeams extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (
       this.props.sort !== prevProps.sort ||
-      this.props.pokemonFilter !== prevProps.pokemonFilter ||
-      this.props.syncLevelFilter !== prevProps.syncLevelFilter
+      this.props.syncPairFilter !== prevProps.syncPairFilter ||
+      this.props.syncLevelFilter !== prevProps.syncLevelFilter ||
+      this.props.teamTagFilter !== prevProps.teamTagFilter
     ) {
       this.props.getTeams(
-        this.props.pokemonFilter,
+        this.props.syncPairFilter,
         Number(this.props.syncLevelFilter.charAt(0)),
+        this.props.teamTagFilter,
         this.props.sort,
         0,
         5
@@ -57,7 +60,8 @@ class PopularTeams extends Component {
   }
 
   handleChangePage = (event, newPage) => {
-    const { totalTeamCount, pokemonFilter, syncLevelFilter, sort } = this.props;
+    const { totalTeamCount, syncPairFilter, syncLevelFilter, sort } =
+      this.props;
     let limit = Math.min(5, totalTeamCount);
     let skip = (newPage - 1) * this.state.rowsPerPage;
 
@@ -66,8 +70,9 @@ class PopularTeams extends Component {
     this.setState({ page: newPage });
 
     this.props.getTeams(
-      pokemonFilter,
+      syncPairFilter,
       Number(syncLevelFilter.charAt(0)),
+      this.props.teamTagFilter,
       sort,
       skip,
       limit
@@ -82,12 +87,12 @@ class PopularTeams extends Component {
   render() {
     const { page, totalPageCount } = this.state;
     const { screenSize } = this.props;
+
     return (
       // <div className="alert alert-info" role="alert">
       //   This page is temporarily disabled to allow for a feature update. Please
       //   check back later.
       // </div>
-
       <Fragment>
         {screenSize === 'small'
           ? this.props.teams.map((team) => (
@@ -124,8 +129,9 @@ class PopularTeams extends Component {
 const mapStateToProps = (state) => ({
   teams: state.team.teams,
   sort: state.team.sort,
-  pokemonFilter: state.team.pokemonFilter,
+  syncPairFilter: state.team.syncPairFilter,
   syncLevelFilter: state.team.syncLevelFilter,
+  teamTagFilter: state.team.teamTagFilter,
   totalTeamCount: state.team.totalTeamCount,
 });
 

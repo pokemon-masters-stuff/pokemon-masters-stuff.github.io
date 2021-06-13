@@ -25,6 +25,15 @@ const trainerNameDBja = require('../rawdata/lsddump/trainer_name_ja.json');
 const trainerNameDBko = require('../rawdata/lsddump/trainer_name_ko.json');
 const trainerNameDBzh = require('../rawdata/lsddump/trainer_name_zh-TW.json');
 
+const roleTypeNameDBde = require('../rawdata/lsddump/role_type_name_de.json');
+const roleTypeNameDBen = require('../rawdata/lsddump/role_type_name_en.json');
+const roleTypeNameDBes = require('../rawdata/lsddump/role_type_name_es.json');
+const roleTypeNameDBfr = require('../rawdata/lsddump/role_type_name_fr.json');
+const roleTypeNameDBit = require('../rawdata/lsddump/role_type_name_it.json');
+const roleTypeNameDBja = require('../rawdata/lsddump/role_type_name_ja.json');
+const roleTypeNameDBko = require('../rawdata/lsddump/role_type_name_ko.json');
+const roleTypeNameDBzh = require('../rawdata/lsddump/role_type_name_zh-TW.json');
+
 const pokemonNameDB = {
   de: pokemonNameDBde,
   en: pokemonNameDBen,
@@ -45,6 +54,17 @@ const trainerNameDB = {
   ja: trainerNameDBja,
   ko: trainerNameDBko,
   zh: trainerNameDBzh,
+};
+
+const roleTypeNameDB = {
+  de: roleTypeNameDBde,
+  en: roleTypeNameDBen,
+  es: roleTypeNameDBes,
+  fr: roleTypeNameDBfr,
+  it: roleTypeNameDBit,
+  ja: roleTypeNameDBja,
+  ko: roleTypeNameDBko,
+  zh: roleTypeNameDBzh,
 };
 
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
@@ -362,25 +382,118 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
       syncPairEnglishName = syncPairNameByLanguage['en'];
     });
 
-    syncPairNamesAndIds[trainerId] = {
-      syncPairEnglishName: syncPairEnglishName,
-      trainerId: trainerId.toString(),
-      trainerBaseId: trainerBaseId.toString(),
-      trainerNameId: trainerNameId.toString(),
-      trainerActorId: trainerActorId.toString(),
-      monsterId: monsterId.toString(),
-      monsterBaseId: updatedMonsterBaseId.toString(),
-      monsterActorId: monsterActorId.toString(),
-      pokemonNameByLanguage: pokemonNameByLanguage,
-      trainerNameByLanguage: trainerNameByLanguage,
-      syncPairNameByLanguage: syncPairNameByLanguage,
-      type: type,
-      rarity: rarity,
-      role: role,
-      isGrided: isGrided,
-      isEggmon: isEggmon,
-      isBP: isBP,
+    // find role type
+    let roleTypeNameByLanguage = {
+      de: '',
+      en: '',
+      es: '',
+      fr: '',
+      it: '',
+      ja: '',
+      ko: '',
+      zh: '',
     };
+
+    const updateRoleTable = {
+      0: '100',
+      1: '101',
+      2: '103',
+      3: '102',
+    };
+
+    languages.forEach((language) => {
+      roleTypeNameByLanguage[language] =
+        roleTypeNameDB[language][updateRoleTable[role]];
+    });
+
+    // Add to output
+    if (
+      trainerBaseId.toString() === '10700000' // Hero
+    ) {
+      if (
+        trainerId.toString() !== '18000000000' && // Hero & Pikachu
+        trainerId.toString() !== '18000120000' && // Hero & Solgaleo
+        trainerId.toString() !== '18000020521' && // Hero & Regirock
+        trainerId.toString() !== '18000020531' // Hero & Cobalion
+      ) {
+        // eggmons
+        if (trainerId.slice(-1) !== '6') {
+          // those end in 6 are duplicates
+          syncPairNamesAndIds[trainerId] = {
+            syncPairEnglishName: syncPairEnglishName,
+            trainerId: trainerId.toString(),
+            trainerBaseId: trainerBaseId.toString(),
+            trainerNameId: trainerNameId.toString(),
+            trainerActorId: trainerActorId.toString(),
+            monsterId: monsterId.toString(),
+            monsterBaseId: updatedMonsterBaseId.toString(),
+            monsterActorId: monsterActorId.toString(),
+            pokemonNameByLanguage: pokemonNameByLanguage,
+            trainerNameByLanguage: trainerNameByLanguage,
+            syncPairNameByLanguage: syncPairNameByLanguage,
+            type: type,
+            rarity: rarity,
+            role: role,
+            roleTypeNameByLanguage: roleTypeNameByLanguage,
+            isGrided: isGrided,
+            isEggmon: isEggmon,
+            isBP: isBP,
+          };
+        }
+      } else {
+        // MC but not eggs
+        syncPairNamesAndIds[trainerId] = {
+          syncPairEnglishName: syncPairEnglishName,
+          trainerId: trainerId.toString(),
+          trainerBaseId: trainerBaseId.toString(),
+          trainerNameId: trainerNameId.toString(),
+          trainerActorId: trainerActorId.toString(),
+          monsterId: monsterId.toString(),
+          monsterBaseId: updatedMonsterBaseId.toString(),
+          monsterActorId: monsterActorId.toString(),
+          pokemonNameByLanguage: pokemonNameByLanguage,
+          trainerNameByLanguage: trainerNameByLanguage,
+          syncPairNameByLanguage: syncPairNameByLanguage,
+          type: type,
+          rarity: rarity,
+          role: role,
+          roleTypeNameByLanguage: roleTypeNameByLanguage,
+          isGrided: isGrided,
+          isEggmon: isEggmon,
+          isBP: isBP,
+        };
+      }
+    } else {
+      // Not MC
+      if (
+        trainerId.toString() !== '10074000000' && // Youngster & Cottonee
+        trainerId.toString() !== '10066000001' && // Lear & Hoopa
+        trainerId.toString() !== '10066000002' && // Lear & Hoopa
+        trainerId.toString() !== '10067000001' && // Rachel & Umbreon
+        trainerId.toString() !== '10068000001' // Sawyer & Honchkrow
+      ) {
+        syncPairNamesAndIds[trainerId] = {
+          syncPairEnglishName: syncPairEnglishName,
+          trainerId: trainerId.toString(),
+          trainerBaseId: trainerBaseId.toString(),
+          trainerNameId: trainerNameId.toString(),
+          trainerActorId: trainerActorId.toString(),
+          monsterId: monsterId.toString(),
+          monsterBaseId: updatedMonsterBaseId.toString(),
+          monsterActorId: monsterActorId.toString(),
+          pokemonNameByLanguage: pokemonNameByLanguage,
+          trainerNameByLanguage: trainerNameByLanguage,
+          syncPairNameByLanguage: syncPairNameByLanguage,
+          type: type,
+          rarity: rarity,
+          role: role,
+          roleTypeNameByLanguage: roleTypeNameByLanguage,
+          isGrided: isGrided,
+          isEggmon: isEggmon,
+          isBP: isBP,
+        };
+      }
+    }
 
     if (isGrided) {
       allGridedSyncPairs[trainerId] = {
