@@ -19,7 +19,6 @@ import ResetTeamButton from '../common/ResetTeamButton';
 import { allSyncGrids } from '../../../data/exportGridsAsObject';
 import ShareTeamButton from '../common/ShareTeamButton';
 import SyncPairCard from '../common/SyncPairCard';
-import LoginOrRegisterModal from '../../auth/LoginOrRegisterModal';
 import { lookupTrainerIdBySyncPairNameFromUrl } from '../../../data/lookupTables';
 import PublishTeamButton from '../../PublishTeamButton';
 
@@ -207,7 +206,6 @@ function TeamBuilder() {
           </Grid>
         </Grid>
       </Grid>
-      <LoginOrRegisterModal />
     </div>
   );
 }

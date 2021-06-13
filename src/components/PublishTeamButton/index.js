@@ -4,6 +4,7 @@ import PublishTeamModal from './PublishTeamModal';
 import './index.css';
 import Button from '@material-ui/core/Button';
 import UI from '../../utils/translations';
+import LoginOrRegisterModal from '../auth/LoginOrRegisterModal';
 
 const PublishTeamButton = () => {
   const language = useSelector((state) => state.language.currentLanguage);
@@ -21,6 +22,7 @@ const PublishTeamButton = () => {
         {UI['Publish'][language]}
       </Button>
       <PublishTeamModal />
+      <LoginOrRegisterModal />
     </Fragment>
   );
 };

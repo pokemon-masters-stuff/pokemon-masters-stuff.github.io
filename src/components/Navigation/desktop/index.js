@@ -147,7 +147,7 @@ function PersistentDrawerLeft(props) {
             </ListItem>
           )}
 
-          <LoginOrRegisterModal />
+          {/* <LoginOrRegisterModal /> */}
 
           <Link
             to="/team-builder"
