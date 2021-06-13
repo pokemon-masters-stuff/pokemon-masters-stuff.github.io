@@ -126,7 +126,14 @@ function Sidebar(props) {
             <ListItemIcon className={classes.listIcon}>
               <WhatshotIcon />
             </ListItemIcon>
-            <ListItemText primary={UI['Popular Teams'][language]} />
+            <ListItemText
+              primary={
+                <>
+                  {UI['Popular Teams'][language]}
+                  <sup> NEW</sup>
+                </>
+              }
+            />
           </ListItem>
         )}
 

@@ -189,7 +189,14 @@ function PersistentDrawerLeft(props) {
               <ListItemIcon className={classes.listIcon}>
                 <WhatshotIcon />
               </ListItemIcon>
-              <ListItemText primary="Popular Teams" />
+              <ListItemText
+                primary={
+                  <>
+                    {UI['Popular Teams'][language]}
+                    <sup> NEW</sup>
+                  </>
+                }
+              />
             </ListItem>
           )}
 
