@@ -97,7 +97,7 @@ function Sidebar(props) {
           </ListItem>
         </Link>
 
-        {/* {isAuthenticated ? (
+        {isAuthenticated ? (
           <Link
             to="/teams/popular"
             style={{ textDecoration: 'none', color: 'inherit' }}
@@ -128,7 +128,7 @@ function Sidebar(props) {
             </ListItemIcon>
             <ListItemText primary={UI['Popular Teams'][language]} />
           </ListItem>
-        )} */}
+        )}
 
         <Link
           to="/gacha-odds-calculator"

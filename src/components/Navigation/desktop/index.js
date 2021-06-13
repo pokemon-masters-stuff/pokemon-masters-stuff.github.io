@@ -161,7 +161,7 @@ function PersistentDrawerLeft(props) {
             </ListItem>
           </Link>
 
-          {/* {isAuthenticated ? (
+          {isAuthenticated ? (
             <Link
               to="/teams/popular"
               style={{ textDecoration: 'none', color: 'inherit' }}
@@ -191,7 +191,7 @@ function PersistentDrawerLeft(props) {
               </ListItemIcon>
               <ListItemText primary="Popular Teams" />
             </ListItem>
-          )} */}
+          )}
 
           <Link
             to="/gacha-odds-calculator"
