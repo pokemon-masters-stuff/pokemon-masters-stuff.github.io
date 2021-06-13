@@ -694,8 +694,6 @@ export const editTeam = (id, updatedTeamData) => async (dispatch) => {
 
   const body = JSON.stringify({ updatedTeamData });
 
-  console.log('body in actionCreator', body);
-
   try {
     const res = await axios.put(
       `${CLOUD_FUNCTIONS_URL}/api/teams/edit/${id}`,

@@ -163,7 +163,7 @@ function TeamItem(props) {
       <Paper
         style={!darkMode ? { backgroundColor: fade('#fafafa', 0.4) } : null}
       >
-        <div className="row">
+        <div className="row" style={{ paddingTop: 10 }}>
           <div
             className="col-sm mt-2"
             style={{

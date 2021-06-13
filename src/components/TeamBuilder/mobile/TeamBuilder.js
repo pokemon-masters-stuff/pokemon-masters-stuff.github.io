@@ -168,9 +168,9 @@ function TeamBuilder() {
           <div style={{ marginLeft: 8 }}>
             <ResetTeamButton />
           </div>
-          <div style={{ marginLeft: 8 }}>
+          {/* <div style={{ marginLeft: 8 }}>
             <PublishTeamButton />
-          </div>
+          </div> */}
         </Grid>
         <Grid container justify="center" spacing={0}>
           {[teamMember1Data, teamMember2Data, teamMember3Data].map(

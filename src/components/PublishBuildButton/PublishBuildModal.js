@@ -93,12 +93,12 @@ export default function PublishBuildModal() {
               </h4>
             </div>
             <div className="modal-body mx-3">
-              {/* <div className="alert alert-info" role="alert">
+              <div className="alert alert-info" role="alert">
                 This function is temporarily disabled to allow for a feature
                 update. Please check back later.
-              </div> */}
+              </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <input
                   type="text"
                   className={`form-control ${
@@ -160,7 +160,7 @@ export default function PublishBuildModal() {
                 data-dismiss="modal"
               >
                 {UI['Close'][language]}
-              </button>
+              </button> */}
             </div>
             <Alert />
           </div>
