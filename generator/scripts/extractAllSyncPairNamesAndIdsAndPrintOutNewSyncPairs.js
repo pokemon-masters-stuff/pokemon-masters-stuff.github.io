@@ -544,6 +544,63 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
     }
   });
 
+  syncPairNamesAndIds['18000020076'] = {
+    syncPairEnglishName: 'Hero & Meowth',
+    trainerId: '18000020076',
+    trainerBaseId: '10700000',
+    trainerNameId: 'ch8000',
+    trainerActorId: 'hero',
+    monsterId: '28000020076',
+    monsterBaseId: '20005200',
+    monsterActorId: 'pm0052_00_nyarth',
+    pokemonNameByLanguage: {
+      de: 'Mauzi',
+      en: 'Meowth',
+      es: 'Meowth',
+      fr: 'Miaouss',
+      it: 'Meowth',
+      ja: 'ニャース',
+      ko: '나옹',
+      zh: '喵喵',
+    },
+    trainerNameByLanguage: {
+      de: 'Hero',
+      en: 'Hero',
+      es: 'Hero',
+      fr: 'Hero',
+      it: 'Hero',
+      ja: 'Hero',
+      ko: 'Hero',
+      zh: 'Hero',
+    },
+    syncPairNameByLanguage: {
+      de: 'Hero & Mauzi',
+      en: 'Hero & Meowth',
+      es: 'Hero & Meowth',
+      fr: 'Hero & Miaouss',
+      it: 'Hero & Meowth',
+      ja: 'Hero & ニャース',
+      ko: 'Hero & 나옹',
+      zh: 'Hero & 喵喵',
+    },
+    type: 1,
+    rarity: 1,
+    role: 2,
+    roleTypeNameByLanguage: {
+      de: 'Helfer',
+      en: 'Support',
+      es: 'Apoyo',
+      fr: 'Soutien',
+      it: 'Aiutante',
+      ja: 'サポート',
+      ko: '서포트',
+      zh: '輔助型',
+    },
+    isGrided: false,
+    isEggmon: true,
+    isBP: false,
+  };
+
   fs.writeFile(
     `${__dirname}/../../src/data/syncPairNamesAndIds.json`,
     JSON.stringify(syncPairNamesAndIds),
