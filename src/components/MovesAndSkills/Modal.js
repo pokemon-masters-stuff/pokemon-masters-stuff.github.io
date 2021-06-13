@@ -84,29 +84,29 @@ function Stats(props) {
       : speUpFromGrid;
   }
 
-  let lv130Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 30;
-  let lv130Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 30;
-  let lv130Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 30;
-  let lv130Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 30;
-  let lv130Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 30;
-  let lv130Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 30;
+  let lv135Hp = hp[3] + ((hp[4] - hp[3]) / (120 - 100)) * 35;
+  let lv135Atk = atk[3] + ((atk[4] - atk[3]) / (120 - 100)) * 35;
+  let lv135Def = def[3] + ((def[4] - def[3]) / (120 - 100)) * 35;
+  let lv135Spa = spa[3] + ((spa[4] - spa[3]) / (120 - 100)) * 35;
+  let lv135Spd = spd[3] + ((spd[4] - spd[3]) / (120 - 100)) * 35;
+  let lv135Spe = spe[3] + ((spe[4] - spe[3]) / (120 - 100)) * 35;
 
-  if (trainerId === '10137000000') {
-    lv130Hp = 354;
-    lv130Atk = 254;
-    lv130Def = 254;
-    lv130Spa = 254;
-    lv130Spd = 254;
-    lv130Spe = 254;
-  }
+  // if (trainerId === '10137000000') {
+  //   lv135Hp = 354;
+  //   lv135Atk = 254;
+  //   lv135Def = 254;
+  //   lv135Spa = 254;
+  //   lv135Spd = 254;
+  //   lv135Spe = 254;
+  // }
 
   // let baseHp = hp[4] + (selectedRarity - rarity) * 40;
-  let baseHp = Math.floor(lv130Hp + (selectedRarity - rarity) * 40);
-  let baseAtk = Math.floor(lv130Atk + (selectedRarity - rarity) * 20);
-  let baseDef = Math.floor(lv130Def + (selectedRarity - rarity) * 20);
-  let baseSpa = Math.floor(lv130Spa + (selectedRarity - rarity) * 20);
-  let baseSpd = Math.floor(lv130Spd + (selectedRarity - rarity) * 20);
-  let baseSpe = Math.floor(lv130Spe + (selectedRarity - rarity) * 20);
+  let baseHp = Math.floor(lv135Hp + (selectedRarity - rarity) * 40);
+  let baseAtk = Math.floor(lv135Atk + (selectedRarity - rarity) * 20);
+  let baseDef = Math.floor(lv135Def + (selectedRarity - rarity) * 20);
+  let baseSpa = Math.floor(lv135Spa + (selectedRarity - rarity) * 20);
+  let baseSpd = Math.floor(lv135Spd + (selectedRarity - rarity) * 20);
+  let baseSpe = Math.floor(lv135Spe + (selectedRarity - rarity) * 20);
 
   if (isMega) {
     atkUpFromMega = Math.floor(baseAtk * (atkScale / 100 - 1));
@@ -771,7 +771,7 @@ export default function MovesAndSkillsModal(props) {
             <TableHead>
               <TableRow>
                 <TableCell />
-                <TableCell>Lv130 Stats</TableCell>
+                <TableCell>Lv135 Stats</TableCell>
                 <TableCell align="right">Base</TableCell>
                 {isMega ? <TableCell align="right">Mega</TableCell> : null}
                 <TableCell align="right">Grid</TableCell>
