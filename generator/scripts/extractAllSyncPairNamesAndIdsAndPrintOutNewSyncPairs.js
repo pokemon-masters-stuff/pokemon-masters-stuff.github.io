@@ -306,6 +306,13 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
         monsterId.toString().substring(0, monsterId.toString().length - 1) +
         '1';
     }
+
+    if (trainerId.toString() === '10035000000') {
+      // Lt. Surge and Electrode
+      // Raichu uses 20035000002
+      thirdEvolvedFormMonsterId = '20035000001';
+    }
+
     if (
       monsterDB.entries.find(
         (monster) => monster.monsterId.toString() === thirdEvolvedFormMonsterId
