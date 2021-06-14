@@ -173,12 +173,7 @@ function TeamItem(props) {
               // marginLeft: -120,
             }}
           >
-            <Grid
-              container
-              alignItems="center"
-              justify="center"
-              style={{ marginBottom: 20 }}
-            >
+            <Grid container alignItems="center" justify="center">
               {/* <div style={{ marginLeft: 69 }}> */}
               {[
                 team.syncPairs.slot1,
@@ -192,30 +187,37 @@ function TeamItem(props) {
                 />
               ))}
               {/* </div> */}
-            </Grid>
 
-            {/* <Grid item xs={12}>
+              {/* <Grid item xs={12}>
                   <Grid container justify="center" spacing={3}> */}
-            {[
-              team.syncPairs.slot1,
-              team.syncPairs.slot2,
-              team.syncPairs.slot3,
-            ].map((teamMemberData, index) =>
-              teamMemberData.trainerId ? (
-                syncPairNamesAndIds[teamMemberData.trainerId].isGrided &&
-                teamMemberData.selectedCellsById ? (
-                  // <Grid item key={index}>
-                  <SyncGridContainer
-                    key={`sync-grid-${index + 1}-${team._id}`}
-                    teamMemberData={teamMemberData}
-                    slot={`slot${index + 1}`}
-                    marginT={-10}
-                    paddingB={-10}
-                  />
-                ) : // </Grid>
-                null
-              ) : null
-            )}
+              <div
+                style={{
+                  width: '100%',
+                  marginTop: 20,
+                }}
+              >
+                {[
+                  team.syncPairs.slot1,
+                  team.syncPairs.slot2,
+                  team.syncPairs.slot3,
+                ].map((teamMemberData, index) =>
+                  teamMemberData.trainerId ? (
+                    syncPairNamesAndIds[teamMemberData.trainerId].isGrided &&
+                    teamMemberData.selectedCellsById ? (
+                      // <Grid item key={index}>
+                      <SyncGridContainer
+                        key={`sync-grid-${index + 1}-${team._id}`}
+                        teamMemberData={teamMemberData}
+                        slot={`slot${index + 1}`}
+                        marginT={-10}
+                        paddingB={-10}
+                      />
+                    ) : // </Grid>
+                    null
+                  ) : null
+                )}
+              </div>
+            </Grid>
             {/* </Grid>
                 </Grid>
               </Grid> */}
