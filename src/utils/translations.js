@@ -657,6 +657,16 @@ const UI = {
     ko: '고난도 배틀 이벤트',
     zh: '高難度對戰活動',
   },
+  Meme: {
+    de: 'das Meme',
+    en: 'Meme',
+    es: 'Meme',
+    fr: 'Mème',
+    it: 'Meme',
+    ja: 'ミーム',
+    ko: '짤',
+    zh: '梗',
+  },
 };
 
 export default UI;
