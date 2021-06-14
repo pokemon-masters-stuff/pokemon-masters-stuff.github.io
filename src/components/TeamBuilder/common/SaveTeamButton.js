@@ -13,7 +13,7 @@ import {
 } from '../../../actions/actionCreators';
 import { getSyncPairNameAndIdByTrainerId } from '../../../utils/functions';
 
-const SaveBuildButton = () => {
+const SaveTeamButton = () => {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const teamMembers = useSelector((state) => state.grid.teamMembers);
@@ -37,26 +37,28 @@ const SaveBuildButton = () => {
 
   const newBuildNameRef = useRef(null);
 
-  const [isSaveBuildModalVisible, setIsSaveBuildModalVisible] = useState(false);
+  const [isSaveTeamModalVisible, setIsSaveTeamModalVisible] = useState(false);
 
-  const handleOnCloseSaveBuildModal = () => {
-    setIsSaveBuildModalVisible(false);
+  const handleOnCloseSaveTeamModal = () => {
+    setIsSaveTeamModalVisible(false);
   };
 
   const handleOnOpenSaveBuildModal = () => {
     if (
       arrayOfTeamMemberTrainerNameIds.length !==
-      new Set(arrayOfTeamMemberTrainerNameIds).size // if contains duplicates
+        new Set(arrayOfTeamMemberTrainerNameIds).size || // if contains duplicates
+      (arrayOfTeamMemberTrainerNameIds.includes('ch0117') &&
+        arrayOfTeamMemberTrainerNameIds.includes('ch0001'))
     ) {
       return alert(
         'A Trainer with the same name is already on this team. Please choose another.'
       );
     } else {
-      setIsSaveBuildModalVisible(true);
+      setIsSaveTeamModalVisible(true);
     }
   };
 
-  const handleOnSaveBuild = () => {
+  const handleOnSaveTeam = () => {
     let userConfirmation = true;
     if (newBuildNameRef.current.value) {
       // If already have a save with the same name, delete old save
@@ -79,7 +81,7 @@ const SaveBuildButton = () => {
             buildName: newBuildNameRef.current.value,
           })
         );
-      setIsSaveBuildModalVisible(false);
+      setIsSaveTeamModalVisible(false);
     } else alert('Please enter a name');
   };
 
@@ -95,8 +97,8 @@ const SaveBuildButton = () => {
       </Button>
 
       <Dialog
-        open={isSaveBuildModalVisible}
-        onClose={handleOnCloseSaveBuildModal}
+        open={isSaveTeamModalVisible}
+        onClose={handleOnCloseSaveTeamModal}
       >
         <DialogTitle>{UI['Save Team'][language]}</DialogTitle>
         <DialogContent>
@@ -108,14 +110,14 @@ const SaveBuildButton = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleOnCloseSaveBuildModal}>
+          <Button onClick={handleOnCloseSaveTeamModal}>
             {UI['Close'][language]}
           </Button>
-          <Button onClick={handleOnSaveBuild}>{UI['Save'][language]}</Button>
+          <Button onClick={handleOnSaveTeam}>{UI['Save'][language]}</Button>
         </DialogActions>
       </Dialog>
     </Fragment>
   );
 };
 
-export default SaveBuildButton;
+export default SaveTeamButton;

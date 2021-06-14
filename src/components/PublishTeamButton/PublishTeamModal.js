@@ -136,7 +136,9 @@ export default function PublishTeamModal() {
     // }
     if (
       arrayOfTeamMemberTrainerNameIds.length !==
-      new Set(arrayOfTeamMemberTrainerNameIds).size // if contains duplicates
+        new Set(arrayOfTeamMemberTrainerNameIds).size || // if contains duplicates
+      (arrayOfTeamMemberTrainerNameIds.includes('ch0117') &&
+        arrayOfTeamMemberTrainerNameIds.includes('ch0001'))
     ) {
       return alert(
         'A Trainer with the same name is already on this team. Please choose another.'
