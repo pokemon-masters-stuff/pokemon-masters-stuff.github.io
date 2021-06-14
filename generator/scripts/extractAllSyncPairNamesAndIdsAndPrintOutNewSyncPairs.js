@@ -355,6 +355,10 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
     let trainerActorId = trainerBase.trainerNameId;
     let syncPairEnglishName = '';
 
+    if (trainerId.toString() === '10117000000') {
+      trainerNameId = 'ch0117'; // The Masked Royal
+    }
+
     languages.forEach((language) => {
       updatedMonsterBaseId = monsterBaseId;
 

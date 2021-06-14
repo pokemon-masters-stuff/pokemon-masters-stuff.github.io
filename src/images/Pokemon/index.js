@@ -60,7 +60,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0405_00_rentorar_128 } from './128px/pm0405_00_rentorar_128.ktx.png'; // Volkner & Luxray
         export { default as pm0389_00_dodaitose_128 } from './128px/pm0389_00_dodaitose_128.ktx.png'; // Dawn & Torterra
         export { default as pm0869_11_11_mawhip_128 } from './128px/pm0869_11_11_mawhip_128.ktx.png'; // Dawn & Alcremie
-        export { default as pm0846_00_tora3_128 } from './128px/pm0846_00_tora3_128.ktx.png'; // Kukui & Incineroar
+        export { default as pm0846_00_tora3_128 } from './128px/pm0846_00_tora3_128.ktx.png'; // The Masked Royal & Incineroar
         export { default as pm0035_00_pippi_128 } from './128px/pm0035_00_pippi_128.ktx.png'; // Lillie & Clefairy
         export { default as pm0835_00_abu2_128 } from './128px/pm0835_00_abu2_128.ktx.png'; // Lillie & Ribombee
         export { default as pm0862_11_gryps2_128 } from './128px/pm0862_11_gryps2_128.ktx.png'; // Gladion & Silvally
