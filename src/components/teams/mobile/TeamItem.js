@@ -149,7 +149,7 @@ function TeamItem(props) {
       <Divider light />
 
       <Paper>
-        <div className="pl-1 pr-1">{renderIcons(team, currentUser)}</div>
+        <div className="pl-3 pr-1">{renderIcons(team, currentUser)}</div>
       </Paper>
       <Divider light />
 

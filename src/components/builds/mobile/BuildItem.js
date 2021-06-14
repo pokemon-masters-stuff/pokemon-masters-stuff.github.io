@@ -308,7 +308,7 @@ class BuildItem extends Component {
         </Paper>
         <Divider light />
         <Paper>
-          <div className="pl-1 pr-1">
+          <div className="pl-3 pr-1">
             {this.renderIcons(build, currentUser)}
           </div>
         </Paper>
