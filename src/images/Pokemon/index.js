@@ -27,6 +27,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0087_00_jugon_128 } from './128px/pm0087_00_jugon_128.ktx.png'; // Pryce & Dewgong
         export { default as pm0026_00_raichu_128 } from './128px/pm0026_00_raichu_128.ktx.png'; // Lt. Surge & Raichu
         export { default as pm0284_00_amemoth_128 } from './128px/pm0284_00_amemoth_128.ktx.png'; // Viola & Masquerain
+        export { default as pm0123_00_strike_128 } from './128px/pm0123_00_strike_128.ktx.png'; // Bugsy & Scyther
         export { default as pm0510_00_lepardas_128 } from './128px/pm0510_00_lepardas_128.ktx.png'; // Grimsley & Liepard
         export { default as pm0319_00_samehader_128 } from './128px/pm0319_00_samehader_128.ktx.png'; // Grimsley & Sharpedo
         export { default as pm0477_00_yonoir_128 } from './128px/pm0477_00_yonoir_128.ktx.png'; // Phoebe & Dusknoir
@@ -51,6 +52,8 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0518_00_musharna_128 } from './128px/pm0518_00_musharna_128.ktx.png'; // Bianca & Musharna
         export { default as pm0523_00_zebraika_128 } from './128px/pm0523_00_zebraika_128.ktx.png'; // Elesa & Zebstrika
         export { default as pm0479_11_rotom_128 } from './128px/pm0479_11_rotom_128.ktx.png'; // Elesa & Rotom
+        export { default as pm0530_00_doryuzu_128 } from './128px/pm0530_00_doryuzu_128.ktx.png'; // Ingo & Excadrill
+        export { default as pm0567_00_archeos_128 } from './128px/pm0567_00_archeos_128.ktx.png'; // Emmet & Archeops
         export { default as pm0121_00_starmie_128 } from './128px/pm0121_00_starmie_128.ktx.png'; // Misty & Starmie
         export { default as pm0149_00_kairyu_128 } from './128px/pm0149_00_kairyu_128.ktx.png'; // Lance & Dragonite
         export { default as pm0130_00_gyarados_128 } from './128px/pm0130_00_gyarados_128.ktx.png'; // Lance & Gyarados
@@ -83,6 +86,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0250_00_houou_128 } from './128px/pm0250_00_houou_128.ktx.png'; // Silver & Ho-Oh
         export { default as pm0768_00_pokemonX_128 } from './128px/pm0768_00_pokemonX_128.ktx.png'; // Professor Sycamore & Xerneas
         export { default as pm0151_00_mew_128 } from './128px/pm0151_00_mew_128.ktx.png'; // Professor Oak & Mew
+        export { default as pm0150_00_mewtwo_128 } from './128px/pm0150_00_mewtwo_128.ktx.png'; // Giovanni & Mewtwo
         export { default as pm0426_00_fuwaride_128 } from './128px/pm0426_00_fuwaride_128.ktx.png'; // Morty & Drifblim
         export { default as pm0429_00_mumargi_128 } from './128px/pm0429_00_mumargi_128.ktx.png'; // Morty & Mismagius
         export { default as pm0105_61_agaragara_128 } from './128px/pm0105_61_agaragara_128.ktx.png'; // Kiawe & Marowak
@@ -99,7 +103,9 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0769_00_pokemonY_128 } from './128px/pm0769_00_pokemonY_128.ktx.png'; // Lysandre & Yveltal
         export { default as pm0334_00_tyltalis_128 } from './128px/pm0334_00_tyltalis_128.ktx.png'; // Lisia & Altaria
         export { default as pm0888_12_00_zacian_128 } from './128px/pm0888_12_00_zacian_128.ktx.png'; // Gloria & Zacian
+        export { default as pm0818_00_00_intereon_128 } from './128px/pm0818_00_00_intereon_128.ktx.png'; // Gloria & Inteleon
         export { default as pm0877_11_00_morpeko_128 } from './128px/pm0877_11_00_morpeko_128.ktx.png'; // Marnie & Morpeko
+        export { default as pm0861_00_00_ohlonge_128 } from './128px/pm0861_00_00_ohlonge_128.ktx.png'; // Marnie & Grimmsnarl
         export { default as pm0834_00_00_kajirigame_128 } from './128px/pm0834_00_00_kajirigame_128.ktx.png'; // Nessa & Drednaw
         export { default as pm0865_00_31_negigaknight_128 } from './128px/pm0865_00_31_negigaknight_128.ktx.png'; // Bea & Sirfetch’d
         export { default as pm0862_00_31_tachifusaguma_128 } from './128px/pm0862_00_31_tachifusaguma_128.ktx.png'; // Piers & Obstagoon

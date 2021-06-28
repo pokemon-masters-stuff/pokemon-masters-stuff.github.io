@@ -25,20 +25,12 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10160000000, // Lana & Araquanid
-  10161000000, // Hala & Crabominable
-  10192000000, // Maxie & Groudon
-  10193000000, // Archie & Kyogre
-  10149000000, // Kiawe & Marowak
-  18000120000, // Hero & Solgaleo
-  18000020521, // Hero & Regirock
-  18000020531, // Hero & Cobalion
-  10035000001, // Lt. Surge & Raichu
-  10148000001, // Morty & Mismagius
-  10129000001, // Zinnia & Salamence
-  10008000001, // Erika & Tangela
-  10062000001, // Karen & Umbreon
-  10117000000, // The Masked Royal & Incineroar
+  10045900000, // Bugsy & Scyther
+  10108000000, // Ingo & Excadrill
+  10109000000, // Emmet & Archeops
+  10243400000, // Gloria & Inteleon
+  10245400000, // Marnie & Grimmsnarl
+  10140000000, // Giovanni & Mewtwo
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -128,6 +120,9 @@ export const type1SyncGrid = [
   '10193000000',
   '18000120000',
   '10062000001',
+  '10109000000',
+  '10243400000',
+  '10140000000',
 ];
 
 export const type2SyncGrid = [
@@ -162,6 +157,7 @@ export const type2SyncGrid = [
   '10129000001',
   '10008000001',
   '10117000000',
+  '10245400000',
 ];
 
 export const type3SyncGrid = [
@@ -193,4 +189,6 @@ export const type3SyncGrid = [
   '10148000001',
   '10035000001',
   '18000020521',
+  '10108000000',
+  '10045900000',
 ];

@@ -185,6 +185,13 @@ const arrayOfGridedTrainers = [
   10008000001, // Erika & Tangela
   10062000001, // Karen & Umbreon
   10117000000, // Kukui & Incineroar
+  // 6/28
+  10045900000, // Bugsy & Scyther
+  10108000000, // Ingo & Excadrill
+  10109000000, // Emmet & Archeops
+  10243400000, // Gloria & Inteleon
+  10245400000, // Marnie & Grimmsnarl
+  10140000000, // Giovanni & Mewtwo
 ];
 
 /*
@@ -275,7 +282,8 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
       trainerId.toString() === '10148000001' || // Morty & Mismagius
       trainerId.toString() === '10129000001' || // Zinnia & Salamence
       trainerId.toString() === '10008000001' || // Erika & Tangela
-      trainerId.toString() === '10062000001' // Karen & Umbreon
+      trainerId.toString() === '10062000001' || // Karen & Umbreon
+      trainerId.toString() === '10045900000' // Bugsy & Scyther
     ) {
       isBP = true;
     } else {
@@ -347,11 +355,13 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
     let monsterActorId = monsterBase.actorId;
 
     // Use trainerBaseId to find trainerNameId in TrainerBase.json
+    // 6/28 update - trainerBase.trainerBaseId => trainerBase.id
     trainerBase = trainerBaseDB.entries.find(
-      (trainerBase) => trainerBase.trainerBaseId === trainerBaseId.toString()
+      (trainerBase) => trainerBase.id === trainerBaseId.toString()
     );
     // let trainerNameId = trainerBase.trainerNameId; // name changed on 9/28/2020
-    let trainerNameId = trainerBase.trainerNameIdShort;
+    // 6/28 update - trainerBase.trainerNameIdShort => trainerBase.trainerNameId
+    let trainerNameId = trainerBase.trainerNameId;
 
     let isGrided = false;
     if (arrayOfGridedTrainers.includes(Number(trainerId))) {
@@ -359,7 +369,7 @@ const extractAllSyncPairNamesAndIdsAndPrintOutNewSyncPairs = () => {
     }
 
     // Identify alts and give them a modified TrainerNameId to help link to their images
-    let trainerActorId = trainerBase.trainerNameId;
+    let trainerActorId = trainerBase.actorId;
     let syncPairEnglishName = '';
 
     if (trainerId.toString() === '10117000000') {

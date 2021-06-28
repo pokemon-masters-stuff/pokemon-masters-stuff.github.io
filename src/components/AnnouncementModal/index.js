@@ -42,6 +42,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            6/28/2021:
+            <br />
+            Added new grids. New eggmons will be added later.
+            <br />
+            <br />
             6/13/2021:
             <br />
             Added Popular Teams page.
