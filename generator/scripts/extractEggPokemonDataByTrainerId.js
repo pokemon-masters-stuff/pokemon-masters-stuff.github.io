@@ -553,6 +553,7 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
       for (const Ref of iteratorOfRef) {
         arrayOfRefs.push(updatedStr.slice(Ref.index + 5, Ref.index + 6));
       }
+
       for (const Ref of arrayOfRefs) {
         let param;
         if (Ref.toString() === '1') {
@@ -619,80 +620,95 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
               )
             )
             .join(param.toString() === '1' ? 'grado' : 'gradi');
+        } else if (language === 'de') {
+          updatedStr = updatedStr
+            .split(
+              updatedStr.slice(
+                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+                updatedStr.indexOf(`Ref="${Ref}"`) + 34
+              )
+            )
+            .join(param.toString() === '1' ? 'Segment' : 'Segmente');
         }
       }
-    } else {
-      if (language === 'en') {
-        updatedStr = updatedStr
-          .split('[EN:Qty S="rank" P="ranks" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'rank'
-              : 'ranks'
-          )
-          .split('[EN:Qty S="slot" P="slots" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'slot'
-              : 'slots'
-          );
-      } else if (language === 'fr') {
-        updatedStr = updatedStr
-          .split('[FR:Qty S="rang" P="rangs" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'rang'
-              : 'rangs'
-          )
-          .split('[FR:Qty S="segment" P="segments" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'segment'
-              : 'segments'
-          );
-      } else if (language === 'es') {
-        updatedStr = updatedStr
-          .split('[ES:Qty S="nivel" P="niveles" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'nivel'
-              : 'niveles'
-          )
-          .split('[ES:Qty S="punto" P="puntos" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'punto'
-              : 'puntos'
-          );
-      } else if (language === 'it') {
-        updatedStr = updatedStr
-          .split('[IT:Qty S="grado" P="gradi" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'grado'
-              : 'gradi'
-          )
-          .split('[IT:Qty S="barretta" P="barrette" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'barretta'
-              : 'barrette'
-          )
-          .split('[IT:Qty S="utilizzo" P="utilizzi" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'utilizzo'
-              : 'utilizzi'
-          );
-      } else if (language === 'de') {
-        updatedStr = updatedStr
-          .split('[DE:Qty S="Segment" P="Segmente" ]')
-          .join(
-            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-              ? 'Segment'
-              : 'Segmente'
-          );
-      }
+    }
+
+    if (language === 'en') {
+      updatedStr = updatedStr
+        .split('[EN:Qty S="rank" P="ranks" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'rank'
+            : 'ranks'
+        )
+        .split('[EN:Qty S="slot" P="slots" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'slot'
+            : 'slots'
+        );
+    } else if (language === 'fr') {
+      updatedStr = updatedStr
+        .split('[FR:Qty S="rang" P="rangs" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'rang'
+            : 'rangs'
+        )
+        .split('[FR:Qty S="segment" P="segments" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'segment'
+            : 'segments'
+        );
+    } else if (language === 'es') {
+      updatedStr = updatedStr
+        .split('[ES:Qty S="nivel" P="niveles" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'nivel'
+            : 'niveles'
+        )
+        .split('[ES:Qty S="punto" P="puntos" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'punto'
+            : 'puntos'
+        );
+    } else if (language === 'it') {
+      updatedStr = updatedStr
+        .split('[IT:Qty S="grado" P="gradi" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'grado'
+            : 'gradi'
+        )
+        .split('[IT:Qty S="utilizzo delle mosse" P="utilizzi delle mosse" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'utilizzo delle mosse'
+            : 'utilizzi delle mosse'
+        )
+        .split('[IT:Qty S="barretta" P="barrette" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'barretta'
+            : 'barrette'
+        )
+        .split('[IT:Qty S="utilizzo" P="utilizzi" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'utilizzo'
+            : 'utilizzi'
+        );
+    } else if (language === 'de') {
+      updatedStr = updatedStr
+        .split('[DE:Qty S="Segment" P="Segmente" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'Segment'
+            : 'Segmente'
+        );
     }
   }
 
