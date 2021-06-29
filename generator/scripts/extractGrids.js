@@ -273,16 +273,7 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
                 updatedStr.indexOf(`Ref="${Ref}"`) + 28
               )
             )
-            .join(param.toString() === '1' ? 'rang' : 'ranks');
-        } else if (language === 'es') {
-          updatedStr = updatedStr
-            .split(
-              updatedStr.slice(
-                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
-                updatedStr.indexOf(`Ref="${Ref}"`) + 31
-              )
-            )
-            .join(param.toString() === '1' ? 'nivel' : 'niveles');
+            .join(param.toString() === '1' ? 'rang' : 'rangs');
         } else if (language === 'es') {
           updatedStr = updatedStr
             .split(
