@@ -6,7 +6,7 @@ const abilityPanelDB = require('../rawdata/protodump/AbilityPanel.json');
 const abilityDB = require('../rawdata/protodump/Ability.json');
 const moveDB = require('../rawdata/protodump/ModifiedMove.json');
 const triangularCoordsToCollumns = require('../utils/triangularCoordsToCollumns');
-const MoveAndPassiveSkillDigitDB = require('../rawdata/protodump/MoveAndPassiveSkillDigit.json');
+const moveAndPassiveSkillDigitDB = require('../rawdata/protodump/MoveAndPassiveSkillDigit.json');
 
 const abilityDescriptionDBde = require('../rawdata/lsddump/ability_description_de.json');
 const abilityDescriptionDBen = require('../rawdata/lsddump/ability_description_en.json');
@@ -184,7 +184,7 @@ const gridedTrainerList = Object.keys(allGridedSyncPairs);
  * */
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
-const replaceDigit = (str, moveAndPassiveSkillDigitEntry) => {
+const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
   let updatedStr = str
     .split('[Digit:1digit ]')
     .join(moveAndPassiveSkillDigitEntry.param1)
@@ -227,7 +227,7 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry) => {
     .split('[Digit:2digits Idx="9" ]')
     .join(moveAndPassiveSkillDigitEntry.param10);
 
-  if (updatedStr.includes('EN:Qty')) {
+  if (updatedStr.includes('Qty')) {
     if (updatedStr.includes('Ref=')) {
       let iteratorOfRef = updatedStr.matchAll('Ref=');
       let arrayOfRefs = [];
@@ -255,29 +255,130 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry) => {
         } else if (Ref.toString() === '9') {
           param = moveAndPassiveSkillDigitEntry.param10;
         }
-        updatedStr = updatedStr
-          .split(
-            updatedStr.slice(
-              updatedStr.indexOf(`Ref="${Ref}"`) - 8,
-              updatedStr.indexOf(`Ref="${Ref}"`) + 28
+        if (language === 'en') {
+          updatedStr = updatedStr
+            .split(
+              updatedStr.slice(
+                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+                updatedStr.indexOf(`Ref="${Ref}"`) + 28
+              )
             )
-          )
-          .join(param.toString() === '1' ? 'rank' : 'ranks');
+            .join(param.toString() === '1' ? 'rank' : 'ranks');
+        } else if (language === 'fr') {
+          updatedStr = updatedStr
+            .split(
+              updatedStr.slice(
+                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+                updatedStr.indexOf(`Ref="${Ref}"`) + 28
+              )
+            )
+            .join(param.toString() === '1' ? 'rang' : 'ranks');
+        } else if (language === 'es') {
+          updatedStr = updatedStr
+            .split(
+              updatedStr.slice(
+                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+                updatedStr.indexOf(`Ref="${Ref}"`) + 31
+              )
+            )
+            .join(param.toString() === '1' ? 'nivel' : 'niveles');
+        } else if (language === 'es') {
+          updatedStr = updatedStr
+            .split(
+              updatedStr.slice(
+                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+                updatedStr.indexOf(`Ref="${Ref}"`) + 31
+              )
+            )
+            .join(param.toString() === '1' ? 'nivel' : 'niveles');
+        } else if (language === 'it') {
+          updatedStr = updatedStr
+            .split(
+              updatedStr.slice(
+                updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+                updatedStr.indexOf(`Ref="${Ref}"`) + 29
+              )
+            )
+            .join(param.toString() === '1' ? 'grado' : 'gradi');
+        }
       }
     } else {
-      updatedStr = updatedStr
-        .split('[EN:Qty S="rank" P="ranks" ]')
-        .join(
-          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
-            ? 'rank'
-            : 'ranks'
-        );
+      if (language === 'en') {
+        updatedStr = updatedStr
+          .split('[EN:Qty S="rank" P="ranks" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'rank'
+              : 'ranks'
+          )
+          .split('[EN:Qty S="slot" P="slots" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'slot'
+              : 'slots'
+          );
+      } else if (language === 'fr') {
+        updatedStr = updatedStr
+          .split('[FR:Qty S="rang" P="rangs" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'rang'
+              : 'rangs'
+          )
+          .split('[FR:Qty S="segment" P="segments" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'segment'
+              : 'segments'
+          );
+      } else if (language === 'es') {
+        updatedStr = updatedStr
+          .split('[ES:Qty S="nivel" P="niveles" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'nivel'
+              : 'niveles'
+          )
+          .split('[ES:Qty S="punto" P="puntos" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'punto'
+              : 'puntos'
+          );
+      } else if (language === 'it') {
+        updatedStr = updatedStr
+          .split('[IT:Qty S="grado" P="gradi" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'grado'
+              : 'gradi'
+          )
+          .split('[IT:Qty S="barretta" P="barrette" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'barretta'
+              : 'barrette'
+          )
+          .split('[IT:Qty S="utilizzo" P="utilizzi" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'utilizzo'
+              : 'utilizzi'
+          );
+      } else if (language === 'de') {
+        updatedStr = updatedStr
+          .split('[DE:Qty S="Segment" P="Segmente" ]')
+          .join(
+            moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+              ? 'Segment'
+              : 'Segmente'
+          );
+      }
     }
   }
 
   return updatedStr;
 };
-
 const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
   let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
   if (originalPassiveSkillName.includes('Idx')) {
@@ -306,7 +407,7 @@ const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
       ) {
         let digit = passiveId.toString().slice(-1);
         if (moveId.toString() === '0') {
-          // MoveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+          // moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
           //   if (entry.id.toString() === passiveId.toString()) {
           //     digit = entry.param1;
           //   } else {
@@ -317,7 +418,7 @@ const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
             index.toString()
           ].replace('[Name:PassiveSkillNameDigit ]', digit);
         } else {
-          // MoveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+          // moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
           //   if (entry.id.toString() === moveId.toString()) {
           //     digit = entry.param1;
           //   }
@@ -400,7 +501,7 @@ const getUpdatedPassiveSkillDescription = (language, moveId, passiveId) => {
       // console.log('index', index);
       let moveAndPassiveSkillDigitEntry;
 
-      MoveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+      moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
         if (entry.id.toString() === passiveId.toString()) {
           moveAndPassiveSkillDigitEntry = entry;
         }
@@ -410,7 +511,8 @@ const getUpdatedPassiveSkillDescription = (language, moveId, passiveId) => {
         finalSkillDescription = passiveSkillDescriptionPartsDB[language][index];
         finalSkillDescription = replaceDigit(
           finalSkillDescription,
-          moveAndPassiveSkillDigitEntry
+          moveAndPassiveSkillDigitEntry,
+          language
         );
       } else {
         finalSkillDescription = passiveSkillDescriptionPartsDB[language][index];
