@@ -184,6 +184,100 @@ const gridedTrainerList = Object.keys(allGridedSyncPairs);
  * */
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
+const replaceDigit = (str, moveAndPassiveSkillDigitEntry) => {
+  let updatedStr = str
+    .split('[Digit:1digit ]')
+    .join(moveAndPassiveSkillDigitEntry.param1)
+    .split('[Digit:1digit Idx="1" ]')
+    .join(moveAndPassiveSkillDigitEntry.param2)
+    .split('[Digit:1digit Idx="2" ]')
+    .join(moveAndPassiveSkillDigitEntry.param3)
+    .split('[Digit:1digit Idx="3" ]')
+    .join(moveAndPassiveSkillDigitEntry.param4)
+    .split('[Digit:1digit Idx="4" ]')
+    .join(moveAndPassiveSkillDigitEntry.param5)
+    .split('[Digit:1digit Idx="5" ]')
+    .join(moveAndPassiveSkillDigitEntry.param6)
+    .split('[Digit:1digit Idx="6" ]')
+    .join(moveAndPassiveSkillDigitEntry.param7)
+    .split('[Digit:1digit Idx="7" ]')
+    .join(moveAndPassiveSkillDigitEntry.param8)
+    .split('[Digit:1digit Idx="8" ]')
+    .join(moveAndPassiveSkillDigitEntry.param9)
+    .split('[Digit:1digit Idx="9" ]')
+    .join(moveAndPassiveSkillDigitEntry.param10)
+    .split('[Digit:2digits ]')
+    .join(moveAndPassiveSkillDigitEntry.param1)
+    .split('[Digit:2digits Idx="1" ]')
+    .join(moveAndPassiveSkillDigitEntry.param2)
+    .split('[Digit:2digits Idx="2" ]')
+    .join(moveAndPassiveSkillDigitEntry.param3)
+    .split('[Digit:2digits Idx="3" ]')
+    .join(moveAndPassiveSkillDigitEntry.param4)
+    .split('[Digit:2digits Idx="4" ]')
+    .join(moveAndPassiveSkillDigitEntry.param5)
+    .split('[Digit:2digits Idx="5" ]')
+    .join(moveAndPassiveSkillDigitEntry.param6)
+    .split('[Digit:2digits Idx="6" ]')
+    .join(moveAndPassiveSkillDigitEntry.param7)
+    .split('[Digit:2digits Idx="7" ]')
+    .join(moveAndPassiveSkillDigitEntry.param8)
+    .split('[Digit:2digits Idx="8" ]')
+    .join(moveAndPassiveSkillDigitEntry.param9)
+    .split('[Digit:2digits Idx="9" ]')
+    .join(moveAndPassiveSkillDigitEntry.param10);
+
+  if (updatedStr.includes('EN:Qty')) {
+    if (updatedStr.includes('Ref=')) {
+      let iteratorOfRef = updatedStr.matchAll('Ref=');
+      let arrayOfRefs = [];
+      for (const Ref of iteratorOfRef) {
+        arrayOfRefs.push(updatedStr.slice(Ref.index + 5, Ref.index + 6));
+      }
+      for (const Ref of arrayOfRefs) {
+        let param;
+        if (Ref.toString() === '1') {
+          param = moveAndPassiveSkillDigitEntry.param2;
+        } else if (Ref.toString() === '2') {
+          param = moveAndPassiveSkillDigitEntry.param3;
+        } else if (Ref.toString() === '3') {
+          param = moveAndPassiveSkillDigitEntry.param4;
+        } else if (Ref.toString() === '4') {
+          param = moveAndPassiveSkillDigitEntry.param5;
+        } else if (Ref.toString() === '5') {
+          param = moveAndPassiveSkillDigitEntry.param6;
+        } else if (Ref.toString() === '6') {
+          param = moveAndPassiveSkillDigitEntry.param7;
+        } else if (Ref.toString() === '7') {
+          param = moveAndPassiveSkillDigitEntry.param8;
+        } else if (Ref.toString() === '8') {
+          param = moveAndPassiveSkillDigitEntry.param9;
+        } else if (Ref.toString() === '9') {
+          param = moveAndPassiveSkillDigitEntry.param10;
+        }
+        updatedStr = updatedStr
+          .split(
+            updatedStr.slice(
+              updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+              updatedStr.indexOf(`Ref="${Ref}"`) + 28
+            )
+          )
+          .join(param.toString() === '1' ? 'rank' : 'ranks');
+      }
+    } else {
+      updatedStr = updatedStr
+        .split('[EN:Qty S="rank" P="ranks" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'rank'
+            : 'ranks'
+        );
+    }
+  }
+
+  return updatedStr;
+};
+
 const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
   let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
   if (originalPassiveSkillName.includes('Idx')) {
@@ -314,93 +408,10 @@ const getUpdatedPassiveSkillDescription = (language, moveId, passiveId) => {
       let finalSkillDescription = '';
       if (moveAndPassiveSkillDigitEntry) {
         finalSkillDescription = passiveSkillDescriptionPartsDB[language][index];
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:1digit ]',
-          moveAndPassiveSkillDigitEntry.param1
+        finalSkillDescription = replaceDigit(
+          finalSkillDescription,
+          moveAndPassiveSkillDigitEntry
         );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits ]',
-          moveAndPassiveSkillDigitEntry.param1
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="1" ]',
-          moveAndPassiveSkillDigitEntry.param2
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="2" ]',
-          moveAndPassiveSkillDigitEntry.param3
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="3" ]',
-          moveAndPassiveSkillDigitEntry.param4
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="4" ]',
-          moveAndPassiveSkillDigitEntry.param5
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="5" ]',
-          moveAndPassiveSkillDigitEntry.param6
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="6" ]',
-          moveAndPassiveSkillDigitEntry.param7
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="7" ]',
-          moveAndPassiveSkillDigitEntry.param8
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="8" ]',
-          moveAndPassiveSkillDigitEntry.param9
-        );
-        finalSkillDescription = finalSkillDescription.replace(
-          '[Digit:2digits Idx="9" ]',
-          moveAndPassiveSkillDigitEntry.param10
-        );
-
-        if (finalSkillDescription.includes('EN:Qty')) {
-          if (moveAndPassiveSkillDigitEntry.param1.toString() === '1') {
-            finalSkillDescription = finalSkillDescription.replace(
-              '[EN:Qty S="rank" P="ranks" ]',
-              'rank'
-            );
-          } else {
-            finalSkillDescription = finalSkillDescription.replace(
-              '[EN:Qty S="rank" P="ranks" ]',
-              'ranks'
-            );
-          }
-        }
-
-        // const mapObj = {
-        //   '[Digit:1digit ]': moveAndPassiveSkillDigitEntry.param1,
-        //   '[Digit:2digits ]': moveAndPassiveSkillDigitEntry.param1,
-        //   '[Digit:2digits Idx="1" ]': moveAndPassiveSkillDigitEntry.param2,
-        //   '[Digit:2digits Idx="2" ]': moveAndPassiveSkillDigitEntry.param3,
-        //   '[Digit:2digits Idx="3" ]': moveAndPassiveSkillDigitEntry.param4,
-        //   '[Digit:2digits Idx="4" ]': moveAndPassiveSkillDigitEntry.param5,
-        //   '[Digit:2digits Idx="5" ]': moveAndPassiveSkillDigitEntry.param6,
-        //   '[Digit:2digits Idx="6" ]': moveAndPassiveSkillDigitEntry.param7,
-        //   '[Digit:2digits Idx="7" ]': moveAndPassiveSkillDigitEntry.param8,
-        //   '[Digit:2digits Idx="8" ]': moveAndPassiveSkillDigitEntry.param9,
-        //   '[Digit:2digits Idx="9" ]': moveAndPassiveSkillDigitEntry.param10,
-        // };
-        // new RegExp(Object.keys(mapObj).join('|'), 'gi');
-        // // console.log(passiveSkillDescriptionPartsDB[language][index]);
-        // var re = new RegExp(Object.keys(mapObj).join('|'), 'gi');
-        // console.log('index', index);
-        // console.log(
-        //   'moveAndPassiveSkillDigitEntry',
-        //   moveAndPassiveSkillDigitEntry
-        // );
-        // console.log(passiveSkillDescriptionPartsDB[language][index]);
-        // finalSkillDescription = passiveSkillDescriptionPartsDB[language][
-        //   index
-        // ].replace(re, function (matched) {
-        //   return mapObj[matched];
-        // });
-        // console.log('finalSkillDescription', finalSkillDescription);
       } else {
         finalSkillDescription = passiveSkillDescriptionPartsDB[language][index];
       }
