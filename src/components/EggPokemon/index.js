@@ -10,7 +10,7 @@ import { getEggPokemonDataByNameAndRole } from '../../utils/functions';
 const regExp = /\(([^)]+)\)/;
 
 const EggPokemon = () => {
-  const [pokemon, setPokemon] = useState('Ninetales (Tech)');
+  const [pokemon, setPokemon] = useState('Marowak (Tech)');
   const [syncLevel, setSyncLevel] = useState('1');
   const language = useSelector((state) => state.language.currentLanguage);
 

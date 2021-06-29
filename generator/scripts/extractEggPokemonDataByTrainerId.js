@@ -6,6 +6,7 @@ const moveDB = require('../rawdata/protodump/ModifiedMove.json');
 const trainerDB = require('../rawdata/protodump/Trainer.json');
 const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
 const monsterVariationDB = require('../rawdata/protodump/MonsterVariation.json');
+const moveAndPassiveSkillDigitDB = require('../rawdata/protodump/MoveAndPassiveSkillDigit.json');
 
 const pokemonNameDBde = require('../rawdata/lsddump/monster_name_de.json');
 const pokemonNameDBen = require('../rawdata/lsddump/monster_name_en.json');
@@ -43,6 +44,15 @@ const moveDescriptionDBja = require('../rawdata/lsddump/move_description_ja.json
 const moveDescriptionDBko = require('../rawdata/lsddump/move_description_ko.json');
 const moveDescriptionDBzh = require('../rawdata/lsddump/move_description_zh-TW.json');
 
+const moveDescriptionPartsDBde = require('../rawdata/lsddump/move_description_parts_de.json');
+const moveDescriptionPartsDBen = require('../rawdata/lsddump/move_description_parts_en.json');
+const moveDescriptionPartsDBes = require('../rawdata/lsddump/move_description_parts_es.json');
+const moveDescriptionPartsDBfr = require('../rawdata/lsddump/move_description_parts_fr.json');
+const moveDescriptionPartsDBit = require('../rawdata/lsddump/move_description_parts_it.json');
+const moveDescriptionPartsDBja = require('../rawdata/lsddump/move_description_parts_ja.json');
+const moveDescriptionPartsDBko = require('../rawdata/lsddump/move_description_parts_ko.json');
+const moveDescriptionPartsDBzh = require('../rawdata/lsddump/move_description_parts_zh-TW.json');
+
 const moveTargetTypeDBde = require('../rawdata/lsddump/move_target_type_de.json');
 const moveTargetTypeDBen = require('../rawdata/lsddump/move_target_type_en.json');
 const moveTargetTypeDBes = require('../rawdata/lsddump/move_target_type_es.json');
@@ -69,6 +79,42 @@ const passiveDescriptionDBit = require('../rawdata/lsddump/passive_skill_descrip
 const passiveDescriptionDBja = require('../rawdata/lsddump/passive_skill_description_ja.json');
 const passiveDescriptionDBko = require('../rawdata/lsddump/passive_skill_description_ko.json');
 const passiveDescriptionDBzh = require('../rawdata/lsddump/passive_skill_description_zh-TW.json');
+
+const passiveSkillNamePartsDBde = require('../rawdata/lsddump/passive_skill_name_parts_de.json');
+const passiveSkillNamePartsDBen = require('../rawdata/lsddump/passive_skill_name_parts_en.json');
+const passiveSkillNamePartsDBes = require('../rawdata/lsddump/passive_skill_name_parts_es.json');
+const passiveSkillNamePartsDBfr = require('../rawdata/lsddump/passive_skill_name_parts_fr.json');
+const passiveSkillNamePartsDBit = require('../rawdata/lsddump/passive_skill_name_parts_it.json');
+const passiveSkillNamePartsDBja = require('../rawdata/lsddump/passive_skill_name_parts_ja.json');
+const passiveSkillNamePartsDBko = require('../rawdata/lsddump/passive_skill_name_parts_ko.json');
+const passiveSkillNamePartsDBzh = require('../rawdata/lsddump/passive_skill_name_parts_zh-TW.json');
+
+const passiveSkillDescriptionDBde = require('../rawdata/lsddump/passive_skill_description_de.json');
+const passiveSkillDescriptionDBen = require('../rawdata/lsddump/passive_skill_description_en.json');
+const passiveSkillDescriptionDBes = require('../rawdata/lsddump/passive_skill_description_es.json');
+const passiveSkillDescriptionDBfr = require('../rawdata/lsddump/passive_skill_description_fr.json');
+const passiveSkillDescriptionDBit = require('../rawdata/lsddump/passive_skill_description_it.json');
+const passiveSkillDescriptionDBja = require('../rawdata/lsddump/passive_skill_description_ja.json');
+const passiveSkillDescriptionDBko = require('../rawdata/lsddump/passive_skill_description_ko.json');
+const passiveSkillDescriptionDBzh = require('../rawdata/lsddump/passive_skill_description_zh-TW.json');
+
+const passiveSkillNameDBde = require('../rawdata/lsddump/passive_skill_name_de.json');
+const passiveSkillNameDBen = require('../rawdata/lsddump/passive_skill_name_en.json');
+const passiveSkillNameDBes = require('../rawdata/lsddump/passive_skill_name_es.json');
+const passiveSkillNameDBfr = require('../rawdata/lsddump/passive_skill_name_fr.json');
+const passiveSkillNameDBit = require('../rawdata/lsddump/passive_skill_name_it.json');
+const passiveSkillNameDBja = require('../rawdata/lsddump/passive_skill_name_ja.json');
+const passiveSkillNameDBko = require('../rawdata/lsddump/passive_skill_name_ko.json');
+const passiveSkillNameDBzh = require('../rawdata/lsddump/passive_skill_name_zh-TW.json');
+
+const passiveSkillDescriptionPartsDBde = require('../rawdata/lsddump/passive_skill_description_parts_de.json');
+const passiveSkillDescriptionPartsDBen = require('../rawdata/lsddump/passive_skill_description_parts_en.json');
+const passiveSkillDescriptionPartsDBes = require('../rawdata/lsddump/passive_skill_description_parts_es.json');
+const passiveSkillDescriptionPartsDBfr = require('../rawdata/lsddump/passive_skill_description_parts_fr.json');
+const passiveSkillDescriptionPartsDBit = require('../rawdata/lsddump/passive_skill_description_parts_it.json');
+const passiveSkillDescriptionPartsDBja = require('../rawdata/lsddump/passive_skill_description_parts_ja.json');
+const passiveSkillDescriptionPartsDBko = require('../rawdata/lsddump/passive_skill_description_parts_ko.json');
+const passiveSkillDescriptionPartsDBzh = require('../rawdata/lsddump/passive_skill_description_parts_zh-TW.json');
 
 const pokemonNameDB = {
   de: pokemonNameDBde,
@@ -114,6 +160,17 @@ const moveDescriptionDB = {
   zh: moveDescriptionDBzh,
 };
 
+const moveDescriptionPartsDB = {
+  de: moveDescriptionPartsDBde,
+  en: moveDescriptionPartsDBen,
+  es: moveDescriptionPartsDBes,
+  fr: moveDescriptionPartsDBfr,
+  it: moveDescriptionPartsDBit,
+  ja: moveDescriptionPartsDBja,
+  ko: moveDescriptionPartsDBko,
+  zh: moveDescriptionPartsDBzh,
+};
+
 const moveTargetTypeDB = {
   de: moveTargetTypeDBde,
   en: moveTargetTypeDBen,
@@ -147,11 +204,55 @@ const passiveDescriptionDB = {
   zh: passiveDescriptionDBzh,
 };
 
+const passiveSkillNameDB = {
+  de: passiveSkillNameDBde,
+  en: passiveSkillNameDBen,
+  es: passiveSkillNameDBes,
+  fr: passiveSkillNameDBfr,
+  it: passiveSkillNameDBit,
+  ja: passiveSkillNameDBja,
+  ko: passiveSkillNameDBko,
+  zh: passiveSkillNameDBzh,
+};
+
+const passiveSkillDescriptionDB = {
+  de: passiveSkillDescriptionDBde,
+  en: passiveSkillDescriptionDBen,
+  es: passiveSkillDescriptionDBes,
+  fr: passiveSkillDescriptionDBfr,
+  it: passiveSkillDescriptionDBit,
+  ja: passiveSkillDescriptionDBja,
+  ko: passiveSkillDescriptionDBko,
+  zh: passiveSkillDescriptionDBzh,
+};
+
+const passiveSkillNamePartsDB = {
+  de: passiveSkillNamePartsDBde,
+  en: passiveSkillNamePartsDBen,
+  es: passiveSkillNamePartsDBes,
+  fr: passiveSkillNamePartsDBfr,
+  it: passiveSkillNamePartsDBit,
+  ja: passiveSkillNamePartsDBja,
+  ko: passiveSkillNamePartsDBko,
+  zh: passiveSkillNamePartsDBzh,
+};
+
+const passiveSkillDescriptionPartsDB = {
+  de: passiveSkillDescriptionPartsDBde,
+  en: passiveSkillDescriptionPartsDBen,
+  es: passiveSkillDescriptionPartsDBes,
+  fr: passiveSkillDescriptionPartsDBfr,
+  it: passiveSkillDescriptionPartsDBit,
+  ja: passiveSkillDescriptionPartsDBja,
+  ko: passiveSkillDescriptionPartsDBko,
+  zh: passiveSkillDescriptionPartsDBzh,
+};
+
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
 // Update this list (of trainerId) based on new datamine
 const trainerList = [
-  // Egg mons trainerId from Trainer.json
+  // Eggmons trainerId from Trainer.json
   '18000000000',
   '18000020000',
   '18000020011',
@@ -180,6 +281,7 @@ const trainerList = [
   '18000020161',
   '18000020166',
   '18000020171',
+  '18000020176',
   '18000020181',
   '18000020186',
   '18000020191',
@@ -222,6 +324,16 @@ const trainerList = [
   '18000020456',
   '18000020461',
   '18000020476',
+  '18000020481',
+  '18000020486',
+  '18000020491',
+  '18000020496',
+  '18000020501',
+  '18000020506',
+  '18000020511',
+  '18000020516',
+  '18000020521',
+  '18000020531',
   '18000030011',
   '18000030021',
   '18000030026',
@@ -248,6 +360,7 @@ const trainerList = [
   '18000030161',
   '18000030166',
   '18000030171',
+  '18000030176',
   '18000030181',
   '18000030186',
   '18000030191',
@@ -290,6 +403,14 @@ const trainerList = [
   '18000030456',
   '18000030461',
   '18000030476',
+  '18000030481',
+  '18000030486',
+  '18000030491',
+  '18000030496',
+  '18000030501',
+  '18000030506',
+  '18000030511',
+  '18000030516',
   '18000040001',
   '18000040004',
   '18000040007',
@@ -362,6 +483,14 @@ const trainerList = [
   '18000040456',
   '18000040461',
   '18000040476',
+  '18000040481',
+  '18000040486',
+  '18000040491',
+  '18000040496',
+  '18000040501',
+  '18000040506',
+  '18000040511',
+  '18000040516',
   '18000120000',
 ];
 
@@ -373,6 +502,308 @@ const trainerList = [
 /*
  * Usage i.e: node extractEggPokemonDataByTrainerId.js
  * */
+
+const replaceDigit = (str, moveAndPassiveSkillDigitEntry) => {
+  let updatedStr = str
+    .split('[Digit:1digit ]')
+    .join(moveAndPassiveSkillDigitEntry.param1)
+    .split('[Digit:1digit Idx="1" ]')
+    .join(moveAndPassiveSkillDigitEntry.param2)
+    .split('[Digit:1digit Idx="2" ]')
+    .join(moveAndPassiveSkillDigitEntry.param3)
+    .split('[Digit:1digit Idx="3" ]')
+    .join(moveAndPassiveSkillDigitEntry.param4)
+    .split('[Digit:1digit Idx="4" ]')
+    .join(moveAndPassiveSkillDigitEntry.param5)
+    .split('[Digit:1digit Idx="5" ]')
+    .join(moveAndPassiveSkillDigitEntry.param6)
+    .split('[Digit:1digit Idx="6" ]')
+    .join(moveAndPassiveSkillDigitEntry.param7)
+    .split('[Digit:1digit Idx="7" ]')
+    .join(moveAndPassiveSkillDigitEntry.param8)
+    .split('[Digit:1digit Idx="8" ]')
+    .join(moveAndPassiveSkillDigitEntry.param9)
+    .split('[Digit:1digit Idx="9" ]')
+    .join(moveAndPassiveSkillDigitEntry.param10)
+    .split('[Digit:2digits ]')
+    .join(moveAndPassiveSkillDigitEntry.param1)
+    .split('[Digit:2digits Idx="1" ]')
+    .join(moveAndPassiveSkillDigitEntry.param2)
+    .split('[Digit:2digits Idx="2" ]')
+    .join(moveAndPassiveSkillDigitEntry.param3)
+    .split('[Digit:2digits Idx="3" ]')
+    .join(moveAndPassiveSkillDigitEntry.param4)
+    .split('[Digit:2digits Idx="4" ]')
+    .join(moveAndPassiveSkillDigitEntry.param5)
+    .split('[Digit:2digits Idx="5" ]')
+    .join(moveAndPassiveSkillDigitEntry.param6)
+    .split('[Digit:2digits Idx="6" ]')
+    .join(moveAndPassiveSkillDigitEntry.param7)
+    .split('[Digit:2digits Idx="7" ]')
+    .join(moveAndPassiveSkillDigitEntry.param8)
+    .split('[Digit:2digits Idx="8" ]')
+    .join(moveAndPassiveSkillDigitEntry.param9)
+    .split('[Digit:2digits Idx="9" ]')
+    .join(moveAndPassiveSkillDigitEntry.param10);
+
+  if (updatedStr.includes('EN:Qty')) {
+    if (updatedStr.includes('Ref=')) {
+      let iteratorOfRef = updatedStr.matchAll('Ref=');
+      let arrayOfRefs = [];
+      for (const Ref of iteratorOfRef) {
+        arrayOfRefs.push(updatedStr.slice(Ref.index + 5, Ref.index + 6));
+      }
+      for (const Ref of arrayOfRefs) {
+        let param;
+        if (Ref.toString() === '1') {
+          param = moveAndPassiveSkillDigitEntry.param2;
+        } else if (Ref.toString() === '2') {
+          param = moveAndPassiveSkillDigitEntry.param3;
+        } else if (Ref.toString() === '3') {
+          param = moveAndPassiveSkillDigitEntry.param4;
+        } else if (Ref.toString() === '4') {
+          param = moveAndPassiveSkillDigitEntry.param5;
+        } else if (Ref.toString() === '5') {
+          param = moveAndPassiveSkillDigitEntry.param6;
+        } else if (Ref.toString() === '6') {
+          param = moveAndPassiveSkillDigitEntry.param7;
+        } else if (Ref.toString() === '7') {
+          param = moveAndPassiveSkillDigitEntry.param8;
+        } else if (Ref.toString() === '8') {
+          param = moveAndPassiveSkillDigitEntry.param9;
+        } else if (Ref.toString() === '9') {
+          param = moveAndPassiveSkillDigitEntry.param10;
+        }
+        updatedStr = updatedStr
+          .split(
+            updatedStr.slice(
+              updatedStr.indexOf(`Ref="${Ref}"`) - 8,
+              updatedStr.indexOf(`Ref="${Ref}"`) + 28
+            )
+          )
+          .join(param.toString() === '1' ? 'rank' : 'ranks');
+      }
+    } else {
+      updatedStr = updatedStr
+        .split('[EN:Qty S="rank" P="ranks" ]')
+        .join(
+          moveAndPassiveSkillDigitEntry.param1.toString() === '1'
+            ? 'rank'
+            : 'ranks'
+        );
+    }
+  }
+
+  return updatedStr;
+};
+
+const getUpdatedMoveDescription = (language, moveId) => {
+  // console.log('moveId', moveId);
+  let originalMoveDescription = moveDescriptionDB[language][moveId];
+  if (originalMoveDescription && originalMoveDescription.includes('Idx')) {
+    let iteratorOfIdx = originalMoveDescription.matchAll('Idx');
+    let arrayOfIdxIndex = [];
+    let arrayOfMoveDescriptionParts = [];
+    for (const Idx of iteratorOfIdx) {
+      // console.log(`For moveId=${moveId}: Found ${Idx[0]} at ${Idx.index}`);
+      // console.log(
+      //   `For moveId=${moveId}: Idx has the following properties: ${Object.keys(Idx)}
+      //   index=${Idx.index}
+      //   input=${Idx.input}
+      //   groups=${Idx.groups}
+      //   `
+      // );
+      arrayOfIdxIndex.push(
+        originalMoveDescription.slice(Idx.index + 5, Idx.index + 11)
+      );
+    }
+    for (const index of arrayOfIdxIndex) {
+      let moveAndPassiveSkillDigitEntry;
+
+      moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+        if (entry.id.toString() === moveId.toString()) {
+          moveAndPassiveSkillDigitEntry = entry;
+        }
+      });
+      let finalMoveDescription = '';
+      if (moveAndPassiveSkillDigitEntry) {
+        finalMoveDescription = moveDescriptionPartsDB[language][index];
+        finalMoveDescription = replaceDigit(
+          finalMoveDescription,
+          moveAndPassiveSkillDigitEntry
+        );
+
+        // if (finalMoveDescription.includes('EN:Qty')) {
+        //   if (moveAndPassiveSkillDigitEntry.param1.toString() === '1') {
+        //     finalMoveDescription = finalMoveDescription.replace(
+        //       '[EN:Qty S="rank" P="ranks" ]',
+        //       'rank'
+        //     );
+
+        //     finalMoveDescription = finalMoveDescription.replace(
+        //       '[EN:Qty Ref="1" S="rank" P="ranks" ]',
+        //       'rank'
+        //     );
+        //     finalMoveDescription = finalMoveDescription.replace(
+        //       '[EN:Qty Ref="2" S="rank" P="ranks" ]',
+        //       'rank'
+        //     );
+        //   } else {
+        //     finalMoveDescription = finalMoveDescription.replace(
+        //       '[EN:Qty S="rank" P="ranks" ]',
+        //       'ranks'
+        //     );
+
+        //     finalMoveDescription = finalMoveDescription.replace(
+        //       '[EN:Qty Ref="1" S="rank" P="ranks" ]',
+        //       'ranks'
+        //     );
+
+        //     finalMoveDescription = finalMoveDescription.replace(
+        //       '[EN:Qty Ref="2" S="rank" P="ranks" ]',
+        //       'ranks'
+        //     );
+        //   }
+        // }
+      } else {
+        finalMoveDescription = moveDescriptionPartsDB[language][index];
+      }
+
+      arrayOfMoveDescriptionParts.push(finalMoveDescription);
+    }
+    return arrayOfMoveDescriptionParts.join('\n');
+  } else {
+    return originalMoveDescription;
+  }
+};
+
+const getUpdatedPassiveSkillName = (language, passiveId) => {
+  // console.log('passiveId', passiveId);
+  let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
+  if (passiveId) {
+    if (originalPassiveSkillName.includes('Idx')) {
+      let iteratorOfIdx = originalPassiveSkillName.matchAll('Idx');
+      let arrayOfIdxIndex = [];
+      let arrayOfPassiveSkillNameParts = [];
+      for (const Idx of iteratorOfIdx) {
+        // console.log(`For moveId=${moveId}: Found ${Idx[0]} at ${Idx.index}`);
+        // console.log(
+        //   `For moveId=${moveId}: Idx has the following properties: ${Object.keys(Idx)}
+        //   index=${Idx.index}
+        //   input=${Idx.input}
+        //   groups=${Idx.groups}
+        //   `
+        // );
+        arrayOfIdxIndex.push(
+          originalPassiveSkillName.slice(Idx.index + 5, Idx.index + 13)
+        );
+      }
+      for (const index of arrayOfIdxIndex) {
+        let finalSkillName = '';
+        if (
+          passiveSkillNamePartsDB[language][index.toString()].includes(
+            'Name:PassiveSkillNameDigit'
+          )
+        ) {
+          let digit = passiveId.toString().slice(-1);
+          // if (moveId.toString() === '0') {
+          //   // moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+          //   //   if (entry.id.toString() === passiveId.toString()) {
+          //   //     digit = entry.param1;
+          //   //   } else {
+          //   //     digit = passiveId.toString().slice(-1);
+          //   //   }
+          //   // });
+          //   finalSkillName = passiveSkillNamePartsDB[language][
+          //     index.toString()
+          //   ].replace('[Name:PassiveSkillNameDigit ]', digit);
+          // } else {
+          // moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+          //   if (entry.id.toString() === moveId.toString()) {
+          //     digit = entry.param1;
+          //   }
+          // });
+          finalSkillName =
+            // moveNameDB[language][moveId] +
+            // ' ' +
+            passiveSkillNamePartsDB[language][index.toString()].replace(
+              '[Name:PassiveSkillNameDigit ]',
+              digit
+            );
+          // }
+        } else {
+          finalSkillName = passiveSkillNamePartsDB[language][index.toString()];
+        }
+
+        arrayOfPassiveSkillNameParts.push(finalSkillName);
+      }
+      // console.log('arrayOfPassiveSkillNameParts', arrayOfPassiveSkillNameParts);
+      return arrayOfPassiveSkillNameParts.join('\n');
+    } else {
+      return originalPassiveSkillName;
+    }
+  } else {
+    return originalPassiveSkillName;
+  }
+};
+
+const getUpdatedPassiveSkillDescription = (language, passiveId) => {
+  let originalPassiveSkillDescription =
+    passiveSkillDescriptionDB[language][passiveId];
+  if (passiveId) {
+    if (originalPassiveSkillDescription.includes('Idx')) {
+      let iteratorOfIdx = originalPassiveSkillDescription.matchAll('Idx');
+      let arrayOfIdxIndex = [];
+      let arrayOfPassiveSkillDescriptionParts = [];
+      for (const Idx of iteratorOfIdx) {
+        // console.log(`For moveId=${moveId}: Found ${Idx[0]} at ${Idx.index}`);
+        // console.log(
+        //   `For moveId=${moveId}: Idx has the following properties: ${Object.keys(Idx)}
+        //   index=${Idx.index}
+        //   input=${Idx.input}
+        //   groups=${Idx.groups}
+        //   `
+        // );
+        arrayOfIdxIndex.push(
+          originalPassiveSkillDescription.slice(Idx.index + 5, Idx.index + 12)
+        );
+      }
+      for (const index of arrayOfIdxIndex) {
+        // console.log('index', index);
+        let moveAndPassiveSkillDigitEntry;
+
+        moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
+          if (entry.id.toString() === passiveId.toString()) {
+            moveAndPassiveSkillDigitEntry = entry;
+          }
+        });
+        let finalSkillDescription = '';
+        if (moveAndPassiveSkillDigitEntry) {
+          finalSkillDescription =
+            passiveSkillDescriptionPartsDB[language][index];
+          finalSkillDescription = replaceDigit(
+            finalSkillDescription,
+            moveAndPassiveSkillDigitEntry
+          );
+        } else {
+          finalSkillDescription =
+            passiveSkillDescriptionPartsDB[language][index];
+        }
+
+        arrayOfPassiveSkillDescriptionParts.push(finalSkillDescription);
+      }
+      // console.log(
+      //   'arrayOfPassiveSkillDescriptionParts',
+      //   arrayOfPassiveSkillDescriptionParts
+      // );
+      return arrayOfPassiveSkillDescriptionParts.join('\n');
+    } else {
+      return originalPassiveSkillDescription;
+    }
+  } else {
+    return originalPassiveSkillDescription;
+  }
+};
 
 const extractSyncPairDataByTrainerBaseId = () => {
   const syncPairDataArray = [];
@@ -395,6 +826,8 @@ const extractSyncPairDataByTrainerBaseId = () => {
       trainerIdFromList !== '18000000000' &&
       trainerIdFromList !== '18000020000' &&
       trainerIdFromList !== '18000120000' &&
+      trainerIdFromList !== '18000020521' && // Hero & Regirock
+      trainerIdFromList !== '18000020531' && // Hero & Cobalion
       trainerIdFromList.slice(-1) !== '6' // Ids that end in '6' seem to be duplicates
     ) {
       // Find entry in Trainer.json
@@ -693,14 +1126,22 @@ const extractSyncPairDataByTrainerBaseId = () => {
           move3NameByLanguage[language] = moveNameDB[language][move3Id];
           move4NameByLanguage[language] =
             move4Id !== -1 ? moveNameDB[language][move4Id] : '';
-          move1DescriptionByLanguage[language] =
-            moveDescriptionDB[language][move1Id];
-          move2DescriptionByLanguage[language] =
-            moveDescriptionDB[language][move2Id];
-          move3DescriptionByLanguage[language] =
-            moveDescriptionDB[language][move3Id];
-          move4DescriptionByLanguage[language] =
-            moveDescriptionDB[language][move4Id];
+          move1DescriptionByLanguage[language] = getUpdatedMoveDescription(
+            language,
+            move1Id
+          );
+          move2DescriptionByLanguage[language] = getUpdatedMoveDescription(
+            language,
+            move2Id
+          );
+          move3DescriptionByLanguage[language] = getUpdatedMoveDescription(
+            language,
+            move3Id
+          );
+          move4DescriptionByLanguage[language] = getUpdatedMoveDescription(
+            language,
+            move4Id
+          );
           move1TargetTypeByLanguage[language] =
             moveTargetTypeDB[language][move1.target];
           move2TargetTypeByLanguage[language] =
@@ -893,18 +1334,24 @@ const extractSyncPairDataByTrainerBaseId = () => {
           };
 
         languages.forEach((language) => {
-          passive1NameByLanguage[language] =
-            passiveNameDB[language][passive1Id];
-          passive2NameByLanguage[language] =
-            passiveNameDB[language][passive2Id];
-          passive3NameByLanguage[language] =
-            passiveNameDB[language][passive3Id];
+          passive1NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            passive1Id
+          );
+          passive2NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            passive2Id
+          );
+          passive3NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            passive3Id
+          );
           passive1DescriptionByLanguage[language] =
-            passiveDescriptionDB[language][passive1Id];
+            getUpdatedPassiveSkillDescription(language, passive1Id);
           passive2DescriptionByLanguage[language] =
-            passiveDescriptionDB[language][passive2Id];
+            getUpdatedPassiveSkillDescription(language, passive2Id);
           passive3DescriptionByLanguage[language] =
-            passiveDescriptionDB[language][passive3Id];
+            getUpdatedPassiveSkillDescription(language, passive3Id);
         });
 
         passive1Id !== 0 &&
