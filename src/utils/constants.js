@@ -42,6 +42,7 @@ export const arrayOfTrainerIdsWithSamePokemon = [
   10148000001, // Morty & Mismagius
   10001000000, // Kukui & Lycanroc
   10051000000, // Olivia & Lycanroc
+  10129000001, // Zinnia & Salamence
 ];
 
 export const CLOUD_FUNCTIONS_URL =
