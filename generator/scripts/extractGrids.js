@@ -388,6 +388,9 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
 };
 
 const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
+  if (moveId.toString() === '94' && passiveId.toString() === '22010302') {
+    console.log('on a roll');
+  }
   let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
   if (originalPassiveSkillName.includes('Idx')) {
     let iteratorOfIdx = originalPassiveSkillName.matchAll('Idx');
@@ -426,6 +429,9 @@ const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
             index.toString()
           ].replace('[Name:PassiveSkillNameDigit ]', digit);
         } else {
+          // if (moveId.toString() === '94' && passive.toString() === '22010302') {
+          //   console.log('on a roll');
+          // }
           // moveAndPassiveSkillDigitDB.entries.forEach((entry) => {
           //   if (entry.id.toString() === moveId.toString()) {
           //     digit = entry.param1;
@@ -448,7 +454,12 @@ const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
     // console.log('arrayOfPassiveSkillNameParts', arrayOfPassiveSkillNameParts);
     return arrayOfPassiveSkillNameParts.join('\n');
   } else {
-    return originalPassiveSkillName;
+    if (moveId.toString() === '0') {
+      return originalPassiveSkillName;
+    } else {
+      return moveNameDB[language][moveId] + ' ' + originalPassiveSkillName;
+    }
+    // return originalPassiveSkillName;
   }
 };
 
