@@ -78,14 +78,32 @@ class GridMap extends Component {
 
           let cellData = {};
           let selectedCellByIdFromUrl = {};
-
+          console.log('getQueryStringValue', getQueryStringValue('grid'));
           getQueryStringValue('grid').map((id) => {
-            cellData =
+            console.log('id', id);
+            if (
               allSyncGrids[this.props.language][
                 `trainerId_${
                   this.props.trainerId
                 }_GridData${this.props.language.toUpperCase()}`
-              ][Number(id)];
+              ][Number(id)]
+            ) {
+              cellData =
+                allSyncGrids[this.props.language][
+                  `trainerId_${
+                    this.props.trainerId
+                  }_GridData${this.props.language.toUpperCase()}`
+                ][Number(id)];
+            } else {
+              cellData =
+                allSyncGrids[this.props.language][
+                  `trainerId_${
+                    this.props.trainerId
+                  }_GridData${this.props.language.toUpperCase()}`
+                ][Number(id) - 42];
+            }
+
+            console.log('cellData', cellData);
 
             selectedCellByIdFromUrl = {
               cellId: cellData.cellId,
