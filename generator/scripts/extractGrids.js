@@ -388,9 +388,6 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
 };
 
 const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
-  if (moveId.toString() === '94' && passiveId.toString() === '22010302') {
-    console.log('on a roll');
-  }
   let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
   if (originalPassiveSkillName.includes('Idx')) {
     let iteratorOfIdx = originalPassiveSkillName.matchAll('Idx');
