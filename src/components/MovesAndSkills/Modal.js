@@ -16,7 +16,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
-import UI from '../../utils/translations';
+import SyncIcon from '@material-ui/icons/Sync';
+// import UI from '../../utils/translations';
 import RarityDropdown from './RarityDropdown';
 import PotentialDropdown from './PotentialDropdown';
 import { getPokemonDataByTrainerId } from '../../utils/functions';
@@ -36,7 +37,8 @@ function Stats(props) {
     selectedStatTiles,
     rarity,
     selectedRarity,
-    isMega,
+    variationForm,
+    isVariationForm,
     // pokemon,
     trainerId,
   } = props;
@@ -63,7 +65,11 @@ function Stats(props) {
   let spaUpFromGrid = 0;
   let spdUpFromGrid = 0;
   let speUpFromGrid = 0;
-  let atkUpFromMega, defUpFromMega, spaUpFromMega, spdUpFromMega, speUpFromMega;
+  let atkUpFromVariation,
+    defUpFromVariation,
+    spaUpFromVariation,
+    spdUpFromVariation,
+    speUpFromVariation;
 
   if (selectedStatTiles) {
     hpUpFromGrid = selectedStatTiles.hp ? selectedStatTiles.hp : hpUpFromGrid;
@@ -108,12 +114,12 @@ function Stats(props) {
   let baseSpd = Math.floor(lv135Spd + (selectedRarity - rarity) * 20);
   let baseSpe = Math.floor(lv135Spe + (selectedRarity - rarity) * 20);
 
-  if (isMega) {
-    atkUpFromMega = Math.floor(baseAtk * (atkScale / 100 - 1));
-    defUpFromMega = Math.floor(baseDef * (defScale / 100 - 1));
-    spaUpFromMega = Math.floor(baseSpa * (spaScale / 100 - 1));
-    spdUpFromMega = Math.floor(baseSpd * (spdScale / 100 - 1));
-    speUpFromMega = Math.floor(baseSpe * (speScale / 100 - 1));
+  if (isVariationForm) {
+    atkUpFromVariation = Math.floor(baseAtk * (atkScale / 100 - 1));
+    defUpFromVariation = Math.floor(baseDef * (defScale / 100 - 1));
+    spaUpFromVariation = Math.floor(baseSpa * (spaScale / 100 - 1));
+    spdUpFromVariation = Math.floor(baseSpd * (spdScale / 100 - 1));
+    speUpFromVariation = Math.floor(baseSpe * (speScale / 100 - 1));
   }
 
   return (
@@ -124,7 +130,9 @@ function Stats(props) {
           HP
         </TableCell>
         <TableCell align="right">{baseHp}</TableCell>
-        {isMega ? <TableCell align="right">{'-'}</TableCell> : null}
+        {isVariationForm && variationForm.isMega ? (
+          <TableCell align="right">{'-'}</TableCell>
+        ) : null}
         <TableCell align="right">{hpUpFromGrid || '-'}</TableCell>
         <TableCell align="right">{baseHp + hpUpFromGrid}</TableCell>
       </TableRow>
@@ -134,13 +142,13 @@ function Stats(props) {
           Attack
         </TableCell>
         <TableCell align="right">{baseAtk}</TableCell>
-        {isMega ? (
-          <TableCell align="right">{atkUpFromMega || '-'}</TableCell>
+        {isVariationForm && variationForm.isMega ? (
+          <TableCell align="right">{atkUpFromVariation || '-'}</TableCell>
         ) : null}
         <TableCell align="right">{atkUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {isMega
-            ? baseAtk + atkUpFromGrid + atkUpFromMega
+          {isVariationForm && variationForm.isMega
+            ? baseAtk + atkUpFromGrid + atkUpFromVariation
             : baseAtk + atkUpFromGrid}
         </TableCell>
       </TableRow>
@@ -150,13 +158,13 @@ function Stats(props) {
           Defense
         </TableCell>
         <TableCell align="right">{baseDef}</TableCell>
-        {isMega ? (
-          <TableCell align="right">{defUpFromMega || '-'}</TableCell>
+        {isVariationForm && variationForm.isMega ? (
+          <TableCell align="right">{defUpFromVariation || '-'}</TableCell>
         ) : null}
         <TableCell align="right">{defUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {isMega
-            ? baseDef + defUpFromGrid + defUpFromMega
+          {isVariationForm
+            ? baseDef + defUpFromGrid + defUpFromVariation
             : baseDef + defUpFromGrid}
         </TableCell>
       </TableRow>
@@ -166,13 +174,13 @@ function Stats(props) {
           Sp.Atk
         </TableCell>
         <TableCell align="right">{baseSpa}</TableCell>
-        {isMega ? (
-          <TableCell align="right">{spaUpFromMega || '-'}</TableCell>
+        {isVariationForm && variationForm.isMega ? (
+          <TableCell align="right">{spaUpFromVariation || '-'}</TableCell>
         ) : null}
         <TableCell align="right">{spaUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {isMega
-            ? baseSpa + spaUpFromGrid + spaUpFromMega
+          {isVariationForm && variationForm.isMega
+            ? baseSpa + spaUpFromGrid + spaUpFromVariation
             : baseSpa + spaUpFromGrid}
         </TableCell>
       </TableRow>
@@ -182,13 +190,13 @@ function Stats(props) {
           Sp.Def
         </TableCell>
         <TableCell align="right">{baseSpd}</TableCell>
-        {isMega ? (
-          <TableCell align="right">{spdUpFromMega || '-'}</TableCell>
+        {isVariationForm && variationForm.isMega ? (
+          <TableCell align="right">{spdUpFromVariation || '-'}</TableCell>
         ) : null}
         <TableCell align="right">{spdUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {isMega
-            ? baseSpd + spdUpFromGrid + spdUpFromMega
+          {isVariationForm && variationForm.isMega
+            ? baseSpd + spdUpFromGrid + spdUpFromVariation
             : baseSpd + spdUpFromGrid}
         </TableCell>
       </TableRow>
@@ -198,13 +206,13 @@ function Stats(props) {
           Speed
         </TableCell>
         <TableCell align="right">{baseSpe}</TableCell>
-        {isMega ? (
-          <TableCell align="right">{speUpFromMega || '-'}</TableCell>
+        {isVariationForm && variationForm.isMega ? (
+          <TableCell align="right">{speUpFromVariation || '-'}</TableCell>
         ) : null}
         <TableCell align="right">{speUpFromGrid || '-'}</TableCell>
         <TableCell align="right">
-          {isMega
-            ? baseSpe + speUpFromGrid + speUpFromMega
+          {isVariationForm && variationForm.isMega
+            ? baseSpe + speUpFromGrid + speUpFromVariation
             : baseSpe + speUpFromGrid}
         </TableCell>
       </TableRow>
@@ -631,14 +639,15 @@ export default function MovesAndSkillsModal(props) {
     stats,
     moves,
     passives,
-    megaForm,
+    variationForm,
     rarity,
     pokemonNameByLanguage,
     trainerNameByLanguage,
     roleTypeNameByLanguage,
+    monsterFormByLanguage,
   } = pokemonData;
 
-  const [isMega, setIsMega] = useState(false);
+  const [isVariationForm, setIsVariationForm] = useState(false);
 
   const [selectedRarity, setSelectedRarity] = useState(rarity);
 
@@ -674,11 +683,11 @@ export default function MovesAndSkillsModal(props) {
 
   const handleOnCloseMovesAndSkillsModal = () => {
     setIsMovesAndSkillsModalVisible(false);
-    setIsMega(false);
+    setIsVariationForm(false);
   };
 
-  const handleOnClickMegaButton = (e) => {
-    setIsMega(!isMega);
+  const handleOnClickVariationButton = (e) => {
+    setIsVariationForm(!isVariationForm);
   };
 
   let statsPlusPotential = {
@@ -695,44 +704,65 @@ export default function MovesAndSkillsModal(props) {
     speScale: stats.speScale || 100,
   };
 
-  const preMegaMoves = [moves.move1, moves.move2, moves.move3, moves.move4];
-  let preMegaPassives;
-  let postMegaMoves;
-  let postMegaPassives;
+  const preVariationMoves = [
+    moves.move1,
+    moves.move2,
+    moves.move3,
+    moves.move4,
+  ];
+  let preVariationPassives;
+  let postVariationMoves;
+  let postVariationPassives;
   if (passives.passive4) {
-    preMegaPassives = [
+    preVariationPassives = [
       passives.passive1,
       passives.passive2,
       passives.passive3,
       passives.passive4,
     ];
   } else if (passives.passive3) {
-    preMegaPassives = [passives.passive1, passives.passive2, passives.passive3];
+    preVariationPassives = [
+      passives.passive1,
+      passives.passive2,
+      passives.passive3,
+    ];
   } else if (passives.passive2) {
-    preMegaPassives = [passives.passive1, passives.passive2];
+    preVariationPassives = [passives.passive1, passives.passive2];
   } else {
-    preMegaPassives = [passives.passive1];
+    preVariationPassives = [passives.passive1];
   }
 
-  if (megaForm) {
-    postMegaMoves = megaForm.moves
-      ? [
-          megaForm.moves.move1 ? megaForm.moves.move1 : moves.move1,
-          megaForm.moves.move2 ? megaForm.moves.move2 : moves.move2,
-          megaForm.moves.move3 ? megaForm.moves.move3 : moves.move3,
-          megaForm.moves.move4 ? megaForm.moves.move4 : moves.move4,
-        ]
-      : preMegaMoves;
+  if (passives.formPassive) {
+    preVariationPassives = [passives.formPassive, ...preVariationPassives];
+  }
 
-    if (megaForm.passives) {
-      postMegaPassives = [
-        megaForm.passives.passive1 || passives.passive1,
-        megaForm.passives.passive2 || passives.passive2,
-        megaForm.passives.passive3 || passives.passive3,
-        megaForm.passives.passive4 || passives.passive4,
-      ];
+  if (variationForm) {
+    postVariationMoves = variationForm.moves
+      ? [
+          variationForm.moves.move1 ? variationForm.moves.move1 : moves.move1,
+          variationForm.moves.move2 ? variationForm.moves.move2 : moves.move2,
+          variationForm.moves.move3 ? variationForm.moves.move3 : moves.move3,
+          variationForm.moves.move4 ? variationForm.moves.move4 : moves.move4,
+        ]
+      : preVariationMoves;
+
+    if (variationForm.passives) {
+      postVariationPassives = passives.formPassive
+        ? [
+            variationForm.passives.formPassive || passives.formPassive,
+            variationForm.passives.passive1 || passives.passive1,
+            variationForm.passives.passive2 || passives.passive2,
+            variationForm.passives.passive3 || passives.passive3,
+            variationForm.passives.passive4 || passives.passive4,
+          ]
+        : [
+            variationForm.passives.passive1 || passives.passive1,
+            variationForm.passives.passive2 || passives.passive2,
+            variationForm.passives.passive3 || passives.passive3,
+            variationForm.passives.passive4 || passives.passive4,
+          ];
     } else {
-      postMegaPassives = preMegaPassives;
+      postVariationPassives = preVariationPassives;
     }
   }
 
@@ -742,17 +772,26 @@ export default function MovesAndSkillsModal(props) {
       onClose={handleOnCloseMovesAndSkillsModal}
     >
       <DialogTitle>
-        {/* {UI['Moves & Skills'][language]} */}
-        {`${trainerNameByLanguage[language]} & ${pokemonNameByLanguage[language]} (${roleTypeNameByLanguage[language]})`}
-        {/* <br /> */}
-        {/* {`(${roleTypeNameByLanguage[language]})`} */}
-        {megaForm ? (
+        {variationForm
+          ? isVariationForm
+            ? `${trainerNameByLanguage[language]} & ${
+                pokemonNameByLanguage[language]
+              } (${roleTypeNameByLanguage[language]}) (${
+                variationForm.monsterFormByLanguage[language] || 'Mega'
+              })`
+            : `${trainerNameByLanguage[language]} & ${
+                pokemonNameByLanguage[language]
+              } (${roleTypeNameByLanguage[language]}) (${
+                monsterFormByLanguage[language] || 'Pre-Mega'
+              })`
+          : `${trainerNameByLanguage[language]} & ${pokemonNameByLanguage[language]} (${roleTypeNameByLanguage[language]})`}
+        {variationForm ? (
           <Button
             style={{ float: 'right' }}
             variant="outlined"
-            onClick={handleOnClickMegaButton}
+            onClick={handleOnClickVariationButton}
           >
-            {isMega ? 'pre-Mega' : 'Mega'}
+            <SyncIcon />
           </Button>
         ) : null}
       </DialogTitle>
@@ -773,7 +812,9 @@ export default function MovesAndSkillsModal(props) {
                 <TableCell />
                 <TableCell>Lv135 Stats</TableCell>
                 <TableCell align="right">Base</TableCell>
-                {isMega ? <TableCell align="right">Mega</TableCell> : null}
+                {isVariationForm && variationForm.isMega ? (
+                  <TableCell align="right">Mega</TableCell>
+                ) : null}
                 <TableCell align="right">Grid</TableCell>
                 <TableCell align="right">Total</TableCell>
               </TableRow>
@@ -784,7 +825,8 @@ export default function MovesAndSkillsModal(props) {
                 selectedStatTiles={selectedMoves[0]}
                 rarity={rarity}
                 selectedRarity={selectedRarity}
-                isMega={isMega}
+                isVariationForm={isVariationForm}
+                variationForm={variationForm}
                 trainerId={trainerId}
                 // pokemon={pokemon}
               />
@@ -806,8 +848,8 @@ export default function MovesAndSkillsModal(props) {
               </TableRow>
             </TableHead>
             <TableBody>
-              {!isMega
-                ? preMegaMoves.map((move, index) => (
+              {!isVariationForm
+                ? preVariationMoves.map((move, index) => (
                     <Moves
                       key={index}
                       language={language}
@@ -816,7 +858,7 @@ export default function MovesAndSkillsModal(props) {
                       syncLevel={syncLevel}
                     />
                   ))
-                : postMegaMoves.map((move, index) => (
+                : postVariationMoves.map((move, index) => (
                     <Moves
                       key={index}
                       language={language}
@@ -842,12 +884,27 @@ export default function MovesAndSkillsModal(props) {
               </TableRow>
             </TableHead>
             <TableBody>
-              <SyncMove
-                language={language}
-                syncMove={moves.syncMove}
-                selectedMoves={selectedMoves}
-                syncLevel={syncLevel}
-              />
+              {!isVariationForm ? (
+                <SyncMove
+                  language={language}
+                  syncMove={moves.syncMove}
+                  selectedMoves={selectedMoves}
+                  syncLevel={syncLevel}
+                />
+              ) : (
+                <SyncMove
+                  language={language}
+                  syncMove={
+                    variationForm.moves
+                      ? variationForm.moves.syncMove
+                        ? variationForm.moves.syncMove
+                        : moves.syncMove
+                      : moves.syncMove
+                  }
+                  selectedMoves={selectedMoves}
+                  syncLevel={syncLevel}
+                />
+              )}
             </TableBody>
           </Table>
         </TableContainer>
@@ -861,8 +918,8 @@ export default function MovesAndSkillsModal(props) {
               </TableRow>
             </TableHead>
             <TableBody>
-              {!isMega
-                ? preMegaPassives.map((passive, index) =>
+              {!isVariationForm
+                ? preVariationPassives.map((passive, index) =>
                     passive ? (
                       <Passives
                         key={index}
@@ -871,7 +928,7 @@ export default function MovesAndSkillsModal(props) {
                       />
                     ) : null
                   )
-                : postMegaPassives.map((passive, index) =>
+                : postVariationPassives.map((passive, index) =>
                     passive ? (
                       <Passives
                         key={index}
