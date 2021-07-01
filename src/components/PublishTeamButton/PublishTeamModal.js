@@ -280,35 +280,23 @@ export default function PublishTeamModal() {
 
               {newDemoUrl && !agreedToRules ? (
                 <div className="alert alert-info" role="alert">
-                  Please read and agree to the rules below before posting media
-                  content:
+                  {UI['Please read'][language]}
                   <ol style={{ marginLeft: 17 }}>
-                    <li>
-                      The media content must be relevant to the team you are
-                      publishing
-                    </li>
-                    <li>
-                      The media content must not contain language or graphics
-                      that are inappropriate or age-restricted
-                    </li>
-                    <li>
-                      The use of bots and alt accounts will be severely
-                      punished. If suspicious account activities are linked to
-                      your youtube/twitch/etc. channel, your channel may be
-                      permanently banned on this website.
-                    </li>
+                    <li>{UI['Rule1'][language]}</li>
+                    <li>{UI['Rule2'][language]}</li>
+                    <li>{UI['Rule3'][language]}</li>
                   </ol>
                   <button
                     className={`btn btn-sm btn-primary mr-3`}
                     onClick={handleAgreeToRules}
                   >
-                    Agree
+                    {UI['Agree'][language]}
                   </button>
                   <button
                     className={`btn btn-sm btn-primary`}
                     onClick={handleDisagreeToRules}
                   >
-                    Disagree
+                    {UI['Disagree'][language]}
                   </button>
                 </div>
               ) : null}

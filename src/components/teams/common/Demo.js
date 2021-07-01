@@ -11,7 +11,10 @@ import ReactPlayer from 'react-player';
 const Demo = ({ classes, url, size }) => {
   // const language = useSelector((state) => state.language.currentLanguage);
   return (
-    <ExpansionPanel className={classes.expanded}>
+    <ExpansionPanel
+      className={classes.expanded}
+      TransitionProps={{ unmountOnExit: true }}
+    >
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"

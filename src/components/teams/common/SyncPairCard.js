@@ -91,7 +91,7 @@ function SyncPairCard(props) {
         {/* <CardActionArea onClick={onClickCard}> */}
         {teamMemberData.trainerId ? (
           <div>
-            {/* <CardMedia
+            <CardMedia
               component="img"
               alt="Trainer Image"
               height="250"
@@ -102,7 +102,7 @@ function SyncPairCard(props) {
               }
               title="Trainer Image"
               position="absolute"
-            /> */}
+            />
             <div
               style={{
                 bottom: 0,
@@ -203,7 +203,7 @@ function SyncPairCard(props) {
                 zIndex: 20,
               }}
             >
-              {/* <img
+              <img
                 src={
                   getPokemonDataByTrainerId(teamMemberData.trainerId)
                     ? pokemonPictures[
@@ -213,7 +213,7 @@ function SyncPairCard(props) {
                     : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${monsterActorId}_128.ktx.png`
                 }
                 style={{ height: 60 }}
-              /> */}
+              />
             </div>
           </div>
         ) : (

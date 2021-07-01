@@ -42,6 +42,14 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            7/1/2021:
+            <br />
+            Happy Bidoof Day! Added some QoL improvements and a demo component
+            to popular teams page so players can link to videos. The video
+            player is from https://www.npmjs.com/package/react-player. All
+            credits go to the original developers.
+            <br />
+            <br />
             6/28/2021:
             <br />
             Added new grids and eggmons.
