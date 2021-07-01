@@ -15,6 +15,7 @@ import { changeGender } from '../../../actions/actionCreators';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import { getPokemonDataByTrainerId } from '../../../utils/functions';
 import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
+import { trainerPictures } from '../../../images/Trainers/exportImagesAsObject';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -94,7 +95,11 @@ function SyncPairCard(props) {
                 component="img"
                 alt="Trainer Image"
                 height="250"
-                image={`https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${trainerActorId}_256.ktx.png`}
+                image={
+                  trainerActorId === 'hero' || trainerActorId === 'heroine'
+                    ? trainerPictures[`${trainerActorId}_256`]
+                    : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Trainer/256px/${trainerActorId}_256.ktx.png`
+                }
                 title="Trainer Image"
                 position="absolute"
               />
