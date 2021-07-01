@@ -14,6 +14,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import EditSyncLevelDropdown from './EditSyncLevelDropdown';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export default function PublishTeamModal() {
   const dispatch = useDispatch();
@@ -36,6 +37,8 @@ export default function PublishTeamModal() {
   const [syncPair3LuckySkill1Id, setSyncPair3LuckySkill1Id] = useState('0');
   const [newTeamName, setNewTeamName] = useState('');
   const [newTeamDesc, setNewTeamDesc] = useState('');
+  const [newDemoUrl, setNewDemoUrl] = useState('');
+  const [agreedToRules, setAgreedToRules] = useState(false);
   const [selectedTags, setSelectedTags] = useState([]);
   const [isSyncPair1EX, setIsSyncPair1EX] = useState(false);
   const [isSyncPair2EX, setIsSyncPair2EX] = useState(false);
@@ -112,9 +115,18 @@ export default function PublishTeamModal() {
   const handleChangeTeamDesc = (event) => {
     setNewTeamDesc(event.target.value);
   };
-
   const handleAutoCompleteChange = (event, value) => {
     setSelectedTags(value);
+  };
+  const handleChangeDemoUrl = (event) => {
+    setNewDemoUrl(event.target.value);
+  };
+  const handleAgreeToRules = (event) => {
+    setAgreedToRules(true);
+  };
+  const handleDisagreeToRules = (event) => {
+    setAgreedToRules(false);
+    setNewDemoUrl('');
   };
 
   let arrayOfTeamMemberTrainerNameIds = [
@@ -149,6 +161,11 @@ export default function PublishTeamModal() {
       alert('Name is required');
       return;
     }
+
+    if (newDemoUrl && !agreedToRules) {
+      return alert('You must agree to the rules');
+    }
+
     if (
       teamRemainingEnergy.slot1 < 0 ||
       teamRemainingEnergy.slot2 < 0 ||
@@ -164,8 +181,9 @@ export default function PublishTeamModal() {
       syncPairs: syncPairs,
       trainerIds: teamTrainerIds,
       teamUrl: teamUrl,
+      demoUrl: newDemoUrl,
       tags: selectedTags,
-      // add common theme skills
+      // to add common theme skills
     };
 
     dispatch(addTeam(data));
@@ -229,6 +247,71 @@ export default function PublishTeamModal() {
                   value={newTeamDesc}
                 />
               </div>
+
+              <div className="form-group">
+                <Tooltip
+                  title="Supports YouTube,
+                    Twitch,
+                    Facebook,
+                    SoundCloud,
+                    Streamable,
+                    Vidme,
+                    Vimeo,
+                    Wistia,
+                    DailyMotion,
+                    Vidyard,
+                    and Kaltura"
+                  placement="bottom-start"
+                >
+                  <input
+                    type="text"
+                    className={`form-control ${
+                      darkMode ? 'text-white bg-dark' : null
+                    }`}
+                    id="demo-url"
+                    // placeholder={UI['Team name'][language]}
+                    placeholder="Demo Url eg. https://youtu.be/ciKIWXVhS0M"
+                    key="demo-url"
+                    onChange={handleChangeDemoUrl}
+                    value={newDemoUrl}
+                  />
+                </Tooltip>
+              </div>
+
+              {newDemoUrl && !agreedToRules ? (
+                <div className="alert alert-info" role="alert">
+                  Please read and agree to the rules below before posting media
+                  content:
+                  <ol style={{ marginLeft: 17 }}>
+                    <li>
+                      The media content must be relevant to the team you are
+                      publishing
+                    </li>
+                    <li>
+                      The media content must not contain language or graphics
+                      that are inappropriate or age-restricted
+                    </li>
+                    <li>
+                      The use of bots and alt accounts will be severely
+                      punished. If suspicious account activities are linked to
+                      your youtube/twitch/etc. channel, your channel may be
+                      permanently banned on this website.
+                    </li>
+                  </ol>
+                  <button
+                    className={`btn btn-sm btn-primary mr-3`}
+                    onClick={handleAgreeToRules}
+                  >
+                    Agree
+                  </button>
+                  <button
+                    className={`btn btn-sm btn-primary`}
+                    onClick={handleDisagreeToRules}
+                  >
+                    Disagree
+                  </button>
+                </div>
+              ) : null}
 
               <div className="form-group">
                 <Autocomplete
@@ -377,6 +460,7 @@ export default function PublishTeamModal() {
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 data-dismiss="modal"
+                onClick={handleDisagreeToRules}
               >
                 {UI['Close'][language]}
               </button>

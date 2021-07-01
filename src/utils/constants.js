@@ -46,7 +46,7 @@ export const arrayOfTrainerIdsWithSamePokemon = [
 ];
 
 export const CLOUD_FUNCTIONS_URL =
-  'https://us-central1-pokemonmasters-7e304.cloudfunctions.net/app';
+  'http://localhost:5000/pokemonmasters-7e304/us-central1/app'; // development
 
 export const tags = [
   '1v3',

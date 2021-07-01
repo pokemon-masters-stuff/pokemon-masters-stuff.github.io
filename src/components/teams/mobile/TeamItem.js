@@ -27,6 +27,7 @@ import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Comments from '../common/Comments';
 import TeamDescription from './TeamDescription';
+import Demo from '../common/Demo';
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -178,6 +179,10 @@ function TeamItem(props) {
         }
       >
         <TeamDescription team={team} classes={classes} />
+
+        {team.demoUrl ? (
+          <Demo url={team.demoUrl} classes={classes} size={'small'} />
+        ) : null}
 
         <Comments team={team} classes={classes} />
 

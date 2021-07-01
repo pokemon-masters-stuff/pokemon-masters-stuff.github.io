@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { editTeam } from '../../../actions/actionCreators';
 import TextField from '@material-ui/core/TextField';
 import Alert from '../../Alert';
-// import './index.css';
 import LuckySkillDropdown from '../../LuckySkillDropdown';
 import UI from '../../../utils/translations';
 import { tags } from '../../../utils/constants';
@@ -14,6 +13,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import EditSyncLevelDropdown from '../../PublishTeamButton/EditSyncLevelDropdown';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export default function EditTeamModal(props) {
   const { team } = props;
@@ -43,6 +43,10 @@ export default function EditTeamModal(props) {
 
   const [newTeamDesc, setNewTeamDesc] = useState(team.description);
   const [selectedTags, setSelectedTags] = useState(team.tags);
+  const [newDemoUrl, setNewDemoUrl] = useState(team.demoUrl);
+  const [agreedToRules, setAgreedToRules] = useState(
+    team.demoUrl ? true : false
+  );
   const [isSyncPair1EX, setIsSyncPair1EX] = useState(team.syncPairs.slot1.isEX);
   const [isSyncPair2EX, setIsSyncPair2EX] = useState(team.syncPairs.slot2.isEX);
   const [isSyncPair3EX, setIsSyncPair3EX] = useState(team.syncPairs.slot3.isEX);
@@ -56,18 +60,31 @@ export default function EditTeamModal(props) {
   const handleChangeSlot3SyncLevel = (syncLevel) => {
     setSyncPair3SyncLevel(syncLevel.toString());
   };
-
   const handleChangeTeamDesc = (event) => {
     setNewTeamDesc(event.target.value);
   };
-
   const handleAutoCompleteChange = (event, value) => {
     setSelectedTags(value);
   };
+  const handleChangeDemoUrl = (event) => {
+    setNewDemoUrl(event.target.value);
+  };
+  const handleAgreeToRules = (event) => {
+    setAgreedToRules(true);
+  };
+  const handleDisagreeToRules = (event) => {
+    setAgreedToRules(false);
+    setNewDemoUrl('');
+  };
 
   const onSubmit = () => {
+    if (!agreedToRules) {
+      return alert('You must agree to the rules');
+    }
+
     let updatedTeamData = {
       description: newTeamDesc,
+      demoUrl: newDemoUrl,
       tags: selectedTags,
       syncPairs: {
         slot1: {
@@ -130,6 +147,71 @@ export default function EditTeamModal(props) {
                   value={newTeamDesc}
                 />
               </div>
+
+              <div className="form-group">
+                <Tooltip
+                  title="Supports YouTube,
+                    Twitch,
+                    Facebook,
+                    SoundCloud,
+                    Streamable,
+                    Vidme,
+                    Vimeo,
+                    Wistia,
+                    DailyMotion,
+                    Vidyard,
+                    and Kaltura"
+                  placement="bottom-start"
+                >
+                  <input
+                    type="text"
+                    className={`form-control ${
+                      darkMode ? 'text-white bg-dark' : null
+                    }`}
+                    id="demo-url"
+                    // placeholder={UI['Team name'][language]}
+                    placeholder="Demo Url eg. https://youtu.be/ciKIWXVhS0M"
+                    key="demo-url"
+                    onChange={handleChangeDemoUrl}
+                    value={newDemoUrl}
+                  />
+                </Tooltip>
+              </div>
+
+              {newDemoUrl && !agreedToRules ? (
+                <div className="alert alert-info" role="alert">
+                  Please read and agree to the rules below before posting media
+                  content:
+                  <ol style={{ marginLeft: 17 }}>
+                    <li>
+                      The media content must be relevant to the team you are
+                      publishing
+                    </li>
+                    <li>
+                      The media content must not contain language or graphics
+                      that are inappropriate or age-restricted
+                    </li>
+                    <li>
+                      The use of bots and alt accounts will be severely
+                      punished. If suspicious account activities are linked to
+                      your youtube/twitch/etc. channel, your channel may be
+                      permanently banned on this website.
+                    </li>
+                  </ol>
+                  <button
+                    className={`btn btn-sm btn-primary mr-3`}
+                    onClick={handleAgreeToRules}
+                  >
+                    Agree
+                  </button>
+                  <button
+                    className={`btn btn-sm btn-primary`}
+                    onClick={handleDisagreeToRules}
+                  >
+                    Disagree
+                  </button>
+                </div>
+              ) : null}
 
               <div className="form-group">
                 <Autocomplete
@@ -287,6 +369,7 @@ export default function EditTeamModal(props) {
               <button
                 className={`btn btn-default ${darkMode ? 'text-white' : null}`}
                 data-dismiss="modal"
+                onClick={handleDisagreeToRules}
               >
                 {UI['Close'][language]}
               </button>
@@ -298,92 +381,3 @@ export default function EditTeamModal(props) {
     </Fragment>
   );
 }
-
-// import React, { useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { withStyles } from '@material-ui/core';
-// import Alert from '../../Alert';
-// import styles from './styles';
-// import { editTeam } from '../../../actions/actionCreators';
-// import EditSyncLevelDropdown from '../../PublishTeamButton/EditSyncLevelDropdown';
-// import LuckySkillDropdown from '../../LuckySkillDropdown';
-
-// const EditTeamModal = (props) => {
-//   const { team } = props;
-//   const dispatch = useDispatch();
-//   const darkMode = useSelector((state) => state.darkMode.mode);
-//   const [desc, setDesc] = useState(description);
-//   const [syncLv, setSyncLv] = useState(syncLevel);
-//   const [luckySkill1Id, setLuckySkill1Id] = useState(
-//     luckySkillIds ? luckySkillIds[0] : '0'
-//   );
-
-//   const handleChangeDesc = (e) => {
-//     setDesc(e.target.value);
-//   };
-
-//   const onSubmit = () => {
-//     dispatch(editTeam(index, desc, syncLv, [luckySkill1Id]));
-//   };
-
-//   return (
-//     <div
-//       className="modal fade"
-//       id={`editTeamModal${team._id}`}
-//       tabIndex="-1"
-//       role="dialog"
-//       aria-labelledby="myModalLabel"
-//       aria-hidden="true"
-//       style={{ zIndex: 4000 }}
-//     >
-//       <div className="modal-dialog modal-dialog-centered" role="document">
-//         <div
-//           className={`modal-content ${darkMode ? 'text-white bg-dark' : null}`}
-//         >
-//           <div className="modal-header text-center">
-//             <h4 className="modal-title w-100 font-weight-bold">Edit</h4>
-//           </div>
-//           <div className="modal-body mx-3">
-//             <EditSyncLevelDropdown syncLv={syncLv} setSyncLv={setSyncLv} />
-
-//             <LuckySkillDropdown
-//               luckySkillId={luckySkill1Id}
-//               setLuckySkillId={setLuckySkill1Id}
-//             />
-
-//             <div className="form-group">
-//               <textarea
-//                 type="text"
-//                 className={`form-control ${
-//                   darkMode ? 'text-white bg-dark' : null
-//                 }`}
-//                 id="desc"
-//                 value={desc}
-//                 onChange={handleChangeDesc}
-//                 rows={10}
-//               />
-//             </div>
-//           </div>
-//           <div className="modal-footer d-flex justify-content-center">
-//             <button
-//               className={`btn btn-default ${darkMode ? 'text-white' : null}`}
-//               onClick={onSubmit}
-//               // data-dismiss="modal"
-//             >
-//               Finish
-//             </button>
-//             <button
-//               className={`btn btn-default ${darkMode ? 'text-white' : null}`}
-//               data-dismiss="modal"
-//             >
-//               Close
-//             </button>
-//           </div>
-//           <Alert />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default withStyles(styles)(EditTeamModal);

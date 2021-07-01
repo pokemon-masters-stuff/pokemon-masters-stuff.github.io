@@ -28,23 +28,10 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Comments from '../common/Comments';
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     marginTop: 70,
-//   },
-//   textField: {
-//     marginTop: 5,
-//   },
-//   control: {
-//     padding: theme.spacing(3),
-//   },
-// }));
+import Demo from '../common/Demo';
 
 function TeamItem(props) {
-  // const classes = useStyles();
-  const location = useLocation();
+  // const location = useLocation();
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
@@ -170,11 +157,9 @@ function TeamItem(props) {
               display: 'flex',
               flexFlow: 'row wrap',
               alignItems: 'center',
-              // marginLeft: -120,
             }}
           >
             <Grid container alignItems="center" justify="center">
-              {/* <div style={{ marginLeft: 69 }}> */}
               {[
                 team.syncPairs.slot1,
                 team.syncPairs.slot2,
@@ -186,10 +171,6 @@ function TeamItem(props) {
                   teamMemberData={teamMemberData}
                 />
               ))}
-              {/* </div> */}
-
-              {/* <Grid item xs={12}>
-                  <Grid container justify="center" spacing={3}> */}
               <div
                 style={{
                   width: '100%',
@@ -204,7 +185,6 @@ function TeamItem(props) {
                   teamMemberData.trainerId ? (
                     syncPairNamesAndIds[teamMemberData.trainerId].isGrided &&
                     teamMemberData.selectedCellsById ? (
-                      // <Grid item key={index}>
                       <SyncGridContainer
                         key={`sync-grid-${index + 1}-${team._id}`}
                         teamMemberData={teamMemberData}
@@ -212,15 +192,11 @@ function TeamItem(props) {
                         marginT={-10}
                         paddingB={-10}
                       />
-                    ) : // </Grid>
-                    null
+                    ) : null
                   ) : null
                 )}
               </div>
             </Grid>
-            {/* </Grid>
-                </Grid>
-              </Grid> */}
           </div>
           <div
             className="col-sm"
@@ -229,7 +205,6 @@ function TeamItem(props) {
               display: 'flex',
               flexFlow: 'row wrap',
               alignItems: 'center',
-              // marginLeft: -110,
             }}
           >
             <div>
@@ -317,11 +292,14 @@ function TeamItem(props) {
           </div>
         </div>
 
+        {team.demoUrl ? (
+          <Demo url={team.demoUrl} classes={classes} size={'large'} />
+        ) : null}
+
         <Comments team={team} classes={classes} />
       </Paper>
     </div>
   );
 }
 
-// export default TeamItem;
 export default withStyles(styles)(TeamItem);

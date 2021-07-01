@@ -287,6 +287,7 @@ function Moves(props) {
                 <TableHead>
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">Description</TableCell>
+                    <TableCell align="left">Type</TableCell>
                     <TableCell align="right">Category</TableCell>
                     <TableCell align="left">Target</TableCell>
                     <TableCell align="right">Accuracy</TableCell>
@@ -296,6 +297,9 @@ function Moves(props) {
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">
                       {move.description[language]}
+                    </TableCell>
+                    <TableCell align="left">
+                      {move.typeName ? move.typeName[language] : '-'}
                     </TableCell>
                     <TableCell align="left">
                       {move.category ? moveCategory : '-'}
@@ -352,6 +356,9 @@ function SyncMove(props) {
 
         <TableCell component="th" scope="row">
           {syncMove.name[language]}
+        </TableCell>
+        <TableCell align="left">
+          {syncMove.typeName ? syncMove.typeName[language] : '-'}
         </TableCell>
         <TableCell align="left">
           {syncMove.category ? syncMoveCategory : '-'}
@@ -770,6 +777,9 @@ export default function MovesAndSkillsModal(props) {
     <Dialog
       open={isMovesAndSkillsModalVisible}
       onClose={handleOnCloseMovesAndSkillsModal}
+      fullWidth={true}
+      maxWidth="md"
+      scroll="body"
     >
       <DialogTitle>
         {variationForm
@@ -877,6 +887,7 @@ export default function MovesAndSkillsModal(props) {
               <TableRow>
                 <TableCell />
                 <TableCell>Sync Move</TableCell>
+                <TableCell align="right">Type</TableCell>
                 <TableCell align="right">Category</TableCell>
                 <TableCell align="right">Base Power</TableCell>
                 <TableCell align="right">Grid</TableCell>
