@@ -68,8 +68,8 @@ function SimpleSelect(props) {
             {syncPair !== syncPairData.trainerId ? (
               <>
                 <img
-                  width="17"
-                  height="17"
+                  width="40"
+                  height="40"
                   src={
                     pokemonPictures[
                       getPokemonDataByTrainerId(syncPairData.trainerId)
@@ -89,8 +89,8 @@ function SimpleSelect(props) {
             {syncPair !== syncPairData.trainerId ? (
               <>
                 <img
-                  width="17"
-                  height="17"
+                  width="40"
+                  height="40"
                   src={
                     pokemonPictures[
                       getPokemonDataByTrainerId(syncPairData.trainerId)
