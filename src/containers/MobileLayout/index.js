@@ -77,10 +77,6 @@ class MobileApp extends Component {
   handleOnOpenSkillList = () => this.setState({ isSkillListOpened: true });
 
   handleOnChangePokemon = (value) => {
-    console.log(
-      'value for handleOnChangePokemon (supposed to be trainerId)',
-      value
-    );
     this.props.selectSyncPair(value);
     // this.props.selectPokemon(value);
     this.props.resetGrids();

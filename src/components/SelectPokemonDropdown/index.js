@@ -8,14 +8,16 @@ import Select from '@material-ui/core/Select';
 import {
   getPokemonNameList,
   getNewPokemonNameList,
+  getPokemonDataByTrainerId,
 } from '../../utils/functions';
 import styles from './styles';
 import { updateUrl, setSyncLevel } from '../../actions/actionCreators';
 import { useSelector, useDispatch } from 'react-redux';
+import { pokemonPictures } from '../../images/Pokemon/exportImagesAsObject';
 
 function SimpleSelect(props) {
   const dispatch = useDispatch();
-  const { classes, trainerId, selectedPokemon, onChangeHandler } = props;
+  const { classes, trainerId, onChangeHandler } = props;
   // const [pokemon, setPokemon] = React.useState(selectedPokemon);
   const [syncPair, setSyncPair] = React.useState(trainerId);
 
@@ -63,12 +65,42 @@ function SimpleSelect(props) {
         <ListSubheader disableSticky={true}>New</ListSubheader>
         {getNewPokemonNameList(language).map((syncPairData, index) => (
           <MenuItem key={index} value={syncPairData.trainerId}>
+            {syncPair !== syncPairData.trainerId ? (
+              <>
+                <img
+                  width="17"
+                  height="17"
+                  src={
+                    pokemonPictures[
+                      getPokemonDataByTrainerId(syncPairData.trainerId)
+                        .monsterActorId + '_128'
+                    ]
+                  }
+                />
+                &nbsp;
+              </>
+            ) : null}
             {syncPairData.value}
           </MenuItem>
         ))}
         <ListSubheader disableSticky={true}>All</ListSubheader>
         {getPokemonNameList(language).map((syncPairData, index) => (
           <MenuItem key={index} value={syncPairData.trainerId}>
+            {syncPair !== syncPairData.trainerId ? (
+              <>
+                <img
+                  width="17"
+                  height="17"
+                  src={
+                    pokemonPictures[
+                      getPokemonDataByTrainerId(syncPairData.trainerId)
+                        .monsterActorId + '_128'
+                    ]
+                  }
+                />
+                &nbsp;
+              </>
+            ) : null}
             {syncPairData.value}
           </MenuItem>
         ))}

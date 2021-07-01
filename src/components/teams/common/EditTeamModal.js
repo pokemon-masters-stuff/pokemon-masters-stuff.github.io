@@ -78,7 +78,7 @@ export default function EditTeamModal(props) {
   };
 
   const onSubmit = () => {
-    if (!agreedToRules) {
+    if (newDemoUrl && !agreedToRules) {
       return alert('You must agree to the rules');
     }
 
@@ -179,7 +179,11 @@ export default function EditTeamModal(props) {
               </div>
 
               {newDemoUrl && !agreedToRules ? (
-                <div className="alert alert-info" role="alert">
+                <div
+                  className="alert alert-info"
+                  role="alert"
+                  style={{ lineHeight: 1.4 }}
+                >
                   Please read and agree to the rules below before posting media
                   content:
                   <ol style={{ marginLeft: 17 }}>

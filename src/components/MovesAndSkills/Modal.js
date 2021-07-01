@@ -288,7 +288,7 @@ function Moves(props) {
                   <TableRow key={move.name[language]}>
                     <TableCell align="left">Description</TableCell>
                     <TableCell align="left">Type</TableCell>
-                    <TableCell align="right">Category</TableCell>
+                    <TableCell align="left">Category</TableCell>
                     <TableCell align="left">Target</TableCell>
                     <TableCell align="right">Accuracy</TableCell>
                   </TableRow>
@@ -660,6 +660,8 @@ export default function MovesAndSkillsModal(props) {
 
   const [selectedPotential, setSelectedPotential] = useState(0);
 
+  const [isMax, setIsMax] = useState(false);
+
   let bonusHpFromPotential =
     rarity === 5 ? selectedPotential * 5 || 0 : selectedPotential * 2 || 0;
 
@@ -682,10 +684,17 @@ export default function MovesAndSkillsModal(props) {
       selectedValue = 5;
     }
     setSelectedRarity(selectedValue);
+
+    if (selectedRarity === 5 && selectedPotential === 20) {
+      setIsMax(true);
+    }
   };
 
   const handleOnChangePotential = (value) => {
     setSelectedPotential(value);
+    if (selectedRarity === 5 && selectedPotential === 20) {
+      setIsMax(true);
+    }
   };
 
   const handleOnCloseMovesAndSkillsModal = () => {
@@ -695,6 +704,18 @@ export default function MovesAndSkillsModal(props) {
 
   const handleOnClickVariationButton = (e) => {
     setIsVariationForm(!isVariationForm);
+  };
+
+  const handleOnClickMaxOrResetButton = (e) => {
+    if (isMax || (selectedRarity === 5 && selectedPotential === 20)) {
+      setSelectedRarity(rarity);
+      setSelectedPotential(0);
+      setIsMax(false);
+    } else {
+      setSelectedRarity(5);
+      setSelectedPotential(20);
+      setIsMax(true);
+    }
   };
 
   let statsPlusPotential = {
@@ -816,6 +837,17 @@ export default function MovesAndSkillsModal(props) {
             selectedPotential={selectedPotential}
             handleOnChangePotential={handleOnChangePotential}
           />
+
+          <Button
+            variant="outlined"
+            onClick={handleOnClickMaxOrResetButton}
+            style={{ marginTop: 9, marginLeft: 8 }}
+          >
+            {isMax || (selectedRarity === 5 && selectedPotential === 20)
+              ? 'RESET'
+              : 'MAX'}
+          </Button>
+
           <Table aria-label="table" size="small">
             <TableHead>
               <TableRow>
@@ -887,8 +919,8 @@ export default function MovesAndSkillsModal(props) {
               <TableRow>
                 <TableCell />
                 <TableCell>Sync Move</TableCell>
-                <TableCell align="right">Type</TableCell>
-                <TableCell align="right">Category</TableCell>
+                <TableCell align="left">Type</TableCell>
+                <TableCell align="left">Category</TableCell>
                 <TableCell align="right">Base Power</TableCell>
                 <TableCell align="right">Grid</TableCell>
                 <TableCell align="right">Total</TableCell>
