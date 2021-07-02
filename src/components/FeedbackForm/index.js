@@ -20,7 +20,7 @@ export default class FeedBackForm extends React.Component {
 
   render() {
     const { status } = this.state;
-    const { open, onCloseModalHandler } = this.props;
+    const { open, onCloseModalHandler, postType, post } = this.props;
 
     const handleCloseModal = () =>
       typeof onCloseModalHandler === 'function' ? onCloseModalHandler() : null;
@@ -37,14 +37,39 @@ export default class FeedBackForm extends React.Component {
           action="https://formspree.io/xyywkgow"
           method="POST"
         >
-          <DialogTitle id="form-dialog-title">Feedback</DialogTitle>
+          <DialogTitle id="form-dialog-title">
+            {post ? 'Submit a Report' : 'Feedback'}
+          </DialogTitle>
           <DialogContent>
             {/* FormSpree doesn't support MUI Textfield or Button */}
+            {post ? (
+              <>
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value={
+                    postType === 'team'
+                      ? `User Report - Team name: ${post.teamName}, Id: ${post._id}`
+                      : `User Report - Build name: ${post.buildName}, Id: ${post._id}`
+                  }
+                />
+                <input
+                  readOnly
+                  className="form-control"
+                  value={
+                    postType === 'team'
+                      ? `Team name: ${post.teamName}`
+                      : `Build name: ${post.buildName}`
+                  }
+                />
+              </>
+            ) : null}
             <textarea
               type="text"
               className="form-control"
               id="textboxid"
               name="message"
+              placeholder={post ? 'I am reporting this post because ...' : null}
             />
           </DialogContent>
           <DialogActions>

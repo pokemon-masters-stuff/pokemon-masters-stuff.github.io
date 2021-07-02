@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { Fragment, useState } from 'react';
+// import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import styles from './styles';
 import Chip from '@material-ui/core/Chip';
@@ -29,6 +29,8 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Comments from '../common/Comments';
 import Demo from '../common/Demo';
+import FlagIcon from '@material-ui/icons/Flag';
+import FeedbackForm from '../../FeedbackForm';
 
 function TeamItem(props) {
   // const location = useLocation();
@@ -37,6 +39,7 @@ function TeamItem(props) {
   const darkMode = useSelector((state) => state.darkMode.mode);
   const currentUser = useSelector((state) => state.auth.user);
   const { team, classes } = props;
+  const [isReportFormOpen, setIsReportFormOpen] = useState(false);
 
   const handleClickLike = (team, teamLiked, e) => {
     teamLiked
@@ -47,6 +50,14 @@ function TeamItem(props) {
   const handleClickDelete = (team) => {
     window.confirm('Are you sure you wish to delete this team?') &&
       dispatch(deleteTeam(team._id));
+  };
+
+  const handleClickReportButton = (e) => {
+    setIsReportFormOpen(true);
+  };
+
+  const handleCloseReportModal = (e) => {
+    setIsReportFormOpen(false);
   };
 
   const renderIcons = (team, currentUser) => {
@@ -96,6 +107,15 @@ function TeamItem(props) {
         ) : (
           <Fragment>
             <div className="col-sm-3 offset-sm-1">
+              <IconButton onClick={handleClickReportButton}>
+                <FlagIcon />
+              </IconButton>
+              <FeedbackForm
+                open={isReportFormOpen}
+                onCloseModalHandler={handleCloseReportModal}
+                postType={'team'}
+                post={team}
+              />
               <Button
                 variant="outlined"
                 data-toggle="modal"

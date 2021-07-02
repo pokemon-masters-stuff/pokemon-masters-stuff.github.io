@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { Fragment, useState } from 'react';
+// import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import styles from './styles';
 import Grid from '@material-ui/core/Grid';
@@ -28,6 +28,8 @@ import Divider from '@material-ui/core/Divider';
 import Comments from '../common/Comments';
 import TeamDescription from './TeamDescription';
 import Demo from '../common/Demo';
+import FlagIcon from '@material-ui/icons/Flag';
+import FeedbackForm from '../../FeedbackForm';
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -44,12 +46,12 @@ import Demo from '../common/Demo';
 
 function TeamItem(props) {
   // const classes = useStyles();
-  const location = useLocation();
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
   const currentUser = useSelector((state) => state.auth.user);
   const { team, classes } = props;
+  const [isReportFormOpen, setIsReportFormOpen] = useState(false);
 
   const handleClickLike = (team, teamLiked, e) => {
     teamLiked
@@ -60,6 +62,14 @@ function TeamItem(props) {
   const handleClickDelete = (team) => {
     window.confirm('Are you sure you wish to delete this team?') &&
       dispatch(deleteTeam(team._id));
+  };
+
+  const handleClickReportButton = (e) => {
+    setIsReportFormOpen(true);
+  };
+
+  const handleCloseReportModal = (e) => {
+    setIsReportFormOpen(false);
   };
 
   const renderIcons = (team, currentUser) => {
@@ -106,6 +116,15 @@ function TeamItem(props) {
           </Fragment>
         ) : (
           <Fragment>
+            <IconButton onClick={handleClickReportButton}>
+              <FlagIcon />
+            </IconButton>
+            <FeedbackForm
+              open={isReportFormOpen}
+              onCloseModalHandler={handleCloseReportModal}
+              postType={'team'}
+              post={team}
+            />
             <Button
               variant="outlined"
               data-toggle="modal"

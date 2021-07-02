@@ -9,6 +9,7 @@ import {
 import {
   getPokemonNameList,
   getNewPokemonNameList,
+  getPokemonDataByTrainerId,
 } from '../../../utils/functions';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Box from '@material-ui/core/Box';
@@ -22,6 +23,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
+import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 
 const useStyles = makeStyles({
   root: {
@@ -128,16 +130,46 @@ const Builds = (props) => {
             labelId="pokemonFilter"
             onChange={handleChangePokemonFilter}
           >
-            <MenuItem value="None">---</MenuItem>
+            <MenuItem value="None">-----</MenuItem>
             <ListSubheader disableSticky={true}>New</ListSubheader>
             {getNewPokemonNameList(language).map((syncPairData, index) => (
               <MenuItem key={index} value={syncPairData.trainerId}>
+                {pokemonFilter !== syncPairData.trainerId ? (
+                  <>
+                    <img
+                      width="40"
+                      height="40"
+                      src={
+                        pokemonPictures[
+                          getPokemonDataByTrainerId(syncPairData.trainerId)
+                            .monsterActorId + '_128'
+                        ]
+                      }
+                    />
+                    &nbsp;
+                  </>
+                ) : null}
                 {syncPairData.value}
               </MenuItem>
             ))}
             <ListSubheader disableSticky={true}>All</ListSubheader>
             {getPokemonNameList(language).map((syncPairData, index) => (
               <MenuItem key={index} value={syncPairData.trainerId}>
+                {pokemonFilter !== syncPairData.trainerId ? (
+                  <>
+                    <img
+                      width="40"
+                      height="40"
+                      src={
+                        pokemonPictures[
+                          getPokemonDataByTrainerId(syncPairData.trainerId)
+                            .monsterActorId + '_128'
+                        ]
+                      }
+                    />
+                    &nbsp;
+                  </>
+                ) : null}
                 {syncPairData.value}
               </MenuItem>
             ))}

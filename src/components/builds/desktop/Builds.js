@@ -9,6 +9,7 @@ import {
 import {
   getPokemonNameList,
   getNewPokemonNameList,
+  getPokemonDataByTrainerId,
 } from '../../../utils/functions';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Paper from '@material-ui/core/Paper';
@@ -19,6 +20,7 @@ import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
+import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 // import UI from '../../../utils/translations';
 
 const useStyles = makeStyles({
@@ -135,12 +137,42 @@ const Builds = (props) => {
               <ListSubheader disableSticky={true}>New</ListSubheader>
               {getNewPokemonNameList(language).map((syncPairData, index) => (
                 <MenuItem key={index} value={syncPairData.trainerId}>
+                  {pokemonFilter !== syncPairData.trainerId ? (
+                    <>
+                      <img
+                        width="40"
+                        height="40"
+                        src={
+                          pokemonPictures[
+                            getPokemonDataByTrainerId(syncPairData.trainerId)
+                              .monsterActorId + '_128'
+                          ]
+                        }
+                      />
+                      &nbsp;
+                    </>
+                  ) : null}
                   {syncPairData.value}
                 </MenuItem>
               ))}
               <ListSubheader disableSticky={true}>All</ListSubheader>
               {getPokemonNameList(language).map((syncPairData, index) => (
                 <MenuItem key={index} value={syncPairData.trainerId}>
+                  {pokemonFilter !== syncPairData.trainerId ? (
+                    <>
+                      <img
+                        width="40"
+                        height="40"
+                        src={
+                          pokemonPictures[
+                            getPokemonDataByTrainerId(syncPairData.trainerId)
+                              .monsterActorId + '_128'
+                          ]
+                        }
+                      />
+                      &nbsp;
+                    </>
+                  ) : null}
                   {syncPairData.value}
                 </MenuItem>
               ))}
