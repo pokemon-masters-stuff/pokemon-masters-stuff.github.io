@@ -80,7 +80,6 @@ const Filter = (props) => {
         style={{ padding: 6.5 }}
         onClick={handleOnOpenFilterModal}
       >
-        {/* {UI['Moves & Skills'][language]} */}
         <FilterListIcon />
         Filters
       </Button>

@@ -6,12 +6,6 @@ import {
   changeSyncLevelFilter,
   changeSort,
 } from '../../../actions/actionCreators';
-import {
-  getPokemonNameList,
-  getNewPokemonNameList,
-  getPokemonDataByTrainerId,
-} from '../../../utils/functions';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import Box from '@material-ui/core/Box';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -23,7 +17,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
-import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
+import Filter from '../common/Filter';
 
 const useStyles = makeStyles({
   root: {
@@ -47,7 +41,6 @@ const Builds = (props) => {
   const sort = useSelector((state) => state.build.sort);
   const pokemonFilter = useSelector((state) => state.build.pokemonFilter);
   const syncLevelFilter = useSelector((state) => state.build.syncLevelFilter);
-  const language = useSelector((state) => state.language.currentLanguage);
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.darkMode.mode);
 
@@ -63,10 +56,6 @@ const Builds = (props) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // const handleOnCloseNav = () => setIsNavOpened(false);
-
-  // const handleOnOpenNav = () => setIsNavOpened(true);
 
   const handleChangeTab = (event, newValue) => {
     let val;
@@ -87,9 +76,9 @@ const Builds = (props) => {
     }
   };
 
-  const handleChangePokemonFilter = (event) => {
-    if (event.target.value) {
-      dispatch(changePokemonFilter(event.target.value));
+  const handleChangePokemonFilter = (trainerId) => {
+    if (trainerId) {
+      dispatch(changePokemonFilter(trainerId));
       dispatch(changeSyncLevelFilter('0'));
     }
   };
@@ -117,64 +106,13 @@ const Builds = (props) => {
             <MenuItem value="oldest">Oldest</MenuItem>
           </Select>
         </FormControl>
-        <FormControl
-          variant="outlined"
-          size="small"
-          className={classes.formControl}
-          color="primary"
-          style={{ marginLeft: 10 }}
-        >
-          <InputLabel id="pokemonFilter">Filter by</InputLabel>
-          <Select
-            value={pokemonFilter}
-            labelId="pokemonFilter"
-            onChange={handleChangePokemonFilter}
-          >
-            <MenuItem value="None">-----</MenuItem>
-            <ListSubheader disableSticky={true}>New</ListSubheader>
-            {getNewPokemonNameList(language).map((syncPairData, index) => (
-              <MenuItem key={index} value={syncPairData.trainerId}>
-                {pokemonFilter !== syncPairData.trainerId ? (
-                  <>
-                    <img
-                      width="40"
-                      height="40"
-                      src={
-                        pokemonPictures[
-                          getPokemonDataByTrainerId(syncPairData.trainerId)
-                            .monsterActorId + '_128'
-                        ]
-                      }
-                    />
-                    &nbsp;
-                  </>
-                ) : null}
-                {syncPairData.value}
-              </MenuItem>
-            ))}
-            <ListSubheader disableSticky={true}>All</ListSubheader>
-            {getPokemonNameList(language).map((syncPairData, index) => (
-              <MenuItem key={index} value={syncPairData.trainerId}>
-                {pokemonFilter !== syncPairData.trainerId ? (
-                  <>
-                    <img
-                      width="40"
-                      height="40"
-                      src={
-                        pokemonPictures[
-                          getPokemonDataByTrainerId(syncPairData.trainerId)
-                            .monsterActorId + '_128'
-                        ]
-                      }
-                    />
-                    &nbsp;
-                  </>
-                ) : null}
-                {syncPairData.value}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+
+        <Filter
+          pokemonFilter={pokemonFilter}
+          labelId="pokemonFilter"
+          handleChangePokemonFilter={handleChangePokemonFilter}
+          mode={'mobile'}
+        />
 
         {pokemonFilter !== 'None' ? (
           <FormControl

@@ -18,10 +18,24 @@ export const removeHyphens = (str) => {
   return str.replace(/-/g, '');
 };
 
-export const getPokemonNameList = (language) => {
+export const getPokemonNameList = (language, role, type) => {
   let existingGridedPokemon = [];
 
-  Object.values(gridedSyncPairData).map((entry, index) => {
+  let filteredList = Object.values(gridedSyncPairData);
+
+  if (role && role !== 'none') {
+    filteredList = filteredList.filter(
+      (entry) => entry.role.toString() === role.toString()
+    );
+  }
+  if (type && type.toString() !== '0') {
+    filteredList = filteredList.filter(
+      (entry) => entry.type.toString() === type.toString()
+    );
+  }
+  // Object.values(gridedSyncPairData)
+  //   .filter((entry) => entry.role === role && entry.type === type)
+  filteredList.map((entry, index) => {
     if (
       !arrayOfTrainerIdsForNewlyGridedSyncPairs.includes(
         Number(entry.trainerId)
@@ -53,9 +67,21 @@ export const getPokemonNameList = (language) => {
   });
 };
 
-export const getNewPokemonNameList = (language) => {
+export const getNewPokemonNameList = (language, role, type) => {
+  let filteredList = Object.values(gridedSyncPairData);
+
+  if (role && role !== 'none') {
+    filteredList = filteredList.filter(
+      (entry) => entry.role.toString() === role.toString()
+    );
+  }
+  if (type && type.toString() !== '0') {
+    filteredList = filteredList.filter(
+      (entry) => entry.type.toString() === type.toString()
+    );
+  }
   let newlyGridedPokemon = [];
-  Object.values(gridedSyncPairData).map((entry, index) => {
+  filteredList.map((entry, index) => {
     if (
       arrayOfTrainerIdsForNewlyGridedSyncPairs.includes(Number(entry.trainerId))
     ) {
@@ -83,6 +109,19 @@ export const getNewPokemonNameList = (language) => {
     let y = b.value;
     return x < y ? -1 : x > y ? 1 : 0;
   });
+};
+
+export const getPokemonNameByTrainerId = (trainerId, language) => {
+  if (trainerId === 'None') {
+    return;
+  }
+  return arrayOfTrainerIdsWithSamePokemon.includes(Number(trainerId))
+    ? `${
+        getPokemonDataByTrainerId(trainerId).pokemonNameByLanguage[language]
+      } (${
+        getPokemonDataByTrainerId(trainerId).trainerNameByLanguage[language]
+      })`
+    : getPokemonDataByTrainerId(trainerId).pokemonNameByLanguage[language];
 };
 
 export const getPokemonDataByTrainerId = (trainerId) => {

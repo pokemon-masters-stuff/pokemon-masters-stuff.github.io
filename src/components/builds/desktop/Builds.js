@@ -6,12 +6,6 @@ import {
   changeSyncLevelFilter,
   changeSort,
 } from '../../../actions/actionCreators';
-import {
-  getPokemonNameList,
-  getNewPokemonNameList,
-  getPokemonDataByTrainerId,
-} from '../../../utils/functions';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -20,8 +14,7 @@ import Tab from '@material-ui/core/Tab';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
-import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
-// import UI from '../../../utils/translations';
+import Filter from '../common/Filter';
 
 const useStyles = makeStyles({
   root: {
@@ -38,7 +31,6 @@ const Builds = (props) => {
   const pokemonFilter = useSelector((state) => state.build.pokemonFilter);
   const syncLevelFilter = useSelector((state) => state.build.syncLevelFilter);
   const dispatch = useDispatch();
-  const language = useSelector((state) => state.language.currentLanguage);
   const darkMode = useSelector((state) => state.darkMode.mode);
 
   useEffect(() => {
@@ -73,9 +65,9 @@ const Builds = (props) => {
     }
   };
 
-  const handleChangePokemonFilter = (event) => {
-    if (event.target.value) {
-      dispatch(changePokemonFilter(event.target.value));
+  const handleChangePokemonFilter = (trainerId) => {
+    if (trainerId) {
+      dispatch(changePokemonFilter(trainerId));
       dispatch(changeSyncLevelFilter('0'));
     }
   };
@@ -127,57 +119,12 @@ const Builds = (props) => {
           >
             Filter by:{' '}
           </Typography>
-          <FormControl className={classes.formControl}>
-            <Select
-              value={pokemonFilter}
-              labelId="pokemonFilter"
-              onChange={handleChangePokemonFilter}
-            >
-              <MenuItem value="None">-----</MenuItem>
-              <ListSubheader disableSticky={true}>New</ListSubheader>
-              {getNewPokemonNameList(language).map((syncPairData, index) => (
-                <MenuItem key={index} value={syncPairData.trainerId}>
-                  {pokemonFilter !== syncPairData.trainerId ? (
-                    <>
-                      <img
-                        width="40"
-                        height="40"
-                        src={
-                          pokemonPictures[
-                            getPokemonDataByTrainerId(syncPairData.trainerId)
-                              .monsterActorId + '_128'
-                          ]
-                        }
-                      />
-                      &nbsp;
-                    </>
-                  ) : null}
-                  {syncPairData.value}
-                </MenuItem>
-              ))}
-              <ListSubheader disableSticky={true}>All</ListSubheader>
-              {getPokemonNameList(language).map((syncPairData, index) => (
-                <MenuItem key={index} value={syncPairData.trainerId}>
-                  {pokemonFilter !== syncPairData.trainerId ? (
-                    <>
-                      <img
-                        width="40"
-                        height="40"
-                        src={
-                          pokemonPictures[
-                            getPokemonDataByTrainerId(syncPairData.trainerId)
-                              .monsterActorId + '_128'
-                          ]
-                        }
-                      />
-                      &nbsp;
-                    </>
-                  ) : null}
-                  {syncPairData.value}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+          <Filter
+            pokemonFilter={pokemonFilter}
+            labelId="pokemonFilter"
+            handleChangePokemonFilter={handleChangePokemonFilter}
+            mode={'desktop'}
+          />
           {pokemonFilter !== 'None' ? (
             <>
               <Typography
