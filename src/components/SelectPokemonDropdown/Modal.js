@@ -64,7 +64,7 @@ function SelectPokemonModal(props) {
     <Dialog
       open={isSelectPokemonModalOpen}
       onClose={handleCloseSelectPokemonModal}
-      style={{ zIndex: 4000 }}
+      style={{ zIndex: 2000 }}
     >
       {usedAsFilter ? null : <DialogTitle>Select Pokémon</DialogTitle>}
 
@@ -81,6 +81,9 @@ function SelectPokemonModal(props) {
             onChange={handleChangeRole}
             defaultValue=""
             value={role}
+            MenuProps={{
+              style: { zIndex: 3000 },
+            }}
           >
             <MenuItem key={`role-none`} value={'none'}>
               —
@@ -104,6 +107,9 @@ function SelectPokemonModal(props) {
             onChange={handleChangeType}
             defaultValue=""
             value={type}
+            MenuProps={{
+              style: { zIndex: 3000 },
+            }}
           >
             {Object.entries(typesByLanguage).map(([key, value]) => (
               <MenuItem key={`type-${key}`} value={key}>
