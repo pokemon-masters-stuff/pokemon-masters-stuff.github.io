@@ -109,29 +109,65 @@ function TeamBuilder() {
               let selectedCellByIdFromUrl = {};
 
               getQueryStringValue(`g${index}`, location.search).map((id) => {
-                cellData =
+                if (
                   allSyncGrids[language][
                     `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
-                  ][Number(id)];
+                  ][Number(id)]
+                ) {
+                  cellData =
+                    allSyncGrids[language][
+                      `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
+                    ][Number(id)];
 
-                selectedCellByIdFromUrl = {
-                  cellId: cellData.cellId,
-                  name: cellData.move.name,
-                  description: cellData.move.description,
-                  energy: cellData.move.energyCost,
-                  moveId: cellData.ability.moveId,
-                  value: cellData.ability.value,
-                  type: cellData.ability.type,
-                };
+                  selectedCellByIdFromUrl = {
+                    cellId: cellData.cellId,
+                    name: cellData.move.name,
+                    description: cellData.move.description,
+                    energy: cellData.move.energyCost,
+                    moveId: cellData.ability.moveId,
+                    value: cellData.ability.value,
+                    type: cellData.ability.type,
+                  };
 
-                return dispatch(
-                  loadTeamGridFromUrl({
-                    slot: `slot${index}`,
-                    selectedCellByIdFromUrl,
-                    remainingEnergy,
-                    orbSpent,
-                  })
-                );
+                  return dispatch(
+                    loadTeamGridFromUrl({
+                      slot: `slot${index}`,
+                      selectedCellByIdFromUrl,
+                      remainingEnergy,
+                      orbSpent,
+                    })
+                  );
+                } else if (
+                  allSyncGrids[language][
+                    `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
+                  ][Number(id) - 42]
+                ) {
+                  cellData =
+                    allSyncGrids[language][
+                      `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
+                    ][Number(id) - 42];
+
+                  selectedCellByIdFromUrl = {
+                    cellId: cellData.cellId,
+                    name: cellData.move.name,
+                    description: cellData.move.description,
+                    energy: cellData.move.energyCost,
+                    moveId: cellData.ability.moveId,
+                    value: cellData.ability.value,
+                    type: cellData.ability.type,
+                  };
+
+                  return dispatch(
+                    loadTeamGridFromUrl({
+                      slot: `slot${index}`,
+                      selectedCellByIdFromUrl,
+                      remainingEnergy,
+                      orbSpent,
+                    })
+                  );
+                } else {
+                  alert('Invalid URL. One or more grids cannot be loaded');
+                }
               });
             }
           } else {

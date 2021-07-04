@@ -56,10 +56,10 @@ class GridMap extends Component {
           `trainerId_${trainerIdFromUrl}_GridData${this.props.language.toUpperCase()}`
         ]
       ) {
-        // Send alert if invalid url
-        alert('Invalid URL');
+        // Send alert if invalid trainerId in url
+        alert('Invalid trainerId in URL. Grid cannot be loaded');
       } else {
-        // valid url
+        // valid trainerId in url
         await this.props.selectSyncPair(trainerIdFromUrl);
 
         let syncLevelFromUrl;
@@ -78,9 +78,8 @@ class GridMap extends Component {
 
           let cellData = {};
           let selectedCellByIdFromUrl = {};
-          console.log('getQueryStringValue', getQueryStringValue('grid'));
+
           getQueryStringValue('grid').map((id) => {
-            console.log('id', id);
             if (
               allSyncGrids[this.props.language][
                 `trainerId_${
@@ -94,32 +93,54 @@ class GridMap extends Component {
                     this.props.trainerId
                   }_GridData${this.props.language.toUpperCase()}`
                 ][Number(id)];
-            } else {
+
+              selectedCellByIdFromUrl = {
+                cellId: cellData.cellId,
+                name: cellData.move.name,
+                description: cellData.move.description,
+                energy: cellData.move.energyCost,
+                moveId: cellData.ability.moveId,
+                value: cellData.ability.value,
+                type: cellData.ability.type,
+              };
+
+              return this.props.loadGridFromUrl(
+                selectedCellByIdFromUrl,
+                remainingEnergy,
+                orbSpent
+              );
+            } else if (
+              allSyncGrids[this.props.language][
+                `trainerId_${
+                  this.props.trainerId
+                }_GridData${this.props.language.toUpperCase()}`
+              ][Number(id) - 42]
+            ) {
               cellData =
                 allSyncGrids[this.props.language][
                   `trainerId_${
                     this.props.trainerId
                   }_GridData${this.props.language.toUpperCase()}`
                 ][Number(id) - 42];
+
+              selectedCellByIdFromUrl = {
+                cellId: cellData.cellId,
+                name: cellData.move.name,
+                description: cellData.move.description,
+                energy: cellData.move.energyCost,
+                moveId: cellData.ability.moveId,
+                value: cellData.ability.value,
+                type: cellData.ability.type,
+              };
+
+              return this.props.loadGridFromUrl(
+                selectedCellByIdFromUrl,
+                remainingEnergy,
+                orbSpent
+              );
+            } else {
+              alert('Invalid URL. Grid cannot be loaded');
             }
-
-            console.log('cellData', cellData);
-
-            selectedCellByIdFromUrl = {
-              cellId: cellData.cellId,
-              name: cellData.move.name,
-              description: cellData.move.description,
-              energy: cellData.move.energyCost,
-              moveId: cellData.ability.moveId,
-              value: cellData.ability.value,
-              type: cellData.ability.type,
-            };
-
-            return this.props.loadGridFromUrl(
-              selectedCellByIdFromUrl,
-              remainingEnergy,
-              orbSpent
-            );
           });
         }
       }
