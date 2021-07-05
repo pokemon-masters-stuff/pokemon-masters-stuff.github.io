@@ -1,10 +1,10 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import styles from "./styles";
+import React from 'react';
+import { withStyles } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import styles from './styles';
 
 function RarityDropdown(props) {
   const { classes, rarity, selectedRarity, handleOnChangeRarity } = props;
@@ -13,21 +13,29 @@ function RarityDropdown(props) {
   const [labelWidth, setLabelWidth] = React.useState(0);
 
   let rarityLevelList;
-  if (rarity === 3) {
-    rarityLevelList = ["★★★", "★★★★", "★★★★★"];
+  if (rarity === 1) {
+    rarityLevelList = ['★', '★★', '★★★', '★★★★', '★★★★★'];
+  } else if (rarity === 2) {
+    rarityLevelList = ['★★', '★★★', '★★★★', '★★★★★'];
+  } else if (rarity === 3) {
+    rarityLevelList = ['★★★', '★★★★', '★★★★★'];
   } else if (rarity === 4) {
-    rarityLevelList = ["★★★★", "★★★★★"];
+    rarityLevelList = ['★★★★', '★★★★★'];
   } else {
-    rarityLevelList = ["★★★★★"];
+    rarityLevelList = ['★★★★★'];
   }
 
   let selectedRarityStars;
-  if (selectedRarity === 3) {
-    selectedRarityStars = "★★★";
+  if (selectedRarity === 1) {
+    selectedRarityStars = '★';
+  } else if (selectedRarity === 2) {
+    selectedRarityStars = '★★';
+  } else if (selectedRarity === 3) {
+    selectedRarityStars = '★★★';
   } else if (selectedRarity === 4) {
-    selectedRarityStars = "★★★★";
+    selectedRarityStars = '★★★★';
   } else {
-    selectedRarityStars = "★★★★★";
+    selectedRarityStars = '★★★★★';
   }
 
   React.useEffect(() => {

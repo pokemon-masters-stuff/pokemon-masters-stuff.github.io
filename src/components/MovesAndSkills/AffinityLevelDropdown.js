@@ -1,12 +1,12 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import styles from "./styles";
+import React from 'react';
+import { withStyles } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import styles from '../EggPokemon/styles';
 
-const affinityLevelList = ["1/3", "2/3", "3/3"];
+const affinityLevelList = ['1/3', '2/3', '3/3'];
 
 function AffinityLevelDropdown(props) {
   const { classes, selectedAffinityLevel, handleOnChangeAffinityLevel } = props;

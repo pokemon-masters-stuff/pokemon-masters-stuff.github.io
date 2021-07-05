@@ -9,6 +9,7 @@ import {
   getPokemonNameList,
   getNewPokemonNameList,
   getPokemonDataByTrainerId,
+  getEggPokemonNameList,
 } from '../../utils/functions';
 import styles from './styles';
 import { updateUrl, setSyncLevel } from '../../actions/actionCreators';
@@ -30,6 +31,7 @@ function SelectPokemonModal(props) {
     isSelectPokemonModalOpen,
     setIsSelectPokemonModalOpen,
     usedAsFilter,
+    isEgg,
   } = props;
   const [role, setRole] = useState('none');
   const [type, setType] = useState(0);
@@ -48,15 +50,20 @@ function SelectPokemonModal(props) {
   };
 
   const handleSelectPokemon = (e, trainerId) => {
-    if (!usedAsFilter) {
-      onChangeHandler(trainerId);
-      dispatch(updateUrl(trainerId));
-      dispatch(setSyncLevel('5'));
-      setIsSelectPokemonModalOpen(false);
-    }
-    if (usedAsFilter) {
+    if (isEgg) {
       onChangeHandler(trainerId);
       setIsSelectPokemonModalOpen(false);
+    } else {
+      if (!usedAsFilter) {
+        onChangeHandler(trainerId);
+        dispatch(updateUrl(trainerId));
+        dispatch(setSyncLevel('5'));
+        setIsSelectPokemonModalOpen(false);
+      }
+      if (usedAsFilter) {
+        onChangeHandler(trainerId);
+        setIsSelectPokemonModalOpen(false);
+      }
     }
   };
 
@@ -127,54 +134,78 @@ function SelectPokemonModal(props) {
               {`----- (${UI['Reset'][language]})`}
             </MenuItem>
           ) : null}
-          <ListSubheader disableSticky={true}>New</ListSubheader>
-          {getNewPokemonNameList(language, role, type).map(
-            (syncPairData, index) => (
-              <MenuItem
-                key={index}
-                onClick={(e) => handleSelectPokemon(e, syncPairData.trainerId)}
-              >
-                <>
-                  <img
-                    width="40"
-                    height="40"
-                    src={
-                      pokemonPictures[
-                        getPokemonDataByTrainerId(syncPairData.trainerId)
-                          .monsterActorId + '_128'
-                      ]
-                    }
-                  />
-                  &nbsp;
-                </>
-                {syncPairData.value}
-              </MenuItem>
-            )
-          )}
-          <ListSubheader disableSticky={true}>All</ListSubheader>
 
-          {getPokemonNameList(language, role, type).map(
-            (syncPairData, index) => (
-              <MenuItem
-                key={index}
-                onClick={(e) => handleSelectPokemon(e, syncPairData.trainerId)}
-              >
-                <>
-                  <img
-                    width="40"
-                    height="40"
-                    src={
-                      pokemonPictures[
-                        getPokemonDataByTrainerId(syncPairData.trainerId)
-                          .monsterActorId + '_128'
-                      ]
+          {!isEgg ? (
+            <div>
+              <ListSubheader disableSticky={true}>New</ListSubheader>
+              {getNewPokemonNameList(language, role, type).map(
+                (syncPairData, index) => (
+                  <MenuItem
+                    key={index}
+                    onClick={(e) =>
+                      handleSelectPokemon(e, syncPairData.trainerId)
                     }
-                  />
-                  &nbsp;
-                </>
-                {syncPairData.value}
-              </MenuItem>
-            )
+                  >
+                    <>
+                      <img
+                        width="40"
+                        height="40"
+                        src={
+                          pokemonPictures[
+                            getPokemonDataByTrainerId(syncPairData.trainerId)
+                              .monsterActorId + '_128'
+                          ]
+                        }
+                      />
+                      &nbsp;
+                    </>
+                    {syncPairData.value}
+                  </MenuItem>
+                )
+              )}
+              <ListSubheader disableSticky={true}>All</ListSubheader>
+
+              {getPokemonNameList(language, role, type).map(
+                (syncPairData, index) => (
+                  <MenuItem
+                    key={index}
+                    onClick={(e) =>
+                      handleSelectPokemon(e, syncPairData.trainerId)
+                    }
+                  >
+                    <div>
+                      <img
+                        width="40"
+                        height="40"
+                        src={
+                          pokemonPictures[
+                            getPokemonDataByTrainerId(syncPairData.trainerId)
+                              .monsterActorId + '_128'
+                          ]
+                        }
+                      />
+                      &nbsp;
+                    </div>
+                    {syncPairData.value}
+                  </MenuItem>
+                )
+              )}
+            </div>
+          ) : (
+            <div>
+              {getEggPokemonNameList(language, role, type).map(
+                (syncPairData, index) => (
+                  <MenuItem
+                    key={index}
+                    onClick={(e) =>
+                      handleSelectPokemon(e, syncPairData.trainerId)
+                    }
+                  >
+                    {syncPairData.value}
+                  </MenuItem>
+                )
+              )}
+            </div>
           )}
         </MenuList>
       </DialogContent>

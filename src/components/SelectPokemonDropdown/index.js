@@ -41,6 +41,7 @@ function SimpleSelect(props) {
         isSelectPokemonModalOpen={isSelectPokemonModalOpen}
         setIsSelectPokemonModalOpen={setIsSelectPokemonModalOpen}
         usedAsFilter={false}
+        isEgg={false}
       />
     </>
   );

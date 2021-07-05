@@ -31,6 +31,7 @@ const MovesAndSkillsButton = (props) => {
         language={language}
         isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
         setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
+        size={'large'}
       />
     </Fragment>
   );

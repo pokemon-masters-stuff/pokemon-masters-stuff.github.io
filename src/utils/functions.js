@@ -1,6 +1,6 @@
 import gridedSyncPairData from '../data/gridedSyncPairData.json';
 import syncPairNamesAndIds from '../data/syncPairNamesAndIds.json';
-import eggPokemonDataArray from '../data/eggPokemonData.json';
+import eggPokemonData from '../data/eggPokemonData.json';
 import {
   shortenedMoveNameByAbilityId,
   arrayOfTrainerIdsForNewlyGridedSyncPairs,
@@ -8,6 +8,7 @@ import {
   type1SyncGrid,
   type2SyncGrid,
   type3SyncGrid,
+  rolesByLanguage,
 } from './constants';
 
 export const removeHyphens = (str) => {
@@ -33,8 +34,7 @@ export const getPokemonNameList = (language, role, type) => {
       (entry) => entry.type.toString() === type.toString()
     );
   }
-  // Object.values(gridedSyncPairData)
-  //   .filter((entry) => entry.role === role && entry.type === type)
+
   filteredList.map((entry, index) => {
     if (
       !arrayOfTrainerIdsForNewlyGridedSyncPairs.includes(
@@ -46,7 +46,7 @@ export const getPokemonNameList = (language, role, type) => {
         let trainerId = entry.trainerId.toString();
         return existingGridedPokemon.push({
           key: index,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value,
           trainerId: trainerId,
         });
       } else {
@@ -54,7 +54,7 @@ export const getPokemonNameList = (language, role, type) => {
         let trainerId = entry.trainerId.toString();
         return existingGridedPokemon.push({
           key: index,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value,
           trainerId: trainerId,
         });
       }
@@ -90,7 +90,7 @@ export const getNewPokemonNameList = (language, role, type) => {
         let trainerId = entry.trainerId.toString();
         return newlyGridedPokemon.push({
           key: index,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value,
           trainerId: trainerId,
         });
       } else {
@@ -98,7 +98,7 @@ export const getNewPokemonNameList = (language, role, type) => {
         let trainerId = entry.trainerId.toString();
         return newlyGridedPokemon.push({
           key: index,
-          value: value, // value changes as language changes. name stays the same so old links and saves are compatible
+          value: value,
           trainerId: trainerId,
         });
       }
@@ -132,43 +132,39 @@ export const getSyncPairNameAndIdByTrainerId = (trainerId) => {
   return syncPairNamesAndIds[trainerId];
 };
 
-const role = { 0: 'P.Strike', 1: 'S.Strike', 2: 'Support', 3: 'Tech' };
-export const getEggPokemonNameList = (language) =>
-  eggPokemonDataArray
-    .map((entry, index) => {
-      // if (entry.monsterBaseId === 'id of new duplicate pokemon') {
-      //  // for the new sync pair:
-      //   let valueOfNewSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
-      //   let name = entry.syncPairNameByLanguage['en']
-      // }
-      // if (entry.monsterBaseId === 'id of old duplicate pokemon') {
-      //  // for the old sync pair, change displayed value but not name so that old saves are still compatible
-      //  let valueOfOldSyncPair = entry.pokemonNameByLanguage[language]+'('+entry.trainerNameByLanguage[language]+')'
-      // }
-      return {
-        key: index,
-        name: entry.pokemonNameByLanguage['en'] + ` (${role[entry.role]})`,
-        role: entry.role,
-        value: entry.pokemonNameByLanguage[language] + ` (${role[entry.role]})`, // value changes as language changes. name stays the same so old links and saves are compatible
-      };
-    })
-    .sort((a, b) => {
-      let x = a.value;
-      let y = b.value;
-      return x < y ? -1 : x > y ? 1 : 0;
-    });
+export const getEggPokemonNameList = (language, role, type) => {
+  let eggPokemon = [];
+  let filteredList = Object.values(eggPokemonData);
 
-export const getEggPokemonDataByNameAndRole = (pokemonName, role) => {
-  let pokemonData;
-  eggPokemonDataArray.forEach((pokemon) => {
-    if (
-      pokemon.pokemonNameByLanguage['en'] === pokemonName &&
-      pokemon.role === role
-    ) {
-      pokemonData = pokemon;
-    }
+  if (role && role !== 'none') {
+    filteredList = filteredList.filter(
+      (entry) => entry.role.toString() === role.toString()
+    );
+  }
+  if (type && type.toString() !== '0') {
+    filteredList = filteredList.filter(
+      (entry) => entry.type.toString() === type.toString()
+    );
+  }
+
+  filteredList.map((entry, index) => {
+    return eggPokemon.push({
+      key: index,
+      value:
+        entry.pokemonNameByLanguage[language] +
+        ` (${rolesByLanguage[entry.role][language]})`,
+      trainerId: entry.trainerId,
+    });
   });
-  return pokemonData;
+  return eggPokemon.sort((a, b) => {
+    let x = a.value;
+    let y = b.value;
+    return x < y ? -1 : x > y ? 1 : 0;
+  });
+};
+
+export const getEggPokemonDataByTrainerId = (trainerId) => {
+  return eggPokemonData[trainerId];
 };
 
 // TO DO: REFACTOR
@@ -180,7 +176,6 @@ export const getFillColorByMoveType = ({ type, group }) => {
     movePowerBoost: '#73d958', // green
     moveAccuracyBoost: '#73d958', // green
     syncBoost: '#d12deb', // purple
-    // locked: '#dedbd3', // gray
   };
   let colorsByTypeId = {
     1: colorsByTypeDef.statsBoost,
