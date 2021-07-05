@@ -24,6 +24,7 @@ import { icons } from '../../images/Icons/exportImagesAsObject';
 import { typesByLanguage } from '../../utils/constants';
 import AffinityLevelDropdown from './AffinityLevelDropdown';
 import AffinityProgressDropdown from './AffinityProgressDropdown';
+import FormatLineSpacingIcon from '@material-ui/icons/FormatLineSpacing';
 
 const useRowStyles = makeStyles({
   root: {
@@ -304,8 +305,9 @@ function Stats(props) {
 }
 
 function Moves(props) {
-  const { language, move, selectedMoves, syncLevel, size } = props;
-  const [open, setOpen] = React.useState(false);
+  const { language, move, selectedMoves, syncLevel, size, openAll } = props;
+
+  const [open, setOpen] = React.useState(openAll);
   const classes = useRowStyles();
 
   let powerUpFromGrid = selectedMoves[move.id]
@@ -325,6 +327,11 @@ function Moves(props) {
   } else if (move.category === 3) {
     moveCategory = 'Status';
   }
+
+  React.useEffect(() => {
+    setOpen(openAll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openAll]);
 
   return (
     <Fragment>
@@ -417,9 +424,9 @@ function Moves(props) {
 }
 
 function SyncMove(props) {
-  const { language, syncMove, selectedMoves, syncLevel, size } = props;
+  const { language, syncMove, selectedMoves, syncLevel, size, openAll } = props;
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(openAll);
   const classes = useRowStyles();
 
   let powerUpFromGrid = selectedMoves.hasOwnProperty(syncMove.id)
@@ -435,6 +442,11 @@ function SyncMove(props) {
   } else if (syncMove.category === 3) {
     syncMoveCategory = 'Status';
   }
+
+  React.useEffect(() => {
+    setOpen(openAll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openAll]);
 
   return (
     <Fragment>
@@ -514,10 +526,15 @@ function SyncMove(props) {
 }
 
 function Passives(props) {
-  const { language, passive, size } = props;
+  const { language, passive, size, openAll } = props;
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(openAll);
   const classes = useRowStyles();
+
+  React.useEffect(() => {
+    setOpen(openAll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openAll]);
 
   return (
     <Fragment>
@@ -770,6 +787,8 @@ export default function MovesAndSkillsModalContent(props) {
 
   const [isMax, setIsMax] = useState(false);
 
+  const [openAll, setOpenAll] = useState(false);
+
   let bonusHpFromPotential =
     rarity === 5 ? selectedPotential * 5 || 0 : selectedPotential * 2 || 0;
 
@@ -827,6 +846,15 @@ export default function MovesAndSkillsModalContent(props) {
 
   const handleOnChangeAffinityProgress = (value) => {
     setSelectedAffinityProgress(value);
+  };
+
+  const handleOnClickOpenAllButton = (e) => {
+    if (openAll) {
+      setOpenAll(false);
+    } else {
+      setOpenAll(true);
+    }
+    // setOpenAll(!openAll);
   };
 
   const handleOnClickMaxOrResetButton = (e) => {
@@ -1002,6 +1030,14 @@ export default function MovesAndSkillsModalContent(props) {
             : 'MAX'}
         </Button>
 
+        <Button
+          variant="outlined"
+          onClick={handleOnClickOpenAllButton}
+          style={{ marginTop: 9, marginLeft: 8 }}
+        >
+          <FormatLineSpacingIcon />
+        </Button>
+
         <Table aria-label="table" size="small">
           <TableHead>
             <TableRow>
@@ -1060,6 +1096,7 @@ export default function MovesAndSkillsModalContent(props) {
                     selectedMoves={selectedMoves}
                     syncLevel={syncLevel}
                     size={size}
+                    openAll={openAll}
                   />
                 ))
               : postVariationMoves.map((move, index) => (
@@ -1070,6 +1107,7 @@ export default function MovesAndSkillsModalContent(props) {
                     selectedMoves={selectedMoves}
                     syncLevel={syncLevel}
                     size={size}
+                    openAll={openAll}
                   />
                 ))}
           </TableBody>
@@ -1094,6 +1132,7 @@ export default function MovesAndSkillsModalContent(props) {
                 selectedMoves={selectedMoves}
                 syncLevel={syncLevel}
                 size={size}
+                openAll={openAll}
               />
             ) : (
               <SyncMove
@@ -1108,6 +1147,7 @@ export default function MovesAndSkillsModalContent(props) {
                 selectedMoves={selectedMoves}
                 syncLevel={syncLevel}
                 size={size}
+                openAll={openAll}
               />
             )}
           </TableBody>
@@ -1131,6 +1171,7 @@ export default function MovesAndSkillsModalContent(props) {
                       language={language}
                       passive={passive}
                       size={size}
+                      openAll={openAll}
                     />
                   ) : null
                 )
@@ -1141,6 +1182,7 @@ export default function MovesAndSkillsModalContent(props) {
                       language={language}
                       passive={passive}
                       size={size}
+                      openAll={openAll}
                     />
                   ) : null
                 )}
