@@ -28,12 +28,14 @@ import {
   renderMoveName,
   getPokemonDataByTrainerId,
   checkSelectabilityBasedOnSyncLv,
+  getUpdatedSelectedCellsData,
 } from '../../../utils/functions';
 import { allSyncGrids } from '../../../data/exportGridsAsObject';
 import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 import UI from '../../../utils/translations';
 import LUCKY_SKILL_LIST from '../../../data/luckySkills.json';
 import { lookupTrainerIdByPokemonName } from '../../../data/lookupTables';
+import MovesAndSkills from '../../MovesAndSkills/Mobile';
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -246,7 +248,7 @@ class BuildItem extends Component {
     ) : null;
   };
 
-  renderIcons = (build, currentUser) => {
+  renderIcons = (build, currentUser, trainerId) => {
     const arrayOfUsersLikedThisBuild = build.likes.map((like) => {
       return like.user;
     });
@@ -256,7 +258,7 @@ class BuildItem extends Component {
       <Fragment>
         {currentUser._id === build.user ? (
           <Fragment>
-            <div className="col-sm-4">
+            <div className="col-sm-6">
               <IconButton
                 value={build}
                 data-toggle="modal"
@@ -276,6 +278,17 @@ class BuildItem extends Component {
               >
                 <DeleteIcon />
               </IconButton>
+
+              <MovesAndSkills
+                trainerId={trainerId}
+                selectedCellsById={getUpdatedSelectedCellsData(
+                  trainerId,
+                  build.selectedCellsById
+                )}
+                syncLevel={build.syncLevel}
+                page={'builds'}
+                size={'large'}
+              />
 
               <Button
                 variant="outlined"
@@ -297,7 +310,19 @@ class BuildItem extends Component {
           </Fragment>
         ) : (
           <Fragment>
-            <div className="col-sm-3 offset-sm-1">
+            <div className="col-sm-5 offset-sm-1">
+              {/* <div style={{ padding: 1 }}> */}
+              <MovesAndSkills
+                trainerId={trainerId}
+                selectedCellsById={getUpdatedSelectedCellsData(
+                  trainerId,
+                  build.selectedCellsById
+                )}
+                syncLevel={build.syncLevel}
+                page={'builds'}
+                size={'large'}
+              />
+              {/* </div> */}
               <Button
                 variant="outlined"
                 data-toggle="modal"
@@ -345,7 +370,7 @@ class BuildItem extends Component {
           className={darkMode ? classes.buildNameDark : classes.buildName}
         >
           <div className="row">
-            <div className="col-sm-8">
+            <div className="col-sm-6">
               <span
                 style={{
                   fontWeight: 'bold',
@@ -363,7 +388,7 @@ class BuildItem extends Component {
                 {build.username}
               </span>
             </div>
-            {this.renderIcons(build, currentUser)}
+            {this.renderIcons(build, currentUser, trainerId)}
           </div>
         </Paper>
         <Divider />

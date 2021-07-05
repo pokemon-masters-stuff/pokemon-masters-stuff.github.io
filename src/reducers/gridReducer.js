@@ -181,9 +181,8 @@ export default function (state = initialState, action) {
             ...updatedSelectedCellsById,
             [cellId]: selectedCellById,
           };
-
-          return updatedSelectedCellsById;
         });
+        return updatedSelectedCellsById;
       }
 
       return {

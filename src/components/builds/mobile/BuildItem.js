@@ -27,11 +27,13 @@ import {
   renderMoveName,
   getPokemonDataByTrainerId,
   checkSelectabilityBasedOnSyncLv,
+  getUpdatedSelectedCellsData,
 } from '../../../utils/functions';
 import { allSyncGrids } from '../../../data/exportGridsAsObject';
 import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 import BuildDescription from './BuildDescription';
 import { lookupTrainerIdByPokemonName } from '../../../data/lookupTables';
+import MovesAndSkills from '../../MovesAndSkills/Mobile';
 
 class BuildItem extends Component {
   _isMounted = false;
@@ -200,7 +202,7 @@ class BuildItem extends Component {
     ) : null;
   };
 
-  renderIcons = (build, currentUser) => {
+  renderIcons = (build, currentUser, trainerId) => {
     const arrayOfUsersLikedThisBuild = build.likes.map((like) => {
       return like.user;
     });
@@ -211,6 +213,12 @@ class BuildItem extends Component {
         {currentUser._id === build.user ? (
           <Fragment>
             <IconButton
+              style={{
+                marginLeft: 2,
+                marginRight: 2,
+                paddingLeft: 2,
+                paddingRight: 2,
+              }}
               value={build}
               data-toggle="modal"
               data-target={`#editBuildModal${build._id}`}
@@ -224,12 +232,28 @@ class BuildItem extends Component {
               luckySkillIds={build.luckySkillIds}
             />
             <IconButton
+              style={{
+                marginLeft: 2,
+                marginRight: 2,
+                paddingLeft: 2,
+                paddingRight: 2,
+              }}
               value={build}
               onClick={this.handleClickDelete.bind(this, build)}
             >
               <DeleteIcon />
             </IconButton>
 
+            <MovesAndSkills
+              trainerId={trainerId}
+              selectedCellsById={getUpdatedSelectedCellsData(
+                trainerId,
+                build.selectedCellsById
+              )}
+              syncLevel={build.syncLevel}
+              page={'builds'}
+              size={'small'}
+            />
             <Button
               variant="outlined"
               data-toggle="modal"
@@ -249,11 +273,21 @@ class BuildItem extends Component {
           </Fragment>
         ) : (
           <Fragment>
+            <MovesAndSkills
+              trainerId={trainerId}
+              selectedCellsById={getUpdatedSelectedCellsData(
+                trainerId,
+                build.selectedCellsById
+              )}
+              syncLevel={build.syncLevel}
+              page={'builds'}
+              size={'small'}
+            />
             <Button
               variant="outlined"
               data-toggle="modal"
               data-target={`#shareLinkModal${build._id}`}
-              style={{ marginLeft: 10 }}
+              // style={{ marginLeft: 10 }}
             >
               Share
             </Button>
@@ -309,7 +343,7 @@ class BuildItem extends Component {
         <Divider light />
         <Paper>
           <div className="pl-3 pr-1">
-            {this.renderIcons(build, currentUser)}
+            {this.renderIcons(build, currentUser, trainerId)}
           </div>
         </Paper>
         <Divider light />

@@ -10,6 +10,7 @@ import {
   type3SyncGrid,
   rolesByLanguage,
 } from './constants';
+import { allSyncGrids } from '../data/exportGridsAsObject';
 
 export const removeHyphens = (str) => {
   if (str.toLowerCase() === 'sirfetch’d') {
@@ -165,6 +166,35 @@ export const getEggPokemonNameList = (language, role, type) => {
 
 export const getEggPokemonDataByTrainerId = (trainerId) => {
   return eggPokemonData[trainerId];
+};
+
+export const getUpdatedSelectedCellsData = (trainerId, selectedCellsById) => {
+  // For old saves that don't contain moveId, value, and type, loop through grid to find them.
+  let selectedCellById = {};
+  let updatedSelectedCellsById;
+  Object.keys(selectedCellsById).map((cellId) => {
+    allSyncGrids['en'][`trainerId_${trainerId}_GridDataEN`].forEach(
+      (cellData) => {
+        if (cellData.cellId === Number(cellId)) {
+          selectedCellById = {
+            cellId: cellData.cellId,
+            name: cellData.move.name,
+            description: cellData.move.description,
+            energy: cellData.move.energyCost,
+            moveId: cellData.ability.moveId,
+            value: cellData.ability.value,
+            type: cellData.ability.type,
+          };
+        }
+      }
+    );
+    updatedSelectedCellsById = {
+      ...updatedSelectedCellsById,
+      [cellId]: selectedCellById,
+    };
+  });
+
+  return updatedSelectedCellsById;
 };
 
 // TO DO: REFACTOR

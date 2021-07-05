@@ -55,6 +55,7 @@ export default function MovesAndSkillsModal(props) {
       fullWidth={true}
       maxWidth="md"
       scroll={size === 'large' ? 'body' : 'paper'}
+      style={{ zIndex: 2000 }}
     >
       <DialogTitle>
         <img

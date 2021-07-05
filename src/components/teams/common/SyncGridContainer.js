@@ -8,7 +8,11 @@ import Box from '@material-ui/core/Box';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { getSyncPairNameAndIdByTrainerId } from '../../../utils/functions';
+import {
+  getSyncPairNameAndIdByTrainerId,
+  getUpdatedSelectedCellsData,
+} from '../../../utils/functions';
+import MovesAndSkills from '../../MovesAndSkills/Mobile';
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -63,6 +67,27 @@ const SyncGridContainer = (props) => {
             E: {teamMemberData.remainingEnergy}/60
             <br />
             O: {teamMemberData.orbSpent}/750
+          </div>
+
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              margin: 0,
+              marginLeft: 15,
+            }}
+          >
+            <MovesAndSkills
+              trainerId={teamMemberData.trainerId}
+              selectedCellsById={getUpdatedSelectedCellsData(
+                teamMemberData.trainerId,
+                teamMemberData.selectedCellsById
+              )}
+              syncLevel={teamMemberData.syncLevel}
+              page={'teams'}
+              size={paddingB ? 'large' : 'small'}
+            />
           </div>
 
           {/* <div style={{ marginLeft: 8, marginTop: -7 }}>

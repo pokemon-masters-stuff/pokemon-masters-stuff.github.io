@@ -6,7 +6,7 @@ import UI from '../../utils/translations';
 
 const MovesAndSkillsButton = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
-  const { trainerId, pokemon, selectedCellsById, syncLevel } = props;
+  const { trainerId, selectedCellsById, syncLevel, page, size } = props;
 
   const [isMovesAndSkillsModalVisible, setIsMovesAndSkillsModalVisible] =
     useState(false);
@@ -18,7 +18,7 @@ const MovesAndSkillsButton = (props) => {
     <Fragment>
       <Button
         variant="outlined"
-        style={{ marginTop: 10 }}
+        style={page === 'builds' ? { marginRight: 10 } : { marginTop: 10 }}
         onClick={handleOnOpenMovesAndSkillsModal}
       >
         {UI['Moves & Skills'][language]}
@@ -26,13 +26,12 @@ const MovesAndSkillsButton = (props) => {
 
       <MovesAndSkillsModal
         trainerId={trainerId}
-        // pokemon={pokemon}
         selectedCellsById={selectedCellsById}
         syncLevel={syncLevel}
         language={language}
         isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
         setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
-        size={'small'}
+        size={size || 'small'}
       />
     </Fragment>
   );

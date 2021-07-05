@@ -35,23 +35,9 @@ const useStyles = makeStyles((theme) => ({
 function SyncPairCard(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
-  // const language = useSelector((state) => state.language.currentLanguage);
   const { index, teamMemberData } = props;
-  // console.log('teamMemberData in SyncPairCard', teamMemberData);
-  // let syncPairs = Object.values(syncPairNamesAndIds);
   const gender = useSelector((state) => state.gender.selectedGender);
   const darkMode = useSelector((state) => state.darkMode.mode);
-
-  // const [isSelectSyncPairModalVisible, setIsSelectSyncPairModalVisible] =
-  //   useState(false);
-
-  // const handleOnCloseSelectSyncPairModal = () => {
-  //   setIsSelectSyncPairModalVisible(false);
-  // };
-
-  // const onClickCard = () => {
-  //   setIsSelectSyncPairModalVisible(true);
-  // };
 
   let trainerActorId = teamMemberData.trainerId
     ? syncPairNamesAndIds[teamMemberData.trainerId].trainerActorId
@@ -85,10 +71,9 @@ function SyncPairCard(props) {
           </Fab>
         ) : null}
 
-        {/* <CardActionArea onClick={onClickCard}> */}
         {teamMemberData.trainerId ? (
           <div>
-            {/* <CardMedia
+            <CardMedia
               component="img"
               alt="Trainer Image"
               height="250"
@@ -99,7 +84,7 @@ function SyncPairCard(props) {
               }
               title="Trainer Image"
               position="absolute"
-            /> */}
+            />
             <div
               style={{
                 bottom: 0,
@@ -207,7 +192,7 @@ function SyncPairCard(props) {
                 zIndex: 20,
               }}
             >
-              {/* <img
+              <img
                 src={
                   getPokemonDataByTrainerId(teamMemberData.trainerId)
                     ? pokemonPictures[
@@ -217,7 +202,7 @@ function SyncPairCard(props) {
                     : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${monsterActorId}_128.ktx.png`
                 }
                 style={{ height: 60 }}
-              /> */}
+              />
             </div>
           </div>
         ) : (
@@ -276,7 +261,6 @@ function SyncPairCard(props) {
             </div>
           </div>
         )}
-        {/* </CardActionArea> */}
       </Card>
     </Fragment>
   );
