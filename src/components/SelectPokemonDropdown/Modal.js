@@ -21,6 +21,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import MenuList from '@material-ui/core/MenuList';
 import { typesByLanguage, rolesByLanguage } from '../../utils/constants';
 import UI from '../../utils/translations';
+import { icons } from '../../images/Icons/exportImagesAsObject';
 
 function SelectPokemonModal(props) {
   const dispatch = useDispatch();
@@ -91,13 +92,19 @@ function SelectPokemonModal(props) {
             MenuProps={{
               style: { zIndex: 3000 },
             }}
+            style={{ height: 45 }}
           >
             <MenuItem key={`role-none`} value={'none'}>
               —
             </MenuItem>
             {Object.entries(rolesByLanguage).map(([key, value]) => (
               <MenuItem key={`role-${key}`} value={key}>
-                {value[language]}
+                {/* {value[language]} */}
+                <img
+                  // width="20"
+                  height="25"
+                  src={icons[value['en'].split(' ').join('')]}
+                />
               </MenuItem>
             ))}
           </Select>
@@ -117,10 +124,20 @@ function SelectPokemonModal(props) {
             MenuProps={{
               style: { zIndex: 3000 },
             }}
+            style={{ height: 45 }}
           >
             {Object.entries(typesByLanguage).map(([key, value]) => (
               <MenuItem key={`type-${key}`} value={key}>
-                {value[language]}
+                {/* {value[language]} */}
+                {icons[value['en']] ? (
+                  <img
+                    // width="20"
+                    height="25"
+                    src={icons[value['en']]}
+                  />
+                ) : (
+                  value[language]
+                )}
               </MenuItem>
             ))}
           </Select>
