@@ -1069,6 +1069,7 @@ export default function MovesAndSkillsModalContent(props) {
                     move={move}
                     selectedMoves={selectedMoves}
                     syncLevel={syncLevel}
+                    size={size}
                   />
                 ))}
           </TableBody>
