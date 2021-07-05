@@ -3,19 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-// import CardActionArea from '@material-ui/core/CardActionArea';
-// import Dialog from '@material-ui/core/Dialog';
-// import DialogTitle from '@material-ui/core/DialogTitle';
-// import DialogContent from '@material-ui/core/DialogContent';
 import Fab from '@material-ui/core/Fab';
-// import TextField from '@material-ui/core/TextField';
-// import Autocomplete from '@material-ui/lab/Autocomplete';
 import syncPairNamesAndIds from '../../../data/syncPairNamesAndIds.json';
 import { changeGender } from '../../../actions/actionCreators';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import { getPokemonDataByTrainerId } from '../../../utils/functions';
 import { pokemonPictures } from '../../../images/Pokemon/exportImagesAsObject';
 import { trainerPictures } from '../../../images/Trainers/exportImagesAsObject';
+import { icons } from '../../../images/Icons/exportImagesAsObject';
+import { rolesByLanguage } from '../../../utils/constants';
+import { getSyncPairNameAndIdByTrainerId } from '../../../utils/functions';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -91,7 +88,7 @@ function SyncPairCard(props) {
         {/* <CardActionArea onClick={onClickCard}> */}
         {teamMemberData.trainerId ? (
           <div>
-            <CardMedia
+            {/* <CardMedia
               component="img"
               alt="Trainer Image"
               height="250"
@@ -102,7 +99,7 @@ function SyncPairCard(props) {
               }
               title="Trainer Image"
               position="absolute"
-            />
+            /> */}
             <div
               style={{
                 bottom: 0,
@@ -132,24 +129,31 @@ function SyncPairCard(props) {
               </div>
             ) : null}
 
-            {/* {syncPairNamesAndIds[teamMemberData.trainerId]['isEggmon'] ? (
-              <div
-                style={{
-                  bottom: 0,
-                  left: 5,
-                  position: 'absolute',
-                  zIndex: 30,
-                  color: 'white',
-                  fontSize: 12,
-                }}
-              >
-                {
-                  syncPairNamesAndIds[teamMemberData.trainerId][
-                    'roleTypeNameByLanguage'
-                  ][language]
+            <div
+              style={{
+                bottom: 3,
+                left: 5,
+                position: 'absolute',
+                zIndex: 30,
+                color: 'white',
+                fontSize: 12,
+              }}
+            >
+              <img
+                // width="20"
+                height="18"
+                src={
+                  icons[
+                    rolesByLanguage[
+                      getSyncPairNameAndIdByTrainerId(teamMemberData.trainerId)
+                        .role
+                    ]['en']
+                      .split(' ')
+                      .join('')
+                  ]
                 }
-              </div>
-            ) : null} */}
+              />
+            </div>
 
             <div
               style={{
@@ -203,7 +207,7 @@ function SyncPairCard(props) {
                 zIndex: 20,
               }}
             >
-              <img
+              {/* <img
                 src={
                   getPokemonDataByTrainerId(teamMemberData.trainerId)
                     ? pokemonPictures[
@@ -213,7 +217,7 @@ function SyncPairCard(props) {
                     : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${monsterActorId}_128.ktx.png`
                 }
                 style={{ height: 60 }}
-              />
+              /> */}
             </div>
           </div>
         ) : (
