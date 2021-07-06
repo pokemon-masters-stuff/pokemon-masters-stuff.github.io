@@ -593,6 +593,7 @@ export default function MovesAndSkillsModalContent(props) {
     isVariationForm,
     size,
     isEgg,
+    isEX,
   } = props;
 
   // console.log('selectedCellsById', selectedCellsById);
@@ -806,10 +807,16 @@ export default function MovesAndSkillsModalContent(props) {
   }
 
   React.useEffect(() => {
-    setSelectedRarity(rarity);
-    setSelectedPotential(0);
-    setSelectedAffinityLevel('1/3');
-    setSelectedAffinityProgress(0);
+    if (!isEX) {
+      setSelectedRarity(rarity);
+      setSelectedPotential(0);
+      setSelectedAffinityLevel('1/3');
+      setSelectedAffinityProgress(0);
+    } else {
+      setSelectedRarity(5);
+      setSelectedPotential(20);
+      setIsMax(true);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trainerId]);
 
@@ -1038,7 +1045,7 @@ export default function MovesAndSkillsModalContent(props) {
           <FormatLineSpacingIcon />
         </Button>
 
-        <Table aria-label="table" size="small">
+        <Table aria-label="table" size="small" style={{ marginTop: 10 }}>
           <TableHead>
             <TableRow>
               <TableCell />

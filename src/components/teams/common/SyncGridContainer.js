@@ -87,6 +87,7 @@ const SyncGridContainer = (props) => {
               syncLevel={teamMemberData.syncLevel}
               page={'teams'}
               size={paddingB ? 'large' : 'small'}
+              isEX={teamMemberData.isEX}
             />
           </div>
 
