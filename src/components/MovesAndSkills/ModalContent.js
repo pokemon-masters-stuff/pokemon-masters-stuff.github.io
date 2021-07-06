@@ -32,6 +32,12 @@ const useRowStyles = makeStyles({
       borderBottom: 'unset',
     },
   },
+  gauge: {
+    width: '11px',
+    height: '6px',
+    background: 'radial-gradient(LightBlue, DeepSkyBlue)',
+    border: '1px solid blue',
+  },
 });
 
 // TO-DO: Refactor
@@ -333,6 +339,21 @@ function Moves(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openAll]);
 
+  let gaugeArray = [];
+  for (var i = 0; i < Number(move.gaugeDrain); i++) {
+    gaugeArray.push(
+      <div
+        key={i}
+        className={classes.gauge}
+        style={
+          i === 0
+            ? { display: 'inline-block' }
+            : { display: 'inline-block', marginLeft: 2 }
+        }
+      ></div>
+    );
+  }
+
   return (
     <Fragment>
       <TableRow key={move.name[language]} className={classes.root}>
@@ -371,11 +392,13 @@ function Moves(props) {
           ) : null}
         </TableCell>
         <TableCell align="center">
-          {move.gaugeDrain ? move.gaugeDrain : '-'}
+          {move.gaugeDrain ? gaugeArray : null}
+          {move.gaugeDrain && move.maxUses ? ' ' : null}
+          {move.maxUses ? `${move.maxUses}/${move.maxUses}` : null}
         </TableCell>
-        <TableCell align="center">
+        {/* <TableCell align="center">
           {move.maxUses ? move.maxUses : '-'}
-        </TableCell>
+        </TableCell> */}
         <TableCell align="center">
           {move.power
             ? move.power +
@@ -401,7 +424,10 @@ function Moves(props) {
       </TableRow>
 
       <TableRow className={classes.root}>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={8}>
+        <TableCell
+          style={{ paddingBottom: 0, paddingTop: 0 }}
+          colSpan={size === 'small' ? 4 : 8}
+        >
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box margin={1}>
               <Table size="small" aria-label="details">
@@ -1086,8 +1112,8 @@ export default function MovesAndSkillsModalContent(props) {
               <TableCell />
               <TableCell>Moves</TableCell>
               <TableCell align="center">Category</TableCell>
-              <TableCell align="center">Gauge</TableCell>
-              <TableCell align="center">MP</TableCell>
+              <TableCell align="center">Gauge/MP</TableCell>
+              {/* <TableCell align="center">MP</TableCell> */}
               <TableCell align="center">Power</TableCell>
               <TableCell align="center">Accuracy</TableCell>
               <TableCell align="center">Target</TableCell>
