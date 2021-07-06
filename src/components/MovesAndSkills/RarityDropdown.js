@@ -62,6 +62,9 @@ function RarityDropdown(props) {
         value={selectedRarityStars}
         onChange={handleChange}
         labelWidth={labelWidth}
+        MenuProps={{
+          style: { zIndex: 3000 },
+        }}
       >
         {rarityLevelList.map((level, index) => (
           <MenuItem key={index} value={level}>
