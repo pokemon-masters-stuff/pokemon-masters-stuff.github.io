@@ -35,7 +35,7 @@ const SyncGridContainer = (props) => {
   const classes = useStyles();
   const darkMode = useSelector((state) => state.darkMode.mode);
   const dispatch = useDispatch();
-  const { trainerId, syncPairName, slot } = props;
+  const { trainerId, syncPairName, slot, isEggmon } = props;
   // const { trainerId, pokemon, syncPairName, slot } = props;
   // let pokemonName = pokemon;
 
@@ -70,6 +70,11 @@ const SyncGridContainer = (props) => {
   const [isMovesAndSkillsModalVisible, setIsMovesAndSkillsModalVisible] =
     useState(false);
 
+  if (trainerId === '18000020076') {
+    // Meowth
+    return null;
+  }
+
   return (
     <ExpansionPanel className={classes.expanded}>
       <ExpansionPanelSummary
@@ -85,13 +90,20 @@ const SyncGridContainer = (props) => {
             syncLevel={syncLevels[slot]}
             handleChangeSyncLevel={handleChangeSyncLevel}
           />
-          <LoadIndividualBuildDropdown {...props} />
-          <br />
-          <div style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}>
-            E: {remainingEnergy[slot]}/60
-            <br />
-            O: {orbSpent[slot]}/750
-          </div>
+
+          {isEggmon ? null : (
+            <>
+              <LoadIndividualBuildDropdown {...props} />
+              <br />
+              <div
+                style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}
+              >
+                E: {remainingEnergy[slot]}/60
+                <br />
+                O: {orbSpent[slot]}/750
+              </div>
+            </>
+          )}
 
           <div style={{ marginLeft: 8, marginTop: -7 }}>
             <MovesAndSkillsButtonMobile
@@ -102,27 +114,35 @@ const SyncGridContainer = (props) => {
               language={language}
               isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
               setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
+              isEgg={isEggmon}
             />
           </div>
-          <div style={{ marginLeft: 8, marginTop: 8 }}>
-            <ResetIndividualGridButton slot={slot} />
-          </div>
-          <div style={{ marginTop: 20, paddingBottom: 20 }}>
-            <SyncGrid
-              trainerId={trainerId}
-              // pokemon={pokemonName}
-              slot={slot}
-              syncLevel={syncLevels[slot]}
-            />
-          </div>
+
+          {isEggmon ? null : (
+            <>
+              <div style={{ marginLeft: 8, marginTop: 8 }}>
+                <ResetIndividualGridButton slot={slot} />
+              </div>
+              <div style={{ marginTop: 20, paddingBottom: 20 }}>
+                <SyncGrid
+                  trainerId={trainerId}
+                  // pokemon={pokemonName}
+                  slot={slot}
+                  syncLevel={syncLevels[slot]}
+                />
+              </div>
+            </>
+          )}
         </div>
-        <SkillOverview
-          skill={grid.gridData.name}
-          description={
-            grid.gridData.description ? grid.gridData.description : ''
-          }
-          energy={grid.gridData.energy}
-        />
+        {isEggmon ? null : (
+          <SkillOverview
+            skill={grid.gridData.name}
+            description={
+              grid.gridData.description ? grid.gridData.description : ''
+            }
+            energy={grid.gridData.energy}
+          />
+        )}
       </Box>
     </ExpansionPanel>
   );

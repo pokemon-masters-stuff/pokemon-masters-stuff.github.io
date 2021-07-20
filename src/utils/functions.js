@@ -1,4 +1,4 @@
-import gridedSyncPairData from '../data/gridedSyncPairData.json';
+import syncPairData from '../data/syncPairData.json';
 import syncPairNamesAndIds from '../data/syncPairNamesAndIds.json';
 import eggPokemonData from '../data/eggPokemonData.json';
 import {
@@ -23,7 +23,13 @@ export const removeHyphens = (str) => {
 export const getPokemonNameList = (language, role, type) => {
   let existingGridedPokemon = [];
 
-  let filteredList = Object.values(gridedSyncPairData);
+  let filteredList = [];
+
+  Object.values(syncPairData).forEach((entry) => {
+    if (entry.isGrided) {
+      filteredList.push(entry);
+    }
+  });
 
   if (role && role !== 'none') {
     filteredList = filteredList.filter(
@@ -69,7 +75,13 @@ export const getPokemonNameList = (language, role, type) => {
 };
 
 export const getNewPokemonNameList = (language, role, type) => {
-  let filteredList = Object.values(gridedSyncPairData);
+  let filteredList = [];
+
+  Object.values(syncPairData).forEach((entry) => {
+    if (entry.isGrided) {
+      filteredList.push(entry);
+    }
+  });
 
   if (role && role !== 'none') {
     filteredList = filteredList.filter(
@@ -126,7 +138,7 @@ export const getPokemonNameByTrainerId = (trainerId, language) => {
 };
 
 export const getPokemonDataByTrainerId = (trainerId) => {
-  return gridedSyncPairData[trainerId];
+  return syncPairData[trainerId];
 };
 
 export const getSyncPairNameAndIdByTrainerId = (trainerId) => {

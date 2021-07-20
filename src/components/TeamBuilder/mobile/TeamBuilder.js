@@ -226,18 +226,19 @@ function TeamBuilder() {
             {[teamMember1Data, teamMember2Data, teamMember3Data].map(
               (teamMemberData, index) =>
                 teamMemberData ? (
-                  teamMemberData.isGrided ? (
-                    <Grid item key={index}>
-                      <SyncGridContainer
-                        trainerId={teamMemberData['trainerId']}
-                        syncPairName={
-                          teamMemberData['syncPairNameByLanguage'][language]
-                        }
-                        slot={`slot${index + 1}`}
-                      />
-                    </Grid>
-                  ) : null
-                ) : null
+                  // !teamMemberData.isEggmon ? (
+                  <Grid item key={index}>
+                    <SyncGridContainer
+                      trainerId={teamMemberData['trainerId']}
+                      syncPairName={
+                        teamMemberData['syncPairNameByLanguage'][language]
+                      }
+                      slot={`slot${index + 1}`}
+                      isEggmon={teamMemberData.isEggmon}
+                    />
+                  </Grid>
+                ) : // ) : null
+                null
             )}
           </Grid>
         </Grid>

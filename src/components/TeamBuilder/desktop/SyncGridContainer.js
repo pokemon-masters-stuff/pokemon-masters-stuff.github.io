@@ -18,12 +18,16 @@ const useStyles = makeStyles((theme) => ({
     height: 800,
     width: 500,
   },
+  smallBox: {
+    height: 800,
+    width: 215,
+  },
 }));
 
 const SyncGridContainer = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const { trainerId, slot } = props;
+  const { trainerId, slot, isEggmon } = props;
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
   const remainingEnergy = useSelector(
@@ -42,30 +46,40 @@ const SyncGridContainer = (props) => {
   const [isMovesAndSkillsModalVisible, setIsMovesAndSkillsModalVisible] =
     useState(false);
 
+  if (trainerId === '18000020076') {
+    // Meowth
+    return null;
+  }
+
   return (
     <Box
       border={2}
       borderColor="text.primary"
       borderRadius={10}
-      className={classes.box}
+      className={isEggmon ? classes.smallBox : classes.box}
     >
       <div style={{ position: 'relative', paddingTop: 5 }}>
         <SyncLevelDropdown
           syncLevel={syncLevels[slot]}
           handleChangeSyncLevel={handleChangeSyncLevel}
         />
-        <LoadIndividualBuildDropdown {...props} />
-        <br />
 
-        <Typography
-          component="div"
-          color="textPrimary"
-          style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}
-        >
-          E: {remainingEnergy[slot]}/60
-          <br />
-          O: {orbSpent[slot]}/750
-        </Typography>
+        {isEggmon ? null : (
+          <>
+            <LoadIndividualBuildDropdown {...props} />
+            <br />
+
+            <Typography
+              component="div"
+              color="textPrimary"
+              style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}
+            >
+              E: {remainingEnergy[slot]}/60
+              <br />
+              O: {orbSpent[slot]}/750
+            </Typography>
+          </>
+        )}
 
         <div style={{ marginLeft: 8, marginTop: -7 }}>
           <MovesAndSkillsButtonMobile
@@ -75,18 +89,25 @@ const SyncGridContainer = (props) => {
             language={language}
             isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
             setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
+            size={'large'}
+            isEgg={isEggmon}
           />
         </div>
-        <div style={{ marginLeft: 8, marginTop: 8 }}>
-          <ResetIndividualGridButton slot={slot} />
-        </div>
-        <div style={{ marginTop: -70 }}>
-          <SyncGrid
-            trainerId={trainerId}
-            slot={slot}
-            syncLevel={syncLevels[slot]}
-          />
-        </div>
+        {isEggmon ? null : (
+          <>
+            <div style={{ marginLeft: 8, marginTop: 8 }}>
+              <ResetIndividualGridButton slot={slot} />
+            </div>
+
+            <div style={{ marginTop: -70 }}>
+              <SyncGrid
+                trainerId={trainerId}
+                slot={slot}
+                syncLevel={syncLevels[slot]}
+              />
+            </div>
+          </>
+        )}
       </div>
     </Box>
   );

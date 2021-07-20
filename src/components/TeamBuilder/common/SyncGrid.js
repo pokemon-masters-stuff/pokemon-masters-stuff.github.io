@@ -256,10 +256,20 @@ class GridMap extends Component {
           <Pattern
             id={this.props.trainerId}
             link={
-              pokemonPictures[
-                getPokemonDataByTrainerId(this.props.trainerId).monsterActorId +
-                  '_128'
-              ]
+              getPokemonDataByTrainerId(this.props.trainerId)
+                ? getPokemonDataByTrainerId(this.props.trainerId).isGrided
+                  ? pokemonPictures[
+                      getPokemonDataByTrainerId(this.props.trainerId)
+                        .monsterActorId + '_128'
+                    ]
+                  : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${
+                      getPokemonDataByTrainerId(this.props.trainerId)
+                        .monsterActorId
+                    }_128.ktx.png`
+                : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${
+                    getPokemonDataByTrainerId(this.props.trainerId)
+                      .monsterActorId
+                  }_128.ktx.png`
             }
             size={{ x: 10, y: 10 }}
           />

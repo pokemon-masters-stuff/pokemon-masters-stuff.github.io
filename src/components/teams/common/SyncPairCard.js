@@ -16,10 +16,10 @@ import { getSyncPairNameAndIdByTrainerId } from '../../../utils/functions';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    margin: 1,
+    margin: 2,
     marginTop: 15,
     height: 300,
-    width: 102,
+    width: 105,
     position: 'relative',
     display: 'inline-block',
   },

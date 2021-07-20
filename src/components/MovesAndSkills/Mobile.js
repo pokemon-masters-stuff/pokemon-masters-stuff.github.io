@@ -6,7 +6,8 @@ import UI from '../../utils/translations';
 
 const MovesAndSkillsButton = (props) => {
   const language = useSelector((state) => state.language.currentLanguage);
-  const { trainerId, selectedCellsById, syncLevel, page, size, isEX } = props;
+  const { trainerId, selectedCellsById, syncLevel, page, size, isEX, isEgg } =
+    props;
 
   const [isMovesAndSkillsModalVisible, setIsMovesAndSkillsModalVisible] =
     useState(false);
@@ -33,6 +34,7 @@ const MovesAndSkillsButton = (props) => {
         setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
         size={size || 'small'}
         isEX={isEX}
+        isEgg={isEgg || false}
       />
     </Fragment>
   );
