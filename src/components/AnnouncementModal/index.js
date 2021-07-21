@@ -42,6 +42,11 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            7/20/2021:
+            <br />
+            Added stats and skills info for nongrid sync pairs.
+            <br />
+            <br />
             7/1/2021:
             <br />
             Happy Bidoof Day! Added some QoL improvements and a demo component
