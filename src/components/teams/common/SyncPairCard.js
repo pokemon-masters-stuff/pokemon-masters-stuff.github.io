@@ -195,10 +195,13 @@ function SyncPairCard(props) {
               <img
                 src={
                   getPokemonDataByTrainerId(teamMemberData.trainerId)
-                    ? pokemonPictures[
-                        getPokemonDataByTrainerId(teamMemberData.trainerId)
-                          .monsterActorId + '_128'
-                      ]
+                    ? getPokemonDataByTrainerId(teamMemberData.trainerId)
+                        .isGrided
+                      ? pokemonPictures[
+                          getPokemonDataByTrainerId(teamMemberData.trainerId)
+                            .monsterActorId + '_128'
+                        ]
+                      : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${monsterActorId}_128.ktx.png`
                     : `https://pokemonmasters.s3.us-east-2.amazonaws.com/Monster/128px/${monsterActorId}_128.ktx.png`
                 }
                 style={{ height: 60 }}
