@@ -893,8 +893,6 @@
     },
     "trainers": {
       "10030000000": { "trainerId": "10030000000", "grid": false },
-      "10066000001": { "trainerId": "10066000001", "grid": false },
-      "10066000002": { "trainerId": "10066000002", "grid": false },
       "10095000000": { "trainerId": "10095000000", "grid": false },
       "10102000000": { "trainerId": "10102000000", "grid": false },
       "10137000000": { "trainerId": "10137000000", "grid": false },
@@ -1427,7 +1425,6 @@
       "zh": "終極吸取"
     },
     "trainers": {
-      "10074000000": { "trainerId": "10074000000", "grid": false },
       "10101000000": { "trainerId": "10101000000", "grid": false },
       "18000020171": { "trainerId": "18000020171", "grid": false },
       "18000020231": { "trainerId": "18000020231", "grid": false }
@@ -2593,7 +2590,6 @@
     "trainers": {
       "10002000000": { "trainerId": "10002000000", "grid": false },
       "10008000000": { "trainerId": "10008000000", "grid": false },
-      "10074000000": { "trainerId": "10074000000", "grid": false },
       "10101000000": { "trainerId": "10101000000", "grid": false }
     }
   },
@@ -3319,8 +3315,6 @@
     },
     "trainers": {
       "10062000000": { "trainerId": "10062000000", "grid": false },
-      "10067000001": { "trainerId": "10067000001", "grid": false },
-      "10068000001": { "trainerId": "10068000001", "grid": false },
       "10092800000": { "trainerId": "10092800000", "grid": false }
     }
   },
@@ -6629,9 +6623,6 @@
       "10017000000": { "trainerId": "10017000000", "grid": false },
       "10017100000": { "trainerId": "10017100000", "grid": false },
       "10043000000": { "trainerId": "10043000000", "grid": false },
-      "10067000001": { "trainerId": "10067000001", "grid": false },
-      "10068000001": { "trainerId": "10068000001", "grid": false },
-      "10074000000": { "trainerId": "10074000000", "grid": false },
       "10108000000": { "trainerId": "10108000000", "grid": false },
       "10111000000": { "trainerId": "10111000000", "grid": false },
       "10111400000": { "trainerId": "10111400000", "grid": false },
@@ -6773,8 +6764,6 @@
       "10021010000": { "trainerId": "10021010000", "grid": false },
       "10044000000": { "trainerId": "10044000000", "grid": false },
       "10052000000": { "trainerId": "10052000000", "grid": false },
-      "10066000001": { "trainerId": "10066000001", "grid": false },
-      "10066000002": { "trainerId": "10066000002", "grid": false },
       "10113000000": { "trainerId": "10113000000", "grid": false },
       "10116000000": { "trainerId": "10116000000", "grid": false },
       "10126400000": { "trainerId": "10126400000", "grid": false },
@@ -6842,7 +6831,6 @@
     },
     "trainers": {
       "10023000000": { "trainerId": "10023000000", "grid": false },
-      "10068000001": { "trainerId": "10068000001", "grid": false },
       "10101000000": { "trainerId": "10101000000", "grid": false },
       "10106100000": { "trainerId": "10106100000", "grid": false },
       "18000020181": { "trainerId": "18000020181", "grid": false },
@@ -6919,8 +6907,6 @@
       "10039000000": { "trainerId": "10039000000", "grid": false },
       "10054000000": { "trainerId": "10054000000", "grid": false },
       "10056000000": { "trainerId": "10056000000", "grid": false },
-      "10066000001": { "trainerId": "10066000001", "grid": false },
-      "10066000002": { "trainerId": "10066000002", "grid": false },
       "10137000000": { "trainerId": "10137000000", "grid": false },
       "10250000000": { "trainerId": "10250000000", "grid": false },
       "18000020071": { "trainerId": "18000020071", "grid": false },
@@ -6976,7 +6962,6 @@
     },
     "trainers": {
       "10020000000": { "trainerId": "10020000000", "grid": false },
-      "10074000000": { "trainerId": "10074000000", "grid": false },
       "10097000000": { "trainerId": "10097000000", "grid": false },
       "18000020011": { "trainerId": "18000020011", "grid": false },
       "18000020061": { "trainerId": "18000020061", "grid": false },
@@ -7111,7 +7096,6 @@
     },
     "trainers": {
       "10049000000": { "trainerId": "10049000000", "grid": false },
-      "10067000001": { "trainerId": "10067000001", "grid": false },
       "10118400000": { "trainerId": "10118400000", "grid": false },
       "10170400000": { "trainerId": "10170400000", "grid": false },
       "10256000000": { "trainerId": "10256000000", "grid": false },
@@ -7459,10 +7443,7 @@
       "ko": "버디즈\n다크임팩트",
       "zh": "拍組\n惡之衝擊"
     },
-    "trainers": {
-      "10067000001": { "trainerId": "10067000001", "grid": false },
-      "10068000001": { "trainerId": "10068000001", "grid": false }
-    }
+    "trainers": {}
   },
   "31700": {
     "skillId": "31700",
@@ -7603,7 +7584,6 @@
     },
     "trainers": {
       "10002000000": { "trainerId": "10002000000", "grid": false },
-      "10074000000": { "trainerId": "10074000000", "grid": false },
       "10101000000": { "trainerId": "10101000000", "grid": false }
     }
   },
@@ -9550,10 +9530,7 @@
       "ko": "유일무이한\n다른차원홀",
       "zh": "獨一無二之\n異次元洞"
     },
-    "trainers": {
-      "10066000001": { "trainerId": "10066000001", "grid": false },
-      "10066000002": { "trainerId": "10066000002", "grid": false }
-    }
+    "trainers": {}
   },
   "84300": {
     "skillId": "84300",
@@ -10415,7 +10392,6 @@
     },
     "trainers": {
       "10008400000": { "trainerId": "10008400000", "grid": false },
-      "10068000001": { "trainerId": "10068000001", "grid": false },
       "10091010000": { "trainerId": "10091010000", "grid": false },
       "10012000000": { "trainerId": "10012000000", "grid": true },
       "10028000000": { "trainerId": "10028000000", "grid": true },
@@ -10670,7 +10646,6 @@
       "10009000000": { "trainerId": "10009000000", "grid": false },
       "10024000000": { "trainerId": "10024000000", "grid": false },
       "10043000000": { "trainerId": "10043000000", "grid": false },
-      "10074000000": { "trainerId": "10074000000", "grid": false },
       "10092000000": { "trainerId": "10092000000", "grid": false },
       "10140000000": { "trainerId": "10140000000", "grid": false },
       "18000030011": { "trainerId": "18000030011", "grid": false },
@@ -12823,7 +12798,7 @@
       "ko": "첫등장시BC가속6",
       "zh": "首次上場時計數加速６"
     },
-    "trainers": { "10066000001": { "trainerId": "10066000001", "grid": false } }
+    "trainers": {}
   },
   "15010201": {
     "skillId": "15010201",
@@ -14529,11 +14504,7 @@
       "ko": "B기술후버티기G",
       "zh": "拍組招式後挺住Ｇ"
     },
-    "trainers": {
-      "10021010000": { "trainerId": "10021010000", "grid": false },
-      "10066000001": { "trainerId": "10066000001", "grid": false },
-      "10066000002": { "trainerId": "10066000002", "grid": false }
-    }
+    "trainers": { "10021010000": { "trainerId": "10021010000", "grid": false } }
   },
   "17042204": {
     "skillId": "17042204",
@@ -14654,11 +14625,7 @@
       "ko": "B기술후지속회복G",
       "zh": "拍組招式後附帶回復Ｇ"
     },
-    "trainers": {
-      "10066000001": { "trainerId": "10066000001", "grid": false },
-      "10066000002": { "trainerId": "10066000002", "grid": false },
-      "10118400000": { "trainerId": "10118400000", "grid": false }
-    }
+    "trainers": { "10118400000": { "trainerId": "10118400000", "grid": false } }
   },
   "17043401": {
     "skillId": "17043401",
@@ -17532,7 +17499,7 @@
       "ko": "위기시필드에물리경감",
       "zh": "危機時減輕場地物理傷害"
     },
-    "trainers": { "10067000001": { "trainerId": "10067000001", "grid": false } }
+    "trainers": {}
   },
   "19020301": {
     "skillId": "19020301",
