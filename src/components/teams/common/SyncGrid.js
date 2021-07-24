@@ -109,11 +109,17 @@ class GridMap extends Component {
           ? cell.move.name.substring(6)
           : cell.move.name;
 
-      const isSeletableBasedOnSyncLv = checkSelectabilityBasedOnSyncLv(
-        teamMemberData.trainerId,
-        cell,
-        teamMemberData.syncLevel.toString()
-      );
+      const isSeletableBasedOnSyncLv = this.props.syncLevelInSkillFinder
+        ? checkSelectabilityBasedOnSyncLv(
+            teamMemberData.trainerId,
+            cell,
+            this.props.syncLevelInSkillFinder.toString()
+          )
+        : checkSelectabilityBasedOnSyncLv(
+            teamMemberData.trainerId,
+            cell,
+            teamMemberData.syncLevel.toString()
+          );
 
       const hexagonProps = {
         data: {

@@ -628,7 +628,9 @@ export default function MovesAndSkillsModalContent(props) {
 
   // const syncLevel = useSelector((state) => state.grid.syncLevel);
 
-  const selectedCellsArray = Object.values(selectedCellsById);
+  const selectedCellsArray = selectedCellsById
+    ? Object.values(selectedCellsById)
+    : [];
 
   // console.log('selectedCellsArray', selectedCellsArray);
 

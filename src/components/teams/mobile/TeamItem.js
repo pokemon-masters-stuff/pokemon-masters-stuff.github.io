@@ -226,21 +226,17 @@ function TeamItem(props) {
           ))}
         </Grid>
 
-        {/* <Grid item xs={12}>
-                  <Grid container justify="center" spacing={3}> */}
         {[team.syncPairs.slot1, team.syncPairs.slot2, team.syncPairs.slot3].map(
           (teamMemberData, index) =>
             teamMemberData.trainerId ? (
               syncPairNamesAndIds[teamMemberData.trainerId].isGrided &&
               teamMemberData.selectedCellsById ? (
-                // <Grid item key={index}>
                 <SyncGridContainer
                   key={`sync-grid-${index + 1}-${team._id}`}
                   teamMemberData={teamMemberData}
                   slot={`slot${index + 1}`}
                 />
-              ) : // </Grid>
-              null
+              ) : null
             ) : null
         )}
       </Paper>
@@ -248,5 +244,4 @@ function TeamItem(props) {
   );
 }
 
-// export default TeamItem;
 export default withStyles(styles)(TeamItem);

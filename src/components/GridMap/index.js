@@ -267,6 +267,7 @@ class GridMap extends Component {
           description: cell.move.description,
           energy: cell.move.energyCost,
           moveId: cell.ability.moveId,
+          passiveId: cell.ability.passiveId,
           value: cell.ability.value,
           type: cell.ability.type,
         },

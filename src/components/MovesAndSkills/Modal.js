@@ -15,7 +15,7 @@ import { rolesByLanguage } from '../../utils/constants';
 import ModalContent from './ModalContent';
 
 export default function MovesAndSkillsModal(props) {
-  const {
+  let {
     trainerId,
     // pokemon,
     language,
@@ -28,6 +28,13 @@ export default function MovesAndSkillsModal(props) {
   let pokemonData = isEgg
     ? getEggPokemonDataByTrainerId(trainerId)
     : getPokemonDataByTrainerId(trainerId);
+
+  if (!isEgg & !pokemonData) {
+    if (getEggPokemonDataByTrainerId(trainerId)) {
+      isEgg = true;
+      pokemonData = getEggPokemonDataByTrainerId(trainerId);
+    }
+  }
 
   const {
     role,
@@ -85,7 +92,13 @@ export default function MovesAndSkillsModal(props) {
         ) : null}
       </DialogTitle>
       <DialogContent dividers>
-        {<ModalContent {...props} isVariationForm={isVariationForm} />}
+        {
+          <ModalContent
+            {...props}
+            isEgg={isEgg}
+            isVariationForm={isVariationForm}
+          />
+        }
       </DialogContent>
     </Dialog>
   );

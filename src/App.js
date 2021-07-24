@@ -29,6 +29,7 @@ import {
   TeamBuilderDesktop,
   TeamBuilderMobile,
 } from './components/TeamBuilder';
+import SkillFinder from './components/SkillFinder';
 
 export default function App({ store }) {
   const darkMode = useSelector((state) => state.darkMode.mode);
@@ -63,6 +64,12 @@ export default function App({ store }) {
               exact
               path="/team-builder"
               component={withTracker(TeamBuilderDesktop)}
+            />
+            <Route
+              exact
+              path="/skill-finder"
+              screenSize={'large'}
+              component={withTracker(SkillFinder)}
             />
             <PrivateRoute
               path="/builds"
@@ -138,6 +145,12 @@ export default function App({ store }) {
               exact
               path="/team-builder"
               component={withTracker(TeamBuilderMobile)}
+            />
+            <Route
+              exact
+              path="/skill-finder"
+              screenSize={'small'}
+              component={withTracker(SkillFinder)}
             />
             <PrivateRoute
               path="/builds"

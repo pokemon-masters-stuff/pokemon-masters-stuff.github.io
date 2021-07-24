@@ -194,6 +194,7 @@ export const getUpdatedSelectedCellsData = (trainerId, selectedCellsById) => {
             description: cellData.move.description,
             energy: cellData.move.energyCost,
             moveId: cellData.ability.moveId,
+            passiveId: cellData.ability.passiveId,
             value: cellData.ability.value,
             type: cellData.ability.type,
           };

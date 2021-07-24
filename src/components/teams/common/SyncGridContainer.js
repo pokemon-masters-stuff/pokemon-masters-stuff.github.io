@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import SyncGrid from '../common/SyncGrid';
@@ -13,6 +13,7 @@ import {
   getUpdatedSelectedCellsData,
 } from '../../../utils/functions';
 import MovesAndSkills from '../../MovesAndSkills/Mobile';
+import SyncLevelDropdown from '../../SyncLevelDropdown/SyncLevelDropdown';
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -39,8 +40,17 @@ const SyncGridContainer = (props) => {
   const classes = useStyles();
   // const darkMode = useSelector((state) => state.darkMode.mode);
   // const dispatch = useDispatch();
-  const { teamMemberData, slot, marginT, paddingB } = props;
+  const { teamMemberData, slot, marginT, paddingB, showGrid, isSkillFinder } =
+    props;
   const language = useSelector((state) => state.language.currentLanguage);
+
+  const [syncLevelInSkillFinder, setSyncLevelInSkillFinder] = useState(
+    teamMemberData.syncLevel
+  );
+
+  const handleChangeSyncLevel = (event) => {
+    setSyncLevelInSkillFinder(event.target.value);
+  };
 
   return (
     <ExpansionPanel
@@ -58,16 +68,23 @@ const SyncGridContainer = (props) => {
               'syncPairNameByLanguage'
             ][language]
           }
+          {/* {isSkillFinder
+            ? showGrid
+              ? ' (from Grid)'
+              : ' (from Skills)'
+            : null} */}
         </Typography>
       </ExpansionPanelSummary>
       {/* <Box className={darkMode ? classes.boxDark : classes.box}> */}
       <Box className={classes.box}>
         <div style={{ position: 'relative', paddingTop: 5 }}>
-          <div style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}>
-            E: {teamMemberData.remainingEnergy}/60
-            <br />
-            O: {teamMemberData.orbSpent}/750
-          </div>
+          {isSkillFinder ? null : (
+            <div style={{ position: 'absolute', top: 0, right: 0, margin: 10 }}>
+              E: {teamMemberData.remainingEnergy}/60
+              <br />
+              O: {teamMemberData.orbSpent}/750
+            </div>
+          )}
 
           <div
             style={{
@@ -78,40 +95,41 @@ const SyncGridContainer = (props) => {
               marginLeft: 15,
             }}
           >
+            {isSkillFinder ? (
+              <SyncLevelDropdown
+                syncLevel={syncLevelInSkillFinder}
+                handleChangeSyncLevel={handleChangeSyncLevel}
+              />
+            ) : null}
             <MovesAndSkills
               trainerId={teamMemberData.trainerId}
               selectedCellsById={getUpdatedSelectedCellsData(
                 teamMemberData.trainerId,
                 teamMemberData.selectedCellsById
               )}
-              syncLevel={teamMemberData.syncLevel}
+              syncLevel={
+                isSkillFinder
+                  ? syncLevelInSkillFinder
+                  : teamMemberData.syncLevel
+              }
               page={'teams'}
               size={paddingB ? 'large' : 'small'}
               isEX={teamMemberData.isEX}
             />
           </div>
 
-          {/* <div style={{ marginLeft: 8, marginTop: -7 }}>
-            <MovesAndSkillsButtonMobile
-              trainerId={trainerId}
-              // pokemon={pokemonName}
-              selectedCellsById={selectedCellsById}
-              syncLevel={syncLevels[slot]}
-              language={language}
-              isMovesAndSkillsModalVisible={isMovesAndSkillsModalVisible}
-              setIsMovesAndSkillsModalVisible={setIsMovesAndSkillsModalVisible}
-            />
-          </div>
-          <div style={{ marginLeft: 8, marginTop: 8 }}>
-            <ResetIndividualGridButton slot={slot} />
-          </div> */}
           <div
             style={{
               marginTop: marginT ? marginT : 70,
               paddingBottom: paddingB ? paddingB : 20,
             }}
           >
-            <SyncGrid teamMemberData={teamMemberData} slot={slot} />
+            {!isSkillFinder || (isSkillFinder && showGrid) ? (
+              <SyncGrid
+                teamMemberData={teamMemberData}
+                syncLevelInSkillFinder={syncLevelInSkillFinder}
+              />
+            ) : null}
           </div>
         </div>
       </Box>

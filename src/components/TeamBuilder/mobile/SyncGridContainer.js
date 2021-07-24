@@ -36,19 +36,6 @@ const SyncGridContainer = (props) => {
   const darkMode = useSelector((state) => state.darkMode.mode);
   const dispatch = useDispatch();
   const { trainerId, syncPairName, slot, isEggmon } = props;
-  // const { trainerId, pokemon, syncPairName, slot } = props;
-  // let pokemonName = pokemon;
-
-  // to extract this to utility
-  // if (syncPairName === 'Olivia & Lycanroc') {
-  //   pokemonName = 'olivia_lycanroc';
-  // } else if (syncPairName === 'Leon & Charizard') {
-  //   pokemonName = 'leon_charizard';
-  // } else if (syncPairName === 'Morty & Mismagius') {
-  //   pokemonName = 'morty_mismagius';
-  // } else if (syncPairName === 'Lt. Surge & Raichu') {
-  //   pokemonName = 'lt_surge_raichu';
-  // }
   const language = useSelector((state) => state.language.currentLanguage);
   const syncLevels = useSelector((state) => state.grid.teamSyncLevels);
   const remainingEnergy = useSelector(

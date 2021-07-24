@@ -24,6 +24,7 @@ import Brightness1Icon from '@material-ui/icons/Brightness1';
 import HomeIcon from '@material-ui/icons/Home'; // for Sync Grid Helper home page
 import ExposureIcon from '@material-ui/icons/Exposure';
 import ViewColumnIcon from '@material-ui/icons/ViewColumn'; // for teams
+import SearchIcon from '@material-ui/icons/Search';
 
 function Sidebar(props) {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -106,14 +107,7 @@ function Sidebar(props) {
               <ListItemIcon className={classes.listIcon}>
                 <WhatshotIcon />
               </ListItemIcon>
-              <ListItemText
-                primary={
-                  <>
-                    {UI['Popular Teams'][language]}
-                    <sup> NEW</sup>
-                  </>
-                }
-              />
+              <ListItemText primary={UI['Popular Teams'][language]} />
             </ListItem>
           </Link>
         ) : (
@@ -126,14 +120,7 @@ function Sidebar(props) {
             <ListItemIcon className={classes.listIcon}>
               <WhatshotIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <>
-                  {UI['Popular Teams'][language]}
-                  <sup> NEW</sup>
-                </>
-              }
-            />
+            <ListItemText primary={UI['Popular Teams'][language]} />
           </ListItem>
         )}
 
@@ -158,6 +145,25 @@ function Sidebar(props) {
               <Brightness1Icon />
             </ListItemIcon>
             <ListItemText primary={UI['Egg Pokémon'][language]} />
+          </ListItem>
+        </Link>
+
+        <Link
+          to="/skill-finder"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ListItem button onClick={handleOnClose}>
+            <ListItemIcon className={classes.listIcon}>
+              <SearchIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={
+                <>
+                  Skill Finder
+                  <sup> NEW</sup>
+                </>
+              }
+            />
           </ListItem>
         </Link>
       </List>

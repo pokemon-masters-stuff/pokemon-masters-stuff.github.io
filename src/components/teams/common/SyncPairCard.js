@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 2,
     marginTop: 15,
     height: 300,
-    width: 105,
+    width: 102,
     position: 'relative',
     display: 'inline-block',
   },
