@@ -159,7 +159,7 @@ function Sidebar(props) {
             <ListItemText
               primary={
                 <>
-                  Skill Finder
+                  {UI['Skill Finder'][language]}
                   <sup> NEW</sup>
                 </>
               }

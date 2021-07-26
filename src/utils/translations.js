@@ -728,6 +728,17 @@ const UI = {
     ko: '맞지 않다',
     zh: '反對',
   },
+  // Skill Finder
+  'Skill Finder': {
+    de: 'Fähigkeitsfinder',
+    en: 'Skill Finder',
+    es: 'Buscador de Habilidades',
+    fr: 'Recherche de Compétences',
+    it: 'Trova Abilità',
+    ja: 'スキルファインダー',
+    ko: '스킬 파인더',
+    zh: '技能查找器',
+  },
 };
 
 export default UI;
