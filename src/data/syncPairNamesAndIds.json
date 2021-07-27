@@ -14056,23 +14056,23 @@
     "isBP": false
   },
   "18000040004": {
-    "syncPairEnglishName": "Hero & Venusaur",
+    "syncPairEnglishName": "Hero & Charizard",
     "trainerId": "18000040004",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "trainerActorId": "hero",
-    "monsterId": "28000040003",
-    "monsterBaseId": "20000300",
-    "monsterActorId": "pm0003_00_fushigibana",
+    "monsterId": "28000040006",
+    "monsterBaseId": "20000600",
+    "monsterActorId": "pm0006_00_lizardon",
     "pokemonNameByLanguage": {
-      "de": "Bisaflor",
-      "en": "Venusaur",
-      "es": "Venusaur",
-      "fr": "Florizarre",
-      "it": "Venusaur",
-      "ja": "フシギバナ",
-      "ko": "이상해꽃",
-      "zh": "妙蛙花"
+      "de": "Glurak",
+      "en": "Charizard",
+      "es": "Charizard",
+      "fr": "Dracaufeu",
+      "it": "Charizard",
+      "ja": "リザードン",
+      "ko": "리자몽",
+      "zh": "噴火龍"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -14085,14 +14085,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero & Bisaflor",
-      "en": "Hero & Venusaur",
-      "es": "Hero & Venusaur",
-      "fr": "Hero & Florizarre",
-      "it": "Hero & Venusaur",
-      "ja": "Hero & フシギバナ",
-      "ko": "Hero & 이상해꽃",
-      "zh": "Hero & 妙蛙花"
+      "de": "Hero & Glurak",
+      "en": "Hero & Charizard",
+      "es": "Hero & Charizard",
+      "fr": "Hero & Dracaufeu",
+      "it": "Hero & Charizard",
+      "ja": "Hero & リザードン",
+      "ko": "Hero & 리자몽",
+      "zh": "Hero & 噴火龍"
     },
     "type": 2,
     "rarity": 3,
@@ -14112,23 +14112,23 @@
     "isBP": false
   },
   "18000040007": {
-    "syncPairEnglishName": "Hero & Venusaur",
+    "syncPairEnglishName": "Hero & Blastoise",
     "trainerId": "18000040007",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
     "trainerActorId": "hero",
-    "monsterId": "28000040003",
-    "monsterBaseId": "20000300",
-    "monsterActorId": "pm0003_00_fushigibana",
+    "monsterId": "28000040009",
+    "monsterBaseId": "20000900",
+    "monsterActorId": "pm0009_00_kamex",
     "pokemonNameByLanguage": {
-      "de": "Bisaflor",
-      "en": "Venusaur",
-      "es": "Venusaur",
-      "fr": "Florizarre",
-      "it": "Venusaur",
-      "ja": "フシギバナ",
-      "ko": "이상해꽃",
-      "zh": "妙蛙花"
+      "de": "Turtok",
+      "en": "Blastoise",
+      "es": "Blastoise",
+      "fr": "Tortank",
+      "it": "Blastoise",
+      "ja": "カメックス",
+      "ko": "거북왕",
+      "zh": "水箭龜"
     },
     "trainerNameByLanguage": {
       "de": "Hero",
@@ -14141,14 +14141,14 @@
       "zh": "Hero"
     },
     "syncPairNameByLanguage": {
-      "de": "Hero & Bisaflor",
-      "en": "Hero & Venusaur",
-      "es": "Hero & Venusaur",
-      "fr": "Hero & Florizarre",
-      "it": "Hero & Venusaur",
-      "ja": "Hero & フシギバナ",
-      "ko": "Hero & 이상해꽃",
-      "zh": "Hero & 妙蛙花"
+      "de": "Hero & Turtok",
+      "en": "Hero & Blastoise",
+      "es": "Hero & Blastoise",
+      "fr": "Hero & Tortank",
+      "it": "Hero & Blastoise",
+      "ja": "Hero & カメックス",
+      "ko": "Hero & 거북왕",
+      "zh": "Hero & 水箭龜"
     },
     "type": 3,
     "rarity": 3,

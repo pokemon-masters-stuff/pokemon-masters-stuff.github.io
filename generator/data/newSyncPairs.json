@@ -1,1 +1,232 @@
-{"10045900000":{"syncPairEnglishName":"Bugsy & Scyther","trainerId":"10045900000","trainerBaseId":"10004500","monsterId":"20045900000","monsterBaseId":"20012300","isGrided":true,"isEggmon":false,"isBP":true},"10108000000":{"syncPairEnglishName":"Ingo & Excadrill","trainerId":"10108000000","trainerBaseId":"10010800","monsterId":"20108000000","monsterBaseId":"20053000","isGrided":true,"isEggmon":false,"isBP":false},"10109000000":{"syncPairEnglishName":"Emmet & Archeops","trainerId":"10109000000","trainerBaseId":"10010900","monsterId":"20109000000","monsterBaseId":"20056700","isGrided":true,"isEggmon":false,"isBP":false},"10243400000":{"syncPairEnglishName":"Gloria & Inteleon","trainerId":"10243400000","trainerBaseId":"10024340","monsterId":"20243400000","monsterBaseId":"2008180000","isGrided":true,"isEggmon":false,"isBP":false},"10245400000":{"syncPairEnglishName":"Marnie & Grimmsnarl","trainerId":"10245400000","trainerBaseId":"10024540","monsterId":"20245400000","monsterBaseId":"2008610000","isGrided":true,"isEggmon":false,"isBP":false},"18000020491":{"syncPairEnglishName":"Hero & Omastar","trainerId":"18000020491","trainerBaseId":"10700000","monsterId":"28000020492","monsterBaseId":"20013900","isGrided":false,"isEggmon":true,"isBP":false},"18000020496":{"syncPairEnglishName":"Hero & Omastar","trainerId":"18000020496","trainerBaseId":"10700000","monsterId":"28000020492","monsterBaseId":"20013900","isGrided":false,"isEggmon":true,"isBP":false},"18000020501":{"syncPairEnglishName":"Hero & Marowak","trainerId":"18000020501","trainerBaseId":"10700000","monsterId":"28000020502","monsterBaseId":"20010500","isGrided":false,"isEggmon":true,"isBP":false},"18000020506":{"syncPairEnglishName":"Hero & Marowak","trainerId":"18000020506","trainerBaseId":"10700000","monsterId":"28000020502","monsterBaseId":"20010500","isGrided":false,"isEggmon":true,"isBP":false},"18000020511":{"syncPairEnglishName":"Hero & Sandslash","trainerId":"18000020511","trainerBaseId":"10700000","monsterId":"28000020512","monsterBaseId":"20002800","isGrided":false,"isEggmon":true,"isBP":false},"18000020516":{"syncPairEnglishName":"Hero & Sandslash","trainerId":"18000020516","trainerBaseId":"10700000","monsterId":"28000020512","monsterBaseId":"20002800","isGrided":false,"isEggmon":true,"isBP":false},"18000030491":{"syncPairEnglishName":"Hero & Omastar","trainerId":"18000030491","trainerBaseId":"10700000","monsterId":"28000030492","monsterBaseId":"20013900","isGrided":false,"isEggmon":true,"isBP":false},"18000030496":{"syncPairEnglishName":"Hero & Omastar","trainerId":"18000030496","trainerBaseId":"10700000","monsterId":"28000030492","monsterBaseId":"20013900","isGrided":false,"isEggmon":true,"isBP":false},"18000030501":{"syncPairEnglishName":"Hero & Marowak","trainerId":"18000030501","trainerBaseId":"10700000","monsterId":"28000030502","monsterBaseId":"20010500","isGrided":false,"isEggmon":true,"isBP":false},"18000030506":{"syncPairEnglishName":"Hero & Marowak","trainerId":"18000030506","trainerBaseId":"10700000","monsterId":"28000030502","monsterBaseId":"20010500","isGrided":false,"isEggmon":true,"isBP":false},"18000030511":{"syncPairEnglishName":"Hero & Sandslash","trainerId":"18000030511","trainerBaseId":"10700000","monsterId":"28000030512","monsterBaseId":"20002800","isGrided":false,"isEggmon":true,"isBP":false},"18000030516":{"syncPairEnglishName":"Hero & Sandslash","trainerId":"18000030516","trainerBaseId":"10700000","monsterId":"28000030512","monsterBaseId":"20002800","isGrided":false,"isEggmon":true,"isBP":false},"18000040491":{"syncPairEnglishName":"Hero & Omastar","trainerId":"18000040491","trainerBaseId":"10700000","monsterId":"28000040492","monsterBaseId":"20013900","isGrided":false,"isEggmon":true,"isBP":false},"18000040496":{"syncPairEnglishName":"Hero & Omastar","trainerId":"18000040496","trainerBaseId":"10700000","monsterId":"28000040492","monsterBaseId":"20013900","isGrided":false,"isEggmon":true,"isBP":false},"18000040501":{"syncPairEnglishName":"Hero & Marowak","trainerId":"18000040501","trainerBaseId":"10700000","monsterId":"28000040502","monsterBaseId":"20010500","isGrided":false,"isEggmon":true,"isBP":false},"18000040506":{"syncPairEnglishName":"Hero & Marowak","trainerId":"18000040506","trainerBaseId":"10700000","monsterId":"28000040502","monsterBaseId":"20010500","isGrided":false,"isEggmon":true,"isBP":false},"18000040511":{"syncPairEnglishName":"Hero & Sandslash","trainerId":"18000040511","trainerBaseId":"10700000","monsterId":"28000040512","monsterBaseId":"20002800","isGrided":false,"isEggmon":true,"isBP":false},"18000040516":{"syncPairEnglishName":"Hero & Sandslash","trainerId":"18000040516","trainerBaseId":"10700000","monsterId":"28000040512","monsterBaseId":"20002800","isGrided":false,"isEggmon":true,"isBP":false}}
+{
+  "10045900000": {
+    "syncPairEnglishName": "Bugsy & Scyther",
+    "trainerId": "10045900000",
+    "trainerBaseId": "10004500",
+    "monsterId": "20045900000",
+    "monsterBaseId": "20012300",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": true
+  },
+  "10108000000": {
+    "syncPairEnglishName": "Ingo & Excadrill",
+    "trainerId": "10108000000",
+    "trainerBaseId": "10010800",
+    "monsterId": "20108000000",
+    "monsterBaseId": "20053000",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false
+  },
+  "10109000000": {
+    "syncPairEnglishName": "Emmet & Archeops",
+    "trainerId": "10109000000",
+    "trainerBaseId": "10010900",
+    "monsterId": "20109000000",
+    "monsterBaseId": "20056700",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false
+  },
+  "10243400000": {
+    "syncPairEnglishName": "Gloria & Inteleon",
+    "trainerId": "10243400000",
+    "trainerBaseId": "10024340",
+    "monsterId": "20243400000",
+    "monsterBaseId": "2008180000",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false
+  },
+  "10245400000": {
+    "syncPairEnglishName": "Marnie & Grimmsnarl",
+    "trainerId": "10245400000",
+    "trainerBaseId": "10024540",
+    "monsterId": "20245400000",
+    "monsterBaseId": "2008610000",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false
+  },
+  "18000020491": {
+    "syncPairEnglishName": "Hero & Omastar",
+    "trainerId": "18000020491",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000020492",
+    "monsterBaseId": "20013900",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000020496": {
+    "syncPairEnglishName": "Hero & Omastar",
+    "trainerId": "18000020496",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000020497",
+    "monsterBaseId": "20013901",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000020501": {
+    "syncPairEnglishName": "Hero & Marowak",
+    "trainerId": "18000020501",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000020502",
+    "monsterBaseId": "20010500",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000020506": {
+    "syncPairEnglishName": "Hero & Marowak",
+    "trainerId": "18000020506",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000020507",
+    "monsterBaseId": "20010501",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000020511": {
+    "syncPairEnglishName": "Hero & Sandslash",
+    "trainerId": "18000020511",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000020512",
+    "monsterBaseId": "20002800",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000020516": {
+    "syncPairEnglishName": "Hero & Sandslash",
+    "trainerId": "18000020516",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000020517",
+    "monsterBaseId": "20002801",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000030491": {
+    "syncPairEnglishName": "Hero & Omastar",
+    "trainerId": "18000030491",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000030492",
+    "monsterBaseId": "20013900",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000030496": {
+    "syncPairEnglishName": "Hero & Omastar",
+    "trainerId": "18000030496",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000030497",
+    "monsterBaseId": "20013901",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000030501": {
+    "syncPairEnglishName": "Hero & Marowak",
+    "trainerId": "18000030501",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000030502",
+    "monsterBaseId": "20010500",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000030506": {
+    "syncPairEnglishName": "Hero & Marowak",
+    "trainerId": "18000030506",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000030507",
+    "monsterBaseId": "20010501",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000030511": {
+    "syncPairEnglishName": "Hero & Sandslash",
+    "trainerId": "18000030511",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000030512",
+    "monsterBaseId": "20002800",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000030516": {
+    "syncPairEnglishName": "Hero & Sandslash",
+    "trainerId": "18000030516",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000030517",
+    "monsterBaseId": "20002801",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000040491": {
+    "syncPairEnglishName": "Hero & Omastar",
+    "trainerId": "18000040491",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000040492",
+    "monsterBaseId": "20013900",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000040496": {
+    "syncPairEnglishName": "Hero & Omastar",
+    "trainerId": "18000040496",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000040497",
+    "monsterBaseId": "20013901",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000040501": {
+    "syncPairEnglishName": "Hero & Marowak",
+    "trainerId": "18000040501",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000040502",
+    "monsterBaseId": "20010500",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000040506": {
+    "syncPairEnglishName": "Hero & Marowak",
+    "trainerId": "18000040506",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000040507",
+    "monsterBaseId": "20010501",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000040511": {
+    "syncPairEnglishName": "Hero & Sandslash",
+    "trainerId": "18000040511",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000040512",
+    "monsterBaseId": "20002800",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  },
+  "18000040516": {
+    "syncPairEnglishName": "Hero & Sandslash",
+    "trainerId": "18000040516",
+    "trainerBaseId": "10700000",
+    "monsterId": "28000040517",
+    "monsterBaseId": "20002801",
+    "isGrided": false,
+    "isEggmon": true,
+    "isBP": false
+  }
+}
