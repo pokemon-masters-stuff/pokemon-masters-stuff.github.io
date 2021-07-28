@@ -25,12 +25,14 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10045900000, // Bugsy & Scyther
-  10108000000, // Ingo & Excadrill
-  10109000000, // Emmet & Archeops
-  10243400000, // Gloria & Inteleon
-  10245400000, // Marnie & Grimmsnarl
-  10140000000, // Giovanni & Mewtwo
+  10066010000, // Lear & Hoopa
+  10067010000, // Rachel & Umbreon
+  10068010000, // Sawyer & Honchkrow
+  10135000000, // Sidney & Absol
+  10150000000, // Falkner & Swellow
+  10205000000, // Evelyn & Entei
+  10244000000, // Hop & Zamazenta
+  10247100000, // Leon & Eternatus
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -43,9 +45,12 @@ export const arrayOfTrainerIdsWithSamePokemon = [
   10001000000, // Kukui & Lycanroc
   10051000000, // Olivia & Lycanroc
   10129000001, // Zinnia & Salamence
+  10062000001, // Karen & Umbreon
+  10067010000, // Rachel & Umbreon
 ];
 
 export const type1SyncGrid = [
+  // Pikachu type
   '18000000000',
   '10151000000',
   '10000000000',
@@ -102,9 +107,11 @@ export const type1SyncGrid = [
   '10109000000',
   '10243400000',
   '10140000000',
+  '10247100000', // Leon & Eternatus
 ];
 
 export const type2SyncGrid = [
+  // Torkoal Type
   '10029000000',
   '10007400000',
   '10115000000',
@@ -137,9 +144,12 @@ export const type2SyncGrid = [
   '10008000001',
   '10117000000',
   '10245400000',
+  '10066010000', // Lear & Hoopa
+  '10135000000', // Sidney & Absol
 ];
 
 export const type3SyncGrid = [
+  // Serperior Type
   '10101000000',
   '10114000000',
   '10106100000',
@@ -170,6 +180,11 @@ export const type3SyncGrid = [
   '18000020521',
   '10108000000',
   '10045900000',
+  '10067010000', // Rachel & Umbreon
+  '10068010000', // Sawyer & Honchkrow
+  '10150000000', // Falkner & Swellow
+  '10205000000', // Evelyn & Entei
+  '10244000000', // Hop & Zamazenta
 ];
 
 export const CLOUD_FUNCTIONS_URL =

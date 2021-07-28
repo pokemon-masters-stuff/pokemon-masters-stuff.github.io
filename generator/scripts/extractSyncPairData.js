@@ -188,6 +188,7 @@ const extractSyncPairData = () => {
   trainerList.forEach((trainerIdFromList) => {
     let hasVariationForm = false;
     let isMega = false;
+    let isDynamax = false;
     let isGrided = false;
     let monsterVariationFormBaseId;
     let monsterVariationFormEntry;
@@ -1041,7 +1042,25 @@ const extractSyncPairData = () => {
           isMega = false;
         }
 
+        let maxMove1Id;
+        if (trainerIdFromList.toString() === '10247100000') {
+          // SS Leon & Eternatus
+          console.log('variation is dynamax');
+          isDynamax = true;
+          maxMove1Id = 7002;
+        } else {
+          console.log('variation is not dynamax');
+          isDynamax = false;
+        }
+
         if (
+          monsterBaseDB.entries.find(
+            (monsterBase) =>
+              monsterBase.monsterBaseId.toString() === monsterBaseId.toString()
+          )
+        ) {
+          monsterVariationFormBaseId = monsterBaseId.toString();
+        } else if (
           monsterBaseDB.entries.find(
             (monsterBase) =>
               monsterBase.monsterBaseId.toString() ===
@@ -1050,6 +1069,7 @@ const extractSyncPairData = () => {
         ) {
           monsterVariationFormBaseId = potentialMegaBaseId;
         } else {
+          // Non-Mega evolution
           if (monsterBaseId === 2008771101) {
             // Morpeko
             monsterVariationFormBaseId = '2008771201';
@@ -1083,7 +1103,7 @@ const extractSyncPairData = () => {
             monsterBase.monsterBaseId.toString() ===
             monsterVariationFormBaseId.toString()
         );
-        // console.log('monsterVariationFormBaseId', monsterVariationFormBaseId);
+        console.log('monsterVariationFormBaseId', monsterVariationFormBaseId);
         variationFormPassiveId = variationMonsterBase.formPassiveId;
         variationFormId = variationMonsterBase.formId;
 
@@ -1143,6 +1163,16 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove1NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
 
         let variationMove1DescriptionByLanguage = {
@@ -1176,6 +1206,16 @@ const extractSyncPairData = () => {
             zh: '',
           },
           variationMove4DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          maxMove1DescriptionByLanguage = {
             de: '',
             en: '',
             es: '',
@@ -1225,7 +1265,18 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove1TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
+
         let variationMove1TypeNameByLanguage = {
             de: '',
             en: '',
@@ -1265,9 +1316,33 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove1TypeNameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
         // Use variationMoveId to find variationMove data, eg. power, accuracy, etc. from Move.json
-        let variationMove1, variationMove2, variationMove3, variationMove4;
+        let variationMove1,
+          variationMove2,
+          variationMove3,
+          variationMove4,
+          maxMove1;
+
+        if (isDynamax) {
+          if (trainerIdFromList.toString() === '10247100000') {
+            // SS Leon & Eternatus
+            maxMove1 = moveDB.entries.find(
+              (move) => move.moveId.toString() === '7002' // Eternabeam
+            );
+          }
+        }
+
         monsterVariationFormEntry.move1Id !== -1
           ? (variationMove1 = moveDB.entries.find(
               (move) =>
@@ -1351,6 +1426,23 @@ const extractSyncPairData = () => {
           variationMove4 &&
             (variationMove4TypeNameByLanguage[language] =
               motifTypeNameDB[language][variationMove4.type]);
+
+          // max move
+          maxMove1 &&
+            (maxMove1NameByLanguage[language] =
+              moveNameDB[language][maxMove1Id]);
+
+          maxMove1 &&
+            (maxMove1DescriptionByLanguage[language] =
+              getUpdatedMoveDescription(language, maxMove1Id));
+
+          maxMove1 &&
+            (maxMove1TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][maxMove1.target]);
+
+          maxMove1 &&
+            (maxMove1TypeNameByLanguage[language] =
+              motifTypeNameDB[language][maxMove1.type]);
         });
 
         variationMove1 &&
@@ -1427,6 +1519,25 @@ const extractSyncPairData = () => {
               power: variationMove4.power,
               accuracy: variationMove4.accuracy,
               maxUses: variationMove4.maxUses,
+            },
+          });
+        maxMove1 &&
+          (variationMoves = {
+            ...variationMoves,
+            maxMove1: {
+              id: maxMove1.moveId,
+              name: maxMove1NameByLanguage,
+              description: maxMove1DescriptionByLanguage,
+              category: maxMove1.category,
+              group: maxMove1.group,
+              type: maxMove1.type,
+              typeName: maxMove1TypeNameByLanguage,
+              target: maxMove1.target,
+              targetType: maxMove1TargetTypeByLanguage,
+              gaugeDrain: maxMove1.gaugeDrain,
+              power: maxMove1.power,
+              accuracy: maxMove1.accuracy,
+              maxUses: maxMove1.maxUses,
             },
           });
 
@@ -1879,6 +1990,7 @@ const extractSyncPairData = () => {
               ? {
                   monsterVariationFormBaseId,
                   isMega,
+                  isDynamax,
                   moves: variationMoves,
                   passives: variationPassives,
                   syncMove: variationSyncMove,
@@ -1889,6 +2001,7 @@ const extractSyncPairData = () => {
               : {
                   monsterVariationFormBaseId,
                   isMega,
+                  isDynamax,
                   moves: variationMoves,
                   passives: variationPassives,
                   formPassiveId: variationFormPassiveId,

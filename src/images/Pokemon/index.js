@@ -35,6 +35,8 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0169_00_crobat_128 } from './128px/pm0169_00_crobat_128.ktx.png'; // Koga & Crobat
         export { default as pm0229_01_hellgar_128 } from './128px/pm0229_01_hellgar_128.ktx.png'; // Karen & Houndoom
         export { default as pm0197_00_blacky_128 } from './128px/pm0197_00_blacky_128.ktx.png'; // Karen & Umbreon
+        export { default as pm0774_00_majin_128 } from './128px/pm0774_00_majin_128.ktx.png'; // Lear & Hoopa
+        export { default as pm0430_00_dongkarasu_128 } from './128px/pm0430_00_dongkarasu_128.ktx.png'; // Sawyer & Honchkrow
         export { default as pm0644_00_zekrom_128 } from './128px/pm0644_00_zekrom_128.ktx.png'; // N & Zekrom
         export { default as pm0376_00_metagross_128 } from './128px/pm0376_00_metagross_128.ktx.png'; // Steven & Metagross
         export { default as pm0028_61_asandpan_128 } from './128px/pm0028_61_asandpan_128.ktx.png'; // Steven & Sandslash
@@ -84,12 +86,14 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0732_00_frilledlizard2_128 } from './128px/pm0732_00_frilledlizard2_128.ktx.png'; // Clemont & Heliolisk
         export { default as pm0637_00_ulgamoth_128 } from './128px/pm0637_00_ulgamoth_128.ktx.png'; // Alder & Volcarona
         export { default as pm0250_00_houou_128 } from './128px/pm0250_00_houou_128.ktx.png'; // Silver & Ho-Oh
+        export { default as pm0359_00_absol_128 } from './128px/pm0359_00_absol_128.ktx.png'; // Sidney & Absol
         export { default as pm0768_00_pokemonX_128 } from './128px/pm0768_00_pokemonX_128.ktx.png'; // Professor Sycamore & Xerneas
         export { default as pm0151_00_mew_128 } from './128px/pm0151_00_mew_128.ktx.png'; // Professor Oak & Mew
         export { default as pm0150_00_mewtwo_128 } from './128px/pm0150_00_mewtwo_128.ktx.png'; // Giovanni & Mewtwo
         export { default as pm0426_00_fuwaride_128 } from './128px/pm0426_00_fuwaride_128.ktx.png'; // Morty & Drifblim
         export { default as pm0429_00_mumargi_128 } from './128px/pm0429_00_mumargi_128.ktx.png'; // Morty & Mismagius
         export { default as pm0105_61_agaragara_128 } from './128px/pm0105_61_agaragara_128.ktx.png'; // Kiawe & Marowak
+        export { default as pm0277_00_ohsubame_128 } from './128px/pm0277_00_ohsubame_128.ktx.png'; // Falkner & Swellow
         export { default as pm0362_00_onigohri_128 } from './128px/pm0362_00_onigohri_128.ktx.png'; // Glacia & Glalie
         export { default as pm0282_00_sirnight_128 } from './128px/pm0282_00_sirnight_128.ktx.png'; // Diantha & Gardevoir
         export { default as pm0851_00_mizugumo2_128 } from './128px/pm0851_00_mizugumo2_128.ktx.png'; // Lana & Araquanid
@@ -101,11 +105,14 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0484_00_palkia_128 } from './128px/pm0484_00_palkia_128.ktx.png'; // Cyrus & Palkia
         export { default as pm0646_11_kyurem_128 } from './128px/pm0646_11_kyurem_128.ktx.png'; // Ghetsis & Kyurem
         export { default as pm0769_00_pokemonY_128 } from './128px/pm0769_00_pokemonY_128.ktx.png'; // Lysandre & Yveltal
+        export { default as pm0244_00_entei_128 } from './128px/pm0244_00_entei_128.ktx.png'; // Evelyn & Entei
         export { default as pm0334_00_tyltalis_128 } from './128px/pm0334_00_tyltalis_128.ktx.png'; // Lisia & Altaria
         export { default as pm0888_12_00_zacian_128 } from './128px/pm0888_12_00_zacian_128.ktx.png'; // Gloria & Zacian
         export { default as pm0818_00_00_intereon_128 } from './128px/pm0818_00_00_intereon_128.ktx.png'; // Gloria & Inteleon
+        export { default as pm0889_12_00_zamazenta_128 } from './128px/pm0889_12_00_zamazenta_128.ktx.png'; // Hop & Zamazenta
         export { default as pm0877_11_00_morpeko_128 } from './128px/pm0877_11_00_morpeko_128.ktx.png'; // Marnie & Morpeko
         export { default as pm0861_00_00_ohlonge_128 } from './128px/pm0861_00_00_ohlonge_128.ktx.png'; // Marnie & Grimmsnarl
+        export { default as pm0890_00_00_mugendina_128 } from './128px/pm0890_00_00_mugendina_128.ktx.png'; // Leon & Eternatus
         export { default as pm0834_00_00_kajirigame_128 } from './128px/pm0834_00_00_kajirigame_128.ktx.png'; // Nessa & Drednaw
         export { default as pm0865_00_31_negigaknight_128 } from './128px/pm0865_00_31_negigaknight_128.ktx.png'; // Bea & Sirfetch’d
         export { default as pm0862_00_31_tachifusaguma_128 } from './128px/pm0862_00_31_tachifusaguma_128.ktx.png'; // Piers & Obstagoon

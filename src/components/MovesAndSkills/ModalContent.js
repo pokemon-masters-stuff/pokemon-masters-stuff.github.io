@@ -316,12 +316,16 @@ function Moves(props) {
   const [open, setOpen] = React.useState(openAll);
   const classes = useRowStyles();
 
-  let powerUpFromGrid = selectedMoves[move.id]
-    ? selectedMoves[move.id].power || 0
+  let powerUpFromGrid = selectedMoves
+    ? selectedMoves[move.id]
+      ? selectedMoves[move.id].power || 0
+      : 0
     : 0;
 
-  let accuracyUpFromGrid = selectedMoves[move.id]
-    ? selectedMoves[move.id].accuracy || 0
+  let accuracyUpFromGrid = selectedMoves
+    ? selectedMoves[move.id]
+      ? selectedMoves[move.id].accuracy || 0
+      : 0
     : 0;
 
   let moveCategory = '-';
@@ -617,6 +621,7 @@ export default function MovesAndSkillsModalContent(props) {
     syncLevel,
     language,
     isVariationForm,
+    isDynamaxForm,
     size,
     isEgg,
     isEX,
@@ -1027,6 +1032,10 @@ export default function MovesAndSkillsModalContent(props) {
     } else {
       postVariationPassives = preVariationPassives;
     }
+  }
+
+  if (isDynamaxForm) {
+    postVariationMoves = [variationForm.moves.maxMove1];
   }
 
   return (

@@ -729,6 +729,14 @@
       "u6": 799873950
     },
     {
+      "abilityId": "2100129005",
+      "type": 9,
+      "passiveId": 0,
+      "moveId": 129,
+      "value": 5,
+      "u6": 799871950
+    },
+    {
       "abilityId": "2100136003",
       "type": 9,
       "passiveId": 0,

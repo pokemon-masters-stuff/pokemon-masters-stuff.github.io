@@ -73,13 +73,21 @@ export default function MovesAndSkillsModal(props) {
         />
         &nbsp;
         {variationForm
-          ? isVariationForm
+          ? !variationForm.isDynamax
+            ? isVariationForm
+              ? `${trainerNameByLanguage[language]} & ${
+                  pokemonNameByLanguage[language]
+                } (${variationForm.monsterFormByLanguage[language] || 'Mega'})`
+              : `${trainerNameByLanguage[language]} & ${
+                  pokemonNameByLanguage[language]
+                } (${monsterFormByLanguage[language] || 'Pre-Mega'})`
+            : isVariationForm
             ? `${trainerNameByLanguage[language]} & ${
                 pokemonNameByLanguage[language]
-              } (${variationForm.monsterFormByLanguage[language] || 'Mega'})`
+              } (${variationForm.monsterFormByLanguage[language] || 'Dynamax'})`
             : `${trainerNameByLanguage[language]} & ${
                 pokemonNameByLanguage[language]
-              } (${monsterFormByLanguage[language] || 'Pre-Mega'})`
+              } (${monsterFormByLanguage[language] || 'Pre-Dynamax'})`
           : `${trainerNameByLanguage[language]} & ${pokemonNameByLanguage[language]}`}
         {variationForm ? (
           <Button
@@ -97,6 +105,13 @@ export default function MovesAndSkillsModal(props) {
             {...props}
             isEgg={isEgg}
             isVariationForm={isVariationForm}
+            isDynamaxForm={
+              variationForm
+                ? variationForm.isDynamax
+                  ? isVariationForm
+                  : false
+                : false
+            }
           />
         }
       </DialogContent>

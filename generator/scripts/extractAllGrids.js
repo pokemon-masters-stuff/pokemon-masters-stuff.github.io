@@ -116,6 +116,11 @@ const extractAllGrids = () => {
             (ability) => ability.abilityId === abilityId
           );
 
+          if (!ability) {
+            console.log('entry.trainerId', entry.trainerId);
+            console.log('abilityId', abilityId);
+          }
+
           move.name = abilityDescriptionDB[language][ability.type];
 
           if (ability.moveId) {

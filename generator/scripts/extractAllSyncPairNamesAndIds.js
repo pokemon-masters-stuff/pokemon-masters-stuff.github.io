@@ -193,6 +193,15 @@ const arrayOfGridedTrainers = [
   10243400000, // Gloria & Inteleon
   10245400000, // Marnie & Grimmsnarl
   10140000000, // Giovanni & Mewtwo
+  // 7/28
+  10066010000, // Lear & Hoopa
+  10067010000, // Rachel & Umbreon
+  10068010000, // Sawyer & Honchkrow
+  10135000000, // Sidney & Absol
+  10150000000, // Falkner & Swellow
+  10205000000, // Evelyn & Entei
+  10244000000, // Hop & Zamazenta
+  10247100000, // Leon & Eternatus
 ];
 
 /*
@@ -281,7 +290,8 @@ const extractAllSyncPairNamesAndIds = () => {
       trainerId.toString() === '10129000001' || // Zinnia & Salamence
       trainerId.toString() === '10008000001' || // Erika & Tangela
       trainerId.toString() === '10062000001' || // Karen & Umbreon
-      trainerId.toString() === '10045900000' // Bugsy & Scyther
+      trainerId.toString() === '10045900000' || // Bugsy & Scyther
+      trainerId.toString() === '10205000000' // Evelyn & Entei
     ) {
       isBP = true;
     } else {
@@ -508,10 +518,10 @@ const extractAllSyncPairNamesAndIds = () => {
       // Not MC
       if (
         trainerId.toString() !== '10074000000' && // Youngster & Cottonee
-        trainerId.toString() !== '10066000001' && // Lear & Hoopa
-        trainerId.toString() !== '10066000002' && // Lear & Hoopa
-        trainerId.toString() !== '10067000001' && // Rachel & Umbreon
-        trainerId.toString() !== '10068000001' // Sawyer & Honchkrow
+        trainerId.toString() !== '10066000001' && // Rival Lear & Hoopa
+        trainerId.toString() !== '10066000002' && // Rival Lear & Hoopa
+        trainerId.toString() !== '10067000001' && // Rival Rachel & Umbreon
+        trainerId.toString() !== '10068000001' // Rival Sawyer & Honchkrow
       ) {
         syncPairNamesAndIds[trainerId] = {
           syncPairEnglishName: syncPairEnglishName,
@@ -556,9 +566,10 @@ const extractAllSyncPairNamesAndIds = () => {
       }
     }
     if (isNew) {
-      console.log(
-        `{trainerId: ${trainerId.toString()}}, // ${syncPairEnglishName}`
-      );
+      // console.log(
+      //   `{trainerId: ${trainerId.toString()}}, // ${syncPairEnglishName}`
+      // );
+      console.log(`${trainerId.toString()}, // ${syncPairEnglishName}`);
       newSyncPairs[trainerId] = {
         syncPairEnglishName: syncPairEnglishName,
         trainerId: trainerId.toString(),
