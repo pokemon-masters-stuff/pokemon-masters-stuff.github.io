@@ -85,5 +85,20 @@
   "18094400": "기술후급소율업[Name:PassiveSkillNameDigit ]",
   "15011600": "비올시기술후BC가속[Name:PassiveSkillNameDigit ]",
   "17030100": "B기술후상태악화해제",
-  "99010500": "데미지관통공격"
+  "99010500": "데미지관통공격",
+  "18094500": "공격시능력7종다운[Name:PassiveSkillNameDigit ]",
+  "17044500": "BD기술후차회데미지방어",
+  "13020800": "HP최대시P기술B기술경감[Name:PassiveSkillNameDigit ]",
+  "17044600": "피격시차회게이지소비없음[Name:PassiveSkillNameDigit ]",
+  "18095100": "상대실패시스피드↑G[Name:PassiveSkillNameDigit ]",
+  "11011100": "피격시HP회복G[Name:PassiveSkillNameDigit ]",
+  "18094600": "공격시방어업G[Name:PassiveSkillNameDigit ]",
+  "18094700": "공격시특수방어업G[Name:PassiveSkillNameDigit ]",
+  "18095500": "BD기술후스피드↓G[Name:PassiveSkillNameDigit ]",
+  "15011700": "BD기술후BC가속[Name:PassiveSkillNameDigit ]",
+  "18095600": "상대실패시명중률↑G[Name:PassiveSkillNameDigit ]",
+  "18095700": "상대실패시공격특수공격↑G[Name:PassiveSkillNameDigit ]",
+  "17044900": "위기시차회발군위력↑",
+  "28020300": "불꽃의카리스마",
+  "11011000": "공격시HP회복G[Name:PassiveSkillNameDigit ]"
 }

@@ -85,5 +85,20 @@
   "18094400": "Movimiento Críticos ↑ +[Name:PassiveSkillNameDigit ]",
   "15011600": "Furor Pluvial +[Name:PassiveSkillNameDigit ]",
   "17030100": "Restauración",
-  "99010500": "Ataque Perforante"
+  "99010500": "Ataque Perforante",
+  "18094500": "Ataque Características ↓ +[Name:PassiveSkillNameDigit ]",
+  "17044500": "Mov. Compi D Sig. Mitiga Daño",
+  "13020800": "Robustez Aplacadora +[Name:PassiveSkillNameDigit ]",
+  "17044600": "Daño Siguiente Sin Coste +[Name:PassiveSkillNameDigit ]",
+  "18095100": "Fallo Rival Velocidad ↑ M +[Name:PassiveSkillNameDigit ]",
+  "11011100": "Daño Curativo M +[Name:PassiveSkillNameDigit ]",
+  "18094600": "Ataque Defensa ↑ M +[Name:PassiveSkillNameDigit ]",
+  "18094700": "Ataque Defensa Especial ↑ M +[Name:PassiveSkillNameDigit ]",
+  "18095500": "Mov. Compi D Vel. Rival M ↓ +[Name:PassiveSkillNameDigit ]",
+  "15011700": "Movimiento Compi D Furor +[Name:PassiveSkillNameDigit ]",
+  "18095600": "Fallo Rival Precisión ↑ M +[Name:PassiveSkillNameDigit ]",
+  "18095700": "Fallo Rival Ofensiva ↑ M +[Name:PassiveSkillNameDigit ]",
+  "17044900": "Sig. Supereficaz ↑ en Apuro",
+  "28020300": "Carisma Fuego",
+  "11011000": "Ataque Curativo M +[Name:PassiveSkillNameDigit ]"
 }

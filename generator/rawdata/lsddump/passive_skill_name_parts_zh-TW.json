@@ -85,5 +85,20 @@
   "18094400": "招式後要害率提升[Name:PassiveSkillNameDigit ]",
   "15011600": "下雨時招式後計數加速[Name:PassiveSkillNameDigit ]",
   "17030100": "拍組招式後解除惡化狀態",
-  "99010500": "傷害貫通攻擊"
+  "99010500": "傷害貫通攻擊",
+  "18094500": "攻擊時７種能力下降[Name:PassiveSkillNameDigit ]",
+  "17044500": "拍組極巨化招式後下次傷害防禦",
+  "13020800": "無傷時寶可夢招式及拍組招式傷害↓[Name:PassiveSkillNameDigit ]",
+  "17044600": "被攻擊時下次不消耗計量槽[Name:PassiveSkillNameDigit ]",
+  "18095100": "對手失敗時速度提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "11011100": "被攻擊時ＨＰ回復Ｇ[Name:PassiveSkillNameDigit ]",
+  "18094600": "攻擊時防禦提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "18094700": "攻擊時特防提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "18095500": "拍組極巨化招式後速度下降Ｇ[Name:PassiveSkillNameDigit ]",
+  "15011700": "拍組極巨化招式後計數加速[Name:PassiveSkillNameDigit ]",
+  "18095600": "對手失敗時命中率提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "18095700": "對手失敗時攻擊特攻提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "17044900": "危機時下次效果絕佳威力提升",
+  "28020300": "火之領袖",
+  "11011000": "攻擊時ＨＰ回復Ｇ[Name:PassiveSkillNameDigit ]"
 }

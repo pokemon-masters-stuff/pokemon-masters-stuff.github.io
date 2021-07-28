@@ -85,5 +85,20 @@
   "18094400": "Mossacolpo [Name:PassiveSkillNameDigit ]",
   "15011600": "Mossasprint piovosa [Name:PassiveSkillNameDigit ]",
   "17030100": "Voltapagina",
-  "99010500": "Attacco perforante"
+  "99010500": "Attacco perforante",
+  "18094500": "Attacco ettamalus [Name:PassiveSkillNameDigit ]",
+  "17044500": "UniDynamax protettivo",
+  "13020800": "Pienoscudo [Name:PassiveSkillNameDigit ]",
+  "17044600": "Reazione azzeracosto [Name:PassiveSkillNameDigit ]",
+  "18095100": "Cilecca turbo-G [Name:PassiveSkillNameDigit ]",
+  "11011100": "Reazione curativa-G [Name:PassiveSkillNameDigit ]",
+  "18094600": "Schermattacco-G [Name:PassiveSkillNameDigit ]",
+  "18094700": "Attacco sagace-G [Name:PassiveSkillNameDigit ]",
+  "18095500": "UniDynamax rallentante-G [Name:PassiveSkillNameDigit ]",
+  "15011700": "UniDynamax sprint [Name:PassiveSkillNameDigit ]",
+  "18095600": "Cileccamira-G [Name:PassiveSkillNameDigit ]",
+  "18095700": "Cilecca iperoffensiva-G [Name:PassiveSkillNameDigit ]",
+  "17044900": "Emergenza iperefficace",
+  "28020300": "Carisma Fuoco",
+  "11011000": "Attaccura-G [Name:PassiveSkillNameDigit ]"
 }

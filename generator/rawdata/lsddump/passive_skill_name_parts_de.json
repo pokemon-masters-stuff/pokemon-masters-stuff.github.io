@@ -85,5 +85,20 @@
   "18094400": "Attacke-Volltreffer↑ [Name:PassiveSkillNameDigit ]",
   "15011600": "Regen-Attacke-GA-Countdown↓ [Name:PassiveSkillNameDigit ]",
   "17030100": "GA-Komplettaufhebung",
-  "99010500": "PF-Überstehen-Vermeidung"
+  "99010500": "PF-Überstehen-Vermeidung",
+  "18094500": "Treffer-7 Werte↓ [Name:PassiveSkillNameDigit ]",
+  "17044500": "G-D-Att.-Folge-Schadensschutz",
+  "13020800": "Topform-P-Att.+GA↓ [Name:PassiveSkillNameDigit ]",
+  "17044600": "Gegentr.-Folge-Leistenverbr. 0 [Name:PassiveSkillNameDigit ]",
+  "18095100": "Gegner-Fehlschlag-Init.↑ T [Name:PassiveSkillNameDigit ]",
+  "11011100": "Gegentreffer-Heilung T [Name:PassiveSkillNameDigit ]",
+  "18094600": "Treffer-Verteidigung↑ T [Name:PassiveSkillNameDigit ]",
+  "18094700": "Treffer-Sp.-Verteidigung↑ T [Name:PassiveSkillNameDigit ]",
+  "18095500": "G-D-Att.-Initiative↓ T [Name:PassiveSkillNameDigit ]",
+  "15011700": "G-D-Att.-GA-Countdown↓ [Name:PassiveSkillNameDigit ]",
+  "18095600": "Geg.-Fehlschlag-Genauigkeit↑ T [Name:PassiveSkillNameDigit ]",
+  "18095700": "Gegn.-Fehl.-Ang.+Sp.-Ang.↑ T [Name:PassiveSkillNameDigit ]",
+  "17044900": "Notfall-Folge-Eff.-Stärke↑",
+  "28020300": "Feuer-Charisma",
+  "11011000": "Treffer-Heilung T [Name:PassiveSkillNameDigit ]"
 }

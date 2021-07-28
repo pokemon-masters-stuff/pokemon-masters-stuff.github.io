@@ -23,6 +23,8 @@
   "20001901": "Rattfratz",
   "20002000": "Rattikarl",
   "20002001": "Rattikarl",
+  "20002100": "Habitak",
+  "20002200": "Ibitak",
   "20002400": "Arbok",
   "20002500": "Pikachu",
   "20002501": "Pikachu",
@@ -76,6 +78,7 @@
   "20007800": "Gallopa",
   "20008100": "Magnetilo",
   "20008200": "Magneton",
+  "20008300": "Porenta",
   "20008600": "Jurob",
   "20008700": "Jugong",
   "20008800": "Sleima",
@@ -182,6 +185,7 @@
   "20027000": "Loturzel",
   "20027100": "Lombrero",
   "20027400": "Blanas",
+  "20027700": "Schwalboss",
   "20027900": "Pelipper",
   "20028200": "Guardevoir",
   "20028251": "Mega-Guardevoir",
@@ -212,6 +216,8 @@
   "20033800": "Sonnfel",
   "20035001": "Milotic",
   "20035600": "Zwirrklop",
+  "20035900": "Absol",
+  "20035951": "Mega-Absol",
   "20036100": "Schneppke",
   "20036200": "Firnontor",
   "20036251": "Mega-Firnontor",
@@ -448,5 +454,7 @@
   "2008771100": "Morpeko",
   "2008771200": "Morpeko",
   "2008840000": "Duraludon",
-  "2008881200": "Zacian"
+  "2008881200": "Zacian",
+  "2008891200": "Zamazenta",
+  "2008900000": "Endynalos"
 }

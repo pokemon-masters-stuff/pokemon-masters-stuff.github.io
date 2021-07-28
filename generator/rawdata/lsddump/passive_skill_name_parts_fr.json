@@ -85,5 +85,20 @@
   "18094400": "Capacité Critiques ↑ [Name:PassiveSkillNameDigit ]",
   "15011600": "Pluie Capacité Compteur ↓ [Name:PassiveSkillNameDigit ]",
   "17030100": "Restauration",
-  "99010500": "Pénétration"
+  "99010500": "Pénétration",
+  "18094500": "Capa. Off. 7 Stats ↓ [Name:PassiveSkillNameDigit ]",
+  "17044500": "Capa. D D. Suivant Garde",
+  "13020800": "Pleine Forme Résil. Action C. D. [Name:PassiveSkillNameDigit ]",
+  "17044600": "Réflexe Consommation 0 [Name:PassiveSkillNameDigit ]",
+  "18095100": "Fiasco Enn. Coach Vitesse [Name:PassiveSkillNameDigit ]",
+  "11011100": "Réflexe Coach Soin [Name:PassiveSkillNameDigit ]",
+  "18094600": "Capa. Off. Coach Défense [Name:PassiveSkillNameDigit ]",
+  "18094700": "Capa. Off. Coach Déf. Spé. [Name:PassiveSkillNameDigit ]",
+  "18095500": "Capa. D D. Tyran Vitesse [Name:PassiveSkillNameDigit ]",
+  "15011700": "Capa. D D. Compteur ↓ [Name:PassiveSkillNameDigit ]",
+  "18095600": "Fiasco Enn. Coach Précision [Name:PassiveSkillNameDigit ]",
+  "18095700": "Fiasco Enn. Coach Atq. Atq. Spé. [Name:PassiveSkillNameDigit ]",
+  "17044900": "Désespoir C. Suiv. Ultra-Eff.",
+  "28020300": "Charisme Feu",
+  "11011000": "Capacité Offensive Coach Soin [Name:PassiveSkillNameDigit ]"
 }

@@ -85,5 +85,20 @@
   "18094400": "技後急所率アップ[Name:PassiveSkillNameDigit ]",
   "15011600": "雨時技後ＢＣ加速[Name:PassiveSkillNameDigit ]",
   "17030100": "Ｂ技後状態悪化解除",
-  "99010500": "ダメージ貫通攻撃"
+  "99010500": "ダメージ貫通攻撃",
+  "18094500": "攻撃時能力７種ダウン[Name:PassiveSkillNameDigit ]",
+  "17044500": "ＢＤ技後次ダメージ防御",
+  "13020800": "無傷時Ｐ技Ｂ技軽減[Name:PassiveSkillNameDigit ]",
+  "17044600": "被攻撃時次回ゲージ消費無[Name:PassiveSkillNameDigit ]",
+  "18095100": "相手失敗時素早さ↑Ｇ[Name:PassiveSkillNameDigit ]",
+  "11011100": "被攻撃時ＨＰ回復Ｇ[Name:PassiveSkillNameDigit ]",
+  "18094600": "攻撃時防御アップＧ[Name:PassiveSkillNameDigit ]",
+  "18094700": "攻撃時特防アップＧ[Name:PassiveSkillNameDigit ]",
+  "18095500": "ＢＤ技後素早さ↓Ｇ[Name:PassiveSkillNameDigit ]",
+  "15011700": "ＢＤ技後ＢＣ加速[Name:PassiveSkillNameDigit ]",
+  "18095600": "相手失敗時命中率↑Ｇ[Name:PassiveSkillNameDigit ]",
+  "18095700": "相手失敗時攻撃特攻↑Ｇ[Name:PassiveSkillNameDigit ]",
+  "17044900": "ピンチ時次回抜群威力↑",
+  "28020300": "ほのおのカリスマ",
+  "11011000": "攻撃時ＨＰ回復Ｇ[Name:PassiveSkillNameDigit ]"
 }

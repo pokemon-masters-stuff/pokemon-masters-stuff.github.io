@@ -1171,8 +1171,38 @@
       "u13": ""
     },
     {
+      "id": "10006601",
+      "actorId": "ch0066_01_boss",
+      "trainerNameId": "ch0066",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_enemy_boss",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "10006700",
       "actorId": "ch0067_00_leader1",
+      "trainerNameId": "ch0067",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_enemy_normal",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "10006701",
+      "actorId": "ch0067_01_leader1",
       "trainerNameId": "ch0067",
       "u4": 1,
       "u5": "",
@@ -1194,6 +1224,21 @@
       "u6": 1,
       "u7": 1,
       "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_enemy_normal",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "10006801",
+      "actorId": "ch0068_01_leader2",
+      "trainerNameId": "ch0068",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleBgmId": "bgm_btl_enemy_normal",
@@ -2521,6 +2566,21 @@
       "u13": ""
     },
     {
+      "id": "10013500",
+      "actorId": "ch0135_00_kagetsu",
+      "trainerNameId": "ch0135",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_big4_hoenn",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "10013600",
       "actorId": "ch0136_00_platane",
       "trainerNameId": "ch0136",
@@ -2592,6 +2652,21 @@
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleBgmId": "bgm_btl_gl_alola",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "10015000",
+      "actorId": "ch0150_00_hayato",
+      "trainerNameId": "ch0150",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_gl_johto",
       "resultBgmId": "bgm_btlrslt_normal",
       "u13": ""
     },
@@ -2851,6 +2926,21 @@
       "u13": ""
     },
     {
+      "id": "10020500",
+      "actorId": "ch0205_00_lesoir",
+      "trainerNameId": "ch0205",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "",
+      "resultBgmId": "",
+      "u13": ""
+    },
+    {
       "id": "10021500",
       "actorId": "ch0215_00_lutia",
       "trainerNameId": "ch0215",
@@ -2986,6 +3076,21 @@
       "u13": ""
     },
     {
+      "id": "10024400",
+      "actorId": "ch0244_00_hop",
+      "trainerNameId": "ch0244",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "",
+      "resultBgmId": "",
+      "u13": ""
+    },
+    {
       "id": "10024500",
       "actorId": "ch0245_00_mary",
       "trainerNameId": "ch0245",
@@ -3018,6 +3123,21 @@
     {
       "id": "10024700",
       "actorId": "ch0247_00_dande",
+      "trainerNameId": "ch0247",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_dande",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "10024710",
+      "actorId": "ch0247_10_dande",
       "trainerNameId": "ch0247",
       "u4": 1,
       "u5": "",
@@ -3406,6 +3526,21 @@
       "u13": ""
     },
     {
+      "id": "11004900",
+      "actorId": "ch0049_00_fuyo_01",
+      "trainerNameId": "ch0049",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_big4_hoenn",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "11005100",
       "actorId": "ch0051_00_litchi_01",
       "trainerNameId": "ch0051",
@@ -3417,6 +3552,21 @@
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleBgmId": "bgm_btl_big4_alola",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "11006601",
+      "actorId": "ch0066_01_boss_01",
+      "trainerNameId": "ch0066",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_enemy_boss",
       "resultBgmId": "bgm_btlrslt_normal",
       "u13": ""
     },
@@ -3721,6 +3871,21 @@
       "u13": ""
     },
     {
+      "id": "11011400",
+      "actorId": "ch0114_00_natsume_01",
+      "trainerNameId": "ch0114",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_gl_kanto",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "11011500",
       "actorId": "ch0115_00_denji_01",
       "trainerNameId": "ch0115",
@@ -4021,6 +4186,21 @@
       "u13": ""
     },
     {
+      "id": "11013500",
+      "actorId": "ch0135_00_kagetsu_01",
+      "trainerNameId": "ch0135",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_big4_hoenn",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "11014800",
       "actorId": "ch0148_00_matsuba_01",
       "trainerNameId": "ch0148",
@@ -4047,6 +4227,21 @@
       "pokeballId": "ob0204_00_monsterball",
       "isGeneric": 0,
       "battleBgmId": "bgm_btl_gl_alola",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "11015000",
+      "actorId": "ch0150_00_hayato_01",
+      "trainerNameId": "ch0150",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_gl_johto",
       "resultBgmId": "bgm_btlrslt_normal",
       "u13": ""
     },
@@ -4248,6 +4443,21 @@
     {
       "id": "11024700",
       "actorId": "ch0247_00_dande_01",
+      "trainerNameId": "ch0247",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_dande",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "11024710",
+      "actorId": "ch0247_10_dande_01",
       "trainerNameId": "ch0247",
       "u4": 1,
       "u5": "",
