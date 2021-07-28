@@ -275,7 +275,8 @@ const extractAllSyncPairNamesAndIds = () => {
       trainerId.toString() !== '18000000000' && // Hero & Pikachu
       trainerId.toString() !== '18000120000' && // Hero & Solgaleo
       trainerId.toString() !== '18000020521' && // Hero & Regirock
-      trainerId.toString() !== '18000020531' // Hero & Cobalion
+      trainerId.toString() !== '18000020531' && // Hero & Cobalion
+      trainerId.toString() !== '18000020000' // Hero & Torchic
     ) {
       isEggmon = true;
     } else {
