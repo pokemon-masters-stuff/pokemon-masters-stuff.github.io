@@ -439,6 +439,7 @@ const getUpdatedPassiveSkillDescription = (language, passiveId) => {
 const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
   let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
   if (passiveId && originalPassiveSkillName) {
+    // if passive exists
     if (originalPassiveSkillName.includes('Idx')) {
       let iteratorOfIdx = originalPassiveSkillName.matchAll('Idx');
       let arrayOfIdxIndex = [];
@@ -478,7 +479,15 @@ const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
               );
           }
         } else {
-          finalSkillName = passiveSkillNamePartsDB[language][index.toString()];
+          if (moveId.toString() === '0') {
+            finalSkillName =
+              passiveSkillNamePartsDB[language][index.toString()];
+          } else {
+            finalSkillName =
+              moveNameDB[language][moveId] +
+              ' ' +
+              passiveSkillNamePartsDB[language][index.toString()];
+          }
         }
 
         arrayOfPassiveSkillNameParts.push(finalSkillName);
@@ -492,64 +501,13 @@ const getUpdatedPassiveSkillName = (language, moveId, passiveId) => {
       }
     }
   } else {
-    finalSkillName = originalPassiveSkillName;
-  }
-};
-
-const getUpdatedAbilityName = (language, moveId, passiveId) => {
-  let originalPassiveSkillName = passiveSkillNameDB[language][passiveId];
-  if (originalPassiveSkillName.includes('Idx')) {
-    let iteratorOfIdx = originalPassiveSkillName.matchAll('Idx');
-    let arrayOfIdxIndex = [];
-    let arrayOfPassiveSkillNameParts = [];
-    for (const Idx of iteratorOfIdx) {
-      // console.log(`For moveId=${moveId}: Found ${Idx[0]} at ${Idx.index}`);
-      // console.log(
-      //   `For moveId=${moveId}: Idx has the following properties: ${Object.keys(Idx)}
-      //   index=${Idx.index}
-      //   input=${Idx.input}
-      //   groups=${Idx.groups}
-      //   `
-      // );
-      arrayOfIdxIndex.push(
-        originalPassiveSkillName.slice(Idx.index + 5, Idx.index + 13)
+    // if passive doesn't exist or doesn't have a name
+    if (language === 'en') {
+      console.log(
+        `WARNING: passiveId ${passiveId} doesn't have a name in database`
       );
     }
-    for (const index of arrayOfIdxIndex) {
-      let finalSkillName = '';
-      if (
-        passiveSkillNamePartsDB[language][index.toString()].includes(
-          'Name:PassiveSkillNameDigit'
-        )
-      ) {
-        let digit = passiveId.toString().slice(-1);
-        if (moveId.toString() === '0') {
-          finalSkillName = passiveSkillNamePartsDB[language][
-            index.toString()
-          ].replace('[Name:PassiveSkillNameDigit ]', digit);
-        } else {
-          finalSkillName =
-            moveNameDB[language][moveId] +
-            ' ' +
-            passiveSkillNamePartsDB[language][index.toString()].replace(
-              '[Name:PassiveSkillNameDigit ]',
-              digit
-            );
-        }
-      } else {
-        finalSkillName = passiveSkillNamePartsDB[language][index.toString()];
-      }
-
-      arrayOfPassiveSkillNameParts.push(finalSkillName);
-    }
-
-    return arrayOfPassiveSkillNameParts.join('\n');
-  } else {
-    if (moveId.toString() === '0') {
-      return originalPassiveSkillName;
-    } else {
-      return moveNameDB[language][moveId] + ' ' + originalPassiveSkillName;
-    }
+    finalSkillName = passiveId.toString();
   }
 };
 
@@ -557,5 +515,4 @@ module.exports = {
   getUpdatedMoveDescription,
   getUpdatedPassiveSkillDescription,
   getUpdatedPassiveSkillName,
-  getUpdatedAbilityName,
 };

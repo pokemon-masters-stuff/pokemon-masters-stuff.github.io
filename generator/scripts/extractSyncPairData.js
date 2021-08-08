@@ -761,41 +761,51 @@ const extractSyncPairData = () => {
         };
 
       languages.forEach((language) => {
-        formPassiveNameByLanguage[language] = getUpdatedPassiveSkillName(
-          language,
-          0, // moveId
-          formPassiveId
-        );
-        passive1NameByLanguage[language] = getUpdatedPassiveSkillName(
-          language,
-          0, // moveId
-          passive1Id
-        );
-        passive2NameByLanguage[language] = getUpdatedPassiveSkillName(
-          language,
-          0, // moveId
-          passive2Id
-        );
-        passive3NameByLanguage[language] = getUpdatedPassiveSkillName(
-          language,
-          0, // moveId
-          passive3Id
-        );
-        passive4NameByLanguage[language] = getUpdatedPassiveSkillName(
-          language,
-          0, // moveId
-          passive4Id
-        );
-        formPassiveDescriptionByLanguage[language] =
-          getUpdatedPassiveSkillDescription(language, formPassiveId);
-        passive1DescriptionByLanguage[language] =
-          getUpdatedPassiveSkillDescription(language, passive1Id);
-        passive2DescriptionByLanguage[language] =
-          getUpdatedPassiveSkillDescription(language, passive2Id);
-        passive3DescriptionByLanguage[language] =
-          getUpdatedPassiveSkillDescription(language, passive3Id);
-        passive4DescriptionByLanguage[language] =
-          getUpdatedPassiveSkillDescription(language, passive4Id);
+        formPassiveId &&
+          (formPassiveNameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            0, // moveId
+            formPassiveId
+          ));
+        passive1Id &&
+          (passive1NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            0, // moveId
+            passive1Id
+          ));
+        passive2Id &&
+          (passive2NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            0, // moveId
+            passive2Id
+          ));
+        passive3Id &&
+          (passive3NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            0, // moveId
+            passive3Id
+          ));
+        passive4Id &&
+          (passive4NameByLanguage[language] = getUpdatedPassiveSkillName(
+            language,
+            0, // moveId
+            passive4Id
+          ));
+        formPassiveId &&
+          (formPassiveDescriptionByLanguage[language] =
+            getUpdatedPassiveSkillDescription(language, formPassiveId));
+        passive1Id &&
+          (passive1DescriptionByLanguage[language] =
+            getUpdatedPassiveSkillDescription(language, passive1Id));
+        passive2Id &&
+          (passive2DescriptionByLanguage[language] =
+            getUpdatedPassiveSkillDescription(language, passive2Id));
+        passive3Id &&
+          (passive3DescriptionByLanguage[language] =
+            getUpdatedPassiveSkillDescription(language, passive3Id));
+        passive4Id &&
+          (passive4DescriptionByLanguage[language] =
+            getUpdatedPassiveSkillDescription(language, passive4Id));
       });
 
       passive1Id !== 0 &&
@@ -1757,54 +1767,62 @@ const extractSyncPairData = () => {
           };
 
         languages.forEach((language) => {
-          variationPassive1NameByLanguage[language] =
-            getUpdatedPassiveSkillName(
-              language,
-              0, // moveId
-              monsterVariationFormEntry.passive1Id
-            );
+          monsterVariationFormEntry.passive1Id &&
+            (variationPassive1NameByLanguage[language] =
+              getUpdatedPassiveSkillName(
+                language,
+                0, // moveId
+                monsterVariationFormEntry.passive1Id
+              ));
 
-          variationPassive2NameByLanguage[language] =
-            getUpdatedPassiveSkillName(
-              language,
-              0, // moveId
-              monsterVariationFormEntry.passive2Id
-            );
+          monsterVariationFormEntry.passive2Id &&
+            (variationPassive2NameByLanguage[language] =
+              getUpdatedPassiveSkillName(
+                language,
+                0, // moveId
+                monsterVariationFormEntry.passive2Id
+              ));
 
-          variationPassive3NameByLanguage[language] =
-            getUpdatedPassiveSkillName(
-              language,
-              0, // moveId
-              monsterVariationFormEntry.passive3Id
-            );
+          monsterVariationFormEntry.passive3Id &&
+            (variationPassive3NameByLanguage[language] =
+              getUpdatedPassiveSkillName(
+                language,
+                0, // moveId
+                monsterVariationFormEntry.passive3Id
+              ));
 
-          variationPassive4NameByLanguage[language] =
-            getUpdatedPassiveSkillName(
-              language,
-              0, // moveId
-              monsterVariationFormEntry.passive4Id
-            );
+          monsterVariationFormEntry.passive4Id &&
+            (variationPassive4NameByLanguage[language] =
+              getUpdatedPassiveSkillName(
+                language,
+                0, // moveId
+                monsterVariationFormEntry.passive4Id
+              ));
 
-          variationPassive1DescriptionByLanguage[language] =
-            getUpdatedPassiveSkillDescription(
-              language,
-              monsterVariationFormEntry.passive1Id
-            );
-          variationPassive2DescriptionByLanguage[language] =
-            getUpdatedPassiveSkillDescription(
-              language,
-              monsterVariationFormEntry.passive2Id
-            );
-          variationPassive3DescriptionByLanguage[language] =
-            getUpdatedPassiveSkillDescription(
-              language,
-              monsterVariationFormEntry.passive3Id
-            );
-          variationPassive4DescriptionByLanguage[language] =
-            getUpdatedPassiveSkillDescription(
-              language,
-              monsterVariationFormEntry.passive4Id
-            );
+          monsterVariationFormEntry.passive1Id &&
+            (variationPassive1DescriptionByLanguage[language] =
+              getUpdatedPassiveSkillDescription(
+                language,
+                monsterVariationFormEntry.passive1Id
+              ));
+          monsterVariationFormEntry.passive2Id &&
+            (variationPassive2DescriptionByLanguage[language] =
+              getUpdatedPassiveSkillDescription(
+                language,
+                monsterVariationFormEntry.passive2Id
+              ));
+          monsterVariationFormEntry.passive3Id &&
+            (variationPassive3DescriptionByLanguage[language] =
+              getUpdatedPassiveSkillDescription(
+                language,
+                monsterVariationFormEntry.passive3Id
+              ));
+          monsterVariationFormEntry.passive4Id &&
+            (variationPassive4DescriptionByLanguage[language] =
+              getUpdatedPassiveSkillDescription(
+                language,
+                monsterVariationFormEntry.passive4Id
+              ));
         });
 
         monsterVariationFormEntry.passive1Id !== 0 &&

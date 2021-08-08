@@ -40,10 +40,7 @@ const moveNameDB = {
 
 const { languages } = require('../utils/constants');
 
-const {
-  getUpdatedPassiveSkillName,
-  getUpdatedAbilityName,
-} = require('../utils/functions');
+const { getUpdatedPassiveSkillName } = require('../utils/functions');
 
 const extractSkills = () => {
   let movesAndPassives = {};
@@ -164,7 +161,7 @@ const extractSkills = () => {
           abilityEntry.abilityId.toString()
         ) {
           languages.forEach((language) => {
-            skillNameByLanguage[language] = getUpdatedAbilityName(
+            skillNameByLanguage[language] = getUpdatedPassiveSkillName(
               language,
               abilityEntry.moveId,
               abilityEntry.passiveId
