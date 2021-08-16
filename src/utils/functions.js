@@ -219,6 +219,7 @@ export const getFillColorByMoveType = ({ type, group }) => {
     movePowerBoost: '#73d958', // green
     moveAccuracyBoost: '#73d958', // green
     syncBoost: '#d12deb', // purple
+    maxMoveBoost: '#e17db8', // light magenta
   };
   let colorsByTypeId = {
     1: colorsByTypeDef.statsBoost,
@@ -235,7 +236,13 @@ export const getFillColorByMoveType = ({ type, group }) => {
   let cellColor = colorsByTypeDef.syncBoost;
 
   if (group !== 3) {
+    // Sync Move
     cellColor = colorsByTypeId[type];
+  }
+
+  if (group === 5) {
+    // Dynamax Move
+    cellColor = colorsByTypeDef.maxMoveBoost;
   }
 
   return cellColor;

@@ -21,6 +21,7 @@ const group = {
   Regular: 2,
   Sync: 3,
   Unity: 4,
+  5: 5,
 };
 
 const target = {
