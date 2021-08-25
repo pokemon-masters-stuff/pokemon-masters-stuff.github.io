@@ -1940,7 +1940,7 @@ const extractSyncPairData = () => {
 
       // let trainerActorId = trainerBase.actorId; // name changed on 9/28/2020
       // 6/28 update - trainerBase.trainerNameId => trainerBase.actorId
-      let trainerActorId = trainerBase.trainerNameId;
+      let trainerActorId = trainerBase.actorId;
 
       languages.forEach((language) => {
         if (monsterBaseId) {

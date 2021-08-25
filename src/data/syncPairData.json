@@ -36,7 +36,7 @@
     "trainerId": "10000000000",
     "trainerBaseId": "10000000",
     "trainerNameId": "ch0000",
-    "trainerActorId": "ch0000",
+    "trainerActorId": "ch0000_00_red",
     "isGrided": true,
     "stats": {
       "hpValues": [90, 177, 258, 588, 660, 732],
@@ -484,7 +484,7 @@
     "trainerId": "10001000000",
     "trainerBaseId": "10000100",
     "trainerNameId": "ch0001",
-    "trainerActorId": "ch0001",
+    "trainerActorId": "ch0001_00_kukui",
     "isGrided": true,
     "stats": {
       "hpValues": [94, 161, 224, 477, 533, 589],
@@ -852,7 +852,7 @@
     "trainerId": "10002000000",
     "trainerBaseId": "10000200",
     "trainerNameId": "ch0002",
-    "trainerActorId": "ch0002",
+    "trainerActorId": "ch0002_00_kotone",
     "isGrided": true,
     "stats": {
       "hpValues": [177, 275, 365, 722, 802, 882],
@@ -1188,7 +1188,7 @@
     "trainerId": "10002400000",
     "trainerBaseId": "10000240",
     "trainerNameId": "ch0002",
-    "trainerActorId": "ch0002",
+    "trainerActorId": "ch0002_40_kotone",
     "isGrided": true,
     "stats": {
       "hpValues": [99, 188, 272, 613, 685, 757],
@@ -1570,7 +1570,7 @@
     "trainerId": "10003000000",
     "trainerBaseId": "10000300",
     "trainerNameId": "ch0003",
-    "trainerActorId": "ch0003",
+    "trainerActorId": "ch0003_00_calme",
     "isGrided": true,
     "stats": {
       "hpValues": [98, 187, 244, 508, 564, 620],
@@ -1929,7 +1929,7 @@
     "trainerId": "10004000000",
     "trainerBaseId": "10000400",
     "trainerNameId": "ch0004",
-    "trainerActorId": "ch0004",
+    "trainerActorId": "ch0004_00_toko",
     "isGrided": true,
     "stats": {
       "hpValues": [125, 235, 340, 758, 846, 934],
@@ -2288,7 +2288,7 @@
     "trainerId": "10005000000",
     "trainerBaseId": "10000500",
     "trainerNameId": "ch0005",
-    "trainerActorId": "ch0005",
+    "trainerActorId": "ch0005_00_kanna",
     "isGrided": false,
     "stats": {
       "hpValues": [107, 182, 250, 525, 585, 645],
@@ -2624,7 +2624,7 @@
     "trainerId": "10006000000",
     "trainerBaseId": "10000600",
     "trainerNameId": "ch0006",
-    "trainerActorId": "ch0006",
+    "trainerActorId": "ch0006_00_oba",
     "isGrided": true,
     "stats": {
       "hpValues": [62, 150, 202, 450, 506, 562],
@@ -2960,7 +2960,7 @@
     "trainerId": "10007000000",
     "trainerBaseId": "10000700",
     "trainerNameId": "ch0007",
-    "trainerActorId": "ch0007",
+    "trainerActorId": "ch0007_00_acerola",
     "isGrided": true,
     "stats": {
       "hpValues": [85, 165, 217, 437, 489, 541],
@@ -3296,7 +3296,7 @@
     "trainerId": "10007400000",
     "trainerBaseId": "10000740",
     "trainerNameId": "ch0007",
-    "trainerActorId": "ch0007",
+    "trainerActorId": "ch0007_40_acerola",
     "isGrided": true,
     "stats": {
       "hpValues": [118, 176, 230, 450, 498, 546],
@@ -3709,7 +3709,7 @@
     "trainerId": "10008000000",
     "trainerBaseId": "10000800",
     "trainerNameId": "ch0008",
-    "trainerActorId": "ch0008",
+    "trainerActorId": "ch0008_00_erika",
     "isGrided": true,
     "stats": {
       "hpValues": [85, 192, 260, 562, 630, 698],
@@ -4045,7 +4045,7 @@
     "trainerId": "10008000001",
     "trainerBaseId": "10000800",
     "trainerNameId": "ch0008",
-    "trainerActorId": "ch0008",
+    "trainerActorId": "ch0008_00_erika",
     "isGrided": true,
     "stats": {
       "hpValues": [91, 150, 207, 427, 475, 523],
@@ -4427,7 +4427,7 @@
     "trainerId": "10008400000",
     "trainerBaseId": "10000840",
     "trainerNameId": "ch0008",
-    "trainerActorId": "ch0008",
+    "trainerActorId": "ch0008_40_erika",
     "isGrided": true,
     "stats": {
       "hpValues": [124, 196, 265, 540, 600, 660],
@@ -4809,7 +4809,7 @@
     "trainerId": "10009000000",
     "trainerBaseId": "10000900",
     "trainerNameId": "ch0009",
-    "trainerActorId": "ch0009",
+    "trainerActorId": "ch0009_00_senri",
     "isGrided": false,
     "stats": {
       "hpValues": [67, 160, 220, 495, 555, 615],
@@ -5145,7 +5145,7 @@
     "trainerId": "10010000000",
     "trainerBaseId": "10001000",
     "trainerNameId": "ch0010",
-    "trainerActorId": "ch0010",
+    "trainerActorId": "ch0010_00_maximum",
     "isGrided": false,
     "stats": {
       "hpValues": [72, 135, 195, 415, 467, 519],
@@ -5504,7 +5504,7 @@
     "trainerId": "10011000000",
     "trainerBaseId": "10001100",
     "trainerNameId": "ch0011",
-    "trainerActorId": "ch0011",
+    "trainerActorId": "ch0011_00_homika",
     "isGrided": false,
     "stats": {
       "hpValues": [102, 160, 212, 432, 480, 528],
@@ -5840,7 +5840,7 @@
     "trainerId": "10012000000",
     "trainerBaseId": "10001200",
     "trainerNameId": "ch0012",
-    "trainerActorId": "ch0012",
+    "trainerActorId": "ch0012_00_corni",
     "isGrided": true,
     "stats": {
       "hpValues": [62, 137, 182, 402, 450, 498],
@@ -6242,7 +6242,7 @@
     "trainerId": "10013000000",
     "trainerBaseId": "10001300",
     "trainerNameId": "ch0013",
-    "trainerActorId": "ch0013",
+    "trainerActorId": "ch0013_00_hapu",
     "isGrided": false,
     "stats": {
       "hpValues": [62, 145, 197, 445, 497, 549],
@@ -6578,7 +6578,7 @@
     "trainerId": "10014010000",
     "trainerBaseId": "10001401",
     "trainerNameId": "ch0014",
-    "trainerActorId": "ch0014",
+    "trainerActorId": "ch0014_01_cheren",
     "isGrided": false,
     "stats": {
       "hpValues": [92, 202, 270, 572, 640, 708],
@@ -6914,7 +6914,7 @@
     "trainerId": "10015000000",
     "trainerBaseId": "10001500",
     "trainerNameId": "ch0015",
-    "trainerActorId": "ch0015",
+    "trainerActorId": "ch0015_00_takeshi",
     "isGrided": true,
     "stats": {
       "hpValues": [80, 180, 240, 515, 579, 643],
@@ -7250,7 +7250,7 @@
     "trainerId": "10015010000",
     "trainerBaseId": "10001501",
     "trainerNameId": "ch0015",
-    "trainerActorId": "ch0015",
+    "trainerActorId": "ch0015_01_takeshi",
     "isGrided": false,
     "stats": {
       "hpValues": [67, 157, 217, 465, 521, 577],
@@ -7586,7 +7586,7 @@
     "trainerId": "10016000000",
     "trainerBaseId": "10001600",
     "trainerNameId": "ch0016",
-    "trainerActorId": "ch0016",
+    "trainerActorId": "ch0016_00_huuro",
     "isGrided": true,
     "stats": {
       "hpValues": [82, 187, 255, 557, 625, 693],
@@ -7922,7 +7922,7 @@
     "trainerId": "10016400000",
     "trainerBaseId": "10001640",
     "trainerNameId": "ch0016",
-    "trainerActorId": "ch0016",
+    "trainerActorId": "ch0016_40_huuro",
     "isGrided": true,
     "stats": {
       "hpValues": [124, 193, 259, 523, 579, 635],
@@ -8304,7 +8304,7 @@
     "trainerId": "10017000000",
     "trainerBaseId": "10001700",
     "trainerNameId": "ch0017",
-    "trainerActorId": "ch0017",
+    "trainerActorId": "ch0017_00_leaf",
     "isGrided": true,
     "stats": {
       "hpValues": [121, 200, 275, 572, 636, 700],
@@ -8663,7 +8663,7 @@
     "trainerId": "10017100000",
     "trainerBaseId": "10001710",
     "trainerNameId": "ch0017",
-    "trainerActorId": "ch0017",
+    "trainerActorId": "ch0017_10_leaf",
     "isGrided": true,
     "stats": {
       "hpValues": [111, 195, 273, 592, 660, 728],
@@ -9129,7 +9129,7 @@
     "trainerId": "10018000000",
     "trainerBaseId": "10001800",
     "trainerNameId": "ch0018",
-    "trainerActorId": "ch0018",
+    "trainerActorId": "ch0018_00_chris",
     "isGrided": true,
     "stats": {
       "hpValues": [132, 210, 285, 560, 624, 688],
@@ -9488,7 +9488,7 @@
     "trainerId": "10019000000",
     "trainerBaseId": "10001900",
     "trainerNameId": "ch0019",
-    "trainerActorId": "ch0019",
+    "trainerActorId": "ch0019_00_yuki",
     "isGrided": true,
     "stats": {
       "hpValues": [125, 185, 245, 465, 513, 561],
@@ -9847,7 +9847,7 @@
     "trainerId": "10020000000",
     "trainerBaseId": "10002000",
     "trainerNameId": "ch0020",
-    "trainerActorId": "ch0020",
+    "trainerActorId": "ch0020_00_toya",
     "isGrided": true,
     "stats": {
       "hpValues": [155, 227, 295, 570, 630, 690],
@@ -10183,7 +10183,7 @@
     "trainerId": "10020400000",
     "trainerBaseId": "10002040",
     "trainerNameId": "ch0020",
-    "trainerActorId": "ch0020",
+    "trainerActorId": "ch0020_40_toya",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 189, 282, 645, 725, 805],
@@ -10565,7 +10565,7 @@
     "trainerId": "10021000000",
     "trainerBaseId": "10002100",
     "trainerNameId": "ch0021",
-    "trainerActorId": "ch0021",
+    "trainerActorId": "ch0021_00_green",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 157, 217, 465, 517, 569],
@@ -11041,7 +11041,7 @@
     "trainerId": "10021010000",
     "trainerBaseId": "10002101",
     "trainerNameId": "ch0021",
-    "trainerActorId": "ch0021",
+    "trainerActorId": "ch0021_01_green",
     "isGrided": true,
     "stats": {
       "hpValues": [89, 170, 248, 556, 620, 684],
@@ -11436,7 +11436,7 @@
     "trainerId": "10022000000",
     "trainerBaseId": "10002200",
     "trainerNameId": "ch0022",
-    "trainerActorId": "ch0022",
+    "trainerActorId": "ch0022_00_urup",
     "isGrided": false,
     "stats": {
       "hpValues": [90, 157, 217, 465, 521, 577],
@@ -11772,7 +11772,7 @@
     "trainerId": "10023000000",
     "trainerBaseId": "10002300",
     "trainerNameId": "ch0023",
-    "trainerActorId": "ch0023",
+    "trainerActorId": "ch0023_00_momi",
     "isGrided": false,
     "stats": {
       "hpValues": [137, 230, 320, 677, 753, 829],
@@ -12108,7 +12108,7 @@
     "trainerId": "10024000000",
     "trainerBaseId": "10002400",
     "trainerNameId": "ch0024",
-    "trainerActorId": "ch0024",
+    "trainerActorId": "ch0024_00_shikimi",
     "isGrided": false,
     "stats": {
       "hpValues": [82, 140, 192, 412, 460, 508],
@@ -12467,7 +12467,7 @@
     "trainerId": "10025000000",
     "trainerBaseId": "10002500",
     "trainerNameId": "ch0025",
-    "trainerActorId": "ch0025",
+    "trainerActorId": "ch0025_00_suzuna",
     "isGrided": false,
     "stats": {
       "hpValues": [97, 167, 235, 482, 538, 594],
@@ -12826,7 +12826,7 @@
     "trainerId": "10026000000",
     "trainerBaseId": "10002600",
     "trainerNameId": "ch0026",
-    "trainerActorId": "ch0026",
+    "trainerActorId": "ch0026_00_akane",
     "isGrided": false,
     "stats": {
       "hpValues": [117, 190, 257, 532, 592, 652],
@@ -13162,7 +13162,7 @@
     "trainerId": "10027000000",
     "trainerBaseId": "10002700",
     "trainerNameId": "ch0027",
-    "trainerActorId": "ch0027",
+    "trainerActorId": "ch0027_00_natane",
     "isGrided": false,
     "stats": {
       "hpValues": [72, 127, 180, 372, 416, 460],
@@ -13498,7 +13498,7 @@
     "trainerId": "10028000000",
     "trainerBaseId": "10002800",
     "trainerNameId": "ch0028",
-    "trainerActorId": "ch0028",
+    "trainerActorId": "ch0028_00_ibuki",
     "isGrided": true,
     "stats": {
       "hpValues": [70, 165, 225, 500, 560, 620],
@@ -13834,7 +13834,7 @@
     "trainerId": "10029000000",
     "trainerBaseId": "10002900",
     "trainerNameId": "ch0029",
-    "trainerActorId": "ch0029",
+    "trainerActorId": "ch0029_00_asuna",
     "isGrided": true,
     "stats": {
       "hpValues": [70, 150, 202, 422, 474, 526],
@@ -14170,7 +14170,7 @@
     "trainerId": "10030000000",
     "trainerBaseId": "10003000",
     "trainerNameId": "ch0030",
-    "trainerActorId": "ch0030",
+    "trainerActorId": "ch0030_00_ran",
     "isGrided": false,
     "stats": {
       "hpValues": [112, 197, 272, 575, 643, 711],
@@ -14552,7 +14552,7 @@
     "trainerId": "10031000000",
     "trainerBaseId": "10003100",
     "trainerNameId": "ch0031",
-    "trainerActorId": "ch0031",
+    "trainerActorId": "ch0031_00_fuu",
     "isGrided": false,
     "stats": {
       "hpValues": [92, 157, 217, 465, 517, 569],
@@ -14934,7 +14934,7 @@
     "trainerId": "10032000000",
     "trainerBaseId": "10003200",
     "trainerNameId": "ch0032",
-    "trainerActorId": "ch0032",
+    "trainerActorId": "ch0032_00_yanagi",
     "isGrided": true,
     "stats": {
       "hpValues": [85, 190, 257, 560, 624, 688],
@@ -15270,7 +15270,7 @@
     "trainerId": "10033000000",
     "trainerBaseId": "10003300",
     "trainerNameId": "ch0033",
-    "trainerActorId": "ch0033",
+    "trainerActorId": "ch0033_00_yakon",
     "isGrided": false,
     "stats": {
       "hpValues": [97, 157, 217, 437, 485, 533],
@@ -15606,7 +15606,7 @@
     "trainerId": "10034000000",
     "trainerBaseId": "10003400",
     "trainerNameId": "ch0034",
-    "trainerActorId": "ch0034",
+    "trainerActorId": "ch0034_00_matsurika",
     "isGrided": false,
     "stats": {
       "hpValues": [90, 157, 217, 465, 521, 577],
@@ -15942,7 +15942,7 @@
     "trainerId": "10035000000",
     "trainerBaseId": "10003500",
     "trainerNameId": "ch0035",
-    "trainerActorId": "ch0035",
+    "trainerActorId": "ch0035_00_matthies",
     "isGrided": false,
     "stats": {
       "hpValues": [105, 165, 217, 437, 485, 533],
@@ -16278,7 +16278,7 @@
     "trainerId": "10035000001",
     "trainerBaseId": "10003500",
     "trainerNameId": "ch0035",
-    "trainerActorId": "ch0035",
+    "trainerActorId": "ch0035_00_matthies",
     "isGrided": true,
     "stats": {
       "hpValues": [85, 148, 208, 450, 502, 554],
@@ -16637,7 +16637,7 @@
     "trainerId": "10036000000",
     "trainerBaseId": "10003600",
     "trainerNameId": "ch0036",
-    "trainerActorId": "ch0036",
+    "trainerActorId": "ch0036_00_mamane",
     "isGrided": false,
     "stats": {
       "hpValues": [100, 162, 222, 442, 494, 546],
@@ -16973,7 +16973,7 @@
     "trainerId": "10037000000",
     "trainerBaseId": "10003700",
     "trainerNameId": "ch0037",
-    "trainerActorId": "ch0037",
+    "trainerActorId": "ch0037_00_fukuji",
     "isGrided": false,
     "stats": {
       "hpValues": [107, 170, 230, 450, 502, 554],
@@ -17309,7 +17309,7 @@
     "trainerId": "10038000000",
     "trainerBaseId": "10003800",
     "trainerNameId": "ch0038",
-    "trainerActorId": "ch0038",
+    "trainerActorId": "ch0038_00_hyouta",
     "isGrided": false,
     "stats": {
       "hpValues": [90, 207, 320, 760, 856, 952],
@@ -17645,7 +17645,7 @@
     "trainerId": "10039000000",
     "trainerBaseId": "10003900",
     "trainerNameId": "ch0039",
-    "trainerActorId": "ch0039",
+    "trainerActorId": "ch0039_00_viola",
     "isGrided": true,
     "stats": {
       "hpValues": [95, 177, 230, 477, 529, 581],
@@ -17981,7 +17981,7 @@
     "trainerId": "10040000000",
     "trainerBaseId": "10004000",
     "trainerNameId": "ch0040",
-    "trainerActorId": "ch0040",
+    "trainerActorId": "ch0040_00_hachiku",
     "isGrided": false,
     "stats": {
       "hpValues": [87, 152, 212, 460, 512, 564],
@@ -18340,7 +18340,7 @@
     "trainerId": "10041000000",
     "trainerBaseId": "10004100",
     "trainerNameId": "ch0041",
-    "trainerActorId": "ch0041",
+    "trainerActorId": "ch0041_00_nejiki",
     "isGrided": false,
     "stats": {
       "hpValues": [107, 160, 205, 397, 441, 485],
@@ -18676,7 +18676,7 @@
     "trainerId": "10042000000",
     "trainerBaseId": "10004200",
     "trainerNameId": "ch0042",
-    "trainerActorId": "ch0042",
+    "trainerActorId": "ch0042_00_nagi",
     "isGrided": false,
     "stats": {
       "hpValues": [97, 157, 210, 430, 478, 526],
@@ -19012,7 +19012,7 @@
     "trainerId": "10043000000",
     "trainerBaseId": "10004300",
     "trainerNameId": "ch0043",
-    "trainerActorId": "ch0043",
+    "trainerActorId": "ch0043_00_toki",
     "isGrided": false,
     "stats": {
       "hpValues": [142, 242, 340, 725, 809, 893],
@@ -19348,7 +19348,7 @@
     "trainerId": "10044000000",
     "trainerBaseId": "10004400",
     "trainerNameId": "ch0044",
-    "trainerActorId": "ch0044",
+    "trainerActorId": "ch0044_00_tsutsuji",
     "isGrided": false,
     "stats": {
       "hpValues": [125, 165, 202, 340, 372, 404],
@@ -19684,7 +19684,7 @@
     "trainerId": "10045000000",
     "trainerBaseId": "10004500",
     "trainerNameId": "ch0045",
-    "trainerActorId": "ch0045",
+    "trainerActorId": "ch0045_00_tsukushi",
     "isGrided": false,
     "stats": {
       "hpValues": [67, 130, 190, 410, 458, 506],
@@ -20081,7 +20081,7 @@
     "trainerId": "10045900000",
     "trainerBaseId": "10004500",
     "trainerNameId": "ch0045",
-    "trainerActorId": "ch0045",
+    "trainerActorId": "ch0045_00_tsukushi",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 163, 208, 417, 461, 505],
@@ -20440,7 +20440,7 @@
     "trainerId": "10046000000",
     "trainerBaseId": "10004600",
     "trainerNameId": "ch0046",
-    "trainerActorId": "ch0046",
+    "trainerActorId": "ch0046_00_datsura",
     "isGrided": false,
     "stats": {
       "hpValues": [87, 160, 227, 502, 562, 622],
@@ -20837,7 +20837,7 @@
     "trainerId": "10047000000",
     "trainerBaseId": "10004700",
     "trainerNameId": "ch0047",
-    "trainerActorId": "ch0047",
+    "trainerActorId": "ch0047_00_itsuki",
     "isGrided": false,
     "stats": {
       "hpValues": [95, 152, 205, 425, 473, 521],
@@ -21173,7 +21173,7 @@
     "trainerId": "10048000000",
     "trainerBaseId": "10004800",
     "trainerNameId": "ch0048",
-    "trainerActorId": "ch0048",
+    "trainerActorId": "ch0048_00_gima",
     "isGrided": true,
     "stats": {
       "hpValues": [88, 147, 204, 424, 472, 520],
@@ -21509,7 +21509,7 @@
     "trainerId": "10048100000",
     "trainerBaseId": "10004810",
     "trainerNameId": "ch0048",
-    "trainerActorId": "ch0048",
+    "trainerActorId": "ch0048_10_gima",
     "isGrided": true,
     "stats": {
       "hpValues": [82, 161, 236, 533, 597, 661],
@@ -22008,7 +22008,7 @@
     "trainerId": "10049000000",
     "trainerBaseId": "10004900",
     "trainerNameId": "ch0049",
-    "trainerActorId": "ch0049",
+    "trainerActorId": "ch0049_00_fuyo",
     "isGrided": true,
     "stats": {
       "hpValues": [122, 187, 247, 495, 543, 591],
@@ -22367,7 +22367,7 @@
     "trainerId": "10050000000",
     "trainerBaseId": "10005000",
     "trainerNameId": "ch0050",
-    "trainerActorId": "ch0050",
+    "trainerActorId": "ch0050_00_sumomo",
     "isGrided": false,
     "stats": {
       "hpValues": [115, 180, 240, 487, 539, 591],
@@ -22703,7 +22703,7 @@
     "trainerId": "10051000000",
     "trainerBaseId": "10005100",
     "trainerNameId": "ch0051",
-    "trainerActorId": "ch0051",
+    "trainerActorId": "ch0051_00_litchi",
     "isGrided": true,
     "stats": {
       "hpValues": [97, 165, 225, 472, 528, 584],
@@ -23048,7 +23048,7 @@
     "trainerId": "10052000000",
     "trainerBaseId": "10005200",
     "trainerNameId": "ch0052",
-    "trainerActorId": "ch0052",
+    "trainerActorId": "ch0052_00_shizui",
     "isGrided": false,
     "stats": {
       "hpValues": [115, 167, 212, 405, 449, 493],
@@ -23384,7 +23384,7 @@
     "trainerId": "10053000000",
     "trainerBaseId": "10005300",
     "trainerNameId": "ch0053",
-    "trainerActorId": "ch0053",
+    "trainerActorId": "ch0053_00_zakuro",
     "isGrided": false,
     "stats": {
       "hpValues": [120, 195, 262, 537, 597, 657],
@@ -23766,7 +23766,7 @@
     "trainerId": "10054000000",
     "trainerBaseId": "10005400",
     "trainerNameId": "ch0054",
-    "trainerActorId": "ch0054",
+    "trainerActorId": "ch0054_00_kyo",
     "isGrided": true,
     "stats": {
       "hpValues": [70, 150, 202, 422, 474, 526],
@@ -24102,7 +24102,7 @@
     "trainerId": "10055000000",
     "trainerBaseId": "10005500",
     "trainerNameId": "ch0055",
-    "trainerActorId": "ch0055",
+    "trainerActorId": "ch0055_00_gampi",
     "isGrided": false,
     "stats": {
       "hpValues": [117, 182, 242, 490, 542, 594],
@@ -24492,7 +24492,7 @@
     "trainerId": "10056000000",
     "trainerBaseId": "10005600",
     "trainerNameId": "ch0056",
-    "trainerActorId": "ch0056",
+    "trainerActorId": "ch0056_00_kuchinashi",
     "isGrided": false,
     "stats": {
       "hpValues": [80, 155, 200, 420, 468, 516],
@@ -24837,7 +24837,7 @@
     "trainerId": "10057000000",
     "trainerBaseId": "10005700",
     "trainerNameId": "ch0057",
-    "trainerActorId": "ch0057",
+    "trainerActorId": "ch0057_00_shiba",
     "isGrided": false,
     "stats": {
       "hpValues": [100, 177, 245, 520, 584, 648],
@@ -25173,7 +25173,7 @@
     "trainerId": "10058000000",
     "trainerBaseId": "10005800",
     "trainerNameId": "ch0058",
-    "trainerActorId": "ch0058",
+    "trainerActorId": "ch0058_00_kahiri",
     "isGrided": false,
     "stats": {
       "hpValues": [95, 162, 222, 470, 526, 582],
@@ -25509,7 +25509,7 @@
     "trainerId": "10059000000",
     "trainerBaseId": "10005900",
     "trainerNameId": "ch0059",
-    "trainerActorId": "ch0059",
+    "trainerActorId": "ch0059_00_katsura",
     "isGrided": false,
     "stats": {
       "hpValues": [117, 197, 272, 575, 639, 703],
@@ -25845,7 +25845,7 @@
     "trainerId": "10060000000",
     "trainerBaseId": "10006000",
     "trainerNameId": "ch0060",
-    "trainerActorId": "ch0060",
+    "trainerActorId": "ch0060_00_anzu",
     "isGrided": false,
     "stats": {
       "hpValues": [95, 155, 207, 427, 475, 523],
@@ -26181,7 +26181,7 @@
     "trainerId": "10061000000",
     "trainerBaseId": "10006100",
     "trainerNameId": "ch0061",
-    "trainerActorId": "ch0061",
+    "trainerActorId": "ch0061_00_kikuko",
     "isGrided": false,
     "stats": {
       "hpValues": [107, 165, 217, 437, 485, 533],
@@ -26583,7 +26583,7 @@
     "trainerId": "10062000000",
     "trainerBaseId": "10006200",
     "trainerNameId": "ch0062",
-    "trainerActorId": "ch0062",
+    "trainerActorId": "ch0062_00_karin",
     "isGrided": true,
     "stats": {
       "hpValues": [85, 152, 212, 460, 516, 572],
@@ -27059,7 +27059,7 @@
     "trainerId": "10062000001",
     "trainerBaseId": "10006200",
     "trainerNameId": "ch0062",
-    "trainerActorId": "ch0062",
+    "trainerActorId": "ch0062_00_karin",
     "isGrided": true,
     "stats": {
       "hpValues": [100, 187, 268, 598, 670, 742],
@@ -27441,7 +27441,7 @@
     "trainerId": "10063000000",
     "trainerBaseId": "10006300",
     "trainerNameId": "ch0063",
-    "trainerActorId": "ch0063",
+    "trainerActorId": "ch0063_00_renbu",
     "isGrided": false,
     "stats": {
       "hpValues": [87, 157, 225, 472, 528, 584],
@@ -27777,7 +27777,7 @@
     "trainerId": "10066010000",
     "trainerBaseId": "10006601",
     "trainerNameId": "ch0066",
-    "trainerActorId": "ch0066",
+    "trainerActorId": "ch0066_01_boss",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 157, 217, 459, 511, 563],
@@ -28168,7 +28168,7 @@
     "trainerId": "10067010000",
     "trainerBaseId": "10006701",
     "trainerNameId": "ch0067",
-    "trainerActorId": "ch0067",
+    "trainerActorId": "ch0067_01_leader1",
     "isGrided": true,
     "stats": {
       "hpValues": [105, 168, 228, 470, 522, 574],
@@ -28550,7 +28550,7 @@
     "trainerId": "10068010000",
     "trainerBaseId": "10006801",
     "trainerNameId": "ch0068",
-    "trainerActorId": "ch0068",
+    "trainerActorId": "ch0068_01_leader2",
     "isGrided": true,
     "stats": {
       "hpValues": [95, 154, 211, 431, 479, 527],
@@ -28932,7 +28932,7 @@
     "trainerId": "10089000000",
     "trainerBaseId": "10008900",
     "trainerNameId": "ch0089",
-    "trainerActorId": "ch0089",
+    "trainerActorId": "ch0089_00_n",
     "isGrided": true,
     "stats": {
       "hpValues": [100, 169, 235, 499, 555, 611],
@@ -29314,7 +29314,7 @@
     "trainerId": "10090000000",
     "trainerBaseId": "10009000",
     "trainerNameId": "ch0090",
-    "trainerActorId": "ch0090",
+    "trainerActorId": "ch0090_00_daigo",
     "isGrided": true,
     "stats": {
       "hpValues": [80, 136, 190, 399, 443, 487],
@@ -29838,7 +29838,7 @@
     "trainerId": "10090400000",
     "trainerBaseId": "10009040",
     "trainerNameId": "ch0090",
-    "trainerActorId": "ch0090",
+    "trainerActorId": "ch0090_40_daigo",
     "isGrided": true,
     "stats": {
       "hpValues": [94, 166, 235, 510, 570, 630],
@@ -30229,7 +30229,7 @@
     "trainerId": "10091000000",
     "trainerBaseId": "10009100",
     "trainerNameId": "ch0091",
-    "trainerActorId": "ch0091",
+    "trainerActorId": "ch0091_00_shirona",
     "isGrided": true,
     "stats": {
       "hpValues": [108, 175, 238, 491, 547, 603],
@@ -30776,7 +30776,7 @@
     "trainerId": "10091010000",
     "trainerBaseId": "10009101",
     "trainerNameId": "ch0091",
-    "trainerActorId": "ch0091",
+    "trainerActorId": "ch0091_01_shirona",
     "isGrided": true,
     "stats": {
       "hpValues": [84, 144, 201, 432, 480, 528],
@@ -31158,7 +31158,7 @@
     "trainerId": "10092000000",
     "trainerBaseId": "10009200",
     "trainerNameId": "ch0092",
-    "trainerActorId": "ch0092",
+    "trainerActorId": "ch0092_00_iris",
     "isGrided": true,
     "stats": {
       "hpValues": [55, 130, 175, 395, 443, 491],
@@ -31494,7 +31494,7 @@
     "trainerId": "10092800000",
     "trainerBaseId": "10009280",
     "trainerNameId": "ch0092",
-    "trainerActorId": "ch0092",
+    "trainerActorId": "ch0092_80_iris",
     "isGrided": true,
     "stats": {
       "hpValues": [128, 201, 270, 545, 605, 665],
@@ -31876,7 +31876,7 @@
     "trainerId": "10094000000",
     "trainerBaseId": "10009400",
     "trainerNameId": "ch0094",
-    "trainerActorId": "ch0094",
+    "trainerActorId": "ch0094_00_genji",
     "isGrided": false,
     "stats": {
       "hpValues": [102, 165, 225, 445, 497, 549],
@@ -32212,7 +32212,7 @@
     "trainerId": "10095000000",
     "trainerBaseId": "10009500",
     "trainerNameId": "ch0095",
-    "trainerActorId": "ch0095",
+    "trainerActorId": "ch0095_00_cattleya",
     "isGrided": true,
     "stats": {
       "hpValues": [99, 162, 222, 453, 505, 557],
@@ -32594,7 +32594,7 @@
     "trainerId": "10096000000",
     "trainerBaseId": "10009600",
     "trainerNameId": "ch0096",
-    "trainerActorId": "ch0096",
+    "trainerActorId": "ch0096_00_zumi",
     "isGrided": false,
     "stats": {
       "hpValues": [92, 160, 220, 467, 523, 579],
@@ -32930,7 +32930,7 @@
     "trainerId": "10096100000",
     "trainerBaseId": "10009610",
     "trainerNameId": "ch0096",
-    "trainerActorId": "ch0096",
+    "trainerActorId": "ch0096_10_zumi",
     "isGrided": true,
     "stats": {
       "hpValues": [101, 169, 232, 485, 541, 597],
@@ -33312,7 +33312,7 @@
     "trainerId": "10097000000",
     "trainerBaseId": "10009700",
     "trainerNameId": "ch0097",
-    "trainerActorId": "ch0097",
+    "trainerActorId": "ch0097_00_mai",
     "isGrided": false,
     "stats": {
       "hpValues": [117, 197, 272, 575, 639, 703],
@@ -33648,7 +33648,7 @@
     "trainerId": "10098000000",
     "trainerBaseId": "10009800",
     "trainerNameId": "ch0098",
-    "trainerActorId": "ch0098",
+    "trainerActorId": "ch0098_00_hau",
     "isGrided": true,
     "stats": {
       "hpValues": [62, 132, 177, 370, 414, 458],
@@ -33993,7 +33993,7 @@
     "trainerId": "10099000000",
     "trainerBaseId": "10009900",
     "trainerNameId": "ch0099",
-    "trainerActorId": "ch0099",
+    "trainerActorId": "ch0099_00_jun",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 175, 227, 475, 527, 579],
@@ -34329,7 +34329,7 @@
     "trainerId": "10100000000",
     "trainerBaseId": "10010000",
     "trainerNameId": "ch0100",
-    "trainerActorId": "ch0100",
+    "trainerActorId": "ch0100_00_kyohei",
     "isGrided": true,
     "stats": {
       "hpValues": [93, 156, 216, 458, 510, 562],
@@ -34688,7 +34688,7 @@
     "trainerId": "10101000000",
     "trainerBaseId": "10010100",
     "trainerNameId": "ch0101",
-    "trainerActorId": "ch0101",
+    "trainerActorId": "ch0101_00_mei",
     "isGrided": true,
     "stats": {
       "hpValues": [120, 225, 292, 595, 659, 723],
@@ -35024,7 +35024,7 @@
     "trainerId": "10101100000",
     "trainerBaseId": "10010110",
     "trainerNameId": "ch0101",
-    "trainerActorId": "ch0101",
+    "trainerActorId": "ch0101_10_mei",
     "isGrided": true,
     "stats": {
       "hpValues": [80, 154, 223, 498, 558, 618],
@@ -35406,7 +35406,7 @@
     "trainerId": "10102000000",
     "trainerBaseId": "10010200",
     "trainerNameId": "ch0102",
-    "trainerActorId": "ch0102",
+    "trainerActorId": "ch0102_00_bell",
     "isGrided": true,
     "stats": {
       "hpValues": [118, 187, 253, 517, 573, 629],
@@ -35742,7 +35742,7 @@
     "trainerId": "10106000000",
     "trainerBaseId": "10010600",
     "trainerNameId": "ch0106",
-    "trainerActorId": "ch0106",
+    "trainerActorId": "ch0106_00_kamitsure",
     "isGrided": true,
     "stats": {
       "hpValues": [96, 202, 304, 700, 788, 876],
@@ -36101,7 +36101,7 @@
     "trainerId": "10106100000",
     "trainerBaseId": "10010610",
     "trainerNameId": "ch0106",
-    "trainerActorId": "ch0106",
+    "trainerActorId": "ch0106_10_kamitsure",
     "isGrided": true,
     "stats": {
       "hpValues": [99, 157, 211, 431, 479, 527],
@@ -36460,7 +36460,7 @@
     "trainerId": "10108000000",
     "trainerBaseId": "10010800",
     "trainerNameId": "ch0108",
-    "trainerActorId": "ch0108",
+    "trainerActorId": "ch0108_00_nobori",
     "isGrided": true,
     "stats": {
       "hpValues": [89, 170, 248, 556, 620, 684],
@@ -36842,7 +36842,7 @@
     "trainerId": "10109000000",
     "trainerBaseId": "10010900",
     "trainerNameId": "ch0109",
-    "trainerActorId": "ch0109",
+    "trainerActorId": "ch0109_00_kudari",
     "isGrided": true,
     "stats": {
       "hpValues": [86, 164, 239, 536, 600, 664],
@@ -37224,7 +37224,7 @@
     "trainerId": "10110000000",
     "trainerBaseId": "10011001",
     "trainerNameId": "ch0110",
-    "trainerActorId": "ch0110",
+    "trainerActorId": "ch0110_01_kasumi",
     "isGrided": true,
     "stats": {
       "hpValues": [82, 177, 237, 512, 572, 632],
@@ -37560,7 +37560,7 @@
     "trainerId": "10111000000",
     "trainerBaseId": "10011100",
     "trainerNameId": "ch0111",
-    "trainerActorId": "ch0111",
+    "trainerActorId": "ch0111_00_wataru",
     "isGrided": true,
     "stats": {
       "hpValues": [98, 162, 222, 464, 516, 568],
@@ -37942,7 +37942,7 @@
     "trainerId": "10111400000",
     "trainerBaseId": "10011140",
     "trainerNameId": "ch0111",
-    "trainerActorId": "ch0111",
+    "trainerActorId": "ch0111_40_wataru",
     "isGrided": true,
     "stats": {
       "hpValues": [98, 171, 240, 515, 575, 635],
@@ -38324,7 +38324,7 @@
     "trainerId": "10112000000",
     "trainerBaseId": "10011200",
     "trainerNameId": "ch0112",
-    "trainerActorId": "ch0112",
+    "trainerActorId": "ch0112_00_hibiki",
     "isGrided": true,
     "stats": {
       "hpValues": [125, 193, 256, 509, 565, 621],
@@ -38660,7 +38660,7 @@
     "trainerId": "10113000000",
     "trainerBaseId": "10011300",
     "trainerNameId": "ch0113",
-    "trainerActorId": "ch0113",
+    "trainerActorId": "ch0113_00_mikan",
     "isGrided": true,
     "stats": {
       "hpValues": [140, 198, 252, 472, 520, 568],
@@ -39057,7 +39057,7 @@
     "trainerId": "10114000000",
     "trainerBaseId": "10011400",
     "trainerNameId": "ch0114",
-    "trainerActorId": "ch0114",
+    "trainerActorId": "ch0114_00_natsume",
     "isGrided": true,
     "stats": {
       "hpValues": [91, 153, 213, 444, 492, 540],
@@ -39505,7 +39505,7 @@
     "trainerId": "10115000000",
     "trainerBaseId": "10011500",
     "trainerNameId": "ch0115",
-    "trainerActorId": "ch0115",
+    "trainerActorId": "ch0115_00_denji",
     "isGrided": true,
     "stats": {
       "hpValues": [118, 207, 291, 632, 704, 776],
@@ -39887,7 +39887,7 @@
     "trainerId": "10116000000",
     "trainerBaseId": "10011600",
     "trainerNameId": "ch0116",
-    "trainerActorId": "ch0116",
+    "trainerActorId": "ch0116_00_hikari",
     "isGrided": true,
     "stats": {
       "hpValues": [146, 214, 277, 530, 586, 642],
@@ -40246,7 +40246,7 @@
     "trainerId": "10116400000",
     "trainerBaseId": "10011640",
     "trainerNameId": "ch0116",
-    "trainerActorId": "ch0116",
+    "trainerActorId": "ch0116_40_hikari",
     "isGrided": true,
     "stats": {
       "hpValues": [124, 196, 265, 540, 600, 660],
@@ -40628,7 +40628,7 @@
     "trainerId": "10117000000",
     "trainerBaseId": "10011700",
     "trainerNameId": "ch0001",
-    "trainerActorId": "ch0001",
+    "trainerActorId": "ch0117_00_royalmask",
     "isGrided": true,
     "stats": {
       "hpValues": [100, 168, 231, 484, 540, 596],
@@ -41010,7 +41010,7 @@
     "trainerId": "10118000000",
     "trainerBaseId": "10011800",
     "trainerNameId": "ch0118",
-    "trainerActorId": "ch0118",
+    "trainerActorId": "ch0118_00_lillie",
     "isGrided": true,
     "stats": {
       "hpValues": [111, 176, 236, 478, 530, 582],
@@ -41392,7 +41392,7 @@
     "trainerId": "10118400000",
     "trainerBaseId": "10011840",
     "trainerNameId": "ch0118",
-    "trainerActorId": "ch0118",
+    "trainerActorId": "ch0118_40_lillie",
     "isGrided": true,
     "stats": {
       "hpValues": [90, 158, 221, 474, 530, 586],
@@ -41774,7 +41774,7 @@
     "trainerId": "10119000000",
     "trainerBaseId": "10011900",
     "trainerNameId": "ch0119",
-    "trainerActorId": "ch0119",
+    "trainerActorId": "ch0119_00_gladion",
     "isGrided": true,
     "stats": {
       "hpValues": [84, 164, 239, 536, 600, 664],
@@ -42141,7 +42141,7 @@
     "trainerId": "10120000000",
     "trainerBaseId": "10012000",
     "trainerNameId": "ch0120",
-    "trainerActorId": "ch0120",
+    "trainerActorId": "ch0120_00_lusamine",
     "isGrided": true,
     "stats": {
       "hpValues": [83, 146, 206, 448, 500, 552],
@@ -42523,7 +42523,7 @@
     "trainerId": "10121000000",
     "trainerBaseId": "10012100",
     "trainerNameId": "ch0121",
-    "trainerActorId": "ch0121",
+    "trainerActorId": "ch0121_00_plumeria",
     "isGrided": true,
     "stats": {
       "hpValues": [80, 140, 197, 428, 476, 524],
@@ -42905,7 +42905,7 @@
     "trainerId": "10122000000",
     "trainerBaseId": "10012200",
     "trainerNameId": "ch0122",
-    "trainerActorId": "ch0122",
+    "trainerActorId": "ch0122_00_yo",
     "isGrided": true,
     "stats": {
       "hpValues": [167, 226, 283, 503, 551, 599],
@@ -43287,7 +43287,7 @@
     "trainerId": "10123000000",
     "trainerBaseId": "10012300",
     "trainerNameId": "ch0123",
-    "trainerActorId": "ch0123",
+    "trainerActorId": "ch0123_00_mizuki",
     "isGrided": true,
     "stats": {
       "hpValues": [139, 201, 258, 489, 537, 585],
@@ -43669,7 +43669,7 @@
     "trainerId": "10124000000",
     "trainerBaseId": "10012400",
     "trainerNameId": "ch0124",
-    "trainerActorId": "ch0124",
+    "trainerActorId": "ch0124_00_mao",
     "isGrided": true,
     "stats": {
       "hpValues": [95, 173, 248, 545, 609, 673],
@@ -44051,7 +44051,7 @@
     "trainerId": "10125000000",
     "trainerBaseId": "10012500",
     "trainerNameId": "ch0125",
-    "trainerActorId": "ch0125",
+    "trainerActorId": "ch0125_00_guzma",
     "isGrided": true,
     "stats": {
       "hpValues": [83, 139, 193, 402, 446, 490],
@@ -44387,7 +44387,7 @@
     "trainerId": "10126000000",
     "trainerBaseId": "10012600",
     "trainerNameId": "ch0126",
-    "trainerActorId": "ch0126",
+    "trainerActorId": "ch0126_00_haruka",
     "isGrided": true,
     "stats": {
       "hpValues": [152, 227, 299, 585, 645, 705],
@@ -44830,7 +44830,7 @@
     "trainerId": "10126400000",
     "trainerBaseId": "10012640",
     "trainerNameId": "ch0126",
-    "trainerActorId": "ch0126",
+    "trainerActorId": "ch0126_40_haruka",
     "isGrided": true,
     "stats": {
       "hpValues": [94, 166, 235, 510, 570, 630],
@@ -45436,7 +45436,7 @@
     "trainerId": "10127000000",
     "trainerBaseId": "10012700",
     "trainerNameId": "ch0127",
-    "trainerActorId": "ch0127",
+    "trainerActorId": "ch0127_00_mikuri",
     "isGrided": true,
     "stats": {
       "hpValues": [128, 222, 312, 664, 740, 816],
@@ -45818,7 +45818,7 @@
     "trainerId": "10128000000",
     "trainerBaseId": "10012800",
     "trainerNameId": "ch0128",
-    "trainerActorId": "ch0128",
+    "trainerActorId": "ch0128_00_mitsuru",
     "isGrided": true,
     "stats": {
       "hpValues": [81, 140, 197, 417, 465, 513],
@@ -46291,7 +46291,7 @@
     "trainerId": "10129000000",
     "trainerBaseId": "10012900",
     "trainerNameId": "ch0129",
-    "trainerActorId": "ch0129",
+    "trainerActorId": "ch0129_00_higana",
     "isGrided": true,
     "stats": {
       "hpValues": [97, 192, 246, 466, 506, 546],
@@ -46627,7 +46627,7 @@
     "trainerId": "10129000001",
     "trainerBaseId": "10012900",
     "trainerNameId": "ch0129",
-    "trainerActorId": "ch0129",
+    "trainerActorId": "ch0129_00_higana",
     "isGrided": true,
     "stats": {
       "hpValues": [95, 163, 226, 479, 535, 591],
@@ -47009,7 +47009,7 @@
     "trainerId": "10130000000",
     "trainerBaseId": "10013000",
     "trainerNameId": "ch0130",
-    "trainerActorId": "ch0130",
+    "trainerActorId": "ch0130_00_serena",
     "isGrided": true,
     "stats": {
       "hpValues": [149, 221, 290, 565, 625, 685],
@@ -47391,7 +47391,7 @@
     "trainerId": "10130400000",
     "trainerBaseId": "10013040",
     "trainerNameId": "ch0130",
-    "trainerActorId": "ch0130",
+    "trainerActorId": "ch0130_40_serena",
     "isGrided": true,
     "stats": {
       "hpValues": [104, 173, 239, 503, 559, 615],
@@ -47773,7 +47773,7 @@
     "trainerId": "10131000000",
     "trainerBaseId": "10013100",
     "trainerNameId": "ch0131",
-    "trainerActorId": "ch0131",
+    "trainerActorId": "ch0131_00_citron",
     "isGrided": true,
     "stats": {
       "hpValues": [99, 164, 224, 466, 518, 570],
@@ -48155,7 +48155,7 @@
     "trainerId": "10132000000",
     "trainerBaseId": "10013200",
     "trainerNameId": "ch0132",
-    "trainerActorId": "ch0132",
+    "trainerActorId": "ch0132_00_adeku",
     "isGrided": true,
     "stats": {
       "hpValues": [101, 185, 263, 582, 650, 718],
@@ -48537,7 +48537,7 @@
     "trainerId": "10133000000",
     "trainerBaseId": "10013300",
     "trainerNameId": "ch0133",
-    "trainerActorId": "ch0133",
+    "trainerActorId": "ch0133_00_shilver",
     "isGrided": true,
     "stats": {
       "hpValues": [84, 193, 256, 509, 553, 597],
@@ -48919,7 +48919,7 @@
     "trainerId": "10135000000",
     "trainerBaseId": "10013500",
     "trainerNameId": "ch0135",
-    "trainerActorId": "ch0135",
+    "trainerActorId": "ch0135_00_kagetsu",
     "isGrided": true,
     "stats": {
       "hpValues": [97, 169, 238, 513, 573, 633],
@@ -49339,7 +49339,7 @@
     "trainerId": "10136000000",
     "trainerBaseId": "10013600",
     "trainerNameId": "ch0136",
-    "trainerActorId": "ch0136",
+    "trainerActorId": "ch0136_00_platane",
     "isGrided": true,
     "stats": {
       "hpValues": [110, 226, 292, 567, 615, 663],
@@ -49698,7 +49698,7 @@
     "trainerId": "10137000000",
     "trainerBaseId": "10013700",
     "trainerNameId": "ch0137",
-    "trainerActorId": "ch0137",
+    "trainerActorId": "ch0137_00_orchid1",
     "isGrided": true,
     "stats": {
       "hpValues": [100, 144, 171, 302, 340, 368],
@@ -50266,7 +50266,7 @@
     "trainerId": "10140000000",
     "trainerBaseId": "10014000",
     "trainerNameId": "ch0140",
-    "trainerActorId": "ch0140",
+    "trainerActorId": "ch0140_00_sakaki",
     "isGrided": true,
     "stats": {
       "hpValues": [82, 174, 228, 448, 488, 528],
@@ -50602,7 +50602,7 @@
     "trainerId": "10148000000",
     "trainerBaseId": "10014800",
     "trainerNameId": "ch0148",
-    "trainerActorId": "ch0148",
+    "trainerActorId": "ch0148_00_matsuba",
     "isGrided": true,
     "stats": {
       "hpValues": [104, 196, 283, 624, 700, 776],
@@ -50984,7 +50984,7 @@
     "trainerId": "10148000001",
     "trainerBaseId": "10014800",
     "trainerNameId": "ch0148",
-    "trainerActorId": "ch0148",
+    "trainerActorId": "ch0148_00_matsuba",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 150, 204, 424, 472, 520],
@@ -51320,7 +51320,7 @@
     "trainerId": "10149000000",
     "trainerBaseId": "10014900",
     "trainerNameId": "ch0149",
-    "trainerActorId": "ch0149",
+    "trainerActorId": "ch0149_00_kaki",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 161, 227, 491, 547, 603],
@@ -51711,7 +51711,7 @@
     "trainerId": "10150000000",
     "trainerBaseId": "10015000",
     "trainerNameId": "ch0150",
-    "trainerActorId": "ch0150",
+    "trainerActorId": "ch0150_00_hayato",
     "isGrided": true,
     "stats": {
       "hpValues": [102, 174, 243, 518, 578, 638],
@@ -52093,7 +52093,7 @@
     "trainerId": "10151000000",
     "trainerBaseId": "10015100",
     "trainerNameId": "ch0151",
-    "trainerActorId": "ch0151",
+    "trainerActorId": "ch0151_00_melissa",
     "isGrided": true,
     "stats": {
       "hpValues": [77, 137, 194, 425, 473, 521],
@@ -52452,7 +52452,7 @@
     "trainerId": "10153000000",
     "trainerBaseId": "10015300",
     "trainerNameId": "ch0153",
-    "trainerActorId": "ch0153",
+    "trainerActorId": "ch0153_00_prim",
     "isGrided": true,
     "stats": {
       "hpValues": [118, 184, 247, 500, 552, 604],
@@ -52948,7 +52948,7 @@
     "trainerId": "10157000000",
     "trainerBaseId": "10015700",
     "trainerNameId": "ch0157",
-    "trainerActorId": "ch0157",
+    "trainerActorId": "ch0157_00_mache",
     "isGrided": false,
     "stats": {
       "hpValues": [75, 158, 212, 454, 506, 558],
@@ -53284,7 +53284,7 @@
     "trainerId": "10158000000",
     "trainerBaseId": "10015800",
     "trainerNameId": "ch0158",
-    "trainerActorId": "ch0158",
+    "trainerActorId": "ch0158_00_carnet",
     "isGrided": true,
     "stats": {
       "hpValues": [99, 180, 258, 566, 630, 694],
@@ -53704,7 +53704,7 @@
     "trainerId": "10160000000",
     "trainerBaseId": "10016000",
     "trainerNameId": "ch0160",
-    "trainerActorId": "ch0160",
+    "trainerActorId": "ch0160_00_suiren",
     "isGrided": true,
     "stats": {
       "hpValues": [90, 158, 221, 474, 530, 586],
@@ -54086,7 +54086,7 @@
     "trainerId": "10161000000",
     "trainerBaseId": "10016100",
     "trainerNameId": "ch0161",
-    "trainerActorId": "ch0161",
+    "trainerActorId": "ch0161_00_hara",
     "isGrided": true,
     "stats": {
       "hpValues": [95, 182, 263, 593, 665, 737],
@@ -54468,7 +54468,7 @@
     "trainerId": "10170000000",
     "trainerBaseId": "10017000",
     "trainerNameId": "ch0170",
-    "trainerActorId": "ch0170",
+    "trainerActorId": "ch0170_00_arty",
     "isGrided": true,
     "stats": {
       "hpValues": [81, 141, 198, 429, 477, 525],
@@ -54850,7 +54850,7 @@
     "trainerId": "10170400000",
     "trainerBaseId": "10017040",
     "trainerNameId": "ch0170",
-    "trainerActorId": "ch0170",
+    "trainerActorId": "ch0170_40_arty",
     "isGrided": true,
     "stats": {
       "hpValues": [115, 194, 269, 566, 630, 694],
@@ -55232,7 +55232,7 @@
     "trainerId": "10183000000",
     "trainerBaseId": "10018300",
     "trainerNameId": "ch0183",
-    "trainerActorId": "ch0183",
+    "trainerActorId": "ch0183_00_molayne",
     "isGrided": false,
     "stats": {
       "hpValues": [55, 118, 160, 347, 387, 427],
@@ -55600,7 +55600,7 @@
     "trainerId": "10192000000",
     "trainerBaseId": "10019200",
     "trainerNameId": "ch0192",
-    "trainerActorId": "ch0192",
+    "trainerActorId": "ch0192_00_matsubusa",
     "isGrided": true,
     "stats": {
       "hpValues": [111, 189, 264, 561, 625, 689],
@@ -56005,7 +56005,7 @@
     "trainerId": "10193000000",
     "trainerBaseId": "10019300",
     "trainerNameId": "ch0193",
-    "trainerActorId": "ch0193",
+    "trainerActorId": "ch0193_00_aogiri",
     "isGrided": true,
     "stats": {
       "hpValues": [109, 190, 268, 576, 640, 704],
@@ -56410,7 +56410,7 @@
     "trainerId": "10194000000",
     "trainerBaseId": "10019400",
     "trainerNameId": "ch0194",
-    "trainerActorId": "ch0194",
+    "trainerActorId": "ch0194_00_akagi",
     "isGrided": true,
     "stats": {
       "hpValues": [83, 209, 281, 578, 630, 682],
@@ -56746,7 +56746,7 @@
     "trainerId": "10195000000",
     "trainerBaseId": "10019500",
     "trainerNameId": "ch0195",
-    "trainerActorId": "ch0195",
+    "trainerActorId": "ch0195_00_ghetsis",
     "isGrided": true,
     "stats": {
       "hpValues": [98, 218, 287, 573, 625, 677],
@@ -57105,7 +57105,7 @@
     "trainerId": "10196000000",
     "trainerBaseId": "10019600",
     "trainerNameId": "ch0196",
-    "trainerActorId": "ch0196",
+    "trainerActorId": "ch0196_00_fleurdelis",
     "isGrided": true,
     "stats": {
       "hpValues": [130, 221, 308, 649, 721, 793],
@@ -57487,7 +57487,7 @@
     "trainerId": "10198000000",
     "trainerBaseId": "10019800",
     "trainerNameId": "ch0198",
-    "trainerActorId": "ch0198",
+    "trainerActorId": "ch0198_00_azami",
     "isGrided": false,
     "stats": {
       "hpValues": [93, 155, 215, 446, 494, 542],
@@ -57869,7 +57869,7 @@
     "trainerId": "10205000000",
     "trainerBaseId": "10020500",
     "trainerNameId": "ch0205",
-    "trainerActorId": "ch0205",
+    "trainerActorId": "ch0205_00_lesoir",
     "isGrided": true,
     "stats": {
       "hpValues": [98, 169, 235, 499, 555, 611],
@@ -58274,7 +58274,7 @@
     "trainerId": "10215000000",
     "trainerBaseId": "10021500",
     "trainerNameId": "ch0215",
-    "trainerActorId": "ch0215",
+    "trainerActorId": "ch0215_00_lutia",
     "isGrided": true,
     "stats": {
       "hpValues": [124, 196, 265, 540, 600, 660],
@@ -58722,7 +58722,7 @@
     "trainerId": "10240000000",
     "trainerBaseId": "10024000",
     "trainerNameId": "ch0240",
-    "trainerActorId": "ch0240",
+    "trainerActorId": "ch0240_00_musashi",
     "isGrided": false,
     "stats": {
       "hpValues": [68, 136, 181, 379, 419, 459],
@@ -59058,7 +59058,7 @@
     "trainerId": "10241000000",
     "trainerBaseId": "10024100",
     "trainerNameId": "ch0241",
-    "trainerActorId": "ch0241",
+    "trainerActorId": "ch0241_00_kojiro",
     "isGrided": false,
     "stats": {
       "hpValues": [72, 138, 180, 378, 418, 458],
@@ -59394,7 +59394,7 @@
     "trainerId": "10243000000",
     "trainerBaseId": "10024300",
     "trainerNameId": "ch0243",
-    "trainerActorId": "ch0243",
+    "trainerActorId": "ch0243_00_yuri",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 161, 227, 491, 547, 603],
@@ -59785,7 +59785,7 @@
     "trainerId": "10243400000",
     "trainerBaseId": "10024340",
     "trainerNameId": "ch0243",
-    "trainerActorId": "ch0243",
+    "trainerActorId": "ch0243_40_yuri",
     "isGrided": true,
     "stats": {
       "hpValues": [99, 181, 259, 567, 635, 703],
@@ -60167,7 +60167,7 @@
     "trainerId": "10244000000",
     "trainerBaseId": "10024400",
     "trainerNameId": "ch0244",
-    "trainerActorId": "ch0244",
+    "trainerActorId": "ch0244_00_hop",
     "isGrided": true,
     "stats": {
       "hpValues": [87, 193, 253, 506, 550, 594],
@@ -60558,7 +60558,7 @@
     "trainerId": "10245000000",
     "trainerBaseId": "10024500",
     "trainerNameId": "ch0245",
-    "trainerActorId": "ch0245",
+    "trainerActorId": "ch0245_00_mary",
     "isGrided": true,
     "stats": {
       "hpValues": [114, 186, 255, 530, 590, 650],
@@ -61024,7 +61024,7 @@
     "trainerId": "10245400000",
     "trainerBaseId": "10024540",
     "trainerNameId": "ch0245",
-    "trainerActorId": "ch0245",
+    "trainerActorId": "ch0245_40_mary",
     "isGrided": true,
     "stats": {
       "hpValues": [98, 179, 257, 565, 629, 693],
@@ -61406,7 +61406,7 @@
     "trainerId": "10247000000",
     "trainerBaseId": "10024700",
     "trainerNameId": "ch0247",
-    "trainerActorId": "ch0247",
+    "trainerActorId": "ch0247_00_dande",
     "isGrided": true,
     "stats": {
       "hpValues": [101, 185, 263, 582, 650, 718],
@@ -61811,7 +61811,7 @@
     "trainerId": "10247100000",
     "trainerBaseId": "10024710",
     "trainerNameId": "ch0247",
-    "trainerActorId": "ch0247",
+    "trainerActorId": "ch0247_10_dande",
     "isGrided": true,
     "stats": {
       "hpValues": [95, 182, 263, 593, 665, 737],
@@ -62188,6 +62188,7 @@
             "zh": "場上的我方拍組每１對會幫自己增加3條招式計量槽。\n（多隊模式時，會幫我方全體玩家增加3條招式計量槽。）"
           },
           "category": 2,
+          "group": 5,
           "type": 15,
           "typeName": {
             "de": "Drache",
@@ -62258,7 +62259,7 @@
     "trainerId": "10249000000",
     "trainerBaseId": "10024900",
     "trainerNameId": "ch0249",
-    "trainerActorId": "ch0249",
+    "trainerActorId": "ch0249_00_rulina",
     "isGrided": true,
     "stats": {
       "hpValues": [100, 181, 259, 567, 631, 695],
@@ -62640,7 +62641,7 @@
     "trainerId": "10250000000",
     "trainerBaseId": "10025000",
     "trainerNameId": "ch0250",
-    "trainerActorId": "ch0250",
+    "trainerActorId": "ch0250_00_saida",
     "isGrided": true,
     "stats": {
       "hpValues": [92, 164, 233, 508, 568, 628],
@@ -63022,7 +63023,7 @@
     "trainerId": "10256000000",
     "trainerBaseId": "10025600",
     "trainerNameId": "ch0256",
-    "trainerActorId": "ch0256",
+    "trainerActorId": "ch0256_00_nezz",
     "isGrided": true,
     "stats": {
       "hpValues": [149, 217, 280, 533, 589, 645],
@@ -63404,7 +63405,7 @@
     "trainerId": "10257000000",
     "trainerBaseId": "10025700",
     "trainerNameId": "ch0257",
-    "trainerActorId": "ch0257",
+    "trainerActorId": "ch0257_00_qibana",
     "isGrided": true,
     "stats": {
       "hpValues": [110, 204, 294, 646, 722, 798],
@@ -63786,7 +63787,7 @@
     "trainerId": "18000000000",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
-    "trainerActorId": "ch8000",
+    "trainerActorId": "hero",
     "isGrided": true,
     "stats": {
       "hpValues": [62, 145, 197, 445, 497, 549],
@@ -64122,7 +64123,7 @@
     "trainerId": "18000020000",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
-    "trainerActorId": "ch8000",
+    "trainerActorId": "hero",
     "isGrided": false,
     "stats": {
       "hpValues": [90, 187, 250, 536, 596, 656],
@@ -64458,7 +64459,7 @@
     "trainerId": "18000020521",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
-    "trainerActorId": "ch8000",
+    "trainerActorId": "hero",
     "isGrided": true,
     "stats": {
       "hpValues": [102, 183, 261, 569, 633, 697],
@@ -64863,7 +64864,7 @@
     "trainerId": "18000020531",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
-    "trainerActorId": "ch8000",
+    "trainerActorId": "hero",
     "isGrided": true,
     "stats": {
       "hpValues": [96, 169, 238, 513, 573, 633],
@@ -65268,7 +65269,7 @@
     "trainerId": "18000120000",
     "trainerBaseId": "10700000",
     "trainerNameId": "ch8000",
-    "trainerActorId": "ch8000",
+    "trainerActorId": "hero",
     "isGrided": true,
     "stats": {
       "hpValues": [84, 186, 243, 485, 529, 573],
