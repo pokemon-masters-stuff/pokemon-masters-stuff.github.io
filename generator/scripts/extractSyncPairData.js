@@ -307,10 +307,10 @@ const extractSyncPairData = () => {
         monsterBaseId,
       } = monster;
 
-      move1Id = monster.move1Id !== -1 ? monster.move1Id : move1Id;
-      move2Id = monster.move2Id !== -1 ? monster.move2Id : move2Id;
-      move3Id = monster.move3Id !== -1 ? monster.move3Id : move3Id;
-      move4Id = monster.move4Id !== -1 ? monster.move4Id : move4Id;
+      move1Id = monster.move1ChangeId !== -1 ? monster.move1ChangeId : move1Id;
+      move2Id = monster.move2ChangeId !== -1 ? monster.move2ChangeId : move2Id;
+      move3Id = monster.move3ChangeId !== -1 ? monster.move3ChangeId : move3Id;
+      move4Id = monster.move4ChangeId !== -1 ? monster.move4ChangeId : move4Id;
 
       // Use monsterBaseId to find actorId in MonsterBase.json
       let monsterBase = monsterBaseDB.entries.find(
@@ -1042,8 +1042,9 @@ const extractSyncPairData = () => {
         // }
 
         if (
-          pokemonNameDBen[potentialMegaBaseId] &&
-          trainerIdFromList.toString() !== '10247000000' // Leon's Charizard doesn't mega evolve
+          monsterBaseId.toString() === '21038400' ||
+          (pokemonNameDBen[potentialMegaBaseId] &&
+            trainerIdFromList.toString() !== '10247000000') // Leon's Charizard doesn't mega evolve
         ) {
           console.log('variation is mega');
           isMega = true;
@@ -1094,6 +1095,13 @@ const extractSyncPairData = () => {
         monsterVariationFormEntry = monsterVariationDB.entries.find(
           (monster) => monster.monsterId.toString() === monsterId.toString()
         );
+
+        // Steven & Rayquaza
+        if (monsterBaseId.toString() === '21038400') {
+          monsterVariationFormEntry = monsterVariationDB.entries.find(
+            (monster) => monster.monsterId.toString() === '20090500000'
+          );
+        }
 
         const { atkScale, defScale, spaScale, spdScale, speScale } =
           monsterVariationFormEntry;
@@ -1953,6 +1961,11 @@ const extractSyncPairData = () => {
                   .toString()
                   .substring(0, monsterBaseId.toString().length - 1) + '0'
               ];
+
+          if (monsterBaseId.toString() === '21038400') {
+            pokemonNameByLanguage[language] =
+              pokemonNameDB[language]['20038400']; // Steven & Rayquaza
+          }
         } else {
           console.log(
             `trainerId ${trainerIdFromList} has no matching monsterBaseId`

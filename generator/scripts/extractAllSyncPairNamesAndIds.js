@@ -202,6 +202,11 @@ const arrayOfGridedTrainers = [
   10205000000, // Evelyn & Entei
   10244000000, // Hop & Zamazenta
   10247100000, // Leon & Eternatus
+  // 8/26
+  10089400000, // N & Reshiram
+  10090500000, // Steven & Rayquaza
+  10110010000, // Misty & Psyduck
+  10118500000, // Lillie & Lunala
 ];
 
 /*
@@ -418,6 +423,10 @@ const extractAllSyncPairNamesAndIds = () => {
                 .toString()
                 .substring(0, monsterBaseId.toString().length - 1) + '0'
             ];
+
+        if (monsterBaseId.toString() === '21038400') {
+          pokemonNameByLanguage[language] = pokemonNameDB[language]['20038400']; // Steven & Rayquaza
+        }
       } else {
         console.log(`No monsterBaseId`);
       }

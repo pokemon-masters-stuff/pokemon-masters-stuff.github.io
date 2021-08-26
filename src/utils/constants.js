@@ -25,14 +25,10 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10066010000, // Lear & Hoopa
-  10067010000, // Rachel & Umbreon
-  10068010000, // Sawyer & Honchkrow
-  10135000000, // Sidney & Absol
-  10150000000, // Falkner & Swellow
-  10205000000, // Evelyn & Entei
-  10244000000, // Hop & Zamazenta
-  10247100000, // Leon & Eternatus
+  10089400000, // N & Reshiram
+  10090500000, // Steven & Rayquaza
+  10110010000, // Misty & Psyduck
+  10118500000, // Lillie & Lunala
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -47,6 +43,8 @@ export const arrayOfTrainerIdsWithSamePokemon = [
   10129000001, // Zinnia & Salamence
   10062000001, // Karen & Umbreon
   10067010000, // Rachel & Umbreon
+  10129000000, // Zinnia & Rayquaza
+  10090500000, // Steven & Rayquaza
 ];
 
 export const type1SyncGrid = [
@@ -108,6 +106,8 @@ export const type1SyncGrid = [
   '10243400000',
   '10140000000',
   '10247100000', // Leon & Eternatus
+  '10090500000', // Steven & Rayquaza
+  '10118500000', // Lillie & Lunala
 ];
 
 export const type2SyncGrid = [
@@ -146,6 +146,7 @@ export const type2SyncGrid = [
   '10245400000',
   '10066010000', // Lear & Hoopa
   '10135000000', // Sidney & Absol
+  '10089400000', // N & Reshiram
 ];
 
 export const type3SyncGrid = [
@@ -185,6 +186,7 @@ export const type3SyncGrid = [
   '10150000000', // Falkner & Swellow
   '10205000000', // Evelyn & Entei
   '10244000000', // Hop & Zamazenta
+  '10110010000', // Misty & Psyduck
 ];
 
 export const CLOUD_FUNCTIONS_URL =

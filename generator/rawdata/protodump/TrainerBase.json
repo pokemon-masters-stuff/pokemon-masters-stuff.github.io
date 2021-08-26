@@ -1771,6 +1771,21 @@
       "u13": ""
     },
     {
+      "id": "10008940",
+      "actorId": "ch0089_40_n",
+      "trainerNameId": "ch0089",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_n",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "10009000",
       "actorId": "ch0090_00_daigo",
       "trainerNameId": "ch0090",
@@ -1788,6 +1803,21 @@
     {
       "id": "10009040",
       "actorId": "ch0090_40_daigo",
+      "trainerNameId": "ch0090",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_daigo",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "10009050",
+      "actorId": "ch0090_50_daigo",
       "trainerNameId": "ch0090",
       "u4": 1,
       "u5": "",
@@ -2131,6 +2161,21 @@
       "u13": ""
     },
     {
+      "id": "10011000",
+      "actorId": "ch0110_00_kasumi",
+      "trainerNameId": "ch0110",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_gl_kanto",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "10011001",
       "actorId": "ch0110_01_kasumi",
       "trainerNameId": "ch0110",
@@ -2298,6 +2343,21 @@
     {
       "id": "10011840",
       "actorId": "ch0118_40_lillie",
+      "trainerNameId": "ch0118",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_lillie",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "10011850",
+      "actorId": "ch0118_50_lillie",
       "trainerNameId": "ch0118",
       "u4": 1,
       "u5": "",
@@ -3586,6 +3646,21 @@
       "u13": ""
     },
     {
+      "id": "11008940",
+      "actorId": "ch0089_40_n_01",
+      "trainerNameId": "ch0089",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_n",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "11009000",
       "actorId": "ch0090_00_daigo_01",
       "trainerNameId": "ch0090",
@@ -3603,6 +3678,21 @@
     {
       "id": "11009040",
       "actorId": "ch0090_40_daigo_01",
+      "trainerNameId": "ch0090",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 1,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_daigo",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "11009050",
+      "actorId": "ch0090_50_daigo_01",
       "trainerNameId": "ch0090",
       "u4": 1,
       "u5": "",
@@ -3811,6 +3901,21 @@
       "u13": ""
     },
     {
+      "id": "11011000",
+      "actorId": "ch0110_00_kasumi_01",
+      "trainerNameId": "ch0110",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_gl_kanto",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
       "id": "11011100",
       "actorId": "ch0111_00_wataru_01",
       "trainerNameId": "ch0111",
@@ -3963,6 +4068,21 @@
     {
       "id": "11011840",
       "actorId": "ch0118_40_lillie_01",
+      "trainerNameId": "ch0118",
+      "u4": 1,
+      "u5": "",
+      "u6": 1,
+      "u7": 1,
+      "gender": 2,
+      "pokeballId": "ob0204_00_monsterball",
+      "isGeneric": 0,
+      "battleBgmId": "bgm_btl_chara_lillie",
+      "resultBgmId": "bgm_btlrslt_normal",
+      "u13": ""
+    },
+    {
+      "id": "11011850",
+      "actorId": "ch0118_50_lillie_01",
       "trainerNameId": "ch0118",
       "u4": 1,
       "u5": "",
