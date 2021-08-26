@@ -15,7 +15,7 @@ import { rolesByLanguage } from '../../utils/constants';
 
 const EggPokemon = (props) => {
   const { classes } = props;
-  const [pokemonTrainerId, setPokemonTrainerId] = useState('18000030541');
+  const [pokemonTrainerId, setPokemonTrainerId] = useState('18000020561');
   const [syncLevel, setSyncLevel] = useState('1');
   const language = useSelector((state) => state.language.currentLanguage);
 

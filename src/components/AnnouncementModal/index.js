@@ -44,7 +44,7 @@ const AnnouncementModal = (props) => {
           <DialogContentText>
             8/26/2021:
             <br />
-            Added new grids. New eggmons will be added later.
+            Added new grids and new eggmons.
             <br />
             <br />
             7/28/2021:

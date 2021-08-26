@@ -243,6 +243,9 @@ const playerPokemonList = [
   '18000020546',
   '18000020551',
   '18000020556',
+  '18000020561',
+  '18000020566',
+  '18000020571',
   '18000030011',
   '18000030021',
   '18000030026',
@@ -324,6 +327,9 @@ const playerPokemonList = [
   '18000030546',
   '18000030551',
   '18000030556',
+  '18000030561',
+  '18000030566',
+  '18000030571',
   '18000040001',
   '18000040004',
   '18000040007',
@@ -408,6 +414,9 @@ const playerPokemonList = [
   '18000040546',
   '18000040551',
   '18000040556',
+  '18000040561',
+  '18000040566',
+  '18000040571',
   '18000120000',
 ];
 
@@ -561,10 +570,14 @@ const extractEggPokemonData = () => {
           monsterBaseId,
         } = monster;
 
-        move1Id = monster.move1Id !== -1 ? monster.move1Id : move1Id;
-        move2Id = monster.move2Id !== -1 ? monster.move2Id : move2Id;
-        move3Id = monster.move3Id !== -1 ? monster.move3Id : move3Id;
-        move4Id = monster.move4Id !== -1 ? monster.move4Id : move4Id;
+        move1Id =
+          monster.move1ChangeId !== -1 ? monster.move1ChangeId : move1Id;
+        move2Id =
+          monster.move2ChangeId !== -1 ? monster.move2ChangeId : move2Id;
+        move3Id =
+          monster.move3ChangeId !== -1 ? monster.move3ChangeId : move3Id;
+        move4Id =
+          monster.move4ChangeId !== -1 ? monster.move4ChangeId : move4Id;
 
         // Use monsterBaseId to find actorId in MonsterBase.json
         let monsterBase = monsterBaseDB.entries.find(
