@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0e6f48dc.chunk.css",
-    "main.js": "/static/js/main.c1b78b9f.chunk.js",
-    "main.js.map": "/static/js/main.c1b78b9f.chunk.js.map",
+    "main.js": "/static/js/main.d95e9a57.chunk.js",
+    "main.js.map": "/static/js/main.d95e9a57.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
-    "static/js/2.a7115f53.chunk.js": "/static/js/2.a7115f53.chunk.js",
-    "static/js/2.a7115f53.chunk.js.map": "/static/js/2.a7115f53.chunk.js.map",
+    "static/js/2.3e854667.chunk.js": "/static/js/2.3e854667.chunk.js",
+    "static/js/2.3e854667.chunk.js.map": "/static/js/2.3e854667.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d69364553d94c3f0e1e4a55b7db069a2.js": "/precache-manifest.d69364553d94c3f0e1e4a55b7db069a2.js",
+    "precache-manifest.ae311a096653ee4ba6b7d6f165881038.js": "/precache-manifest.ae311a096653ee4ba6b7d6f165881038.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.0e6f48dc.chunk.css.map": "/static/css/main.0e6f48dc.chunk.css.map",
-    "static/js/2.a7115f53.chunk.js.LICENSE.txt": "/static/js/2.a7115f53.chunk.js.LICENSE.txt",
+    "static/js/2.3e854667.chunk.js.LICENSE.txt": "/static/js/2.3e854667.chunk.js.LICENSE.txt",
     "static/media/hero_256.ktx.png": "/static/media/hero_256.ktx.c896e21f.png",
     "static/media/heroine_256.ktx.png": "/static/media/heroine_256.ktx.9c0ea788.png",
     "static/media/pm0003_01_fushigibana_128.ktx.png": "/static/media/pm0003_01_fushigibana_128.ktx.b88345b9.png",
@@ -25,6 +25,7 @@
     "static/media/pm0035_00_pippi_128.ktx.png": "/static/media/pm0035_00_pippi_128.ktx.19998e94.png",
     "static/media/pm0039_00_purin_128.ktx.png": "/static/media/pm0039_00_purin_128.ktx.8be1a32d.png",
     "static/media/pm0045_01_ruffresia_128.ktx.png": "/static/media/pm0045_01_ruffresia_128.ktx.afa5dc22.png",
+    "static/media/pm0054_00_koduck_128.ktx.png": "/static/media/pm0054_00_koduck_128.ktx.553a3152.png",
     "static/media/pm0065_00_foodin_128.ktx.png": "/static/media/pm0065_00_foodin_128.ktx.1a36f953.png",
     "static/media/pm0087_00_jugon_128.ktx.png": "/static/media/pm0087_00_jugon_128.ktx.bc31b93c.png",
     "static/media/pm0095_00_iwark_128.ktx.png": "/static/media/pm0095_00_iwark_128.ktx.1337ae53.png",
@@ -68,6 +69,7 @@
     "static/media/pm0382_00_kyogre_128.ktx.png": "/static/media/pm0382_00_kyogre_128.ktx.7995ef33.png",
     "static/media/pm0383_00_groudon_128.ktx.png": "/static/media/pm0383_00_groudon_128.ktx.4a6cefbb.png",
     "static/media/pm0384_00_rayquaza_128.ktx.png": "/static/media/pm0384_00_rayquaza_128.ktx.0cc72080.png",
+    "static/media/pm0384_00_rayquaza_rare_128.ktx.png": "/static/media/pm0384_00_rayquaza_rare_128.ktx.cb91733a.png",
     "static/media/pm0389_00_dodaitose_128.ktx.png": "/static/media/pm0389_00_dodaitose_128.ktx.d7d37598.png",
     "static/media/pm0392_00_goukazaru_128.ktx.png": "/static/media/pm0392_00_goukazaru_128.ktx.4ec4e1ff.png",
     "static/media/pm0395_00_emperte_128.ktx.png": "/static/media/pm0395_00_emperte_128.ktx.148c2fe3.png",
@@ -100,6 +102,7 @@
     "static/media/pm0635_00_sazandora_128.ktx.png": "/static/media/pm0635_00_sazandora_128.ktx.7bab4093.png",
     "static/media/pm0637_00_ulgamoth_128.ktx.png": "/static/media/pm0637_00_ulgamoth_128.ktx.c48bab9c.png",
     "static/media/pm0638_00_cobalon_128.ktx.png": "/static/media/pm0638_00_cobalon_128.ktx.ef16d8b1.png",
+    "static/media/pm0643_00_reshiram_128.ktx.png": "/static/media/pm0643_00_reshiram_128.ktx.13613a50.png",
     "static/media/pm0644_00_zekrom_128.ktx.png": "/static/media/pm0644_00_zekrom_128.ktx.b8e85bfb.png",
     "static/media/pm0646_11_kyurem_128.ktx.png": "/static/media/pm0646_11_kyurem_128.ktx.5dd5ea5f.png",
     "static/media/pm0719_00_fox3_128.ktx.png": "/static/media/pm0719_00_fox3_128.ktx.2b256189.png",
@@ -131,6 +134,7 @@
     "static/media/pm0867_00_gusokumushi2_128.ktx.png": "/static/media/pm0867_00_gusokumushi2_128.ktx.30531bd3.png",
     "static/media/pm0869_11_11_mawhip_128.ktx.png": "/static/media/pm0869_11_11_mawhip_128.ktx.608088d9.png",
     "static/media/pm0873_00_sun_128.ktx.png": "/static/media/pm0873_00_sun_128.ktx.ca4dcda2.png",
+    "static/media/pm0874_00_moon_128.ktx.png": "/static/media/pm0874_00_moon_128.ktx.963fd17d.png",
     "static/media/pm0877_11_00_morpeko_128.ktx.png": "/static/media/pm0877_11_00_morpeko_128.ktx.b5c464f1.png",
     "static/media/pm0879_00_beastblue_128.ktx.png": "/static/media/pm0879_00_beastblue_128.ktx.ec85332e.png",
     "static/media/pm0884_00_00_duraludon_128.ktx.png": "/static/media/pm0884_00_00_duraludon_128.ktx.e3c3e7f8.png",
@@ -140,8 +144,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
-    "static/js/2.a7115f53.chunk.js",
+    "static/js/2.3e854667.chunk.js",
     "static/css/main.0e6f48dc.chunk.css",
-    "static/js/main.c1b78b9f.chunk.js"
+    "static/js/main.d95e9a57.chunk.js"
   ]
 }
