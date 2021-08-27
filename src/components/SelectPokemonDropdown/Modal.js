@@ -15,6 +15,7 @@ import styles from './styles';
 import { updateUrl, setSyncLevel } from '../../actions/actionCreators';
 import { useSelector, useDispatch } from 'react-redux';
 import { pokemonPictures } from '../../images/Pokemon/exportImagesAsObject';
+import { syncPairPictures } from '../../images/SyncPairs/exportImagesAsObject';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -192,12 +193,17 @@ function SelectPokemonModal(props) {
                   >
                     <div>
                       <img
-                        width="40"
-                        height="40"
+                        width="60"
+                        height="60"
+                        // src={
+                        //   pokemonPictures[
+                        //     getPokemonDataByTrainerId(syncPairData.trainerId)
+                        //       .monsterActorId + '_128'
+                        //   ]
+                        // }
                         src={
-                          pokemonPictures[
-                            getPokemonDataByTrainerId(syncPairData.trainerId)
-                              .monsterActorId + '_128'
+                          syncPairPictures[
+                            'sp_' + syncPairData.trainerId + '_124'
                           ]
                         }
                       />

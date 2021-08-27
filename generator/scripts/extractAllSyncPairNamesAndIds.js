@@ -222,10 +222,14 @@ const extractAllSyncPairNamesAndIds = () => {
   let newSyncPairs = {};
   let newGridedSyncPairs = {};
   let allGridedSyncPairs = {};
-  let pokemonImagesExportStatementsForIndex = '';
 
-  let importStatements = ''; // for Pokemon images
-  let exportStatements = ''; // for Pokemon images
+  let pokemonImagesExportStatementsForIndex = '';
+  let pokemonImageImportStatements = '';
+  let pokemonImageExportStatements = '';
+
+  let syncPairImagesExportStatementsForIndex = '';
+  let syncPairImageImportStatements = '';
+  let syncPairImageExportStatements = '';
 
   oldTrainerDB.entries.forEach((oldEntry) => {
     arrayOfOldTrainerIds.push(oldEntry.trainerId.toString());
@@ -423,10 +427,6 @@ const extractAllSyncPairNamesAndIds = () => {
                 .toString()
                 .substring(0, monsterBaseId.toString().length - 1) + '0'
             ];
-
-        if (monsterBaseId.toString() === '21038400') {
-          pokemonNameByLanguage[language] = pokemonNameDB[language]['20038400']; // Steven & Rayquaza
-        }
       } else {
         console.log(`No monsterBaseId`);
       }
@@ -568,9 +568,17 @@ const extractAllSyncPairNamesAndIds = () => {
         isBP: isBP,
       };
 
-      if (!importStatements.includes(monsterActorId.toString())) {
-        importStatements += `${monsterActorId}_128,`;
-        exportStatements += `${monsterActorId}_128,`;
+      syncPairImageImportStatements += `sp_${trainerId}_124,`;
+      syncPairImageExportStatements += `sp_${trainerId}_124,`;
+      syncPairImagesExportStatementsForIndex += `export { default as sp_${trainerId}_124 } from './124px/${trainerId}_124.png'; // ${syncPairEnglishName}
+      `;
+
+      if (
+        !pokemonImageImportStatements.includes(monsterActorId.toString()) ||
+        monsterActorId.toString() === 'pm0384_00_rayquaza'
+      ) {
+        pokemonImageImportStatements += `${monsterActorId}_128,`;
+        pokemonImageExportStatements += `${monsterActorId}_128,`;
         pokemonImagesExportStatementsForIndex += `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${syncPairEnglishName}
         `;
       }
@@ -713,10 +721,35 @@ const extractAllSyncPairNamesAndIds = () => {
     `import {
       // Grided only
       ` +
-      importStatements +
+      pokemonImageImportStatements +
       `} from '../Pokemon'; 
       export const pokemonPictures = {` +
-      exportStatements +
+      pokemonImageExportStatements +
+      '}',
+    (err) => {
+      if (err) throw err;
+      console.log('Successfully written to file');
+    }
+  );
+
+  fs.writeFile(
+    `${__dirname}/../../src/images/SyncPairs/index.js`,
+    syncPairImagesExportStatementsForIndex,
+    (err) => {
+      if (err) throw err;
+      console.log('Successfully written to file');
+    }
+  );
+
+  fs.writeFile(
+    `${__dirname}/../../src/images/SyncPairs/exportImagesAsObject.js`,
+    `import {
+      // Grided only
+      ` +
+      syncPairImageImportStatements +
+      `} from '../SyncPairs'; 
+      export const syncPairPictures = {` +
+      syncPairImageExportStatements +
       '}',
     (err) => {
       if (err) throw err;
