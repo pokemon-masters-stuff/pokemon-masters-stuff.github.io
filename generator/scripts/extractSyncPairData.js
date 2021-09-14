@@ -880,7 +880,7 @@ const extractSyncPairData = () => {
             4: 4,
             5: 5,
             6: 6,
-            7: 7,
+            7: 13, // rock
             8: 9, // ground
             9: 9,
             10: 12, // bug
@@ -1992,7 +1992,7 @@ const extractSyncPairData = () => {
               4: 4,
               5: 5,
               6: 6,
-              7: 7,
+              7: 13, // rock
               8: 9, // ground
               9: 9,
               10: 12, // bug
