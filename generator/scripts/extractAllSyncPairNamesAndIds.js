@@ -207,6 +207,9 @@ const arrayOfGridedTrainers = [
   10090500000, // Steven & Rayquaza
   10110010000, // Misty & Psyduck
   10118500000, // Lillie & Lunala
+  // 9/14
+  10000800000, // Red & Snorlax
+  10021800000, // Blue & Aerodactyl
 ];
 
 /*
@@ -568,7 +571,10 @@ const extractAllSyncPairNamesAndIds = () => {
         isBP: isBP,
       };
 
-      if (!importStatements.includes(monsterActorId.toString())) {
+      if (
+        !importStatements.includes(monsterActorId.toString()) ||
+        monsterActorId.toString() === 'pm0384_00_rayquaza'
+      ) {
         importStatements += `${monsterActorId}_128,`;
         exportStatements += `${monsterActorId}_128,`;
         pokemonImagesExportStatementsForIndex += `export { default as ${monsterActorId}_128 } from './128px/${monsterActorId}_128.ktx.png'; // ${syncPairEnglishName}

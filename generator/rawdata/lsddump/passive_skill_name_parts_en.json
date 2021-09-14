@@ -94,8 +94,13 @@
   "11011100": "Team Triage Tank [Name:PassiveSkillNameDigit ]",
   "18094600": "Team Offensive Defense [Name:PassiveSkillNameDigit ]",
   "18094700": "Team Mind Brace [Name:PassiveSkillNameDigit ]",
+  "13050700": "Rock Shift",
   "23010600": "Extend Range",
   "28010400": "Unova Flag Bearer",
+  "17044700": "MAX Regen",
+  "17044800": "Combo Freebie [Name:PassiveSkillNameDigit ]",
+  "18095300": "Team Alert Mind [Name:PassiveSkillNameDigit ]",
+  "18095400": "Group Moral Support [Name:PassiveSkillNameDigit ]",
   "13015700": "Good Form",
   "18095200": "Downside Up",
   "28010500": "Hoenn Flag Bearer",
@@ -120,5 +125,7 @@
   "52301012": "Sentry Entry ×2",
   "52301013": "Sentry Entry ×3",
   "52301022": "Wise Entry ×2",
-  "52301023": "Wise Entry ×3"
+  "52301023": "Wise Entry ×3",
+  "17031100": "MAX Group Therapy [Name:PassiveSkillNameDigit ]",
+  "18096000": "MAX Shielding Strikes [Name:PassiveSkillNameDigit ]"
 }

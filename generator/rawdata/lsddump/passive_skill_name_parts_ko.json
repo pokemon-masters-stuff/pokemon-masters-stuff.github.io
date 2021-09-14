@@ -94,8 +94,13 @@
   "11011100": "피격시HP회복G[Name:PassiveSkillNameDigit ]",
   "18094600": "공격시방어업G[Name:PassiveSkillNameDigit ]",
   "18094700": "공격시특수방어업G[Name:PassiveSkillNameDigit ]",
+  "13050700": "바위체인지",
   "23010600": "P기술전체공격화",
   "28010400": "하나의인도",
+  "17044700": "BD기술후지속회복",
+  "17044800": "공격시차회게이지소비없음[Name:PassiveSkillNameDigit ]",
+  "18095300": "HP반감시방어↑G[Name:PassiveSkillNameDigit ]",
+  "18095400": "T기술후특수방어업G[Name:PassiveSkillNameDigit ]",
   "13015700": "능력↑비례위력상승",
   "18095200": "능력다운반전",
   "28010500": "호연의인도",
@@ -120,5 +125,7 @@
   "52301012": "등장시방어2배",
   "52301013": "등장시방어3배",
   "52301022": "등장시특수방어2배",
-  "52301023": "등장시특수방어3배"
+  "52301023": "등장시특수방어3배",
+  "17031100": "BD기술후상태이상해제G[Name:PassiveSkillNameDigit ]",
+  "18096000": "BD기술후방어업[Name:PassiveSkillNameDigit ]"
 }

@@ -439,8 +439,14 @@
   "p999561": "Causa una tempesta di sabbia la prima volta che chi la usa entra in campo in ogni lotta.",
   "p999560": "Riduce i danni causati dalla scottatura.",
   "p999559": "Allevia la riduzione dell'Attacco causata dalla scottatura.",
+  "p999558": "Le mosse di tipo Normale diventano di tipo Roccia.",
   "p999557": "Quando il Pokémon di chi la usa sferra una mossa che bersaglia se stesso o un alleato e va a segno, l'effetto si applica a tutte le Unità alleate. Quando il Pokémon di chi la usa sferra una mossa che bersaglia un avversario e va a segno, l'effetto si applica a tutte le Unità avversarie. La potenza e la probabilità di applicare effetti aggiuntivi delle mosse influenzate da questa abilità passiva non vengono ridotte anche se sono presenti molteplici bersagli.",
   "p999556": "Aumenta la potenza delle mosse di tutte le Unità alleate del [Digit:2digits ]% e riduce i danni subiti da attacchi semplici per tutte le Unità alleate del [Digit:2digits Idx=\"1\" ]%. Le percentuali aumentano in base al numero di Unità alleate del gruppo Unima nella tua squadra. Ogni Unità in più aumenta la potenza delle mosse del [Digit:2digits Idx=\"2\" ]% e la riduzione dei danni del 3%. L'aumento massimo è del [Digit:2digits Idx=\"3\" ]% e del [Digit:2digits Idx=\"4\" ]% per la riduzione dei danni.",
+  "p999555": "Applica l'effetto \"Recupero costante PS\" a chi la usa dopo aver sferrato la sua mossa UniDynamax.",
+  "p999554": "Ha una certa probabilità ([Digit:2digits ]%) di applicare l'effetto \"Prossimo a costo zero\" a chi la usa quando il suo attacco semplice va a segno.",
+  "p999553": "Aumenta la Difesa di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] quando i PS di chi la usa scendono a metà o meno.",
+  "p999552": "Ha una certa probabilità ([Digit:2digits ]%) di aumentare la Difesa Speciale di tutte le Unità alleate di 1 grado quando l'Allenatore di chi la usa sferra una mossa.",
+  "p999551": "Aumenta la Difesa Speciale di tutte le Unità alleate di 1 grado quando l'Allenatore di chi la usa sferra una mossa.",
   "p999550": "Aumenta la potenza delle mosse di chi la usa in proporzione all'aumento delle statistiche di chi la usa.",
   "p999549": "Quando le statistiche di chi la usa dovrebbero venire ridotte, aumenta invece le sue statistiche in egual misura.",
   "p999548": "Aumenta la potenza delle mosse di tutte le Unità alleate del [Digit:2digits ]% e riduce i danni subiti da attacchi semplici per tutte le Unità alleate del [Digit:2digits Idx=\"1\" ]%. Le percentuali aumentano in base al numero di Unità alleate del gruppo Hoenn nella tua squadra. Ogni Unità in più aumenta la potenza delle mosse del [Digit:2digits Idx=\"2\" ]% e la riduzione dei danni del 3%. L'aumento massimo è del [Digit:2digits Idx=\"3\" ]% e del [Digit:2digits Idx=\"4\" ]% per la riduzione dei danni.",
@@ -500,5 +506,9 @@
   "p999494": "Ha una certa probabilità ([Digit:2digits ]%) di ridurre l'Attacco Speciale di tutte le Unità avversarie di 1 grado quando una mossa di stato utilizzata dal Pokémon di chi la usa va a segno.",
   "p999493": "Riduce l'Attacco Speciale di tutte le Unità avversarie di 1 grado quando una mossa di stato utilizzata dal Pokémon di chi la usa va a segno.",
   "p999492": "Ha una certa probabilità ([Digit:2digits ]%) di rimuovere le condizioni atmosferiche quando il Pokémon di chi la usa sferra una mossa.",
-  "p999491": "Rimuove tutte le condizioni atmosferiche quando il Pokémon di chi la usa sferra una mossa."
+  "p999491": "Rimuove tutte le condizioni atmosferiche quando il Pokémon di chi la usa sferra una mossa.",
+  "p999490": "Ha una certa probabilità ([Digit:2digits ]%) di guarire i problemi di stato di tutte le Unità alleate dopo aver sferrato la mossa UniDynamax di chi la usa.",
+  "p999489": "I problemi di stato di tutte le Unità alleate guariscono dopo aver sferrato la mossa UniDynamax di chi la usa.",
+  "p999488": "Aumenta la Difesa di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] dopo aver sferrato la sua mossa UniDynamax.",
+  "p999487": "Applica l'effetto \"Prossimo a costo zero\" a chi la usa quando il suo attacco semplice va a segno."
 }

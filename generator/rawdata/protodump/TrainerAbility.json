@@ -1,6 +1,7 @@
 {
   "entries": [
     { "trainerId": "10000000000", "maxEnergy": 60 },
+    { "trainerId": "10000800000", "maxEnergy": 60 },
     { "trainerId": "10001000000", "maxEnergy": 60 },
     { "trainerId": "10002000000", "maxEnergy": 60 },
     { "trainerId": "10002400000", "maxEnergy": 60 },
@@ -31,6 +32,7 @@
     { "trainerId": "10020400000", "maxEnergy": 60 },
     { "trainerId": "10021000000", "maxEnergy": 60 },
     { "trainerId": "10021010000", "maxEnergy": 60 },
+    { "trainerId": "10021800000", "maxEnergy": 60 },
     { "trainerId": "10022000000", "maxEnergy": 60 },
     { "trainerId": "10023000000", "maxEnergy": 60 },
     { "trainerId": "10024000000", "maxEnergy": 60 },

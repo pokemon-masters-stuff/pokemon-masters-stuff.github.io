@@ -439,8 +439,14 @@
   "p999561": "Causes a sandstorm the first time the user enters a battle each battle.",
   "p999560": "Reduces damage from being burned.",
   "p999559": "Mitigates the reduction of Attack due to being burned.",
+  "p999558": "Normal-type moves become Rock-type moves.",
   "p999557": "When a move used by the user’s Pokémon that targets itself or an ally is successful, the target becomes all allied sync pairs. When a move used by the user’s Pokémon that targets an opponent is successful, the target becomes all opposing sync pairs. The power and chance of applying additional effects of moves affected by this passive skill are not lowered even if there are multiple targets.",
   "p999556": "Powers up the moves of all allied sync pairs by [Digit:2digits ]%. Reduces attack move damage taken by all allied sync pairs by [Digit:2digits Idx=\"1\" ]%. The more allied sync pairs with the Unova theme you have on your team, the higher these percentages are. (Each additional sync pair powers up moves by [Digit:2digits Idx=\"2\" ]% and reduces damage by 3%. The maximum power-up is [Digit:2digits Idx=\"3\" ]%, and the maximum damage reduction is [Digit:2digits Idx=\"4\" ]%.)",
+  "p999555": "Applies the Gradual Healing effect to the user after using its max move.",
+  "p999554": "Has a chance ([Digit:2digits ]%) of applying the Free Move Next effect to the user when its attack move is successful.",
+  "p999553": "Raises the Defense of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] when the user’s HP drops to half or below.",
+  "p999552": "Has a chance ([Digit:2digits ]%) of raising the Sp. Def of all allied sync pairs by one stat rank when the user’s Trainer uses a move.",
+  "p999551": "Raises the Sp. Def of all allied sync pairs by one stat rank when the user’s Trainer uses a move.",
   "p999550": "The more the user’s stats are raised, the more it powers up the user’s moves.",
   "p999549": "When the user’s stats would be lowered, raises the user’s stats by the same amount instead.",
   "p999548": "Powers up the moves of all allied sync pairs by [Digit:2digits ]%. Reduces attack move damage taken by all allied sync pairs by [Digit:2digits Idx=\"1\" ]%. The more allied sync pairs with the Hoenn theme you have on your team, the higher these percentages are. (Each additional sync pair powers up moves by [Digit:2digits Idx=\"2\" ]% and reduces damage by 3%. The maximum power-up is [Digit:2digits Idx=\"3\" ]%, and the maximum damage reduction is [Digit:2digits Idx=\"4\" ]%.)",
@@ -500,5 +506,9 @@
   "p999494": "Has a chance ([Digit:2digits ]%) of lowering the Sp. Atk of all opposing sync pairs by one stat rank when a status move used by the user’s Pokémon is successful.",
   "p999493": "Lowers the Sp. Atk of all opposing sync pairs by one stat rank when a status move used by the user’s Pokémon is successful.",
   "p999492": "Has a chance ([Digit:2digits ]%) of removing weather conditions when the user’s Pokémon uses a move.",
-  "p999491": "Removes all weather conditions when the user’s Pokémon uses a move."
+  "p999491": "Removes all weather conditions when the user’s Pokémon uses a move.",
+  "p999490": "Has a chance ([Digit:2digits ]%) of removing all status conditions from all allied sync pairs after using the user’s max move.",
+  "p999489": "Removes all status conditions from all allied sync pairs after using the user’s max move.",
+  "p999488": "Raises the user’s Defense by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] after using its max move.",
+  "p999487": "Applies the Free Move Next effect to the user when its attack move is successful."
 }

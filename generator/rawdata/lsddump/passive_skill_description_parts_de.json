@@ -439,8 +439,14 @@
   "p999561": "Erzeugt beim allerersten Kampfantritt des Anwenders pro Kampf einen Sandsturm.",
   "p999560": "Verringert den durch Verbrennungen erlittenen Schaden.",
   "p999559": "Der Angriff wird durch Verbrennungen weniger stark gesenkt.",
+  "p999558": "Attacken vom Typ Normal nehmen den Typ Gestein an.",
   "p999557": "Wenn das Pokémon des Anwenders eine erfolgreiche Attacke einsetzt, die auf es selbst oder einen Gefährten zielt, werden alle Gefährten im Team zum Ziel. Wenn das Pokémon des Anwenders eine erfolgreiche Attacke einsetzt, die auf einen Gegner zielt, werden alle gegnerischen Gefährten zum Ziel. Die Stärke und die Chance auf Anwendung zusätzlicher Effekte von Attacken, die von dieser Passivfähigkeit betroffen sind, werden nicht gesenkt, selbst wenn mehrere Ziele vorhanden sind.",
   "p999556": "Erhöht die Stärke von Attacken aller Gefährten im Team um [Digit:2digits ] %. Verringert den durch Attacken erlittenen Schaden aller Gefährten im Team um [Digit:2digits Idx=\"1\" ] %. Je mehr Gefährten im Team das Einall-Attribut haben, desto mehr steigt die Effektivität. (Jedes zusätzliche Gefährtengespann steigert die Stärke von Attacken um [Digit:2digits Idx=\"2\" ] % und verringert den erlittenen Schaden um 3 %. Die Stärke von Attacken kann um maximal [Digit:2digits Idx=\"3\" ] % erhöht und der Schaden um maximal [Digit:2digits Idx=\"4\" ] % verringert werden.)",
+  "p999555": "Verursacht beim Anwender den Effekt KP-Regenerierung, nachdem er seine Gefährten-Dynamax-Attacke eingesetzt hat.",
+  "p999554": "Hat eine [Digit:2digits ] %-Chance, beim Anwender den Effekt Folge-Leistenverbr. 0 zu verursachen, wenn sein Angriff mit einer Attacke Erfolg hat.",
+  "p999553": "Erhöht die Verteidigung aller Gefährten im Team um [Digit:1digit ], wenn die KP des Anwenders auf oder unter die Hälfte fallen.",
+  "p999552": "Hat eine [Digit:2digits ] %-Chance die Spezial-Verteidigung aller Gefährten im Team um 1 zu erhöhen, wenn der Trainer des Anwenders eine Attacke einsetzt.",
+  "p999551": "Erhöht die Spezial-Verteidigung aller Gefährten im Team um 1, wenn der Trainer des Anwenders eine Attacke einsetzt.",
   "p999550": "Je mehr die Statuswerte des Anwenders erhöht wurden, desto mehr wird die Stärke seiner Attacken erhöht.",
   "p999549": "Wenn die Statuswerte des Anwenders gesenkt werden, werden die Statuswerte des Anwenders stattdessen um denselben Wert erhöht.",
   "p999548": "Erhöht die Stärke von Attacken aller Gefährten im Team um [Digit:2digits ] %. Verringert den durch Attacken erlittenen Schaden aller Gefährten im Team um [Digit:2digits Idx=\"1\" ] %. Je mehr Gefährten im Team das Hoenn-Attribut haben, desto mehr steigt die Effektivität. (Jedes zusätzliche Gefährtengespann steigert die Stärke von Attacken um [Digit:2digits Idx=\"2\" ] % und verringert den erlittenen Schaden um 3 %. Die Stärke von Attacken kann um maximal [Digit:2digits Idx=\"3\" ] % erhöht und der Schaden um maximal [Digit:2digits Idx=\"4\" ] % verringert werden.)",
@@ -500,5 +506,9 @@
   "p999494": "Hat eine [Digit:2digits ] %-Chance den Spezial-Angriff aller gegnerischen Gefährten um 1 zu senken, wenn eine Status-Attacke des Pokémon des Anwenders Erfolg hat.",
   "p999493": "Senkt den Spezial-Angriff aller gegnerischen Gefährten um 1, wenn eine Status-Attacke des Pokémon des Anwenders Erfolg hat.",
   "p999492": "Hat eine [Digit:2digits ] %-Chance Wetterbedingungen aufzuheben, wenn das Pokémon des Anwenders eine Attacke einsetzt.",
-  "p999491": "Hebt Wetterbedingungen auf, wenn das Pokémon des Anwenders eine Attacke einsetzt."
+  "p999491": "Hebt Wetterbedingungen auf, wenn das Pokémon des Anwenders eine Attacke einsetzt.",
+  "p999490": "Hat eine [Digit:2digits ] %-Chance nach Einsatz der Gefährten-Dynamax-Attacke des Anwenders alle Gefährten im Team von Statusproblemen zu befreien.",
+  "p999489": "Befreit nach Einsatz der Gefährten-Dynamax-Attacke des Anwenders alle Gefährten im Team von allen Statusproblemen.",
+  "p999488": "Erhöht die Verteidigung des Anwenders um [Digit:1digit ], nachdem er seine Gefährten-Dynamax-Attacke eingesetzt hat.",
+  "p999487": "Verursacht beim Anwender den Effekt Folge-Leistenverbr. 0, wenn sein Angriff mit einer Attacke Erfolg hat."
 }

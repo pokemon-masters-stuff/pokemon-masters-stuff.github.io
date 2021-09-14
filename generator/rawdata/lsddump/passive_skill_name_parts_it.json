@@ -94,8 +94,13 @@
   "11011100": "Reazione curativa-G [Name:PassiveSkillNameDigit ]",
   "18094600": "Schermattacco-G [Name:PassiveSkillNameDigit ]",
   "18094700": "Attacco sagace-G [Name:PassiveSkillNameDigit ]",
+  "13050700": "Mutaroccia",
   "23010600": "Stessabarca",
   "28010400": "Spirito di Unima",
+  "17044700": "UniDynamax recupero",
+  "17044800": "Attacco azzeracosto [Name:PassiveSkillNameDigit ]",
+  "18095300": "Fatica difensiva-G [Name:PassiveSkillNameDigit ]",
+  "18095400": "Vocesagace-G [Name:PassiveSkillNameDigit ]",
   "13015700": "Aumentoforza",
   "18095200": "Di male in meglio",
   "28010500": "Spirito di Hoenn",
@@ -120,5 +125,7 @@
   "52301012": "Entrata multidifensiva ×2",
   "52301013": "Entrata multidifensiva ×3",
   "52301022": "Entrata multisagace ×2",
-  "52301023": "Entrata multisagace ×3"
+  "52301023": "Entrata multisagace ×3",
+  "17031100": "Guarigione UniDynamax-G [Name:PassiveSkillNameDigit ]",
+  "18096000": "UniDynamax difensivo [Name:PassiveSkillNameDigit ]"
 }

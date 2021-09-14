@@ -29,6 +29,8 @@ export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
   10090500000, // Steven & Rayquaza
   10110010000, // Misty & Psyduck
   10118500000, // Lillie & Lunala
+  10000800000, // Red & Snorlax
+  10021800000, // Blue & Aerodactyl
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -108,6 +110,7 @@ export const type1SyncGrid = [
   '10247100000', // Leon & Eternatus
   '10090500000', // Steven & Rayquaza
   '10118500000', // Lillie & Lunala
+  '10021800000', // Blue & Aerodactyl
 ];
 
 export const type2SyncGrid = [
@@ -187,6 +190,7 @@ export const type3SyncGrid = [
   '10205000000', // Evelyn & Entei
   '10244000000', // Hop & Zamazenta
   '10110010000', // Misty & Psyduck
+  '10000800000', // Red & Snorlax
 ];
 
 export const CLOUD_FUNCTIONS_URL =

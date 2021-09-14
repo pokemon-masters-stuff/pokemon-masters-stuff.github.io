@@ -94,8 +94,13 @@
   "11011100": "Gegentreffer-Heilung T [Name:PassiveSkillNameDigit ]",
   "18094600": "Treffer-Verteidigung↑ T [Name:PassiveSkillNameDigit ]",
   "18094700": "Treffer-Sp.-Verteidigung↑ T [Name:PassiveSkillNameDigit ]",
+  "13050700": "Gesteins-Wechsel",
   "23010600": "P-Att.-Zielausweitung",
   "28010400": "Der Weg von Einall",
+  "17044700": "G-D-Att.-KP-Regenerierung",
+  "17044800": "Treffer-Folge-Leistenverbr. 0 [Name:PassiveSkillNameDigit ]",
+  "18095300": "Halb-KP-Verteidigung↑ T [Name:PassiveSkillNameDigit ]",
+  "18095400": "T-Aktion-Sp.-Verteidigung↑ T [Name:PassiveSkillNameDigit ]",
   "13015700": "Werte↑-Stärke↑",
   "18095200": "Werte↓-Umkehr",
   "28010500": "Der Weg von Hoenn",
@@ -120,5 +125,7 @@
   "52301012": "Antritt-Verteidigung × 2",
   "52301013": "Antritt-Verteidigung × 3",
   "52301022": "Antritt-Sp.-Vert. × 2",
-  "52301023": "Antritt-Sp.-Vert. × 3"
+  "52301023": "Antritt-Sp.-Vert. × 3",
+  "17031100": "G-D-Att.-Problemaufhebung T [Name:PassiveSkillNameDigit ]",
+  "18096000": "G-D-Attacken-Verteidigung↑ [Name:PassiveSkillNameDigit ]"
 }

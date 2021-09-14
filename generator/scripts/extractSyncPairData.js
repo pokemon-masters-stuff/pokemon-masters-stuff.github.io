@@ -1054,11 +1054,18 @@ const extractSyncPairData = () => {
         }
 
         let maxMove1Id;
+        let maxMove2Id;
         if (trainerIdFromList.toString() === '10247100000') {
           // SS Leon & Eternatus
           console.log('variation is dynamax');
           isDynamax = true;
           maxMove1Id = 7002;
+        } else if (trainerIdFromList.toString() === '10000800000') {
+          // Red & Snorlax
+          console.log('variation is dynamax');
+          isDynamax = true;
+          maxMove1Id = 7000;
+          maxMove2Id = 7005;
         } else {
           console.log('variation is not dynamax');
           isDynamax = false;
@@ -1191,6 +1198,16 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove2NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
 
         let variationMove1DescriptionByLanguage = {
@@ -1234,6 +1251,16 @@ const extractSyncPairData = () => {
             zh: '',
           },
           maxMove1DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          maxMove2DescriptionByLanguage = {
             de: '',
             en: '',
             es: '',
@@ -1293,6 +1320,16 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove2TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
 
         let variationMove1TypeNameByLanguage = {
@@ -1344,19 +1381,40 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove2TypeNameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
         // Use variationMoveId to find variationMove data, eg. power, accuracy, etc. from Move.json
         let variationMove1,
           variationMove2,
           variationMove3,
           variationMove4,
-          maxMove1;
+          maxMove1,
+          maxMove2;
 
         if (isDynamax) {
           if (trainerIdFromList.toString() === '10247100000') {
             // SS Leon & Eternatus
             maxMove1 = moveDB.entries.find(
               (move) => move.moveId.toString() === '7002' // Eternabeam
+            );
+          }
+
+          if (trainerIdFromList.toString() === '10000800000') {
+            // Red & Snorlax
+            maxMove1 = moveDB.entries.find(
+              (move) => move.moveId.toString() === '7000'
+            );
+            maxMove2 = moveDB.entries.find(
+              (move) => move.moveId.toString() === '7005'
             );
           }
         }
@@ -1461,6 +1519,22 @@ const extractSyncPairData = () => {
           maxMove1 &&
             (maxMove1TypeNameByLanguage[language] =
               motifTypeNameDB[language][maxMove1.type]);
+
+          maxMove2 &&
+            (maxMove2NameByLanguage[language] =
+              moveNameDB[language][maxMove2Id]);
+
+          maxMove2 &&
+            (maxMove2DescriptionByLanguage[language] =
+              getUpdatedMoveDescription(language, maxMove2Id));
+
+          maxMove2 &&
+            (maxMove2TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][maxMove2.target]);
+
+          maxMove2 &&
+            (maxMove2TypeNameByLanguage[language] =
+              motifTypeNameDB[language][maxMove2.type]);
         });
 
         variationMove1 &&
@@ -1556,6 +1630,25 @@ const extractSyncPairData = () => {
               power: maxMove1.power,
               accuracy: maxMove1.accuracy,
               maxUses: maxMove1.maxUses,
+            },
+          });
+        maxMove2 &&
+          (variationMoves = {
+            ...variationMoves,
+            maxMove2: {
+              id: maxMove2.moveId,
+              name: maxMove2NameByLanguage,
+              description: maxMove2DescriptionByLanguage,
+              category: maxMove2.category,
+              group: maxMove2.group,
+              type: maxMove2.type,
+              typeName: maxMove2TypeNameByLanguage,
+              target: maxMove2.target,
+              targetType: maxMove2TargetTypeByLanguage,
+              gaugeDrain: maxMove2.gaugeDrain,
+              power: maxMove2.power,
+              accuracy: maxMove2.accuracy,
+              maxUses: maxMove2.maxUses,
             },
           });
 

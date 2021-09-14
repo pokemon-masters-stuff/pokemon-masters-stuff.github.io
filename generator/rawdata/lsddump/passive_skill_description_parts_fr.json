@@ -439,8 +439,14 @@
   "p999561": "Invoque une tempête de sable la première fois que le lanceur arrive au combat à chaque combat.",
   "p999560": "Réduit les dégâts causés par les brûlures.",
   "p999559": "Réduit la baisse d'Attaque causée par les brûlures.",
+  "p999558": "Change les capacités de type Normal en type Roche.",
   "p999557": "Quand le Pokémon du lanceur utilise avec succès une capacité qui le cible lui ou un allié, la cible devient tous les Duos alliés. Quand le Pokémon du lanceur utilise avec succès une capacité qui cible un adversaire, la cible devient tous les Duos ennemis. La puissance et les chances d'appliquer les effets supplémentaires des capacités concernées par ce talent passif ne sont pas réduites même s'il y a plusieurs cibles.",
   "p999556": "Augmente de [Digit:2digits ] % la puissance des capacités offensives et de [Digit:2digits Idx=\"1\" ] % la résistance aux capacités offensives de tous les Duos alliés. Plus il y a de Duos d‘Unys dans votre équipe, plus cet effet est puissant. (Chaque Duo supplémentaire augmente de [Digit:2digits Idx=\"2\" ] % la puissance des capacités et de 3 % la résistance. L'augmentation maximum est de [Digit:2digits Idx=\"3\" ] % pour la puissance des capacités et [Digit:2digits Idx=\"4\" ] % pour la résistance aux dégâts.)",
+  "p999555": "Applique l'effet Régénération lente PV au lanceur après l'utilisation d'une capacité Duo Dynamax.",
+  "p999554": "[Digit:2digits ] % de chances d'appliquer Conso. 0 assurée quand le lanceur utilise avec succès une capacité offensive.",
+  "p999553": "Augmente la Défense de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur perd au moins la moitié de ses PV.",
+  "p999552": "[Digit:2digits ] % de chances d'augmenter la Déf. Spé. de tous les Duos alliés de 1 rang quand le Dresseur du lanceur utilise une capacité.",
+  "p999551": "Augmente la Déf. Spé. de tous les Duos alliés de 1 rang quand le Dresseur du lanceur utilise une capacité.",
   "p999550": "Plus les stats du lanceur sont augmentées, plus ses capacités sont puissantes.",
   "p999549": "Si les stats du lanceur sont réduites, elles sont à la place augmentées de la même proportion.",
   "p999548": "Augmente de [Digit:2digits ] % la puissance des capacités offensives et de [Digit:2digits Idx=\"1\" ] % la résistance aux capacités offensives de tous les Duos alliés. Plus il y a de Duos de Hoenn dans votre équipe, plus cet effet est puissant. (Chaque Duo supplémentaire augmente de [Digit:2digits Idx=\"2\" ] % la puissance des capacités et de 3 % la résistance. L'augmentation maximum est de [Digit:2digits Idx=\"3\" ] % pour la puissance des capacités et [Digit:2digits Idx=\"4\" ] % pour la résistance aux dégâts.)",
@@ -500,5 +506,9 @@
   "p999494": "[Digit:2digits ] % de chances de réduire l'Atq. Spé. de tous les Duos ennemis de 1 rang quand le Pokémon du lanceur utilise avec succès une capacité de statut.",
   "p999493": "Réduit l'Atq. Spé. de tous les Duos ennemis de 1 rang quand le Pokémon du lanceur utilise avec succès une capacité de statut.",
   "p999492": "[Digit:2digits ] % de chances de supprimer la condition météo quand le Pokémon du lanceur utilise une capacité.",
-  "p999491": "Supprime la condition météo quand le Pokémon du lanceur utilise une capacité."
+  "p999491": "Supprime la condition météo quand le Pokémon du lanceur utilise une capacité.",
+  "p999490": "[Digit:2digits ] % de chances de soigner les altérations de statut de tous les Duos alliés quand le lanceur utilise une capacité Duo Dynamax.",
+  "p999489": "Soigne les altérations de statut de tous les Duos alliés quand le lanceur utilise une capacité Duo Dynamax.",
+  "p999488": "Augmente la Défense du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] après l'utilisation d'une capacité Duo Dynamax.",
+  "p999487": "Applique l'effet Conso. 0 assurée quand le lanceur utilise avec succès une capacité offensive."
 }

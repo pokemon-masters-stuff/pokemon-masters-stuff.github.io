@@ -439,8 +439,14 @@
   "p999561": "Cuando el Pokémon entra en combate por primera vez, desata una tormenta de arena.",
   "p999560": "Reduce el daño recibido por quemaduras.",
   "p999559": "Mitiga la reducción en el Ataque por quemaduras.",
+  "p999558": "Convierte los movimientos de tipo Normal en tipo Roca.",
   "p999557": "Cuando el Pokémon usa un movimiento sobre sí mismo o un aliado y acierta, afecta a todo el bando del usuario. Cuando el Pokémon usa un movimiento contra un oponente y acierta, afecta a todo el bando rival. La potencia y la probabilidad de aplicar efectos adicionales de los movimientos afectados por esta habilidad pasiva no se reducen incluso si hay varios objetivos.",
   "p999556": "Aumenta la potencia de los movimientos del bando del usuario en un [Digit:2digits ]%. Mitiga el daño por movimientos de ataque recibido por el bando del usuario en un [Digit:2digits Idx=\"1\" ]%. Cuantas más parejas con habilidades de equipo con el distintivo Teselia tenga el bando del usuario, más efectiva será esta habilidad. Cada una de ellas aumenta la potencia de los movimientos en un [Digit:2digits Idx=\"2\" ]% adicional (hasta un total máximo del [Digit:2digits Idx=\"3\" ]%), y mitiga el daño recibido en un 3% adicional (hasta un total máximo del [Digit:2digits Idx=\"4\" ]%).",
+  "p999555": "Aplica el efecto Regeneración de PS al usuario tras usar un movimiento compi Dinamax.",
+  "p999554": "Hay una probabilidad del [Digit:2digits ]% de aplicar Siguiente sin coste al usuario cuando uno de sus movimientos de ataque acierta.",
+  "p999553": "Aumenta la Defensa del bando del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] cuando sus PS bajan a la mitad o menos.",
+  "p999552": "Hay una probabilidad del [Digit:2digits ]% de aumentar la Defensa Especial del bando del usuario en 1 nivel después de que el Entrenador use un movimiento.",
+  "p999551": "Aumenta la Defensa Especial del bando del usuario en 1 nivel después de que el Entrenador use un movimiento.",
   "p999550": "Cuanto más hayan aumentado las características del usuario, más aumenta la potencia de sus movimientos.",
   "p999549": "Si las características del usuario van a ser reducidas, en su lugar las aumenta la misma cantidad.",
   "p999548": "Aumenta la potencia de los movimientos del bando del usuario en un [Digit:2digits ]%. Mitiga el daño por movimientos de ataque recibido por el bando del usuario en un [Digit:2digits Idx=\"1\" ]%. Cuantas más parejas con habilidades de equipo con el distintivo Hoenn tenga el bando del usuario, más efectiva será esta habilidad. Cada una de ellas aumenta la potencia de los movimientos en un [Digit:2digits Idx=\"2\" ]% adicional (hasta un total máximo del [Digit:2digits Idx=\"3\" ]%), y mitiga el daño recibido en un 3% adicional (hasta un total máximo del [Digit:2digits Idx=\"4\" ]%).",
@@ -500,5 +506,9 @@
   "p999494": "Hay una probabilidad del [Digit:2digits ]% de reducir el Ataque Especial del bando rival en 1 nivel cuando un movimiento de estado del Pokémon del usuario acierta.",
   "p999493": "Reduce el Ataque Especial del bando rival en 1 nivel cuando un movimiento de estado del Pokémon del usuario acierta.",
   "p999492": "Hay una probabilidad del [Digit:2digits ]% de eliminar las condiciones atmosféricas después de que el Pokémon del usuario utilice un movimiento.",
-  "p999491": "Elimina las condiciones atmosféricas después de que el Pokémon del usuario utilice un movimiento."
+  "p999491": "Elimina las condiciones atmosféricas después de que el Pokémon del usuario utilice un movimiento.",
+  "p999490": "Hay una probabilidad del [Digit:2digits ]% de curar los problemas de estado del bando del usuario tras usar un movimiento compi Dinamax.",
+  "p999489": "Cura los problemas de estado del bando del usuario tras usar un movimiento compi Dinamax.",
+  "p999488": "Aumenta la Defensa del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] tras usar un movimiento compi Dinamax.",
+  "p999487": "Aplica el efecto Siguiente sin coste al usuario si uno de sus movimientos de ataque acierta."
 }
