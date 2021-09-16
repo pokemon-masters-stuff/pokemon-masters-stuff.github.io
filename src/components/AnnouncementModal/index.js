@@ -42,6 +42,22 @@ const AnnouncementModal = (props) => {
         <DialogTitle>{UI['Announcements'][language]}</DialogTitle>
         <DialogContent dividers>
           <DialogContentText>
+            Note: If you are having issues with a blank or black screen on our
+            site, please try the following: (Credit to Hephesto)
+            <ol style={{ marginLeft: 30 }}>
+              <li>Open your Browser</li>
+              <li>Click the three dots on the top right corner. ⋮</li>
+              <li>Go to "Site Settings" (One of the last options)</li>
+              <li>Click on "All sites" (First option)</li>
+              <li>Search and click the "pokemon-masters-stuff" site</li>
+              <li>Click "Clear & Reset"</li>
+            </ol>
+            Please note that this will remove your login and your saved
+            builds&teams from the site as well, but will fix the issue. You can
+            publish your builds&teams before clearing storage so you can access
+            them later. Sorry for the inconvenience.
+            <br />
+            <br />
             9/14/2021:
             <br />
             Added new grids.
