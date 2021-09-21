@@ -238,7 +238,7 @@ const extractSyncPairData = () => {
     );
 
     if (trainer) {
-      console.log('Trainer exists');
+      // console.log('Trainer exists');
 
       let trainerBaseId = trainer.trainerBaseId;
 
@@ -854,10 +854,12 @@ const extractSyncPairData = () => {
           },
         });
       let hasHitTheGas5InBaseForm = false;
+      let hasTypeShiftInBaseForm = false;
+      let typeShiftPassiveId;
       Object.values(passives).forEach((passive) => {
         if (passive.id.toString() === '13014505') {
           // Hit the Gas 5
-          console.log('Hit the Gas 5');
+          // console.log('Hit the Gas 5');
 
           hasHitTheGas5InBaseForm = true;
 
@@ -871,7 +873,10 @@ const extractSyncPairData = () => {
 
         if (passive.id.toString().substring(0, 4) === '1305') {
           // Type Shift
-          console.log('Type Shift');
+          // console.log('Type Shift');
+          hasTypeShiftInBaseForm = true;
+          typeShiftPassiveId = passive.id;
+
           let convertTypeShiftToType = {
             0: 0,
             1: 1,
@@ -1025,7 +1030,7 @@ const extractSyncPairData = () => {
         trainerIdFromList.toString() !== '10247000000' // Leon's Charizard doesn't mega evolve
       ) {
         console.log(
-          `trainerId ${trainerIdFromList} & monsterId ${monsterId} has variation`
+          `trainerId ${trainerIdFromList} & monsterId ${monsterId} have variation`
         );
         hasVariationForm = true;
 
@@ -1048,6 +1053,7 @@ const extractSyncPairData = () => {
         ) {
           console.log('variation is mega');
           isMega = true;
+          monsterVariationFormBaseId = potentialMegaBaseId;
         } else {
           console.log('variation is not mega');
           isMega = false;
@@ -1070,25 +1076,12 @@ const extractSyncPairData = () => {
           console.log('variation is not dynamax');
           isDynamax = false;
         }
-
-        if (
-          monsterBaseDB.entries.find(
-            (monsterBase) =>
-              monsterBase.monsterBaseId.toString() === monsterBaseId.toString()
-          )
-        ) {
+        if (isDynamax) {
           monsterVariationFormBaseId = monsterBaseId.toString();
-        } else if (
-          monsterBaseDB.entries.find(
-            (monsterBase) =>
-              monsterBase.monsterBaseId.toString() ===
-              potentialMegaBaseId.toString()
-          )
-        ) {
-          monsterVariationFormBaseId = potentialMegaBaseId;
-        } else {
-          // Non-Mega evolution
-          if (monsterBaseId === 2008771101) {
+        }
+        if (!isMega && !isDynamax) {
+          // Non-Mega, Non-Dynamax evolution
+          if (monsterBaseId.toString() === '2008771101') {
             // Morpeko
             monsterVariationFormBaseId = '2008771201';
           } else {
@@ -1123,12 +1116,13 @@ const extractSyncPairData = () => {
         };
 
         // Use monsterBaseId to find actorId in MonsterBase.json
+        console.log('monsterBaseId', monsterBaseId);
         let variationMonsterBase = monsterBaseDB.entries.find(
           (monsterBase) =>
             monsterBase.monsterBaseId.toString() ===
             monsterVariationFormBaseId.toString()
         );
-        console.log('monsterVariationFormBaseId', monsterVariationFormBaseId);
+        // console.log('monsterVariationFormBaseId', monsterVariationFormBaseId);
         variationFormPassiveId = variationMonsterBase.formPassiveId;
         variationFormId = variationMonsterBase.formId;
 
@@ -1968,7 +1962,7 @@ const extractSyncPairData = () => {
           Object.values(variationPassives).forEach((passive) => {
             if (passive.id.toString() === '13014505') {
               // Hit the Gas 5
-              console.log('Hit the Gas 5 in variation form');
+              // console.log('Hit the Gas 5 in variation form');
 
               if (hasHitTheGas5InBaseForm === false) {
                 Object.values(variationMoves).forEach((move) => {
@@ -2006,9 +2000,19 @@ const extractSyncPairData = () => {
               18: 18,
             };
             Object.values(variationPassives).forEach((passive) => {
-              if (passive.id.toString().substring(0, 4) === '1305') {
+              if (hasTypeShiftInBaseForm) {
+                Object.values(variationMoves).forEach((move) => {
+                  move.type =
+                    move.power !== 0 && move.type === 1
+                      ? convertTypeShiftToType[
+                          Number(typeShiftPassiveId.toString().substring(4, 6))
+                        ]
+                      : move.type;
+                });
+              } else if (passive.id.toString().substring(0, 4) === '1305') {
                 // Type Shift
-                console.log('Type Shift');
+                // console.log('Type Shift');
+                typeShiftPassiveId = passive.id; // to use his id for below.
 
                 Object.values(variationMoves).forEach((move) => {
                   move.type =
