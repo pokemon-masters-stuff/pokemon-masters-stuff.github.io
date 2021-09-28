@@ -1035,9 +1035,22 @@ export default function MovesAndSkillsModalContent(props) {
   }
 
   if (isDynamaxForm) {
-    postVariationMoves = variationForm.moves.maxMove2
-      ? [variationForm.moves.maxMove1, variationForm.moves.maxMove2]
-      : [variationForm.moves.maxMove1];
+    let count = Object.keys(variationForm.moves).length;
+
+    if (count === 3) {
+      postVariationMoves = [
+        variationForm.moves.maxMove1,
+        variationForm.moves.maxMove2,
+        variationForm.moves.maxMove3,
+      ];
+    } else if (count === 2) {
+      postVariationMoves = [
+        variationForm.moves.maxMove1,
+        variationForm.moves.maxMove2,
+      ];
+    } else {
+      postVariationMoves = [variationForm.moves.maxMove1];
+    }
   }
 
   return (

@@ -58,6 +58,11 @@ const AnnouncementModal = (props) => {
             them later. Sorry for the inconvenience.
             <br />
             <br />
+            9/28/2021:
+            <br />
+            Added new grids.
+            <br />
+            <br />
             9/14/2021:
             <br />
             Added new grids.

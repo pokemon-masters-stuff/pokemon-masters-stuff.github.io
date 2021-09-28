@@ -210,6 +210,13 @@ const arrayOfGridedTrainers = [
   // 9/14
   10000800000, // Red & Snorlax
   10021800000, // Blue & Aerodactyl
+  // 9/28
+  10008100000, // Erika & Leafeon
+  10095400000, // Caitlin & Sableye
+  10110100000, // Misty & Vaporeon
+  10148400000, // Morty & Banette
+  10159000000, // Darach & Staraptor
+  10251000000, // Allister & Gengar
 ];
 
 /*

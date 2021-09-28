@@ -360,5 +360,18 @@
   "999579": "If the user is hit by a sync move or max move while flying, it will stop flying.",
   "999578": "Turns the field into Electric Terrain.",
   "999577": "Turns the field into Grassy Terrain.",
-  "999576": "Turns the field into Psychic Terrain."
+  "999576": "Turns the field into Psychic Terrain.",
+  "999575": "Deals damage based on the target’s Defense rather than Sp. Def.",
+  "999574": "Applies the Restrain effect to all opposing sync pairs.",
+  "999573": "In addition, raises the user’s Attack by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] when the weather is sunny.",
+  "999572": "In addition, raises the user’s critical-hit rate by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the weather is sunny.",
+  "999571": "Applies the Gradual Healing effect to the user when the weather is sunny.",
+  "999570": "Raises the Speed and accuracy of all allied sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+  "999569": "When used by Mega Sableye, also applies the Condition Nullification effect to all allied sync pairs.",
+  "999568": "Raises the user’s Sp. Atk and critical-hit rate by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+  "999567": "Become Mega Banette until the end of battle.",
+  "999566": "Become Mega Sableye until the end of battle.",
+  "999565": "Become Mega Mewtwo Y until the end of battle.",
+  "999564": "The more the target’s Attack is lowered, the greater the power of this move.",
+  "999563": "This move’s power increases when the weather is sunny."
 }

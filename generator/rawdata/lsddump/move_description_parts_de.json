@@ -360,5 +360,18 @@
   "999579": "Wird der Anwender von einer Gefährtenattacke oder Gefährten-Dynamax-Attacke getroffen, wird der Flug-Zustand aufgehoben.",
   "999578": "Erzeugt ein Elektrofeld.",
   "999577": "Erzeugt ein Grasfeld.",
-  "999576": "Erzeugt ein Psychofeld."
+  "999576": "Erzeugt ein Psychofeld.",
+  "999575": "Verursacht Schaden, der von der Verteidigung statt der Spezial-Verteidigung des Ziels abhängt.",
+  "999574": "Verursacht bei allen gegnerischen Gefährten den Effekt Wechselsperre.",
+  "999573": "Außerdem wird der Angriff des Anwenders bei starkem Sonnenlicht um [Digit:1digit ] erhöht.",
+  "999572": "Außerdem wird die Volltrefferquote des Anwenders bei starkem Sonnenlicht um [Digit:1digit Idx=\"1\" ] erhöht.",
+  "999571": "Verursacht bei starkem Sonnenlicht den Effekt KP-Regenerierung beim Anwender.",
+  "999570": "Erhöht die Initiative und die Genauigkeit aller Gefährten im Team um [Digit:1digit Idx=\"1\" ].",
+  "999569": "Verursacht zusätzlich den Effekt Keine Problemstörung bei allen Gefährten im Team, wenn der Anwender zu Mega-Zobiris geworden ist.",
+  "999568": "Erhöht den Spezial-Angriff und die Volltrefferquote des Anwenders um [Digit:1digit ].",
+  "999567": "Löst bei Banette bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Banette aus.",
+  "999566": "Löst bei Zobiris bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Zobiris aus.",
+  "999565": "Löst bei Mewtu Y bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Mewtu Y aus.",
+  "999564": "Je stärker der Angriff des Zieles gesenkt wurde, desto mehr wird die Stärke dieser Attacke erhöht.",
+  "999563": "Die Stärke dieser Attacke steigt bei starkem Sonnenlicht."
 }

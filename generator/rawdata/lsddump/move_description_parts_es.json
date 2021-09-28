@@ -360,5 +360,18 @@
   "999579": "Deja de volar si sufre el ataque de un movimiento compi o un movimiento compi Dinamax del rival mientras vuela.",
   "999578": "Crea un campo eléctrico.",
   "999577": "Crea un campo de hierba.",
-  "999576": "Crea un campo psíquico."
+  "999576": "Crea un campo psíquico.",
+  "999575": "Inflige daño según la Defensa del objetivo y no su Defensa Especial.",
+  "999574": "Aplica el efecto Relevo imposible al bando rival.",
+  "999573": "Además, aumenta el Ataque del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] cuando está soleado.",
+  "999572": "Además, aumenta la probabilidad del usuario de asestar golpes críticos en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] cuando está soleado.",
+  "999571": "Aplica el efecto Regeneración de PS al usuario cuando está soleado.",
+  "999570": "Aumenta la Velocidad y la Precisión del bando del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+  "999569": "Si ha evolucionado a Mega-Sableye, aplica el efecto Inmunidad Estados Negativos al bando del usuario.",
+  "999568": "Aumenta el Ataque Especial y la probabilidad del usuario de asestar golpes críticos en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+  "999567": "Evoluciona a Mega-Banette. Vuelve a la normalidad tras terminar el combate.",
+  "999566": "Evoluciona a Mega-Sableye. Vuelve a la normalidad tras terminar el combate.",
+  "999565": "Evoluciona a Mega-Mewtwo Y. Vuelve a la normalidad tras terminar el combate.",
+  "999564": "Cuanto más se haya reducido el Ataque del objetivo, más aumenta la potencia de este movimiento.",
+  "999563": "Causa más daño cuando está soleado."
 }

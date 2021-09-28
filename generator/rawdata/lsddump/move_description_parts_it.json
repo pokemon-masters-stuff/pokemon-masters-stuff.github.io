@@ -337,7 +337,7 @@
   "999602": "Applica l'effetto \"Riflette problemi di stato\" sul campo alleato.",
   "999601": "Applica l'effetto \"Riflette riduzioni statistiche\" sul campo alleato.",
   "999600": "Applica l'effetto \"Blocco mosse stato\" sul campo alleato.",
-  "999599": "Applica l'effetto \"Campo bloccacolpi\" sul campo alleato.",
+  "999599": "Applica l'effetto \"Blocco brutti colpi\" sul campo alleato.",
   "999598": "Aumenta la potenza di questa mossa in proporzione all'aumento della Difesa di chi la usa.",
   "999597": "Aumenta la potenza di questa mossa in proporzione all'aumento della Difesa Speciale di chi la usa.",
   "999596": "Attacca ignorando le abilità passive che riducono i danni.",
@@ -360,5 +360,18 @@
   "999579": "Se chi la usa subisce un attacco con un'Unimossa o una mossa UniDynamax mentre è attiva, la modalità Volo termina.",
   "999578": "Trasforma il terreno di lotta in un Campo Elettrico.",
   "999577": "Trasforma il terreno di lotta in un Campo Erboso.",
-  "999576": "Trasforma il terreno di lotta in un Campo Psichico."
+  "999576": "Trasforma il terreno di lotta in un Campo Psichico.",
+  "999575": "Infligge danni in base alla Difesa del bersaglio, anziché alla Difesa Speciale.",
+  "999574": "Applica l'effetto \"Sostituzione vietata\" a tutte le Unità avversarie.",
+  "999573": "Inoltre, aumenta l'Attacco di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] quando la luce del sole è intensa.",
+  "999572": "Inoltre, aumenta la probabilità di mandare a segno brutti colpi di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] quando la luce del sole è intensa.",
+  "999571": "Applica l'effetto \"Recupero costante PS\" a chi la usa quando la luce del sole è intensa.",
+  "999570": "Aumenta la Velocità e la precisione di tutte le Unità alleate di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+  "999569": "Quando MegaSableye usa questa mossa, applica anche l'effetto \"Immunità problemi di stato e impedimenti\" a tutte le Unità alleate.",
+  "999568": "Aumenta l'Attacco Speciale e la probabilità di mandare a segno brutti colpi di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+  "999567": "Permette a Banette di megaevolversi. L'effetto svanisce al termine della lotta.",
+  "999566": "Permette a Sableye di megaevolversi. L'effetto svanisce al termine della lotta.",
+  "999565": "Permette a Mewtwo Y di megaevolversi. L'effetto svanisce al termine della lotta.",
+  "999564": "Aumenta la potenza di questa mossa in proporzione alla riduzione dell'Attacco del bersaglio.",
+  "999563": "Questa mossa aumenta di potenza quando la luce del sole è intensa."
 }

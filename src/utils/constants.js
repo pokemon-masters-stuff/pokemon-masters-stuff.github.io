@@ -25,12 +25,13 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10089400000, // N & Reshiram
-  10090500000, // Steven & Rayquaza
-  10110010000, // Misty & Psyduck
-  10118500000, // Lillie & Lunala
-  10000800000, // Red & Snorlax
-  10021800000, // Blue & Aerodactyl
+  10008100000, // Erika & Leafeon
+  10095400000, // Caitlin & Sableye
+  10110100000, // Misty & Vaporeon
+  10148400000, // Morty & Banette
+  10159000000, // Darach & Staraptor
+  10251000000, // Allister & Gengar
+  10140000000, // Giovanni & Mewtwo
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -47,6 +48,7 @@ export const arrayOfTrainerIdsWithSamePokemon = [
   10067010000, // Rachel & Umbreon
   10129000000, // Zinnia & Rayquaza
   10090500000, // Steven & Rayquaza
+  10251000000, // Allister & Gengar
 ];
 
 export const type1SyncGrid = [
