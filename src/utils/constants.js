@@ -152,6 +152,11 @@ export const type2SyncGrid = [
   '10066010000', // Lear & Hoopa
   '10135000000', // Sidney & Absol
   '10089400000', // N & Reshiram
+  '10148400000', // Morty & Banette
+  '10251000000', // Allister & Gengar
+  '10008100000', // Erika & Leafeon
+  '10110100000', // Misty & Vaporeon
+  '10159000000', // Darach & Staraptor
 ];
 
 export const type3SyncGrid = [
@@ -193,6 +198,7 @@ export const type3SyncGrid = [
   '10244000000', // Hop & Zamazenta
   '10110010000', // Misty & Psyduck
   '10000800000', // Red & Snorlax
+  '10095400000', // Caitlin & Sableye
 ];
 
 export const CLOUD_FUNCTIONS_URL =
