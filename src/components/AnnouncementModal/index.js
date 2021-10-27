@@ -58,6 +58,11 @@ const AnnouncementModal = (props) => {
             them later. Sorry for the inconvenience.
             <br />
             <br />
+            10/27/2021:
+            <br />
+            Added new grids. New eggmons will be added later today.
+            <br />
+            <br />
             9/28/2021:
             <br />
             Added new grids and eggmons.

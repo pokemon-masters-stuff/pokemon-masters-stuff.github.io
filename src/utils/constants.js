@@ -110,6 +110,8 @@ export const type1SyncGrid = [
   '10090500000', // Steven & Rayquaza
   '10118500000', // Lillie & Lunala
   '10021800000', // Blue & Aerodactyl
+  '10004400000', // Hilda & Diancie
+  '10125400000', // Guzma & Buzzwole
 ];
 
 export const type2SyncGrid = [
@@ -154,6 +156,7 @@ export const type2SyncGrid = [
   '10008100000', // Erika & Leafeon
   '10110100000', // Misty & Vaporeon
   '10159000000', // Darach & Staraptor
+  '10158400000', // Diantha & Keldeo
 ];
 
 export const type3SyncGrid = [
@@ -196,6 +199,7 @@ export const type3SyncGrid = [
   '10110010000', // Misty & Psyduck
   '10000800000', // Red & Snorlax
   '10095400000', // Caitlin & Sableye
+  '10113400000', // Jasmine & Celesteela
 ];
 
 export const CLOUD_FUNCTIONS_URL =
