@@ -217,6 +217,11 @@ const arrayOfGridedTrainers = [
   10148400000, // Morty & Banette
   10159000000, // Darach & Staraptor
   10251000000, // Allister & Gengar
+  // 10/27
+  10004400000, // Hilda & Diancie
+  10113400000, // Jasmine & Celesteela
+  10125400000, // Guzma & Buzzwole
+  10158400000, // Diantha & Keldeo
 ];
 
 /*

@@ -25,13 +25,10 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10008100000, // Erika & Leafeon
-  10095400000, // Caitlin & Sableye
-  10110100000, // Misty & Vaporeon
-  10148400000, // Morty & Banette
-  10159000000, // Darach & Staraptor
-  10251000000, // Allister & Gengar
-  10140000000, // Giovanni & Mewtwo
+  10004400000, // Hilda & Diancie
+  10113400000, // Jasmine & Celesteela
+  10125400000, // Guzma & Buzzwole
+  10158400000, // Diantha & Keldeo
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [

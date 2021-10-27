@@ -166,5 +166,20 @@
   "19020100": "Emergency Barrier",
   "18090700": "Witty Comeback [Name:PassiveSkillNameDigit ]",
   "18041400": "Danger Dodge [Name:PassiveSkillNameDigit ]",
-  "18043500": "Shook [Name:PassiveSkillNameDigit ]"
+  "18043500": "Shook [Name:PassiveSkillNameDigit ]",
+  "12021600": "Victory Charge [Name:PassiveSkillNameDigit ]",
+  "17045100": "Super Syncer",
+  "17045200": "Tenacity [Name:PassiveSkillNameDigit ]",
+  "18070300": "Armor Leech [Name:PassiveSkillNameDigit ]",
+  "18070400": "Mind Leech [Name:PassiveSkillNameDigit ]",
+  "18070500": "Speed Leech [Name:PassiveSkillNameDigit ]",
+  "18096100": "Team Sharp Entry [Name:PassiveSkillNameDigit ]",
+  "18096200": "Group Morale Boost [Name:PassiveSkillNameDigit ]",
+  "13015900": "Fuel Economy [Name:PassiveSkillNameDigit ]",
+  "12021700": "Consolation Prize [Name:PassiveSkillNameDigit ]",
+  "13020900": "Survivor Mentality [Name:PassiveSkillNameDigit ]",
+  "16013800": "Towering Force",
+  "16013900": "Brute Wits",
+  "17045800": "Super Victory",
+  "18021200": "Accuracy Ceiling"
 }

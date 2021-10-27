@@ -5,6 +5,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0039_00_purin_128 } from './128px/pm0039_00_purin_128.ktx.png'; // Lyra & Jigglypuff
         export { default as pm0734_00_cat2_128 } from './128px/pm0734_00_cat2_128.ktx.png'; // Calem & Meowstic
         export { default as pm0500_00_enbuoh_128 } from './128px/pm0500_00_enbuoh_128.ktx.png'; // Hilda & Emboar
+        export { default as pm0772_00_pinkdiamond_128 } from './128px/pm0772_00_pinkdiamond_128.ktx.png'; // Hilda & Diancie
         export { default as pm0392_00_goukazaru_128 } from './128px/pm0392_00_goukazaru_128.ktx.png'; // Flint & Infernape
         export { default as pm0823_00_sunaba2_128 } from './128px/pm0823_00_sunaba2_128.ktx.png'; // Acerola & Palossand
         export { default as pm0819_11_horror_128 } from './128px/pm0819_11_horror_128.ktx.png'; // Acerola & Mimikyu
@@ -69,6 +70,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0130_00_gyarados_128 } from './128px/pm0130_00_gyarados_128.ktx.png'; // Lance & Gyarados
         export { default as pm0157_00_bakphoon_128 } from './128px/pm0157_00_bakphoon_128.ktx.png'; // Ethan & Typhlosion
         export { default as pm0208_01_haganeil_128 } from './128px/pm0208_01_haganeil_128.ktx.png'; // Jasmine & Steelix
+        export { default as pm0881_00_beastpurple_128 } from './128px/pm0881_00_beastpurple_128.ktx.png'; // Jasmine & Celesteela
         export { default as pm0065_00_foodin_128 } from './128px/pm0065_00_foodin_128.ktx.png'; // Sabrina & Alakazam
         export { default as pm0405_00_rentorar_128 } from './128px/pm0405_00_rentorar_128.ktx.png'; // Volkner & Luxray
         export { default as pm0389_00_dodaitose_128 } from './128px/pm0389_00_dodaitose_128.ktx.png'; // Dawn & Torterra
@@ -84,6 +86,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0843_00_fukurou3_128 } from './128px/pm0843_00_fukurou3_128.ktx.png'; // Selene & Decidueye
         export { default as pm0814_00_mangosteen3_128 } from './128px/pm0814_00_mangosteen3_128.ktx.png'; // Mallow & Tsareena
         export { default as pm0867_00_gusokumushi2_128 } from './128px/pm0867_00_gusokumushi2_128.ktx.png'; // Guzma & Golisopod
+        export { default as pm0877_00_beastyellow_128 } from './128px/pm0877_00_beastyellow_128.ktx.png'; // Guzma & Buzzwole
         export { default as pm0260_00_laglarge_128 } from './128px/pm0260_00_laglarge_128.ktx.png'; // May & Swampert
         export { default as pm0428_00_mimilop_128 } from './128px/pm0428_00_mimilop_128.ktx.png'; // May & Lopunny
         export { default as pm0350_01_milokaross_128 } from './128px/pm0350_01_milokaross_128.ktx.png'; // Wallace & Milotic
@@ -106,6 +109,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0277_00_ohsubame_128 } from './128px/pm0277_00_ohsubame_128.ktx.png'; // Falkner & Swellow
         export { default as pm0362_00_onigohri_128 } from './128px/pm0362_00_onigohri_128.ktx.png'; // Glacia & Glalie
         export { default as pm0282_00_sirnight_128 } from './128px/pm0282_00_sirnight_128.ktx.png'; // Diantha & Gardevoir
+        export { default as pm0647_12_Keldeo_128 } from './128px/pm0647_12_Keldeo_128.ktx.png'; // Diantha & Keldeo
         export { default as pm0398_00_mukuhawk_128 } from './128px/pm0398_00_mukuhawk_128.ktx.png'; // Darach & Staraptor
         export { default as pm0851_00_mizugumo2_128 } from './128px/pm0851_00_mizugumo2_128.ktx.png'; // Lana & Araquanid
         export { default as pm0860_00_yashigani2_128 } from './128px/pm0860_00_yashigani2_128.ktx.png'; // Hala & Crabominable

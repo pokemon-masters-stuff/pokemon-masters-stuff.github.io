@@ -166,5 +166,20 @@
   "19020100": "初ピンチ時場に物理軽減",
   "18090700": "初ピンチ時特防アップ[Name:PassiveSkillNameDigit ]",
   "18041400": "初ＨＰ半減時回避率↑[Name:PassiveSkillNameDigit ]",
-  "18043500": "初ＨＰ半減時素早さ↑[Name:PassiveSkillNameDigit ]"
+  "18043500": "初ＨＰ半減時素早さ↑[Name:PassiveSkillNameDigit ]",
+  "12021600": "とどめ時技ゲージ増加[Name:PassiveSkillNameDigit ]",
+  "17045100": "初Ｂ技後次回抜群威力↑",
+  "17045200": "失敗時物理ブースト[Name:PassiveSkillNameDigit ]",
+  "18070300": "攻撃時防御能力吸収[Name:PassiveSkillNameDigit ]",
+  "18070400": "攻撃時特防能力吸収[Name:PassiveSkillNameDigit ]",
+  "18070500": "攻撃時素早さ能力吸収[Name:PassiveSkillNameDigit ]",
+  "18096100": "登場時急所率アップＧ[Name:PassiveSkillNameDigit ]",
+  "18096200": "Ｔ技後特攻アップＧ[Name:PassiveSkillNameDigit ]",
+  "13015900": "Ｐ技ゲージ消費量減少[Name:PassiveSkillNameDigit ]",
+  "12021700": "失敗時技ゲージ増加[Name:PassiveSkillNameDigit ]",
+  "13020900": "ピンチ時特殊軽減[Name:PassiveSkillNameDigit ]",
+  "16013800": "防御↑分Ｂ技威力上昇",
+  "16013900": "特防↑分Ｂ技威力上昇",
+  "17045800": "とどめ時次回抜群威力↑",
+  "18021200": "命中率アップ無効"
 }

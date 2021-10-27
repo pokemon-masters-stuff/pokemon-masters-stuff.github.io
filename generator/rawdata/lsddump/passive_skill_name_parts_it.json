@@ -166,5 +166,20 @@
   "19020100": "Primo campo spallealmuro",
   "18090700": "Prima sagacemergenza [Name:PassiveSkillNameDigit ]",
   "18041400": "Prima faticagilità [Name:PassiveSkillNameDigit ]",
-  "18043500": "Prima faticaccelera [Name:PassiveSkillNameDigit ]"
+  "18043500": "Prima faticaccelera [Name:PassiveSkillNameDigit ]",
+  "12021600": "Annientacarica [Name:PassiveSkillNameDigit ]",
+  "17045100": "Prima Unimossa iperefficace",
+  "17045200": "Fallimento iperfisico [Name:PassiveSkillNameDigit ]",
+  "18070300": "Attacco assorbidifesa [Name:PassiveSkillNameDigit ]",
+  "18070400": "Attacco assorbisagacia [Name:PassiveSkillNameDigit ]",
+  "18070500": "Attacco assorbivelocità [Name:PassiveSkillNameDigit ]",
+  "18096100": "Primocolpo-G [Name:PassiveSkillNameDigit ]",
+  "18096200": "Vocearguta-G [Name:PassiveSkillNameDigit ]",
+  "13015900": "Scontabarra [Name:PassiveSkillNameDigit ]",
+  "12021700": "Fallimento riempibarra [Name:PassiveSkillNameDigit ]",
+  "13020900": "Emergenza smorzadanno speciale [Name:PassiveSkillNameDigit ]",
+  "16013800": "Unipotenza difensiva",
+  "16013900": "Unipotenza sagace",
+  "17045800": "Annientamento iperefficace",
+  "18021200": "Mira inaumentabile"
 }

@@ -166,5 +166,20 @@
   "19020100": "首次危機時減輕場地物理傷害",
   "18090700": "首次危機時特防提升[Name:PassiveSkillNameDigit ]",
   "18041400": "首次ＨＰ減半時閃避率提升[Name:PassiveSkillNameDigit ]",
-  "18043500": "首次ＨＰ減半時速度提升[Name:PassiveSkillNameDigit ]"
+  "18043500": "首次ＨＰ減半時速度提升[Name:PassiveSkillNameDigit ]",
+  "12021600": "打倒對手時招式計量槽增加[Name:PassiveSkillNameDigit ]",
+  "17045100": "首次拍組招式後下次效果絕佳威力提升",
+  "17045200": "失敗時物理招式增強[Name:PassiveSkillNameDigit ]",
+  "18070300": "攻擊時防禦能力吸收[Name:PassiveSkillNameDigit ]",
+  "18070400": "攻擊時特防能力吸收[Name:PassiveSkillNameDigit ]",
+  "18070500": "攻擊時速度能力吸收[Name:PassiveSkillNameDigit ]",
+  "18096100": "上場時擊中要害率提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "18096200": "訓練家出招後特攻提升Ｇ[Name:PassiveSkillNameDigit ]",
+  "13015900": "寶可夢招式計量槽消耗量減少[Name:PassiveSkillNameDigit ]",
+  "12021700": "失敗時招式計量槽增加[Name:PassiveSkillNameDigit ]",
+  "13020900": "危機時減輕特殊傷害[Name:PassiveSkillNameDigit ]",
+  "16013800": "依防禦升幅拍組招式↑",
+  "16013900": "依特防升幅拍組招式↑",
+  "17045800": "打倒對手時下次效果絕佳威力提升",
+  "18021200": "命中率提升無效"
 }

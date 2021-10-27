@@ -166,5 +166,20 @@
   "19020100": "첫위기시필드에물리경감",
   "18090700": "첫위기시특수방어업[Name:PassiveSkillNameDigit ]",
   "18041400": "첫HP반감시회피율↑[Name:PassiveSkillNameDigit ]",
-  "18043500": "첫HP반감시스피드↑[Name:PassiveSkillNameDigit ]"
+  "18043500": "첫HP반감시스피드↑[Name:PassiveSkillNameDigit ]",
+  "12021600": "결정타시기술게이지증가[Name:PassiveSkillNameDigit ]",
+  "17045100": "첫B기술후차회발군위력↑",
+  "17045200": "실패시물리부스트[Name:PassiveSkillNameDigit ]",
+  "18070300": "공격시방어능력흡수[Name:PassiveSkillNameDigit ]",
+  "18070400": "공격시특수방어능력흡수[Name:PassiveSkillNameDigit ]",
+  "18070500": "공격시스피드능력흡수[Name:PassiveSkillNameDigit ]",
+  "18096100": "등장시급소율업G[Name:PassiveSkillNameDigit ]",
+  "18096200": "T기술후특수공격업G[Name:PassiveSkillNameDigit ]",
+  "13015900": "P기술게이지소비량감소[Name:PassiveSkillNameDigit ]",
+  "12021700": "실패시기술게이지증가[Name:PassiveSkillNameDigit ]",
+  "13020900": "위기시특수경감[Name:PassiveSkillNameDigit ]",
+  "16013800": "방어↑비례B기술위력상승",
+  "16013900": "특수방어↑비례B기술위력상승",
+  "17045800": "결정타시차회발군위력↑",
+  "18021200": "명중률업무효"
 }

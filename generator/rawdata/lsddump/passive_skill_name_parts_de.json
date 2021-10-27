@@ -166,5 +166,20 @@
   "19020100": "Erst-Notfall-Phys.-Schaden↓ T",
   "18090700": "Erst-Notfall-Sp.-Verteidigung↑ [Name:PassiveSkillNameDigit ]",
   "18041400": "Erst-Halb-KP-Fluchtwert↑ [Name:PassiveSkillNameDigit ]",
-  "18043500": "Erst-Halb-KP-Initiative↑ [Name:PassiveSkillNameDigit ]"
+  "18043500": "Erst-Halb-KP-Initiative↑ [Name:PassiveSkillNameDigit ]",
+  "12021600": "K.O.-Treffer-Attackenleiste↑ [Name:PassiveSkillNameDigit ]",
+  "17045100": "Erst-GA-Folge-Eff.-Stärke↑",
+  "17045200": "Fehlschl.-Folge-Phys.-Attacke↑ [Name:PassiveSkillNameDigit ]",
+  "18070300": "Treffer-Vert.-Wert-Absorption [Name:PassiveSkillNameDigit ]",
+  "18070400": "Treffer-Sp.-Vert.-Wert-Absorp. [Name:PassiveSkillNameDigit ]",
+  "18070500": "Treffer-Init.-Wert-Absorption [Name:PassiveSkillNameDigit ]",
+  "18096100": "Antritt-Volltreffer↑ T [Name:PassiveSkillNameDigit ]",
+  "18096200": "T-Aktion-Sp.-Angriff↑ T [Name:PassiveSkillNameDigit ]",
+  "13015900": "P-Attacke-Leistenverbrauch↓ [Name:PassiveSkillNameDigit ]",
+  "12021700": "Fehlschlag-Attackenleiste↑ [Name:PassiveSkillNameDigit ]",
+  "13020900": "Notfall-Sp.-Schaden↓ [Name:PassiveSkillNameDigit ]",
+  "16013800": "Verteidigung↑-GA-Stärke↑",
+  "16013900": "Sp.-Verteidigung↑-GA-Stärke↑",
+  "17045800": "K.O.-Treffer-F.-Eff.-Stärke↑",
+  "18021200": "Genauigkeit↑-Schutz"
 }

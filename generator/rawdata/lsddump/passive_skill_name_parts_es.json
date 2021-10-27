@@ -166,5 +166,20 @@
   "19020100": "Mitiga Físico en 1.er Apuro M",
   "18090700": "Defensa Esp. ↑ en 1.er Apuro +[Name:PassiveSkillNameDigit ]",
   "18041400": "1.ª Fatiga Evasión ↑ +[Name:PassiveSkillNameDigit ]",
-  "18043500": "1.ª Fatiga Velocidad ↑ +[Name:PassiveSkillNameDigit ]"
+  "18043500": "1.ª Fatiga Velocidad ↑ +[Name:PassiveSkillNameDigit ]",
+  "12021600": "Noqueo Llenabarras +[Name:PassiveSkillNameDigit ]",
+  "17045100": "1.er Mov. Compi Sig. Supereficaz ↑",
+  "17045200": "Fallo Siguiente Físico ↑ +[Name:PassiveSkillNameDigit ]",
+  "18070300": "Ataque Absorbedefensa +[Name:PassiveSkillNameDigit ]",
+  "18070400": "Ataque Absorbedefensa Especial +[Name:PassiveSkillNameDigit ]",
+  "18070500": "Ataque Absorbevelocidad +[Name:PassiveSkillNameDigit ]",
+  "18096100": "Entrada Críticos ↑ M +[Name:PassiveSkillNameDigit ]",
+  "18096200": "Orden Ataque Especial ↑ M +[Name:PassiveSkillNameDigit ]",
+  "13015900": "Acción Consumo Barra ↓ +[Name:PassiveSkillNameDigit ]",
+  "12021700": "Fallo Llenabarras +[Name:PassiveSkillNameDigit ]",
+  "13020900": "Mitiga Especial en Apuro +[Name:PassiveSkillNameDigit ]",
+  "16013800": "Defensa ↑ Compimpulsora ",
+  "16013900": "Defensa Esp. ↑ Compimpulsora",
+  "17045800": "Noqueo Siguiente Supereficaz ↑",
+  "18021200": "Inmunidad Precisión ↑"
 }

@@ -166,5 +166,20 @@
   "19020100": "Prem. Désesp. Résil. Phy. Équi.",
   "18090700": "Première Désespoir Déf. Spé. ↑ [Name:PassiveSkillNameDigit ]",
   "18041400": "Première Fatigue Esquive ↑ [Name:PassiveSkillNameDigit ]",
-  "18043500": "Première Fatigue Vitesse ↑ [Name:PassiveSkillNameDigit ]"
+  "18043500": "Première Fatigue Vitesse ↑ [Name:PassiveSkillNameDigit ]",
+  "12021600": "Coup de Grâce Jauge ↑ [Name:PassiveSkillNameDigit ]",
+  "17045100": "Prem. C. D. C. Suiv. Ultra-Eff.",
+  "17045200": "Fiasco Boost Capacité Physique [Name:PassiveSkillNameDigit ]",
+  "18070300": "Capa. Off. Drain Défense [Name:PassiveSkillNameDigit ]",
+  "18070400": "Capa. Off. Drain Défense Spé. [Name:PassiveSkillNameDigit ]",
+  "18070500": "Capa. Off. Drain Vitesse [Name:PassiveSkillNameDigit ]",
+  "18096100": "Arrivée Coach Critiques [Name:PassiveSkillNameDigit ]",
+  "18096200": "Capacité Dr. Coach Atq. Spé. [Name:PassiveSkillNameDigit ]",
+  "13015900": "Action Consommation ↓ [Name:PassiveSkillNameDigit ]",
+  "12021700": "Fiasco Jauge ↑ [Name:PassiveSkillNameDigit ]",
+  "13020900": "Désespoir Résil. Spé. [Name:PassiveSkillNameDigit ]",
+  "16013800": "Défense ↑ ⇒ Pui. Capa. Duo ↑",
+  "16013900": "Déf. Spé. ↑ ⇒ Pui. Capa. Duo ↑",
+  "17045800": "Coup de Grâce C. Suiv. Ultra-Eff.",
+  "18021200": "Immunité ↑Précision"
 }
