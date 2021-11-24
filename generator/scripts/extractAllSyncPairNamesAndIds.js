@@ -222,6 +222,16 @@ const arrayOfGridedTrainers = [
   10113400000, // Jasmine & Celesteela
   10125400000, // Guzma & Buzzwole
   10158400000, // Diantha & Keldeo
+  // 11/24
+  10048800000, // Grimsley & Bisharp
+  10106800000, // Elesa & Emolga
+  10120100000, // Lusamine & Necrozma
+  10247400000, // Leon & Calyrex
+  10249400000, // Nessa & Eiscue
+  10259000000, // Sonia & Yamper
+  10025000000, // Candice
+  10040000000, // Brycen
+  10036000000, // Sophocles & Togedemaru
 ];
 
 /*

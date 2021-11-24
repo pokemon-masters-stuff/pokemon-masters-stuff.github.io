@@ -375,5 +375,13 @@
   "999564": "Aumenta la potenza di questa mossa in proporzione alla riduzione dell'Attacco del bersaglio.",
   "999563": "Questa mossa aumenta di potenza quando la luce del sole è intensa.",
   "999562": "Aumenta la Velocità e la precisione di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
-  "999561": "Permette a Diancie di megaevolversi. L'effetto svanisce al termine della lotta."
+  "999561": "Permette a Diancie di megaevolversi. L'effetto svanisce al termine della lotta.",
+  "999560": "Aumenta l'Attacco e la Difesa di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+  "999559": "Inoltre, applica l'effetto \"Recupero costante PS\" a tutte le Unità alleate quando grandina.",
+  "999558": "Se chi la usa subisce un attacco semplice mentre è in uno stato di attesa per contrattacco, lo stato di attesa termina e l'Unità attacca l'avversario che ha sferrato il colpo.",
+  "999557": "Aumenta la potenza di questa mossa in proporzione alla riduzione della Difesa del bersaglio.",
+  "999556": "Aumenta la Difesa Speciale di tutte le Unità alleate di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+  "999555": "Riduce la Velocità di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+  "999554": "Applica l'effetto \"Protezione prossimo danno\" a un alleato.",
+  "999553": "Permette a Necrozma evolversi in UltraNecrozma. L'effetto svanisce al termine della lotta."
 }

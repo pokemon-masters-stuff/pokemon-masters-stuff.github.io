@@ -1086,6 +1086,13 @@ const extractSyncPairData = () => {
           maxMove1Id = 7001;
           maxMove2Id = 7005;
           maxMove3Id = 7010;
+        } else if (trainerIdFromList.toString() === '10106800000') {
+          // Elesa & Emolga
+          console.log('variation is dynamax');
+          isDynamax = true;
+          maxMove1Id = 7028;
+          maxMove2Id = 7027;
+          maxMove3Id = 7039;
         } else {
           console.log('variation is not dynamax');
           isDynamax = false;
@@ -1098,6 +1105,15 @@ const extractSyncPairData = () => {
           if (monsterBaseId.toString() === '2008771101') {
             // Morpeko
             monsterVariationFormBaseId = '2008771201';
+          } else if (monsterBaseId.toString() === '20058700') {
+            // Emolga
+            monsterVariationFormBaseId = '2005870081';
+          } else if (monsterBaseId.toString() === '20086512') {
+            //
+            monsterVariationFormBaseId = '20086514';
+          } else if (monsterBaseId.toString() === '2008751100') {
+            //
+            monsterVariationFormBaseId = '2008751200';
           } else {
             monsterVariationFormBaseId = (Number(monsterBaseId) + 1).toString(); // either ends in 51 or original number +1, even for Silvali and Mew
           }
@@ -1121,6 +1137,25 @@ const extractSyncPairData = () => {
         if (monsterBaseId.toString() === '20015000') {
           monsterVariationFormEntry = monsterVariationDB.entries.find(
             (monster) => monster.monsterId.toString() === '20140000001'
+          );
+        }
+
+        if (monsterBaseId.toString() === '20058700') {
+          // Emolga
+          monsterVariationFormEntry = monsterVariationDB.entries.find(
+            (monster) => monster.monsterId.toString() === '20106800000'
+          );
+        }
+        if (monsterBaseId.toString() === '20086512') {
+          //
+          monsterVariationFormEntry = monsterVariationDB.entries.find(
+            (monster) => monster.monsterId.toString() === '20120100000'
+          );
+        }
+        if (monsterBaseId.toString() === '2008751100') {
+          //
+          monsterVariationFormEntry = monsterVariationDB.entries.find(
+            (monster) => monster.monsterId.toString() === '20249400000'
           );
         }
 
@@ -1484,6 +1519,19 @@ const extractSyncPairData = () => {
             );
             maxMove3 = moveDB.entries.find(
               (move) => move.moveId.toString() === '7010'
+            );
+          }
+
+          if (trainerIdFromList.toString() === '10106800000') {
+            // Elesa & Emolga
+            maxMove1 = moveDB.entries.find(
+              (move) => move.moveId.toString() === '7028'
+            );
+            maxMove2 = moveDB.entries.find(
+              (move) => move.moveId.toString() === '7027'
+            );
+            maxMove3 = moveDB.entries.find(
+              (move) => move.moveId.toString() === '7039'
             );
           }
         }

@@ -25,10 +25,15 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10004400000, // Hilda & Diancie
-  10113400000, // Jasmine & Celesteela
-  10125400000, // Guzma & Buzzwole
-  10158400000, // Diantha & Keldeo
+  10048800000, // Grimsley & Bisharp
+  10106800000, // Elesa & Emolga
+  10120100000, // Lusamine & Necrozma
+  10247400000, // Leon & Calyrex
+  10249400000, // Nessa & Eiscue
+  10259000000, // Sonia & Yamper
+  10025000000, // Candice
+  10040000000, // Brycen
+  10036000000, // Sophocles & Togedemaru
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -112,6 +117,8 @@ export const type1SyncGrid = [
   '10021800000', // Blue & Aerodactyl
   '10004400000', // Hilda & Diancie
   '10125400000', // Guzma & Buzzwole
+  '10247400000', // Leon & Calyrex
+  '10120100000', // Lusamine & Necrozma
 ];
 
 export const type2SyncGrid = [
@@ -157,6 +164,12 @@ export const type2SyncGrid = [
   '10110100000', // Misty & Vaporeon
   '10159000000', // Darach & Staraptor
   '10158400000', // Diantha & Keldeo
+  '10048800000', // Grimsley & Bisharp
+  '10106800000', // Elesa & Emolga
+  '10249400000', // Nessa & Eiscue
+  '10036000000', // Sophocles & Togedemaru
+  '10025000000', // Candice
+  '10040000000', // Brycen
 ];
 
 export const type3SyncGrid = [
@@ -200,6 +213,7 @@ export const type3SyncGrid = [
   '10000800000', // Red & Snorlax
   '10095400000', // Caitlin & Sableye
   '10113400000', // Jasmine & Celesteela
+  '10259000000', // Sonia & Yamper
 ];
 
 export const CLOUD_FUNCTIONS_URL =

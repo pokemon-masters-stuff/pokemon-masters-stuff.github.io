@@ -375,5 +375,13 @@
   "999564": "The more the target’s Attack is lowered, the greater the power of this move.",
   "999563": "This move’s power increases when the weather is sunny.",
   "999562": "Raises the user’s Speed and accuracy by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
-  "999561": "Become Mega Diancie until the end of battle."
+  "999561": "Become Mega Diancie until the end of battle.",
+  "999560": "Raises the Attack and Defense of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+  "999559": "In addition, applies the Gradual Healing effect to all allied sync pairs during a hailstorm.",
+  "999558": "The user will leave this posture if hit by an attack move while it is in this counterattacking posture, then attacks the opponent that made the hit.",
+  "999557": "The more the target’s Defense is lowered, the greater the power of this move.",
+  "999556": "Raises the Sp. Def of all allied sync pairs by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+  "999555": "Lowers the user’s Speed by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+  "999554": "Applies the Damage Guard Next effect to an ally.",
+  "999553": "Become Ultra Necrozma until the end of battle."
 }

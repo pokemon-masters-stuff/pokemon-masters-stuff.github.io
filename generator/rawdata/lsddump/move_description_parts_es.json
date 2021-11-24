@@ -375,5 +375,13 @@
   "999564": "Cuanto más se haya reducido el Ataque del objetivo, más aumenta la potencia de este movimiento.",
   "999563": "Causa más daño cuando está soleado.",
   "999562": "Aumenta la Velocidad y la Precisión del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
-  "999561": "Evoluciona a Mega-Diancie. Vuelve a la normalidad tras terminar el combate."
+  "999561": "Evoluciona a Mega-Diancie. Vuelve a la normalidad tras terminar el combate.",
+  "999560": "Aumenta el Ataque y la Defensa del bando del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+  "999559": "Además, aplica el efecto Regeneración de PS al bando del usuario cuando graniza.",
+  "999558": "Si el usuario recibe un ataque mientras está en guardia, baja la guardia y contraataca.",
+  "999557": "Cuanto más se haya reducido la Defensa del objetivo, más aumenta la potencia de este movimiento.",
+  "999556": "Aumenta la Defensa Especial del bando del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+  "999555": "Reduce la Velocidad del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+  "999554": "Aplica el efecto Siguiente mitiga daño a un aliado.",
+  "999553": "Evoluciona a Ultra-Necrozma. Vuelve a la normalidad tras terminar el combate."
 }

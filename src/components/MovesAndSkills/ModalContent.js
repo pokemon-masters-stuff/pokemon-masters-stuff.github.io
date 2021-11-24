@@ -127,11 +127,19 @@ function Stats(props) {
   let baseSpe = Math.floor(lv140Spe + (selectedRarity - rarity) * 20);
 
   if (isVariationForm) {
+    // console.log(atkScale, defScale, spaScale, spdScale, speScale);
     atkUpFromVariation = Math.floor(baseAtk * (atkScale / 100 - 1));
     defUpFromVariation = Math.floor(baseDef * (defScale / 100 - 1));
     spaUpFromVariation = Math.floor(baseSpa * (spaScale / 100 - 1));
     spdUpFromVariation = Math.floor(baseSpd * (spdScale / 100 - 1));
     speUpFromVariation = Math.floor(baseSpe * (speScale / 100 - 1));
+    // console.log(
+    //   atkUpFromVariation,
+    //   defUpFromVariation,
+    //   spaUpFromVariation,
+    //   spdUpFromVariation,
+    //   speUpFromVariation
+    // );
   }
 
   return (
@@ -142,9 +150,7 @@ function Stats(props) {
           HP
         </TableCell>
         <TableCell align="right">{baseHp}</TableCell>
-        {isVariationForm && variationForm.isMega ? (
-          <TableCell align="right">{'-'}</TableCell>
-        ) : null}
+        {isVariationForm ? <TableCell align="right">{'-'}</TableCell> : null}
         {!isEgg ? (
           <>
             <TableCell align="right">{hpUpFromGrid || '-'}</TableCell>
@@ -167,14 +173,14 @@ function Stats(props) {
           Attack
         </TableCell>
         <TableCell align="right">{baseAtk}</TableCell>
-        {isVariationForm && variationForm.isMega ? (
+        {isVariationForm ? (
           <TableCell align="right">{atkUpFromVariation || '-'}</TableCell>
         ) : null}
         {!isEgg ? (
           <>
             <TableCell align="right">{atkUpFromGrid || '-'}</TableCell>
             <TableCell align="right">
-              {isVariationForm && variationForm.isMega
+              {isVariationForm
                 ? baseAtk + atkUpFromGrid + atkUpFromVariation
                 : baseAtk + atkUpFromGrid}
             </TableCell>
@@ -196,7 +202,7 @@ function Stats(props) {
           Defense
         </TableCell>
         <TableCell align="right">{baseDef}</TableCell>
-        {isVariationForm && variationForm.isMega ? (
+        {isVariationForm ? (
           <TableCell align="right">{defUpFromVariation || '-'}</TableCell>
         ) : null}
         {!isEgg ? (
@@ -225,14 +231,14 @@ function Stats(props) {
           Sp.Atk
         </TableCell>
         <TableCell align="right">{baseSpa}</TableCell>
-        {isVariationForm && variationForm.isMega ? (
+        {isVariationForm ? (
           <TableCell align="right">{spaUpFromVariation || '-'}</TableCell>
         ) : null}
         {!isEgg ? (
           <>
             <TableCell align="right">{spaUpFromGrid || '-'}</TableCell>
             <TableCell align="right">
-              {isVariationForm && variationForm.isMega
+              {isVariationForm
                 ? baseSpa + spaUpFromGrid + spaUpFromVariation
                 : baseSpa + spaUpFromGrid}
             </TableCell>
@@ -254,14 +260,14 @@ function Stats(props) {
           Sp.Def
         </TableCell>
         <TableCell align="right">{baseSpd}</TableCell>
-        {isVariationForm && variationForm.isMega ? (
+        {isVariationForm ? (
           <TableCell align="right">{spdUpFromVariation || '-'}</TableCell>
         ) : null}
         {!isEgg ? (
           <>
             <TableCell align="right">{spdUpFromGrid || '-'}</TableCell>
             <TableCell align="right">
-              {isVariationForm && variationForm.isMega
+              {isVariationForm
                 ? baseSpd + spdUpFromGrid + spdUpFromVariation
                 : baseSpd + spdUpFromGrid}
             </TableCell>
@@ -283,14 +289,14 @@ function Stats(props) {
           Speed
         </TableCell>
         <TableCell align="right">{baseSpe}</TableCell>
-        {isVariationForm && variationForm.isMega ? (
+        {isVariationForm ? (
           <TableCell align="right">{speUpFromVariation || '-'}</TableCell>
         ) : null}
         {!isEgg ? (
           <>
             <TableCell align="right">{speUpFromGrid || '-'}</TableCell>
             <TableCell align="right">
-              {isVariationForm && variationForm.isMega
+              {isVariationForm
                 ? baseSpe + speUpFromGrid + speUpFromVariation
                 : baseSpe + speUpFromGrid}
             </TableCell>
@@ -1103,8 +1109,10 @@ export default function MovesAndSkillsModalContent(props) {
               <TableCell />
               <TableCell>Lv140 Stats</TableCell>
               <TableCell align="right">Base</TableCell>
-              {isVariationForm && variationForm.isMega ? (
-                <TableCell align="right">Mega</TableCell>
+              {isVariationForm ? (
+                <TableCell align="right">
+                  {variationForm.isMega ? 'Mega' : 'Variation'}
+                </TableCell>
               ) : null}
               {!isEgg ? (
                 <TableCell align="right">Grid</TableCell>

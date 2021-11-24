@@ -375,5 +375,13 @@
   "999564": "Plus l'Attaque de l'ennemi a été baissée, plus cette capacité est puissante.",
   "999563": "Augmente la puissance de la capacité quand le soleil brille.",
   "999562": "Augmente la Vitesse et la Précision du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
-  "999561": "Permet à Diancie de devenir Méga-Diancie jusqu'à la fin du combat."
+  "999561": "Permet à Diancie de devenir Méga-Diancie jusqu'à la fin du combat.",
+  "999560": "Augmente l'Attaque et la Défense de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+  "999559": "Applique en plus l'effet Régénération lente PV à tous les Duos alliés quand il grêle.",
+  "999558": "S'il subit une attaque pendant sa préparation, le lanceur abandonne cette posture puis attaque l'ennemi à l'origine du coup.",
+  "999557": "Plus la Défense de l'ennemi a été baissée, plus cette capacité est puissante.",
+  "999556": "Augmente la Déf. Spé. de tous les Duos alliés de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+  "999555": "Baisse la Vitesse du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+  "999554": "Applique l'effet Prochain Garde à un allié.",
+  "999553": "Permet à Necrozma de devenir Ultra-Necrozma jusqu'à la fin du combat."
 }

@@ -375,5 +375,13 @@
   "999564": "Je stärker der Angriff des Zieles gesenkt wurde, desto mehr wird die Stärke dieser Attacke erhöht.",
   "999563": "Die Stärke dieser Attacke steigt bei starkem Sonnenlicht.",
   "999562": "Erhöht die Initiative und die Genauigkeit des Anwenders um [Digit:1digit ].",
-  "999561": "Löst bei Diancie bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Diancie aus."
+  "999561": "Löst bei Diancie bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Diancie aus.",
+  "999560": "Erhöht den Angriff und die Verteidigung aller Gefährten im Team um [Digit:1digit ].",
+  "999559": "Verursacht bei Hagel zusätzlich bei allen Gefährten im Team den Effekt KP-Regenerierung.",
+  "999558": "Wenn der Anwender während der Bereitschaft mit einer Attacke angegriffen wird, verlässt der Anwender die Bereitschaft und führt einen Gegenangriff durch.",
+  "999557": "Je stärker die Verteidigung des Zieles gesenkt wurde, desto mehr wird die Stärke dieser Attacke erhöht.",
+  "999556": "Erhöht die Spezial-Verteidigung aller Gefährten im Team um [Digit:1digit Idx=\"2\" ].",
+  "999555": "Senkt die Initiative des Anwenders um [Digit:1digit Idx=\"2\" ].",
+  "999554": "Verursacht bei einem Gefährten den Effekt Folge-Schadensschutz.",
+  "999553": "Wird zu Ultra-Necrozma bis zum Ende des Kampes."
 }
