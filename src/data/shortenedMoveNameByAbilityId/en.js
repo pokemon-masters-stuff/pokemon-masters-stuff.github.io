@@ -1450,7 +1450,7 @@ export default {
   2100824003: 'G.L. +3',
   2200429005: 'M.S. Acc +5',
   2200429010: 'M.S. Acc +10',
-  2200556010: 'Icicle Crash Acc +10',
+  2200556010: 'I.C. Acc +10',
   1101130200000: 'Critical Healing 2',
   1201070300000: 'Precognition 3',
   1202010300103: 'Screech MGR 3',
