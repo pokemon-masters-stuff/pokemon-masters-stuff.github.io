@@ -88,17 +88,20 @@ const extractAllGrids = () => {
   let isGrided = false;
 
   let trainerList = [];
+  let trainersWithInconsecutiveCellIds = [];
 
   trainerAbilityDB.entries.forEach((entry) => {
     trainerList.push(entry.trainerId);
   });
 
   trainerList.forEach((trainerId) => {
+    let areCellIdsConsecutive = true;
     if (gridedTrainerList.includes(trainerId)) {
       isGrided = true;
     }
 
     languages.forEach((language) => {
+      let arrayOfCellIds = [];
       const abilities = [];
       let ability = {};
 
@@ -111,6 +114,8 @@ const extractAllGrids = () => {
           let orbCost = orbs;
           const coords = triangularCoordsToCollumns({ x, y, z });
           let move = {};
+
+          arrayOfCellIds.push(cellId);
 
           ability = abilityDB.entries.find(
             (ability) => ability.abilityId === abilityId
@@ -180,6 +185,12 @@ const extractAllGrids = () => {
         }
       });
 
+      for (let i = 0; i < arrayOfCellIds.length - 1; i++) {
+        if (arrayOfCellIds[i + 1] - arrayOfCellIds[i] !== 1) {
+          areCellIdsConsecutive = false;
+        }
+      }
+
       fs.writeFile(
         `${__dirname}/../../src/data/grids/${language}/${trainerId}.json`,
         JSON.stringify(abilities),
@@ -195,6 +206,13 @@ const extractAllGrids = () => {
 
       return abilities;
     });
+
+    if (areCellIdsConsecutive === false) {
+      trainersWithInconsecutiveCellIds.push(trainerId);
+      console.log(
+        `WARNING: trainerId: ${trainerId} - cellIds not consecutive.`
+      );
+    }
   });
 
   if (isGrided) {
@@ -202,6 +220,14 @@ const extractAllGrids = () => {
       exportStatements += `${language}: {${exportStrings[language]}},`;
     });
 
+    fs.writeFile(
+      `${__dirname}/../data/trainersWithInconsecutiveCellIds.json`,
+      JSON.stringify(trainersWithInconsecutiveCellIds),
+      (err) => {
+        if (err) throw err;
+        console.log('Successfully written to file');
+      }
+    );
     fs.writeFile(
       `${__dirname}/../../src/data/index.js`,
       exportStatementsForIndex,

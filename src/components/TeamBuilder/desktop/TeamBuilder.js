@@ -110,9 +110,8 @@ function TeamBuilder() {
 
               getQueryStringValue(`g${index}`, location.search).map((id) => {
                 if (
-                  allSyncGrids[language][
-                    `trainerId_${syncPairTrainerId}_GridData${language.toUpperCase()}`
-                  ][Number(id)]
+                  syncPairTrainerId.toString() !== '10140000000' ||
+                  Number(id) <= 5
                 ) {
                   cellData =
                     allSyncGrids[language][

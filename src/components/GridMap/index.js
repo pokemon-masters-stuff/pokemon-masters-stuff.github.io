@@ -81,11 +81,8 @@ class GridMap extends Component {
 
           getQueryStringValue('grid').map((id) => {
             if (
-              allSyncGrids[this.props.language][
-                `trainerId_${
-                  this.props.trainerId
-                }_GridData${this.props.language.toUpperCase()}`
-              ][Number(id)]
+              this.props.trainerId.toString() !== '10140000000' ||
+              Number(id) <= 5
             ) {
               cellData =
                 allSyncGrids[this.props.language][
