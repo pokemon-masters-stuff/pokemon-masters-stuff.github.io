@@ -22,6 +22,9 @@ import MenuList from '@material-ui/core/MenuList';
 import { typesByLanguage, rolesByLanguage } from '../../utils/constants';
 import UI from '../../utils/translations';
 import { icons } from '../../images/Icons/exportImagesAsObject';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import TextField from '@material-ui/core/TextField';
+import syncPairNamesAndIds from '../../data/syncPairNamesAndIds.json';
 
 function SelectPokemonModal(props) {
   const dispatch = useDispatch();
@@ -37,6 +40,20 @@ function SelectPokemonModal(props) {
   const [role, setRole] = useState('none');
   const [type, setType] = useState(0);
   const language = useSelector((state) => state.language.currentLanguage);
+  let syncPairs = Object.values(syncPairNamesAndIds);
+  let gridedSyncPairs = [];
+  let eggSyncPairs = [];
+
+  syncPairs.forEach((syncPair) => {
+    if (syncPair.isGrided) {
+      gridedSyncPairs.push(syncPair);
+    }
+    if (syncPair.isEggmon) {
+      eggSyncPairs.push(syncPair);
+    }
+  });
+
+  let syncPairArray = isEgg ? eggSyncPairs : gridedSyncPairs;
 
   const handleCloseSelectPokemonModal = (event) => {
     setIsSelectPokemonModalOpen(false);
@@ -142,6 +159,41 @@ function SelectPokemonModal(props) {
             ))}
           </Select>
         </FormControl>
+        <Autocomplete
+          id={`sync-pair-filter`}
+          size="small"
+          disablePortal
+          disableClearable
+          value={
+            syncPairNamesAndIds[trainerId] ? syncPairNamesAndIds[trainerId] : ''
+          }
+          options={syncPairArray.sort((a, b) => {
+            let x = a['syncPairNameByLanguage'][language];
+            let y = b['syncPairNameByLanguage'][language];
+            return x < y ? -1 : x > y ? 1 : 0;
+          })}
+          getOptionLabel={(option) =>
+            option['syncPairNameByLanguage']
+              ? option.isEggmon
+                ? `${option['syncPairNameByLanguage'][language]} (${option['roleTypeNameByLanguage'][language]})`
+                : option['syncPairNameByLanguage'][language]
+              : ''
+          }
+          autoComplete
+          includeInputInList
+          onChange={(event, value) =>
+            handleSelectPokemon(event, value ? value.trainerId : trainerId)
+          }
+          renderInput={(params) => (
+            <TextField
+              style={{ left: 10, width: '90%' }}
+              {...params}
+              margin="normal"
+              placeholder={UI['Sync Pair'][language]}
+            />
+          )}
+        />
+
         <MenuList>
           {usedAsFilter ? (
             <MenuItem
