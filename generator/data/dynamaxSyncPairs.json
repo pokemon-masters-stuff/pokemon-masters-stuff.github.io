@@ -1,0 +1,46 @@
+{
+  "10000800000": {
+    "syncPairEnglishName": "Red & Snorlax",
+    "trainerId": "10000800000",
+    "trainerBaseId": "10000080",
+    "monsterId": "20000800000",
+    "monsterBaseId": "20014300",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false,
+    "isDynamax": true
+  },
+  "10106800000": {
+    "syncPairEnglishName": "Elesa & Emolga",
+    "trainerId": "10106800000",
+    "trainerBaseId": "10010680",
+    "monsterId": "20106800000",
+    "monsterBaseId": "20058700",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false,
+    "isDynamax": true
+  },
+  "10247100000": {
+    "syncPairEnglishName": "Leon & Eternatus",
+    "trainerId": "10247100000",
+    "trainerBaseId": "10024710",
+    "monsterId": "20247100000",
+    "monsterBaseId": "2008900000",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false,
+    "isDynamax": true
+  },
+  "10251000000": {
+    "syncPairEnglishName": "Allister & Gengar",
+    "trainerId": "10251000000",
+    "trainerBaseId": "10025100",
+    "monsterId": "20251000000",
+    "monsterBaseId": "20009400",
+    "isGrided": true,
+    "isEggmon": false,
+    "isBP": false,
+    "isDynamax": true
+  }
+}

@@ -3,6 +3,7 @@ const fs = require('fs');
 const monsterDB = require('../rawdata/protodump/Monster.json');
 const monsterBaseDB = require('../rawdata/protodump/MonsterBase.json');
 const monsterEvolutionDB = require('../rawdata/protodump/MonsterEvolution.json');
+const monsterVariationDB = require('../rawdata/protodump/MonsterVariation.json');
 const trainerDB = require('../rawdata/protodump/Trainer.json');
 const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
 
@@ -242,11 +243,13 @@ const extractAllSyncPairNamesAndIds = () => {
   let isNew = false;
   let isEggmon = false;
   let isBP = false;
+  let isDynamax = false;
   let arrayOfOldTrainerIds = [];
   let syncPairNamesAndIds = {};
   let newSyncPairs = {};
   let newGridedSyncPairs = {};
   let allGridedSyncPairs = {};
+  let dynamaxSyncPairs = {};
   let pokemonImagesExportStatementsForIndex = '';
 
   let importStatements = ''; // for Pokemon images
@@ -327,6 +330,26 @@ const extractAllSyncPairNamesAndIds = () => {
       isBP = true;
     } else {
       isBP = false;
+    }
+
+    let monsterVariation = monsterVariationDB.entries.find(
+      (monsterVariation) =>
+        monsterVariation.monsterId.toString() === monsterId.toString()
+    );
+
+    if (monsterVariation) {
+      if (
+        monsterVariation.moveDynamax1Id !== -1 ||
+        monsterVariation.moveDynamax2Id !== -1 ||
+        monsterVariation.moveDynamax3Id !== -1 ||
+        monsterVariation.moveDynamax4Id !== -1
+      ) {
+        isDynamax = true;
+      } else {
+        isDynamax = false;
+      }
+    } else {
+      isDynamax = false;
     }
 
     // // ===================================================================
@@ -524,6 +547,7 @@ const extractAllSyncPairNamesAndIds = () => {
             isGrided: isGrided,
             isEggmon: isEggmon,
             isBP: isBP,
+            isDynamax: isDynamax,
           };
         }
       } else {
@@ -547,6 +571,7 @@ const extractAllSyncPairNamesAndIds = () => {
           isGrided: isGrided,
           isEggmon: isEggmon,
           isBP: isBP,
+          isDynamax: isDynamax,
         };
       }
     } else {
@@ -577,6 +602,7 @@ const extractAllSyncPairNamesAndIds = () => {
           isGrided: isGrided,
           isEggmon: isEggmon,
           isBP: isBP,
+          isDynamax: isDynamax,
         };
       }
     }
@@ -591,6 +617,7 @@ const extractAllSyncPairNamesAndIds = () => {
         isGrided: isGrided,
         isEggmon: isEggmon,
         isBP: isBP,
+        isDynamax: isDynamax,
       };
 
       if (
@@ -617,6 +644,7 @@ const extractAllSyncPairNamesAndIds = () => {
         isGrided: isGrided,
         isEggmon: isEggmon,
         isBP: isBP,
+        isDynamax: isDynamax,
       };
 
       if (isGrided) {
@@ -629,8 +657,27 @@ const extractAllSyncPairNamesAndIds = () => {
           isGrided: isGrided,
           isEggmon: isEggmon,
           isBP: isBP,
+          isDynamax: isDynamax,
         };
       }
+    }
+
+    if (isDynamax) {
+      // console.log(
+      //   `{trainerId: ${trainerId.toString()}}, // ${syncPairEnglishName}`
+      // );
+      // console.log(`${trainerId.toString()}, // ${syncPairEnglishName}`);
+      dynamaxSyncPairs[trainerId] = {
+        syncPairEnglishName: syncPairEnglishName,
+        trainerId: trainerId.toString(),
+        trainerBaseId: trainerBaseId.toString(),
+        monsterId: monsterId.toString(),
+        monsterBaseId: updatedMonsterBaseId.toString(),
+        isGrided: isGrided,
+        isEggmon: isEggmon,
+        isBP: isBP,
+        isDynamax: isDynamax,
+      };
     }
   });
 
@@ -689,6 +736,7 @@ const extractAllSyncPairNamesAndIds = () => {
     isGrided: false,
     isEggmon: true,
     isBP: false,
+    isDynamax: false,
   };
 
   fs.writeFile(
@@ -721,6 +769,15 @@ const extractAllSyncPairNamesAndIds = () => {
   fs.writeFile(
     `${__dirname}/../data/allGridedSyncPairs.json`,
     JSON.stringify(allGridedSyncPairs),
+    (err) => {
+      if (err) throw err;
+      console.log('Successfully written to file');
+    }
+  );
+
+  fs.writeFile(
+    `${__dirname}/../data/dynamaxSyncPairs.json`,
+    JSON.stringify(dynamaxSyncPairs),
     (err) => {
       if (err) throw err;
       console.log('Successfully written to file');

@@ -149,7 +149,11 @@ const moveTargetTypeDB = {
   zh: moveTargetTypeDBzh,
 };
 
-const { gridedTrainerList, languages } = require('../utils/constants');
+const {
+  gridedTrainerList,
+  dynamaxTrainerList,
+  languages,
+} = require('../utils/constants');
 
 const {
   getUpdatedMoveDescription,
@@ -200,6 +204,10 @@ const extractSyncPairData = () => {
 
     if (gridedTrainerList.includes(trainerIdFromList)) {
       isGrided = true;
+    }
+
+    if (dynamaxTrainerList.includes(trainerIdFromList)) {
+      isDynamax = true;
     }
 
     let pokemonNameByLanguage = {
@@ -1048,9 +1056,10 @@ const extractSyncPairData = () => {
         // }
 
         if (
-          monsterBaseId.toString() === '21038400' ||
-          (pokemonNameDBen[potentialMegaBaseId] &&
-            trainerIdFromList.toString() !== '10247000000') // Leon's Charizard doesn't mega evolve
+          (monsterBaseId.toString() === '21038400' ||
+            (pokemonNameDBen[potentialMegaBaseId] &&
+              trainerIdFromList.toString() !== '10247000000')) && // Leon's Charizard doesn't mega evolve
+          !isDynamax
         ) {
           console.log('variation is mega');
           isMega = true;
@@ -1065,38 +1074,40 @@ const extractSyncPairData = () => {
           isMega = false;
         }
 
-        let maxMove1Id;
-        let maxMove2Id;
-        let maxMove3Id;
-        if (trainerIdFromList.toString() === '10247100000') {
-          // SS Leon & Eternatus
-          console.log('variation is dynamax');
-          isDynamax = true;
-          maxMove1Id = 7002;
-        } else if (trainerIdFromList.toString() === '10000800000') {
-          // Red & Snorlax
-          console.log('variation is dynamax');
-          isDynamax = true;
-          maxMove1Id = 7000;
-          maxMove2Id = 7005;
-        } else if (trainerIdFromList.toString() === '10251000000') {
-          // Allister & Gengar
-          console.log('variation is dynamax');
-          isDynamax = true;
-          maxMove1Id = 7001;
-          maxMove2Id = 7005;
-          maxMove3Id = 7010;
-        } else if (trainerIdFromList.toString() === '10106800000') {
-          // Elesa & Emolga
-          console.log('variation is dynamax');
-          isDynamax = true;
-          maxMove1Id = 7028;
-          maxMove2Id = 7027;
-          maxMove3Id = 7039;
-        } else {
-          console.log('variation is not dynamax');
-          isDynamax = false;
-        }
+        // let maxMove1Id;
+        // let maxMove2Id;
+        // let maxMove3Id;
+        // let maxMove4Id;
+
+        // if (trainerIdFromList.toString() === '10247100000') {
+        //   // SS Leon & Eternatus
+        //   console.log('variation is dynamax');
+        //   isDynamax = true;
+        //   maxMove1Id = 7002;
+        // } else if (trainerIdFromList.toString() === '10000800000') {
+        //   // Red & Snorlax
+        //   console.log('variation is dynamax');
+        //   isDynamax = true;
+        //   maxMove1Id = 7000;
+        //   maxMove2Id = 7005;
+        // } else if (trainerIdFromList.toString() === '10251000000') {
+        //   // Allister & Gengar
+        //   console.log('variation is dynamax');
+        //   isDynamax = true;
+        //   maxMove1Id = 7001;
+        //   maxMove2Id = 7005;
+        //   maxMove3Id = 7010;
+        // } else if (trainerIdFromList.toString() === '10106800000') {
+        //   // Elesa & Emolga
+        //   console.log('variation is dynamax');
+        //   isDynamax = true;
+        //   maxMove1Id = 7028;
+        //   maxMove2Id = 7027;
+        //   maxMove3Id = 7039;
+        // } else {
+        //   console.log('variation is not dynamax');
+        //   isDynamax = false;
+        // }
         if (isDynamax) {
           monsterVariationFormBaseId = monsterBaseId.toString();
         }
@@ -1105,14 +1116,11 @@ const extractSyncPairData = () => {
           if (monsterBaseId.toString() === '2008771101') {
             // Morpeko
             monsterVariationFormBaseId = '2008771201';
-          } else if (monsterBaseId.toString() === '20058700') {
-            // Emolga
-            monsterVariationFormBaseId = '2005870081';
           } else if (monsterBaseId.toString() === '20086512') {
-            //
+            // Lusamine & Necrozma
             monsterVariationFormBaseId = '20086514';
           } else if (monsterBaseId.toString() === '2008751100') {
-            //
+            // Nessa & Eiscue
             monsterVariationFormBaseId = '2008751200';
           } else {
             monsterVariationFormBaseId = (Number(monsterBaseId) + 1).toString(); // either ends in 51 or original number +1, even for Silvali and Mew
@@ -1126,12 +1134,12 @@ const extractSyncPairData = () => {
           (monster) => monster.monsterId.toString() === monsterId.toString()
         );
 
-        // Steven & Rayquaza
-        if (monsterBaseId.toString() === '21038400') {
-          monsterVariationFormEntry = monsterVariationDB.entries.find(
-            (monster) => monster.monsterId.toString() === '20090500000'
-          );
-        }
+        // // Steven & Rayquaza
+        // if (monsterBaseId.toString() === '21038400') {
+        //   monsterVariationFormEntry = monsterVariationDB.entries.find(
+        //     (monster) => monster.monsterId.toString() === '20090500000'
+        //   );
+        // }
 
         // Giovanni & Mewtwo
         if (monsterBaseId.toString() === '20015000') {
@@ -1139,25 +1147,18 @@ const extractSyncPairData = () => {
             (monster) => monster.monsterId.toString() === '20140000001'
           );
         }
-
-        if (monsterBaseId.toString() === '20058700') {
-          // Emolga
-          monsterVariationFormEntry = monsterVariationDB.entries.find(
-            (monster) => monster.monsterId.toString() === '20106800000'
-          );
-        }
-        if (monsterBaseId.toString() === '20086512') {
-          //
-          monsterVariationFormEntry = monsterVariationDB.entries.find(
-            (monster) => monster.monsterId.toString() === '20120100000'
-          );
-        }
-        if (monsterBaseId.toString() === '2008751100') {
-          //
-          monsterVariationFormEntry = monsterVariationDB.entries.find(
-            (monster) => monster.monsterId.toString() === '20249400000'
-          );
-        }
+        // if (monsterBaseId.toString() === '20086512') {
+        //   // Lusamine & Necrozma
+        //   monsterVariationFormEntry = monsterVariationDB.entries.find(
+        //     (monster) => monster.monsterId.toString() === '20120100000'
+        //   );
+        // }
+        // if (monsterBaseId.toString() === '2008751100') {
+        //   // Nessa & Eiscue
+        //   monsterVariationFormEntry = monsterVariationDB.entries.find(
+        //     (monster) => monster.monsterId.toString() === '20249400000'
+        //   );
+        // }
 
         const { atkScale, defScale, spaScale, spdScale, speScale } =
           monsterVariationFormEntry;
@@ -1268,6 +1269,16 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove4NameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
 
         let variationMove1DescriptionByLanguage = {
@@ -1331,6 +1342,16 @@ const extractSyncPairData = () => {
             zh: '',
           },
           maxMove3DescriptionByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
+          },
+          maxMove4DescriptionByLanguage = {
             de: '',
             en: '',
             es: '',
@@ -1410,6 +1431,16 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove4TargetTypeByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
 
         let variationMove1TypeNameByLanguage = {
@@ -1481,6 +1512,16 @@ const extractSyncPairData = () => {
             ja: '',
             ko: '',
             zh: '',
+          },
+          maxMove4TypeNameByLanguage = {
+            de: '',
+            en: '',
+            es: '',
+            fr: '',
+            it: '',
+            ja: '',
+            ko: '',
+            zh: '',
           };
         // Use variationMoveId to find variationMove data, eg. power, accuracy, etc. from Move.json
         let variationMove1,
@@ -1489,52 +1530,53 @@ const extractSyncPairData = () => {
           variationMove4,
           maxMove1,
           maxMove2,
-          maxMove3;
+          maxMove3,
+          maxMove4;
 
-        if (isDynamax) {
-          if (trainerIdFromList.toString() === '10247100000') {
-            // SS Leon & Eternatus
-            maxMove1 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7002' // Eternabeam
-            );
-          }
+        // if (isDynamax) {
+        //   if (trainerIdFromList.toString() === '10247100000') {
+        //     // SS Leon & Eternatus
+        //     maxMove1 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7002' // Eternabeam
+        //     );
+        //   }
 
-          if (trainerIdFromList.toString() === '10000800000') {
-            // Red & Snorlax
-            maxMove1 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7000'
-            );
-            maxMove2 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7005'
-            );
-          }
+        //   if (trainerIdFromList.toString() === '10000800000') {
+        //     // Red & Snorlax
+        //     maxMove1 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7000'
+        //     );
+        //     maxMove2 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7005'
+        //     );
+        //   }
 
-          if (trainerIdFromList.toString() === '10251000000') {
-            // Allister & Gengar
-            maxMove1 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7001'
-            );
-            maxMove2 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7005'
-            );
-            maxMove3 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7010'
-            );
-          }
+        //   if (trainerIdFromList.toString() === '10251000000') {
+        //     // Allister & Gengar
+        //     maxMove1 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7001'
+        //     );
+        //     maxMove2 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7005'
+        //     );
+        //     maxMove3 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7010'
+        //     );
+        //   }
 
-          if (trainerIdFromList.toString() === '10106800000') {
-            // Elesa & Emolga
-            maxMove1 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7028'
-            );
-            maxMove2 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7027'
-            );
-            maxMove3 = moveDB.entries.find(
-              (move) => move.moveId.toString() === '7039'
-            );
-          }
-        }
+        //   if (trainerIdFromList.toString() === '10106800000') {
+        //     // Elesa & Emolga
+        //     maxMove1 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7028'
+        //     );
+        //     maxMove2 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7027'
+        //     );
+        //     maxMove3 = moveDB.entries.find(
+        //       (move) => move.moveId.toString() === '7039'
+        //     );
+        //   }
+        // }
 
         monsterVariationFormEntry.move1Id !== -1
           ? (variationMove1 = moveDB.entries.find(
@@ -1562,6 +1604,35 @@ const extractSyncPairData = () => {
               (move) =>
                 move.moveId.toString() ===
                 monsterVariationFormEntry.move4Id.toString()
+            ))
+          : null;
+
+        monsterVariationFormEntry.moveDynamax1Id !== -1
+          ? (maxMove1 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterVariationFormEntry.moveDynamax1Id.toString()
+            ))
+          : null;
+        monsterVariationFormEntry.moveDynamax2Id !== -1
+          ? (maxMove2 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterVariationFormEntry.moveDynamax2Id.toString()
+            ))
+          : null;
+        monsterVariationFormEntry.moveDynamax3Id !== -1
+          ? (maxMove3 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterVariationFormEntry.moveDynamax3Id.toString()
+            ))
+          : null;
+        monsterVariationFormEntry.moveDynamax4Id !== -1
+          ? (maxMove4 = moveDB.entries.find(
+              (move) =>
+                move.moveId.toString() ===
+                monsterVariationFormEntry.moveDynamax4Id.toString()
             ))
           : null;
 
@@ -1623,11 +1694,11 @@ const extractSyncPairData = () => {
           // max move
           maxMove1 &&
             (maxMove1NameByLanguage[language] =
-              moveNameDB[language][maxMove1Id]);
+              moveNameDB[language][maxMove1.moveId]);
 
           maxMove1 &&
             (maxMove1DescriptionByLanguage[language] =
-              getUpdatedMoveDescription(language, maxMove1Id));
+              getUpdatedMoveDescription(language, maxMove1.moveId));
 
           maxMove1 &&
             (maxMove1TargetTypeByLanguage[language] =
@@ -1639,11 +1710,11 @@ const extractSyncPairData = () => {
 
           maxMove2 &&
             (maxMove2NameByLanguage[language] =
-              moveNameDB[language][maxMove2Id]);
+              moveNameDB[language][maxMove2.moveId]);
 
           maxMove2 &&
             (maxMove2DescriptionByLanguage[language] =
-              getUpdatedMoveDescription(language, maxMove2Id));
+              getUpdatedMoveDescription(language, maxMove2.moveId));
 
           maxMove2 &&
             (maxMove2TargetTypeByLanguage[language] =
@@ -1655,11 +1726,11 @@ const extractSyncPairData = () => {
 
           maxMove3 &&
             (maxMove3NameByLanguage[language] =
-              moveNameDB[language][maxMove3Id]);
+              moveNameDB[language][maxMove3.moveId]);
 
           maxMove3 &&
             (maxMove3DescriptionByLanguage[language] =
-              getUpdatedMoveDescription(language, maxMove3Id));
+              getUpdatedMoveDescription(language, maxMove3.moveId));
 
           maxMove3 &&
             (maxMove3TargetTypeByLanguage[language] =
@@ -1668,6 +1739,22 @@ const extractSyncPairData = () => {
           maxMove3 &&
             (maxMove3TypeNameByLanguage[language] =
               motifTypeNameDB[language][maxMove3.type]);
+
+          maxMove4 &&
+            (maxMove4NameByLanguage[language] =
+              moveNameDB[language][maxMove4.moveId]);
+
+          maxMove4 &&
+            (maxMove4DescriptionByLanguage[language] =
+              getUpdatedMoveDescription(language, maxMove4.moveId));
+
+          maxMove4 &&
+            (maxMove4TargetTypeByLanguage[language] =
+              moveTargetTypeDB[language][maxMove4.target]);
+
+          maxMove4 &&
+            (maxMove4TypeNameByLanguage[language] =
+              motifTypeNameDB[language][maxMove4.type]);
         });
 
         variationMove1 &&
@@ -1801,6 +1888,25 @@ const extractSyncPairData = () => {
               power: maxMove3.power,
               accuracy: maxMove3.accuracy,
               maxUses: maxMove3.maxUses,
+            },
+          });
+        maxMove4 &&
+          (variationMoves = {
+            ...variationMoves,
+            maxMove4: {
+              id: maxMove4.moveId,
+              name: maxMove4NameByLanguage,
+              description: maxMove4DescriptionByLanguage,
+              category: maxMove4.category,
+              group: maxMove4.group,
+              type: maxMove4.type,
+              typeName: maxMove4TypeNameByLanguage,
+              target: maxMove4.target,
+              targetType: maxMove4TargetTypeByLanguage,
+              gaugeDrain: maxMove4.gaugeDrain,
+              power: maxMove4.power,
+              accuracy: maxMove4.accuracy,
+              maxUses: maxMove4.maxUses,
             },
           });
 

@@ -1041,22 +1041,19 @@ export default function MovesAndSkillsModalContent(props) {
   }
 
   if (isDynamaxForm) {
-    let count = Object.keys(variationForm.moves).length;
+    postVariationMoves = [];
 
-    if (count === 3) {
-      postVariationMoves = [
-        variationForm.moves.maxMove1,
-        variationForm.moves.maxMove2,
-        variationForm.moves.maxMove3,
-      ];
-    } else if (count === 2) {
-      postVariationMoves = [
-        variationForm.moves.maxMove1,
-        variationForm.moves.maxMove2,
-      ];
-    } else {
-      postVariationMoves = [variationForm.moves.maxMove1];
-    }
+    variationForm.moves.maxMove1 &&
+      postVariationMoves.push(variationForm.moves.maxMove1);
+
+    variationForm.moves.maxMove2 &&
+      postVariationMoves.push(variationForm.moves.maxMove2);
+
+    variationForm.moves.maxMove3 &&
+      postVariationMoves.push(variationForm.moves.maxMove3);
+
+    variationForm.moves.maxMove4 &&
+      postVariationMoves.push(variationForm.moves.maxMove4);
   }
 
   return (
