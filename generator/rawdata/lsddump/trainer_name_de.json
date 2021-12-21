@@ -145,6 +145,7 @@
   "ch0159": "Perenus",
   "ch0160": "Tracy",
   "ch0161": "Hala",
+  "ch0162": "Lucius",
   "ch0170": "Artie",
   "ch0183": "Marlon",
   "ch0190": "Ryuki",
@@ -156,6 +157,10 @@
   "ch0198": "Lotte",
   "ch0205": "Soir",
   "ch0215": "Xenia",
+  "ch0217": "LeBelle",
+  "ch0225": "Mars",
+  "ch0226": "Jupiter",
+  "ch0227": "Saturn",
   "ch0240": "Jessie",
   "ch0241": "James",
   "ch0243": "Gloria",
@@ -169,5 +174,7 @@
   "ch0257": "Roy",
   "ch0259": "Sania",
   "ch0640": "Rüpel von Team Rocket",
-  "ch0641": "Rüpel von Team Rocket"
+  "ch0641": "Rüpel von Team Rocket",
+  "ch0538": "Galaktik Rüpel",
+  "ch0539": "Galaktik Rüpel"
 }

@@ -145,6 +145,7 @@
   "ch0159": "Darach",
   "ch0160": "Lana",
   "ch0161": "Hala",
+  "ch0162": "Lucas",
   "ch0170": "Burgh",
   "ch0183": "Molayne",
   "ch0190": "Ryuki",
@@ -156,6 +157,10 @@
   "ch0198": "Lucy",
   "ch0205": "Evelyn",
   "ch0215": "Lisia",
+  "ch0217": "Looker",
+  "ch0225": "Mars",
+  "ch0226": "Jupiter",
+  "ch0227": "Saturn",
   "ch0240": "Jessie",
   "ch0241": "James",
   "ch0243": "Gloria",
@@ -169,5 +174,7 @@
   "ch0257": "Raihan",
   "ch0259": "Sonia",
   "ch0640": "Team Rocket Grunt",
-  "ch0641": "Team Rocket Grunt"
+  "ch0641": "Team Rocket Grunt",
+  "ch0538": "Team Galactic Grunt",
+  "ch0539": "Team Galactic Grunt"
 }

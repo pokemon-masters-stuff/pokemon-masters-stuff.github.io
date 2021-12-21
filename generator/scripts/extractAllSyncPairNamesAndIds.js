@@ -233,6 +233,14 @@ const arrayOfGridedTrainers = [
   10025000000, // Candice
   10040000000, // Brycen
   10036000000, // Sophocles & Togedemaru
+  // 12/21
+  10091200000, // Cynthia & Giratina
+  10114400000, // Sabrina & Chingling
+  10115400000, // Volkner & Electivire
+  10162000000, // Lucas & Dialga
+  10023000000, // Cheryl & Blissey
+  10027000000, // Gardenia & Roserade
+  10041000000, // Thorton & Bronzong
 ];
 
 /*

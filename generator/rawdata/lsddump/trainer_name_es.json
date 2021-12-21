@@ -145,6 +145,7 @@
   "ch0159": "Kokuran",
   "ch0160": "Nereida",
   "ch0161": "Kaudan",
+  "ch0162": "León",
   "ch0170": "Camus",
   "ch0183": "Lario",
   "ch0190": "Olano",
@@ -156,6 +157,10 @@
   "ch0198": "Fortunia",
   "ch0205": "Vésper",
   "ch0215": "Ariana",
+  "ch0217": "Handsome",
+  "ch0225": "Venus",
+  "ch0226": "Ceres",
+  "ch0227": "Saturno",
   "ch0240": "Jessie",
   "ch0241": "James",
   "ch0243": "Gloria",
@@ -169,5 +174,7 @@
   "ch0257": "Roy",
   "ch0259": "Sonia",
   "ch0640": "Recluta del Team Rocket",
-  "ch0641": "Recluta del Team Rocket"
+  "ch0641": "Recluta del Team Rocket",
+  "ch0538": "Recluta del Equipo Galaxia",
+  "ch0539": "Recluta del Equipo Galaxia"
 }

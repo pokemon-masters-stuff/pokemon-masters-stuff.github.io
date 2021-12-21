@@ -145,6 +145,7 @@
   "ch0159": "Parsley",
   "ch0160": "Néphie",
   "ch0161": "Pectorius",
+  "ch0162": "Louka",
   "ch0170": "Artie",
   "ch0183": "Molène",
   "ch0190": "Solane",
@@ -156,6 +157,10 @@
   "ch0198": "Charline",
   "ch0205": "Vesper",
   "ch0215": "Atalante",
+  "ch0217": "Beladonis",
+  "ch0225": "Mars",
+  "ch0226": "Jupiter",
+  "ch0227": "Saturne",
   "ch0240": "Jessie",
   "ch0241": "James",
   "ch0243": "Gloria",
@@ -169,5 +174,7 @@
   "ch0257": "Roy",
   "ch0259": "Sonya",
   "ch0640": "Sbire Team Rocket",
-  "ch0641": "Sbire Team Rocket"
+  "ch0641": "Sbire Team Rocket",
+  "ch0538": "Sbire Team Galaxie",
+  "ch0539": "Sbire Team Galaxie"
 }

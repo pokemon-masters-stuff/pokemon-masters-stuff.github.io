@@ -783,7 +783,7 @@
   "62800": "Gesteinsstoß der heißblütigen Prinzessin",
   "84900": "Kampfstoß deines schlimmsten Alptraums",
   "85000": "Stahlstoß des stählernen Herzens",
-  "85100": "Wasserstrahl der glorreichen Zukunft",
+  "85100": "Kampfstrahl der glorreichen Zukunft",
   "368": "Metallstoß",
   "664": "Prisma-Laser",
   "824": "Blizzardlanze",
@@ -801,5 +801,18 @@
   "86400": "Stromstoß der Wahrheitsfindung",
   "87800": "Eisstoß der tosenden Fluten",
   "87900": "Eisstoß des stolzen Champs",
-  "88200": "Elektrostrahl des Supermodels"
+  "88200": "Elektrostrahl des Supermodels",
+  "459": "Zeitenlärm",
+  "467": "Schemenkraft",
+  "9512": "Schemenkraft",
+  "10912": "Die Untersuchung\nbeginnt!",
+  "11144": "Ich schärfe\nmeinen Verstand!",
+  "11154": "Wir stehen unter\nStrom!",
+  "11620": "Wir kämpfen\nzusammen!",
+  "19640": "Geisterstärke",
+  "19650": "Drachenstärke",
+  "86500": "Schemenkraft der Zerrwelt",
+  "86600": "Zeitenlärm des sanften Lichts",
+  "86700": "Psychostrahl eines ruhigen Jahres",
+  "86800": "Elektrostrahl des besten Jahres"
 }

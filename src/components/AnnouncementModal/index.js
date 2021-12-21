@@ -64,6 +64,11 @@ const AnnouncementModal = (props) => {
             to Mewtwo's grid.
             <br />
             <br />
+            12/21/2021:
+            <br />
+            Added new grids.
+            <br />
+            <br />
             11/24/2021:
             <br />
             Added new grids.

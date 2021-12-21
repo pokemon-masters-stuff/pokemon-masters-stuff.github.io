@@ -145,6 +145,7 @@
   "ch0159": "Paride",
   "ch0160": "Suiren",
   "ch0161": "Hala",
+  "ch0162": "Lucas",
   "ch0170": "Artemisio",
   "ch0183": "Tapso",
   "ch0190": "Morel",
@@ -156,6 +157,10 @@
   "ch0198": "Fortunata",
   "ch0205": "Vespera",
   "ch0215": "Orthilla",
+  "ch0217": "Bellocchio",
+  "ch0225": "Martes",
+  "ch0226": "Giovia",
+  "ch0227": "Saturno",
   "ch0240": "Jessie",
   "ch0241": "James",
   "ch0243": "Gloria",
@@ -169,5 +174,7 @@
   "ch0257": "Laburno",
   "ch0259": "Sonia",
   "ch0640": "Recluta del Team Rocket",
-  "ch0641": "Recluta del Team Rocket"
+  "ch0641": "Recluta del Team Rocket",
+  "ch0538": "Recluta del Team Galassia",
+  "ch0539": "Recluta del Team Galassia"
 }
