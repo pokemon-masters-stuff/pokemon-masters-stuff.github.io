@@ -117,7 +117,6 @@ export const type1SyncGrid = [
   '10125400000', // Guzma & Buzzwole
   '10247400000', // Leon & Calyrex
   '10120100000', // Lusamine & Necrozma
-  '10114400000', // Sabrina & Chingling
   '10115400000', // Volkner & Electivire
   '10027000000', // Gardenia & Roserade
 ];
