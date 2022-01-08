@@ -467,7 +467,7 @@ export default {
   1306020310150: 'R.H.D. MPR 3',
   1306020311110: 'N.O.N MPR 3',
   1306020410911: 'EotP MPR 4',
-  1601100500000: 'Static S.R.',
+  1601100500000: 'Static Shock 5',
   1601180500000: 'Sand Blaster 5',
   1601200500000: 'F.Burn 5',
   1601210500000: 'Flinch Hitter 5',
