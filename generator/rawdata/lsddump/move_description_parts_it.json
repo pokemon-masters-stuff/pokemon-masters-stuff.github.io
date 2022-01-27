@@ -253,7 +253,7 @@
   "999686": "Annulla le trasformazioni del campo di lotta e della zona.",
   "999685": "Annulla gli effetti sul campo avversario.",
   "999684": "Riduce l'elusione del bersaglio di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
-  "999683": "Aumenta la Difesa, l'Attacco Speciale e la Difesa Speciale di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ]. Queste statistiche aumentano invece di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] quando il campo di lotta è un Campo Elettrico.",
+  "999683": "Aumenta la Difesa, l'Attacco Speciale e la Difesa Speciale di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ]. Queste statistiche aumentano invece di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] quando il campo di lotta è un Campo Psichico.",
   "999682": "Permette ad Altaria di megaevolversi. L'effetto svanisce al termine della lotta.",
   "999681": "Questa mossa aumenta di potenza quando non sono presenti effetti né sul campo avversario né sull'intero campo di lotta, inclusi cambiamenti atmosferici, e trasformazioni del campo di lotta o della zona.",
   "999680": "Ha una certa probabilità ([Digit:2digits ]%) di scottare, paralizza o congela il bersaglio.",
@@ -394,5 +394,16 @@
   "999545": "Questa mossa aumenta di potenza in presenza di una Zona Spettro.",
   "999544": "Questa mossa aumenta di potenza in presenza di una Zona Drago.",
   "999543": "Trasforma una zona in una Zona Spettro. (La Zona Spettro aumenta la potenza degli attacchi di tipo Spettro.)",
-  "999542": "Trasforma una zona in una Zona Drago.\n (La Zona Drago aumenta la potenza degli attacchi di tipo Drago.)"
+  "999542": "Trasforma una zona in una Zona Drago.\n (La Zona Drago aumenta la potenza degli attacchi di tipo Drago.)",
+  "999541": "Chi la usa recupera PS per circa il [Digit:2digits ]% dei suoi PS massimi. I PS vengono invece recuperati del [Digit:2digits Idx=\"1\" ]% quando la luce del sole è intensa, e del [Digit:2digits Idx=\"2\" ]% quando piove, grandina o durante una tempesta di sabbia.",
+  "999540": "Aumenta la Difesa, la Difesa Speciale e la probabilità di mandare a segno brutti colpi per tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+  "999539": "Inoltre, aumenta l'effetto \"Prossima mossa fisica ↑\" di tutte le Unità alleate di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] quando grandina.",
+  "999538": "Trasforma una zona in una Zona Buio. (La Zona Buio aumenta la potenza degli attacchi di tipo Buio.)",
+  "999537": "Trasforma una zona in una Zona Acciaio. (La Zona Acciaio aumenta la potenza degli attacchi di tipo Acciaio.)",
+  "999536": "Permette a Mawile di megaevolversi. L'effetto svanisce al termine della lotta.",
+  "999535": "Questa mossa aumenta di potenza in presenza di una Zona Acciaio.",
+  "999534": "Fa recuperare PS a tutte le Unità alleate tranne a chi la usa per circa il [Digit:2digits ]% dei loro PS massimi. Aumenta la percentuale in proporzione al livello mosse di chi la usa. Ogni livello mosse in più aumenta la quantità di PS recuperati del 5%. Il recupero massimo di PS è di circa il [Digit:2digits Idx=\"1\" ]% dei PS massimi.",
+  "999533": "Tutte le Unità alleate guariscono dalla confusione, dal tentennamento e dall'imprigionamento.",
+  "999532": "Aggiunge [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"3\" S=\"barretta\" P=\"barrette\" ] alla barra mosse di chi la usa.",
+  "999531": "Questa mossa aumenta di potenza in presenza di una Zona Buio."
 }

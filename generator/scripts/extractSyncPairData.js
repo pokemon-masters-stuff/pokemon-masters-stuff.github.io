@@ -1064,6 +1064,10 @@ const extractSyncPairData = () => {
           console.log('variation is mega');
           isMega = true;
           monsterVariationFormBaseId = potentialMegaBaseId;
+
+          if (monsterBaseId.toString() === '20030301') {
+            monsterVariationFormBaseId = '20030352'; // Marnie & Mawile
+          }
         } else if (monsterBaseId.toString() === '20015000') {
           // Mewtwo
           console.log('variation is mega');
@@ -1179,7 +1183,7 @@ const extractSyncPairData = () => {
             monsterBase.monsterBaseId.toString() ===
             monsterVariationFormBaseId.toString()
         );
-        // console.log('monsterVariationFormBaseId', monsterVariationFormBaseId);
+        console.log('monsterVariationFormBaseId', monsterVariationFormBaseId);
         variationFormPassiveId = variationMonsterBase.formPassiveId;
         variationFormId = variationMonsterBase.formId;
 

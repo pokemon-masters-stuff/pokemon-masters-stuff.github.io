@@ -292,7 +292,7 @@
   "999647": "When used by Lopunny, raises the user’s evasiveness by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
   "999646": "If the user’s Lopunny has Mega Evolved, raises the user’s accuracy by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
   "999645": "If the user’s Lopunny has Mega Evolved, raises the user’s evasiveness by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
-  "999644": "Uses a maximum of [Digit:1digit Idx=\"1\" ] [EN:Qty S=\"slot\" P=\"slots\" ] of the user’s move gauge. The more amount used, the more this move raises Attack and Sp. Atk of all allied sync pairs (can be raised by up to [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] maximum).",
+  "999644": "Uses a maximum of [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"slot\" P=\"slots\" ] of the user’s move gauge. The more amount used, the more this move raises Attack and Sp. Atk of all allied sync pairs (can be raised by up to [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] maximum).",
   "999643": "After this sync move is used for the first time each battle, it becomes Fighting type until the end of battle.",
   "999642": "Raises the target’s Attack by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
   "999641": "In addition, raises the user’s Speed by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] when the weather is rainy.",
@@ -394,5 +394,16 @@
   "999545": "This move’s power increases when the zone is Ghost Zone.",
   "999544": "This move’s power increases when the zone is Dragon Zone.",
   "999543": "Changes a zone to a Ghost Zone. (A Ghost Zone powers up Ghost-type attacks.)",
-  "999542": "Changes a zone to a Dragon Zone. (A Dragon Zone powers up Dragon-type attacks.)"
+  "999542": "Changes a zone to a Dragon Zone. (A Dragon Zone powers up Dragon-type attacks.)",
+  "999541": "Restores the user’s HP by approximately [Digit:2digits ]% of its maximum HP. HP is restored by [Digit:2digits Idx=\"1\" ]% instead when the weather is sunny, and [Digit:2digits Idx=\"2\" ]% when the weather is rainy or during a hailstorm or a sandstorm.",
+  "999540": "Raises the Defense, Sp. Def, and critical-hit rate of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+  "999539": "In addition, increases the Physical Moves ↑ Next effect of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] during a hailstorm.",
+  "999538": "Changes a zone to a Dark Zone. (A Dark Zone powers up Dark-type attacks.)",
+  "999537": "Changes a zone to a Steel Zone. (A Steel Zone powers up Steel-type attacks.)",
+  "999536": "Become Mega Mawile until the end of battle.",
+  "999535": "This move’s power increases when the zone is Steel Zone.",
+  "999534": "Restores the HP of all allied sync pairs other than the user by approximately [Digit:2digits ]% of their maximum HP. The higher the user’s move level, the higher this percentage is. (Each additional move level increases the amount of HP restored by 5%. The maximum HP restoration is approximately [Digit:2digits Idx=\"1\" ]% of their maximum HP.)",
+  "999533": "Removes the confused, flinching, and trapped conditions from all allied sync pairs.",
+  "999532": "Charges the user’s move gauge by [Digit:1digit Idx=\"2\" ].",
+  "999531": "This move’s power increases when the zone is Dark Zone."
 }

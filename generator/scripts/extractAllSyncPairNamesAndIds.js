@@ -241,6 +241,15 @@ const arrayOfGridedTrainers = [
   10023000000, // Cheryl & Blissey
   10027000000, // Gardenia & Roserade
   10041000000, // Thorton & Bronzong
+  // 1/27/2022
+  10021900000, // Blue & Arcanine
+  10116100000, // Dawn & Cresselia
+  10194100000, // Cyrus & Darkrai
+  10245410000, // Marnie & Mawile
+  10250400000, // Bea & Vanilluxe
+  10053000000, // Grant & Aurorus
+  10057000000, // Bruno & Machamp
+  10096000000, // Siebold & Clawitzer
 ];
 
 /*

@@ -394,5 +394,16 @@
   "999545": "Die Stärke dieser Attacke steigt, wenn der Geister-Fokus aktiv ist.",
   "999544": "Die Stärke dieser Attacke steigt, wenn der Drachen-Fokus aktiv ist.",
   "999543": "Wechselt in den Geister-Fokus. (Der Geister-Fokus verstärkt Angriffe vom Typ Geist.)",
-  "999542": "Wechselt in den Drachen-Fokus. (Der Drachen-Fokus verstärkt Angriffe vom Typ Drache.)"
+  "999542": "Wechselt in den Drachen-Fokus. (Der Drachen-Fokus verstärkt Angriffe vom Typ Drache.)",
+  "999541": "Stellt die KP des Anwenders um etwa [Digit:2digits ] % seiner maximalen KP wieder her. Die KP werden bei starkem Sonnenlicht stattdessen um [Digit:2digits Idx=\"1\" ] % und bei Regen, Hagel oder einem Sandsturm um [Digit:2digits Idx=\"2\" ] % wiederhergestellt.",
+  "999540": "Erhöht die Verteidigung, Spezial-Verteidigung und Volltrefferquote aller Gefährten im Team um [Digit:1digit ].",
+  "999539": "Erhöht bei Hagel zusätzlich den Effekt Folge-Phys.-Attacke↑ aller Gefährten im Team um [Digit:1digit Idx=\"1\" ].",
+  "999538": "Wechselt in den Unlicht-Fokus. (Der Unlicht-Fokus verstärkt Angriffe vom Typ Unlicht.)",
+  "999537": "Wechselt in den Stahl-Fokus. (Der Stahl-Fokus verstärkt Angriffe vom Typ Stahl.)",
+  "999536": "Löst bei Flunkifer bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Flunkifer aus.",
+  "999535": "Die Stärke dieser Attacke steigt, wenn der Stahl-Fokus aktiv ist.",
+  "999534": "Stellt bei allen anderen Gefährten im Team außer dem Anwender etwa [Digit:2digits ] % ihrer maximalen KP wieder her. Je höher das Attacken-Level des Anwenders, desto höher ist dieser Prozentsatz. (Jedes zusätzliche Attacken-Level erhöht die Menge der wiederhergestellten KP um 5 %. Die maximale KP-Wiederherstellung liegt bei ungefähr [Digit:2digits Idx=\"1\" ] % der maximalen KP.)",
+  "999533": "Befreit alle Gefährten im Team, die zurückgeschreckt, verwirrt oder umschlungen sind, von dem Zustand.",
+  "999532": "Füllt die Attackenleiste deines Teams um [Digit:1digit Idx=\"2\" ] [DE:Qty Ref=\"3\" S=\"Segment\" P=\"Segmente\" ] auf.",
+  "999531": "Die Stärke dieser Attacke steigt, wenn der Unlicht-Fokus aktiv ist."
 }

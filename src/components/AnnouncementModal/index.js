@@ -58,6 +58,11 @@ const AnnouncementModal = (props) => {
             them later. Sorry for the inconvenience.
             <br />
             <br />
+            1/27/2022:
+            <br />
+            Added new grids.
+            <br />
+            <br />
             12/12/2021:
             <br />
             Added search field in the pokemon dropdown. Also fixed a bug related
