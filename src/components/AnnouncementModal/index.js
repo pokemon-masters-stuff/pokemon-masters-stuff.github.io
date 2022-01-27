@@ -60,7 +60,7 @@ const AnnouncementModal = (props) => {
             <br />
             1/27/2022:
             <br />
-            Added new grids.
+            Added new grids and eggmon.
             <br />
             <br />
             12/12/2021:
