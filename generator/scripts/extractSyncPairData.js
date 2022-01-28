@@ -890,7 +890,7 @@ const extractSyncPairData = () => {
             1: 1,
             2: 10, // flying
             3: 3,
-            4: 4,
+            4: 2, // fire
             5: 5,
             6: 6,
             7: 13, // rock
@@ -2251,7 +2251,7 @@ const extractSyncPairData = () => {
               1: 1,
               2: 10, // flying
               3: 3,
-              4: 4,
+              4: 2, // fire
               5: 5,
               6: 6,
               7: 13, // rock
