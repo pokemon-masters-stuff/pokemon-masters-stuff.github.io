@@ -33,6 +33,7 @@ export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
   10053000000, // Grant & Aurorus
   10057000000, // Bruno & Machamp
   10096000000, // Siebold & Clawitzer
+  10194000000, // Cyrus & Palkia
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [

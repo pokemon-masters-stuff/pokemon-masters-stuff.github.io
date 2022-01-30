@@ -1662,4 +1662,5 @@ export default {
   1809810900000: 'Snow Sentinel 9',
   1902170100236: 'Moonlight CR',
   2201020200093: 'Confusion Aggr. 2',
+  1301230100460: 'S.R. RS',
 };
