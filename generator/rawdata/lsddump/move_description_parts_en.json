@@ -270,7 +270,7 @@
   "999669": "No other actions can be taken while bouncing.",
   "999668": "Most moves used by opponents will not hit the user while it is bouncing.",
   "999667": "If the user is attacked by a sync move or max move while bouncing, it will stop bouncing.",
-  "999666": "When the user does not have a sync buff, also applies the Supereffective ↑ Next effect to the user.",
+  "999666": "When the user does not have a sync buff, also applies the Supereffective ↑ Next effect to the user.",
   "999665": "Raises the user’s Attack, Sp. Atk, and accuracy by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
   "999664": "The user takes damage equal to [Digit:2digits Idx=\"2\" ]% of its remaining HP.",
   "999663": "Raises the user’s Speed, accuracy, and critical-hit rate by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
@@ -405,5 +405,13 @@
   "999534": "Restores the HP of all allied sync pairs other than the user by approximately [Digit:2digits ]% of their maximum HP. The higher the user’s move level, the higher this percentage is. (Each additional move level increases the amount of HP restored by 5%. The maximum HP restoration is approximately [Digit:2digits Idx=\"1\" ]% of their maximum HP.)",
   "999533": "Removes the confused, flinching, and trapped conditions from all allied sync pairs.",
   "999532": "Charges the user’s move gauge by [Digit:1digit Idx=\"2\" ].",
-  "999531": "This move’s power increases when the zone is Dark Zone."
+  "999531": "This move’s power increases when the zone is Dark Zone.",
+  "999530": "Makes the weather sunny.",
+  "999529": "Applies the Supereffective ↑ Next effect to all allied sync pairs when weather conditions are in effect.",
+  "999528": "Changes a zone to a Flying Zone. (A Flying Zone powers up Flying-type attacks.)",
+  "999527": "Become Mega Latias until the end of battle.",
+  "999526": "The more the target’s Sp. Atk is lowered, the greater the power of this move.",
+  "999525": "This move’s power increases when the zone is Flying Zone.",
+  "999524": "This move’s power increases when weather conditions are in effect.",
+  "999509": "Lowers the Attack of all opposing sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ]."
 }

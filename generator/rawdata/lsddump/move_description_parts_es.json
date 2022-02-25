@@ -193,7 +193,7 @@
   "999746": "Reduce la Defensa y la Defensa Especial del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
   "999745": "Si el Charizard del usuario ha megaevolucionado, aumenta el Ataque de dicho usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
   "999744": "Se reduce en [Digit:1digit ] el contador de movimientos compi de un aliado.",
-  "999743": "Aumenta la Precisión y la probabilidad de asestar golpes críticos de un compi aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]. Cuando el bando del usuario está lleno de determinación, en su lugar las aumenta en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+  "999743": "Aumenta la Precisión y la probabilidad de asestar golpes críticos de un compi aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]. Cuando el bando del usuario está lleno de determinación, en su lugar las aumenta en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
   "999742": "Aumenta el Ataque Especial de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
   "999741": "Aumenta la Precisión de un aliado en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
   "999740": "Aumenta la Defensa Especial y la Velocidad del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
@@ -404,6 +404,14 @@
   "999535": "La potencia de este movimiento aumenta cuando la zona es Zona Acero.",
   "999534": "Recupera aproximadamente un [Digit:2digits ]% de los PS máximos del bando del usuario, exceptuando al usuario. Cuanto mayor sea el nivel de movimiento del usuario, mayor será este porcentaje. (Cada nivel de movimiento adicional aumenta la cantidad de PS que se restauran en un 5%. La restauración de PS máxima es aproximadamente un [Digit:2digits Idx=\"1\" ]% de sus PS máximos).",
   "999533": "El bando del usuario se cura de retroceso, confusión o ataduras.",
-  "999532": "Llena [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"3\" S=\"punto\" P=\"puntos\" ] la barra de movimientos del usuario.",
-  "999531": "La potencia de este movimiento aumenta cuando la zona es Zona Siniestra."
+  "999532": "Llena [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"punto\" P=\"puntos\" ] la barra de movimientos del usuario.",
+  "999531": "La potencia de este movimiento aumenta cuando la zona es Zona Siniestra.",
+  "999530": "Hace que el tiempo cambie a soleado.",
+  "999529": "Aplica el efecto Siguiente Supereficaz ↑ al bando del usuario cuando hay condiciones atmosféricas activas.",
+  "999528": "Crea una Zona Voladora. (La Zona Voladora potencia los ataques de tipo Volador).",
+  "999527": "Evoluciona a Mega-Latias. Vuelve a la normalidad tras terminar el combate.",
+  "999526": "Cuanto más se haya reducido el Ataque Especial del objetivo, más aumenta la potencia de este movimiento.",
+  "999525": "La potencia de este movimiento aumenta cuando la zona es Voladora.",
+  "999524": "La potencia de este movimiento aumenta cuando hay condiciones atmosféricas activas.",
+  "999509": "Reduce el Ataque del bando rival en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ]."
 }

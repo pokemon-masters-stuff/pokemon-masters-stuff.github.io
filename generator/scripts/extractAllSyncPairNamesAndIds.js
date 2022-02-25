@@ -250,6 +250,20 @@ const arrayOfGridedTrainers = [
   10053000000, // Grant & Aurorus
   10057000000, // Bruno & Machamp
   10096000000, // Siebold & Clawitzer
+  // 2/24/2022
+  10016500000, // Skyla & Tornadus
+  10126500000, // May & Latias
+  10257400000, // Raihan & Flygon
+
+  // 18000020601, // Hero & Snorlax
+  // 19999000015, // Lillie & Prinplup
+  // 19999000016, // Hero & Grotle
+  // 19999000017, // Hero & Serperior
+  // 19999000018, // Hero & Serperior
+  // 19999000020, // Hero & Delphox
+  // 19999000021, // Hero & Tyranitar
+  // 19999000022, // Lillie & Kommo-o
+  // 19999000023, // Rosa & Hydreigon
 ];
 
 /*

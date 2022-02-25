@@ -25,15 +25,9 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10021900000, // Blue & Arcanine
-  10116100000, // Dawn & Cresselia
-  10194100000, // Cyrus & Darkrai
-  10245410000, // Marnie & Mawile
-  10250400000, // Bea & Vanilluxe
-  10053000000, // Grant & Aurorus
-  10057000000, // Bruno & Machamp
-  10096000000, // Siebold & Clawitzer
-  10194000000, // Cyrus & Palkia
+  10016500000, // Skyla & Tornadus
+  10126500000, // May & Latias
+  10257400000, // Raihan & Flygon
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -182,6 +176,9 @@ export const type2SyncGrid = [
   '10053000000', // Grant & Aurorus
   '10194100000', // Cyrus & Darkrai
   '10245410000', // Marnie & Mawile
+  '10016500000', // Skyla & Tornadus
+  '10126500000', // May & Latias
+  '10257400000', // Raihan & Flygon
 ];
 
 export const type3SyncGrid = [
