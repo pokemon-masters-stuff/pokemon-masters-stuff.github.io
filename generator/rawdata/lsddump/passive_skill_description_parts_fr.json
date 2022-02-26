@@ -697,6 +697,11 @@
   "p999302": "Quand les effets additionnels des capacités du lanceur baissent une stat d'un ennemi, celle-ci baisse de neuf fois les rangs.",
   "p999301": "Quand les effets additionnels des capacités du lanceur baissent une stat d'un ennemi, celle-ci baisse de dix fois les rangs.",
   "p999300": "L'Attaque, la Défense, l'Atq. Spé., la Déf. Spé. et la Vitesse du lanceur augmentent de 30 % lorsque les conditions météo sont actives.",
+  "p999299": "Augmente la puissance des capacités du lanceur quand la cible est sous l'effet Carcan.",
+  "p999298": "Augmente la puissance de la capacité Duo du lanceur quand la cible est sous l'effet Carcan.",
+  "p999297": "Plus l'Atq. Spé. du lanceur est augmentée, plus ses capacités Duo sont puissantes.",
+  "p999296": "Augmente l'effet Prochain boost capacité physique et Prochain boost capacité spéciale du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] la première fois qu'il arrive au combat à chaque combat.",
+  "p999295": "Augmente de [Digit:2digits ] % la puissance des capacités offensives et de [Digit:2digits Idx=\"1\" ] % la résistance aux capacités offensives de tous les Duos alliés. Plus il y a de Duos avec [Name:ReferencedMessageTag Idx=\"2\" ] dans votre équipe, plus cet effet est puissant. (Chaque Duo supplémentaire augmente de [Digit:2digits Idx=\"3\" ] % la puissance des capacités et de 3 % la résistance. L'augmentation maximum est de [Digit:2digits Idx=\"4\" ] % pour la puissance des capacités et [Digit:2digits Idx=\"5\" ] % pour la résistance aux dégâts.)",
   "p999294": "Augmente la puissance des capacités du lanceur de type Psy.",
   "p999293": "Change les capacités de type Normal en type Plante."
 }

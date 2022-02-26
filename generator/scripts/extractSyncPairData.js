@@ -1126,6 +1126,9 @@ const extractSyncPairData = () => {
           } else if (monsterBaseId.toString() === '2008751100') {
             // Nessa & Eiscue
             monsterVariationFormBaseId = '2008751200';
+          } else if (monsterBaseId.toString() === '20077000') {
+            // Zygarde
+            monsterVariationFormBaseId = '20077015';
           } else {
             monsterVariationFormBaseId = (Number(monsterBaseId) + 1).toString(); // either ends in 51 or original number +1, even for Silvali and Mew
           }

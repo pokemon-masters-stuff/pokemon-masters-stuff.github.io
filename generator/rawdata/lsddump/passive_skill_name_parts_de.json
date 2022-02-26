@@ -286,6 +286,10 @@
   "22010709": "Senkungschance+Effekt × 10",
   "23011100": "Wetterwechsel-5 Werte↑",
   "51302080": "Feldeffektfrei-P-Att.+GA↓5 [Name:PassiveSkillNameDigit ]",
+  "13016500": "Gg.-W.-Sperre-P-Att.+GA-Strk.↑ [Name:PassiveSkillNameDigit ]",
+  "16014400": "Sp.-Angriff↑GA-Stärke↑",
+  "17047300": "Erstantritt-Phys.+Sp.-Boost [Name:PassiveSkillNameDigit ]",
+  "28010800": "Die Seele von Kalos",
   "13017200": "Psycho-Stärke↑ [Name:PassiveSkillNameDigit ]",
   "13050600": "Pflanzen-Wechsel"
 }

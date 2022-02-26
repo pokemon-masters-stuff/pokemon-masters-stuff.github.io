@@ -86,7 +86,7 @@ const UI = {
     es: 'Pokémon huevo',
     fr: 'Pokémon œuf',
     ja: 'エッグポケモン',
-    ko: '달걀 포켓몬',
+    ko: '알 포켓몬',
     it: 'Pokémon uovo',
     zh: '神奇寶貝蛋',
   },

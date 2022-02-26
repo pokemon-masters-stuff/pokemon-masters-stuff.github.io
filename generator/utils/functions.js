@@ -141,46 +141,68 @@ const passiveSkillDescriptionDB = {
 };
 
 const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
+  // let updatedStr = str
+  //   .split('[Digit:1digit ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param1)
+  //   .split('[Digit:1digit Idx="1" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param2)
+  //   .split('[Digit:1digit Idx="2" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param3)
+  //   .split('[Digit:1digit Idx="3" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param4)
+  //   .split('[Digit:1digit Idx="4" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param5)
+  //   .split('[Digit:1digit Idx="5" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param6)
+  //   .split('[Digit:1digit Idx="6" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param7)
+  //   .split('[Digit:1digit Idx="7" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param8)
+  //   .split('[Digit:1digit Idx="8" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param9)
+  //   .split('[Digit:1digit Idx="9" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param10)
+  //   .split('[Digit:2digits ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param1)
+  //   .split('[Digit:2digits Idx="1" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param2)
+  //   .split('[Digit:2digits Idx="2" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param3)
+  //   .split('[Digit:2digits Idx="3" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param4)
+  //   .split('[Digit:2digits Idx="4" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param5)
+  //   .split('[Digit:2digits Idx="5" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param6)
+  //   .split('[Digit:2digits Idx="6" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param7)
+  //   .split('[Digit:2digits Idx="7" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param8)
+  //   .split('[Digit:2digits Idx="8" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param9)
+  //   .split('[Digit:2digits Idx="9" ]')
+  //   .join(moveAndPassiveSkillDigitEntry.param10);
+
   let updatedStr = str
     .split('[Digit:1digit ]')
-    .join(moveAndPassiveSkillDigitEntry.param1)
-    .split('[Digit:1digit Idx="1" ]')
     .join(moveAndPassiveSkillDigitEntry.param2)
-    .split('[Digit:1digit Idx="2" ]')
-    .join(moveAndPassiveSkillDigitEntry.param3)
-    .split('[Digit:1digit Idx="3" ]')
+    .split('[Digit:1digit Idx="1" ]')
     .join(moveAndPassiveSkillDigitEntry.param4)
-    .split('[Digit:1digit Idx="4" ]')
-    .join(moveAndPassiveSkillDigitEntry.param5)
-    .split('[Digit:1digit Idx="5" ]')
+    .split('[Digit:1digit Idx="2" ]')
     .join(moveAndPassiveSkillDigitEntry.param6)
-    .split('[Digit:1digit Idx="6" ]')
-    .join(moveAndPassiveSkillDigitEntry.param7)
-    .split('[Digit:1digit Idx="7" ]')
+    .split('[Digit:1digit Idx="3" ]')
     .join(moveAndPassiveSkillDigitEntry.param8)
-    .split('[Digit:1digit Idx="8" ]')
-    .join(moveAndPassiveSkillDigitEntry.param9)
-    .split('[Digit:1digit Idx="9" ]')
+    .split('[Digit:1digit Idx="4" ]')
     .join(moveAndPassiveSkillDigitEntry.param10)
     .split('[Digit:2digits ]')
-    .join(moveAndPassiveSkillDigitEntry.param1)
-    .split('[Digit:2digits Idx="1" ]')
     .join(moveAndPassiveSkillDigitEntry.param2)
-    .split('[Digit:2digits Idx="2" ]')
-    .join(moveAndPassiveSkillDigitEntry.param3)
-    .split('[Digit:2digits Idx="3" ]')
+    .split('[Digit:2digits Idx="1" ]')
     .join(moveAndPassiveSkillDigitEntry.param4)
-    .split('[Digit:2digits Idx="4" ]')
-    .join(moveAndPassiveSkillDigitEntry.param5)
-    .split('[Digit:2digits Idx="5" ]')
+    .split('[Digit:2digits Idx="2" ]')
     .join(moveAndPassiveSkillDigitEntry.param6)
-    .split('[Digit:2digits Idx="6" ]')
-    .join(moveAndPassiveSkillDigitEntry.param7)
-    .split('[Digit:2digits Idx="7" ]')
+    .split('[Digit:2digits Idx="3" ]')
     .join(moveAndPassiveSkillDigitEntry.param8)
-    .split('[Digit:2digits Idx="8" ]')
-    .join(moveAndPassiveSkillDigitEntry.param9)
-    .split('[Digit:2digits Idx="9" ]')
+    .split('[Digit:2digits Idx="4" ]')
     .join(moveAndPassiveSkillDigitEntry.param10);
 
   if (updatedStr.includes('Qty')) {
@@ -193,25 +215,47 @@ const replaceDigit = (str, moveAndPassiveSkillDigitEntry, language) => {
 
       for (const Ref of arrayOfRefs) {
         let param;
+        // if (Ref.toString() === '1') {
+        //   param = moveAndPassiveSkillDigitEntry.param2;
+        // } else if (Ref.toString() === '2') {
+        //   param = moveAndPassiveSkillDigitEntry.param3;
+        // } else if (Ref.toString() === '3') {
+        //   param = moveAndPassiveSkillDigitEntry.param4;
+        // } else if (Ref.toString() === '4') {
+        //   param = moveAndPassiveSkillDigitEntry.param5;
+        // } else if (Ref.toString() === '5') {
+        //   param = moveAndPassiveSkillDigitEntry.param6;
+        // } else if (Ref.toString() === '6') {
+        //   param = moveAndPassiveSkillDigitEntry.param7;
+        // } else if (Ref.toString() === '7') {
+        //   param = moveAndPassiveSkillDigitEntry.param8;
+        // } else if (Ref.toString() === '8') {
+        //   param = moveAndPassiveSkillDigitEntry.param9;
+        // } else if (Ref.toString() === '9') {
+        //   param = moveAndPassiveSkillDigitEntry.param10;
+        // }
+
         if (Ref.toString() === '1') {
           param = moveAndPassiveSkillDigitEntry.param2;
         } else if (Ref.toString() === '2') {
-          param = moveAndPassiveSkillDigitEntry.param3;
-        } else if (Ref.toString() === '3') {
           param = moveAndPassiveSkillDigitEntry.param4;
-        } else if (Ref.toString() === '4') {
-          param = moveAndPassiveSkillDigitEntry.param5;
-        } else if (Ref.toString() === '5') {
+        } else if (Ref.toString() === '3') {
           param = moveAndPassiveSkillDigitEntry.param6;
-        } else if (Ref.toString() === '6') {
-          param = moveAndPassiveSkillDigitEntry.param7;
-        } else if (Ref.toString() === '7') {
+        } else if (Ref.toString() === '4') {
           param = moveAndPassiveSkillDigitEntry.param8;
-        } else if (Ref.toString() === '8') {
-          param = moveAndPassiveSkillDigitEntry.param9;
-        } else if (Ref.toString() === '9') {
+        } else if (Ref.toString() === '5') {
           param = moveAndPassiveSkillDigitEntry.param10;
         }
+        // else if (Ref.toString() === '6') {
+        //   param = moveAndPassiveSkillDigitEntry.param7;
+        // } else if (Ref.toString() === '7') {
+        //   param = moveAndPassiveSkillDigitEntry.param8;
+        // } else if (Ref.toString() === '8') {
+        //   param = moveAndPassiveSkillDigitEntry.param9;
+        // } else if (Ref.toString() === '9') {
+        //   param = moveAndPassiveSkillDigitEntry.param10;
+        // }
+
         if (language === 'en') {
           updatedStr = updatedStr
             .split(

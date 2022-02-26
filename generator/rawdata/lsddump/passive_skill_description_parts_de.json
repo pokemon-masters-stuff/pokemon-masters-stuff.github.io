@@ -697,6 +697,11 @@
   "p999302": "Wenn ein Statuswert eines Gegners durch die Zusatzeffekte der Attacken des Anwenders gesenkt wird, wird er um das Neunfache gesenkt.",
   "p999301": "Wenn ein Statuswert eines Gegners durch die Zusatzeffekte der Attacken des Anwenders gesenkt wird, wird er um das Zehnfache gesenkt.",
   "p999300": "Erhöht den Angriff, die Verteidigung, den Spezial-Angriff, die Spezial-Verteidigung und die Initiative des Anwenders um 30 %, wenn Wetterbedingungen wirksam sind.",
+  "p999299": "Erhöht die Stärke der Attacken des Anwenders, wenn das Ziel in einer Wechselsperre gefangen ist.",
+  "p999298": "Erhöht die Stärke der Gefährtenattacke des Anwenders, wenn das Ziel in einer Wechselsperre gefangen ist.",
+  "p999297": "Je mehr der Spezial-Angriff des Anwenders erhöht wurde, desto mehr wird die Stärke seiner Gefährtenattacke erhöht.",
+  "p999296": "Erhöht ein Mal pro Kampf die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ des Anwenders um [Digit:1digit ], wenn der Anwender erstmals den Kampf antritt.",
+  "p999295": "Erhöht die Stärke von Attacken aller Gefährten im Team um [Digit:2digits ] %. Verringert den durch Attacken erlittenen Schaden aller Gefährten im Team um [Digit:2digits Idx=\"1\" ] %. Je mehr Gefährten im Team [Name:ReferencedMessageTag Idx=\"2\" ] haben, desto mehr steigt die Effektivität. (Jedes zusätzliche Gefährtengespann steigert die Stärke von Attacken um [Digit:2digits Idx=\"3\" ] % und verringert den erlittenen Schaden um 3 %. Die Stärke von Attacken kann um maximal [Digit:2digits Idx=\"4\" ] % erhöht und der Schaden um maximal [Digit:2digits Idx=\"5\" ] % verringert werden.)",
   "p999294": "Erhöht die Stärke der Psycho-Attacken des Anwenders.",
   "p999293": "Attacken vom Typ Normal nehmen den Typ Pflanze an."
 }

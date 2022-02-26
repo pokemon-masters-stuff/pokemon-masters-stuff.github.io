@@ -697,6 +697,11 @@
   "p999302": "When an opponent’s stat is lowered by the additional effects of the user’s moves, it is lowered by nine times the stat ranks.",
   "p999301": "When an opponent’s stat is lowered by the additional effects of the user’s moves, it is lowered by 10 times the stat ranks.",
   "p999300": "The user’s Attack, Defense, Sp. Atk, Sp. Def, and Speed increase 30% when weather conditions are in effect.",
+  "p999299": "Powers up the user’s moves when the target is restrained.",
+  "p999298": "Powers up the user’s sync move when the target is restrained.",
+  "p999297": "The more the user’s Sp. Atk is raised, the more it powers up the user’s sync move.",
+  "p999296": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] the first time the user enters a battle each battle.",
+  "p999295": "Powers up the moves of all allied sync pairs by [Digit:2digits ]%. Reduces attack move damage taken by all allied sync pairs by [Digit:2digits Idx=\"1\" ]%. The more allied sync pairs with [Name:ReferencedMessageTag Idx=\"2\" ] you have on your team, the higher these percentages are. (Each additional sync pair powers up moves by [Digit:2digits Idx=\"3\" ]% and reduces damage by 3%. The maximum power-up is [Digit:2digits Idx=\"4\" ]%, and the maximum damage reduction is [Digit:2digits Idx=\"5\" ]%.)",
   "p999294": "Powers up the user’s Psychic-type moves.",
   "p999293": "Normal-type moves become Grass-type moves."
 }

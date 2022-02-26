@@ -149,6 +149,7 @@
 { "trainerId": "10129000000", "maxEnergy": 60 },
 { "trainerId": "10129000001", "maxEnergy": 60 },
 { "trainerId": "10130000000", "maxEnergy": 60 },
+{ "trainerId": "10130100000", "maxEnergy": 60 },
 { "trainerId": "10130400000", "maxEnergy": 60 },
 { "trainerId": "10131000000", "maxEnergy": 60 },
 { "trainerId": "10132000000", "maxEnergy": 60 },

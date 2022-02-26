@@ -697,6 +697,11 @@
   "p999302": "Cuando se reducen las características del rival por los efectos secundarios de los movimientos del usuario, multiplica esta reducción por nueve.",
   "p999301": "Cuando se reducen las características del rival por los efectos secundarios de los movimientos del usuario, multiplica esta reducción por diez.",
   "p999300": "El Ataque, la Defensa, el Ataque Especial, la Defensa Especial y la Velocidad del usuario aumentan en un 30% cuando hay condiciones atmosféricas activas.",
+  "p999299": "Aumenta la potencia de los movimientos del usuario cuando el objetivo sufre relevo imposible.",
+  "p999298": "Aumenta la potencia del movimiento compi del usuario cuando el objetivo sufre relevo imposible.",
+  "p999297": "Cuanto más haya aumentado el Ataque Especial del usuario, más aumenta la potencia del movimiento compi del usuario.",
+  "p999296": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] cuando el usuario entra en combate por primera vez.",
+  "p999295": "Aumenta la potencia de los movimientos del bando del usuario en un [Digit:2digits ]%. Mitiga el daño por movimientos de ataque recibido por el bando del usuario en un [Digit:2digits Idx=\"1\" ]%. Cuantas más parejas con habilidades de equipo con [Name:ReferencedMessageTag Idx=\"2\" ] tenga el bando del usuario, más efectiva será esta habilidad. Cada una de ellas aumenta la potencia de los movimientos en un [Digit:2digits Idx=\"3\" ]% adicional (hasta un total máximo del [Digit:2digits Idx=\"4\" ]%), y mitiga el daño recibido en un 3% adicional (hasta un total máximo del [Digit:2digits Idx=\"5\" ]%).",
   "p999294": "Aumenta la potencia de los movimientos de tipo Psíquico del usuario.",
   "p999293": "Convierte los movimientos de tipo Normal en tipo Planta."
 }

@@ -697,6 +697,11 @@
   "p999302": "Quando le statistiche di un avversario vengono ridotte dagli effetti aggiuntivi delle mosse di chi la usa, nonuplica le riduzioni delle statistiche.",
   "p999301": "Quando le statistiche di un avversario vengono ridotte dagli effetti aggiuntivi delle mosse di chi la usa, decuplica le riduzioni delle statistiche.",
   "p999300": "Se ci sono condizioni atmosferiche attive, l'Attacco, la Difesa, l'Attacco Speciale, la Difesa Speciale e la Velocità di chi la usa aumentano del 30%.",
+  "p999299": "Aumenta la potenza delle mosse di chi la usa quando il bersaglio è affetto da \"Sostituzione vietata\".",
+  "p999298": "Aumenta la potenza dell'Unimossa di chi la usa quando il bersaglio è affetto da \"Sostituzione vietata\".",
+  "p999297": "Aumenta la potenza dell'Unimossa di chi la usa in proporzione all'aumento dell'Attacco Speciale di chi la usa.",
+  "p999296": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e \"Prossima mossa speciale ↑\" di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] la prima volta che chi la usa entra in campo in ogni lotta.",
+  "p999295": "Aumenta la potenza delle mosse di tutte le Unità alleate del [Digit:2digits ]% e riduce i danni subiti da attacchi semplici per tutte le Unità alleate del [Digit:2digits Idx=\"1\" ]%. Le percentuali aumentano in base al numero di Unità alleate [Name:ReferencedMessageTag Idx=\"2\" ] nella tua squadra. Ogni Unità in più aumenta la potenza delle mosse del [Digit:2digits Idx=\"3\" ]% e la riduzione dei danni del 3%. L'aumento massimo è del [Digit:2digits Idx=\"4\" ]% e del [Digit:2digits Idx=\"5\" ]% per la riduzione dei danni.",
   "p999294": "Aumenta la potenza delle mosse di tipo Psico di chi la usa.",
   "p999293": "Le mosse di tipo Normale diventano di tipo Erba."
 }
