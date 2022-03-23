@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0e6f48dc.chunk.css",
-    "main.js": "/static/js/main.0fa7a92f.chunk.js",
-    "main.js.map": "/static/js/main.0fa7a92f.chunk.js.map",
+    "main.js": "/static/js/main.b3497630.chunk.js",
+    "main.js.map": "/static/js/main.b3497630.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
-    "static/js/2.f7874d6c.chunk.js": "/static/js/2.f7874d6c.chunk.js",
-    "static/js/2.f7874d6c.chunk.js.map": "/static/js/2.f7874d6c.chunk.js.map",
+    "static/js/2.fc7dc1ee.chunk.js": "/static/js/2.fc7dc1ee.chunk.js",
+    "static/js/2.fc7dc1ee.chunk.js.map": "/static/js/2.fc7dc1ee.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.154a5b4a05ea24b5379c848092e3a18b.js": "/precache-manifest.154a5b4a05ea24b5379c848092e3a18b.js",
+    "precache-manifest.4a3b7842cc89021e3093c1688d8d79aa.js": "/precache-manifest.4a3b7842cc89021e3093c1688d8d79aa.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.0e6f48dc.chunk.css.map": "/static/css/main.0e6f48dc.chunk.css.map",
-    "static/js/2.f7874d6c.chunk.js.LICENSE.txt": "/static/js/2.f7874d6c.chunk.js.LICENSE.txt",
+    "static/js/2.fc7dc1ee.chunk.js.LICENSE.txt": "/static/js/2.fc7dc1ee.chunk.js.LICENSE.txt",
     "static/media/hero_256.ktx.png": "/static/media/hero_256.ktx.c896e21f.png",
     "static/media/heroine_256.ktx.png": "/static/media/heroine_256.ktx.9c0ea788.png",
     "static/media/pm0003_01_fushigibana_128.ktx.png": "/static/media/pm0003_01_fushigibana_128.ktx.b88345b9.png",
@@ -141,6 +141,7 @@
     "static/media/pm0757_00_shrimp2_128.ktx.png": "/static/media/pm0757_00_shrimp2_128.ktx.83b88f8b.png",
     "static/media/pm0768_00_pokemonX_128.ktx.png": "/static/media/pm0768_00_pokemonX_128.ktx.74d98353.png",
     "static/media/pm0769_00_pokemonY_128.ktx.png": "/static/media/pm0769_00_pokemonY_128.ktx.a13e2087.png",
+    "static/media/pm0770_00_pokemonZ_128.ktx.png": "/static/media/pm0770_00_pokemonZ_128.ktx.1c6f8a76.png",
     "static/media/pm0772_00_pinkdiamond_128.ktx.png": "/static/media/pm0772_00_pinkdiamond_128.ktx.433379db.png",
     "static/media/pm0774_00_majin_128.ktx.png": "/static/media/pm0774_00_majin_128.ktx.68ec9d06.png",
     "static/media/pm0806_00_dokutokage2_128.ktx.png": "/static/media/pm0806_00_dokutokage2_128.ktx.e68044cd.png",
@@ -182,8 +183,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
-    "static/js/2.f7874d6c.chunk.js",
+    "static/js/2.fc7dc1ee.chunk.js",
     "static/css/main.0e6f48dc.chunk.css",
-    "static/js/main.0fa7a92f.chunk.js"
+    "static/js/main.b3497630.chunk.js"
   ]
 }
