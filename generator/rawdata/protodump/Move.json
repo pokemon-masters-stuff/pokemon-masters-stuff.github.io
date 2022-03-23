@@ -1,4 +1,4 @@
-{ "entries": [
+{"entries": [
 { "moveId": 2, "category": "Physical", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 7, "target": "OpponentSingle", "u8": 1, "gaugeDrain": 1, "power": 16, "accuracy": 100, "uses": 0, "tags": "none" },
 { "moveId": 7, "category": "Physical", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 2, "target": "OpponentSingle", "u8": 1, "gaugeDrain": 2, "power": 47, "accuracy": 100, "uses": 0, "tags": "none" },
 { "moveId": 8, "category": "Physical", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 6, "target": "OpponentSingle", "u8": 1, "gaugeDrain": 2, "power": 46, "accuracy": 100, "uses": 0, "tags": "none" },

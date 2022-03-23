@@ -254,6 +254,8 @@ const arrayOfGridedTrainers = [
   10016500000, // Skyla & Tornadus
   10126500000, // May & Latias
   10257400000, // Raihan & Flygon
+  // 3/22/2022
+  10130100000, // Serena
 
   // 18000020601, // Hero & Snorlax
   // 19999000015, // Lillie & Prinplup

@@ -25,9 +25,7 @@ export const UA_ID = 'UA-157426792-1';
 export const DRAWER_WIDTH = 240;
 
 export const arrayOfTrainerIdsForNewlyGridedSyncPairs = [
-  10016500000, // Skyla & Tornadus
-  10126500000, // May & Latias
-  10257400000, // Raihan & Flygon
+  10130100000, // Serena
 ];
 
 export const arrayOfTrainerIdsWithSamePokemon = [
@@ -119,6 +117,7 @@ export const type1SyncGrid = [
   '10021900000', // Blue & Arcanine
   '10057000000', // Bruno & Machamp
   '10096000000', // Siebold & Clawitzer
+  '10130100000', // Serena
 ];
 
 export const type2SyncGrid = [

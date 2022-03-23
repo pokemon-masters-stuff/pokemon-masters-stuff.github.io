@@ -1,4 +1,4 @@
-{ "entries": [
+{"entries": [
 { "evolutionId": "610002000001", "trainerId": "10002000000", "monsterIdCurrent": "20002000000", "monsterIdNext": "20002000001", "u5": 100, "u6": 0, "u7": 0, "u8": 0, "u9": 0, "u10": 0, "u11": 0, "u12": 0, "u13": 70, "u14": 10, "u15": 0, "u16": -10, "u17": 0, "u18": 0, "u19": 0, "u20": 0, "scheduleId": "FOREVER" },
 { "evolutionId": "610002000002", "trainerId": "10002000000", "monsterIdCurrent": "20002000001", "monsterIdNext": "20002000002", "u5": 70, "u6": 10, "u7": 0, "u8": -10, "u9": 0, "u10": 0, "u11": 0, "u12": 0, "u13": 55, "u14": 10, "u15": 0, "u16": -10, "u17": 0, "u18": 0, "u19": 0, "u20": 0, "scheduleId": "FOREVER" },
 { "evolutionId": "610003000001", "trainerId": "10003000000", "monsterIdCurrent": "20003000000", "monsterIdNext": "20003000001", "u5": 160, "u6": 0, "u7": 0, "u8": 0, "u9": 0, "u10": -30, "u11": 0, "u12": 95, "u13": 125, "u14": -3, "u15": 0, "u16": 0, "u17": 0, "u18": -15, "u19": 0, "u20": 98, "scheduleId": "update_2020_1W_FOREVER" },

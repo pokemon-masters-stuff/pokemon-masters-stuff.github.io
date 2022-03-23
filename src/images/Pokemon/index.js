@@ -113,6 +113,7 @@ export { default as pm0006_00_lizardon_128 } from './128px/pm0006_00_lizardon_12
         export { default as pm0384_00_rayquaza_128 } from './128px/pm0384_00_rayquaza_128.ktx.png'; // Zinnia & Rayquaza
         export { default as pm0373_00_bohmander_128 } from './128px/pm0373_00_bohmander_128.ktx.png'; // Zinnia & Salamence
         export { default as pm0719_00_fox3_128 } from './128px/pm0719_00_fox3_128.ktx.png'; // Serena & Delphox
+        export { default as pm0770_00_pokemonZ_128 } from './128px/pm0770_00_pokemonZ_128.ktx.png'; // Serena & Zygarde
         export { default as pm0547_00_elfuun_128 } from './128px/pm0547_00_elfuun_128.ktx.png'; // Serena & Whimsicott
         export { default as pm0732_00_frilledlizard2_128 } from './128px/pm0732_00_frilledlizard2_128.ktx.png'; // Clemont & Heliolisk
         export { default as pm0637_00_ulgamoth_128 } from './128px/pm0637_00_ulgamoth_128.ktx.png'; // Alder & Volcarona

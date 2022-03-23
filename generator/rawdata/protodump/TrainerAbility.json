@@ -1,4 +1,4 @@
-{ "entries": [
+{"entries": [
 { "trainerId": "10000000000", "maxEnergy": 60 },
 { "trainerId": "10000800000", "maxEnergy": 60 },
 { "trainerId": "10001000000", "maxEnergy": 60 },

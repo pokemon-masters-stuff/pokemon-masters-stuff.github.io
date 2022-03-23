@@ -1,4 +1,4 @@
-{ "entries": [
+{"entries": [
 { "cellId": 1000000000, "trainerId": "10000000000", "energyCost": 0, "orbCost": 5, "x": 1, "y": 0, "z": -1, "abilityId": "1100000010", "conditionIds": [ ], "scheduleId": "FOREVER" },
 { "cellId": 1000000001, "trainerId": "10000000000", "energyCost": 0, "orbCost": 5, "x": 1, "y": -1, "z": 0, "abilityId": "1200000005", "conditionIds": [ ], "scheduleId": "FOREVER" },
 { "cellId": 1000000002, "trainerId": "10000000000", "energyCost": 0, "orbCost": 5, "x": 0, "y": -1, "z": 1, "abilityId": "1300000005", "conditionIds": [ ], "scheduleId": "FOREVER" },
