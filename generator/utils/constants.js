@@ -7,6 +7,27 @@ const gridedTrainerList = Object.keys(allGridedSyncPairs);
 
 const dynamaxTrainerList = Object.keys(dynamaxSyncPairs);
 
+const trainersToBeExcluded = [
+  '18000020601', // Hero & Snorlax
+  '19999000015', // Lillie & Prinplup
+  '19999000009', // Lillie & Squirtle
+  '19999000012', // Lillie & Totodile
+  '19999000016', // Hero & Grotle
+  '19999000017', // Hero & Serperior
+  '19999000018', // Hero & Serperior
+  '19999000020', // Hero & Delphox
+  '19999000021', // Hero & Tyranitar
+  '19999000022', // Lillie & Kommo-o
+  '19999000023', // Rosa & Hydreigon
+  '19999000010', // Rosa & Bulbasaur
+  '19999000013', // Rosa & Cyndaquil
+  '10074000000', // Youngster & Cottonee
+  '10066000001', // Rival Lear & Hoopa
+  '10066000002', // Rival Lear & Hoopa
+  '10067000001', // Rival Rachel & Umbreon
+  '10068000001', // Rival Sawyer & Honchkrow
+];
+
 const modifiedMonsterBaseId = {
   // when monsterBaseId doesn't link to a pokemon name in monster_name_xx.json, manually change their monsterBaseId here
   21038400: 20038400, // Steven & Rayquaza
@@ -31,4 +52,5 @@ module.exports = {
   dynamaxTrainerList,
   modifiedMonsterBaseId,
   modifiedMonsterVariationFormBaseId,
+  trainersToBeExcluded,
 };

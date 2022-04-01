@@ -69,7 +69,11 @@ const roleTypeNameDB = {
   zh: roleTypeNameDBzh,
 };
 
-const { languages, modifiedMonsterBaseId } = require('../utils/constants');
+const {
+  languages,
+  modifiedMonsterBaseId,
+  trainersToBeExcluded,
+} = require('../utils/constants');
 
 // Update this list (of trainerBaseId) based on new datamine
 const arrayOfGridedTrainers = [
@@ -259,17 +263,6 @@ const arrayOfGridedTrainers = [
   10022000000, // Wulfric
   10037000000, // Ramos
   10055000000, // Wikstrom
-
-  // 18000020601, // Hero & Snorlax
-  // 19999000015, // Lillie & Prinplup
-  // 19999000016, // Hero & Grotle
-  // 19999000017, // Hero & Serperior
-  // 19999000018, // Hero & Serperior
-  // 19999000020, // Hero & Delphox
-  // 19999000021, // Hero & Tyranitar
-  // 19999000022, // Lillie & Kommo-o
-  // 19999000023, // Rosa & Hydreigon
-
   // 3/30/2022
   10108400000, // Ingo & Accelgor
   10109400000, // Emmet & Escavalier
@@ -634,14 +627,7 @@ const extractAllSyncPairNamesAndIds = () => {
         };
       }
     } else {
-      // Not MC
-      if (
-        trainerId.toString() !== '10074000000' && // Youngster & Cottonee
-        trainerId.toString() !== '10066000001' && // Rival Lear & Hoopa
-        trainerId.toString() !== '10066000002' && // Rival Lear & Hoopa
-        trainerId.toString() !== '10067000001' && // Rival Rachel & Umbreon
-        trainerId.toString() !== '10068000001' // Rival Sawyer & Honchkrow
-      ) {
+      if (!trainersToBeExcluded.includes(trainerId)) {
         syncPairNamesAndIds[trainerId] = {
           syncPairEnglishName: syncPairEnglishName,
           trainerId: trainerId.toString(),
