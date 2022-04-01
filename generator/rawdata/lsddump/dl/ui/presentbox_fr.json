@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "Cadeaux",
+    "presentbox/presentbox_002": "Reçu le",
+    "presentbox/receivable_cell_btn": "Accepter",
+    "presentbox/tab_present_btn": "Accepter",
+    "presentbox/tab_temporary_item_btn": "En attente",
+    "presentbox/tab_received_btn": "Reçus",
+    "presentbox/receive_all_btn": "Tout accepter",
+    "presentbox/reward_dialog_title": "Cadeaux reçus",
+    "presentbox/reward_dialog_main_text": "Vous avez reçu les cadeaux suivants :",
+    "presentbox/presentbox_010": "OK",
+    "presentbox/presentbox_011": "Aucune limite",
+    "presentbox/presentbox_012": "La période de réception est terminée.\nCertains objets n'ont pas pu être\nrécupérés.",
+    "presentbox/presentbox_013": "Tout emblème déjà obtenu a été\nautomatiquement converti en Duo-Ticket.",
+    "presentbox/receivable_empty_text": "Aucun cadeau à récupérer",
+    "presentbox/received_empty_text": "Aucun cadeau reçu ces [Digit:3digits ] derniers jours.",
+    "presentbox/received_cell_btn": "Reçu",
+    "presentbox/help_title": "À propos des cadeaux",
+    "presentbox/help": "• Les cadeaux récupérés seront affichés\npendant [Digit:3digits ] jours.\n• Les cadeaux qui ont expiré seront\nautomatiquement effacés.\n• Vous pouvez récupérer un maximum\nde [Digit:3digits ] cadeaux en même temps.",
+    "presentbox/help_02": "• Les cadeaux qui ont expiré seront\nautomatiquement effacés.\n• Vous pouvez récupérer un maximum\nde [Digit:3digits Idx=\"1\" ] cadeaux en même temps.\n• Les cadeaux récupérés seront affichés\npendant [Digit:3digits Idx=\"2\" ] jours. La capacité\nd'affichage maximale de l'équipement\nest de [Digit:4digits Idx=\"3\" ].\n• La limite de stockage d'équipement\nen attente est [Digit:4digits Idx=\"4\" ]. L'équipement\nen surplus sera supprimé, à commencer\npar les éléments les plus anciens.",
+    "presentbox/receive_failed_description": "Vous avez atteint la limite du nombre\nd'objets que vous pouvez posséder.\nVous n'avez donc pas reçu certains\nobjets.",
+    "presentbox/receive_failed_description_002": "Vous avez atteint la limite du nombre\nd'objets que vous pouvez posséder.\nVous n'avez donc pas reçu certains objets."
+}

@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "Are you sure you want to receive additional\ncompletion rewards, chosen at random?",
+    "zone/dialog_002": "Are you sure you want to receive treats that\ncan only be used in the Battle Villa?",
+    "zone/dialog_003": "BONUS!",
+    "zone/dialog_alert_001": "Note: Battle Villa treats don’t carry over. They’re deleted\nautomatically at the end of each challenge period.",
+    "zone/title_001": "BONUS!",
+    "zone/title_002": "Select a type of bonus reward!",
+    "zone/cell_title_001": "Extra Rewards",
+    "zone/cell_title_002": "Vitality Treats",
+    "zone/cell_title_003": "Vigor Treats",
+    "zone/cell_description_001": "Receive additional completion\nrewards, chosen at random.",
+    "zone/cell_description_002": "Receive Battle Villa treats that\nrecover sync pair HP and MP.",
+    "zone/cell_description_003": "Receive Battle Villa treats that\nare useful in battles."
+}

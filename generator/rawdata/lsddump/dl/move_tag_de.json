@@ -1,0 +1,18 @@
+{
+    "1": "Auswechselzwang",
+    "2": "Soforttausch",
+    "4": "Sofortangriff",
+    "8": "Treffergarantie",
+    "32": "Auch bei Gefroren",
+    "64": "Auch bei Schlaf",
+    "128": "Nur bei Schlaf",
+    "256": "Heilung",
+    "512": "Absorption",
+    "1024": "Angriffsserie",
+    "2048": "Rückstoß",
+    "65536": "Flug-Zustand",
+    "524288": "Schemenkraft",
+    "2097152": "Phantomkraft",
+    "4194304": "Sprungfeder",
+    "16777216": "K.O.-Schlag"
+}

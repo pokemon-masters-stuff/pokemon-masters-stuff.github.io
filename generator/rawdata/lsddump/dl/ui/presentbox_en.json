@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "Present Box",
+    "presentbox/presentbox_002": "Date Received",
+    "presentbox/receivable_cell_btn": "Claim",
+    "presentbox/tab_present_btn": "Claim",
+    "presentbox/tab_temporary_item_btn": "Temp Storage",
+    "presentbox/tab_received_btn": "Claimed",
+    "presentbox/receive_all_btn": "Claim All",
+    "presentbox/reward_dialog_title": "Presents Claimed",
+    "presentbox/reward_dialog_main_text": "You claimed the following presents.",
+    "presentbox/presentbox_010": "OK",
+    "presentbox/presentbox_011": "No Expiration",
+    "presentbox/presentbox_012": "The period to claim some items has\npassed. Failed to claim.",
+    "presentbox/presentbox_013": "Previously earned medals have been\nautomatically converted to ★ power-ups.",
+    "presentbox/receivable_empty_text": "There are no presents to claim.",
+    "presentbox/received_empty_text": "No presents claimed in the last [Digit:3digits ] days.",
+    "presentbox/received_cell_btn": "Claimed",
+    "presentbox/help_title": "Presents",
+    "presentbox/help": "• Claimed presents will be displayed\nfor [Digit:3digits ] days.\n\n• Expired presents will be removed\nautomatically.\n\n• You can claim a maximum of [Digit:3digits ]\npresents at once.",
+    "presentbox/help_02": "• Expired presents will be deleted\nautomatically.\n• You can claim a maximum of [Digit:3digits Idx=\"1\" ]\npresents at once.\n• Claimed presents will be displayed\nfor [Digit:3digits Idx=\"2\" ] days. Up to [Digit:4digits Idx=\"3\" ] pieces of\ngear can be displayed at a time.\n• The Temp Storage tab can hold up\nto [Digit:4digits Idx=\"4\" ] pieces of gear. If this limit is\nexceeded, gear will be deleted,\nstarting with the oldest items.",
+    "presentbox/receive_failed_description": "You’ve exceeded the limit of how much you can hold, so you were unable to claim some items.",
+    "presentbox/receive_failed_description_002": "You’ve hit your item limit, so some weren’t claimed."
+}

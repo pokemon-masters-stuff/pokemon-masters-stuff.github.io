@@ -1,0 +1,8 @@
+{
+    "1": "Desbloquea [Digit:1digit ] casilla[ES:Qty S=\"\" P=\"s\" ] contigua[ES:Qty S=\"\" P=\"s\" ].",
+    "2": "Desbloquea todas las casillas contiguas.",
+    "3": "Haz que alcancen el Nv. [Digit:3digits ].",
+    "4": "Haz que su movimiento compi alcance el Nv. [Digit:3digits ].",
+    "5": "Haz que alcancen un potencial de [Digit:2digits ] ★.",
+    "6": "Haz que su movimiento alcance el Nv. [Digit:3digits ]."
+}

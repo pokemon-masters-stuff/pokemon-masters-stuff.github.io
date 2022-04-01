@@ -58,6 +58,11 @@ const AnnouncementModal = (props) => {
             them later. Sorry for the inconvenience.
             <br />
             <br />
+            3/31/2022:
+            <br />
+            Added new grids. Once again sorry for the delay...
+            <br />
+            <br />
             3/23/2022:
             <br />
             Added Serena. Sorry for the delay. A lot of things going on in my

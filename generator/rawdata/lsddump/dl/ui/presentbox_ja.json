@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "プレゼントボックス",
+    "presentbox/presentbox_002": "取得日",
+    "presentbox/receivable_cell_btn": "受取",
+    "presentbox/tab_present_btn": "受取",
+    "presentbox/tab_temporary_item_btn": "一時保管",
+    "presentbox/tab_received_btn": "受取済",
+    "presentbox/receive_all_btn": "まとめて受取",
+    "presentbox/reward_dialog_title": "プレゼント受取",
+    "presentbox/reward_dialog_main_text": "以下のプレゼントを受け取りました",
+    "presentbox/presentbox_010": "OK",
+    "presentbox/presentbox_011": "期限なし",
+    "presentbox/presentbox_012": "受け取り期限を過ぎた\n一部のアイテムは\n受け取りに失敗しました",
+    "presentbox/presentbox_013": "獲得済みのエンブレムを\nのびしろに自動変換しました",
+    "presentbox/receivable_empty_text": "受取可能なプレゼントはありません",
+    "presentbox/received_empty_text": "[Digit:3digits ]日以内に受け取ったプレゼントはありません",
+    "presentbox/received_cell_btn": "受取済",
+    "presentbox/help_title": "プレゼントについて",
+    "presentbox/help": "・プレゼント受取済の表示期限は\n　[Digit:3digits ]日間です\n・期限が切れたプレゼントは自動的に\n　削除されます\n・一度に受取可能なプレゼントは\n　最大[Digit:3digits ]件です",
+    "presentbox/help_02": "・受取期限が切れたプレゼントは自動的に\n　削除されます\n・一度に受取可能なプレゼントは\n　最大[Digit:3digits Idx=\"1\" ]件です\n・受取済の表示期限は[Digit:3digits Idx=\"2\" ]日間です\n　装備の表示上限は[Digit:4digits Idx=\"3\" ]件です\n・一時保管での装備の保管上限は[Digit:4digits Idx=\"4\" ]件です\n　保管上限を超えた装備は古いものから削除されます",
+    "presentbox/receive_failed_description": "所持上限を超える一部のどうぐは\n受け取りをキャンセルしました",
+    "presentbox/receive_failed_description_002": "※所持上限を超える一部のどうぐは\n受け取りをキャンセルしました"
+}

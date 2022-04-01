@@ -1,0 +1,12 @@
+{
+    "system/remaining_days": "還剩[Digit:3digits ]天",
+    "system/minutes_ago": "[Digit:2digits ]分前",
+    "system/hours_ago": "[Digit:2digits ]小時前",
+    "system/days_ago": "[Digit:2digits ]天前",
+    "system/more_than_days_ago": "超過[Digit:2digits ]天之前",
+    "system/until_time": "[Name:DateTime ] 為止",
+    "system/title_name": "Pokémon Masters",
+    "system/title_name_002": "Pokémon Masters EX",
+    "system/remaining_days_double": "還剩\n[Digit:3digits ]天",
+    "system/remaining_time": "還剩[Name:DateTime ]"
+}

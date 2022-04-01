@@ -1,0 +1,22 @@
+{
+    "40010001": "Aumenta di [Digit:3digits ] i PS massimi di tutte\nle Unità alleate.",
+    "40020001": "Se un alleato usa un attacco di tipo\nNormale, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020002": "Se un alleato usa un attacco di tipo\nFuoco, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020003": "Se un alleato usa un attacco di tipo\nAcqua, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020004": "Se un alleato usa un attacco di tipo\nElettro, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020005": "Se un alleato usa un attacco di tipo\nErba, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020006": "Se un alleato usa un attacco di tipo\nGhiaccio, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020007": "Se un alleato usa un attacco di tipo\nLotta, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020008": "Se un alleato usa un attacco di tipo\nVeleno, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020009": "Se un alleato usa un attacco di tipo\nTerra, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020010": "Se un alleato usa un attacco di tipo\nVolante, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020011": "Se un alleato usa un attacco di tipo\nPsico, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020012": "Se un alleato usa un attacco di tipo\nColeottero, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020013": "Se un alleato usa un attacco di tipo\nRoccia, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020014": "Se un alleato usa un attacco di tipo\nSpettro, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020015": "Se un alleato usa un attacco di tipo\nDrago, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020016": "Se un alleato usa un attacco di tipo\nBuio, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020017": "Se un alleato usa un attacco di tipo\nAcciaio, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40020018": "Se un alleato usa un attacco di tipo\nFolletto, Attacco e Attacco Speciale\naumentano di [Digit:3digits ] solo per quell'attacco.",
+    "40030001": "Aumenta di [Digit:3digits ] l'Attacco e l'Attacco Speciale\ndi tutte le Unità alleate."
+}

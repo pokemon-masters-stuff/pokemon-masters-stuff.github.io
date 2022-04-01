@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "Boxsuche",
+    "box_scout/box_scout_002": "1 Mal suchen",
+    "box_scout/box_scout_003": "[Digit:3digits ] Mal suchen",
+    "box_scout/box_scout_004": "Zur nächsten Stufe",
+    "box_scout/box_scout_005": "Belohnungsliste",
+    "box_scout/box_scout_006": "Willst du weiter zur nächsten Stufe?",
+    "box_scout/box_scout_007": "Hinweis: Wenn noch Items in der Boxsuche übrig sind,\nkannst du diese danach nicht mehr erhalten.",
+    "box_scout/box_scout_008": "Hauptpreis",
+    "box_scout/box_scout_009": "Standardpreis",
+    "box_scout/box_scout_010": "Stufe [Digit:2digits ]",
+    "box_scout/box_scout_011": "Du verbrauchst [Digit:4digits ] [DE:Qty S=\"Boxmünze\" P=\"Boxmünzen\" ], um\n[Digit:3digits Idx=\"1\" ] Mal eine Boxsuche durchzuführen.\nWillst du fortfahren?",
+    "box_scout/box_scout_013": "Hauptpreis erhalten!",
+    "box_scout/box_scout_021": "Ergebnisse",
+    "box_scout/box_scout_022": "Du verbrauchst [Digit:4digits ] Mal das Item\n[Name:Item ], um [Digit:3digits Idx=\"1\" ] Mal\neine Boxsuche durchzuführen. Willst du\nfortfahren?"
+}

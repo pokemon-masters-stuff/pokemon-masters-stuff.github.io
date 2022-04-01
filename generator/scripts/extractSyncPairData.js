@@ -9,68 +9,68 @@ const trainerAbilityDB = require('../rawdata/protodump/TrainerAbility.json');
 const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
 const moveDB = require('../rawdata/protodump/ModifiedMove.json');
 
-const monsterFormDBde = require('../rawdata/lsddump/monster_form_de.json');
-const monsterFormDBen = require('../rawdata/lsddump/monster_form_en.json');
-const monsterFormDBes = require('../rawdata/lsddump/monster_form_es.json');
-const monsterFormDBfr = require('../rawdata/lsddump/monster_form_fr.json');
-const monsterFormDBit = require('../rawdata/lsddump/monster_form_it.json');
-const monsterFormDBja = require('../rawdata/lsddump/monster_form_ja.json');
-const monsterFormDBko = require('../rawdata/lsddump/monster_form_ko.json');
-const monsterFormDBzh = require('../rawdata/lsddump/monster_form_zh-TW.json');
+const monsterFormDBde = require('../rawdata/lsddump/dl/monster_form_de.json');
+const monsterFormDBen = require('../rawdata/lsddump/dl/monster_form_en.json');
+const monsterFormDBes = require('../rawdata/lsddump/dl/monster_form_es.json');
+const monsterFormDBfr = require('../rawdata/lsddump/dl/monster_form_fr.json');
+const monsterFormDBit = require('../rawdata/lsddump/dl/monster_form_it.json');
+const monsterFormDBja = require('../rawdata/lsddump/dl/monster_form_ja.json');
+const monsterFormDBko = require('../rawdata/lsddump/dl/monster_form_ko.json');
+const monsterFormDBzh = require('../rawdata/lsddump/dl/monster_form_zh-TW.json');
 
-const motifTypeNameDBde = require('../rawdata/lsddump/motif_type_name_de.json');
-const motifTypeNameDBen = require('../rawdata/lsddump/motif_type_name_en.json');
-const motifTypeNameDBes = require('../rawdata/lsddump/motif_type_name_es.json');
-const motifTypeNameDBfr = require('../rawdata/lsddump/motif_type_name_fr.json');
-const motifTypeNameDBit = require('../rawdata/lsddump/motif_type_name_it.json');
-const motifTypeNameDBja = require('../rawdata/lsddump/motif_type_name_ja.json');
-const motifTypeNameDBko = require('../rawdata/lsddump/motif_type_name_ko.json');
-const motifTypeNameDBzh = require('../rawdata/lsddump/motif_type_name_zh-TW.json');
+const motifTypeNameDBde = require('../rawdata/lsddump/dl/motif_type_name_de.json');
+const motifTypeNameDBen = require('../rawdata/lsddump/dl/motif_type_name_en.json');
+const motifTypeNameDBes = require('../rawdata/lsddump/dl/motif_type_name_es.json');
+const motifTypeNameDBfr = require('../rawdata/lsddump/dl/motif_type_name_fr.json');
+const motifTypeNameDBit = require('../rawdata/lsddump/dl/motif_type_name_it.json');
+const motifTypeNameDBja = require('../rawdata/lsddump/dl/motif_type_name_ja.json');
+const motifTypeNameDBko = require('../rawdata/lsddump/dl/motif_type_name_ko.json');
+const motifTypeNameDBzh = require('../rawdata/lsddump/dl/motif_type_name_zh-TW.json');
 
-const pokemonNameDBde = require('../rawdata/lsddump/monster_name_de.json');
-const pokemonNameDBen = require('../rawdata/lsddump/monster_name_en.json');
-const pokemonNameDBes = require('../rawdata/lsddump/monster_name_es.json');
-const pokemonNameDBfr = require('../rawdata/lsddump/monster_name_fr.json');
-const pokemonNameDBit = require('../rawdata/lsddump/monster_name_it.json');
-const pokemonNameDBja = require('../rawdata/lsddump/monster_name_ja.json');
-const pokemonNameDBko = require('../rawdata/lsddump/monster_name_ko.json');
-const pokemonNameDBzh = require('../rawdata/lsddump/monster_name_zh-TW.json');
+const pokemonNameDBde = require('../rawdata/lsddump/dl/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/lsddump/dl/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/lsddump/dl/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/lsddump/dl/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/lsddump/dl/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/lsddump/dl/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/lsddump/dl/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/lsddump/dl/monster_name_zh-TW.json');
 
-const trainerNameDBde = require('../rawdata/lsddump/trainer_name_de.json');
-const trainerNameDBen = require('../rawdata/lsddump/trainer_name_en.json');
-const trainerNameDBes = require('../rawdata/lsddump/trainer_name_es.json');
-const trainerNameDBfr = require('../rawdata/lsddump/trainer_name_fr.json');
-const trainerNameDBit = require('../rawdata/lsddump/trainer_name_it.json');
-const trainerNameDBja = require('../rawdata/lsddump/trainer_name_ja.json');
-const trainerNameDBko = require('../rawdata/lsddump/trainer_name_ko.json');
-const trainerNameDBzh = require('../rawdata/lsddump/trainer_name_zh-TW.json');
+const trainerNameDBde = require('../rawdata/lsddump/apk/trainer_name_de.json');
+const trainerNameDBen = require('../rawdata/lsddump/apk/trainer_name_en.json');
+const trainerNameDBes = require('../rawdata/lsddump/apk/trainer_name_es.json');
+const trainerNameDBfr = require('../rawdata/lsddump/apk/trainer_name_fr.json');
+const trainerNameDBit = require('../rawdata/lsddump/apk/trainer_name_it.json');
+const trainerNameDBja = require('../rawdata/lsddump/apk/trainer_name_ja.json');
+const trainerNameDBko = require('../rawdata/lsddump/apk/trainer_name_ko.json');
+const trainerNameDBzh = require('../rawdata/lsddump/apk/trainer_name_zh-TW.json');
 
-const roleTypeNameDBde = require('../rawdata/lsddump/role_type_name_de.json');
-const roleTypeNameDBen = require('../rawdata/lsddump/role_type_name_en.json');
-const roleTypeNameDBes = require('../rawdata/lsddump/role_type_name_es.json');
-const roleTypeNameDBfr = require('../rawdata/lsddump/role_type_name_fr.json');
-const roleTypeNameDBit = require('../rawdata/lsddump/role_type_name_it.json');
-const roleTypeNameDBja = require('../rawdata/lsddump/role_type_name_ja.json');
-const roleTypeNameDBko = require('../rawdata/lsddump/role_type_name_ko.json');
-const roleTypeNameDBzh = require('../rawdata/lsddump/role_type_name_zh-TW.json');
+const roleTypeNameDBde = require('../rawdata/lsddump/dl/role_type_name_de.json');
+const roleTypeNameDBen = require('../rawdata/lsddump/dl/role_type_name_en.json');
+const roleTypeNameDBes = require('../rawdata/lsddump/dl/role_type_name_es.json');
+const roleTypeNameDBfr = require('../rawdata/lsddump/dl/role_type_name_fr.json');
+const roleTypeNameDBit = require('../rawdata/lsddump/dl/role_type_name_it.json');
+const roleTypeNameDBja = require('../rawdata/lsddump/dl/role_type_name_ja.json');
+const roleTypeNameDBko = require('../rawdata/lsddump/dl/role_type_name_ko.json');
+const roleTypeNameDBzh = require('../rawdata/lsddump/dl/role_type_name_zh-TW.json');
 
-const moveNameDBde = require('../rawdata/lsddump/move_name_de.json');
-const moveNameDBen = require('../rawdata/lsddump/move_name_en.json');
-const moveNameDBes = require('../rawdata/lsddump/move_name_es.json');
-const moveNameDBfr = require('../rawdata/lsddump/move_name_fr.json');
-const moveNameDBit = require('../rawdata/lsddump/move_name_it.json');
-const moveNameDBja = require('../rawdata/lsddump/move_name_ja.json');
-const moveNameDBko = require('../rawdata/lsddump/move_name_ko.json');
-const moveNameDBzh = require('../rawdata/lsddump/move_name_zh-TW.json');
+const moveNameDBde = require('../rawdata/lsddump/dl/move_name_de.json');
+const moveNameDBen = require('../rawdata/lsddump/dl/move_name_en.json');
+const moveNameDBes = require('../rawdata/lsddump/dl/move_name_es.json');
+const moveNameDBfr = require('../rawdata/lsddump/dl/move_name_fr.json');
+const moveNameDBit = require('../rawdata/lsddump/dl/move_name_it.json');
+const moveNameDBja = require('../rawdata/lsddump/dl/move_name_ja.json');
+const moveNameDBko = require('../rawdata/lsddump/dl/move_name_ko.json');
+const moveNameDBzh = require('../rawdata/lsddump/dl/move_name_zh-TW.json');
 
-const moveTargetTypeDBde = require('../rawdata/lsddump/move_target_type_de.json');
-const moveTargetTypeDBen = require('../rawdata/lsddump/move_target_type_en.json');
-const moveTargetTypeDBes = require('../rawdata/lsddump/move_target_type_es.json');
-const moveTargetTypeDBfr = require('../rawdata/lsddump/move_target_type_fr.json');
-const moveTargetTypeDBit = require('../rawdata/lsddump/move_target_type_it.json');
-const moveTargetTypeDBja = require('../rawdata/lsddump/move_target_type_ja.json');
-const moveTargetTypeDBko = require('../rawdata/lsddump/move_target_type_ko.json');
-const moveTargetTypeDBzh = require('../rawdata/lsddump/move_target_type_zh-TW.json');
+const moveTargetTypeDBde = require('../rawdata/lsddump/dl/move_target_type_de.json');
+const moveTargetTypeDBen = require('../rawdata/lsddump/dl/move_target_type_en.json');
+const moveTargetTypeDBes = require('../rawdata/lsddump/dl/move_target_type_es.json');
+const moveTargetTypeDBfr = require('../rawdata/lsddump/dl/move_target_type_fr.json');
+const moveTargetTypeDBit = require('../rawdata/lsddump/dl/move_target_type_it.json');
+const moveTargetTypeDBja = require('../rawdata/lsddump/dl/move_target_type_ja.json');
+const moveTargetTypeDBko = require('../rawdata/lsddump/dl/move_target_type_ko.json');
+const moveTargetTypeDBzh = require('../rawdata/lsddump/dl/move_target_type_zh-TW.json');
 
 const motifTypeNameDB = {
   de: motifTypeNameDBde,
@@ -153,6 +153,8 @@ const {
   gridedTrainerList,
   dynamaxTrainerList,
   languages,
+  modifiedMonsterBaseId,
+  modifiedMonsterVariationFormBaseId,
 } = require('../utils/constants');
 
 const {
@@ -1116,20 +1118,25 @@ const extractSyncPairData = () => {
           monsterVariationFormBaseId = monsterBaseId.toString();
         }
         if (!isMega && !isDynamax) {
-          // Non-Mega, Non-Dynamax evolution
-          if (monsterBaseId.toString() === '2008771101') {
-            // Morpeko
-            monsterVariationFormBaseId = '2008771201';
-          } else if (monsterBaseId.toString() === '20086512') {
-            // Lusamine & Necrozma
-            monsterVariationFormBaseId = '20086514';
-          } else if (monsterBaseId.toString() === '2008751100') {
-            // Nessa & Eiscue
-            monsterVariationFormBaseId = '2008751200';
-          } else if (monsterBaseId.toString() === '20077000') {
-            // Zygarde
-            monsterVariationFormBaseId = '20077015';
-          } else {
+          // Non-Mega, Non-Dynamax variation
+          if (modifiedMonsterVariationFormBaseId[monsterBaseId]) {
+            monsterVariationFormBaseId =
+              modifiedMonsterVariationFormBaseId[monsterBaseId];
+          }
+          // if (monsterBaseId.toString() === '2008771101') {
+          //   // Morpeko
+          //   monsterVariationFormBaseId = '2008771201';
+          // } else if (monsterBaseId.toString() === '20086512') {
+          //   // Lusamine & Necrozma
+          //   monsterVariationFormBaseId = '20086514';
+          // } else if (monsterBaseId.toString() === '2008751100') {
+          //   // Nessa & Eiscue
+          //   monsterVariationFormBaseId = '2008751200';
+          // } else if (monsterBaseId.toString() === '20077000') {
+          //   // Zygarde
+          //   monsterVariationFormBaseId = '20077015';
+          // }
+          else {
             monsterVariationFormBaseId = (Number(monsterBaseId) + 1).toString(); // either ends in 51 or original number +1, even for Silvali and Mew
           }
         }
@@ -1148,7 +1155,7 @@ const extractSyncPairData = () => {
         //   );
         // }
 
-        // Giovanni & Mewtwo
+        // Giovanni & Mewtwo;
         if (monsterBaseId.toString() === '20015000') {
           monsterVariationFormEntry = monsterVariationDB.entries.find(
             (monster) => monster.monsterId.toString() === '20140000001'
@@ -2330,10 +2337,14 @@ const extractSyncPairData = () => {
                   .substring(0, monsterBaseId.toString().length - 1) + '0'
               ];
 
-          if (monsterBaseId.toString() === '21038400') {
+          if (modifiedMonsterBaseId[monsterBaseId]) {
             pokemonNameByLanguage[language] =
-              pokemonNameDB[language]['20038400']; // Steven & Rayquaza
+              pokemonNameDB[language][modifiedMonsterBaseId[monsterBaseId]];
           }
+          // if (monsterBaseId.toString() === '21038400') {
+          //   pokemonNameByLanguage[language] =
+          //     pokemonNameDB[language]['20038400']; // Steven & Rayquaza
+          // }
         } else {
           console.log(
             `trainerId ${trainerIdFromList} has no matching monsterBaseId`

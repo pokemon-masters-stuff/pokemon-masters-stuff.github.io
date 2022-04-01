@@ -1,0 +1,11 @@
+{
+    "search_01_001/4301_1001_0100_10": "Vous décidez de vous rendre au laboratoire\nde la Professeure Bellis pour en apprendre\nplus sur le combat en équipe.",
+    "search_01_001/4301_1001_0300_10": "Ah, [Name:PlayerNickname ] !\nMerci d'être venu[FR:Gen Ref=\"255\" F=\"e\" ] me voir !\nEt bienvenue dans mon laboratoire !",
+    "search_01_001/4301_1001_0400_10": "Alors, comment vas-tu ?\nLes combats en équipe se passent bien ?",
+    "search_01_001/4301_0301_0500_10": "Oui, mais je voudrais m'améliorer !",
+    "search_01_001/4301_0401_0600_10": "Magnifique ! En tout cas, tu apprends drôlement\nvite ! Je serais curieuse de voir de quoi tu es\ncapable.",
+    "search_01_001/4301_0302_0700_10": "Ce n'est pas encore trop ça...",
+    "search_01_001/4301_0402_0800_10": "Courage ! Je suis sûre que ça va bientôt venir !\nEt n'oublie pas que ton Pokémon est là pour toi.",
+    "search_01_001/4301_1001_0900_10": "Tiens, j'ai une idée ! Que dirais-tu de\nm'accompagner un peu sur le terrain ?",
+    "search_01_001/4301_1001_1000_10": "Je connais un sentier de montagne qui serait\nparfait pour ça ! Tu es prêt[FR:Gen Ref=\"255\" F=\"e\" ] ? Allez, on est\nparti[FR:Gen Ref=\"255\" F=\"e\" ]s !"
+}

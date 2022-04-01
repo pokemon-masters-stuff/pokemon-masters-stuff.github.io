@@ -1,0 +1,9 @@
+{"entries": [
+{ "itemId": "1010000000001", "missionGroupId": 2203005, "u3": 30 },
+{ "itemId": "1010000000002", "missionGroupId": 2204002, "u3": 30 },
+{ "itemId": "1010000000003", "missionGroupId": 2208001, "u3": 30 },
+{ "itemId": "1010000000004", "missionGroupId": 2211002, "u3": 30 },
+{ "itemId": "1010000000005", "missionGroupId": 2301003, "u3": 30 },
+{ "itemId": "1010000000006", "missionGroupId": 2307003, "u3": 30 },
+{ "itemId": "1010000000007", "missionGroupId": 2401010, "u3": 30 }
+]}

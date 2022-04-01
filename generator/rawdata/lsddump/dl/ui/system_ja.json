@@ -1,0 +1,12 @@
+{
+    "system/remaining_days": "あと　[Digit:3digits ]日",
+    "system/minutes_ago": "[Digit:2digits ]分前",
+    "system/hours_ago": "[Digit:2digits ]時間前",
+    "system/days_ago": "[Digit:2digits ]日前",
+    "system/more_than_days_ago": "[Digit:2digits ]日以上前",
+    "system/until_time": "[Name:DateTime ] まで",
+    "system/title_name": "ポケモンマスターズ",
+    "system/title_name_002": "ポケモンマスターズ EX",
+    "system/remaining_days_double": "あと\n[Digit:3digits ]日",
+    "system/remaining_time": "あと [Name:DateTime ]"
+}

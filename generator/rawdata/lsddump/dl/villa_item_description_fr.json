@@ -1,0 +1,9 @@
+{
+    "740000001001": "Permet à tous les Duos alliés de récupérer\n[Digit:3digits ] % de leurs PV.",
+    "740000001002": "Redonne tous les Points de Pouvoir des\nCapacités (PPC) à tous les Duos alliés.",
+    "740000002001": "Augmente légèrement l'Attaque, la\nDéfense, l'Attaque Spéciale, la Défense\nSpéciale et la Vitesse de tous les alliés\nquand le combat commence.",
+    "740000002002": "Permet à tous les Duos alliés d'infliger un\ncoup critique lors de la première attaque\naprès le début du combat.",
+    "740000002003": "Immunise tous les alliés contre\nles altérations de statut et les tourments\ndès le début du combat.",
+    "740000002004": "Réduit les dégâts infligés au côté allié par\nles attaques physiques dès le début du\ncombat.",
+    "740000002005": "Réduit les dégâts infligés au côté allié par\nles attaques spéciales dès le début du\ncombat."
+}

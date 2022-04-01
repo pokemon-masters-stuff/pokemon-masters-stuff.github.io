@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "Il livello di tutte le Unità avversarie aumenta\ndi un valore pari a [Digit:6digits ] livell[IT:Qty S=\"o\" P=\"i\" ].",
+    "champion_battle_option_description_2120_02": "All'inizio della lotta, tutte le Unità avversarie\nrecuperano PS costantemente.",
+    "champion_battle_option_description_2120_03": "All'inizio della lotta, i danni fisici subiti\nnel campo avversario si riducono. Questo effetto\nè permanente.",
+    "champion_battle_option_description_2120_04": "All'inizio della lotta, i danni speciali subiti\nnel campo avversario si riducono. Questo effetto\nè permanente.",
+    "champion_battle_option_description_2120_05": "All'inizio della lotta, il campo avversario viene\nprotetto dai brutti colpi. Questo effetto\nè permanente.",
+    "champion_battle_option_description_2120_06": "L'effetto dell'aumento della Tensione\ndegli avversari viene potenziato\n([Digit:6digits ]% in più).",
+    "champion_battle_option_description_2120_07": "Il numero massimo di azioni necessarie\nalle Unità avversarie per sferrare un'Unimossa\nsi abbassa di [Digit:6digits ].",
+    "champion_battle_option_description_2120_12": "Il numero massimo di barrette della barra mosse\nalleata diminuisce di [Digit:6digits ].",
+    "champion_battle_option_description_2120_13": "All'inizio della lotta, tutte le Unità alleate\nperdono una certa percentuale dei loro PS\nmassimi (percentuale persa: [Digit:6digits ]%).",
+    "champion_battle_option_description_2120_14": "L'Attacco e l'Attacco Speciale di tutte le Unità\navversarie aumentano ([Digit:6digits ]% in più).",
+    "champion_battle_option_description_2120_15": "La Difesa e la Difesa Speciale di tutte le Unità\navversarie aumentano ([Digit:6digits ]% in più).",
+    "champion_battle_option_description_2120_16": "I PS massimi di tutte le Unità avversarie\naumentano ([Digit:6digits ]% in più).",
+    "champion_battle_option_description_2120_17": "Le Unità avversarie sono immuni ai problemi\ndi stato.",
+    "champion_battle_option_description_2120_18": "Le Unità avversarie sono immuni alle riduzioni\ndelle statistiche.",
+    "champion_battle_option_description_2120_19": "Quando un'Unità alleata usa una mossa che fa\nrecuperare PS, i PS recuperati diminuiscono\n([Digit:6digits ]% in meno).",
+    "champion_battle_option_description_2120_20": "Il numero di utilizzi delle mosse viene dimezzato\nper tutte le Unità alleate.",
+    "champion_battle_option_description_2120_21": "Ogni volta che un'Unità avversaria manda\na segno un attacco, la potenza dei suoi attacchi\naumenta ([Digit:6digits ]% in più)."
+}

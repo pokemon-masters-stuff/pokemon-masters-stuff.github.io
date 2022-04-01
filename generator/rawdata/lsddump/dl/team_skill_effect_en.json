@@ -1,0 +1,22 @@
+{
+    "40010001": "Raises the maximum HP of all allied\nsync pairs by [Digit:3digits ].",
+    "40020001": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Normal-type attacks.",
+    "40020002": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Fire-type attacks.",
+    "40020003": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Water-type attacks.",
+    "40020004": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Electric-type attacks.",
+    "40020005": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Grass-type attacks.",
+    "40020006": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Ice-type attacks.",
+    "40020007": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Fighting-type attacks.",
+    "40020008": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Poison-type attacks.",
+    "40020009": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Ground-type attacks.",
+    "40020010": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Flying-type attacks.",
+    "40020011": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Psychic-type attacks.",
+    "40020012": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Bug-type attacks.",
+    "40020013": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Rock-type attacks.",
+    "40020014": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Ghost-type attacks.",
+    "40020015": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Dragon-type attacks.",
+    "40020016": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Dark-type attacks.",
+    "40020017": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Steel-type attacks.",
+    "40020018": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Fairy-type attacks.",
+    "40030001": "Raises the Attack and Sp. Atk of all allied sync pairs by [Digit:3digits ]."
+}

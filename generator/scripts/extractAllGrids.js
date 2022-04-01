@@ -6,23 +6,23 @@ const moveDB = require('../rawdata/protodump/ModifiedMove.json');
 const triangularCoordsToCollumns = require('../utils/triangularCoordsToCollumns');
 const trainerAbilityDB = require('../rawdata/protodump/TrainerAbility.json');
 
-const abilityDescriptionDBde = require('../rawdata/lsddump/ability_description_de.json');
-const abilityDescriptionDBen = require('../rawdata/lsddump/ability_description_en.json');
-const abilityDescriptionDBes = require('../rawdata/lsddump/ability_description_es.json');
-const abilityDescriptionDBfr = require('../rawdata/lsddump/ability_description_fr.json');
-const abilityDescriptionDBit = require('../rawdata/lsddump/ability_description_it.json');
-const abilityDescriptionDBja = require('../rawdata/lsddump/ability_description_ja.json');
-const abilityDescriptionDBko = require('../rawdata/lsddump/ability_description_ko.json');
-const abilityDescriptionDBzh = require('../rawdata/lsddump/ability_description_zh-TW.json');
+const abilityDescriptionDBde = require('../rawdata/lsddump/dl/ability_description_de.json');
+const abilityDescriptionDBen = require('../rawdata/lsddump/dl/ability_description_en.json');
+const abilityDescriptionDBes = require('../rawdata/lsddump/dl/ability_description_es.json');
+const abilityDescriptionDBfr = require('../rawdata/lsddump/dl/ability_description_fr.json');
+const abilityDescriptionDBit = require('../rawdata/lsddump/dl/ability_description_it.json');
+const abilityDescriptionDBja = require('../rawdata/lsddump/dl/ability_description_ja.json');
+const abilityDescriptionDBko = require('../rawdata/lsddump/dl/ability_description_ko.json');
+const abilityDescriptionDBzh = require('../rawdata/lsddump/dl/ability_description_zh-TW.json');
 
-const moveNameDBde = require('../rawdata/lsddump/move_name_de.json');
-const moveNameDBen = require('../rawdata/lsddump/move_name_en.json');
-const moveNameDBes = require('../rawdata/lsddump/move_name_es.json');
-const moveNameDBfr = require('../rawdata/lsddump/move_name_fr.json');
-const moveNameDBit = require('../rawdata/lsddump/move_name_it.json');
-const moveNameDBja = require('../rawdata/lsddump/move_name_ja.json');
-const moveNameDBko = require('../rawdata/lsddump/move_name_ko.json');
-const moveNameDBzh = require('../rawdata/lsddump/move_name_zh-TW.json');
+const moveNameDBde = require('../rawdata/lsddump/dl/move_name_de.json');
+const moveNameDBen = require('../rawdata/lsddump/dl/move_name_en.json');
+const moveNameDBes = require('../rawdata/lsddump/dl/move_name_es.json');
+const moveNameDBfr = require('../rawdata/lsddump/dl/move_name_fr.json');
+const moveNameDBit = require('../rawdata/lsddump/dl/move_name_it.json');
+const moveNameDBja = require('../rawdata/lsddump/dl/move_name_ja.json');
+const moveNameDBko = require('../rawdata/lsddump/dl/move_name_ko.json');
+const moveNameDBzh = require('../rawdata/lsddump/dl/move_name_zh-TW.json');
 
 const abilityDescriptionDB = {
   de: abilityDescriptionDBde,

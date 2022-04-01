@@ -1,0 +1,22 @@
+{
+    "40010001": "Max.-KP +[Digit:3digits ]",
+    "40020001": "Bei Normal-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020002": "Bei Feuer-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020003": "Bei Wasser-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020004": "Bei Elektro-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020005": "Bei Pflanzen-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020006": "Bei Eis-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020007": "Bei Kampf-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020008": "Bei Gift-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020009": "Bei Boden-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020010": "Bei Flug-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020011": "Bei Psycho-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020012": "Bei Käfer-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020013": "Bei Gesteins-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020014": "Bei Geister-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020015": "Bei Drachen-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020016": "Bei Unlicht-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020017": "Bei Stahl-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40020018": "Bei Feen-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
+    "40030001": "Ang. und\nSp.-Ang. +[Digit:3digits ]"
+}

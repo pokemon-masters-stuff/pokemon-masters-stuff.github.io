@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "Die Kraft aller Gegner steigt auf das Niveau von\nLv. [Digit:6digits ].",
+    "champion_battle_option_description_2120_02": "Zu Kampfbeginn werden alle Gegner in den\nZustand KP-Regenerierung versetzt.",
+    "champion_battle_option_description_2120_03": "Zu Kampfbeginn wird die Gegner-Seite zeitlich\nunbefristet in den Zustand Physischer Schaden↓\nversetzt.",
+    "champion_battle_option_description_2120_04": "Zu Kampfbeginn wird die Gegner-Seite zeitlich\nunbefristet in den Zustand Spezial-Schaden↓\nversetzt.",
+    "champion_battle_option_description_2120_05": "Zu Kampfbeginn wird die Gegner-Seite zeitlich\nunbefristet in den Zustand Volltrefferschutz\nversetzt.",
+    "champion_battle_option_description_2120_06": "Erhöht den Effekt um [Digit:6digits ] %, wenn die\nSpannung im gegnerischen Team steigt.",
+    "champion_battle_option_description_2120_07": "Der Maximalwert des Countdowns der\nGefährtenattacke des Gegners sinkt um [Digit:6digits ].",
+    "champion_battle_option_description_2120_12": "Die Anzahl der Segmente in der Attackenleiste\ndes Spielers wird um [Digit:6digits ] verringert.",
+    "champion_battle_option_description_2120_13": "Zu Kampfbeginn werden die KP aller Gefährten\nim Team um [Digit:6digits ]% des Maximalwertes gesenkt.",
+    "champion_battle_option_description_2120_14": "Der Angriff und der Speziall-Angriff aller Gegner\nwerden um [Digit:6digits ]% erhöht.",
+    "champion_battle_option_description_2120_15": "Die Verteidigung und die Spezial-Verteidigung\naller Gegner werden um [Digit:6digits ]% erhöht.",
+    "champion_battle_option_description_2120_16": "Der Maximalwert der KP aller Gegner wird um\n[Digit:6digits ]% erhöht.",
+    "champion_battle_option_description_2120_17": "Alle Gegner sind vor Statusproblemen geschützt.",
+    "champion_battle_option_description_2120_18": "Alle Gegner sind vor der Senkung von\nStatuswerten geschützt.",
+    "champion_battle_option_description_2120_19": "Die Menge an KP, die der Spieler mit Attacken\nwiederherstellen kann, sinkt um [Digit:6digits ]%.",
+    "champion_battle_option_description_2120_20": "Die Attackeneinsetzpunkte (AEP) aller Gefährten\nim Team werden halbiert.",
+    "champion_battle_option_description_2120_21": "Die Stärke von Angriffen des Gegners steigt mit\njedem Treffer um [Digit:6digits ]%."
+}

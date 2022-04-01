@@ -1,0 +1,6 @@
+{"entries": [
+{ "bgmReplaceId": 2030040101, "bgmIdOld": "bgm_field_home", "bgmIdNew": "bgm_field_home_af", "scheduleId": "event_2030_1W_AprilFools" },
+{ "bgmReplaceId": 2030040102, "bgmIdOld": "bgm_menu_cafe", "bgmIdNew": "bgm_menu_cafe_af", "scheduleId": "event_2030_1W_AprilFools" },
+{ "bgmReplaceId": 2030040103, "bgmIdOld": "bgm_menu_shop", "bgmIdNew": "bgm_field_home_af", "scheduleId": "event_2030_1W_AprilFools" },
+{ "bgmReplaceId": 2030040104, "bgmIdOld": "bgm_menu_quest", "bgmIdNew": "bgm_menu_quest_af", "scheduleId": "event_2030_1W_AprilFools" }
+]}

@@ -1,0 +1,7 @@
+{"entries": [
+{ "badgeItemId": "730000000010", "badgeNumber": 0, "badgeName": "badge_01", "trainerBaseId": 10000800 },
+{ "badgeItemId": "730000000020", "badgeNumber": 1, "badgeName": "badge_02", "trainerBaseId": 10001600 },
+{ "badgeItemId": "730000000030", "badgeNumber": 2, "badgeName": "badge_03", "trainerBaseId": 10000900 },
+{ "badgeItemId": "730000000040", "badgeNumber": 3, "badgeName": "badge_04", "trainerBaseId": 10003200 },
+{ "badgeItemId": "730000000050", "badgeNumber": 4, "badgeName": "badge_05", "trainerBaseId": 10001300 }
+]}

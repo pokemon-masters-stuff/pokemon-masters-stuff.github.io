@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "相手全員のつよさがレベル[Digit:6digits ]相当あがる",
+    "champion_battle_option_description_2120_02": "バトルの開始時に相手全員が回復付帯状態になる",
+    "champion_battle_option_description_2120_03": "バトルの開始時に相手全体の場は継続時間が永続の物理ダメージ軽減状態になる",
+    "champion_battle_option_description_2120_04": "バトルの開始時に相手全体の場は継続時間が永続の特殊ダメージ軽減状態になる",
+    "champion_battle_option_description_2120_05": "バトルの開始時に相手全体の場は継続時間が永続の急所防御状態になる",
+    "champion_battle_option_description_2120_06": "相手のボルテージ上昇時の効果が[Digit:6digits ]％あがる",
+    "champion_battle_option_description_2120_07": "相手のバディーズわざ発動可能状態までのカウントの上限値が[Digit:6digits ]減る",
+    "champion_battle_option_description_2120_12": "自分のわざゲージの上限が[Digit:6digits ]減る",
+    "champion_battle_option_description_2120_13": "バトルの開始時に味方全員のＨＰが最大値の[Digit:6digits ]％減る",
+    "champion_battle_option_description_2120_14": "相手全員の攻撃と特攻が[Digit:6digits ]％あがる",
+    "champion_battle_option_description_2120_15": "相手全員の防御と特防が[Digit:6digits ]％あがる",
+    "champion_battle_option_description_2120_16": "相手全員の最大ＨＰが[Digit:6digits ]％あがる",
+    "champion_battle_option_description_2120_17": "相手は状態異常にならない",
+    "champion_battle_option_description_2120_18": "相手はすべての能力がさがらない",
+    "champion_battle_option_description_2120_19": "ＨＰを回復させるわざを自分がつかったときのＨＰ回復量が[Digit:6digits ]％さがる",
+    "champion_battle_option_description_2120_20": "味方全員のわざの回数が半分になる",
+    "champion_battle_option_description_2120_21": "相手は攻撃が成功するたびに攻撃の威力が[Digit:6digits ]％ずつあがる"
+}

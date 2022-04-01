@@ -1,0 +1,9 @@
+{
+    "740000001001": "Recupera el [Digit:3digits ]% de los PS de todos\nlos miembros del bando del usuario.",
+    "740000001002": "Recupera todos los PM (Puntos de\nMovimiento) del bando del usuario.",
+    "740000002001": "Aumenta el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial\ny la Velocidad del bando del usuario al\ninicio del combate.",
+    "740000002002": "Hace que el primer movimiento de todos\nlos miembros del bando del usuario sea\ncrítico.",
+    "740000002003": "Hace al bando del usuario inmune a los\nestados negativos al inicio del combate.",
+    "740000002004": "Mitiga el daño que el bando del usuario\nrecibe de ataques físicos al inicio del\ncombate.",
+    "740000002005": "Mitiga el daño que el bando del usuario\nrecibe de ataques especiales al inicio del\ncombate."
+}

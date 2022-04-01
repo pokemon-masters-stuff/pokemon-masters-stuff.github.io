@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "Caja Búsqueda",
+    "box_scout/box_scout_002": "1 búsqueda",
+    "box_scout/box_scout_003": "[Digit:3digits ] búsquedas",
+    "box_scout/box_scout_004": "Siguiente fase",
+    "box_scout/box_scout_005": "Lista de premios",
+    "box_scout/box_scout_006": "¿Quieres pasar a la siguiente fase?",
+    "box_scout/box_scout_007": "*No podrás recuperar los objetos que hayan quedado\nen la Caja Búsqueda.",
+    "box_scout/box_scout_008": "Premios especiales",
+    "box_scout/box_scout_009": "Premios normales",
+    "box_scout/box_scout_010": "Fase [Digit:2digits ]",
+    "box_scout/box_scout_011": "Si empleas [Digit:4digits ] Moneda[ES:Qty P=\"s\" ] Búsqueda\npodrás realizar [Digit:3digits Idx=\"1\" ] búsqueda[ES:Qty P=\"s\" ].",
+    "box_scout/box_scout_013": "¡Has conseguido un\npremio especial!",
+    "box_scout/box_scout_021": "Resultados",
+    "box_scout/box_scout_022": "¿Quieres usar [Name:Item ] ×[Digit:4digits ] para realizar [Digit:3digits Idx=\"1\" ] búsqueda[ES:Qty Ref=\"1\" P=\"s\" ]?"
+}

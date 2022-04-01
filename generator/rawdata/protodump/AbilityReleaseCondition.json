@@ -1,0 +1,16 @@
+{"entries": [
+{ "conditionId": 1, "type": 1, "parameter": 1 },
+{ "conditionId": 2, "type": 1, "parameter": 2 },
+{ "conditionId": 3, "type": 1, "parameter": 3 },
+{ "conditionId": 4, "type": 1, "parameter": 4 },
+{ "conditionId": 5, "type": 1, "parameter": 5 },
+{ "conditionId": 6, "type": 1, "parameter": 6 },
+{ "conditionId": 10, "type": 2, "parameter": 0 },
+{ "conditionId": 12, "type": 6, "parameter": 2 },
+{ "conditionId": 13, "type": 6, "parameter": 3 },
+{ "conditionId": 14, "type": 6, "parameter": 4 },
+{ "conditionId": 15, "type": 6, "parameter": 5 },
+{ "conditionId": 20, "type": 3, "parameter": 22 },
+{ "conditionId": 21, "type": 4, "parameter": 24 },
+{ "conditionId": 30, "type": 5, "parameter": 3 }
+]}

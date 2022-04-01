@@ -1,0 +1,14 @@
+{
+    "champion_battle_rule_2080_001": "Die Stärke von physischen Attacken steigt auf\nbeiden Seiten.",
+    "champion_battle_rule_2080_002": "Die Stärke von Spezial-Attacken steigt auf\nbeiden Seiten.",
+    "champion_battle_rule_2080_003": "Zu Beginn des Kampfes wird der Wert des\nGefährtenattacken-Countdowns auf die Hälfte\ndes Höchstwertes reduziert.",
+    "champion_battle_rule_2080_004": "Zu Beginn des Kampfes werden beide Seiten in\nden Zustand Physischer Schaden↓ versetzt.",
+    "champion_battle_rule_2080_005": "Zu Beginn des Kampfes werden beide Seiten in\nden Zustand Spezial-Schaden↓ versetzt.",
+    "champion_battle_rule_2080_006": "Statusprobleme und Statusveränderungen werden\nmit höherer Wahrscheinlichkeit ausgelöst, fügen\nmehr Schaden zu und dauern länger an.",
+    "champion_battle_rule_2080_007": "Die Attackenleiste wird auf beiden Seiten\nschneller aufgefüllt.",
+    "champion_battle_rule_2080_008": "Der Effekt erhöht sich noch mehr, wenn die\nSpannung steigt.",
+    "champion_battle_rule_2080_010": "Wird ein Gefährtengespann kampfunfähig, sinken\nder Angriff, die Verteidigung, der Spezial-Angriff,\ndie Spezial-Verteidigung und die Initiative aller\nGefährten des betroffenen Teams.",
+    "champion_battle_rule_2090_001": "Von Mitstreitern und von Gegnern ausgelöste\nSeiten-Effekte wirken permanent.",
+    "champion_battle_rule_2090_002": "Die Wahrscheinlichkeit, dass Zusatzeffekte von\nAttacken eintreten, steigt auf beiden Seiten.",
+    "champion_battle_rule_2090_003": "Die Senkung von Statuswerten hat auf beiden\nSeiten größere Auswirkungen als gewöhnlich."
+}

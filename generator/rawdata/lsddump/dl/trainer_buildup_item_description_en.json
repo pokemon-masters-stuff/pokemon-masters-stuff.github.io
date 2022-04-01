@@ -1,0 +1,6 @@
+{
+    "5500": "Used to increase a sync pair's\nnumber of ★s.",
+    "5501": "Used to increase a sync pair's number\nof ★s.\nNote: Once items expire, they are deleted\nautomatically and can no longer be used.",
+    "5510": "Used exclusively to increase the number of\n★s of [Name:TrainerName ]\n& [Name:PokemonName ]",
+    "5511": "Used exclusively to increase the number of\n★s of your [Name:PokemonName ] sync pair."
+}

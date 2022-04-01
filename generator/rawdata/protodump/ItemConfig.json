@@ -1,0 +1,15 @@
+{"entries": [
+{ "itemConfigId": "battle_point_item.upper_limit_of_id", "value": "99999999" },
+{ "itemConfigId": "deck_item.upper_limit_of_type_all", "value": "500" },
+{ "itemConfigId": "event_exchange_item.price_of_auto_selling", "value": "10" },
+{ "itemConfigId": "event_exchange_item.price_of_auto_selling.750000000254", "value": "0" },
+{ "itemConfigId": "item_set_id_at_duplication.750000000085", "value": "4010105" },
+{ "itemConfigId": "item_set_id_at_duplication.750000000086", "value": "4010105" },
+{ "itemConfigId": "item_set_id_at_duplication.750000000094", "value": "4010105" },
+{ "itemConfigId": "item_set_id_at_duplication.750000000095", "value": "4010105" },
+{ "itemConfigId": "money.upper_limit_of_id", "value": "999999999" },
+{ "itemConfigId": "move_level_up_item.upper_limit_of_id", "value": "99999" },
+{ "itemConfigId": "stock_item.upper_limit_of_id", "value": "99999" },
+{ "itemConfigId": "trainer_build_up_item.upper_limit_of_id", "value": "99999" },
+{ "itemConfigId": "villa_item.upper_limit_of_id", "value": "99999" }
+]}

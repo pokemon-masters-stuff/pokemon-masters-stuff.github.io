@@ -1,0 +1,22 @@
+{
+    "40010001": "Aumenta los PS máximos de los compis\ndel bando del usuario en [Digit:3digits ].",
+    "40020001": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Normal.",
+    "40020002": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Fuego.",
+    "40020003": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Agua.",
+    "40020004": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Eléctrico.",
+    "40020005": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Planta.",
+    "40020006": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Hielo.",
+    "40020007": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Lucha.",
+    "40020008": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Veneno.",
+    "40020009": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Tierra.",
+    "40020010": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Volador.",
+    "40020011": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Psíquico.",
+    "40020012": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Bicho.",
+    "40020013": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Roca.",
+    "40020014": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Fantasma.",
+    "40020015": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Dragón.",
+    "40020016": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Siniestro.",
+    "40020017": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Acero.",
+    "40020018": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Hada.",
+    "40030001": "Aumenta el Ataque y el Ataque Especial de\nlos compis del bando del usuario en [Digit:3digits ]."
+}

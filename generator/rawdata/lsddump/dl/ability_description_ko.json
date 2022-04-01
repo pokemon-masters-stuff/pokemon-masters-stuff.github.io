@@ -1,0 +1,12 @@
+{
+    "1": "HP [Digit:5digits ]",
+    "2": "공격 [Digit:5digits ]",
+    "3": "방어 [Digit:5digits ]",
+    "4": "특수공격 [Digit:5digits ]",
+    "5": "특수방어 [Digit:5digits ]",
+    "6": "스피드 [Digit:5digits ]",
+    "7": "[Name:AbilityDescription ]",
+    "8": "대상 기술 : [Name:Move ]\n[Name:AbilityDescription ]",
+    "9": "[Name:Move ] : 위력 상승 [Digit:5digits ]",
+    "10": "[Name:Move ] : 명중률 상승 [Digit:5digits ]"
+}

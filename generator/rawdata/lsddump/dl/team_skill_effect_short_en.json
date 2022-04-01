@@ -1,0 +1,22 @@
+{
+    "40010001": "Maximum HP +[Digit:3digits ]",
+    "40020001": "Normal-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020002": "Fire-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020003": "Water-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020004": "Electric-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020005": "Grass-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020006": "Ice-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020007": "Fighting-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020008": "Poison-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020009": "Ground-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020010": "Flying-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020011": "Psychic-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020012": "Bug-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020013": "Rock-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020014": "Ghost-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020015": "Dragon-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020016": "Dark-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020017": "Steel-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40020018": "Fairy-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
+    "40030001": "Attack &\nSp. Atk +[Digit:3digits ]"
+}

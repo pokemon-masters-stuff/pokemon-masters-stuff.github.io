@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "Prize Box",
+    "box_scout/box_scout_002": "1 Pull",
+    "box_scout/box_scout_003": "[Digit:3digits ] Pulls",
+    "box_scout/box_scout_004": "Skip to Next Pool",
+    "box_scout/box_scout_005": "Prize Pool",
+    "box_scout/box_scout_006": "Would you like to skip to the\nnext pool of prizes?",
+    "box_scout/box_scout_007": "Note: Any items remaining in this pool will no longer\nbe obtainable.",
+    "box_scout/box_scout_008": "Grand Prize",
+    "box_scout/box_scout_009": "Secondary Prizes",
+    "box_scout/box_scout_010": "Pool [Digit:2digits ]",
+    "box_scout/box_scout_011": "Use [Digit:4digits ] prize coins to make\n[Digit:3digits Idx=\"1\" ] prize [EN:Qty Ref=\"1\" S=\"pull\" P=\"pulls\" ]?",
+    "box_scout/box_scout_013": "Grand prize!",
+    "box_scout/box_scout_021": "Results",
+    "box_scout/box_scout_022": "Use [Name:Item ] ×[Digit:4digits ]\nto make [Digit:3digits Idx=\"1\" ] prize [EN:Qty Ref=\"1\" S=\"pull\" P=\"pulls\" ]?"
+}

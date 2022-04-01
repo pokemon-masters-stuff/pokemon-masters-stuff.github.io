@@ -1,0 +1,8 @@
+{
+    "hp_updown": "HP [Digit:5digits ]",
+    "atk_updown": "Attack [Digit:5digits ]",
+    "def_updown": "Defense [Digit:5digits ]",
+    "sp_atk_updown": "Sp. Atk [Digit:5digits ]",
+    "sp_def_updown": "Sp. Def [Digit:5digits ]",
+    "spd_updown": "Speed [Digit:5digits ]"
+}

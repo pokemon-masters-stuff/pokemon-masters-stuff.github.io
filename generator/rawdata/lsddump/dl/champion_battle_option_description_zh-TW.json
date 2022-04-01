@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "對手全體拍組的戰力提高至與等級[Digit:6digits ]相當。",
+    "champion_battle_option_description_2120_02": "對戰開始時，對手全體拍組會變成附帶回復狀態。",
+    "champion_battle_option_description_2120_03": "對戰開始時，對手場地在效果時間內會變成一直持續減輕物理傷害狀態。",
+    "champion_battle_option_description_2120_04": "對戰開始時，對手場地在效果時間內會變成一直持續減輕特殊傷害狀態。",
+    "champion_battle_option_description_2120_05": "對戰開始時，對手場地在效果時間內會變成一直持續要害防禦狀態。",
+    "champion_battle_option_description_2120_06": "對手氣魄提升時的效果會提高[Digit:6digits ]％。",
+    "champion_battle_option_description_2120_07": "對手發動拍組招式所需的行動總數會減少[Digit:6digits ]次。",
+    "champion_battle_option_description_2120_12": "自己的招式計量槽上限會減少[Digit:6digits ]條。",
+    "champion_battle_option_description_2120_13": "對戰開始時，我方全體拍組的ＨＰ會減少最大值的[Digit:6digits ]％。",
+    "champion_battle_option_description_2120_14": "對手全體拍組的攻擊和特攻會提高[Digit:6digits ]％。",
+    "champion_battle_option_description_2120_15": "對手全體拍組的防禦和特防會提高[Digit:6digits ]％。",
+    "champion_battle_option_description_2120_16": "對手全體拍組的最大ＨＰ會提高[Digit:6digits ]％。",
+    "champion_battle_option_description_2120_17": "對手不會陷入異常狀態。",
+    "champion_battle_option_description_2120_18": "對手所有的能力都不會下降。",
+    "champion_battle_option_description_2120_19": "當自己使出會回復ＨＰ的招式時，ＨＰ回復量會降低[Digit:6digits ]％。",
+    "champion_battle_option_description_2120_20": "我方全體拍組的招式次數會變成一半。",
+    "champion_battle_option_description_2120_21": "當對手每次攻擊成功後，攻擊的威力會提高[Digit:6digits ]％。"
+}

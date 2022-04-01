@@ -1,0 +1,9 @@
+{
+    "error": "Error",
+    "force_update": "Actualización",
+    "maintenance": "Mantenimiento",
+    "asset_update": "Novedades",
+    "player_ban": "Cuenta suspendida",
+    "30110": "<attr font='fallback'>승인의뢰실패</attr>",
+    "BR_30110": "Aprovação Falhou"
+}

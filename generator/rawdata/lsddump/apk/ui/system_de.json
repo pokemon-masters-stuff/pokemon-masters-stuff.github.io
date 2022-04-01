@@ -1,0 +1,12 @@
+{
+    "system/remaining_days": "Noch [Digit:3digits ] [DE:Qty S=\"Tag\" P=\"Tage\" ]",
+    "system/minutes_ago": "Vor [Digit:2digits ] [DE:Qty S=\"Minute\" P=\"Minuten\" ]",
+    "system/hours_ago": "Vor [Digit:2digits ] [DE:Qty S=\"Stunde\" P=\"Stunden\" ]",
+    "system/days_ago": "Vor [Digit:2digits ] [DE:Qty S=\"Tag\" P=\"Tagen\" ]",
+    "system/more_than_days_ago": "Vor über [Digit:2digits ] [DE:Qty S=\"Tag\" P=\"Tagen\" ]",
+    "system/until_time": "Bis [Name:DateTime ]",
+    "system/title_name": "Pokémon Masters",
+    "system/title_name_002": "Pokémon Masters EX",
+    "system/remaining_days_double": "Noch\n[Digit:3digits ] [DE:Qty S=\"Tag\" P=\"Tage\" ]",
+    "system/remaining_time": "Noch [Name:DateTime ]"
+}

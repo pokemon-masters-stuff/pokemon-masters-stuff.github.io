@@ -1,0 +1,18 @@
+{
+    "1": "Changement forcé",
+    "2": "Changement\ninstantané",
+    "4": "Attaque PPC",
+    "8": "Précision 100 %",
+    "32": "Ignore le gel",
+    "64": "Ignore le sommeil",
+    "128": "Seulement si\nendormi",
+    "256": "Soin",
+    "512": "Absorption",
+    "1024": "Enchaînement",
+    "2048": "Contrecoup",
+    "65536": "En vol",
+    "524288": "Statut Revenant",
+    "2097152": "Hantise",
+    "4194304": "En rebond",
+    "16777216": "K.O. Instantané"
+}

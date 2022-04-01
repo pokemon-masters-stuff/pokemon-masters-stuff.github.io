@@ -1,0 +1,8 @@
+{
+    "1": "[Digit:1digit ] or more adjacent tiles must\nbe activated",
+    "2": "All adjacent tiles must be activated",
+    "3": "Sync pair must be Lv. [Digit:3digits ] or higher",
+    "4": "Sync move must be Lv. [Digit:3digits ] or higher",
+    "5": "Sync pair potential must be [Digit:2digits ]★\nor greater",
+    "6": "Move level must be [Digit:3digits ] or higher"
+}

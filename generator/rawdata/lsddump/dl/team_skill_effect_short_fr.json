@@ -1,0 +1,22 @@
+{
+    "40010001": "PV maximums +[Digit:3digits ]",
+    "40020001": "Capacité (Normal) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020002": "Capacité (Feu) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020003": "Capacité (Eau) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020004": "Capacité (Électrik) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020005": "Capacité (Plante) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020006": "Capacité (Glace) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020007": "Capacité (Combat) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020008": "Capacité (Poison) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020009": "Capacité (Sol) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020010": "Capacité (Vol) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020011": "Capacité (Psy) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020012": "Capacité (Insecte) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020013": "Capacité (Roche) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020014": "Capacité (Spectre) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020015": "Capacité (Dragon) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020016": "Capacité (Ténèbres) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020017": "Capacité (Acier) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40020018": "Capacité (Fée) :\nAtq. Atq. Spé. +[Digit:3digits ]",
+    "40030001": "Atq. Atq. Spé. +[Digit:3digits ]"
+}

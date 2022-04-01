@@ -1,0 +1,18 @@
+{
+    "1": "Forza sostituzione",
+    "2": "Sostituzione\nimmediata",
+    "4": "Attacco veloce",
+    "8": "Infallibile",
+    "32": "Da congelato",
+    "64": "Da addormentato",
+    "128": "Solo addormentato",
+    "256": "Recupero PS",
+    "512": "Assorbe PS",
+    "1024": "Multicolpo",
+    "2048": "Contraccolpo",
+    "65536": "Volo",
+    "524288": "Oscurotuffo",
+    "2097152": "Spettrotuffo",
+    "4194304": "Rimbalzo",
+    "16777216": "Colpo da KO"
+}

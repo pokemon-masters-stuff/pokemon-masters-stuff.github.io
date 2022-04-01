@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "박스서치",
+    "box_scout/box_scout_002": "1회 서치",
+    "box_scout/box_scout_003": "[Digit:3digits ]회 서치",
+    "box_scout/box_scout_004": "다음 STEP으로",
+    "box_scout/box_scout_005": "보상 일람",
+    "box_scout/box_scout_006": "다음 STEP으로 넘어가겠습니까?",
+    "box_scout/box_scout_007": "※박스서치에 도구가\n남아있을 경우 획득할 수 없습니다",
+    "box_scout/box_scout_008": "주요 보상",
+    "box_scout/box_scout_009": "일반 보상",
+    "box_scout/box_scout_010": "STEP[Digit:2digits ]",
+    "box_scout/box_scout_011": "박스코인을 [Digit:4digits ]개 사용해서\n박스서치를 [Digit:3digits Idx=\"1\" ]회 진행합니다\n괜찮겠습니까?",
+    "box_scout/box_scout_013": "주요 보상을 획득했습니다!",
+    "box_scout/box_scout_021": "결과",
+    "box_scout/box_scout_022": "[Name:Item ](을)를\n[Digit:4digits ]개 사용해서\n박스서치를 [Digit:3digits Idx=\"1\" ]회 진행합니다\n괜찮겠습니까?"
+}

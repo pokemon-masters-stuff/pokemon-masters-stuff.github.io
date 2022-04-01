@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "開箱搜尋",
+    "box_scout/box_scout_002": "搜尋1次",
+    "box_scout/box_scout_003": "搜尋[Digit:3digits ]次",
+    "box_scout/box_scout_004": "前往下一個STEP",
+    "box_scout/box_scout_005": "報酬一覽",
+    "box_scout/box_scout_006": "要前往下一個STEP嗎？",
+    "box_scout/box_scout_007": "※在此階段的開箱搜尋中若還有尚未搜出的道具\n前進後將從此無法再獲得",
+    "box_scout/box_scout_008": "特級報酬",
+    "box_scout/box_scout_009": "一般報酬",
+    "box_scout/box_scout_010": "STEP[Digit:2digits ]",
+    "box_scout/box_scout_011": "確定要消耗[Digit:4digits ]枚開箱幣\n進行[Digit:3digits Idx=\"1\" ]次開箱搜尋嗎？",
+    "box_scout/box_scout_013": "獲得了特級報酬！",
+    "box_scout/box_scout_021": "搜尋結果",
+    "box_scout/box_scout_022": "確定要消耗\n[Digit:4digits ]個[Name:Item ]\n進行[Digit:3digits Idx=\"1\" ]次開箱搜尋嗎？"
+}

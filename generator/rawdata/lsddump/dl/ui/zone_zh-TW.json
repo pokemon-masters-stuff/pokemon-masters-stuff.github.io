@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "可隨機獲得追加的過關報酬\n\n確定要選擇它嗎？",
+    "zone/dialog_002": "可獲得僅限在對戰莊園使用的料理\n確定要選擇它嗎？",
+    "zone/dialog_003": "GET!",
+    "zone/dialog_alert_001": "※對戰莊園專用的料理在本次舉辦期間結束後會自動作廢，無法留到下次使用｡",
+    "zone/title_001": "BONUS!",
+    "zone/title_002": "請選擇一種想要獲得的獎勵報酬",
+    "zone/cell_title_001": "追加報酬",
+    "zone/cell_title_002": "治癒料理",
+    "zone/cell_title_003": "精力料理",
+    "zone/cell_description_001": "可隨機獲得追加的過關報酬",
+    "zone/cell_description_002": "可獲得能幫拍組回復HP或招式次數的料理（對戰莊園專用）",
+    "zone/cell_description_003": "可獲得能幫助對戰的料理（對戰莊園專用）"
+}

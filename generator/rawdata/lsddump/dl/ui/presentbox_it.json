@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "Regali",
+    "presentbox/presentbox_002": "Ricevuto in data:",
+    "presentbox/receivable_cell_btn": "Accetta",
+    "presentbox/tab_present_btn": "Da accettare",
+    "presentbox/tab_temporary_item_btn": "In attesa",
+    "presentbox/tab_received_btn": "Accettati",
+    "presentbox/receive_all_btn": "Accetta tutti",
+    "presentbox/reward_dialog_title": "Regali accettati",
+    "presentbox/reward_dialog_main_text": "Ecco i regali che hai accettato!",
+    "presentbox/presentbox_010": "Ok",
+    "presentbox/presentbox_011": "Non scade",
+    "presentbox/presentbox_012": "La scadenza per l'accettazione di alcuni\nstrumenti è passata, pertanto questi\nstrumenti non sono stati accettati.",
+    "presentbox/presentbox_013": "Gli emblemi già ottenuti sono stati\nscambiati automaticamente\ncon degli Uniticket.",
+    "presentbox/receivable_empty_text": "Nessun regalo da accettare",
+    "presentbox/received_empty_text": "Non accetti regali da [Digit:3digits ] giorni",
+    "presentbox/received_cell_btn": "Già accettato",
+    "presentbox/help_title": "Informazioni sui regali",
+    "presentbox/help": "- I regali accettati vengono visualizzati\nper [Digit:3digits ] giorni.\n- I regali scaduti vengono eliminati\nautomaticamente.\n- Si possono accettare al massimo\n[Digit:3digits ] regali contemporaneamente.",
+    "presentbox/help_02": "- I regali scaduti vengono eliminati\nautomaticamente.\n- Si possono accettare al massimo\n[Digit:3digits Idx=\"1\" ] regali contemporaneamente.\n- I regali accettati vengono visualizzati\nper [Digit:3digits Idx=\"2\" ] giorni. Per gli accessori,\nil limite è di [Digit:4digits Idx=\"3\" ] giorni.\n- Si possono avere fino a [Digit:4digits Idx=\"4\" ]\naccessori nella sezione \"In attesa\".\nGli accessori in eccesso verranno\neliminati in ordine di ottenimento.",
+    "presentbox/receive_failed_description": "Hai raggiunto il limite massimo per\nalcuni strumenti, che pertanto non sono\nstati accettati.",
+    "presentbox/receive_failed_description_002": "Hai raggiunto il limite massimo per alcuni strumenti,\nche pertanto non sono stati accettati."
+}

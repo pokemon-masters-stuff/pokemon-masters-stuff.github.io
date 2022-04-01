@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "Increases the strength of all opposing sync pairs\nby the equivalent of [Digit:6digits ] level(s).",
+    "champion_battle_option_description_2120_02": "At the start of battle, the Gradual Healing effect\nis applied to all opposing sync pairs.",
+    "champion_battle_option_description_2120_03": "At the start of battle, the opponents’ field of play\ngains permanent physical damage reduction.",
+    "champion_battle_option_description_2120_04": "At the start of battle, the opponents’ field of play\ngains permanent special damage reduction.",
+    "champion_battle_option_description_2120_05": "At the start of battle, the opponents’ field of play\ngains permanent critical-hit defense.",
+    "champion_battle_option_description_2120_06": "Increases the effectiveness of sync buffs that\nopponents receive by [Digit:6digits ]%.",
+    "champion_battle_option_description_2120_07": "The total number of moves opponents need to\nuse before they can unleash a sync move is\nreduced by [Digit:6digits ].",
+    "champion_battle_option_description_2120_12": "Reduces allied sync pairs’ move gauge maximum\nby [Digit:6digits ].",
+    "champion_battle_option_description_2120_13": "At the start of battle, reduces the HP of all allied\nsync pairs by [Digit:6digits ]% of their maximum HP.",
+    "champion_battle_option_description_2120_14": "Raises the Attack and Sp. Atk of all opposing\nsync pairs by [Digit:6digits ]%.",
+    "champion_battle_option_description_2120_15": "Raises the Defense and Sp. Def of all opposing\nsync pairs by [Digit:6digits ]%.",
+    "champion_battle_option_description_2120_16": "Raises the maximum HP of all opposing sync\npairs by [Digit:6digits ]%.",
+    "champion_battle_option_description_2120_17": "Opponents become immune to status conditions.",
+    "champion_battle_option_description_2120_18": "Opponents become immune to all\nstat-lowering effects.",
+    "champion_battle_option_description_2120_19": "Reduces the HP restored by allies’ healing moves\nby [Digit:6digits ]%.",
+    "champion_battle_option_description_2120_20": "Halves the MP of all allied sync pairs.",
+    "champion_battle_option_description_2120_21": "Every time an opponent’s attack is successful,\npowers up that opponent’s attacks by [Digit:6digits ]%."
+}

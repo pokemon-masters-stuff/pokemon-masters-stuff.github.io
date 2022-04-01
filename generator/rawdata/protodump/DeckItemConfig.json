@@ -1,0 +1,21 @@
+{"entries": [
+{ "deckItemConfigId": "lv_limit_phase.0.max_level", "value": "3" },
+{ "deckItemConfigId": "lv_limit_phase.1.max_level", "value": "6" },
+{ "deckItemConfigId": "lv_limit_phase.2.max_level", "value": "9" },
+{ "deckItemConfigId": "lv_limit_phase.3.max_level", "value": "12" },
+{ "deckItemConfigId": "lv_limit_phase.4.max_level", "value": "15" },
+{ "deckItemConfigId": "lv_limit_phase.max.rarity.1", "value": "4" },
+{ "deckItemConfigId": "lv_limit_phase.max.rarity.2", "value": "4" },
+{ "deckItemConfigId": "lv_limit_phase.max.rarity.3", "value": "4" },
+{ "deckItemConfigId": "param.type_match_effect_rate", "value": "100" },
+{ "deckItemConfigId": "param.type_mismatch_effect_rate", "value": "50" },
+{ "deckItemConfigId": "price.rarity1.base", "value": "50" },
+{ "deckItemConfigId": "price.rarity1.variable1", "value": "50" },
+{ "deckItemConfigId": "price.rarity1.variable2", "value": "1" },
+{ "deckItemConfigId": "price.rarity2.base", "value": "100" },
+{ "deckItemConfigId": "price.rarity2.variable1", "value": "100" },
+{ "deckItemConfigId": "price.rarity2.variable2", "value": "1" },
+{ "deckItemConfigId": "price.rarity3.base", "value": "150" },
+{ "deckItemConfigId": "price.rarity3.variable1", "value": "150" },
+{ "deckItemConfigId": "price.rarity3.variable2", "value": "1" }
+]}

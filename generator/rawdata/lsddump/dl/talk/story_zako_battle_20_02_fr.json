@@ -1,0 +1,18 @@
+{
+    "story_zako_battle_20_02/3701_0101_0100_10": "Eh ! Regardez ! Là-bas ! Vous croyez que\nc'est [Name:PlayerNickname ] ?!",
+    "story_zako_battle_20_02/3701_0101_0200_10": "Non... Siii !!!",
+    "story_zako_battle_20_02/3701_0101_0300_10": "C'est [FR:Gen Ref=\"255\" M=\"lui\" F=\"elle\" ] ! [FR:Gen Ref=\"255\" M=\"Le Dresseur\" F=\"La Dresseuse\" ] dont tout le monde\nparle ! Tu crois qu'on peut lui demander\nun autographe ?",
+    "story_zako_battle_20_02/3701_0101_0400_10": "Non, mieux... Hé ! [Name:PlayerNickname ] !\nOn dit que c'est toi qui vas remporter le WPM...\nTu voudrais bien faire un combat contre nous ?",
+    "story_zako_battle_20_02/3701_0501_0100_10": "Quelle force... C'est sûr, c'est toi qui vas gagner !",
+    "story_zako_battle_20_02/3701_0501_0200_10": "Bonne chance dans le tournoi ! On est de tout\ncœur avec vous !",
+    "story_zako_battle_20_02/3801_0101_0100_10": "Ouin... On a perdu... Ouiiin !!!",
+    "story_zako_battle_20_02/3801_0101_0200_10": "Pardon... C'est ma faute... Je suis trop faible...",
+    "story_zako_battle_20_02/3801_0101_0300_10": "J'voulais participer au WPM ! Et maintenant je\npeux plus ! Parce qu'on a perdu ! PERDUUU !!!\nOUIIIN !!!",
+    "story_zako_battle_20_02/3801_0101_0400_10": "(Dire qu'on a fait tout ce chemin pour venir à\nPassio... Le pauvre...)",
+    "story_zako_battle_20_02/3801_0101_0500_10": "(Si on avait pu au moins disputer un combat\ncontre un Dresseur célèbre, il aurait pu rentrer\navec de bons souvenirs...)",
+    "story_zako_battle_20_02/3801_0101_0600_10": "(Mais les Dresseurs stars, ça court pas les rues,\nmême à Passio...)",
+    "story_zako_battle_20_02/3801_0101_0700_10": "... ?! Eh, mais...\nNe seriez-vous pas [Name:PlayerNickname ] ?",
+    "story_zako_battle_20_02/3801_0101_0800_10": "C'est inespéré ! Je vous en prie, aidez-moi à\ndonner à mon petit frère de bons souvenirs de\nnotre passage à Passio !",
+    "story_zako_battle_20_02/3801_0501_0200_10": "On a perdu, mais c'était un super combat !\nLes combats Pokémon, vraiment, c'est trop super !",
+    "story_zako_battle_20_02/3801_0501_0300_10": "Quand on dira à papa et maman qu'on s'est\nbattus contre [Name:PlayerNickname ], ils n'en\nreviendront pas !"
+}

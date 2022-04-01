@@ -7,16 +7,16 @@ const monsterBaseDB = require('../rawdata/protodump/MonsterBase.json');
 const monsterVariationDB = require('../rawdata/protodump/MonsterVariation.json');
 const trainerDB = require('../rawdata/protodump/Trainer.json');
 
-const moveNameDBde = require('../rawdata/lsddump/move_name_de.json');
-const moveNameDBen = require('../rawdata/lsddump/move_name_en.json');
-const moveNameDBes = require('../rawdata/lsddump/move_name_es.json');
-const moveNameDBfr = require('../rawdata/lsddump/move_name_fr.json');
-const moveNameDBit = require('../rawdata/lsddump/move_name_it.json');
-const moveNameDBja = require('../rawdata/lsddump/move_name_ja.json');
-const moveNameDBko = require('../rawdata/lsddump/move_name_ko.json');
-const moveNameDBzh = require('../rawdata/lsddump/move_name_zh-TW.json');
+const moveNameDBde = require('../rawdata/lsddump/dl/move_name_de.json');
+const moveNameDBen = require('../rawdata/lsddump/dl/move_name_en.json');
+const moveNameDBes = require('../rawdata/lsddump/dl/move_name_es.json');
+const moveNameDBfr = require('../rawdata/lsddump/dl/move_name_fr.json');
+const moveNameDBit = require('../rawdata/lsddump/dl/move_name_it.json');
+const moveNameDBja = require('../rawdata/lsddump/dl/move_name_ja.json');
+const moveNameDBko = require('../rawdata/lsddump/dl/move_name_ko.json');
+const moveNameDBzh = require('../rawdata/lsddump/dl/move_name_zh-TW.json');
 
-const passiveSkillNameDBen = require('../rawdata/lsddump/passive_skill_name_en.json');
+const passiveSkillNameDBen = require('../rawdata/lsddump/dl/passive_skill_name_en.json');
 
 const moveNameDB = {
   de: moveNameDBde,

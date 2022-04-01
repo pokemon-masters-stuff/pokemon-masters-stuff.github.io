@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "프레젠트박스",
+    "presentbox/presentbox_002": "받은 날짜",
+    "presentbox/receivable_cell_btn": "받기",
+    "presentbox/tab_present_btn": "받기",
+    "presentbox/tab_temporary_item_btn": "임시보관",
+    "presentbox/tab_received_btn": "내역",
+    "presentbox/receive_all_btn": "모두 받기",
+    "presentbox/reward_dialog_title": "선물 받기",
+    "presentbox/reward_dialog_main_text": "아래의 선물을 받았습니다",
+    "presentbox/presentbox_010": "OK",
+    "presentbox/presentbox_011": "제한없음",
+    "presentbox/presentbox_012": "수령 기한이 지난\n일부 아이템은\n수령하지 못하였습니다",
+    "presentbox/presentbox_013": "이미 획득한 엠블럼을\n잠재력으로 자동 교환했습니다",
+    "presentbox/receivable_empty_text": "받을 수 있는 선물이 없습니다",
+    "presentbox/received_empty_text": "[Digit:3digits ]일 이내에 받은 선물이 없습니다",
+    "presentbox/received_cell_btn": "받기 완료",
+    "presentbox/help_title": "선물에 대해서",
+    "presentbox/help": "・선물 받기 완료가 표시되는 기간은\n  [Digit:3digits ]일 동안입니다\n・기한이 지난 선물은 자동적으로\n  삭제됩니다\n・한 번에 받을 수 있는 선물은\n  최대 [Digit:3digits ]개입니다",
+    "presentbox/help_02": "・수령 기한이 지난 선물은\n  자동적으로 삭제됩니다\n・한 번에 받을 수 있는 선물은\n  최대 [Digit:3digits Idx=\"1\" ]개입니다\n・받기 완료가 표시되는 기간은 [Digit:3digits Idx=\"2\" ]일 동안이며\n  장비의 표시 상한은 [Digit:4digits Idx=\"3\" ]개입니다\n・임시보관된 장비의 보관 상한은\n  [Digit:4digits Idx=\"4\" ]개입니다\n  보관 상한을 넘은 장비는\n  오래된 것부터 삭제됩니다",
+    "presentbox/receive_failed_description": "보유 상한을 넘은 일부 도구는\n수령하지 않았습니다",
+    "presentbox/receive_failed_description_002": "※보유 상한을 넘은 일부 도구는\n수령하지 않았습니다"
+}

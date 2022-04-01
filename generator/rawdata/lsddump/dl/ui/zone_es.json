@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "Obtendrás premios adicionales al azar.\n¿Quieres continuar?",
+    "zone/dialog_002": "Obtendrás platos de comida que solo pueden\nusarse en la Residencia Batalla.\n¿Quieres continuar?",
+    "zone/dialog_003": "¡Obtenido!",
+    "zone/dialog_alert_001": "Aviso: Los platos que no hayas consumido al final de\nuna etapa de la Residencia Batalla serán desechados.",
+    "zone/title_001": "¡BONIFICACIÓN!",
+    "zone/title_002": "¡Puedes elegir la bonificación que tú quieras!",
+    "zone/cell_title_001": "Premios adicionales",
+    "zone/cell_title_002": "Platos reponedores",
+    "zone/cell_title_003": "Platos potenciadores",
+    "zone/cell_description_001": "Premios adicionales al azar.",
+    "zone/cell_description_002": "Estos platos sirven para recuperar\nPS o PM (solo en la Residencia\nBatalla).",
+    "zone/cell_description_003": "Estos platos te otorgarán cierta\nventaja en combate (solo en la\nResidencia Batalla)."
+}

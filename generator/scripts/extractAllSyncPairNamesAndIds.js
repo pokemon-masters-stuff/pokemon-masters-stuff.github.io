@@ -9,32 +9,32 @@ const trainerBaseDB = require('../rawdata/protodump/TrainerBase.json');
 
 const oldTrainerDB = require('../rawdata/old/Trainer.json');
 
-const pokemonNameDBde = require('../rawdata/lsddump/monster_name_de.json');
-const pokemonNameDBen = require('../rawdata/lsddump/monster_name_en.json');
-const pokemonNameDBes = require('../rawdata/lsddump/monster_name_es.json');
-const pokemonNameDBfr = require('../rawdata/lsddump/monster_name_fr.json');
-const pokemonNameDBit = require('../rawdata/lsddump/monster_name_it.json');
-const pokemonNameDBja = require('../rawdata/lsddump/monster_name_ja.json');
-const pokemonNameDBko = require('../rawdata/lsddump/monster_name_ko.json');
-const pokemonNameDBzh = require('../rawdata/lsddump/monster_name_zh-TW.json');
+const pokemonNameDBde = require('../rawdata/lsddump/dl/monster_name_de.json');
+const pokemonNameDBen = require('../rawdata/lsddump/dl/monster_name_en.json');
+const pokemonNameDBes = require('../rawdata/lsddump/dl/monster_name_es.json');
+const pokemonNameDBfr = require('../rawdata/lsddump/dl/monster_name_fr.json');
+const pokemonNameDBit = require('../rawdata/lsddump/dl/monster_name_it.json');
+const pokemonNameDBja = require('../rawdata/lsddump/dl/monster_name_ja.json');
+const pokemonNameDBko = require('../rawdata/lsddump/dl/monster_name_ko.json');
+const pokemonNameDBzh = require('../rawdata/lsddump/dl/monster_name_zh-TW.json');
 
-const trainerNameDBde = require('../rawdata/lsddump/trainer_name_de.json');
-const trainerNameDBen = require('../rawdata/lsddump/trainer_name_en.json');
-const trainerNameDBes = require('../rawdata/lsddump/trainer_name_es.json');
-const trainerNameDBfr = require('../rawdata/lsddump/trainer_name_fr.json');
-const trainerNameDBit = require('../rawdata/lsddump/trainer_name_it.json');
-const trainerNameDBja = require('../rawdata/lsddump/trainer_name_ja.json');
-const trainerNameDBko = require('../rawdata/lsddump/trainer_name_ko.json');
-const trainerNameDBzh = require('../rawdata/lsddump/trainer_name_zh-TW.json');
+const trainerNameDBde = require('../rawdata/lsddump/apk/trainer_name_de.json');
+const trainerNameDBen = require('../rawdata/lsddump/apk/trainer_name_en.json');
+const trainerNameDBes = require('../rawdata/lsddump/apk/trainer_name_es.json');
+const trainerNameDBfr = require('../rawdata/lsddump/apk/trainer_name_fr.json');
+const trainerNameDBit = require('../rawdata/lsddump/apk/trainer_name_it.json');
+const trainerNameDBja = require('../rawdata/lsddump/apk/trainer_name_ja.json');
+const trainerNameDBko = require('../rawdata/lsddump/apk/trainer_name_ko.json');
+const trainerNameDBzh = require('../rawdata/lsddump/apk/trainer_name_zh-TW.json');
 
-const roleTypeNameDBde = require('../rawdata/lsddump/role_type_name_de.json');
-const roleTypeNameDBen = require('../rawdata/lsddump/role_type_name_en.json');
-const roleTypeNameDBes = require('../rawdata/lsddump/role_type_name_es.json');
-const roleTypeNameDBfr = require('../rawdata/lsddump/role_type_name_fr.json');
-const roleTypeNameDBit = require('../rawdata/lsddump/role_type_name_it.json');
-const roleTypeNameDBja = require('../rawdata/lsddump/role_type_name_ja.json');
-const roleTypeNameDBko = require('../rawdata/lsddump/role_type_name_ko.json');
-const roleTypeNameDBzh = require('../rawdata/lsddump/role_type_name_zh-TW.json');
+const roleTypeNameDBde = require('../rawdata/lsddump/dl/role_type_name_de.json');
+const roleTypeNameDBen = require('../rawdata/lsddump/dl/role_type_name_en.json');
+const roleTypeNameDBes = require('../rawdata/lsddump/dl/role_type_name_es.json');
+const roleTypeNameDBfr = require('../rawdata/lsddump/dl/role_type_name_fr.json');
+const roleTypeNameDBit = require('../rawdata/lsddump/dl/role_type_name_it.json');
+const roleTypeNameDBja = require('../rawdata/lsddump/dl/role_type_name_ja.json');
+const roleTypeNameDBko = require('../rawdata/lsddump/dl/role_type_name_ko.json');
+const roleTypeNameDBzh = require('../rawdata/lsddump/dl/role_type_name_zh-TW.json');
 
 const pokemonNameDB = {
   de: pokemonNameDBde,
@@ -69,7 +69,7 @@ const roleTypeNameDB = {
   zh: roleTypeNameDBzh,
 };
 
-const { languages } = require('../utils/constants');
+const { languages, modifiedMonsterBaseId } = require('../utils/constants');
 
 // Update this list (of trainerBaseId) based on new datamine
 const arrayOfGridedTrainers = [
@@ -256,6 +256,9 @@ const arrayOfGridedTrainers = [
   10257400000, // Raihan & Flygon
   // 3/22/2022
   10130100000, // Serena
+  10022000000, // Wulfric
+  10037000000, // Ramos
+  10055000000, // Wikstrom
 
   // 18000020601, // Hero & Snorlax
   // 19999000015, // Lillie & Prinplup
@@ -266,6 +269,15 @@ const arrayOfGridedTrainers = [
   // 19999000021, // Hero & Tyranitar
   // 19999000022, // Lillie & Kommo-o
   // 19999000023, // Rosa & Hydreigon
+
+  // 3/30/2022
+  10108400000, // Ingo & Accelgor
+  10109400000, // Emmet & Escavalier
+  10118410000, // Lillie & Polteageist
+  10259400000, // Sonia & Tsareena
+  10044000000, // Roxanne & Probopass
+  10097000000, // Marley & Arcanine
+  10058000000, // Kahili & Toucannon
 ];
 
 /*
@@ -505,9 +517,23 @@ const extractAllSyncPairNamesAndIds = () => {
                 .substring(0, monsterBaseId.toString().length - 1) + '0'
             ];
 
-        if (monsterBaseId.toString() === '21038400') {
-          pokemonNameByLanguage[language] = pokemonNameDB[language]['20038400']; // Steven & Rayquaza
+        if (modifiedMonsterBaseId[monsterBaseId]) {
+          pokemonNameByLanguage[language] =
+            pokemonNameDB[language][modifiedMonsterBaseId[monsterBaseId]];
         }
+
+        // if (monsterBaseId.toString() === '21038400') {
+        //   pokemonNameByLanguage[language] = pokemonNameDB[language]['20038400']; // Steven & Rayquaza
+        // }
+
+        // if (monsterBaseId.toString() === '2008551200') {
+        //   pokemonNameByLanguage[language] =
+        //     pokemonNameDB[language]['2008551100']; // Lillie
+        // }
+
+        // if (monsterBaseId.toString() === '21081401') {
+        //   pokemonNameByLanguage[language] = pokemonNameDB[language]['20081401']; // Sonia
+        // }
       } else {
         console.log(`No monsterBaseId`);
       }
@@ -667,7 +693,18 @@ const extractAllSyncPairNamesAndIds = () => {
       // console.log(
       //   `{trainerId: ${trainerId.toString()}}, // ${syncPairEnglishName}`
       // );
-      console.log(`${trainerId.toString()}, // ${syncPairEnglishName}`);
+      console.log(
+        `${trainerId.toString()}, // ${
+          pokemonNameByLanguage['en']
+            ? syncPairEnglishName
+            : trainerNameByLanguage['en'] +
+              ' & ' +
+              monsterActorId +
+              ' (monsterBaseId ' +
+              monsterBaseId +
+              ' not found in pokemonNameDB i.e. monster_name_xx.json files. Pls update modifiedMonsterBaseId in utils/constants)'
+        }`
+      );
       newSyncPairs[trainerId] = {
         syncPairEnglishName: syncPairEnglishName,
         trainerId: trainerId.toString(),

@@ -1,0 +1,12 @@
+{
+    "system/remaining_days": "[Digit:3digits ] more day(s)",
+    "system/minutes_ago": "[Digit:2digits ] minute(s) ago",
+    "system/hours_ago": "[Digit:2digits ] hour(s) ago",
+    "system/days_ago": "[Digit:2digits ] day(s) ago",
+    "system/more_than_days_ago": "more than [Digit:2digits ] day(s) ago",
+    "system/until_time": "Ends [Name:DateTime ]",
+    "system/title_name": "Pokémon Masters",
+    "system/title_name_002": "Pokémon Masters EX",
+    "system/remaining_days_double": "[Digit:3digits ] [EN:Qty S=\"day\" P=\"days\" ]\nremaining",
+    "system/remaining_time": "Ends [Name:DateTime ]"
+}

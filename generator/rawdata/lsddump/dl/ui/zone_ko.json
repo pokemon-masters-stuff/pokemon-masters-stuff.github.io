@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "추가 클리어 보상을 랜덤으로 획득할 수 있습니다\n선택하겠습니까?",
+    "zone/dialog_002": "배틀빌라에서만 사용할 수 있는 음식을 획득할 수 있습니다\n선택하겠습니까?",
+    "zone/dialog_003": "GET!",
+    "zone/dialog_alert_001": "※배틀빌라 전용 음식은 다음 개최 기간에서는 사용할 수 없으며\n이번 개최 기간이 끝난 뒤 자동으로 파기됩니다",
+    "zone/title_001": "BONUS!",
+    "zone/title_002": "보너스 보상을 한 가지 선택하여 획득할 수 있습니다",
+    "zone/cell_title_001": "추가 보상",
+    "zone/cell_title_002": "치유의 음식",
+    "zone/cell_title_003": "힘이 솟는 음식",
+    "zone/cell_description_001": "추가 클리어 보상을 랜덤으로\n획득할 수 있습니다",
+    "zone/cell_description_002": "버디즈의 HP나 기술횟수를 회복하는\n음식을 획득할 수 있습니다\n(배틀빌라 전용)",
+    "zone/cell_description_003": "배틀에 도움이 되는\n음식을 획득할 수 있습니다\n(배틀빌라 전용)"
+}

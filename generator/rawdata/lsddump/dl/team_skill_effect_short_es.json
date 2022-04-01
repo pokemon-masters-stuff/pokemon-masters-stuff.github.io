@@ -1,0 +1,22 @@
+{
+    "40010001": "PS máximos +[Digit:3digits ]",
+    "40020001": "Cuando at. Normal\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020002": "Cuando at. Fuego\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020003": "Cuando at. Agua\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020004": "Cuando at. Eléctrico\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020005": "Cuando at. Planta\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020006": "Cuando at. Hielo\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020007": "Cuando at. Lucha\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020008": "Cuando at. Veneno\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020009": "Cuando at. Tierra\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020010": "Cuando at. Volador\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020011": "Cuando at. Psíquico\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020012": "Cuando at. Bicho\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020013": "Cuando at. Roca\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020014": "Cuando at. Fantasma\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020015": "Cuando at. Dragón\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020016": "Cuando at. Siniestro\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020017": "Cuando at. Acero\nAt. y At. Esp. +[Digit:3digits ]",
+    "40020018": "Cuando at. Hada\nAt. y At. Esp. +[Digit:3digits ]",
+    "40030001": "At. y At. Esp. +[Digit:3digits ]"
+}

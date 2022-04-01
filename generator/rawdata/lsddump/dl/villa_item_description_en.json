@@ -1,0 +1,9 @@
+{
+    "740000001001": "Restores [Digit:3digits ]% of all allied sync pair’s HP.",
+    "740000001002": "Recovers all MP of all allied sync pairs.",
+    "740000002001": "At the start of battle, raises the Attack, Defense, Sp. Atk, Sp. Def, and Speed of all allied sync pairs.",
+    "740000002002": "At the start of battle, makes all allied sync pairs’ next attacks a critical hit.",
+    "740000002003": "At the start of battle, makes all allied sync pairs nullify status conditions and interference inflicted upon them.",
+    "740000002004": "At the start of battle, reduces physical damage done to the allied field of play.",
+    "740000002005": "At the start of battle, reduces special damage done to the allied field of play."
+}

@@ -1,0 +1,12 @@
+{
+    "1": "HP[Digit:5digits ]",
+    "2": "攻擊[Digit:5digits ]",
+    "3": "防禦[Digit:5digits ]",
+    "4": "特攻[Digit:5digits ]",
+    "5": "特防[Digit:5digits ]",
+    "6": "速度[Digit:5digits ]",
+    "7": "[Name:Ability ]",
+    "8": "[Name:Move ]：[Name:Ability ]",
+    "9": "[Name:Move ]：威力[Digit:5digits ]",
+    "10": "[Name:Move ]：命中率[Digit:5digits ]"
+}

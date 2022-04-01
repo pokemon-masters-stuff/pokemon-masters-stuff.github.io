@@ -1,0 +1,18 @@
+{
+    "1": "Forced Switch",
+    "2": "Sudden Switch",
+    "4": "Quick Move",
+    "8": "Sure Hit",
+    "32": "OK While Frozen",
+    "64": "OK While Asleep",
+    "128": "Only While Asleep",
+    "256": "Heals",
+    "512": "Absorbs",
+    "1024": "Multistrike",
+    "2048": "Recoil",
+    "65536": "Flying",
+    "524288": "Shadow Presence",
+    "2097152": "Phantom Presence",
+    "4194304": "Bouncing",
+    "16777216": "One-Hit KO"
+}

@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "상대 전원의 능력치가 레벨 [Digit:6digits ]에 맞게 오른다",
+    "champion_battle_option_description_2120_02": "배틀 시작 시 상대 전원이 지속회복 상태가 된다",
+    "champion_battle_option_description_2120_03": "배틀 시작 시 상대 전원의 필드는 별도의 유지 시간 없이\n영구 지속되는 물리데미지경감 상태가 된다",
+    "champion_battle_option_description_2120_04": "배틀 시작 시 상대 전원의 필드는 별도의 유지 시간 없이\n영구 지속되는 특수데미지경감 상태가 된다",
+    "champion_battle_option_description_2120_05": "배틀 시작 시 상대 전원의 필드는 별도의 유지 시간 없이\n영구 지속되는 급소방어 상태가 된다",
+    "champion_battle_option_description_2120_06": "상대의 볼티지 상승 시 효과가 [Digit:6digits ]% 오른다",
+    "champion_battle_option_description_2120_07": "상대의 버디즈기술 발동 가능 상태가 되기까지의\n카운트 상한치가 [Digit:6digits ] 줄어든다",
+    "champion_battle_option_description_2120_12": "자신의 기술게이지 상한이 [Digit:6digits ] 줄어든다",
+    "champion_battle_option_description_2120_13": "배틀 시작 시 같은 편 전원의 HP가\n최대치의 [Digit:6digits ]% 줄어든다",
+    "champion_battle_option_description_2120_14": "상대 전원의 공격과 특수공격이 [Digit:6digits ]% 오른다",
+    "champion_battle_option_description_2120_15": "상대 전원의 방어와 특수방어가 [Digit:6digits ]% 오른다",
+    "champion_battle_option_description_2120_16": "상대 전원의 최대 HP가 [Digit:6digits ]% 오른다",
+    "champion_battle_option_description_2120_17": "상대는 상태 이상이 되지 않는다",
+    "champion_battle_option_description_2120_18": "상대는 모든 능력이 떨어지지 않는다",
+    "champion_battle_option_description_2120_19": "HP를 회복시키는 기술을 자신이 사용할 때의\nHP회복량이 [Digit:6digits ]% 줄어든다",
+    "champion_battle_option_description_2120_20": "같은 편 전원의 기술횟수가 절반이 된다",
+    "champion_battle_option_description_2120_21": "상대는 공격이 성공할 때마다\n공격의 위력이 [Digit:6digits ]%씩 오른다"
+}

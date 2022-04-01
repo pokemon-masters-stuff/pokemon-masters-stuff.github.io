@@ -1,0 +1,20 @@
+{"entries": [
+{ "u1": 1, "u2": 0, "passive1Id": 17020105, "passive2Id": 17020108, "passive3Id": 17020109, "passive4Id": 17010101 },
+{ "u1": 2, "u2": 0, "passive1Id": 17020405, "passive2Id": 17020408, "passive3Id": 17020409, "passive4Id": 17010201 },
+{ "u1": 3, "u2": 0, "passive1Id": 17020805, "passive2Id": 17020808, "passive3Id": 17020809, "passive4Id": 17010901 },
+{ "u1": 4, "u2": 0, "passive1Id": 17020305, "passive2Id": 17020308, "passive3Id": 17020309, "passive4Id": 17010601 },
+{ "u1": 5, "u2": 0, "passive1Id": 17020603, "passive2Id": 17020605, "passive3Id": 17020608, "passive4Id": 17010701 },
+{ "u1": 6, "u2": 0, "passive1Id": 17020203, "passive2Id": 17020205, "passive3Id": 17020208, "passive4Id": 17010301 },
+{ "u1": 7, "u2": 0, "passive1Id": 17020705, "passive2Id": 17020708, "passive3Id": 17020709, "passive4Id": 17010801 },
+{ "u1": 8, "u2": 0, "passive1Id": 17020505, "passive2Id": 17020508, "passive3Id": 17020509, "passive4Id": 17010401 },
+{ "u1": 9, "u2": 0, "passive1Id": 18010103, "passive2Id": 18010105, "passive3Id": 18010107, "passive4Id": 18020101 },
+{ "u1": 10, "u2": 0, "passive1Id": 18010203, "passive2Id": 18010205, "passive3Id": 18010207, "passive4Id": 18020201 },
+{ "u1": 11, "u2": 0, "passive1Id": 18010303, "passive2Id": 18010305, "passive3Id": 18010307, "passive4Id": 18020301 },
+{ "u1": 12, "u2": 0, "passive1Id": 18010403, "passive2Id": 18010405, "passive3Id": 18010407, "passive4Id": 18020401 },
+{ "u1": 13, "u2": 0, "passive1Id": 18010503, "passive2Id": 18010505, "passive3Id": 18010507, "passive4Id": 18020501 },
+{ "u1": 14, "u2": 0, "passive1Id": 18010603, "passive2Id": 18010605, "passive3Id": 18010607, "passive4Id": 18020601 },
+{ "u1": 15, "u2": 0, "passive1Id": 18010703, "passive2Id": 18010705, "passive3Id": 18010707, "passive4Id": 18020701 },
+{ "u1": 16, "u2": 0, "passive1Id": 0, "passive2Id": 0, "passive3Id": 0, "passive4Id": 17010501 },
+{ "u1": 17, "u2": 0, "passive1Id": 0, "passive2Id": 0, "passive3Id": 0, "passive4Id": 20010101 },
+{ "u1": 18, "u2": 0, "passive1Id": 0, "passive2Id": 0, "passive3Id": 0, "passive4Id": 18020801 }
+]}

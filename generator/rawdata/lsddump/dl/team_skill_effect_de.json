@@ -1,0 +1,22 @@
+{
+    "40010001": "Erhöht den maximalen KP-Wert aller\nGefährten im Team um [Digit:3digits ].",
+    "40020001": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Normal einsetzt.",
+    "40020002": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Feuer einsetzt.",
+    "40020003": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Wasser einsetzt.",
+    "40020004": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Elektro einsetzt.",
+    "40020005": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Planze einsetzt.",
+    "40020006": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Eis einsetzt.",
+    "40020007": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Kampf einsetzt.",
+    "40020008": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Gift einsetzt.",
+    "40020009": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Boden einsetzt.",
+    "40020010": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Flug einsetzt.",
+    "40020011": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Psycho einsetzt.",
+    "40020012": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Käfer einsetzt.",
+    "40020013": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Gestein einsetzt.",
+    "40020014": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Geist einsetzt.",
+    "40020015": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Drache einsetzt.",
+    "40020016": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Unlicht einsetzt.",
+    "40020017": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Stahl einsetzt.",
+    "40020018": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Fee einsetzt.",
+    "40030001": "Erhöht den Angriff und den Spezial-Angriff\naller Gefährten im Team um [Digit:3digits ]."
+}

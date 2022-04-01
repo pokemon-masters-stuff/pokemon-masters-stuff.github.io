@@ -1,0 +1,4 @@
+{"entries": [
+{ "monsterEnhancementId": "920140000000", "trainerId": "10140000000", "monsterIdCurrent": "20140000000", "monsterIdNext": "20140000001", "scheduleId": "update_3090_1W_3_FOREVER", "type": "1" },
+{ "monsterEnhancementId": "920194000000", "trainerId": "10194000000", "monsterIdCurrent": "20194000000", "monsterIdNext": "20194000001", "scheduleId": "update_4010_3W_1", "type": "2" }
+]}

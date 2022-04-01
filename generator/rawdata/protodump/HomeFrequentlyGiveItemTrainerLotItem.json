@@ -1,0 +1,21 @@
+{"entries": [
+{ "itemLotItemId": 205000001, "itemSetId": "2020222", "rate": 10 },
+{ "itemLotItemId": 205000001, "itemSetId": "2020223", "rate": 10 },
+{ "itemLotItemId": 205000001, "itemSetId": "2020231", "rate": 10 },
+{ "itemLotItemId": 205000001, "itemSetId": "2030202", "rate": 20 },
+{ "itemLotItemId": 205000001, "itemSetId": "2030204", "rate": 20 },
+{ "itemLotItemId": 205000001, "itemSetId": "2050127", "rate": 16 },
+{ "itemLotItemId": 205000001, "itemSetId": "2050166", "rate": 4 },
+{ "itemLotItemId": 205000001, "itemSetId": "2050167", "rate": 5 },
+{ "itemLotItemId": 205000001, "itemSetId": "2050168", "rate": 5 },
+{ "itemLotItemId": 205000002, "itemSetId": "2020178", "rate": 10 },
+{ "itemLotItemId": 205000002, "itemSetId": "2020233", "rate": 4 },
+{ "itemLotItemId": 205000002, "itemSetId": "2030203", "rate": 20 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050169", "rate": 16 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050170", "rate": 16 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050171", "rate": 10 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050172", "rate": 6 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050173", "rate": 6 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050174", "rate": 6 },
+{ "itemLotItemId": 205000002, "itemSetId": "2050175", "rate": 6 }
+]}

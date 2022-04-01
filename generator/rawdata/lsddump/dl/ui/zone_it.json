@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "Potrai ottenere delle ricompense\ndi completamento aggiuntive casuali.\nConfermi la tua scelta?",
+    "zone/dialog_002": "Potrai ottenere delle pietanze utilizzabili solo\nnella Residenza Lotta.\nConfermi la tua scelta?",
+    "zone/dialog_003": "RICOMPENSE",
+    "zone/dialog_alert_001": "Le pietanze esclusive della Residenza Lotta saranno eliminate alla fine del periodo di apertura attuale.",
+    "zone/title_001": "BONUS",
+    "zone/title_002": "Scegli il tipo di ricompense bonus che vuoi!",
+    "zone/cell_title_001": "Casuali",
+    "zone/cell_title_002": "Pietanze curative",
+    "zone/cell_title_003": "Pietanze ricostituenti",
+    "zone/cell_description_001": "Ricompense di completamento\naggiuntive casuali.",
+    "zone/cell_description_002": "Pietanze che ripristinano i PS\no il numero di utilizzi delle mosse\n(solo nella Residenza Lotta).",
+    "zone/cell_description_003": "Pietanze utili durante la lotta\n(solo nella Residenza Lotta)."
+}

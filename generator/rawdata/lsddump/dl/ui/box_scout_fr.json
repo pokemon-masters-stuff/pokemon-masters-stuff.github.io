@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "Boîte Surprise",
+    "box_scout/box_scout_002": "Ouverture × 1",
+    "box_scout/box_scout_003": "Ouverture × [Digit:3digits ]",
+    "box_scout/box_scout_004": "Prochaine étape",
+    "box_scout/box_scout_005": "Liste des récompenses",
+    "box_scout/box_scout_006": "Poursuivre jusqu'à l'étape suivante ?",
+    "box_scout/box_scout_007": "* Vous ne pourrez plus obtenir les objets restants\nde l'étape en cours.",
+    "box_scout/box_scout_008": "Grand prix",
+    "box_scout/box_scout_009": "Autres récompenses",
+    "box_scout/box_scout_010": "Étape [Digit:2digits ]",
+    "box_scout/box_scout_011": "Voulez-vous vraiment utiliser [Digit:4digits ]\nPièces Boîte Surprise et ouvrir\n[Digit:3digits Idx=\"1\" ] Boîtes Surprise ?",
+    "box_scout/box_scout_013": "Grand prix obtenu !",
+    "box_scout/box_scout_021": "Résultats",
+    "box_scout/box_scout_022": "Voulez-vous vraiment utiliser\n[Name:Item ] × [Digit:4digits ]\net ouvrir [Digit:3digits Idx=\"1\" ] Boîte[FR:Qty Ref=\"1\" P=\"s\" ] Surprise ?"
+}

@@ -1,0 +1,12 @@
+{
+    "system/remaining_days": "앞으로 [Digit:3digits ]일",
+    "system/minutes_ago": "[Digit:2digits ]분 전",
+    "system/hours_ago": "[Digit:2digits ]시간 전",
+    "system/days_ago": "[Digit:2digits ]일 전",
+    "system/more_than_days_ago": "[Digit:2digits ]일 이상 전",
+    "system/until_time": "[Name:DateTime ] 까지",
+    "system/title_name": "Pokémon Masters",
+    "system/title_name_002": "Pokémon Masters EX",
+    "system/remaining_days_double": "앞으로\n[Digit:3digits ]일",
+    "system/remaining_time": "앞으로 [Name:DateTime ]"
+}

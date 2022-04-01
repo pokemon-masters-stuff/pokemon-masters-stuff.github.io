@@ -1,0 +1,8 @@
+{"entries": [
+{ "eggConfigId": "exchange_farm_monster.item_set_id", "value": "206109" },
+{ "eggConfigId": "exchange_farm_monster.return_rate_percent_of_growth_item", "value": "80" },
+{ "eggConfigId": "farm_monster_num.max", "value": "500" },
+{ "eggConfigId": "hatch_machine_reservation.max", "value": "8" },
+{ "eggConfigId": "hatch_power.max", "value": "3" },
+{ "eggConfigId": "laboratory_help_announcements_keyword.Update_2060_1W_4", "value": "1" }
+]}

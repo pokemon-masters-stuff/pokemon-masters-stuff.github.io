@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "禮物箱",
+    "presentbox/presentbox_002": "獲得日期",
+    "presentbox/receivable_cell_btn": "領取",
+    "presentbox/tab_present_btn": "待領取",
+    "presentbox/tab_temporary_item_btn": "暫時保管",
+    "presentbox/tab_received_btn": "已領取",
+    "presentbox/receive_all_btn": "全部領取",
+    "presentbox/reward_dialog_title": "領取禮物",
+    "presentbox/reward_dialog_main_text": "已領取下列禮物",
+    "presentbox/presentbox_010": "OK",
+    "presentbox/presentbox_011": "無期限",
+    "presentbox/presentbox_012": "有部分道具\n已超過領取期限\n故該道具無法領取",
+    "presentbox/presentbox_013": "已自動將已獲得的勳章\n轉換成成長潛力",
+    "presentbox/receivable_empty_text": "沒有可以領取的禮物",
+    "presentbox/received_empty_text": "最近[Digit:3digits ]天沒有領取任何禮物",
+    "presentbox/received_cell_btn": "已領取",
+    "presentbox/help_title": "關於禮物",
+    "presentbox/help": "・已領取的禮物會顯示[Digit:3digits ]天\n\n・超過期限的禮物會被自動刪除\n\n・一次最多可領取[Digit:3digits ]件禮物",
+    "presentbox/help_02": "・超過領取期限的禮物會被自動刪除\n\n・一次最多可領取[Digit:3digits Idx=\"1\" ]件禮物\n\n・已領取的物品會顯示[Digit:3digits Idx=\"2\" ]天\n　裝備的顯示數量上限為[Digit:4digits Idx=\"3\" ]件\n\n・暫時保管的裝備數量上限為[Digit:4digits Idx=\"4\" ]件\n　超過上限的裝備將從較舊的裝備開始刪除",
+    "presentbox/receive_failed_description": "部分超過持有上限的道具\n已取消領取",
+    "presentbox/receive_failed_description_002": "※部分超過持有上限的道具\n　已取消領取"
+}

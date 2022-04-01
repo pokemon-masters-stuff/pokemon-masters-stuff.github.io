@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "Scrignocerca",
+    "box_scout/box_scout_002": "Ricerca ×1",
+    "box_scout/box_scout_003": "Ricerca ×[Digit:3digits ]",
+    "box_scout/box_scout_004": "Prossimo scrigno",
+    "box_scout/box_scout_005": "Lista premi",
+    "box_scout/box_scout_006": "Vuoi avanzare al prossimo scrigno?",
+    "box_scout/box_scout_007": "Eventuali strumenti rimasti non potranno più essere\nottenuti.",
+    "box_scout/box_scout_008": "Premio principale",
+    "box_scout/box_scout_009": "Altri premi",
+    "box_scout/box_scout_010": "Scrigno [Digit:2digits ]",
+    "box_scout/box_scout_011": "Vuoi usare [Digit:4digits ] monet[IT:Qty S=\"a\" P=\"e\" ] scrigno\nper fare [Digit:3digits Idx=\"1\" ] ricerc[IT:Qty Ref=\"1\" S=\"a\" P=\"he\" ]?",
+    "box_scout/box_scout_013": "Hai ottenuto\nil premio principale!",
+    "box_scout/box_scout_021": "Risultati",
+    "box_scout/box_scout_022": "Vuoi usare i seguenti strumenti\nper effettuare [Digit:3digits Idx=\"1\" ] Scrignocerc[IT:Qty Ref=\"1\" S=\"a\" P=\"he\" ]?\n\n[Name:Item ] ×[Digit:4digits ]"
+}

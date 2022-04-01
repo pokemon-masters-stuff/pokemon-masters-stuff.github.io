@@ -1,0 +1,12 @@
+{
+    "1": "HP [Digit:5digits ]",
+    "2": "Attack [Digit:5digits ]",
+    "3": "Defense [Digit:5digits ]",
+    "4": "Sp. Atk [Digit:5digits ]",
+    "5": "Sp. Def [Digit:5digits ]",
+    "6": "Speed [Digit:5digits ]",
+    "7": "[Name:AbilityDescription ]",
+    "8": "Move: [Name:Move ]\n[Name:AbilityDescription ]",
+    "9": "[Name:Move ]: Power ↑ [Digit:5digits ]",
+    "10": "[Name:Move ]: Accuracy ↑ [Digit:5digits ]"
+}

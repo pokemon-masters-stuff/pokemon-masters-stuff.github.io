@@ -1,0 +1,19 @@
+{
+    "champion_battle_option_description_2120_01": "Augmente la Force de tous les ennemis\nde l'équivalent de [Digit:6digits ] niveau[FR:Qty P=\"x\" ].",
+    "champion_battle_option_description_2120_02": "Au début du combat, tous les ennemis regagnent\nlentement leurs PV.",
+    "champion_battle_option_description_2120_03": "Au début du combat, applique Résilience Physique\nau côté ennemi jusqu'à la fin du combat.",
+    "champion_battle_option_description_2120_04": "Au début du combat, applique Résilience Spéciale\nau côté ennemi jusqu'à la fin du combat.",
+    "champion_battle_option_description_2120_05": "Au début du combat, applique Anti-critiques\nau côté ennemi jusqu'à la fin du combat.",
+    "champion_battle_option_description_2120_06": "Accroît l'augmentation de la détermination\nennemie de [Digit:6digits ] %.",
+    "champion_battle_option_description_2120_07": "Réduit de [Digit:6digits ] le nombre maximum d'actions\nnécessaires aux ennemis pour lancer\nune capacité Duo.",
+    "champion_battle_option_description_2120_12": "Réduit le nombre maximum de segments\nde la Jauge Capacité des alliés de [Digit:6digits ].",
+    "champion_battle_option_description_2120_13": "Au début du combat, réduit de [Digit:6digits ] %\nles PV maximums de tous les alliés.",
+    "champion_battle_option_description_2120_14": "Augmente de [Digit:6digits ] % l'Attaque\net l'Attaque Spéciale de tous les ennemis.",
+    "champion_battle_option_description_2120_15": "Augmente de [Digit:6digits ] % la Défense\net la Défense Spéciale de tous les ennemis.",
+    "champion_battle_option_description_2120_16": "Augmente de [Digit:6digits ] % les PV maximums\nde tous les ennemis.",
+    "champion_battle_option_description_2120_17": "Protège les ennemis des altérations de statut.",
+    "champion_battle_option_description_2120_18": "Empêche les baisses de stats des ennemis.",
+    "champion_battle_option_description_2120_19": "Baisse de [Digit:6digits ] % la quantité de PV soignés\npar les capacités de soin utilisées par les alliés.",
+    "champion_battle_option_description_2120_20": "Baisse de moitié les PPC de tous les alliés.",
+    "champion_battle_option_description_2120_21": "À chaque fois qu'un ennemi utilise avec succès\nune attaque, la puissance de ses attaques\naugmente de [Digit:6digits ] %."
+}

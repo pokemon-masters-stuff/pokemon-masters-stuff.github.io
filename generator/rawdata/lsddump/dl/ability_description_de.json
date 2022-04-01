@@ -1,0 +1,12 @@
+{
+    "1": "KP [Digit:5digits ]",
+    "2": "Angriff [Digit:5digits ]",
+    "3": "Verteidigung [Digit:5digits ]",
+    "4": "Spezial-Angriff [Digit:5digits ]",
+    "5": "Spezial-Verteidigung [Digit:5digits ]",
+    "6": "Initiative [Digit:5digits ]",
+    "7": "[Name:AbilityDescription ]",
+    "8": "Zielattacke: [Name:Move ]\n[Name:AbilityDescription ]",
+    "9": "[Name:Move ]: Stärke↑ [Digit:5digits ]",
+    "10": "[Name:Move ]: Genauigkeit↑ [Digit:5digits ]"
+}

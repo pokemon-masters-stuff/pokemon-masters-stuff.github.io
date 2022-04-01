@@ -1,0 +1,14 @@
+{
+    "champion_battle_rule_2080_001": "Se aumenta la potencia de los ataques\nfísicos de ambos bandos.",
+    "champion_battle_rule_2080_002": "Se aumenta la potencia de los ataques\nespeciales de ambos bandos.",
+    "champion_battle_rule_2080_003": "Se reduce a la mitad el contador de\nmovimientos compi al inicio del combate.",
+    "champion_battle_rule_2080_004": "Se reduce el daño producido por los\nataques físicos al inicio del combate\nen ambos bandos.",
+    "champion_battle_rule_2080_005": "Se reduce el daño producido por los\nataques especiales al inicio del combate\nen ambos bandos.",
+    "champion_battle_rule_2080_006": "Se aumenta el daño, la duración y la\nprobabilidad de infligir problemas y cambios\nde estado.",
+    "champion_battle_rule_2080_007": "Se aumenta la velocidad a la que se llenan\nlas barras de movimientos de ambos bandos.",
+    "champion_battle_rule_2080_008": "Cuando la determinación aumenta, el efecto de\nesta es mayor.",
+    "champion_battle_rule_2080_010": "Cuando una pareja de compis se debilita,\nse reduce el Ataque, la Defensa, el Ataque\nEspecial, la Defensa Especial y la Velocidad de\nlos miembros de su bando.",
+    "champion_battle_rule_2090_001": "Los efectos de campo activados por ambos\nbandos duran todo el combate.",
+    "champion_battle_rule_2090_002": "Aumenta la probabilidad de que se activen los\nefectos secundarios de los movimientos usados\npor ambos bandos.",
+    "champion_battle_rule_2090_003": "Las características se reducen más de lo normal\nen ambos bandos."
+}

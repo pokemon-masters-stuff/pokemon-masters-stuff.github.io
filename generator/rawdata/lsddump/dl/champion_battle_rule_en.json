@@ -1,0 +1,14 @@
+{
+    "champion_battle_rule_2080_001": "Physical attack moves are powered up for allies\nand opponents.",
+    "champion_battle_rule_2080_002": "Special attack moves are powered up for allies\nand opponents.",
+    "champion_battle_rule_2080_003": "At the start of battle, sync move countdowns are\nreduced by half.",
+    "champion_battle_rule_2080_004": "The allied and opponents’ fields of play start the\nbattle with physical damage reduction.",
+    "champion_battle_rule_2080_005": "The allied and opponents’ fields of play start the\nbattle with special damage reduction.",
+    "champion_battle_rule_2080_006": "Status conditions and other conditions deal\nmore damage, last longer, and are more likely\nto take effect.",
+    "champion_battle_rule_2080_007": "The move gauge increases faster for both allies\nand opponents.",
+    "champion_battle_rule_2080_008": "Sync buffs are more effective.",
+    "champion_battle_rule_2080_010": "When a Pokémon faints, Attack, Defense, Sp. Atk,\nSp. Def, and Speed fall for all sync pairs on that\nPokémon’s team.",
+    "champion_battle_rule_2090_001": "Field effects created by both allies and opponents\nare permanent.",
+    "champion_battle_rule_2090_002": "The additional effects of moves used by allies\nand opponents are more likely to occur.",
+    "champion_battle_rule_2090_003": "Stat-lowering effects have a greater effect than\nnormal for allies and opponents."
+}

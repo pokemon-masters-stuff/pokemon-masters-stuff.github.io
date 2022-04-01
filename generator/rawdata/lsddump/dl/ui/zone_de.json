@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "Du kannst einen zufälligen zusätzlichen\nAbschlussbonus erhalten. Auswählen?",
+    "zone/dialog_002": "Du kannst Leckereien erhalten, die man nur in\nder Kampfvilla einsetzen kann. Auswählen?",
+    "zone/dialog_003": "Erhalten!",
+    "zone/dialog_alert_001": "Kampfvilla-Leckereien werden am Ende des laufenden\nVeranstaltungszeitraums automatisch weggeworfen.",
+    "zone/title_001": "Zusatz-Items!",
+    "zone/title_002": "Wähle einen zusätzlichen Bonus aus!",
+    "zone/cell_title_001": "Zusatzbonus",
+    "zone/cell_title_002": "Heilungs-Leckereien",
+    "zone/cell_title_003": "Kampf-Leckereien",
+    "zone/cell_description_001": "Erhalte einen zufälligen\nzusätzlichen Abschlussbonus.",
+    "zone/cell_description_002": "Erhalte Leckereien zum\nWiederherstellen der KP oder AEP\ndeiner Gefährten (nur Kampfvilla).",
+    "zone/cell_description_003": "Erhalte Leckereien, die im Kampf\nnützlich sind (nur Kampfvilla)."
+}

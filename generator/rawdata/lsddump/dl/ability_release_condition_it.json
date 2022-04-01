@@ -1,0 +1,8 @@
+{
+    "1": "Sblocca almeno [Digit:1digit ] casell[IT:Qty S=\"a\" P=\"e\" ] adiacent[IT:Qty S=\"e\" P=\"i\" ].",
+    "2": "Sblocca tutte le caselle adiacenti.",
+    "3": "Porta l'Unità almeno al L. [Digit:3digits ].",
+    "4": "Porta l'Unimossa almeno al L. [Digit:3digits ].",
+    "5": "Porta l'Unità ad almeno [Digit:2digits ]★.",
+    "6": "Porta il livello mosse almeno a [Digit:3digits ]."
+}

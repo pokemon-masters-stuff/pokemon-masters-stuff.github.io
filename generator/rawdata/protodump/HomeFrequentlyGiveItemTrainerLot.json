@@ -1,0 +1,20 @@
+{"entries": [
+{ "itemLotId": 205001001, "itemLotGroupId": 205001, "trainerId": "10101000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0101_00_mei_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001002, "itemLotGroupId": 205001, "trainerId": "10092000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0092_00_iris_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001003, "itemLotGroupId": 205001, "trainerId": "10011000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0011_00_homika_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001004, "itemLotGroupId": 205001, "trainerId": "10063000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0063_00_renbu_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001005, "itemLotGroupId": 205001, "trainerId": "10040000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0040_00_hachiku_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001006, "itemLotGroupId": 205001, "trainerId": "10004000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0004_00_toko_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001007, "itemLotGroupId": 205001, "trainerId": "10020000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0020_00_toya_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001008, "itemLotGroupId": 205001, "trainerId": "10048000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0048_00_gima_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001009, "itemLotGroupId": 205001, "trainerId": "10170000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0170_00_arty_present_item_1.lua", "itemLotItemId": 205000001 },
+{ "itemLotId": 205001010, "itemLotGroupId": 205001, "trainerId": "10016000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0016_00_huuro_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001011, "itemLotGroupId": 205001, "trainerId": "10014010000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0014_01_cheren_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001012, "itemLotGroupId": 205001, "trainerId": "10024000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0024_00_shikimi_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001013, "itemLotGroupId": 205001, "trainerId": "10033000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0033_00_yakon_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001014, "itemLotGroupId": 205001, "trainerId": "10052000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0052_00_shizui_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001015, "itemLotGroupId": 205001, "trainerId": "10106000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0106_00_kamitsure_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001016, "itemLotGroupId": 205001, "trainerId": "10095000000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0095_00_cattleya_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001017, "itemLotGroupId": 205001, "trainerId": "10106100000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0106_10_kamitsure_present_item_1.lua", "itemLotItemId": 205000002 },
+{ "itemLotId": 205001018, "itemLotGroupId": 205001, "trainerId": "10048100000", "u4": 1, "luaPath": "Scripts/Fields/include_chara_talk_ch0048_10_gima_present_item_1.lua", "itemLotItemId": 205000002 }
+]}

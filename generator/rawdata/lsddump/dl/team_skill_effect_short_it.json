@@ -1,0 +1,22 @@
+{
+    "40010001": "PS massimi +[Digit:3digits ].",
+    "40020001": "Attacchi Normale:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020002": "Attacchi Fuoco:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020003": "Attacchi Acqua:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020004": "Attacchi Elettro:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020005": "Attacchi Erba:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020006": "Attacchi Ghiaccio:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020007": "Attacchi Lotta:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020008": "Attacchi Veleno:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020009": "Attacchi Terra:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020010": "Attacchi Volante:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020011": "Attacchi Psico:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020012": "Attacchi Coleottero:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020013": "Attacchi Roccia:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020014": "Attacchi Spettro:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020015": "Attacchi Drago:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020016": "Attacchi Buio:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020017": "Attacchi Acciaio:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40020018": "Attacchi Folletto:\nAtt./Att. Sp. +[Digit:3digits ].",
+    "40030001": "Attacco e Attacco\nSpeciale +[Digit:3digits ]."
+}

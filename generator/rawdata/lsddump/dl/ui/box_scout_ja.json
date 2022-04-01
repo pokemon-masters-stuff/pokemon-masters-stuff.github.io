@@ -1,0 +1,16 @@
+{
+    "box_scout/box_scout_001": "ボックスサーチ",
+    "box_scout/box_scout_002": "1回サーチ",
+    "box_scout/box_scout_003": "[Digit:3digits ]回サーチ",
+    "box_scout/box_scout_004": "次のSTEPへ",
+    "box_scout/box_scout_005": "報酬一覧",
+    "box_scout/box_scout_006": "次のSTEPへ進みますか？",
+    "box_scout/box_scout_007": "※ボックスサーチにどうぐが\n残っている場合入手できなくなります",
+    "box_scout/box_scout_008": "目玉報酬",
+    "box_scout/box_scout_009": "通常報酬",
+    "box_scout/box_scout_010": "STEP[Digit:2digits ]",
+    "box_scout/box_scout_011": "ボックスコインを[Digit:4digits ]枚消費して\nボックスサーチを[Digit:3digits Idx=\"1\" ]回します\n\nよろしいですか？",
+    "box_scout/box_scout_013": "目玉報酬を獲得しました！",
+    "box_scout/box_scout_021": "リザルト",
+    "box_scout/box_scout_022": "[Name:Item ]を\n[Digit:4digits ]消費して\nボックスサーチを[Digit:3digits Idx=\"1\" ]回します\n\nよろしいですか？"
+}

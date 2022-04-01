@@ -1,0 +1,22 @@
+{
+    "40010001": "Augmente de [Digit:3digits ] les PV maximums\nde tous les alliés.",
+    "40020001": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Normal.",
+    "40020002": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Feu.",
+    "40020003": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Eau.",
+    "40020004": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Électrik.",
+    "40020005": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Plante.",
+    "40020006": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Glace.",
+    "40020007": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Combat.",
+    "40020008": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Poison.",
+    "40020009": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Sol.",
+    "40020010": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Vol.",
+    "40020011": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Psy.",
+    "40020012": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Insecte.",
+    "40020013": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Roche.",
+    "40020014": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Spectre.",
+    "40020015": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Dragon.",
+    "40020016": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Ténèbres.",
+    "40020017": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Acier.",
+    "40020018": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Fée.",
+    "40030001": "Augmente de [Digit:3digits ] l'Attaque\net l'Attaque Spéciale de tous les alliés."
+}

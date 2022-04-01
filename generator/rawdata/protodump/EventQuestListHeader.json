@@ -1,0 +1,5 @@
+{"entries": [
+{ "questGroupId": 630001, "itemId": "750000000012", "quantity": 800, "storyQuestId": "1030111001001060", "titleTextId": 21111001, "descTextId": 17111001, "imageId": "Legend_10140000000" },
+{ "questGroupId": 630002, "itemId": "750000000016", "quantity": 100, "storyQuestId": "1030112001001060", "titleTextId": 21112001, "descTextId": 17112001, "imageId": "Legend_18000120000" },
+{ "questGroupId": 630003, "itemId": "750000000019", "quantity": 100, "storyQuestId": "1030201001001060", "titleTextId": 21201001, "descTextId": 17120101, "imageId": "Legend_10129000000" }
+]}

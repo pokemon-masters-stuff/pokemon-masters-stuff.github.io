@@ -1,0 +1,14 @@
+{
+    "zone/dialog_001": "Vous pourrez gagner une récompense\nsupplémentaire (choisie au hasard).\nContinuer ?",
+    "zone/dialog_002": "Vous obtiendrez un délicieux plat pouvant être\ndégusté uniquement dans la Villa de Combat.\nContinuer ?",
+    "zone/dialog_003": "Obtenu !",
+    "zone/dialog_alert_001": "Remarque : les plats de la Villa de Combat seront\nautomatiquement jetés à la fin de la période en cours.",
+    "zone/title_001": "Bonus !",
+    "zone/title_002": "Vous pouvez choisir une récompense bonus !",
+    "zone/cell_title_001": "Récompense",
+    "zone/cell_title_002": "Plat de soin",
+    "zone/cell_title_003": "Plat de renforcement",
+    "zone/cell_description_001": "Récompense supplémentaire si\nvous remportez le combat.",
+    "zone/cell_description_002": "Vous pourrez obtenir un délicieux\nplat pour regagner des PV ou des\nPPC dans la Villa de Combat.",
+    "zone/cell_description_003": "Vous pourrez obtenir un délicieux\nplat pour vous aider dans les\ncombats de la Villa de Combat."
+}

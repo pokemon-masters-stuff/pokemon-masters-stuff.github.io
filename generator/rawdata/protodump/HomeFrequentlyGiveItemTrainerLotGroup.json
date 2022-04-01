@@ -1,0 +1,3 @@
+{"entries": [
+{ "itemLotGroupId": 205001, "repeatTime": 28800, "conditions": [ "assets_dl_finish", "event_2050_4W" ] }
+]}

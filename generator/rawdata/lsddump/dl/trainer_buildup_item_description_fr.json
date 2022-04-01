@@ -1,0 +1,6 @@
+{
+    "5500": "Permet d'augmenter le nombre d'étoiles\nd'un Duo.",
+    "5501": "Permet d'augmenter le potentiel d'un Duo.\nAprès la date d'utilisation, l'objet sera\nautomatiquement détruit et ne pourra\nplus être utilisé.",
+    "5510": "Permet d'augmenter le potentiel de\n[Name:TrainerName ] et [Name:PokemonName ].",
+    "5511": "Permet d'augmenter le potentiel\nd'un Duo comprenant [Name:PokemonName ]."
+}

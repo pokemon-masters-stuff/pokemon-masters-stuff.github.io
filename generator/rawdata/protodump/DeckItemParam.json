@@ -1,0 +1,20 @@
+{"entries": [
+{ "deckItemParamId": "1", "Boost": "HP", "Lv1Boost": 11, "Lv3Boost": 13, "Lv6Boost": 16, "Lv9Boost": 19, "Lv12Boost": 22, "Lv15Boost": 25 },
+{ "deckItemParamId": "2", "Boost": "ATK", "Lv1Boost": 6, "Lv3Boost": 8, "Lv6Boost": 11, "Lv9Boost": 14, "Lv12Boost": 17, "Lv15Boost": 20 },
+{ "deckItemParamId": "3", "Boost": "DEF", "Lv1Boost": 6, "Lv3Boost": 8, "Lv6Boost": 11, "Lv9Boost": 14, "Lv12Boost": 17, "Lv15Boost": 20 },
+{ "deckItemParamId": "4", "Boost": "SPA", "Lv1Boost": 6, "Lv3Boost": 8, "Lv6Boost": 11, "Lv9Boost": 14, "Lv12Boost": 17, "Lv15Boost": 20 },
+{ "deckItemParamId": "5", "Boost": "SPD", "Lv1Boost": 6, "Lv3Boost": 8, "Lv6Boost": 11, "Lv9Boost": 14, "Lv12Boost": 17, "Lv15Boost": 20 },
+{ "deckItemParamId": "101", "Boost": "HP", "Lv1Boost": 22, "Lv3Boost": 26, "Lv6Boost": 32, "Lv9Boost": 38, "Lv12Boost": 44, "Lv15Boost": 50 },
+{ "deckItemParamId": "102", "Boost": "ATK", "Lv1Boost": 12, "Lv3Boost": 16, "Lv6Boost": 22, "Lv9Boost": 28, "Lv12Boost": 34, "Lv15Boost": 40 },
+{ "deckItemParamId": "103", "Boost": "DEF", "Lv1Boost": 12, "Lv3Boost": 16, "Lv6Boost": 22, "Lv9Boost": 28, "Lv12Boost": 34, "Lv15Boost": 40 },
+{ "deckItemParamId": "104", "Boost": "SPA", "Lv1Boost": 12, "Lv3Boost": 16, "Lv6Boost": 22, "Lv9Boost": 28, "Lv12Boost": 34, "Lv15Boost": 40 },
+{ "deckItemParamId": "105", "Boost": "SPD", "Lv1Boost": 12, "Lv3Boost": 16, "Lv6Boost": 22, "Lv9Boost": 28, "Lv12Boost": 34, "Lv15Boost": 40 },
+{ "deckItemParamId": "106", "Boost": "HP", "Lv1Boost": 16, "Lv3Boost": 18, "Lv6Boost": 21, "Lv9Boost": 24, "Lv12Boost": 27, "Lv15Boost": 30 },
+{ "deckItemParamId": "107", "Boost": "SPE", "Lv1Boost": 6, "Lv3Boost": 8, "Lv6Boost": 11, "Lv9Boost": 14, "Lv12Boost": 17, "Lv15Boost": 20 },
+{ "deckItemParamId": "201", "Boost": "HP", "Lv1Boost": 42, "Lv3Boost": 48, "Lv6Boost": 54, "Lv9Boost": 60, "Lv12Boost": 66, "Lv15Boost": 70 },
+{ "deckItemParamId": "202", "Boost": "ATK", "Lv1Boost": 32, "Lv3Boost": 38, "Lv6Boost": 44, "Lv9Boost": 50, "Lv12Boost": 56, "Lv15Boost": 60 },
+{ "deckItemParamId": "203", "Boost": "DEF", "Lv1Boost": 6, "Lv3Boost": 9, "Lv6Boost": 12, "Lv9Boost": 15, "Lv12Boost": 18, "Lv15Boost": 20 },
+{ "deckItemParamId": "204", "Boost": "SPA", "Lv1Boost": 32, "Lv3Boost": 38, "Lv6Boost": 44, "Lv9Boost": 50, "Lv12Boost": 56, "Lv15Boost": 60 },
+{ "deckItemParamId": "205", "Boost": "SPD", "Lv1Boost": 6, "Lv3Boost": 9, "Lv6Boost": 12, "Lv9Boost": 15, "Lv12Boost": 18, "Lv15Boost": 20 },
+{ "deckItemParamId": "206", "Boost": "SPE", "Lv1Boost": 6, "Lv3Boost": 9, "Lv6Boost": 12, "Lv9Boost": 15, "Lv12Boost": 18, "Lv15Boost": 20 }
+]}

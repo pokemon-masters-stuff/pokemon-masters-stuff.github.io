@@ -1,0 +1,12 @@
+{
+    "search_04_001/4301_0701_0100_10": "Ah, te voilà, [Name:PlayerNickname ] !",
+    "search_04_001/4301_0701_0200_10": "Cette zone où nous nous trouvons a été construite\navec de la véritable roche volcanique.",
+    "search_04_001/4301_0701_0300_10": "Il paraît que du minerai précieux a récemment\nété découvert dans des rochers des environs.",
+    "search_04_001/4301_0701_0400_10": "Après vérification, il s'avère que ce minerai\nappartient à celui ou celle qui le trouve,\nalors que dirais-tu d'en chercher avec moi ?",
+    "search_04_001/4301_0301_0500_10": "OK ! Allons-y !",
+    "search_04_001/4301_0401_0600_10": "J'étais sûr que tu serais partant[FR:Gen Ref=\"255\" F=\"e\" ] !",
+    "search_04_001/4301_0302_0700_10": "Comment est-ce qu'on fait ?",
+    "search_04_001/4301_0402_0800_10": "Ha ha ha ! C'est bien, tu es motivé[FR:Gen Ref=\"255\" F=\"e\" ] !\nÇa se voit à ta mine !",
+    "search_04_001/4301_0701_0900_10": "Extraire le minerai n'a rien de bien compliqué !\nIl suffit de briser les rochers aux alentours\npour en examiner le contenu.",
+    "search_04_001/4301_0701_1000_10": "Sur ce, voyons un peu lequel de nous deux\nfera la meilleure collecte !"
+}

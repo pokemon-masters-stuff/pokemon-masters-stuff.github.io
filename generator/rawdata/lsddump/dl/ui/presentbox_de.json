@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "Geschenkbox",
+    "presentbox/presentbox_002": "Erhalten am:",
+    "presentbox/receivable_cell_btn": "Abholen",
+    "presentbox/tab_present_btn": "Abholen",
+    "presentbox/tab_temporary_item_btn": "Lager",
+    "presentbox/tab_received_btn": "Abgeholt",
+    "presentbox/receive_all_btn": "Alle abholen",
+    "presentbox/reward_dialog_title": "Abgeholte Geschenke",
+    "presentbox/reward_dialog_main_text": "Folgende Geschenke wurden abgeholt:",
+    "presentbox/presentbox_010": "OK",
+    "presentbox/presentbox_011": "Ohne Frist",
+    "presentbox/presentbox_012": "Der Abholzeitraum einiger Items ist\nabgelaufen. Sie konnten daher nicht\nabgeholt werden.",
+    "presentbox/presentbox_013": "Mehrfach erhaltene Embleme wurden\nautomatisch gegen Potenzialpässe\neingetauscht.",
+    "presentbox/receivable_empty_text": "Es sind keine Geschenke vorhanden.",
+    "presentbox/received_empty_text": "In den letzten [Digit:3digits ] Tagen keine abgeholt.",
+    "presentbox/received_cell_btn": "Abgeholt",
+    "presentbox/help_title": "Geschenke",
+    "presentbox/help": "• Abgeholte Geschenke werden\n  [Digit:3digits ] Tage lang angezeigt.\n• Geschenke, deren Frist abgelaufen\n  ist, werden automatisch gelöscht.\n• Du kannst maximal [Digit:3digits ] Geschenke\n  auf einmal abholen.",
+    "presentbox/help_02": "• Geschenke, deren Frist abgelaufen\n  ist, werden automatisch gelöscht.\n• Du kannst maximal [Digit:3digits Idx=\"1\" ] Geschenke\n  auf einmal abholen.\n• Bereits abgeholte Geschenke werden\n  [Digit:3digits Idx=\"2\" ] Tage lang angezeigt. Das\n  Anzeigelimit für Ausrüstung ist [Digit:4digits Idx=\"3\" ].\n• Im Lager können maximal\n  [Digit:4digits Idx=\"4\" ] Ausrüstungsgegenstände\n  aufbewahrt werden. Ausrüstung, die\n  das Limit überschreitet, wird\n  beginnend mit der ältesten gelöscht.",
+    "presentbox/receive_failed_description": "Einige Items wurden nicht abgeholt,\nda du nicht genügend Platz hast,\num weitere von ihnen aufzubewahren.",
+    "presentbox/receive_failed_description_002": "Einige Items wurden nicht abgeholt, da du\nnicht mehr von ihnen aufbewahren kannst."
+}

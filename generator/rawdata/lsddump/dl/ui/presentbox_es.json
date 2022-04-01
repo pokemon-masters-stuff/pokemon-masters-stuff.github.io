@@ -1,0 +1,23 @@
+{
+    "presentbox/presentbox_001": "Caja de regalos",
+    "presentbox/presentbox_002": "Recibido el",
+    "presentbox/receivable_cell_btn": "Aceptar",
+    "presentbox/tab_present_btn": "Pendientes",
+    "presentbox/tab_temporary_item_btn": "Reserva",
+    "presentbox/tab_received_btn": "Aceptados",
+    "presentbox/receive_all_btn": "Aceptar todo",
+    "presentbox/reward_dialog_title": "Regalos aceptados",
+    "presentbox/reward_dialog_main_text": "Has aceptado los siguientes regalos:",
+    "presentbox/presentbox_010": "Vale",
+    "presentbox/presentbox_011": "Sin límite",
+    "presentbox/presentbox_012": "El plazo de recepción de algunos\nobjetos ha terminado, de modo que\nse han eliminado de la lista.",
+    "presentbox/presentbox_013": "Los emblemas repetidos se han canjeado\nautomáticamente por Potenciadores.",
+    "presentbox/receivable_empty_text": "No hay regalos sin aceptar.",
+    "presentbox/received_empty_text": "[Digit:3digits ] días sin haber aceptado regalos.",
+    "presentbox/received_cell_btn": "Aceptado",
+    "presentbox/help_title": "Acerca de los regalos",
+    "presentbox/help": "• Solo se mostrarán los regalos\naceptados en los últimos [Digit:3digits ] días.\n• Los regalos que no se hayan\naceptado dentro del plazo estipulado\ndesaparecerán automáticamente.\n• Es posible aceptar [Digit:3digits ] regalos a la\nvez como máximo.",
+    "presentbox/help_02": "• Los regalos que no se hayan\naceptado dentro del plazo estipulado\ndesaparecerán automáticamente.\n• Es posible aceptar [Digit:3digits Idx=\"1\" ] regalos a la\nvez como máximo.\n• Solo se mostrarán los regalos\naceptados en los últimos [Digit:3digits Idx=\"2\" ] días. Se\nmostrará[ES:Qty Ref=\"3\" P=\"n\" ] un máximo de\n[Digit:4digits Idx=\"3\" ] accesorio[ES:Qty Ref=\"3\" P=\"s\" ].\n• El máximo de accesorios en la\nsección Reserva es de [Digit:4digits Idx=\"4\" ]. En el caso\nde superarlo, desaparecerán primero\nlos objetos almacenados durante más\ntiempo.",
+    "presentbox/receive_failed_description": "Has superado la cantidad límite de\nobjetos, de modo que no has podido\naceptar algunos nuevos.",
+    "presentbox/receive_failed_description_002": "Nota: Has superado la cantidad límite de objetos, de\nmodo que no has podido aceptar algunos nuevos."
+}

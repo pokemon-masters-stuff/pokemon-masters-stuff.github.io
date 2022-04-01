@@ -1,0 +1,8 @@
+{
+    "1": "[Digit:1digit ] [DE:Qty S=\"angrenzendes Feld\" P=\"angrenzende Felder\" ] aktiviert",
+    "2": "Alle angrenzenden Felder aktiviert",
+    "3": "Gefährten-Level [Digit:3digits ] oder höher",
+    "4": "Gefährtenattacken-Lv. [Digit:3digits ] oder höher",
+    "5": "★-Zahl [Digit:2digits ] oder höher",
+    "6": "Attacken-Level [Digit:3digits ] oder höher"
+}
