@@ -1,13 +1,23 @@
 {
-  "0": {
-    "de": "-",
-    "en": "-",
-    "es": "-",
-    "fr": "-",
-    "it": "-",
-    "ja": "-",
-    "ko": "-",
-    "zh": "-"
+  "12020102": {
+    "de": "Att.-Attackenleiste↑ 2",
+    "en": "Move Gauge Refresh 2",
+    "es": "Movimiento Llenabarras +2",
+    "fr": "Récup'Jauge 2",
+    "it": "Ciclo continuo 2",
+    "ja": "技後技ゲージ増加2",
+    "ko": "기술후기술게이지증가2",
+    "zh": "招式後招式計量槽增加2"
+  },
+  "12020404": {
+    "de": "Gegentreffer-Leiste↑ 4",
+    "en": "Revenge Boost 4",
+    "es": "Daño Llenabarras +4",
+    "fr": "Réflexe Jauge ↑ 4",
+    "it": "Reazione riempibarra 4",
+    "ja": "被攻撃時技ゲージ増加4",
+    "ko": "피격시기술게이지증가4",
+    "zh": "被攻擊時招式計量槽增加4"
   },
   "13010102": {
     "de": "Notfallstärke↑ 2",
@@ -55,9 +65,9 @@
     "es": "Condensador +3",
     "fr": "Condensateur 3",
     "it": "Condensatore 3",
-    "ja": "わざゲージ分威力上昇３",
+    "ja": "技ゲージ分威力上昇3",
     "ko": "기술게이지분위력상승3",
-    "zh": "威力隨招式計量槽提升３"
+    "zh": "威力隨招式計量槽提升3"
   },
   "13010602": {
     "de": "Volltrefferstärke↑ 2",
@@ -78,6 +88,46 @@
     "ja": "ＩＣ時威力上昇２",
     "ko": "동시찬스시위력상승2",
     "zh": "一齊機會時威力提升２"
+  },
+  "13016303": {
+    "de": "Wetterwechsel-P-Att.+GA-Strk.↑ 3",
+    "en": "Weathered Warrior 3",
+    "es": "Climatología Superimpulsora +3",
+    "fr": "Puissance Action Duo Météo 3",
+    "it": "Meteo potenziamosse 3",
+    "ja": "天気変化時Ｐ技Ｂ技威力↑3",
+    "ko": "날씨변화시P기술B기술위력↑3",
+    "zh": "天氣變化時寶可夢招式及拍組招式↑3"
+  },
+  "13016403": {
+    "de": "P-Att.+GA-Effektivität-Stärke↑ 3",
+    "en": "Super Powered 3",
+    "es": "Mov. Supereficaz Superimpulsor +3",
+    "fr": "Ultra-Eff. Action Capa. Duo ↑ 3",
+    "it": "Superefficacia potenziamosse 3",
+    "ja": "Ｐ技Ｂ技抜群時威力↑3",
+    "ko": "P기술B기술발군시위력↑3",
+    "zh": "寶可夢招式及拍組招式效果絕佳時威力↑3"
+  },
+  "15010101": {
+    "de": "Erstantritt-GA-Countd.↓ 1",
+    "en": "Head Start 1",
+    "es": "Entrada Furor +1",
+    "fr": "Intro Compteur ↓ 1",
+    "it": "Sprint 1",
+    "ja": "初登場時ＢＣ加速１",
+    "ko": "첫등장시BC가속1",
+    "zh": "首次上場時計數加速１"
+  },
+  "15010301": {
+    "de": "Erst-GA-GA-Countdown↓ 1",
+    "en": "Adrenaline 1",
+    "es": "1.er Movimiento Compi Furor +1",
+    "fr": "Première C. D. Compteur ↓ 1",
+    "it": "Prima Uniaccelerazione 1",
+    "ja": "初Ｂ技後ＢＣ加速1",
+    "ko": "첫B기술후BC가속1",
+    "zh": "首次拍組招式後計數加速1"
   },
   "17010101": {
     "de": "Giftschutz",
@@ -169,6 +219,26 @@
     "ko": "바인드무효",
     "zh": "束縛無效"
   },
+  "17011201": {
+    "de": "Störungsschutz",
+    "en": "Interference Immunity",
+    "es": "Inmunidad Sabotaje",
+    "fr": "Immunité Tourment",
+    "it": "Impediblocco",
+    "ja": "妨害状態無効",
+    "ko": "방해상태무효",
+    "zh": "妨害狀態無效"
+  },
+  "17011701": {
+    "de": "Problemschutz",
+    "en": "Status Immunity",
+    "es": "Inmunidad Problemas de Estado",
+    "fr": "Immunité Altérations",
+    "it": "Immunistato",
+    "ja": "異常無効",
+    "ko": "상태이상무효",
+    "zh": "異常無效"
+  },
   "17020109": {
     "de": "Giftresistenz 9",
     "en": "Lessen Poison 9",
@@ -248,6 +318,97 @@
     "ja": "バインド耐性９",
     "ko": "바인드내성9",
     "zh": "束縛抗性９"
+  },
+  "17041601": {
+    "de": "Topform-KP-Regenerierung",
+    "en": "Healthy Healing",
+    "es": "Entrada Robusta Regenerativa",
+    "fr": "Pleine Forme Régénération",
+    "it": "Recupero salutentrata",
+    "ja": "無傷登場時回復付帯",
+    "ko": "HP최대등장시지속회복",
+    "zh": "無傷上場時附帶回復"
+  },
+  "17043701": {
+    "de": "Antritt-Folge-Eff.-Stärke↑",
+    "en": "Supreme Entry",
+    "es": "Entrada Sig. Supereficaz ↑",
+    "fr": "Arrivée Capa. Suiv. Ultra-Eff.",
+    "it": "Entrata iperefficace",
+    "ja": "登場時次回抜群威力上昇",
+    "ko": "등장시차회발군위력상승",
+    "zh": "上場時下次效果絕佳威力提升"
+  },
+  "18010109": {
+    "de": "Angriff↓-Resistenz 9",
+    "en": "Stout Heart 9",
+    "es": "Resistencia Ataque ↓ +9",
+    "fr": "Résistance ↓Attaque 9",
+    "it": "Cocciutaggine 9",
+    "ja": "攻撃ダウン耐性９",
+    "ko": "공격다운내성9",
+    "zh": "攻擊下降抗性９"
+  },
+  "18010209": {
+    "de": "Vert.↓-Resistenz 9",
+    "en": "Trained Body 9",
+    "es": "Resistencia Defensa ↓ +9",
+    "fr": "Résistance ↓Défense 9",
+    "it": "Tempra 9",
+    "ja": "防御ダウン耐性９",
+    "ko": "방어다운내성9",
+    "zh": "防禦下降抗性９"
+  },
+
+  "18010309": {
+    "de": "Sp.-Ang.↓-Resistenz 9",
+    "en": "Steady Resolve 9",
+    "es": "Resistencia Ataque Especial ↓ +9",
+    "fr": "Résist. ↓Atq. Spé. 9",
+    "it": "Convinzione 9",
+    "ja": "特攻ダウン耐性９",
+    "ko": "특수공격다운내성9",
+    "zh": "特攻下降抗性９"
+  },
+  "18010409": {
+    "de": "Sp.-Vert.↓-Resistenz 9",
+    "en": "Trained Mind 9",
+    "es": "Resistencia Defensa Especial ↓ +9",
+    "fr": "Résist. ↓Déf. Spé. 9",
+    "it": "Cuortenace 9",
+    "ja": "特防ダウン耐性９",
+    "ko": "특수방어다운내성9",
+    "zh": "特防下降抗性９"
+  },
+  "18010509": {
+    "de": "Init.↓-Resistenz 9",
+    "en": "Sudden Sprint 9",
+    "es": "Resistencia Velocidad ↓ +9",
+    "fr": "Résistance ↓Vitesse 9",
+    "it": "Scheggia 9",
+    "ja": "素早さダウン耐性９",
+    "ko": "스피드다운내성9",
+    "zh": "速度下降抗性９"
+  },
+  "18010609": {
+    "de": "Genauigk.↓-Resistenz 9",
+    "en": "Mind’s Eye 9",
+    "es": "Resistencia Precisión ↓ +9",
+    "fr": "Résist. ↓Précision 9",
+    "it": "Scrutamente 9",
+    "ja": "命中率ダウン耐性９",
+    "ko": "명중률다운내성9",
+    "zh": "命中率下降抗性９"
+  },
+  "18010709": {
+    "de": "Fluchtw.↓-Resistenz 9",
+    "en": "Nimble Footed 9",
+    "es": "Resistencia Evasión ↓ +9",
+    "fr": "Résistance ↓Esquive 9",
+    "it": "Antizavorra 9",
+    "ja": "回避率ダウン耐性９",
+    "ko": "회피율다운내성9",
+    "zh": "閃避率下降抗性９"
   },
   "18010909": {
     "de": "Werte↓-Resistenz 9",
@@ -379,6 +540,76 @@
     "ko": "P기술후방어업2",
     "zh": "寶可夢出招後防禦↑２"
   },
+  "18041802": {
+    "de": "Antritt-Initiative↑ 2",
+    "en": "Speedy Entry 2",
+    "es": "Entrada Veloz +2",
+    "fr": "Arrivée Vitesse ↑ 2",
+    "it": "Primoscatto 2",
+    "ja": "登場時素早さアップ２",
+    "ko": "등장시스피드업2",
+    "zh": "上場時速度提升２"
+  },
+  "18041901": {
+    "de": "Antritt-Volltreffer↑ 1",
+    "en": "Sharp Entry 1",
+    "es": "Entrada Crítica +1",
+    "fr": "Arrivée Critiques ↑ 1",
+    "it": "Primocolpo 1",
+    "ja": "登場時急所率アップ１",
+    "ko": "등장시급소율업1",
+    "zh": "上場時擊中要害率提升１"
+  },
+  "18045102": {
+    "de": "Antritt-Sp.-Ang.↑ 2",
+    "en": "Grand Entry 2",
+    "es": "Entrada Ataque Especial ↑ +2",
+    "fr": "Arrivée Atq. Spé. ↑ 2",
+    "it": "Entrata geniale 2",
+    "ja": "登場時特攻アップ２",
+    "ko": "등장시특수공격업2",
+    "zh": "上場時特攻提升２"
+  },
+  "18045602": {
+    "de": "Antritt-Verteidigung↑ 2",
+    "en": "Sentry Entry 2",
+    "es": "Entrada Defensa ↑ +2",
+    "fr": "Arrivée Défense ↑ 2",
+    "it": "Entrata difensiva 2",
+    "ja": "登場時防御アップ２",
+    "ko": "등장시방어업2",
+    "zh": "上場時防禦提升２"
+  },
+  "18045902": {
+    "de": "Antritt-Angriff↑ 2",
+    "en": "Fierce Entry 2",
+    "es": "Entrada Ataque ↑ +2",
+    "fr": "Arrivée Attaque ↑ 2",
+    "it": "Entrata offensiva 2",
+    "ja": "登場時攻撃アップ２",
+    "ko": "등장시공격업2",
+    "zh": "上場時攻擊提升２"
+  },
+  "18046402": {
+    "de": "Treffer-Sp.-Verteidigung↓ 2",
+    "en": "Mind Games 2",
+    "es": "Ataque Defensa Especial ↓ +2",
+    "fr": "Capa. Off. Déf. Spé. Ennemi ↓ 2",
+    "it": "Sconfortattacco 2",
+    "ja": "攻撃時特防ダウン２",
+    "ko": "공격시특수방어다운2",
+    "zh": "攻擊時特防下降２"
+  },
+  "18046602": {
+    "de": "Antritt-Sp.-Verteidigung↑ 2",
+    "en": "Wise Entry 2",
+    "es": "Entrada Defensa Especial ↑ +2",
+    "fr": "Arrivée Déf. Spé. ↑ 2",
+    "it": "Entrata sagace 2",
+    "ja": "登場時特防アップ２",
+    "ko": "등장시특수방어업2",
+    "zh": "上場時特防提升２"
+  },
   "18050301": {
     "de": "Statusproblemchance↑ 1",
     "en": "Troublemaker 1",
@@ -388,6 +619,26 @@
     "ja": "異常命中上昇１",
     "ko": "상태이상명중상승1",
     "zh": "異常狀態命中率提升１"
+  },
+  "18090102": {
+    "de": "Antritt-Genauigkeit↑ 2",
+    "en": "Pinpoint Entry 2",
+    "es": "Entrada Precisión ↑ +2",
+    "fr": "Arrivée Précision ↑ 2",
+    "it": "Entrata precisa 2",
+    "ja": "登場時命中率アップ2",
+    "ko": "등장시명중률업2",
+    "zh": "上場時命中率提升2"
+  },
+  "18097902": {
+    "de": "Treffer-Sp.-Angriff↑ 2",
+    "en": "Witty Hit 2",
+    "es": "Ataque Ataque Especial ↑ +2",
+    "fr": "Capacité Offensive Atq. Spé. ↑ 2",
+    "it": "Attacco arguto 2",
+    "ja": "攻撃時特攻アップ2",
+    "ko": "공격시특수공격업2",
+    "zh": "攻擊時特攻提升2"
   },
   "20010101": {
     "de": "Sandsturmschutz",

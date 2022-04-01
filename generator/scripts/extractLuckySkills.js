@@ -42,6 +42,8 @@ const passiveNameDB = {
 //   zh: passiveDescriptionDBzh,
 // };
 
+const { getUpdatedPassiveSkillName } = require('../utils/functions');
+
 const languages = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh'];
 
 /*
@@ -66,7 +68,15 @@ const extractLuckySkills = () => {
 
   languages.forEach((language) => {
     Object.keys(luckySkills).forEach((key) => {
-      luckySkills[key][language] = passiveNameDB[language][key];
+      if (!passiveNameDB[language][key].includes('Idx')) {
+        luckySkills[key][language] = passiveNameDB[language][key];
+      } else {
+        luckySkills[key][language] = getUpdatedPassiveSkillName(
+          language,
+          0, // moveId
+          key
+        );
+      }
     });
   });
 

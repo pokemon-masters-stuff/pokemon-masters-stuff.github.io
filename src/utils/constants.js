@@ -56,6 +56,8 @@ export const arrayOfTrainerIdsWithSamePokemon = [
   10251000000, // Allister & Gengar
   10021900000, // Blue & Arcanine
   10097000000, // Marley & Arcanine
+  10259400000, // Sonia & Tsareena
+  10124000000, // Mallow & Tsareena
 ];
 
 export const type1SyncGrid = [
